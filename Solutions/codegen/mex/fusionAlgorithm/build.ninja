@@ -1,0 +1,101 @@
+# CompilerName=mingw64
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/win64
+matlabdir = C:/Program Files/MATLAB/R2025b
+startdir = C:/Users/pwilliam/OneDrive - MathWorks/Documents/SFTT/SFTTWorkshopPart2/SFTTWorkshop_SI_and_T/Solutions
+
+# Toolchain information
+cc = C:\ProgramData\MATLAB\SupportPackages\R2025b\3P.instrset\mingw_w64.instrset\bin\gcc
+cxx = C:\ProgramData\MATLAB\SupportPackages\R2025b\3P.instrset\mingw_w64.instrset\bin\g++
+linker = C:\ProgramData\MATLAB\SupportPackages\R2025b\3P.instrset\mingw_w64.instrset\bin\gcc
+linkerxx = C:\ProgramData\MATLAB\SupportPackages\R2025b\3P.instrset\mingw_w64.instrset\bin\g++
+
+cflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "C:\Users\pwilliam\OneDrive - MathWorks\Documents\SFTT\SFTTWorkshopPart2\SFTTWorkshop_SI_and_T\Solutions\codegen\mex\fusionAlgorithm" -I "C:\Users\pwilliam\OneDrive - MathWorks\Documents\SFTT\SFTTWorkshopPart2\SFTTWorkshop_SI_and_T\Solutions" -I "C:\Users\pwilliam\OneDrive - MathWorks\Documents\SFTT\SFTTWorkshopPart2\SFTTWorkshop_SI_and_T\Solutions\codegen\mex\fusionAlgorithm\interface" -I "C:\Program Files\MATLAB\R2025b\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fusionAlgorithm_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp 
+
+cxxflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "C:\Users\pwilliam\OneDrive - MathWorks\Documents\SFTT\SFTTWorkshopPart2\SFTTWorkshop_SI_and_T\Solutions\codegen\mex\fusionAlgorithm" -I "C:\Users\pwilliam\OneDrive - MathWorks\Documents\SFTT\SFTTWorkshopPart2\SFTTWorkshop_SI_and_T\Solutions" -I "C:\Users\pwilliam\OneDrive - MathWorks\Documents\SFTT\SFTTWorkshopPart2\SFTTWorkshop_SI_and_T\Solutions\codegen\mex\fusionAlgorithm\interface" -I "C:\Program Files\MATLAB\R2025b\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=fusionAlgorithm_mex -D__USE_MINGW_ANSI_STDIO=1 -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp 
+
+ldflags = fusionAlgorithm.def  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -o "fusionAlgorithm_mex.mexw64" -L"$matlabdir\extern\lib\win64\mingw64" -llibmwlapack -llibmwblas -llibemlrt -llibcovrt -llibut -llibmwmathutil -fopenmp
+
+ldxxflags = fusionAlgorithm.def  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2025b\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -llibMatlabDataArray -llibMatlabEngine  -o "fusionAlgorithm_mex.mexw64" -L"$matlabdir\extern\lib\win64\mingw64" -llibmwlapack -llibmwblas -llibemlrt -llibcovrt -llibut -llibmwmathutil -fopenmp
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker @$out.rsp $linkobjs $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldxxflags
+
+# Build
+build $builddir/fusionAlgorithm_data.o : cc $root/fusionAlgorithm_data.c
+build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
+build $builddir/fusionAlgorithm_initialize.o : cc $root/fusionAlgorithm_initialize.c
+build $builddir/fusionAlgorithm_terminate.o : cc $root/fusionAlgorithm_terminate.c
+build $builddir/fusionAlgorithm.o : cc $root/fusionAlgorithm.c
+build $builddir/fuserSourceConfiguration.o : cc $root/fuserSourceConfiguration.c
+build $builddir/unique.o : cc $root/unique.c
+build $builddir/SystemCore.o : cc $root/SystemCore.c
+build $builddir/FuserManager.o : cc $root/FuserManager.c
+build $builddir/validateattributes.o : cc $root/validateattributes.c
+build $builddir/isSymmetricPositiveSemiDefinite.o : cc $root/isSymmetricPositiveSemiDefinite.c
+build $builddir/all.o : cc $root/all.c
+build $builddir/eig.o : cc $root/eig.c
+build $builddir/xnrm2.o : cc $root/xnrm2.c
+build $builddir/warning.o : cc $root/warning.c
+build $builddir/eigSkewHermitianStandard.o : cc $root/eigSkewHermitianStandard.c
+build $builddir/sumMatrixIncludeNaN.o : cc $root/sumMatrixIncludeNaN.c
+build $builddir/objectTrack.o : cc $root/objectTrack.c
+build $builddir/trackFuser.o : cc $root/trackFuser.c
+build $builddir/repmat.o : cc $root/repmat.c
+build $builddir/assertValidSizeArg.o : cc $root/assertValidSizeArg.c
+build $builddir/find.o : cc $root/find.c
+build $builddir/indexShapeCheck.o : cc $root/indexShapeCheck.c
+build $builddir/AssignerGNN.o : cc $root/AssignerGNN.c
+build $builddir/matchpairs.o : cc $root/matchpairs.c
+build $builddir/eml_setop.o : cc $root/eml_setop.c
+build $builddir/issorted.o : cc $root/issorted.c
+build $builddir/any.o : cc $root/any.c
+build $builddir/combineVectorElements.o : cc $root/combineVectorElements.c
+build $builddir/fusecovint.o : cc $root/fusecovint.c
+build $builddir/validateCovFusion.o : cc $root/validateCovFusion.c
+build $builddir/mldivide.o : cc $root/mldivide.c
+build $builddir/_coder_fusionAlgorithm_api.o : cc $root/interface/_coder_fusionAlgorithm_api.c
+build $builddir/_coder_fusionAlgorithm_mex.o : cc $root/interface/_coder_fusionAlgorithm_mex.c
+build $builddir/eml_int_forloop_overflow_check.o : cc $root/eml_int_forloop_overflow_check.c
+build $builddir/geodetic2ecefFormula.o : cc $root/geodetic2ecefFormula.c
+build $builddir/xzgehrd.o : cc $root/xzgehrd.c
+build $builddir/xzlarf.o : cc $root/xzlarf.c
+build $builddir/xzlarfg.o : cc $root/xzlarfg.c
+build $builddir/xdlanv2.o : cc $root/xdlanv2.c
+build $builddir/xrot.o : cc $root/xrot.c
+build $builddir/cosd.o : cc $root/cosd.c
+build $builddir/sind.o : cc $root/sind.c
+build $builddir/constvel.o : cc $root/constvel.c
+build $builddir/gaussEKFilter.o : cc $root/gaussEKFilter.c
+build $builddir/mrdivide_helper.o : cc $root/mrdivide_helper.c
+build $builddir/xzgetrf.o : cc $root/xzgetrf.c
+build $builddir/minPriorityQueue.o : cc $root/minPriorityQueue.c
+build $builddir/sort.o : cc $root/sort.c
+build $builddir/sortIdx.o : cc $root/sortIdx.c
+build $builddir/Fuserxcov.o : cc $root/Fuserxcov.c
+build $builddir/ensurePosDefMatrix.o : cc $root/ensurePosDefMatrix.c
+build $builddir/xhseqr.o : cc $root/xhseqr.c
+build $builddir/fusionAlgorithm_emxutil.o : cc $root/fusionAlgorithm_emxutil.c
+build $builddir/_coder_fusionAlgorithm_info.o : cc $root/interface/_coder_fusionAlgorithm_info.c
+build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
+
+# Link
+build $root\fusionAlgorithm_mex.mexw64 : link $builddir/fusionAlgorithm_data.o $builddir/rt_nonfinite.o $builddir/fusionAlgorithm_initialize.o $builddir/fusionAlgorithm_terminate.o $builddir/fusionAlgorithm.o $builddir/fuserSourceConfiguration.o $builddir/unique.o $builddir/SystemCore.o $builddir/FuserManager.o $builddir/validateattributes.o $builddir/isSymmetricPositiveSemiDefinite.o $builddir/all.o $builddir/eig.o $builddir/xnrm2.o $builddir/warning.o $builddir/eigSkewHermitianStandard.o $builddir/sumMatrixIncludeNaN.o $builddir/objectTrack.o $builddir/trackFuser.o $builddir/repmat.o $builddir/assertValidSizeArg.o $builddir/find.o $builddir/indexShapeCheck.o $builddir/AssignerGNN.o $builddir/matchpairs.o $builddir/eml_setop.o $builddir/issorted.o $builddir/any.o $builddir/combineVectorElements.o $builddir/fusecovint.o $builddir/validateCovFusion.o $builddir/mldivide.o $builddir/_coder_fusionAlgorithm_api.o $builddir/_coder_fusionAlgorithm_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/geodetic2ecefFormula.o $builddir/xzgehrd.o $builddir/xzlarf.o $builddir/xzlarfg.o $builddir/xdlanv2.o $builddir/xrot.o $builddir/cosd.o $builddir/sind.o $builddir/constvel.o $builddir/gaussEKFilter.o $builddir/mrdivide_helper.o $builddir/xzgetrf.o $builddir/minPriorityQueue.o $builddir/sort.o $builddir/sortIdx.o $builddir/Fuserxcov.o $builddir/ensurePosDefMatrix.o $builddir/xhseqr.o $builddir/fusionAlgorithm_emxutil.o $builddir/_coder_fusionAlgorithm_info.o $builddir/c_mexapi_version.o 

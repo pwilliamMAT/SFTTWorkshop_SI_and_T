@@ -1,0 +1,410 @@
+/*
+ * xscal.c
+ *
+ * Code generation for function 'xscal'
+ *
+ */
+
+/* Include files */
+#include "xscal.h"
+#include "eml_int_forloop_overflow_check.h"
+#include "rt_nonfinite.h"
+#include "trackingAlgorithm_data.h"
+#include <emmintrin.h>
+
+/* Function Definitions */
+void b_xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[9],
+             int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = (ix0 + n) - 1;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= b) && (b > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((b - ix0) + 1) / 2 * 2 + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    r = _mm_mul_pd(_mm_set1_pd(a), r);
+    _mm_storeu_pd(&x[k - 1], r);
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] *= a;
+  }
+}
+
+void c_xscal(const emlrtStack *sp, real_T a, real_T x[9], int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = ix0 + 2;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= ix0 + 2) && (ix0 + 2 > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((b - ix0) + 1) / 2 * 2 + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    r = _mm_mul_pd(_mm_set1_pd(a), r);
+    _mm_storeu_pd(&x[k - 1], r);
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] *= a;
+  }
+}
+
+void d_xscal(const emlrtStack *sp, real_T x[9], int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = ix0 + 2;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= ix0 + 2) && (ix0 + 2 > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((b - ix0) + 1) / 2 * 2 + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    r = _mm_mul_pd(r, _mm_set1_pd(-1.0));
+    _mm_storeu_pd(&x[k - 1], r);
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] = -x[k - 1];
+  }
+}
+
+void e_xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[6],
+             int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = (ix0 + n) - 1;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= b) && (b > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((((b - ix0) + 1) / 2) << 1) + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    _mm_storeu_pd(&x[k - 1], _mm_mul_pd(_mm_set1_pd(a), r));
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] *= a;
+  }
+}
+
+void f_xscal(const emlrtStack *sp, real_T a, real_T x[36], int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = ix0 + 5;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= ix0 + 5) && (ix0 + 5 > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((b - ix0) + 1) / 2 * 2 + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    r = _mm_mul_pd(_mm_set1_pd(a), r);
+    _mm_storeu_pd(&x[k - 1], r);
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] *= a;
+  }
+}
+
+void g_xscal(const emlrtStack *sp, real_T x[36], int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = ix0 + 5;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= ix0 + 5) && (ix0 + 5 > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((b - ix0) + 1) / 2 * 2 + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    r = _mm_mul_pd(r, _mm_set1_pd(-1.0));
+    _mm_storeu_pd(&x[k - 1], r);
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] = -x[k - 1];
+  }
+}
+
+void h_xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[16],
+             int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = (ix0 + n) - 1;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= b) && (b > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((b - ix0) + 1) / 2 * 2 + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    r = _mm_mul_pd(_mm_set1_pd(a), r);
+    _mm_storeu_pd(&x[k - 1], r);
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] *= a;
+  }
+}
+
+void i_xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[4],
+             int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = (ix0 + n) - 1;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= b) && (b > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((((b - ix0) + 1) / 2) << 1) + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    _mm_storeu_pd(&x[k - 1], _mm_mul_pd(_mm_set1_pd(a), r));
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] *= a;
+  }
+}
+
+void j_xscal(const emlrtStack *sp, real_T a, real_T x[16], int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = ix0 + 3;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= ix0 + 3) && (ix0 + 3 > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((b - ix0) + 1) / 2 * 2 + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    r = _mm_mul_pd(_mm_set1_pd(a), r);
+    _mm_storeu_pd(&x[k - 1], r);
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] *= a;
+  }
+}
+
+void k_xscal(const emlrtStack *sp, real_T x[16], int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = ix0 + 3;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= ix0 + 3) && (ix0 + 3 > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((b - ix0) + 1) / 2 * 2 + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    r = _mm_mul_pd(r, _mm_set1_pd(-1.0));
+    _mm_storeu_pd(&x[k - 1], r);
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] = -x[k - 1];
+  }
+}
+
+void l_xscal(real_T a, real_T x[3])
+{
+  __m128d r;
+  r = _mm_loadu_pd(&x[1]);
+  _mm_storeu_pd(&x[1], _mm_mul_pd(_mm_set1_pd(a), r));
+}
+
+void xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[36], int32_T ix0)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  int32_T b;
+  int32_T k;
+  int32_T scalarLB;
+  int32_T vectorUB;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  st.site = &kd_emlrtRSI;
+  b = (ix0 + n) - 1;
+  b_st.site = &ld_emlrtRSI;
+  if ((ix0 <= b) && (b > 2147483646)) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  scalarLB = ((b - ix0) + 1) / 2 * 2 + ix0;
+  vectorUB = scalarLB - 2;
+  for (k = ix0; k <= vectorUB; k += 2) {
+    __m128d r;
+    r = _mm_loadu_pd(&x[k - 1]);
+    r = _mm_mul_pd(_mm_set1_pd(a), r);
+    _mm_storeu_pd(&x[k - 1], r);
+  }
+  for (k = scalarLB; k <= b; k++) {
+    x[k - 1] *= a;
+  }
+}
+
+/* End of code generation (xscal.c) */

@@ -1,4 +1,4 @@
-function plotActiveRadarData(mapViewer, radarSpec, radarData, args)
+function helperPlotActiveRadarData(mapViewer, radarSpec, radarData, args)
 
 arguments
     mapViewer
