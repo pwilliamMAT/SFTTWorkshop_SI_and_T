@@ -2,7 +2,7 @@ function radarTrack = helperEcef2nedTrack(centralTrack)
 mapOrigin = [42.39423231362 -70.95934958874 0];
 radarTrack = objectTrack('State',zeros(6,1),...
     'StateCovariance',eye(6));
-radarTrack = syncTrack(radarTrack,centralTrack);
+radarTrack = helperSyncTrack(radarTrack,centralTrack);
 
 centerState = centralTrack.State;
 [N,E,D] = ecef2ned(centerState(1),centerState(3),centerState(5),mapOrigin(1),mapOrigin(2),mapOrigin(3),wgs84Ellipsoid);
