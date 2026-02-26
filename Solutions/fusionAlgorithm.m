@@ -49,7 +49,7 @@ centralTrack = objectTrack('State',state,'StateCovariance',stateCov,'TrackLogic'
 
 srcIdx = localTrack.SourceIndex;
 if srcIdx == 1
-    centralTrack = radar2central(localTrack);
+    centralTrack = Ned2ecefTrack(localTrack);
 elseif srcIdx == 2
     centralTrack = adsb2central(localTrack);
 end
@@ -63,14 +63,14 @@ localTrack = objectTrack('State',state,'StateCovariance',stateCov,'TrackLogic','
 
 srcIdx = centralTrack.SourceIndex;
 if srcIdx == 1
-    localTrack = central2radar(centralTrack);
+    localTrack = Ecef2nedTrack(centralTrack);
 elseif srcIdx == 2
     localTrack = central2adsb(centralTrack);
 end
 end
 
 
-function centralTrack = radar2central(radarTrack)
+function centralTrack = Ned2ecefTrack(radarTrack)
 mapOrigin = [42.39423231362 -70.95934958874 0];
 % Initialize a track of the correct state size
 % Force 'Integrated' for codegen consistency
@@ -114,7 +114,7 @@ centralTrack.State = centerState;
 centralTrack.StateCovariance = centerStateCov;
 end
 
-function radarTrack = central2radar(centralTrack)
+function radarTrack = Ecef2nedTrack(centralTrack)
 % A function to transform a track in the central state-space to a track in
 % the radar state-space.
 mapOrigin = [42.39423231362 -70.95934958874 0];
@@ -277,4 +277,3 @@ function R = ecef2nedRotmat(lat_deg, lon_deg)
          -sLon,       cLon,       0;
          -cLat*cLon, -cLat*sLon, -sLat];
 end
-

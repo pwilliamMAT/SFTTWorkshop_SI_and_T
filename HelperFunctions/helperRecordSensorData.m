@@ -32,7 +32,7 @@ for k = 1:numel(sensors)
     cfgSensorIndex = arrayfun(@(x)x.SensorIndex, configBuffer);
     cfgs = configBuffer(cfgSensorIndex == sensorIdx);
     if sensor.MeasurementParameters(1).HasRange
-        sensorData{k} = recordMonostaticData(sensorMountingAngles, dets, cfgs);
+        sensorData{k} = helperRecordMonostaticData(sensorMountingAngles, dets, cfgs);
     else
         disp('no ESM sensor, not recording')
     end

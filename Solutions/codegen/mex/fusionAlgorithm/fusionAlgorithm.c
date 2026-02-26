@@ -230,7 +230,7 @@ static emlrtRSInfo bh_emlrtRSI = {
 
 static emlrtRSInfo ch_emlrtRSI = {
     82,              /* lineNo */
-    "radar2central", /* fcnName */
+    "Ned2ecefTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
@@ -239,7 +239,7 @@ static emlrtRSInfo ch_emlrtRSI = {
 
 static emlrtRSInfo dh_emlrtRSI = {
     86,              /* lineNo */
-    "radar2central", /* fcnName */
+    "Ned2ecefTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
@@ -248,7 +248,7 @@ static emlrtRSInfo dh_emlrtRSI = {
 
 static emlrtRSInfo eh_emlrtRSI = {
     113,             /* lineNo */
-    "radar2central", /* fcnName */
+    "Ned2ecefTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
@@ -257,7 +257,7 @@ static emlrtRSInfo eh_emlrtRSI = {
 
 static emlrtRSInfo fh_emlrtRSI = {
     114,             /* lineNo */
-    "radar2central", /* fcnName */
+    "Ned2ecefTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
@@ -445,7 +445,7 @@ static emlrtRSInfo ei_emlrtRSI = {
 
 static emlrtRSInfo fi_emlrtRSI = {
     128,             /* lineNo */
-    "central2radar", /* fcnName */
+    "Ecef2nedTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
@@ -454,7 +454,7 @@ static emlrtRSInfo fi_emlrtRSI = {
 
 static emlrtRSInfo gi_emlrtRSI = {
     132,             /* lineNo */
-    "central2radar", /* fcnName */
+    "Ecef2nedTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
@@ -463,7 +463,7 @@ static emlrtRSInfo gi_emlrtRSI = {
 
 static emlrtRSInfo hi_emlrtRSI = {
     159,             /* lineNo */
-    "central2radar", /* fcnName */
+    "Ecef2nedTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
@@ -472,7 +472,7 @@ static emlrtRSInfo hi_emlrtRSI = {
 
 static emlrtRSInfo ii_emlrtRSI = {
     160,             /* lineNo */
-    "central2radar", /* fcnName */
+    "Ecef2nedTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"

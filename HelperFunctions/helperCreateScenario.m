@@ -1,5 +1,5 @@
-function scenario = helperCreateScenario(tuningData, mapOrigin)
-scenarioDuration = 100; % s (reduced from 200 for workshop speed)
+function scenario = helperCreateScenario(tuningData, mapOrigin,scenarioDuration)
+%scenarioDuration = 200; % s (reduced from 200 for workshop speed)
 scenario = trackingScenario(UpdateRate=1,StopTime=scenarioDuration,IsEarthCentered=true);
 radarTower = platform(scenario, Position=mapOrigin);
 
