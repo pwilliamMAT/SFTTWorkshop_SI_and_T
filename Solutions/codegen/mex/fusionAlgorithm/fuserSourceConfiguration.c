@@ -13,7 +13,7 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo bb_emlrtRSI = {
+static emlrtRSInfo cb_emlrtRSI = {
     184,                              /* lineNo */
     "fuserSourceConfiguration/clone", /* fcnName */
     "C:\\Program "
@@ -21,7 +21,7 @@ static emlrtRSInfo bb_emlrtRSI = {
     "tion.m" /* pathName */
 };
 
-static emlrtRSInfo cb_emlrtRSI = {
+static emlrtRSInfo db_emlrtRSI = {
     185,                              /* lineNo */
     "fuserSourceConfiguration/clone", /* fcnName */
     "C:\\Program "
@@ -29,7 +29,7 @@ static emlrtRSInfo cb_emlrtRSI = {
     "tion.m" /* pathName */
 };
 
-static emlrtRSInfo db_emlrtRSI = {
+static emlrtRSInfo eb_emlrtRSI = {
     180,                              /* lineNo */
     "fuserSourceConfiguration/clone", /* fcnName */
     "C:\\Program "
@@ -37,7 +37,7 @@ static emlrtRSInfo db_emlrtRSI = {
     "tion.m" /* pathName */
 };
 
-static emlrtRSInfo eb_emlrtRSI = {
+static emlrtRSInfo fb_emlrtRSI = {
     98,                                                  /* lineNo */
     "fuserSourceConfiguration/fuserSourceConfiguration", /* fcnName */
     "C:\\Program "
@@ -71,14 +71,14 @@ fuserSourceConfiguration_clone(const emlrtStack *sp,
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &bb_emlrtRSI;
   st.site = &cb_emlrtRSI;
   st.site = &db_emlrtRSI;
+  st.site = &eb_emlrtRSI;
   varargin_2 = obj->SourceIndex;
   iobj_0->pIsTransformToCentralValid = false;
   iobj_0->pIsTransformToLocalValid = false;
-  b_st.site = &eb_emlrtRSI;
-  c_st.site = &fb_emlrtRSI;
+  b_st.site = &fb_emlrtRSI;
+  c_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(varargin_2) || muDoubleScalarIsNaN(varargin_2) ||
       (!(muDoubleScalarFloor(varargin_2) == varargin_2))) {
     emlrtErrorWithMessageIdR2018a(
@@ -86,7 +86,7 @@ fuserSourceConfiguration_clone(const emlrtStack *sp,
         "MATLAB:fuserSourceConfiguration:expectedInteger", 3, 4, 28,
         "input number 1, SourceIndex,");
   }
-  c_st.site = &fb_emlrtRSI;
+  c_st.site = &gb_emlrtRSI;
   if (varargin_2 <= 0.0) {
     emlrtErrorWithMessageIdR2018a(
         &c_st, &d_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedPositive",

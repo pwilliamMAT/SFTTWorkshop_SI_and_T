@@ -30,7 +30,7 @@ static emlrtRSInfo wf_emlrtRSI = {
     "refblas\\ixamax.m" /* pathName */
 };
 
-static emlrtRSInfo ll_emlrtRSI = {
+static emlrtRSInfo dl_emlrtRSI = {
     41,        /* lineNo */
     "xzgetrf", /* fcnName */
     "C:\\Program "
@@ -38,7 +38,7 @@ static emlrtRSInfo ll_emlrtRSI = {
     "reflapack\\xzgetrf.m" /* pathName */
 };
 
-static emlrtRSInfo ml_emlrtRSI = {
+static emlrtRSInfo el_emlrtRSI = {
     55,        /* lineNo */
     "xzgetrf", /* fcnName */
     "C:\\Program "
@@ -46,7 +46,7 @@ static emlrtRSInfo ml_emlrtRSI = {
     "reflapack\\xzgetrf.m" /* pathName */
 };
 
-static emlrtRSInfo nl_emlrtRSI = {
+static emlrtRSInfo fl_emlrtRSI = {
     63,        /* lineNo */
     "xzgetrf", /* fcnName */
     "C:\\Program "
@@ -54,7 +54,7 @@ static emlrtRSInfo nl_emlrtRSI = {
     "reflapack\\xzgetrf.m" /* pathName */
 };
 
-static emlrtRSInfo ol_emlrtRSI = {
+static emlrtRSInfo gl_emlrtRSI = {
     45,      /* lineNo */
     "xgeru", /* fcnName */
     "C:\\Program "
@@ -108,7 +108,7 @@ int32_T xzgetrf(const emlrtStack *sp, real_T A[36], int32_T ipiv[6])
     jj = j * 7;
     jp1j = b + 2;
     jA = 7 - j;
-    st.site = &ll_emlrtRSI;
+    st.site = &dl_emlrtRSI;
     b_st.site = &vf_emlrtRSI;
     a = 0;
     smax = muDoubleScalarAbs(A[jj]);
@@ -135,15 +135,15 @@ int32_T xzgetrf(const emlrtStack *sp, real_T A[36], int32_T ipiv[6])
         }
       }
       jA = (jj - j) + 6;
-      st.site = &ml_emlrtRSI;
+      st.site = &el_emlrtRSI;
       for (k = jp1j; k <= jA; k++) {
         A[k - 1] /= A[jj];
       }
     } else {
       info = j + 1;
     }
-    st.site = &nl_emlrtRSI;
-    b_st.site = &ol_emlrtRSI;
+    st.site = &fl_emlrtRSI;
+    b_st.site = &gl_emlrtRSI;
     c_st.site = &ne_emlrtRSI;
     d_st.site = &oe_emlrtRSI;
     jA = jj + 8;
@@ -154,7 +154,7 @@ int32_T xzgetrf(const emlrtStack *sp, real_T A[36], int32_T ipiv[6])
         a = (jA - j) + 4;
         e_st.site = &qe_emlrtRSI;
         if ((jA <= a) && (a > 2147483646)) {
-          f_st.site = &sb_emlrtRSI;
+          f_st.site = &tb_emlrtRSI;
           check_forloop_overflow_error(&f_st);
         }
         for (ijA = jA; ijA <= a; ijA++) {

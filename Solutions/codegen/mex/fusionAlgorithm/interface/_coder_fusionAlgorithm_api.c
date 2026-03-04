@@ -253,7 +253,7 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
 {
   static const int32_T b_iv[2] = {6, 6};
   static const int32_T b_iv1[2] = {1, 7};
-  static const int32_T iv2[2] = {1, 4};
+  static const int32_T iv2[2] = {1, 3};
   static const int32_T b_i = 6;
   static const char_T *sv[16] = {"TrackID",
                                  "BranchID",
@@ -380,7 +380,7 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
     emlrtSetFieldR2017b(y, i, "TrackLogic", l_y, 10);
     m_y = NULL;
     m = emlrtCreateLogicalArray(2, &iv2[0]);
-    emlrtInitLogicalArray(4, m, &u_data[b_j0].TrackLogicState[0]);
+    emlrtInitLogicalArray(3, m, &u_data[b_j0].TrackLogicState[0]);
     emlrtAssign(&m_y, m);
     emlrtSetFieldR2017b(y, i, "TrackLogicState", m_y, 11);
     n_y = NULL;

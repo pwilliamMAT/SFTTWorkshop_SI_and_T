@@ -49,7 +49,7 @@ void all(const emlrtStack *sp, const boolean_T x[36], boolean_T y[6])
     i2 += 6;
     b_st.site = &xc_emlrtRSI;
     if ((i1 <= a) && (a > 2147483646)) {
-      c_st.site = &sb_emlrtRSI;
+      c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);
     }
     exitg1 = false;

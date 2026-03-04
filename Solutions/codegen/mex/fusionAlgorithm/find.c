@@ -15,7 +15,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo km_emlrtRSI = {
+static emlrtRSInfo cm_emlrtRSI = {
     396,                  /* lineNo */
     "find_first_indices", /* fcnName */
     "C:\\Program "
@@ -62,15 +62,15 @@ void eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
   c_st.tls = b_st.tls;
   x_data = x->data;
   nx = x->size[0];
-  st.site = &im_emlrtRSI;
+  st.site = &am_emlrtRSI;
   idx = 0;
   ii = i->size[0];
   i->size[0] = x->size[0];
   emxEnsureCapacity_int32_T(&st, i, ii, &vd_emlrtRTEI);
   i_data = i->data;
-  b_st.site = &jm_emlrtRSI;
+  b_st.site = &bm_emlrtRSI;
   if (x->size[0] > 2147483646) {
-    c_st.site = &sb_emlrtRSI;
+    c_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&c_st);
   }
   ii = 0;
@@ -104,7 +104,7 @@ void eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
     }
     b_iv[0] = 1;
     b_iv[1] = idx;
-    b_st.site = &km_emlrtRSI;
+    b_st.site = &cm_emlrtRSI;
     indexShapeCheck(&b_st, i->size[0], b_iv);
     ii = i->size[0];
     i->size[0] = idx;

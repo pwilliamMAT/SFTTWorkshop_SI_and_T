@@ -25,12 +25,13 @@ if isempty(fuser)
     fuser = trackFuser( ...
         'FuserIndex',            3, ...
         'MaxNumSources',         2, ...
+        'ProcessNoise', blkdiag(33.3333,33.3333,0.3333),...
         'SourceConfigurations',  {radarCfg; adsbCfg}, ...
-        'AssignmentThreshold',   [75 250], ...
+        'AssignmentThreshold',   [100 250], ...
         'StateFusion',           'Intersection', ...
         'StateFusionParameters', 'trace', ...
         'ConfirmationThreshold', [2 3], ...
-        'DeletionThreshold',     [4 4]);
+        'DeletionThreshold',     [2 2]);
 end
 
 % Step the fuser
@@ -48,10 +49,10 @@ stateCov = eye(6);
 centralTrack = objectTrack('State',state,'StateCovariance',stateCov,'TrackLogic','Integrated');
 
 srcIdx = localTrack.SourceIndex;
-if srcIdx == 1
+if srcIdx == 1 % Radar
     centralTrack = Ned2ecefTrack(localTrack);
-elseif srcIdx == 2
-    centralTrack = adsb2central(localTrack);
+elseif srcIdx == 2 % ADSB
+    centralTrack = Ecef2nedTrack(localTrack);
 end
 end
 
@@ -62,10 +63,10 @@ stateCov = eye(6);
 localTrack = objectTrack('State',state,'StateCovariance',stateCov,'TrackLogic','Integrated');
 
 srcIdx = centralTrack.SourceIndex;
-if srcIdx == 1
+if srcIdx == 1 % Radar
     localTrack = Ecef2nedTrack(centralTrack);
-elseif srcIdx == 2
-    localTrack = central2adsb(centralTrack);
+elseif srcIdx == 2 % ADSB
+    localTrack = Ned2ecefTrack(centralTrack);
 end
 end
 
@@ -86,7 +87,7 @@ radarState = radarTrack.State;
 [X,Y,Z] = ned2ecef(radarState(1),radarState(3),radarState(5),mapOrigin(1),mapOrigin(2),mapOrigin(3),wgs84Ellipsoid); 
 
 % Rotation matrix ECEF->NED (codegen-compatible)
-R = ecef2nedRotmat(mapOrigin(1), mapOrigin(2));
+R = ecef2nedRotmat(mapOrigin(1), mapOrigin(2)); % Note dcmecef2ned not supported for codegen
 
 % NED->ECEF velocity: v_ecef = R' * v_ned
 velos = R' * [radarState(2);radarState(4);radarState(6)];
@@ -139,7 +140,7 @@ radarState = [N, vN, E, vE, D, vD];
 centerStateCov = centralTrack.StateCovariance;
 
 % Rotation matrix ECEF->NED (codegen-compatible)
-R = ecef2nedRotmat(mapOrigin(1), mapOrigin(2));
+R = ecef2nedRotmat(mapOrigin(1), mapOrigin(2)); % Note dcmecef2ned not supported for codegen
 
 % Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz]
 permute_idx = [1, 3, 5, 2, 4, 6];
@@ -187,79 +188,6 @@ dst.StateCovariance = double(src.StateCovariance);
 dst.StateParameters = struct();
 dst.ObjectAttributes = struct();
 end
-
-
-
-function centralTrack = adsb2central(adsbTrack)
-% Central space is identical to ADS-B local space → copy with right types
-% Preserve TrackLogic from input struct
-centralTrack = objectTrack('State', zeros(6,1), 'StateCovariance', eye(6),'TrackLogic','Integrated');
-% Copy scalar properties as double to keep codegen type-stable
-centralTrack.TrackID        = uint32(adsbTrack.TrackID);
-centralTrack.BranchID       = uint32(adsbTrack.BranchID);
-centralTrack.SourceIndex    = uint32(adsbTrack.SourceIndex);
-centralTrack.UpdateTime     = double(adsbTrack.UpdateTime);
-centralTrack.Age            = uint32(adsbTrack.Age);
-centralTrack.ObjectClassID  = double(adsbTrack.ObjectClassID);
-% Skip TrackLogicState - fuser manages this
-%centralTrack.TrackLogicState= double(adsbTrack.TrackLogicState);
-centralTrack.IsConfirmed    = logical(adsbTrack.IsConfirmed);
-centralTrack.IsCoasted      = logical(adsbTrack.IsCoasted);
-centralTrack.IsSelfReported = logical(adsbTrack.IsSelfReported);
-
-% States/covariances → ensure double
-centralTrack.State          = double(adsbTrack.State);
-centralTrack.StateCovariance= double(adsbTrack.StateCovariance);
-end
-
-function adsbTrack = central2adsb(centralTrack)
-% Same layout → copy back
-% Preserve TrackLogic from input
-adsbTrack = objectTrack('State', zeros(6,1), 'StateCovariance', eye(6),'TrackLogic','Integrated');
-
-adsbTrack.TrackID        = uint32(centralTrack.TrackID);
-adsbTrack.BranchID       = uint32(centralTrack.BranchID);
-adsbTrack.SourceIndex    = uint32(centralTrack.SourceIndex);
-adsbTrack.UpdateTime     = double(centralTrack.UpdateTime);
-adsbTrack.Age            = uint32(centralTrack.Age);
-adsbTrack.ObjectClassID  = double(centralTrack.ObjectClassID);
-% Skip TrackLogicState - fuser manages this
-%adsbTrack.TrackLogicState= double(centralTrack.TrackLogicState);
-adsbTrack.IsConfirmed    = logical(centralTrack.IsConfirmed);
-adsbTrack.IsCoasted      = logical(centralTrack.IsCoasted);
-adsbTrack.IsSelfReported = logical(centralTrack.IsSelfReported);
-
-adsbTrack.State          = double(centralTrack.State);
-adsbTrack.StateCovariance= double(centralTrack.StateCovariance);
-end
-
-function emptyTrack = createEmptyTrackStruct()
-% Create empty track structure matching the prototype in generateFuserMEX.m
-adsbCat = adsbCategory.No_Category_Information;
-
-protoObjAttrs = struct( ...
-    'Callsign', repmat(' ',1,8), ...
-    'Category', adsbCat);
-
-emptyTrack = struct( ...
-    'TrackID',          uint32(0), ...
-    'BranchID',         uint32(0), ...
-    'SourceIndex',      uint32(0), ...
-    'UpdateTime',       double(0), ...
-    'Age',              uint32(0), ...
-    'State',            zeros(6,1,'double'), ...
-    'StateCovariance',  eye(6,'double'), ...
-    'StateParameters',  struct(), ...
-    'ObjectClassID',    double(0), ...
-    'ObjectClassProbabilities',  double(0), ...
-    'TrackLogic',       'History',...
-    'TrackLogicState',  false, ...
-    'IsConfirmed',      false, ...
-    'IsCoasted',        false, ...
-    'IsSelfReported',   false, ...
-    'ObjectAttributes', protoObjAttrs);
-end
-
 
 function R = ecef2nedRotmat(lat_deg, lon_deg)
 %ecef2nedRotmat  3x3 ECEF-to-NED rotation matrix (codegen-compatible).

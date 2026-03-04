@@ -10,7 +10,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo lm_emlrtRSI = {
+static emlrtRSInfo dm_emlrtRSI = {
     42,                /* lineNo */
     "indexShapeCheck", /* fcnName */
     "C:\\Program "
@@ -33,7 +33,7 @@ void b_indexShapeCheck(const emlrtStack *sp, int32_T matrixSize)
   emlrtStack st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &lm_emlrtRSI;
+  st.site = &dm_emlrtRSI;
   if (matrixSize == 1) {
     emlrtErrorWithMessageIdR2018a(&st, &eb_emlrtRTEI,
                                   "Coder:FE:PotentialVectorVector",
@@ -53,7 +53,7 @@ void indexShapeCheck(const emlrtStack *sp, int32_T matrixSize,
   } else {
     c = false;
   }
-  st.site = &lm_emlrtRSI;
+  st.site = &dm_emlrtRSI;
   if (c) {
     emlrtErrorWithMessageIdR2018a(&st, &eb_emlrtRTEI,
                                   "Coder:FE:PotentialVectorVector",

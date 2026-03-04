@@ -17,7 +17,7 @@
 #include <math.h>
 
 /* Variable Definitions */
-static emlrtRSInfo et_emlrtRSI = {
+static emlrtRSInfo vs_emlrtRSI = {
     15,                  /* lineNo */
     "validateCovFusion", /* fcnName */
     "C:\\Program "
@@ -25,7 +25,7 @@ static emlrtRSInfo et_emlrtRSI = {
     "internal\\validateCovFusion.m" /* pathName */
 };
 
-static emlrtRSInfo ft_emlrtRSI = {
+static emlrtRSInfo ws_emlrtRSI = {
     16,                  /* lineNo */
     "validateCovFusion", /* fcnName */
     "C:\\Program "
@@ -33,7 +33,7 @@ static emlrtRSInfo ft_emlrtRSI = {
     "internal\\validateCovFusion.m" /* pathName */
 };
 
-static emlrtRSInfo gt_emlrtRSI = {
+static emlrtRSInfo xs_emlrtRSI = {
     24,                  /* lineNo */
     "validateCovFusion", /* fcnName */
     "C:\\Program "
@@ -88,8 +88,8 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
   b_st.tls = st.tls;
   p_data = p->data;
   x_data = x->data;
-  st.site = &et_emlrtRSI;
-  b_st.site = &fb_emlrtRSI;
+  st.site = &vs_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   b_p = true;
   notSymmetric_tmp_tmp = 6 * x->size[1];
   idx = 0;
@@ -109,8 +109,8 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
         "MATLAB:fusecovint:expectedFinite", 3, 4, 27,
         "input number 1, trackState,");
   }
-  st.site = &ft_emlrtRSI;
-  b_st.site = &fb_emlrtRSI;
+  st.site = &ws_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   b_p = true;
   notSymmetric_tmp_tmp = 36 * p->size[2];
   idx = 0;
@@ -148,7 +148,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
     boolean_T b_y[36];
     boolean_T c_x[6];
     boolean_T notPositiveSemidefinite;
-    st.site = &gt_emlrtRSI;
+    st.site = &xs_emlrtRSI;
     if (b_i + 1 > i) {
       emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, i, &og_emlrtBCI, &st);
     }

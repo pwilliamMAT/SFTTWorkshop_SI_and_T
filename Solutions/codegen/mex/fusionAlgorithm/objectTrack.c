@@ -133,36 +133,6 @@ uint32_T b_objectTrack_objectTrack(
   return track_TrackID;
 }
 
-uint32_T b_objectTrack_set_TrackID(
-    uint32_T b_value, uint32_T *obj_BranchID, uint32_T *obj_SourceIndex,
-    uint32_T *obj_Age, real_T *obj_ObjectClassID,
-    real_T c_obj_ObjectClassProbabilities_[],
-    int32_T d_obj_ObjectClassProbabilities_[2], boolean_T *obj_IsConfirmed,
-    boolean_T *obj_IsCoasted, boolean_T *obj_IsSelfReported,
-    real_T obj_pState[6], real_T obj_pStateCovariance[36],
-    real_T *obj_pUpdateTime)
-{
-  int32_T i;
-  *obj_BranchID = 0U;
-  *obj_SourceIndex = 1U;
-  *obj_Age = 1U;
-  *obj_ObjectClassID = 0.0;
-  d_obj_ObjectClassProbabilities_[0] = 1;
-  d_obj_ObjectClassProbabilities_[1] = 1;
-  c_obj_ObjectClassProbabilities_[0] = 1.0;
-  *obj_IsConfirmed = true;
-  *obj_IsCoasted = false;
-  *obj_IsSelfReported = true;
-  for (i = 0; i < 6; i++) {
-    obj_pState[i] = 0.0;
-  }
-  for (i = 0; i < 36; i++) {
-    obj_pStateCovariance[i] = iv[i];
-  }
-  *obj_pUpdateTime = 0.0;
-  return b_value;
-}
-
 void c_objectTrack_set_ObjectClassPr(const emlrtStack *sp, b_objectTrack *obj,
                                      const real_T value_data[],
                                      const int32_T value_size[2])
@@ -193,7 +163,7 @@ void c_objectTrack_set_ObjectClassPr(const emlrtStack *sp, b_objectTrack *obj,
   g_st.prev = &f_st;
   g_st.tls = f_st.tls;
   st.site = &xf_emlrtRSI;
-  b_st.site = &fb_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   if (value_size[1] == 0) {
     emlrtErrorWithMessageIdR2018a(
         &b_st, &ic_emlrtRTEI,
@@ -201,7 +171,7 @@ void c_objectTrack_set_ObjectClassPr(const emlrtStack *sp, b_objectTrack *obj,
         "MATLAB:objectTrack:expectedNonempty", 3, 4, 24,
         "ObjectClassProbabilities");
   }
-  b_st.site = &fb_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   p = true;
   k = 0;
   exitg1 = false;
@@ -220,7 +190,7 @@ void c_objectTrack_set_ObjectClassPr(const emlrtStack *sp, b_objectTrack *obj,
         "MATLAB:objectTrack:expectedFinite", 3, 4, 24,
         "ObjectClassProbabilities");
   }
-  b_st.site = &fb_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   p = true;
   k = 0;
   exitg1 = false;
@@ -239,7 +209,7 @@ void c_objectTrack_set_ObjectClassPr(const emlrtStack *sp, b_objectTrack *obj,
         "MATLAB:objectTrack:expectedNonnegative", 3, 4, 24,
         "ObjectClassProbabilities");
   }
-  b_st.site = &fb_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   p = true;
   k = 0;
   exitg1 = false;
@@ -290,14 +260,14 @@ void d_objectTrack_set_ObjectClassPr(const emlrtStack *sp, objectTrack *obj,
   b_st.prev = &st;
   b_st.tls = st.tls;
   st.site = &xf_emlrtRSI;
-  b_st.site = &fb_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(b_value) || muDoubleScalarIsNaN(b_value)) {
     emlrtErrorWithMessageIdR2018a(
         &b_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:objectTrack:expectedFinite", 3, 4, 24,
         "ObjectClassProbabilities");
   }
-  b_st.site = &fb_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   if (b_value < 0.0) {
     emlrtErrorWithMessageIdR2018a(
         &b_st, &l_emlrtRTEI,
@@ -305,7 +275,7 @@ void d_objectTrack_set_ObjectClassPr(const emlrtStack *sp, objectTrack *obj,
         "MATLAB:objectTrack:expectedNonnegative", 3, 4, 24,
         "ObjectClassProbabilities");
   }
-  b_st.site = &fb_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   if (!(b_value <= 1.0)) {
     emlrtErrorWithMessageIdR2018a(
         &b_st, &jc_emlrtRTEI, "MATLAB:validateattributes:expectedArray",
@@ -386,7 +356,7 @@ uint32_T objectTrack_set_TrackID(
   }
   *obj_pUpdateTime = 0.0;
   st.site = &ph_emlrtRSI;
-  b_st.site = &fb_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(b_value) || muDoubleScalarIsNaN(b_value) ||
       (!(muDoubleScalarFloor(b_value) == b_value))) {
     emlrtErrorWithMessageIdR2018a(

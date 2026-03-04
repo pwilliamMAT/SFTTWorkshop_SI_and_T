@@ -16,7 +16,7 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo ib_emlrtRSI = {
+static emlrtRSInfo jb_emlrtRSI = {
     161,             /* lineNo */
     "unique_vector", /* fcnName */
     "C:\\Program "
@@ -24,7 +24,7 @@ static emlrtRSInfo ib_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo jb_emlrtRSI = {
+static emlrtRSInfo kb_emlrtRSI = {
     163,             /* lineNo */
     "unique_vector", /* fcnName */
     "C:\\Program "
@@ -32,7 +32,7 @@ static emlrtRSInfo jb_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo kb_emlrtRSI = {
+static emlrtRSInfo lb_emlrtRSI = {
     180,             /* lineNo */
     "unique_vector", /* fcnName */
     "C:\\Program "
@@ -40,7 +40,7 @@ static emlrtRSInfo kb_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo lb_emlrtRSI = {
+static emlrtRSInfo mb_emlrtRSI = {
     211,             /* lineNo */
     "unique_vector", /* fcnName */
     "C:\\Program "
@@ -48,7 +48,7 @@ static emlrtRSInfo lb_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo mb_emlrtRSI = {
+static emlrtRSInfo nb_emlrtRSI = {
     224,             /* lineNo */
     "unique_vector", /* fcnName */
     "C:\\Program "
@@ -56,7 +56,7 @@ static emlrtRSInfo mb_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo nb_emlrtRSI = {
+static emlrtRSInfo ob_emlrtRSI = {
     235,             /* lineNo */
     "unique_vector", /* fcnName */
     "C:\\Program "
@@ -64,7 +64,7 @@ static emlrtRSInfo nb_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo ob_emlrtRSI = {
+static emlrtRSInfo pb_emlrtRSI = {
     249,             /* lineNo */
     "unique_vector", /* fcnName */
     "C:\\Program "
@@ -73,7 +73,7 @@ static emlrtRSInfo ob_emlrtRSI = {
 };
 
 static emlrtRSInfo
-    pb_emlrtRSI =
+    qb_emlrtRSI =
         {
             145,       /* lineNo */
             "sortIdx", /* fcnName */
@@ -82,7 +82,7 @@ static emlrtRSInfo
             "internal\\sortIdx.m" /* pathName */
 };
 
-static emlrtRSInfo qb_emlrtRSI =
+static emlrtRSInfo rb_emlrtRSI =
     {
         57,          /* lineNo */
         "mergesort", /* fcnName */
@@ -91,7 +91,7 @@ static emlrtRSInfo qb_emlrtRSI =
         "internal\\mergesort.m" /* pathName */
 };
 
-static emlrtRSInfo rb_emlrtRSI =
+static emlrtRSInfo sb_emlrtRSI =
     {
         113,         /* lineNo */
         "mergesort", /* fcnName */
@@ -100,7 +100,7 @@ static emlrtRSInfo rb_emlrtRSI =
         "internal\\mergesort.m" /* pathName */
 };
 
-static emlrtRSInfo cq_emlrtRSI = {
+static emlrtRSInfo tp_emlrtRSI = {
     243,             /* lineNo */
     "unique_vector", /* fcnName */
     "C:\\Program "
@@ -197,7 +197,7 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   a_data = a->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   na = a->size[0];
-  st.site = &ib_emlrtRSI;
+  st.site = &jb_emlrtRSI;
   n = a->size[0] + 1;
   emxInit_int32_T(&st, &idx, 1, &nc_emlrtRTEI);
   pEnd = idx->size[0];
@@ -209,16 +209,16 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   }
   if (a->size[0] != 0) {
     int32_T i;
-    b_st.site = &pb_emlrtRSI;
+    b_st.site = &qb_emlrtRSI;
     emxInit_int32_T(&b_st, &iwork, 1, &rc_emlrtRTEI);
     pEnd = iwork->size[0];
     iwork->size[0] = a->size[0];
     emxEnsureCapacity_int32_T(&b_st, iwork, pEnd, &oc_emlrtRTEI);
     iwork_data = iwork->data;
     pEnd = a->size[0] - 1;
-    c_st.site = &qb_emlrtRSI;
+    c_st.site = &rb_emlrtRSI;
     if (a->size[0] - 1 > 2147483645) {
-      d_st.site = &sb_emlrtRSI;
+      d_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&d_st);
     }
     for (k = 1; k <= pEnd; k += 2) {
@@ -278,7 +278,7 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
           }
           b_k++;
         }
-        c_st.site = &rb_emlrtRSI;
+        c_st.site = &sb_emlrtRSI;
         for (k = 0; k < kEnd; k++) {
           idx_data[(j + k) - 1] = iwork_data[k];
         }
@@ -292,9 +292,9 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   b->size[0] = a->size[0];
   emxEnsureCapacity_uint32_T(sp, b, pEnd, &pc_emlrtRTEI);
   b_data = b->data;
-  st.site = &jb_emlrtRSI;
+  st.site = &kb_emlrtRSI;
   if (a->size[0] > 2147483646) {
-    b_st.site = &sb_emlrtRSI;
+    b_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&b_st);
   }
   for (k = 0; k < na; k++) {
@@ -312,13 +312,13 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
     } while (!((pEnd + 1 > na) || (b_data[pEnd] != x)));
     q++;
     b_data[q - 1] = x;
-    st.site = &lb_emlrtRSI;
+    st.site = &mb_emlrtRSI;
     if ((p + 1 <= pEnd) && (pEnd > 2147483646)) {
-      b_st.site = &sb_emlrtRSI;
+      b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
   }
-  st.site = &nb_emlrtRSI;
+  st.site = &ob_emlrtRSI;
   if (q > a->size[0]) {
     emlrtErrorWithMessageIdR2018a(sp, &e_emlrtRTEI,
                                   "Coder:builtins:AssertionFailed",
@@ -329,12 +329,12 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   }
   b_iv[0] = 1;
   b_iv[1] = q;
-  st.site = &cq_emlrtRSI;
+  st.site = &tp_emlrtRSI;
   indexShapeCheck(&st, b->size[0], b_iv);
   pEnd = b->size[0];
   b->size[0] = q;
   emxEnsureCapacity_uint32_T(sp, b, pEnd, &qc_emlrtRTEI);
-  st.site = &ob_emlrtRSI;
+  st.site = &pb_emlrtRSI;
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }
 
@@ -369,7 +369,7 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   a_data = a->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   na = a->size[1];
-  st.site = &ib_emlrtRSI;
+  st.site = &jb_emlrtRSI;
   n = a->size[1] + 1;
   emxInit_int32_T(&st, &idx, 2, &nc_emlrtRTEI);
   pEnd = idx->size[0] * idx->size[1];
@@ -382,16 +382,16 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   }
   if (a->size[1] != 0) {
     int32_T i;
-    b_st.site = &pb_emlrtRSI;
+    b_st.site = &qb_emlrtRSI;
     emxInit_int32_T(&b_st, &iwork, 1, &rc_emlrtRTEI);
     pEnd = iwork->size[0];
     iwork->size[0] = a->size[1];
     emxEnsureCapacity_int32_T(&b_st, iwork, pEnd, &oc_emlrtRTEI);
     iwork_data = iwork->data;
     pEnd = a->size[1] - 1;
-    c_st.site = &qb_emlrtRSI;
+    c_st.site = &rb_emlrtRSI;
     if (a->size[1] - 1 > 2147483645) {
-      d_st.site = &sb_emlrtRSI;
+      d_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&d_st);
     }
     for (k = 1; k <= pEnd; k += 2) {
@@ -451,7 +451,7 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
           }
           b_k++;
         }
-        c_st.site = &rb_emlrtRSI;
+        c_st.site = &sb_emlrtRSI;
         for (k = 0; k < kEnd; k++) {
           idx_data[(j + k) - 1] = iwork_data[k];
         }
@@ -466,9 +466,9 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   b->size[1] = a->size[1];
   emxEnsureCapacity_uint32_T(sp, b, pEnd, &pc_emlrtRTEI);
   b_data = b->data;
-  st.site = &jb_emlrtRSI;
+  st.site = &kb_emlrtRSI;
   if (a->size[1] > 2147483646) {
-    b_st.site = &sb_emlrtRSI;
+    b_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&b_st);
   }
   for (k = 0; k < na; k++) {
@@ -486,13 +486,13 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
     } while (!((pEnd + 1 > na) || (b_data[pEnd] != x)));
     q++;
     b_data[q - 1] = x;
-    st.site = &lb_emlrtRSI;
+    st.site = &mb_emlrtRSI;
     if ((p + 1 <= pEnd) && (pEnd > 2147483646)) {
-      b_st.site = &sb_emlrtRSI;
+      b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
   }
-  st.site = &nb_emlrtRSI;
+  st.site = &ob_emlrtRSI;
   if (q > a->size[1]) {
     emlrtErrorWithMessageIdR2018a(sp, &e_emlrtRTEI,
                                   "Coder:builtins:AssertionFailed",
@@ -505,7 +505,7 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
     b->size[1] = q;
   }
   emxEnsureCapacity_uint32_T(sp, b, pEnd, &qc_emlrtRTEI);
-  st.site = &ob_emlrtRSI;
+  st.site = &pb_emlrtRSI;
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }
 
@@ -545,7 +545,7 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
   a_data = a->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   na = a->size[1];
-  st.site = &ib_emlrtRSI;
+  st.site = &jb_emlrtRSI;
   n = a->size[1] + 1;
   emxInit_int32_T(&st, &idx, 2, &nc_emlrtRTEI);
   pEnd = idx->size[0] * idx->size[1];
@@ -557,16 +557,16 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
     idx_data[k] = 0;
   }
   if (a->size[1] != 0) {
-    b_st.site = &pb_emlrtRSI;
+    b_st.site = &qb_emlrtRSI;
     emxInit_int32_T(&b_st, &iwork, 1, &rc_emlrtRTEI);
     pEnd = iwork->size[0];
     iwork->size[0] = a->size[1];
     emxEnsureCapacity_int32_T(&b_st, iwork, pEnd, &oc_emlrtRTEI);
     iwork_data = iwork->data;
     pEnd = a->size[1] - 1;
-    c_st.site = &qb_emlrtRSI;
+    c_st.site = &rb_emlrtRSI;
     if (a->size[1] - 1 > 2147483645) {
-      d_st.site = &sb_emlrtRSI;
+      d_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&d_st);
     }
     for (k = 1; k <= pEnd; k += 2) {
@@ -624,7 +624,7 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
           }
           b_k++;
         }
-        c_st.site = &rb_emlrtRSI;
+        c_st.site = &sb_emlrtRSI;
         for (k = 0; k < kEnd; k++) {
           idx_data[(j + k) - 1] = iwork_data[k];
         }
@@ -639,9 +639,9 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
   b->size[1] = a->size[1];
   emxEnsureCapacity_real_T(sp, b, pEnd, &pc_emlrtRTEI);
   b_data = b->data;
-  st.site = &jb_emlrtRSI;
+  st.site = &kb_emlrtRSI;
   if (a->size[1] > 2147483646) {
-    b_st.site = &sb_emlrtRSI;
+    b_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&b_st);
   }
   for (k = 0; k < na; k++) {
@@ -671,9 +671,9 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
   i = 0;
   if (b_k > 0) {
     i = 1;
-    st.site = &kb_emlrtRSI;
+    st.site = &lb_emlrtRSI;
     if (b_k > 2147483646) {
-      b_st.site = &sb_emlrtRSI;
+      b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
   }
@@ -685,23 +685,23 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
     } while (!((b_k + 1 > q) || (b_data[b_k] != x)));
     i++;
     b_data[i - 1] = x;
-    st.site = &lb_emlrtRSI;
+    st.site = &mb_emlrtRSI;
     if ((p + 1 <= b_k) && (b_k > 2147483646)) {
-      b_st.site = &sb_emlrtRSI;
+      b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
   }
   if (pEnd > 0) {
     i++;
     b_data[i - 1] = b_data[q];
-    st.site = &mb_emlrtRSI;
+    st.site = &nb_emlrtRSI;
     if (pEnd > 2147483646) {
-      b_st.site = &sb_emlrtRSI;
+      b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
   }
   b_k = q + pEnd;
-  st.site = &nb_emlrtRSI;
+  st.site = &ob_emlrtRSI;
   for (k = 0; k < nNaN; k++) {
     b_data[i + k] = b_data[b_k + k];
   }
@@ -720,7 +720,7 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
     b->size[1] = i;
   }
   emxEnsureCapacity_real_T(sp, b, pEnd, &qc_emlrtRTEI);
-  st.site = &ob_emlrtRSI;
+  st.site = &pb_emlrtRSI;
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }
 

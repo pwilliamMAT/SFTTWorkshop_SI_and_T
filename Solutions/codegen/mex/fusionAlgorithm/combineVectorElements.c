@@ -13,7 +13,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo gr_emlrtRSI = {
+static emlrtRSInfo xq_emlrtRSI = {
     149,                     /* lineNo */
     "combineVectorElements", /* fcnName */
     "C:\\Program "
@@ -21,7 +21,7 @@ static emlrtRSInfo gr_emlrtRSI = {
     "eVectorElements.m" /* pathName */
 };
 
-static emlrtRSInfo hr_emlrtRSI = {
+static emlrtRSInfo yq_emlrtRSI = {
     209,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
     "C:\\Program "
@@ -51,11 +51,11 @@ int32_T b_combineVectorElements(const emlrtStack *sp,
   if (x->size[0] == 0) {
     y = 0;
   } else {
-    st.site = &gr_emlrtRSI;
+    st.site = &xq_emlrtRSI;
     y = x_data[0];
-    b_st.site = &hr_emlrtRSI;
+    b_st.site = &yq_emlrtRSI;
     if (x->size[0] > 2147483646) {
-      c_st.site = &sb_emlrtRSI;
+      c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);
     }
     for (k = 2; k <= vlen; k++) {

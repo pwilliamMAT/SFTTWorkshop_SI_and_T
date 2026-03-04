@@ -20,7 +20,7 @@ void b_validateattributes(const emlrtStack *sp, const real_T a[36])
   boolean_T p;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &fb_emlrtRSI;
+  st.site = &gb_emlrtRSI;
   p = true;
   k = 0;
   exitg1 = false;
@@ -44,14 +44,14 @@ void c_validateattributes(const emlrtStack *sp, real_T a)
   emlrtStack st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &fb_emlrtRSI;
+  st.site = &gb_emlrtRSI;
   if (a < 0.0) {
     emlrtErrorWithMessageIdR2018a(
         &st, &l_emlrtRTEI,
         "Coder:toolbox:ValidateattributesexpectedNonnegative",
         "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
   }
-  st.site = &fb_emlrtRSI;
+  st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(a) || muDoubleScalarIsNaN(a) ||
       (!(muDoubleScalarFloor(a) == a))) {
     emlrtErrorWithMessageIdR2018a(
@@ -68,7 +68,7 @@ void d_validateattributes(const emlrtStack *sp, const real_T a[6])
   boolean_T p;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &fb_emlrtRSI;
+  st.site = &gb_emlrtRSI;
   p = true;
   k = 0;
   exitg1 = false;
@@ -95,7 +95,7 @@ void e_validateattributes(const emlrtStack *sp, const real_T a[3])
   boolean_T p;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &fb_emlrtRSI;
+  st.site = &gb_emlrtRSI;
   p = true;
   k = 0;
   exitg1 = false;
@@ -122,7 +122,7 @@ void validateattributes(const emlrtStack *sp, const real_T a[6])
   boolean_T p;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &fb_emlrtRSI;
+  st.site = &gb_emlrtRSI;
   p = true;
   k = 0;
   exitg1 = false;

@@ -173,7 +173,7 @@ static emlrtRSInfo tg_emlrtRSI =
         "ck.m" /* pathName */
 };
 
-static emlrtRSInfo fk_emlrtRSI = {
+static emlrtRSInfo wj_emlrtRSI = {
     650,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -181,7 +181,7 @@ static emlrtRSInfo fk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo gk_emlrtRSI = {
+static emlrtRSInfo xj_emlrtRSI = {
     653,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -189,7 +189,7 @@ static emlrtRSInfo gk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo hk_emlrtRSI = {
+static emlrtRSInfo yj_emlrtRSI = {
     667,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -197,7 +197,7 @@ static emlrtRSInfo hk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo ik_emlrtRSI = {
+static emlrtRSInfo ak_emlrtRSI = {
     673,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -205,7 +205,7 @@ static emlrtRSInfo ik_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo jk_emlrtRSI = {
+static emlrtRSInfo bk_emlrtRSI = {
     675,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -213,7 +213,7 @@ static emlrtRSInfo jk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo kk_emlrtRSI = {
+static emlrtRSInfo ck_emlrtRSI = {
     676,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -221,7 +221,7 @@ static emlrtRSInfo kk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo lk_emlrtRSI = {
+static emlrtRSInfo dk_emlrtRSI = {
     679,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -229,7 +229,7 @@ static emlrtRSInfo lk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo mk_emlrtRSI = {
+static emlrtRSInfo ek_emlrtRSI = {
     680,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -237,7 +237,7 @@ static emlrtRSInfo mk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo nk_emlrtRSI = {
+static emlrtRSInfo fk_emlrtRSI = {
     683,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -245,7 +245,7 @@ static emlrtRSInfo nk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo ok_emlrtRSI = {
+static emlrtRSInfo gk_emlrtRSI = {
     688,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -253,7 +253,7 @@ static emlrtRSInfo ok_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo pk_emlrtRSI = {
+static emlrtRSInfo hk_emlrtRSI = {
     689,                     /* lineNo */
     "FuserManager/distance", /* fcnName */
     "C:\\Program "
@@ -261,7 +261,7 @@ static emlrtRSInfo pk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo qk_emlrtRSI = {
+static emlrtRSInfo ik_emlrtRSI = {
     700,                          /* lineNo */
     "FuserManager/getLiveTracks", /* fcnName */
     "C:\\Program "
@@ -269,7 +269,7 @@ static emlrtRSInfo qk_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo al_emlrtRSI =
+static emlrtRSInfo rk_emlrtRSI =
     {
         137,   /* lineNo */
         "cat", /* fcnName */
@@ -980,11 +980,11 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
   emxInit_real_T(sp, &S, 3, &oh_emlrtRTEI);
   emxInit_int32_T(sp, &r1, 2, &hh_emlrtRTEI);
   if ((localTracks->size[0] != 0) && (!(obj->pNumLiveTracks == 0.0))) {
-    st.site = &fk_emlrtRSI;
+    st.site = &wj_emlrtRSI;
     b_obj = obj->pTracksList[0];
     b_dv[0] = 1.0;
     b_dv[1] = numCentralTracks;
-    b_st.site = &qk_emlrtRSI;
+    b_st.site = &ik_emlrtRSI;
     repmat(&b_st, &b_obj, b_dv, centralTracks);
     centralTracks_data = centralTracks->data;
     ibtile = trackClasses->size[0] * trackClasses->size[1];
@@ -1027,7 +1027,7 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
       }
       trackClasses_data[b_i] = sourceConfig_tmp;
     }
-    st.site = &gk_emlrtRSI;
+    st.site = &xj_emlrtRSI;
     ibtile = centralStates->size[0] * centralStates->size[1];
     centralStates->size[0] = 6;
     i1 = centralTracks->size[1];
@@ -1163,18 +1163,18 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
       for (b_i = 0; b_i < b_loop_ub; b_i++) {
         S_data[b_i] = centralCovars_data[b_i];
       }
-      st.site = &hk_emlrtRSI;
+      st.site = &yj_emlrtRSI;
       gaussEKFilter_predict(
           &st, centralStates, S, obj->ProcessNoise,
           localTracks_data[d_i].UpdateTime - b_obj.pUpdateTime, e);
       e_data = e->data;
       S_data = S->data;
-      st.site = &ik_emlrtRSI;
+      st.site = &ak_emlrtRSI;
       sourceConfig_tmp = localTracks_data[d_i].SourceIndex;
       b_st.site = &ug_emlrtRSI;
       sourceConfig = FuserManager_getConfigByID(&b_st, obj, sourceConfig_tmp);
-      st.site = &jk_emlrtRSI;
-      b_st.site = &rk_emlrtRSI;
+      st.site = &bk_emlrtRSI;
+      b_st.site = &jk_emlrtRSI;
       if (b || (numCentralTracks > 2.147483647E+9)) {
         emlrtErrorWithMessageIdR2018a(&b_st, &bb_emlrtRTEI,
                                       "Coder:MATLAB:NonIntegerInput",
@@ -1186,9 +1186,9 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
       transformedStates->size[1] = loop_ub;
       emxEnsureCapacity_real_T(&st, transformedStates, ibtile, &bh_emlrtRTEI);
       transformedStates_data = transformedStates->data;
-      b_st.site = &uk_emlrtRSI;
+      b_st.site = &mk_emlrtRSI;
       if (overflow) {
-        d_st.site = &sb_emlrtRSI;
+        d_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&d_st);
       }
       for (b_i = 0; b_i < loop_ub; b_i++) {
@@ -1197,8 +1197,8 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
           transformedStates_data[ibtile + k] = localTracks_data[d_i].State[k];
         }
       }
-      st.site = &kk_emlrtRSI;
-      b_st.site = &rk_emlrtRSI;
+      st.site = &ck_emlrtRSI;
+      b_st.site = &jk_emlrtRSI;
       if (!b1) {
         emlrtErrorWithMessageIdR2018a(&b_st, &bb_emlrtRTEI,
                                       "Coder:MATLAB:NonIntegerInput",
@@ -1217,9 +1217,9 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
       transformedCovars->size[2] = loop_ub;
       emxEnsureCapacity_real_T(&st, transformedCovars, ibtile, &bh_emlrtRTEI);
       transformedCovars_data = transformedCovars->data;
-      b_st.site = &uk_emlrtRSI;
+      b_st.site = &mk_emlrtRSI;
       if (b_overflow) {
-        d_st.site = &sb_emlrtRSI;
+        d_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&d_st);
       }
       for (b_i = 0; b_i < loop_ub; b_i++) {
@@ -1241,7 +1241,7 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
           emlrtDynamicBoundsCheckR2012b(k, 0, centralTracks->size[1] - 1,
                                         &pi_emlrtBCI, (emlrtConstCTX)sp);
         }
-        st.site = &lk_emlrtRSI;
+        st.site = &dk_emlrtRSI;
         if (k + 1 > e->size[1]) {
           emlrtDynamicBoundsCheckR2012b(k + 1, 1, e->size[1], &ji_emlrtBCI,
                                         &st);
@@ -1251,7 +1251,7 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
         for (b_i = 0; b_i < 6; b_i++) {
           Y[b_i] = e_data[b_i + 6 * k];
         }
-        st.site = &mk_emlrtRSI;
+        st.site = &ek_emlrtRSI;
         if (k + 1 > S->size[2]) {
           emlrtDynamicBoundsCheckR2012b(k + 1, 1, S->size[2], &ii_emlrtBCI,
                                         &st);
@@ -1263,11 +1263,11 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
         for (b_i = 0; b_i < 36; b_i++) {
           track_pStateCovariance[b_i] = S_data[b_i + k * 36];
         }
-        st.site = &nk_emlrtRSI;
+        st.site = &fk_emlrtRSI;
         if (!sourceConfig->pIsTransformToLocalValid) {
-          b_st.site = &vk_emlrtRSI;
-          d_st.site = &xk_emlrtRSI;
-          b_central2local(
+          b_st.site = &nk_emlrtRSI;
+          d_st.site = &pk_emlrtRSI;
+          central2local(
               &d_st, centralTracks_data[k].TrackID,
               centralTracks_data[k].BranchID, sourceConfig_tmp,
               centralTracks_data[k].Age, centralTracks_data[k].ObjectClassID,
@@ -1276,8 +1276,8 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
               centralTracks_data[k].IsCoasted,
               centralTracks_data[k].IsSelfReported, Y, track_pStateCovariance,
               centralTracks_data[k].pUpdateTime, &expl_temp);
-          d_st.site = &yk_emlrtRSI;
-          c_local2central(
+          d_st.site = &qk_emlrtRSI;
+          b_local2central(
               &d_st, expl_temp.TrackID, expl_temp.BranchID,
               expl_temp.SourceIndex, expl_temp.Age, expl_temp.ObjectClassID,
               expl_temp.ObjectClassProbabilities, expl_temp.IsConfirmed,
@@ -1285,8 +1285,8 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
               expl_temp.pStateCovariance, expl_temp.pUpdateTime, &unusedExpr);
           sourceConfig->pIsTransformToLocalValid = true;
         }
-        b_st.site = &wk_emlrtRSI;
-        b_central2local(
+        b_st.site = &ok_emlrtRSI;
+        central2local(
             &b_st, centralTracks_data[k].TrackID,
             centralTracks_data[k].BranchID, sourceConfig_tmp,
             centralTracks_data[k].Age, centralTracks_data[k].ObjectClassID,
@@ -1324,7 +1324,7 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
           S_data[k + 6 * (b_i + 1)] = transformedStates_data[k + 6 * b_i];
         }
       }
-      st.site = &ok_emlrtRSI;
+      st.site = &gk_emlrtRSI;
       ibtile = allCovars->size[0] * allCovars->size[1] * allCovars->size[2];
       allCovars->size[0] = 6;
       allCovars->size[1] = 6;
@@ -1336,15 +1336,15 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
             localTracks_data[d_i].StateCovariance[b_i];
       }
       iacol = 36 * transformedCovars->size[2];
-      b_st.site = &al_emlrtRSI;
+      b_st.site = &rk_emlrtRSI;
       if (iacol > 2147483646) {
-        d_st.site = &sb_emlrtRSI;
+        d_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&d_st);
       }
       for (b_i = 0; b_i < iacol; b_i++) {
         transformedStates_data[b_i + 36] = transformedCovars_data[b_i];
       }
-      st.site = &pk_emlrtRSI;
+      st.site = &hk_emlrtRSI;
       ibtile = oneColumnCost->size[0] * oneColumnCost->size[1];
       oneColumnCost->size[0] = 1;
       oneColumnCost->size[1] = transformedStates->size[1] + 1;
@@ -1353,7 +1353,7 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
       for (b_i = 0; b_i < c_loop_ub; b_i++) {
         transformedCovars_data[b_i] = 0.0;
       }
-      b_st.site = &bl_emlrtRSI;
+      b_st.site = &sk_emlrtRSI;
       ibtile = e->size[0] * e->size[1];
       e->size[0] = 6;
       e->size[1] = transformedStates->size[1] + 1;
@@ -1404,7 +1404,7 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
           emlrtDynamicBoundsCheckR2012b(k + 1, 1, e->size[1], &di_emlrtBCI,
                                         &b_st);
         }
-        d_st.site = &cl_emlrtRSI;
+        d_st.site = &tk_emlrtRSI;
         if (k + 1 > S->size[2]) {
           emlrtDynamicBoundsCheckR2012b(k + 1, 1, S->size[2], &ci_emlrtBCI,
                                         &d_st);
@@ -1412,18 +1412,18 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
         for (b_i = 0; b_i < 6; b_i++) {
           Y[b_i] = e_data[b_i + 6 * k];
         }
-        e_st.site = &dl_emlrtRSI;
+        e_st.site = &uk_emlrtRSI;
         mrdiv(&e_st, Y, &S_data[36 * k]);
-        d_st.site = &cl_emlrtRSI;
+        d_st.site = &tk_emlrtRSI;
         if (k + 1 > S->size[2]) {
           emlrtDynamicBoundsCheckR2012b(k + 1, 1, S->size[2], &bi_emlrtBCI,
                                         &d_st);
         }
-        e_st.site = &sl_emlrtRSI;
+        e_st.site = &kl_emlrtRSI;
         for (b_i = 0; b_i < 36; b_i++) {
           track_pStateCovariance[b_i] = S_data[b_i + k * 36];
         }
-        f_st.site = &kl_emlrtRSI;
+        f_st.site = &cl_emlrtRSI;
         xzgetrf(&f_st, track_pStateCovariance, ipiv);
         y = track_pStateCovariance[0];
         isodd = false;
@@ -1436,7 +1436,7 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
         if (isodd) {
           y = -y;
         }
-        d_st.site = &cl_emlrtRSI;
+        d_st.site = &tk_emlrtRSI;
         if (y < 0.0) {
           emlrtErrorWithMessageIdR2018a(
               &d_st, &sb_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -1520,7 +1520,7 @@ void FuserManager_distance(const emlrtStack *sp, trackFuser *obj,
     ibtile = costMatrix->size[0] * costMatrix->size[1];
     for (b_i = 0; b_i < ibtile; b_i++) {
       iacol = costMatrix->size[0] * costMatrix->size[1];
-      if (costMatrix_data[b_i] > 75.0) {
+      if (costMatrix_data[b_i] > 100.0) {
         if (b_i > iacol - 1) {
           emlrtDynamicBoundsCheckR2012b(b_i, 0, iacol - 1, &oi_emlrtBCI,
                                         (emlrtConstCTX)sp);
@@ -1600,10 +1600,10 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
   static const char_T b_cv[10] = {'I', 'n', 't', 'e', 'g',
                                   'r', 'a', 't', 'e', 'd'};
   b_objectTrack expl_temp;
-  b_objectTrack rw_emlrtRSI;
-  b_objectTrack sw_emlrtRSI;
+  b_objectTrack jw_emlrtRSI;
+  b_objectTrack kw_emlrtRSI;
+  b_objectTrack lw_emlrtRSI;
   b_objectTrack track;
-  b_objectTrack tw_emlrtRSI;
   c_objectTrack b[100];
   c_objectTrack b_expl_temp;
   emlrtStack b_st;
@@ -1619,10 +1619,17 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
   real_T b_dv[3];
   real_T varargin_1[3];
   real_T a;
+  real_T ct_pUpdateTime;
   int32_T b_i;
   int32_T i;
   int32_T kstr;
+  uint32_T ct_Age;
+  uint32_T ct_BranchID;
+  uint32_T ct_SourceIndex;
+  uint32_T ct_TrackID;
   boolean_T b_bool;
+  boolean_T ct_IsCoasted;
+  boolean_T ct_IsSelfReported;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -1653,14 +1660,14 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
   d_st.site = &ic_emlrtRSI;
   e_st.site = &qc_emlrtRSI;
   a = tracks_data[0].UpdateTime;
-  f_st.site = &fb_emlrtRSI;
+  f_st.site = &gb_emlrtRSI;
   if (a < 0.0) {
     emlrtErrorWithMessageIdR2018a(
         &f_st, &l_emlrtRTEI,
         "Coder:toolbox:ValidateattributesexpectedNonnegative",
         "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
   }
-  f_st.site = &fb_emlrtRSI;
+  f_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(a) || muDoubleScalarIsNaN(a)) {
     emlrtErrorWithMessageIdR2018a(
         &f_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
@@ -1687,21 +1694,7 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
                                   tracks_data[0].ObjectClassProbabilities.size);
   d_st.site = &mc_emlrtRSI;
   e_st.site = &ig_emlrtRSI;
-  a = tracks_data[0].ObjectClassID;
-  f_st.site = &fb_emlrtRSI;
-  if (a < 0.0) {
-    emlrtErrorWithMessageIdR2018a(
-        &f_st, &l_emlrtRTEI,
-        "Coder:toolbox:ValidateattributesexpectedNonnegative",
-        "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-  }
-  f_st.site = &fb_emlrtRSI;
-  if (muDoubleScalarIsInf(a) || muDoubleScalarIsNaN(a) ||
-      (!(muDoubleScalarFloor(a) == a))) {
-    emlrtErrorWithMessageIdR2018a(
-        &f_st, &c_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedInteger",
-        "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-  }
+  c_validateattributes(&e_st, tracks_data[0].ObjectClassID);
   d_st.site = &nc_emlrtRSI;
   e_st.site = &jg_emlrtRSI;
   f_st.site = &kg_emlrtRSI;
@@ -1758,7 +1751,7 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
       d_st.site = &pc_emlrtRSI;
       e_st.site = &sg_emlrtRSI;
       f_st.site = &tg_emlrtRSI;
-      g_st.site = &fb_emlrtRSI;
+      g_st.site = &gb_emlrtRSI;
       b_bool = true;
       kstr = 0;
       exitg2 = false;
@@ -1778,7 +1771,7 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
             "Coder:toolbox:ValidateattributesexpectedFinite",
             "MATLAB:objectTrack:expectedFinite", 3, 4, 15, "TrackLogicState");
       }
-      g_st.site = &fb_emlrtRSI;
+      g_st.site = &gb_emlrtRSI;
       b_bool = true;
       kstr = 0;
       exitg2 = false;
@@ -1798,14 +1791,14 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
             "MATLAB:objectTrack:expectedNonnegative", 3, 4, 15,
             "TrackLogicState");
       }
-      g_st.site = &fb_emlrtRSI;
+      g_st.site = &gb_emlrtRSI;
       if (tracks_data[0].TrackLogicState.size[1] != 1) {
         emlrtErrorWithMessageIdR2018a(
             &g_st, &k_emlrtRTEI,
             "Coder:toolbox:ValidateattributesexpectedScalar",
             "MATLAB:objectTrack:expectedScalar", 3, 4, 15, "TrackLogicState");
       }
-      g_st.site = &fb_emlrtRSI;
+      g_st.site = &gb_emlrtRSI;
       b_bool = true;
       kstr = 0;
       exitg2 = false;
@@ -1839,44 +1832,124 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
   if (!sourceConfig->pIsTransformToCentralValid) {
     b_st.site = &vg_emlrtRSI;
     c_st.site = &xg_emlrtRSI;
-    local2central(&c_st, track.TrackID, track.BranchID, track.SourceIndex,
-                  track.Age, tracks_data[0].ObjectClassID,
+    /*  HELPER FUNCTIONS */
+    /*  ---- Wrappers (homogeneous handles) ---- */
+    /*  Pre-define output - force 'Integrated' for codegen consistency */
+    ct_TrackID = b_objectTrack_objectTrack(
+        &ct_BranchID, &ct_SourceIndex, &ct_Age, &a,
+        expl_temp.ObjectClassProbabilities.data,
+        expl_temp.ObjectClassProbabilities.size, &b_bool, &ct_IsCoasted,
+        &ct_IsSelfReported, expl_temp.pState, expl_temp.pStateCovariance,
+        &ct_pUpdateTime);
+    if (track.SourceIndex == 1U) {
+      /*  Radar */
+      d_st.site = &ah_emlrtRSI;
+      Ned2ecefTrack(&d_st, track.TrackID, track.BranchID, 1U, track.Age,
+                    tracks_data[0].ObjectClassID,
+                    track.ObjectClassProbabilities.data,
+                    track.ObjectClassProbabilities.size, track.IsConfirmed,
+                    track.IsCoasted, track.IsSelfReported, track.pState,
+                    track.pStateCovariance, track.pUpdateTime, &expl_temp);
+      ct_TrackID = expl_temp.TrackID;
+      ct_BranchID = expl_temp.BranchID;
+      ct_SourceIndex = expl_temp.SourceIndex;
+      ct_Age = expl_temp.Age;
+      a = expl_temp.ObjectClassID;
+      b_bool = expl_temp.IsConfirmed;
+      ct_IsCoasted = expl_temp.IsCoasted;
+      ct_IsSelfReported = expl_temp.IsSelfReported;
+      ct_pUpdateTime = expl_temp.pUpdateTime;
+      /* radar2central(localTrack); %Ned2ecefTrack(localTrack); % UPDATED */
+    } else if (track.SourceIndex == 2U) {
+      /*  ADSB */
+      d_st.site = &bh_emlrtRSI;
+      Ecef2nedTrack(&d_st, track.TrackID, track.BranchID, 2U, track.Age,
+                    tracks_data[0].ObjectClassID,
+                    track.ObjectClassProbabilities.data,
+                    track.ObjectClassProbabilities.size, track.IsConfirmed,
+                    track.IsCoasted, track.IsSelfReported, track.pState,
+                    track.pStateCovariance, track.pUpdateTime, &expl_temp);
+      ct_TrackID = expl_temp.TrackID;
+      ct_BranchID = expl_temp.BranchID;
+      ct_SourceIndex = expl_temp.SourceIndex;
+      ct_Age = expl_temp.Age;
+      a = expl_temp.ObjectClassID;
+      b_bool = expl_temp.IsConfirmed;
+      ct_IsCoasted = expl_temp.IsCoasted;
+      ct_IsSelfReported = expl_temp.IsSelfReported;
+      ct_pUpdateTime = expl_temp.pUpdateTime;
+      /* adsb2central(localTrack); % UPDATED */
+    }
+    c_st.site = &yg_emlrtRSI;
+    /*  Pre-define output with longest TrackLogic to force codegen consistency
+     */
+    if (ct_SourceIndex == 1U) {
+      /*  Radar */
+      d_st.site = &fi_emlrtRSI;
+      Ecef2nedTrack(&d_st, ct_TrackID, ct_BranchID, 1U, ct_Age, a,
+                    expl_temp.ObjectClassProbabilities.data,
+                    expl_temp.ObjectClassProbabilities.size, b_bool,
+                    ct_IsCoasted, ct_IsSelfReported, expl_temp.pState,
+                    expl_temp.pStateCovariance, ct_pUpdateTime, &jw_emlrtRSI);
+      /*  central2radar(centralTrack); %Ecef2nedTrack(centralTrack); % UPDATED
+       */
+    } else if (ct_SourceIndex == 2U) {
+      /*  ADSB */
+      d_st.site = &gi_emlrtRSI;
+      Ned2ecefTrack(&d_st, ct_TrackID, ct_BranchID, 2U, ct_Age, a,
+                    expl_temp.ObjectClassProbabilities.data,
+                    expl_temp.ObjectClassProbabilities.size, b_bool,
+                    ct_IsCoasted, ct_IsSelfReported, expl_temp.pState,
+                    expl_temp.pStateCovariance, ct_pUpdateTime, &jw_emlrtRSI);
+      /* central2adsb(centralTrack); % UPDATED */
+    }
+    sourceConfig->pIsTransformToCentralValid = true;
+  }
+  b_st.site = &wg_emlrtRSI;
+  /*  HELPER FUNCTIONS */
+  /*  ---- Wrappers (homogeneous handles) ---- */
+  /*  Pre-define output - force 'Integrated' for codegen consistency */
+  b_objectTrack_objectTrack(&ct_BranchID, &ct_SourceIndex, &ct_Age, &a,
+                            expl_temp.ObjectClassProbabilities.data,
+                            expl_temp.ObjectClassProbabilities.size, &b_bool,
+                            &ct_IsCoasted, &ct_IsSelfReported, expl_temp.pState,
+                            expl_temp.pStateCovariance, &ct_pUpdateTime);
+  if (track.SourceIndex == 1U) {
+    /*  Radar */
+    c_st.site = &ah_emlrtRSI;
+    Ned2ecefTrack(&c_st, track.TrackID, track.BranchID, 1U, track.Age,
+                  tracks_data[0].ObjectClassID,
                   track.ObjectClassProbabilities.data,
                   track.ObjectClassProbabilities.size, track.IsConfirmed,
                   track.IsCoasted, track.IsSelfReported, track.pState,
                   track.pStateCovariance, track.pUpdateTime, &expl_temp);
-    c_st.site = &yg_emlrtRSI;
-    central2local(
-        &c_st, expl_temp.TrackID, expl_temp.BranchID, expl_temp.SourceIndex,
-        expl_temp.Age, expl_temp.ObjectClassID,
-        expl_temp.ObjectClassProbabilities.data,
-        expl_temp.ObjectClassProbabilities.size, expl_temp.IsConfirmed,
-        expl_temp.IsCoasted, expl_temp.IsSelfReported, expl_temp.pState,
-        expl_temp.pStateCovariance, expl_temp.pUpdateTime, &rw_emlrtRSI);
-    sourceConfig->pIsTransformToCentralValid = true;
+    /* radar2central(localTrack); %Ned2ecefTrack(localTrack); % UPDATED */
+  } else if (track.SourceIndex == 2U) {
+    /*  ADSB */
+    c_st.site = &bh_emlrtRSI;
+    Ecef2nedTrack(&c_st, track.TrackID, track.BranchID, 2U, track.Age,
+                  tracks_data[0].ObjectClassID,
+                  track.ObjectClassProbabilities.data,
+                  track.ObjectClassProbabilities.size, track.IsConfirmed,
+                  track.IsCoasted, track.IsSelfReported, track.pState,
+                  track.pStateCovariance, track.pUpdateTime, &expl_temp);
+    /* adsb2central(localTrack); % UPDATED */
   }
-  b_st.site = &wg_emlrtRSI;
-  local2central(&b_st, track.TrackID, track.BranchID, track.SourceIndex,
-                track.Age, tracks_data[0].ObjectClassID,
-                track.ObjectClassProbabilities.data,
-                track.ObjectClassProbabilities.size, track.IsConfirmed,
-                track.IsCoasted, track.IsSelfReported, track.pState,
-                track.pStateCovariance, track.pUpdateTime, &expl_temp);
   st.site = &ec_emlrtRSI;
-  b_st.site = &pi_emlrtRSI;
-  c_st.site = &si_emlrtRSI;
+  b_st.site = &hi_emlrtRSI;
+  c_st.site = &ki_emlrtRSI;
   d_validateattributes(&c_st, expl_temp.pState);
   varargin_1[0] = 0.0;
   varargin_1[1] = 0.0;
   varargin_1[2] = 0.0;
-  b_st.site = &qi_emlrtRSI;
-  c_st.site = &ti_emlrtRSI;
-  d_st.site = &si_emlrtRSI;
+  b_st.site = &ii_emlrtRSI;
+  c_st.site = &li_emlrtRSI;
+  d_st.site = &ki_emlrtRSI;
   d_validateattributes(&d_st, expl_temp.pState);
   b_dv[0] = 0.0;
   b_dv[1] = 0.0;
   b_dv[2] = 0.0;
-  d_st.site = &vi_emlrtRSI;
+  d_st.site = &ni_emlrtRSI;
   e_validateattributes(&d_st, b_dv);
   for (i = 0; i < 6; i++) {
     for (b_i = 0; b_i < 6; b_i++) {
@@ -1886,14 +1959,14 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
     imvec[i] =
         a + muDoubleScalarMax(1.4901161193847656E-8,
                               1.4901161193847656E-8 * muDoubleScalarAbs(a));
-    c_st.site = &ui_emlrtRSI;
+    c_st.site = &mi_emlrtRSI;
     constvel(&c_st, imvec, varargin_1, 1.0);
   }
-  b_st.site = &ri_emlrtRSI;
-  c_st.site = &ti_emlrtRSI;
-  d_st.site = &si_emlrtRSI;
+  b_st.site = &ji_emlrtRSI;
+  c_st.site = &li_emlrtRSI;
+  d_st.site = &ki_emlrtRSI;
   d_validateattributes(&d_st, expl_temp.pState);
-  d_st.site = &vi_emlrtRSI;
+  d_st.site = &ni_emlrtRSI;
   e_validateattributes(&d_st, varargin_1);
   for (i = 0; i < 3; i++) {
     varargin_1[0] = 0.0;
@@ -1903,43 +1976,117 @@ void FuserManager_setupImpl(const emlrtStack *sp, trackFuser *obj,
     for (b_i = 0; b_i < 6; b_i++) {
       imvec[b_i] = expl_temp.pState[b_i];
     }
-    c_st.site = &ui_emlrtRSI;
+    c_st.site = &mi_emlrtRSI;
     constvel(&c_st, imvec, varargin_1, 1.0);
   }
   st.site = &fc_emlrtRSI;
-  b_st.site = &yi_emlrtRSI;
+  b_st.site = &qi_emlrtRSI;
   sourceConfig = FuserManager_getConfigByID(&b_st, obj, track.SourceIndex);
-  b_st.site = &aj_emlrtRSI;
+  b_st.site = &ri_emlrtRSI;
   if (!sourceConfig->pIsTransformToCentralValid) {
     c_st.site = &vg_emlrtRSI;
     d_st.site = &xg_emlrtRSI;
-    local2central(&d_st, track.TrackID, track.BranchID, track.SourceIndex,
-                  track.Age, tracks_data[0].ObjectClassID,
-                  track.ObjectClassProbabilities.data,
-                  track.ObjectClassProbabilities.size, track.IsConfirmed,
-                  track.IsCoasted, track.IsSelfReported, track.pState,
-                  track.pStateCovariance, track.pUpdateTime, &expl_temp);
-    d_st.site = &yg_emlrtRSI;
-    central2local(
-        &d_st, expl_temp.TrackID, expl_temp.BranchID, expl_temp.SourceIndex,
-        expl_temp.Age, expl_temp.ObjectClassID,
+    /*  HELPER FUNCTIONS */
+    /*  ---- Wrappers (homogeneous handles) ---- */
+    /*  Pre-define output - force 'Integrated' for codegen consistency */
+    ct_TrackID = b_objectTrack_objectTrack(
+        &ct_BranchID, &ct_SourceIndex, &ct_Age, &a,
         expl_temp.ObjectClassProbabilities.data,
-        expl_temp.ObjectClassProbabilities.size, expl_temp.IsConfirmed,
-        expl_temp.IsCoasted, expl_temp.IsSelfReported, expl_temp.pState,
-        expl_temp.pStateCovariance, expl_temp.pUpdateTime, &tw_emlrtRSI);
+        expl_temp.ObjectClassProbabilities.size, &b_bool, &ct_IsCoasted,
+        &ct_IsSelfReported, expl_temp.pState, expl_temp.pStateCovariance,
+        &ct_pUpdateTime);
+    if (track.SourceIndex == 1U) {
+      /*  Radar */
+      e_st.site = &ah_emlrtRSI;
+      Ned2ecefTrack(&e_st, track.TrackID, track.BranchID, 1U, track.Age,
+                    tracks_data[0].ObjectClassID,
+                    track.ObjectClassProbabilities.data,
+                    track.ObjectClassProbabilities.size, track.IsConfirmed,
+                    track.IsCoasted, track.IsSelfReported, track.pState,
+                    track.pStateCovariance, track.pUpdateTime, &expl_temp);
+      ct_TrackID = expl_temp.TrackID;
+      ct_BranchID = expl_temp.BranchID;
+      ct_SourceIndex = expl_temp.SourceIndex;
+      ct_Age = expl_temp.Age;
+      a = expl_temp.ObjectClassID;
+      b_bool = expl_temp.IsConfirmed;
+      ct_IsCoasted = expl_temp.IsCoasted;
+      ct_IsSelfReported = expl_temp.IsSelfReported;
+      ct_pUpdateTime = expl_temp.pUpdateTime;
+      /* radar2central(localTrack); %Ned2ecefTrack(localTrack); % UPDATED */
+    } else if (track.SourceIndex == 2U) {
+      /*  ADSB */
+      e_st.site = &bh_emlrtRSI;
+      Ecef2nedTrack(&e_st, track.TrackID, track.BranchID, 2U, track.Age,
+                    tracks_data[0].ObjectClassID,
+                    track.ObjectClassProbabilities.data,
+                    track.ObjectClassProbabilities.size, track.IsConfirmed,
+                    track.IsCoasted, track.IsSelfReported, track.pState,
+                    track.pStateCovariance, track.pUpdateTime, &expl_temp);
+      ct_TrackID = expl_temp.TrackID;
+      ct_BranchID = expl_temp.BranchID;
+      ct_SourceIndex = expl_temp.SourceIndex;
+      ct_Age = expl_temp.Age;
+      a = expl_temp.ObjectClassID;
+      b_bool = expl_temp.IsConfirmed;
+      ct_IsCoasted = expl_temp.IsCoasted;
+      ct_IsSelfReported = expl_temp.IsSelfReported;
+      ct_pUpdateTime = expl_temp.pUpdateTime;
+      /* adsb2central(localTrack); % UPDATED */
+    }
+    d_st.site = &yg_emlrtRSI;
+    /*  Pre-define output with longest TrackLogic to force codegen consistency
+     */
+    if (ct_SourceIndex == 1U) {
+      /*  Radar */
+      e_st.site = &fi_emlrtRSI;
+      Ecef2nedTrack(&e_st, ct_TrackID, ct_BranchID, 1U, ct_Age, a,
+                    expl_temp.ObjectClassProbabilities.data,
+                    expl_temp.ObjectClassProbabilities.size, b_bool,
+                    ct_IsCoasted, ct_IsSelfReported, expl_temp.pState,
+                    expl_temp.pStateCovariance, ct_pUpdateTime, &lw_emlrtRSI);
+      /*  central2radar(centralTrack); %Ecef2nedTrack(centralTrack); % UPDATED
+       */
+    } else if (ct_SourceIndex == 2U) {
+      /*  ADSB */
+      e_st.site = &gi_emlrtRSI;
+      Ned2ecefTrack(&e_st, ct_TrackID, ct_BranchID, 2U, ct_Age, a,
+                    expl_temp.ObjectClassProbabilities.data,
+                    expl_temp.ObjectClassProbabilities.size, b_bool,
+                    ct_IsCoasted, ct_IsSelfReported, expl_temp.pState,
+                    expl_temp.pStateCovariance, ct_pUpdateTime, &lw_emlrtRSI);
+      /* central2adsb(centralTrack); % UPDATED */
+    }
     sourceConfig->pIsTransformToCentralValid = true;
   }
   c_st.site = &wg_emlrtRSI;
-  local2central(&c_st, track.TrackID, track.BranchID, track.SourceIndex,
-                track.Age, tracks_data[0].ObjectClassID,
-                track.ObjectClassProbabilities.data,
-                track.ObjectClassProbabilities.size, track.IsConfirmed,
-                track.IsCoasted, track.IsSelfReported, track.pState,
-                track.pStateCovariance, track.pUpdateTime, &sw_emlrtRSI);
+  /*  HELPER FUNCTIONS */
+  /*  ---- Wrappers (homogeneous handles) ---- */
+  /*  Pre-define output - force 'Integrated' for codegen consistency */
+  if (track.SourceIndex == 1U) {
+    /*  Radar */
+    d_st.site = &ah_emlrtRSI;
+    Ned2ecefTrack(&d_st, track.TrackID, track.BranchID, 1U, track.Age,
+                  tracks_data[0].ObjectClassID,
+                  track.ObjectClassProbabilities.data,
+                  track.ObjectClassProbabilities.size, track.IsConfirmed,
+                  track.IsCoasted, track.IsSelfReported, track.pState,
+                  track.pStateCovariance, track.pUpdateTime, &kw_emlrtRSI);
+    /* radar2central(localTrack); %Ned2ecefTrack(localTrack); % UPDATED */
+  } else if (track.SourceIndex == 2U) {
+    /*  ADSB */
+    d_st.site = &bh_emlrtRSI;
+    Ecef2nedTrack(&d_st, track.TrackID, track.BranchID, 2U, track.Age,
+                  tracks_data[0].ObjectClassID,
+                  track.ObjectClassProbabilities.data,
+                  track.ObjectClassProbabilities.size, track.IsConfirmed,
+                  track.IsCoasted, track.IsSelfReported, track.pState,
+                  track.pStateCovariance, track.pUpdateTime, &kw_emlrtRSI);
+    /* adsb2central(localTrack); % UPDATED */
+  }
   b_expl_temp.pTrackLogicState[0] = false;
   b_expl_temp.pTrackLogicState[1] = false;
   b_expl_temp.pTrackLogicState[2] = false;
-  b_expl_temp.pTrackLogicState[3] = false;
   b_expl_temp.TrackID = MAX_uint32_T;
   b_expl_temp.BranchID = MAX_uint32_T;
   b_expl_temp.SourceIndex = 3U;

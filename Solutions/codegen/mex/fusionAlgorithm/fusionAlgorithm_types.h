@@ -219,7 +219,7 @@ typedef struct {
   real_T pState[6];
   real_T pStateCovariance[36];
   real_T pUpdateTime;
-  boolean_T pTrackLogicState[4];
+  boolean_T pTrackLogicState[3];
 } c_objectTrack;
 #endif /* typedef_c_objectTrack */
 
@@ -264,7 +264,7 @@ typedef struct {
   real_T ObjectClassID;
   real_T ObjectClassProbabilities;
   char_T TrackLogic[7];
-  boolean_T TrackLogicState[4];
+  boolean_T TrackLogicState[3];
   boolean_T IsConfirmed;
   boolean_T IsCoasted;
   boolean_T IsSelfReported;

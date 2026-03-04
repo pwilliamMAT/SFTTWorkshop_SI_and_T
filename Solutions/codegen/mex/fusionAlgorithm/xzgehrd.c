@@ -263,7 +263,7 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
             b_vectorUB = lastc + c_i;
             f_st.site = &qe_emlrtRSI;
             if ((c_i + 1 <= b_vectorUB) && (b_vectorUB > 2147483646)) {
-              g_st.site = &sb_emlrtRSI;
+              g_st.site = &tb_emlrtRSI;
               check_forloop_overflow_error(&g_st);
             }
             work_tmp = ((b_vectorUB - vectorUB) + 1) / 2 * 2 + vectorUB;

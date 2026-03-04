@@ -14,7 +14,7 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo wp_emlrtRSI = {
+static emlrtRSInfo op_emlrtRSI = {
     241,          /* lineNo */
     "do_vectors", /* fcnName */
     "C:\\Program "
@@ -22,7 +22,7 @@ static emlrtRSInfo wp_emlrtRSI = {
     "m" /* pathName */
 };
 
-static emlrtRSInfo xp_emlrtRSI = {
+static emlrtRSInfo pp_emlrtRSI = {
     244,          /* lineNo */
     "do_vectors", /* fcnName */
     "C:\\Program "
@@ -167,13 +167,13 @@ void do_vectors(const emlrtStack *sp, const emxArray_uint32_T *a,
   ib->size[0] = ncmax;
   emxEnsureCapacity_int32_T(sp, ib, iafirst, &hf_emlrtRTEI);
   ib_data = ib->data;
-  st.site = &wp_emlrtRSI;
+  st.site = &op_emlrtRSI;
   if (!issorted(&st, a)) {
     emlrtErrorWithMessageIdR2018a(sp, &jb_emlrtRTEI,
                                   "Coder:toolbox:eml_setop_unsortedA",
                                   "Coder:toolbox:eml_setop_unsortedA", 0);
   }
-  st.site = &xp_emlrtRSI;
+  st.site = &pp_emlrtRSI;
   if (!issorted(&st, b)) {
     emlrtErrorWithMessageIdR2018a(sp, &kb_emlrtRTEI,
                                   "Coder:toolbox:eml_setop_unsortedB",

@@ -52,7 +52,7 @@ real_T sumColumnB(const emlrtStack *sp, const real_T x_data[], int32_T vlen)
   y = x_data[0];
   b_st.site = &hg_emlrtRSI;
   if (vlen - 1 > 2147483646) {
-    c_st.site = &sb_emlrtRSI;
+    c_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&c_st);
   }
   i = (uint8_T)(vlen - 1);

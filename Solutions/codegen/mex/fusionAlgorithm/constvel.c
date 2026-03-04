@@ -149,29 +149,29 @@ void constvel(const emlrtStack *sp, real_T state[6], const real_T varargin_1[3],
   st.tls = sp->tls;
   b_st.prev = &st;
   b_st.tls = st.tls;
-  st.site = &si_emlrtRSI;
+  st.site = &ki_emlrtRSI;
   d_validateattributes(&st, state);
-  st.site = &vi_emlrtRSI;
+  st.site = &ni_emlrtRSI;
   e_validateattributes(&st, varargin_1);
-  st.site = &wi_emlrtRSI;
-  b_st.site = &fb_emlrtRSI;
+  st.site = &oi_emlrtRSI;
+  b_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(varargin_2) || muDoubleScalarIsNaN(varargin_2)) {
     emlrtErrorWithMessageIdR2018a(
         &b_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:constvel:expectedFinite", 3, 4, 19, "input number 3, dt,");
   }
-  st.site = &xi_emlrtRSI;
+  st.site = &pi_emlrtRSI;
   d = state[1];
   d1 = 0.5 * (varargin_2 * varargin_2);
   state[0] = (state[0] + d * varargin_2) + d1 * varargin_1[0];
   d += varargin_1[0] * varargin_2;
   state[1] = d;
-  st.site = &xi_emlrtRSI;
+  st.site = &pi_emlrtRSI;
   d = state[3];
   state[2] = (state[2] + d * varargin_2) + d1 * varargin_1[1];
   d += varargin_1[1] * varargin_2;
   state[3] = d;
-  st.site = &xi_emlrtRSI;
+  st.site = &pi_emlrtRSI;
   d = state[5];
   state[4] = (state[4] + d * varargin_2) + d1 * varargin_1[2];
   d += varargin_1[2] * varargin_2;

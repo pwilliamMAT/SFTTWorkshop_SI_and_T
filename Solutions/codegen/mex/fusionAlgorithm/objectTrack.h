@@ -26,15 +26,6 @@ uint32_T b_objectTrack_objectTrack(
     real_T track_pState[6], real_T track_pStateCovariance[36],
     real_T *track_pUpdateTime);
 
-uint32_T b_objectTrack_set_TrackID(
-    uint32_T b_value, uint32_T *obj_BranchID, uint32_T *obj_SourceIndex,
-    uint32_T *obj_Age, real_T *obj_ObjectClassID,
-    real_T c_obj_ObjectClassProbabilities_[],
-    int32_T d_obj_ObjectClassProbabilities_[2], boolean_T *obj_IsConfirmed,
-    boolean_T *obj_IsCoasted, boolean_T *obj_IsSelfReported,
-    real_T obj_pState[6], real_T obj_pStateCovariance[36],
-    real_T *obj_pUpdateTime);
-
 void c_objectTrack_set_ObjectClassPr(const emlrtStack *sp, b_objectTrack *obj,
                                      const real_T value_data[],
                                      const int32_T value_size[2]);

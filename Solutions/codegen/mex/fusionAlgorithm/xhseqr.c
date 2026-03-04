@@ -16,7 +16,7 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo jv_emlrtRSI = {
+static emlrtRSInfo bv_emlrtRSI = {
     21,       /* lineNo */
     "xhseqr", /* fcnName */
     "C:\\Program "
@@ -24,7 +24,7 @@ static emlrtRSInfo jv_emlrtRSI = {
     "lapack\\xhseqr.m" /* pathName */
 };
 
-static emlrtRSInfo kv_emlrtRSI = {
+static emlrtRSInfo cv_emlrtRSI = {
     16,        /* lineNo */
     "xdhseqr", /* fcnName */
     "C:\\Program "
@@ -59,8 +59,8 @@ int32_T xhseqr(const emlrtStack *sp, real_T h[36], real_T z[36])
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &jv_emlrtRSI;
-  b_st.site = &kv_emlrtRSI;
+  st.site = &bv_emlrtRSI;
+  b_st.site = &cv_emlrtRSI;
   info = 0;
   h[2] = 0.0;
   h[3] = 0.0;

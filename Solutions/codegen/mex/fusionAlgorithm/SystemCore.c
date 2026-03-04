@@ -641,7 +641,7 @@ int32_T SystemCore_step(const emlrtStack *sp, trackFuser *obj,
     d_st.site = &wb_emlrtRSI;
     FuserManager_setupImpl(&d_st, obj, varargin_1);
     obj->cAssigner.isInitialized = 0;
-    obj->cAssigner.AssignmentThreshold[0] = 75.0;
+    obj->cAssigner.AssignmentThreshold[0] = 100.0;
     obj->cAssigner.AssignmentThreshold[1] = 250.0;
     for (i = 0; i < 9; i++) {
       Q[i] = obj->ProcessNoise[i];

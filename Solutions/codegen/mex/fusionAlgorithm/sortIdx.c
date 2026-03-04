@@ -14,7 +14,7 @@
 
 /* Variable Definitions */
 static emlrtRSInfo
-    op_emlrtRSI =
+    gp_emlrtRSI =
         {
             488,           /* lineNo */
             "merge_block", /* fcnName */
@@ -24,7 +24,7 @@ static emlrtRSInfo
 };
 
 static emlrtRSInfo
-    qp_emlrtRSI =
+    ip_emlrtRSI =
         {
             496,           /* lineNo */
             "merge_block", /* fcnName */
@@ -34,7 +34,7 @@ static emlrtRSInfo
 };
 
 static emlrtRSInfo
-    rp_emlrtRSI =
+    jp_emlrtRSI =
         {
             503,           /* lineNo */
             "merge_block", /* fcnName */
@@ -44,7 +44,7 @@ static emlrtRSInfo
 };
 
 static emlrtRSInfo
-    sp_emlrtRSI =
+    kp_emlrtRSI =
         {
             550,     /* lineNo */
             "merge", /* fcnName */
@@ -54,7 +54,7 @@ static emlrtRSInfo
 };
 
 static emlrtRSInfo
-    tp_emlrtRSI =
+    lp_emlrtRSI =
         {
             519,     /* lineNo */
             "merge", /* fcnName */
@@ -98,9 +98,9 @@ static void b_merge(const emlrtStack *sp, emxArray_int32_T *idx,
     int32_T p;
     int32_T q;
     n = np + nq;
-    st.site = &tp_emlrtRSI;
+    st.site = &lp_emlrtRSI;
     if (n > 2147483646) {
-      b_st.site = &sb_emlrtRSI;
+      b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
     for (j = 0; j < n; j++) {
@@ -130,9 +130,9 @@ static void b_merge(const emlrtStack *sp, emxArray_int32_T *idx,
           q++;
         } else {
           q = iout - p;
-          st.site = &sp_emlrtRSI;
+          st.site = &kp_emlrtRSI;
           if ((p + 1 <= np) && (np > 2147483646)) {
-            b_st.site = &sb_emlrtRSI;
+            b_st.site = &tb_emlrtRSI;
             check_forloop_overflow_error(&b_st);
           }
           for (j = p + 1; j <= np; j++) {
@@ -172,9 +172,9 @@ static void merge(const emlrtStack *sp, emxArray_int32_T *idx,
     int32_T p;
     int32_T q;
     n = np + nq;
-    st.site = &tp_emlrtRSI;
+    st.site = &lp_emlrtRSI;
     if (n > 2147483646) {
-      b_st.site = &sb_emlrtRSI;
+      b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
     for (j = 0; j < n; j++) {
@@ -204,9 +204,9 @@ static void merge(const emlrtStack *sp, emxArray_int32_T *idx,
           q++;
         } else {
           q = iout - p;
-          st.site = &sp_emlrtRSI;
+          st.site = &kp_emlrtRSI;
           if ((p + 1 <= np) && (np > 2147483646)) {
-            b_st.site = &sb_emlrtRSI;
+            b_st.site = &tb_emlrtRSI;
             check_forloop_overflow_error(&b_st);
           }
           for (j = p + 1; j <= np; j++) {
@@ -242,7 +242,7 @@ void b_merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
       tailOffset = bLen * nPairs;
       nTail = n - tailOffset;
       if (nTail > bLen) {
-        st.site = &op_emlrtRSI;
+        st.site = &gp_emlrtRSI;
         b_merge(&st, idx, x, offset + tailOffset, bLen, nTail - bLen, iwork,
                 xwork);
       }
@@ -250,13 +250,13 @@ void b_merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
     tailOffset = bLen << 1;
     nPairs >>= 1;
     for (k = 0; k < nPairs; k++) {
-      st.site = &qp_emlrtRSI;
+      st.site = &ip_emlrtRSI;
       b_merge(&st, idx, x, offset + k * tailOffset, bLen, bLen, iwork, xwork);
     }
     bLen = tailOffset;
   }
   if (n > bLen) {
-    st.site = &rp_emlrtRSI;
+    st.site = &jp_emlrtRSI;
     b_merge(&st, idx, x, offset, bLen, n - bLen, iwork, xwork);
   }
 }
@@ -282,7 +282,7 @@ void merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
       tailOffset = bLen * nPairs;
       nTail = n - tailOffset;
       if (nTail > bLen) {
-        st.site = &op_emlrtRSI;
+        st.site = &gp_emlrtRSI;
         merge(&st, idx, x, offset + tailOffset, bLen, nTail - bLen, iwork,
               xwork);
       }
@@ -290,13 +290,13 @@ void merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
     tailOffset = bLen << 1;
     nPairs >>= 1;
     for (k = 0; k < nPairs; k++) {
-      st.site = &qp_emlrtRSI;
+      st.site = &ip_emlrtRSI;
       merge(&st, idx, x, offset + k * tailOffset, bLen, bLen, iwork, xwork);
     }
     bLen = tailOffset;
   }
   if (n > bLen) {
-    st.site = &rp_emlrtRSI;
+    st.site = &jp_emlrtRSI;
     merge(&st, idx, x, offset, bLen, n - bLen, iwork, xwork);
   }
 }

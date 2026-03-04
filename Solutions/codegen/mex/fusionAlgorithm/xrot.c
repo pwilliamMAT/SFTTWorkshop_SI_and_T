@@ -48,7 +48,7 @@ void b_xrot(const emlrtStack *sp, int32_T n, real_T x[36], int32_T ix0,
     int32_T i;
     b_st.site = &qf_emlrtRSI;
     if (n > 2147483646) {
-      c_st.site = &sb_emlrtRSI;
+      c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);
     }
     i = (uint8_T)n;
@@ -84,7 +84,7 @@ void xrot(const emlrtStack *sp, int32_T n, real_T x[36], int32_T ix0,
   st.site = &pf_emlrtRSI;
   b_st.site = &qf_emlrtRSI;
   if (n > 2147483646) {
-    c_st.site = &sb_emlrtRSI;
+    c_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&c_st);
   }
   i = (uint8_T)n;

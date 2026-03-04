@@ -90,7 +90,7 @@ real_T xnrm2(const emlrtStack *sp, int32_T n, const real_T x[36], int32_T ix0)
       kend = (ix0 + n) - 1;
       b_st.site = &rd_emlrtRSI;
       if ((ix0 <= kend) && (kend > 2147483646)) {
-        c_st.site = &sb_emlrtRSI;
+        c_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&c_st);
       }
       for (k = ix0; k <= kend; k++) {

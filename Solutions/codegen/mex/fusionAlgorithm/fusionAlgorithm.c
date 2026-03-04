@@ -58,7 +58,7 @@ static emlrtRSInfo c_emlrtRSI = {
 };
 
 static emlrtRSInfo d_emlrtRSI = {
-    37,                /* lineNo */
+    38,                /* lineNo */
     "fusionAlgorithm", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
@@ -138,7 +138,7 @@ static emlrtRSInfo q_emlrtRSI = {
     "internal\\ExportToSimulinkInterface.m" /* pathName */
 };
 
-static emlrtRSInfo r_emlrtRSI = {
+static emlrtRSInfo s_emlrtRSI = {
     351,                     /* lineNo */
     "trackFuser/trackFuser", /* fcnName */
     "C:\\Program "
@@ -146,7 +146,7 @@ static emlrtRSInfo r_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo s_emlrtRSI = {
+static emlrtRSInfo t_emlrtRSI = {
     357,                     /* lineNo */
     "trackFuser/trackFuser", /* fcnName */
     "C:\\Program "
@@ -154,7 +154,7 @@ static emlrtRSInfo s_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo t_emlrtRSI = {
+static emlrtRSInfo u_emlrtRSI = {
     353,                     /* lineNo */
     "trackFuser/trackFuser", /* fcnName */
     "C:\\Program "
@@ -162,7 +162,7 @@ static emlrtRSInfo t_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo u_emlrtRSI = {
+static emlrtRSInfo v_emlrtRSI = {
     1,                          /* lineNo */
     "SystemProp/setProperties", /* fcnName */
     "C:\\Program "
@@ -170,7 +170,7 @@ static emlrtRSInfo u_emlrtRSI = {
     "coder\\SystemProp.p" /* pathName */
 };
 
-static emlrtRSInfo v_emlrtRSI = {
+static emlrtRSInfo w_emlrtRSI = {
     1,                                /* lineNo */
     "ProcessConstructorArguments/do", /* fcnName */
     "C:\\Program "
@@ -178,7 +178,7 @@ static emlrtRSInfo v_emlrtRSI = {
     "coder\\ProcessConstructorArguments.p" /* pathName */
 };
 
-static emlrtRSInfo w_emlrtRSI = {
+static emlrtRSInfo x_emlrtRSI = {
     1,                                           /* lineNo */
     "ProcessConstructorArguments/setProperties", /* fcnName */
     "C:\\Program "
@@ -186,7 +186,7 @@ static emlrtRSInfo w_emlrtRSI = {
     "coder\\ProcessConstructorArguments.p" /* pathName */
 };
 
-static emlrtRSInfo x_emlrtRSI = {
+static emlrtRSInfo y_emlrtRSI = {
     466,                                   /* lineNo */
     "trackFuser/set.SourceConfigurations", /* fcnName */
     "C:\\Program "
@@ -194,7 +194,7 @@ static emlrtRSInfo x_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo y_emlrtRSI = {
+static emlrtRSInfo ab_emlrtRSI = {
     584,                       /* lineNo */
     "FuserManager/setSources", /* fcnName */
     "C:\\Program "
@@ -202,7 +202,7 @@ static emlrtRSInfo y_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo ab_emlrtRSI = {
+static emlrtRSInfo bb_emlrtRSI = {
     566,                       /* lineNo */
     "FuserManager/setSources", /* fcnName */
     "C:\\Program "
@@ -210,26 +210,8 @@ static emlrtRSInfo ab_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-static emlrtRSInfo ah_emlrtRSI = {
-    52,              /* lineNo */
-    "local2central", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo bh_emlrtRSI = {
-    54,              /* lineNo */
-    "local2central", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
 static emlrtRSInfo ch_emlrtRSI = {
-    82,              /* lineNo */
+    83,              /* lineNo */
     "Ned2ecefTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
@@ -238,7 +220,7 @@ static emlrtRSInfo ch_emlrtRSI = {
 };
 
 static emlrtRSInfo dh_emlrtRSI = {
-    86,              /* lineNo */
+    87,              /* lineNo */
     "Ned2ecefTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
@@ -247,15 +229,6 @@ static emlrtRSInfo dh_emlrtRSI = {
 };
 
 static emlrtRSInfo eh_emlrtRSI = {
-    113,             /* lineNo */
-    "Ned2ecefTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo fh_emlrtRSI = {
     114,             /* lineNo */
     "Ned2ecefTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
@@ -264,16 +237,16 @@ static emlrtRSInfo fh_emlrtRSI = {
     ".m" /* pathName */
 };
 
-static emlrtRSInfo gh_emlrtRSI = {
-    168,         /* lineNo */
-    "syncTrack", /* fcnName */
+static emlrtRSInfo fh_emlrtRSI = {
+    115,             /* lineNo */
+    "Ned2ecefTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
     ".m" /* pathName */
 };
 
-static emlrtRSInfo hh_emlrtRSI = {
+static emlrtRSInfo gh_emlrtRSI = {
     169,         /* lineNo */
     "syncTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
@@ -282,7 +255,7 @@ static emlrtRSInfo hh_emlrtRSI = {
     ".m" /* pathName */
 };
 
-static emlrtRSInfo ih_emlrtRSI = {
+static emlrtRSInfo hh_emlrtRSI = {
     170,         /* lineNo */
     "syncTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
@@ -291,7 +264,7 @@ static emlrtRSInfo ih_emlrtRSI = {
     ".m" /* pathName */
 };
 
-static emlrtRSInfo jh_emlrtRSI = {
+static emlrtRSInfo ih_emlrtRSI = {
     171,         /* lineNo */
     "syncTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
@@ -300,7 +273,7 @@ static emlrtRSInfo jh_emlrtRSI = {
     ".m" /* pathName */
 };
 
-static emlrtRSInfo kh_emlrtRSI = {
+static emlrtRSInfo jh_emlrtRSI = {
     172,         /* lineNo */
     "syncTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
@@ -309,7 +282,7 @@ static emlrtRSInfo kh_emlrtRSI = {
     ".m" /* pathName */
 };
 
-static emlrtRSInfo lh_emlrtRSI = {
+static emlrtRSInfo kh_emlrtRSI = {
     173,         /* lineNo */
     "syncTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
@@ -318,7 +291,7 @@ static emlrtRSInfo lh_emlrtRSI = {
     ".m" /* pathName */
 };
 
-static emlrtRSInfo mh_emlrtRSI = {
+static emlrtRSInfo lh_emlrtRSI = {
     174,         /* lineNo */
     "syncTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
@@ -327,8 +300,17 @@ static emlrtRSInfo mh_emlrtRSI = {
     ".m" /* pathName */
 };
 
+static emlrtRSInfo mh_emlrtRSI = {
+    175,         /* lineNo */
+    "syncTrack", /* fcnName */
+    "C:\\Users\\pwilliam\\OneDrive - "
+    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
+    "T\\Solutions\\fusionAlgorithm"
+    ".m" /* pathName */
+};
+
 static emlrtRSInfo nh_emlrtRSI = {
-    183,         /* lineNo */
+    184,         /* lineNo */
     "syncTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
@@ -337,7 +319,7 @@ static emlrtRSInfo nh_emlrtRSI = {
 };
 
 static emlrtRSInfo oh_emlrtRSI = {
-    184,         /* lineNo */
+    185,         /* lineNo */
     "syncTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
@@ -390,8 +372,8 @@ static emlrtRSInfo uh_emlrtRSI = {
 };
 
 static emlrtRSInfo yh_emlrtRSI = {
-    201,            /* lineNo */
-    "adsb2central", /* fcnName */
+    129,             /* lineNo */
+    "Ecef2nedTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
@@ -399,8 +381,8 @@ static emlrtRSInfo yh_emlrtRSI = {
 };
 
 static emlrtRSInfo ai_emlrtRSI = {
-    203,            /* lineNo */
-    "adsb2central", /* fcnName */
+    133,             /* lineNo */
+    "Ecef2nedTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
     "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
     "T\\Solutions\\fusionAlgorithm"
@@ -408,69 +390,6 @@ static emlrtRSInfo ai_emlrtRSI = {
 };
 
 static emlrtRSInfo bi_emlrtRSI = {
-    211,            /* lineNo */
-    "adsb2central", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo ci_emlrtRSI = {
-    212,            /* lineNo */
-    "adsb2central", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo di_emlrtRSI = {
-    66,              /* lineNo */
-    "central2local", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo ei_emlrtRSI = {
-    68,              /* lineNo */
-    "central2local", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo fi_emlrtRSI = {
-    128,             /* lineNo */
-    "Ecef2nedTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo gi_emlrtRSI = {
-    132,             /* lineNo */
-    "Ecef2nedTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo hi_emlrtRSI = {
-    159,             /* lineNo */
-    "Ecef2nedTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo ii_emlrtRSI = {
     160,             /* lineNo */
     "Ecef2nedTrack", /* fcnName */
     "C:\\Users\\pwilliam\\OneDrive - "
@@ -479,7 +398,16 @@ static emlrtRSInfo ii_emlrtRSI = {
     ".m" /* pathName */
 };
 
-static emlrtRSInfo ji_emlrtRSI =
+static emlrtRSInfo ci_emlrtRSI = {
+    161,             /* lineNo */
+    "Ecef2nedTrack", /* fcnName */
+    "C:\\Users\\pwilliam\\OneDrive - "
+    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
+    "T\\Solutions\\fusionAlgorithm"
+    ".m" /* pathName */
+};
+
+static emlrtRSInfo di_emlrtRSI =
     {
         11,         /* lineNo */
         "ecef2ned", /* fcnName */
@@ -488,48 +416,12 @@ static emlrtRSInfo ji_emlrtRSI =
                                                                        */
 };
 
-static emlrtRSInfo ki_emlrtRSI = {
+static emlrtRSInfo ei_emlrtRSI = {
     17,                /* lineNo */
     "ecef2enuFormula", /* fcnName */
     "C:\\Program "
     "Files\\MATLAB\\R2025b\\toolbox\\shared\\geodesy\\private\\ecef2enuFormula."
     "m" /* pathName */
-};
-
-static emlrtRSInfo li_emlrtRSI = {
-    223,            /* lineNo */
-    "central2adsb", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo mi_emlrtRSI = {
-    225,            /* lineNo */
-    "central2adsb", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo ni_emlrtRSI = {
-    232,            /* lineNo */
-    "central2adsb", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo oi_emlrtRSI = {
-    233,            /* lineNo */
-    "central2adsb", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
 };
 
 static emlrtRTEInfo emlrtRTEI = {
@@ -685,31 +577,42 @@ static const real_T dv2[36] = {-0.21995941811230382,
                                -0.67422804747366671};
 
 /* Function Definitions */
-void b_central2local(
-    const emlrtStack *sp, uint32_T centralTrack_TrackID,
-    uint32_T centralTrack_BranchID, uint32_T centralTrack_SourceIndex,
-    uint32_T centralTrack_Age, real_T centralTrack_ObjectClassID,
-    real_T c_centralTrack_ObjectClassProba, boolean_T centralTrack_IsConfirmed,
-    boolean_T centralTrack_IsCoasted, boolean_T centralTrack_IsSelfReported,
-    const real_T centralTrack_pState[6],
-    const real_T centralTrack_pStateCovariance[36],
-    real_T centralTrack_pUpdateTime, objectTrack *localTrack)
+void Ecef2nedTrack(const emlrtStack *sp, uint32_T centralTrack_TrackID,
+                   uint32_T centralTrack_BranchID,
+                   uint32_T centralTrack_SourceIndex, uint32_T centralTrack_Age,
+                   real_T centralTrack_ObjectClassID,
+                   const real_T c_centralTrack_ObjectClassProba[],
+                   const int32_T d_centralTrack_ObjectClassProba[2],
+                   boolean_T centralTrack_IsConfirmed,
+                   boolean_T centralTrack_IsCoasted,
+                   boolean_T centralTrack_IsSelfReported,
+                   const real_T centralTrack_pState[6],
+                   const real_T centralTrack_pStateCovariance[36],
+                   real_T centralTrack_pUpdateTime, b_objectTrack *radarTrack)
 {
   static const int8_T b_iv[6] = {0, 2, 4, 1, 3, 5};
   static const int8_T b_iv1[6] = {0, 3, 1, 4, 2, 5};
+  __m128d r;
+  __m128d r1;
   emlrtStack b_st;
   emlrtStack c_st;
   emlrtStack d_st;
-  emlrtStack e_st;
   emlrtStack st;
   real_T a[36];
   real_T b_a[36];
+  real_T b_t;
   real_T b_y0;
   real_T cosLambda_tmp;
   real_T sinLambda_tmp;
+  real_T t;
+  real_T u;
+  real_T v;
+  real_T x0;
   real_T z0;
   int32_T i;
+  int32_T i1;
   int32_T i2;
+  int32_T i3;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -718,281 +621,198 @@ void b_central2local(
   c_st.tls = b_st.tls;
   d_st.prev = &c_st;
   d_st.tls = c_st.tls;
-  e_st.prev = &d_st;
-  e_st.tls = d_st.tls;
-  /*  Pre-define output with longest TrackLogic to force codegen consistency */
-  localTrack->TrackID = objectTrack_objectTrack(
-      &localTrack->BranchID, &localTrack->SourceIndex, &localTrack->Age,
-      &localTrack->ObjectClassID, &localTrack->ObjectClassProbabilities,
-      &localTrack->IsConfirmed, &localTrack->IsCoasted,
-      &localTrack->IsSelfReported, localTrack->pState,
-      localTrack->pStateCovariance, &localTrack->pUpdateTime);
-  if (centralTrack_SourceIndex == 1U) {
-    __m128d r;
-    __m128d r1;
-    real_T b_t;
-    real_T t;
-    real_T u;
-    real_T v;
-    real_T x0;
-    int32_T b_i;
-    int32_T i1;
-    st.site = &di_emlrtRSI;
-    /*  A function to transform a track in the central state-space to a track in
-     */
-    /*  the radar state-space. */
-    /*  Initialize a track of the correct state size */
-    /*  Force 'Integrated' for codegen consistency */
-    /*  Sync properties of radarTrack except State and StateCovariance with */
-    /*  radarTrack See syncTrack defined below. */
-    b_st.site = &fi_emlrtRSI;
-    /*  Updated to comply with codegen (different from local code only in that
-     */
-    /*  we're casting values for consistency) */
-    /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-    c_st.site = &gh_emlrtRSI;
-    localTrack->ObjectClassProbabilities = 1.0;
-    d_st.site = &ph_emlrtRSI;
-    localTrack->TrackID = centralTrack_TrackID;
-    c_st.site = &hh_emlrtRSI;
-    d_st.site = &qh_emlrtRSI;
-    localTrack->BranchID = centralTrack_BranchID;
-    c_st.site = &ih_emlrtRSI;
-    d_st.site = &rh_emlrtRSI;
-    localTrack->SourceIndex = 1U;
-    c_st.site = &jh_emlrtRSI;
-    d_st.site = &qc_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
-    if (centralTrack_pUpdateTime < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
-    }
-    e_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(centralTrack_pUpdateTime) ||
-        muDoubleScalarIsNaN(centralTrack_pUpdateTime)) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
-          "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
-    }
-    localTrack->pUpdateTime = centralTrack_pUpdateTime;
-    c_st.site = &kh_emlrtRSI;
-    d_st.site = &sh_emlrtRSI;
-    localTrack->Age = centralTrack_Age;
-    c_st.site = &lh_emlrtRSI;
-    d_st.site = &ig_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
-    if (centralTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    e_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(centralTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(centralTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(centralTrack_ObjectClassID) ==
-           centralTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
-    localTrack->ObjectClassID = centralTrack_ObjectClassID;
-    c_st.site = &mh_emlrtRSI;
-    d_objectTrack_set_ObjectClassPr(&c_st, localTrack,
-                                    c_centralTrack_ObjectClassProba);
-    /* dst.TrackLogic = src.TrackLogic; */
-    /*  Skip TrackLogicState - fuser manages this internally, and copying causes
-     * codegen size issues */
-    /* dst.TrackLogicState = double(src.TrackLogicState); */
-    localTrack->IsConfirmed = centralTrack_IsConfirmed;
-    localTrack->IsCoasted = centralTrack_IsCoasted;
-    localTrack->IsSelfReported = centralTrack_IsSelfReported;
-    /*  States / covariance */
-    c_st.site = &nh_emlrtRSI;
-    d_st.site = &rc_emlrtRSI;
-    validateattributes(&d_st, centralTrack_pState);
-    c_st.site = &oh_emlrtRSI;
-    d_st.site = &sc_emlrtRSI;
-    b_validateattributes(&d_st, centralTrack_pStateCovariance);
-    d_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&d_st, centralTrack_pStateCovariance);
-    /*  Parameters and Attributes */
-    /*  Convert ECEF state to NED */
-    b_st.site = &gi_emlrtRSI;
-    c_st.site = &ji_emlrtRSI;
-    d_st.site = &ki_emlrtRSI;
-    x0 = geodetic2ecefFormula(&d_st, &b_y0, &z0);
-    u = centralTrack_pState[0] - x0;
-    v = centralTrack_pState[2] - b_y0;
-    x0 = centralTrack_pState[4] - z0;
-    b_y0 = 42.39423231362;
-    b_cosd(&b_y0);
-    z0 = 42.39423231362;
-    b_sind(&z0);
-    cosLambda_tmp = -70.95934958874;
-    b_cosd(&cosLambda_tmp);
-    sinLambda_tmp = -70.95934958874;
-    b_sind(&sinLambda_tmp);
-    t = cosLambda_tmp * u + sinLambda_tmp * v;
-    /*  ECEF->NED velocity via built-in */
-    b_t = cosLambda_tmp * centralTrack_pState[1] +
-          sinLambda_tmp * centralTrack_pState[3];
-    localTrack->pState[0] = -z0 * t + b_y0 * x0;
-    localTrack->pState[1] = -z0 * b_t + b_y0 * centralTrack_pState[5];
-    localTrack->pState[2] = -sinLambda_tmp * u + cosLambda_tmp * v;
-    localTrack->pState[3] = -sinLambda_tmp * centralTrack_pState[1] +
-                            cosLambda_tmp * centralTrack_pState[3];
-    localTrack->pState[4] = -(b_y0 * t + z0 * x0);
-    localTrack->pState[5] = -(b_y0 * b_t + z0 * centralTrack_pState[5]);
-    /*  Convert ECEF state COVARIANCE to NED state COVARIANCE */
-    /*  Rotation matrix ECEF->NED (codegen-compatible) */
-    /*  Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz] */
-    /*  Permute covariance matrix to group pos/vel */
-    /*  ECEF->NED covariance: P_ned = R * P_ecef * R' */
-    /*  Unpermute back to original interleaved format */
-    memset(&a[0], 0, 36U * sizeof(real_T));
-    for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
-        r = _mm_loadu_pd(&a[6 * i]);
-        r1 = _mm_set1_pd(centralTrack_pStateCovariance[b_iv[i2] + 6 * b_iv[i]]);
-        _mm_storeu_pd(
-            &a[6 * i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i2]), r1)));
-        r = _mm_loadu_pd(&a[b_i]);
-        _mm_storeu_pd(
-            &a[b_i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i2 + 2]), r1)));
-        r = _mm_loadu_pd(&a[i1]);
-        _mm_storeu_pd(
-            &a[i1],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i2 + 4]), r1)));
-      }
-    }
-    memset(&b_a[0], 0, 36U * sizeof(real_T));
-    for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
-        __m128d r2;
-        r = _mm_loadu_pd(&a[6 * i2]);
-        r1 = _mm_loadu_pd(&b_a[6 * i]);
-        r2 = _mm_set1_pd(dv1[i2 + 6 * i]);
-        _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 2]);
-        r1 = _mm_loadu_pd(&b_a[b_i]);
-        _mm_storeu_pd(&b_a[b_i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 4]);
-        r1 = _mm_loadu_pd(&b_a[i1]);
-        _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-      }
-    }
-    for (i = 0; i < 6; i++) {
-      for (i2 = 0; i2 < 6; i2++) {
-        localTrack->pStateCovariance[i2 + 6 * i] =
-            b_a[b_iv1[i2] + 6 * b_iv1[i]];
-      }
-    }
-    /*  Set state and covariance of radar track */
-    b_st.site = &hi_emlrtRSI;
-    c_st.site = &rc_emlrtRSI;
-    validateattributes(&c_st, localTrack->pState);
-    b_st.site = &ii_emlrtRSI;
-    c_st.site = &sc_emlrtRSI;
-    b_validateattributes(&c_st, localTrack->pStateCovariance);
-    c_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&c_st, localTrack->pStateCovariance);
-  } else if (centralTrack_SourceIndex == 2U) {
-    st.site = &ei_emlrtRSI;
-    /*  Same layout → copy back */
-    /*  Preserve TrackLogic from input */
-    localTrack->ObjectClassProbabilities = 1.0;
-    localTrack->TrackID = centralTrack_TrackID;
-    localTrack->BranchID = centralTrack_BranchID;
-    localTrack->SourceIndex = 2U;
-    b_st.site = &li_emlrtRSI;
-    c_st.site = &qc_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
-    if (centralTrack_pUpdateTime < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
-    }
-    d_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(centralTrack_pUpdateTime) ||
-        muDoubleScalarIsNaN(centralTrack_pUpdateTime)) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
-          "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
-    }
-    localTrack->pUpdateTime = centralTrack_pUpdateTime;
-    localTrack->Age = centralTrack_Age;
-    b_st.site = &mi_emlrtRSI;
-    c_st.site = &ig_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
-    if (centralTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    d_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(centralTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(centralTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(centralTrack_ObjectClassID) ==
-           centralTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
-    localTrack->ObjectClassID = centralTrack_ObjectClassID;
-    /*  Skip TrackLogicState - fuser manages this */
-    /* adsbTrack.TrackLogicState= double(centralTrack.TrackLogicState); */
-    localTrack->IsConfirmed = centralTrack_IsConfirmed;
-    localTrack->IsCoasted = centralTrack_IsCoasted;
-    localTrack->IsSelfReported = centralTrack_IsSelfReported;
-    b_st.site = &ni_emlrtRSI;
-    c_st.site = &rc_emlrtRSI;
-    validateattributes(&c_st, centralTrack_pState);
-    for (i = 0; i < 6; i++) {
-      localTrack->pState[i] = centralTrack_pState[i];
-    }
-    b_st.site = &oi_emlrtRSI;
-    c_st.site = &sc_emlrtRSI;
-    b_validateattributes(&c_st, centralTrack_pStateCovariance);
-    c_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&c_st, centralTrack_pStateCovariance);
-    memcpy(&localTrack->pStateCovariance[0], &centralTrack_pStateCovariance[0],
-           36U * sizeof(real_T));
+  /*  A function to transform a track in the central state-space to a track in
+   */
+  /*  the radar state-space. */
+  /*  Initialize a track of the correct state size */
+  /*  Force 'Integrated' for codegen consistency */
+  /*  Sync properties of radarTrack except State and StateCovariance with */
+  /*  radarTrack See syncTrack defined below. */
+  st.site = &yh_emlrtRSI;
+  /*  Updated to comply with codegen (different from local code only in that */
+  /*  we're casting values for consistency) */
+  /*  Copy scalars (cast to double/logical for objectTrack assignments) */
+  b_st.site = &gh_emlrtRSI;
+  radarTrack->TrackID = objectTrack_set_TrackID(
+      &b_st, centralTrack_TrackID, &radarTrack->BranchID,
+      &radarTrack->SourceIndex, &radarTrack->Age, &radarTrack->ObjectClassID,
+      radarTrack->ObjectClassProbabilities.data,
+      radarTrack->ObjectClassProbabilities.size, &radarTrack->IsConfirmed,
+      &radarTrack->IsCoasted, &radarTrack->IsSelfReported, radarTrack->pState,
+      radarTrack->pStateCovariance, &radarTrack->pUpdateTime);
+  b_st.site = &hh_emlrtRSI;
+  c_st.site = &qh_emlrtRSI;
+  radarTrack->BranchID = centralTrack_BranchID;
+  b_st.site = &ih_emlrtRSI;
+  c_st.site = &rh_emlrtRSI;
+  radarTrack->SourceIndex = centralTrack_SourceIndex;
+  b_st.site = &jh_emlrtRSI;
+  c_st.site = &qc_emlrtRSI;
+  d_st.site = &gb_emlrtRSI;
+  if (centralTrack_pUpdateTime < 0.0) {
+    emlrtErrorWithMessageIdR2018a(
+        &d_st, &l_emlrtRTEI,
+        "Coder:toolbox:ValidateattributesexpectedNonnegative",
+        "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
   }
+  d_st.site = &gb_emlrtRSI;
+  if (muDoubleScalarIsInf(centralTrack_pUpdateTime) ||
+      muDoubleScalarIsNaN(centralTrack_pUpdateTime)) {
+    emlrtErrorWithMessageIdR2018a(
+        &d_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
+        "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
+  }
+  radarTrack->pUpdateTime = centralTrack_pUpdateTime;
+  b_st.site = &kh_emlrtRSI;
+  c_st.site = &sh_emlrtRSI;
+  radarTrack->Age = centralTrack_Age;
+  b_st.site = &lh_emlrtRSI;
+  c_st.site = &ig_emlrtRSI;
+  d_st.site = &gb_emlrtRSI;
+  if (centralTrack_ObjectClassID < 0.0) {
+    emlrtErrorWithMessageIdR2018a(
+        &d_st, &l_emlrtRTEI,
+        "Coder:toolbox:ValidateattributesexpectedNonnegative",
+        "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
+  }
+  d_st.site = &gb_emlrtRSI;
+  if (muDoubleScalarIsInf(centralTrack_ObjectClassID) ||
+      muDoubleScalarIsNaN(centralTrack_ObjectClassID) ||
+      (!(muDoubleScalarFloor(centralTrack_ObjectClassID) ==
+         centralTrack_ObjectClassID))) {
+    emlrtErrorWithMessageIdR2018a(
+        &d_st, &c_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedInteger",
+        "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
+  }
+  radarTrack->ObjectClassID = centralTrack_ObjectClassID;
+  b_st.site = &mh_emlrtRSI;
+  c_objectTrack_set_ObjectClassPr(&b_st, radarTrack,
+                                  c_centralTrack_ObjectClassProba,
+                                  d_centralTrack_ObjectClassProba);
+  /* dst.TrackLogic = src.TrackLogic; */
+  /*  Skip TrackLogicState - fuser manages this internally, and copying causes
+   * codegen size issues */
+  /* dst.TrackLogicState = double(src.TrackLogicState); */
+  radarTrack->IsConfirmed = centralTrack_IsConfirmed;
+  radarTrack->IsCoasted = centralTrack_IsCoasted;
+  radarTrack->IsSelfReported = centralTrack_IsSelfReported;
+  /*  States / covariance */
+  b_st.site = &nh_emlrtRSI;
+  c_st.site = &rc_emlrtRSI;
+  validateattributes(&c_st, centralTrack_pState);
+  b_st.site = &oh_emlrtRSI;
+  c_st.site = &sc_emlrtRSI;
+  b_validateattributes(&c_st, centralTrack_pStateCovariance);
+  c_st.site = &tc_emlrtRSI;
+  isSymmetricPositiveSemiDefinite(&c_st, centralTrack_pStateCovariance);
+  /*  Parameters and Attributes */
+  /*  Convert ECEF state to NED */
+  st.site = &ai_emlrtRSI;
+  b_st.site = &di_emlrtRSI;
+  c_st.site = &ei_emlrtRSI;
+  x0 = geodetic2ecefFormula(&c_st, &b_y0, &z0);
+  u = centralTrack_pState[0] - x0;
+  v = centralTrack_pState[2] - b_y0;
+  x0 = centralTrack_pState[4] - z0;
+  b_y0 = 42.39423231362;
+  b_cosd(&b_y0);
+  z0 = 42.39423231362;
+  b_sind(&z0);
+  cosLambda_tmp = -70.95934958874;
+  b_cosd(&cosLambda_tmp);
+  sinLambda_tmp = -70.95934958874;
+  b_sind(&sinLambda_tmp);
+  t = cosLambda_tmp * u + sinLambda_tmp * v;
+  /*  ECEF->NED velocity via built-in */
+  b_t = cosLambda_tmp * centralTrack_pState[1] +
+        sinLambda_tmp * centralTrack_pState[3];
+  radarTrack->pState[0] = -z0 * t + b_y0 * x0;
+  radarTrack->pState[1] = -z0 * b_t + b_y0 * centralTrack_pState[5];
+  radarTrack->pState[2] = -sinLambda_tmp * u + cosLambda_tmp * v;
+  radarTrack->pState[3] = -sinLambda_tmp * centralTrack_pState[1] +
+                          cosLambda_tmp * centralTrack_pState[3];
+  radarTrack->pState[4] = -(b_y0 * t + z0 * x0);
+  radarTrack->pState[5] = -(b_y0 * b_t + z0 * centralTrack_pState[5]);
+  /*  Convert ECEF state COVARIANCE to NED state COVARIANCE */
+  /*  Rotation matrix ECEF->NED (codegen-compatible) */
+  /*  Note dcmecef2ned not supported for codegen */
+  /*  Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz] */
+  /*  Permute covariance matrix to group pos/vel */
+  /*  ECEF->NED covariance: P_ned = R * P_ecef * R' */
+  /*  Unpermute back to original interleaved format */
+  memset(&a[0], 0, 36U * sizeof(real_T));
+  for (i = 0; i < 6; i++) {
+    i1 = 6 * i + 2;
+    i2 = 6 * i + 4;
+    for (i3 = 0; i3 < 6; i3++) {
+      r = _mm_loadu_pd(&a[6 * i]);
+      r1 = _mm_set1_pd(centralTrack_pStateCovariance[b_iv[i3] + 6 * b_iv[i]]);
+      _mm_storeu_pd(&a[6 * i],
+                    _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3]), r1)));
+      r = _mm_loadu_pd(&a[i1]);
+      _mm_storeu_pd(
+          &a[i1],
+          _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3 + 2]), r1)));
+      r = _mm_loadu_pd(&a[i2]);
+      _mm_storeu_pd(
+          &a[i2],
+          _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3 + 4]), r1)));
+    }
+  }
+  memset(&b_a[0], 0, 36U * sizeof(real_T));
+  for (i = 0; i < 6; i++) {
+    i1 = 6 * i + 2;
+    i2 = 6 * i + 4;
+    for (i3 = 0; i3 < 6; i3++) {
+      __m128d r2;
+      r = _mm_loadu_pd(&a[6 * i3]);
+      r1 = _mm_loadu_pd(&b_a[6 * i]);
+      r2 = _mm_set1_pd(dv1[i3 + 6 * i]);
+      _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+      r = _mm_loadu_pd(&a[6 * i3 + 2]);
+      r1 = _mm_loadu_pd(&b_a[i1]);
+      _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+      r = _mm_loadu_pd(&a[6 * i3 + 4]);
+      r1 = _mm_loadu_pd(&b_a[i2]);
+      _mm_storeu_pd(&b_a[i2], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+    }
+  }
+  for (i = 0; i < 6; i++) {
+    for (i3 = 0; i3 < 6; i3++) {
+      radarTrack->pStateCovariance[i3 + 6 * i] = b_a[b_iv1[i3] + 6 * b_iv1[i]];
+    }
+  }
+  /*  Set state and covariance of radar track */
+  st.site = &bi_emlrtRSI;
+  b_st.site = &rc_emlrtRSI;
+  validateattributes(&b_st, radarTrack->pState);
+  st.site = &ci_emlrtRSI;
+  b_st.site = &sc_emlrtRSI;
+  b_validateattributes(&b_st, radarTrack->pStateCovariance);
+  b_st.site = &tc_emlrtRSI;
+  isSymmetricPositiveSemiDefinite(&b_st, radarTrack->pStateCovariance);
 }
 
-void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
-                     uint32_T localTrack_BranchID,
-                     uint32_T localTrack_SourceIndex,
-                     real_T localTrack_UpdateTime, uint32_T localTrack_Age,
-                     const real_T localTrack_State[6],
-                     const real_T localTrack_StateCovariance[36],
-                     real_T localTrack_ObjectClassID,
-                     const real_T c_localTrack_ObjectClassProbabi[],
-                     const int32_T d_localTrack_ObjectClassProbabi[2],
-                     boolean_T localTrack_IsConfirmed,
-                     boolean_T localTrack_IsCoasted,
-                     boolean_T localTrack_IsSelfReported,
-                     b_objectTrack *centralTrack)
+void Ned2ecefTrack(const emlrtStack *sp, uint32_T radarTrack_TrackID,
+                   uint32_T radarTrack_BranchID,
+                   uint32_T radarTrack_SourceIndex, uint32_T radarTrack_Age,
+                   real_T radarTrack_ObjectClassID,
+                   const real_T c_radarTrack_ObjectClassProbabi[],
+                   const int32_T d_radarTrack_ObjectClassProbabi[2],
+                   boolean_T radarTrack_IsConfirmed,
+                   boolean_T radarTrack_IsCoasted,
+                   boolean_T radarTrack_IsSelfReported,
+                   const real_T radarTrack_pState[6],
+                   const real_T radarTrack_pStateCovariance[36],
+                   real_T radarTrack_pUpdateTime, b_objectTrack *centralTrack)
 {
   static const int8_T b_iv[6] = {0, 2, 4, 1, 3, 5};
   static const int8_T b_iv1[6] = {0, 3, 1, 4, 2, 5};
+  __m128d r;
+  __m128d r1;
   emlrtStack b_st;
   emlrtStack c_st;
   emlrtStack d_st;
-  emlrtStack e_st;
   emlrtStack st;
   real_T a[36];
   real_T b_a[36];
@@ -1002,9 +822,13 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
   real_T cosPhi;
   real_T sinLambda;
   real_T sinPhi;
+  real_T t;
+  real_T x0;
   real_T z0;
   int32_T i;
+  int32_T i1;
   int32_T i2;
+  int32_T i3;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -1013,288 +837,191 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
   c_st.tls = b_st.tls;
   d_st.prev = &c_st;
   d_st.tls = c_st.tls;
-  e_st.prev = &d_st;
-  e_st.tls = d_st.tls;
-  /*  HELPER FUNCTIONS */
-  /*  ---- Wrappers (homogeneous handles) ---- */
-  /*  Pre-define output - force 'Integrated' for codegen consistency */
-  centralTrack->TrackID = b_objectTrack_objectTrack(
-      &centralTrack->BranchID, &centralTrack->SourceIndex, &centralTrack->Age,
+  /*  Initialize a track of the correct state size */
+  /*  Force 'Integrated' for codegen consistency */
+  /*  Sync properties of radarTrack except State and StateCovariance with */
+  /*  radarTrack See syncTrack defined below. */
+  st.site = &ch_emlrtRSI;
+  /*  Updated to comply with codegen (different from local code only in that */
+  /*  we're casting values for consistency) */
+  /*  Copy scalars (cast to double/logical for objectTrack assignments) */
+  b_st.site = &gh_emlrtRSI;
+  centralTrack->TrackID = objectTrack_set_TrackID(
+      &b_st, radarTrack_TrackID, &centralTrack->BranchID,
+      &centralTrack->SourceIndex, &centralTrack->Age,
       &centralTrack->ObjectClassID, centralTrack->ObjectClassProbabilities.data,
       centralTrack->ObjectClassProbabilities.size, &centralTrack->IsConfirmed,
       &centralTrack->IsCoasted, &centralTrack->IsSelfReported,
       centralTrack->pState, centralTrack->pStateCovariance,
       &centralTrack->pUpdateTime);
-  if (localTrack_SourceIndex == 1U) {
-    __m128d r;
-    __m128d r1;
-    real_T t;
-    real_T x0;
-    int32_T b_i;
-    int32_T i1;
-    st.site = &ah_emlrtRSI;
-    /*  Initialize a track of the correct state size */
-    /*  Force 'Integrated' for codegen consistency */
-    /*  Sync properties of radarTrack except State and StateCovariance with */
-    /*  radarTrack See syncTrack defined below. */
-    b_st.site = &ch_emlrtRSI;
-    /*  Updated to comply with codegen (different from local code only in that
-     */
-    /*  we're casting values for consistency) */
-    /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-    c_st.site = &gh_emlrtRSI;
-    centralTrack->TrackID = objectTrack_set_TrackID(
-        &c_st, localTrack_TrackID, &centralTrack->BranchID,
-        &centralTrack->SourceIndex, &centralTrack->Age,
-        &centralTrack->ObjectClassID,
-        centralTrack->ObjectClassProbabilities.data,
-        centralTrack->ObjectClassProbabilities.size, &centralTrack->IsConfirmed,
-        &centralTrack->IsCoasted, &centralTrack->IsSelfReported,
-        centralTrack->pState, centralTrack->pStateCovariance,
-        &centralTrack->pUpdateTime);
-    c_st.site = &hh_emlrtRSI;
-    d_st.site = &qh_emlrtRSI;
-    centralTrack->BranchID = localTrack_BranchID;
-    c_st.site = &ih_emlrtRSI;
-    d_st.site = &rh_emlrtRSI;
-    centralTrack->SourceIndex = 1U;
-    c_st.site = &jh_emlrtRSI;
-    d_st.site = &qc_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
-    if (localTrack_UpdateTime < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
-    }
-    e_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_UpdateTime) ||
-        muDoubleScalarIsNaN(localTrack_UpdateTime)) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
-          "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
-    }
-    centralTrack->pUpdateTime = localTrack_UpdateTime;
-    c_st.site = &kh_emlrtRSI;
-    d_st.site = &sh_emlrtRSI;
-    centralTrack->Age = localTrack_Age;
-    c_st.site = &lh_emlrtRSI;
-    d_st.site = &ig_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
-    if (localTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    e_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(localTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(localTrack_ObjectClassID) ==
-           localTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
-    centralTrack->ObjectClassID = localTrack_ObjectClassID;
-    c_st.site = &mh_emlrtRSI;
-    c_objectTrack_set_ObjectClassPr(&c_st, centralTrack,
-                                    c_localTrack_ObjectClassProbabi,
-                                    d_localTrack_ObjectClassProbabi);
-    /* dst.TrackLogic = src.TrackLogic; */
-    /*  Skip TrackLogicState - fuser manages this internally, and copying causes
-     * codegen size issues */
-    /* dst.TrackLogicState = double(src.TrackLogicState); */
-    centralTrack->IsConfirmed = localTrack_IsConfirmed;
-    centralTrack->IsCoasted = localTrack_IsCoasted;
-    centralTrack->IsSelfReported = localTrack_IsSelfReported;
-    /*  States / covariance */
-    c_st.site = &nh_emlrtRSI;
-    d_st.site = &rc_emlrtRSI;
-    validateattributes(&d_st, localTrack_State);
-    c_st.site = &oh_emlrtRSI;
-    d_st.site = &sc_emlrtRSI;
-    b_validateattributes(&d_st, localTrack_StateCovariance);
-    d_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&d_st, localTrack_StateCovariance);
-    /*  Parameters and Attributes */
-    /*  Convert NED state to ECEF state */
-    b_st.site = &dh_emlrtRSI;
-    c_st.site = &th_emlrtRSI;
-    d_st.site = &uh_emlrtRSI;
-    x0 = geodetic2ecefFormula(&d_st, &b_y0, &z0);
-    cosPhi = 42.39423231362;
-    b_cosd(&cosPhi);
-    sinPhi = 42.39423231362;
-    b_sind(&sinPhi);
-    cosLambda = -70.95934958874;
-    b_cosd(&cosLambda);
-    sinLambda = -70.95934958874;
-    b_sind(&sinLambda);
-    t = cosPhi * -localTrack_State[4] - sinPhi * localTrack_State[0];
-    /*  Rotation matrix ECEF->NED (codegen-compatible) */
-    /*  NED->ECEF velocity: v_ecef = R' * v_ned */
-    memset(&velos[0], 0, 3U * sizeof(real_T));
-    r = _mm_loadu_pd(&velos[0]);
-    _mm_storeu_pd(&velos[0],
-                  _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[0]),
-                                           _mm_set1_pd(localTrack_State[1]))));
-    velos[2] += 0.7385232156133259 * localTrack_State[1];
-    r = _mm_loadu_pd(&velos[0]);
-    _mm_storeu_pd(&velos[0],
-                  _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[3]),
-                                           _mm_set1_pd(localTrack_State[3]))));
-    velos[2] += 0.0 * localTrack_State[3];
-    r = _mm_loadu_pd(&velos[0]);
-    _mm_storeu_pd(&velos[0],
-                  _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[6]),
-                                           _mm_set1_pd(localTrack_State[5]))));
-    velos[2] += -0.67422804747366671 * localTrack_State[5];
-    centralTrack->pState[0] =
-        x0 + (cosLambda * t - sinLambda * localTrack_State[2]);
-    centralTrack->pState[1] = velos[0];
-    centralTrack->pState[2] =
-        b_y0 + (sinLambda * t + cosLambda * localTrack_State[2]);
-    centralTrack->pState[3] = velos[1];
-    centralTrack->pState[4] =
-        z0 + (sinPhi * -localTrack_State[4] + cosPhi * localTrack_State[0]);
-    centralTrack->pState[5] = velos[2];
-    /*  Convert NED state COVARIANCE to ECEF state COVARIANCE */
-    /*  Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz] */
-    /*  Permute covariance matrix to group pos/vel */
-    /*  NED->ECEF covariance: P_ecef = R' * P_ned * R */
-    /*  Unpermute back to original interleaved format */
-    memset(&a[0], 0, 36U * sizeof(real_T));
-    for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
-        r = _mm_loadu_pd(&a[6 * i]);
-        r1 = _mm_set1_pd(localTrack_StateCovariance[b_iv[i2] + 6 * b_iv[i]]);
-        _mm_storeu_pd(
-            &a[6 * i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i2]), r1)));
-        r = _mm_loadu_pd(&a[b_i]);
-        _mm_storeu_pd(
-            &a[b_i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i2 + 2]), r1)));
-        r = _mm_loadu_pd(&a[i1]);
-        _mm_storeu_pd(
-            &a[i1],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i2 + 4]), r1)));
-      }
-    }
-    memset(&b_a[0], 0, 36U * sizeof(real_T));
-    for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
-        __m128d r2;
-        r = _mm_loadu_pd(&a[6 * i2]);
-        r1 = _mm_loadu_pd(&b_a[6 * i]);
-        r2 = _mm_set1_pd(dv2[i2 + 6 * i]);
-        _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 2]);
-        r1 = _mm_loadu_pd(&b_a[b_i]);
-        _mm_storeu_pd(&b_a[b_i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 4]);
-        r1 = _mm_loadu_pd(&b_a[i1]);
-        _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-      }
-    }
-    for (i = 0; i < 6; i++) {
-      for (i2 = 0; i2 < 6; i2++) {
-        centralTrack->pStateCovariance[i2 + 6 * i] =
-            b_a[b_iv1[i2] + 6 * b_iv1[i]];
-      }
-    }
-    /*  Set state and covariance of central track */
-    b_st.site = &eh_emlrtRSI;
-    c_st.site = &rc_emlrtRSI;
-    validateattributes(&c_st, centralTrack->pState);
-    b_st.site = &fh_emlrtRSI;
-    c_st.site = &sc_emlrtRSI;
-    b_validateattributes(&c_st, centralTrack->pStateCovariance);
-    c_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&c_st, centralTrack->pStateCovariance);
-  } else if (localTrack_SourceIndex == 2U) {
-    st.site = &bh_emlrtRSI;
-    /*  Central space is identical to ADS-B local space → copy with right types
-     */
-    /*  Preserve TrackLogic from input struct */
-    /*  Copy scalar properties as double to keep codegen type-stable */
-    centralTrack->TrackID = b_objectTrack_set_TrackID(
-        localTrack_TrackID, &centralTrack->BranchID, &centralTrack->SourceIndex,
-        &centralTrack->Age, &centralTrack->ObjectClassID,
-        centralTrack->ObjectClassProbabilities.data,
-        centralTrack->ObjectClassProbabilities.size, &centralTrack->IsConfirmed,
-        &centralTrack->IsCoasted, &centralTrack->IsSelfReported,
-        centralTrack->pState, centralTrack->pStateCovariance,
-        &centralTrack->pUpdateTime);
-    centralTrack->BranchID = localTrack_BranchID;
-    centralTrack->SourceIndex = 2U;
-    b_st.site = &yh_emlrtRSI;
-    c_st.site = &qc_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
-    if (localTrack_UpdateTime < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
-    }
-    d_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_UpdateTime) ||
-        muDoubleScalarIsNaN(localTrack_UpdateTime)) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
-          "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
-    }
-    centralTrack->pUpdateTime = localTrack_UpdateTime;
-    centralTrack->Age = localTrack_Age;
-    b_st.site = &ai_emlrtRSI;
-    c_st.site = &ig_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
-    if (localTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    d_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(localTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(localTrack_ObjectClassID) ==
-           localTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
-    centralTrack->ObjectClassID = localTrack_ObjectClassID;
-    /*  Skip TrackLogicState - fuser manages this */
-    /* centralTrack.TrackLogicState= double(adsbTrack.TrackLogicState); */
-    centralTrack->IsConfirmed = localTrack_IsConfirmed;
-    centralTrack->IsCoasted = localTrack_IsCoasted;
-    centralTrack->IsSelfReported = localTrack_IsSelfReported;
-    /*  States/covariances → ensure double */
-    b_st.site = &bi_emlrtRSI;
-    c_st.site = &rc_emlrtRSI;
-    validateattributes(&c_st, localTrack_State);
-    for (i = 0; i < 6; i++) {
-      centralTrack->pState[i] = localTrack_State[i];
-    }
-    b_st.site = &ci_emlrtRSI;
-    c_st.site = &sc_emlrtRSI;
-    b_validateattributes(&c_st, localTrack_StateCovariance);
-    c_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&c_st, localTrack_StateCovariance);
-    memcpy(&centralTrack->pStateCovariance[0], &localTrack_StateCovariance[0],
-           36U * sizeof(real_T));
+  b_st.site = &hh_emlrtRSI;
+  c_st.site = &qh_emlrtRSI;
+  centralTrack->BranchID = radarTrack_BranchID;
+  b_st.site = &ih_emlrtRSI;
+  c_st.site = &rh_emlrtRSI;
+  centralTrack->SourceIndex = radarTrack_SourceIndex;
+  b_st.site = &jh_emlrtRSI;
+  c_st.site = &qc_emlrtRSI;
+  d_st.site = &gb_emlrtRSI;
+  if (radarTrack_pUpdateTime < 0.0) {
+    emlrtErrorWithMessageIdR2018a(
+        &d_st, &l_emlrtRTEI,
+        "Coder:toolbox:ValidateattributesexpectedNonnegative",
+        "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
   }
+  d_st.site = &gb_emlrtRSI;
+  if (muDoubleScalarIsInf(radarTrack_pUpdateTime) ||
+      muDoubleScalarIsNaN(radarTrack_pUpdateTime)) {
+    emlrtErrorWithMessageIdR2018a(
+        &d_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
+        "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
+  }
+  centralTrack->pUpdateTime = radarTrack_pUpdateTime;
+  b_st.site = &kh_emlrtRSI;
+  c_st.site = &sh_emlrtRSI;
+  centralTrack->Age = radarTrack_Age;
+  b_st.site = &lh_emlrtRSI;
+  c_st.site = &ig_emlrtRSI;
+  d_st.site = &gb_emlrtRSI;
+  if (radarTrack_ObjectClassID < 0.0) {
+    emlrtErrorWithMessageIdR2018a(
+        &d_st, &l_emlrtRTEI,
+        "Coder:toolbox:ValidateattributesexpectedNonnegative",
+        "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
+  }
+  d_st.site = &gb_emlrtRSI;
+  if (muDoubleScalarIsInf(radarTrack_ObjectClassID) ||
+      muDoubleScalarIsNaN(radarTrack_ObjectClassID) ||
+      (!(muDoubleScalarFloor(radarTrack_ObjectClassID) ==
+         radarTrack_ObjectClassID))) {
+    emlrtErrorWithMessageIdR2018a(
+        &d_st, &c_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedInteger",
+        "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
+  }
+  centralTrack->ObjectClassID = radarTrack_ObjectClassID;
+  b_st.site = &mh_emlrtRSI;
+  c_objectTrack_set_ObjectClassPr(&b_st, centralTrack,
+                                  c_radarTrack_ObjectClassProbabi,
+                                  d_radarTrack_ObjectClassProbabi);
+  /* dst.TrackLogic = src.TrackLogic; */
+  /*  Skip TrackLogicState - fuser manages this internally, and copying causes
+   * codegen size issues */
+  /* dst.TrackLogicState = double(src.TrackLogicState); */
+  centralTrack->IsConfirmed = radarTrack_IsConfirmed;
+  centralTrack->IsCoasted = radarTrack_IsCoasted;
+  centralTrack->IsSelfReported = radarTrack_IsSelfReported;
+  /*  States / covariance */
+  b_st.site = &nh_emlrtRSI;
+  c_st.site = &rc_emlrtRSI;
+  validateattributes(&c_st, radarTrack_pState);
+  b_st.site = &oh_emlrtRSI;
+  c_st.site = &sc_emlrtRSI;
+  b_validateattributes(&c_st, radarTrack_pStateCovariance);
+  c_st.site = &tc_emlrtRSI;
+  isSymmetricPositiveSemiDefinite(&c_st, radarTrack_pStateCovariance);
+  /*  Parameters and Attributes */
+  /*  Convert NED state to ECEF state */
+  st.site = &dh_emlrtRSI;
+  b_st.site = &th_emlrtRSI;
+  c_st.site = &uh_emlrtRSI;
+  x0 = geodetic2ecefFormula(&c_st, &b_y0, &z0);
+  cosPhi = 42.39423231362;
+  b_cosd(&cosPhi);
+  sinPhi = 42.39423231362;
+  b_sind(&sinPhi);
+  cosLambda = -70.95934958874;
+  b_cosd(&cosLambda);
+  sinLambda = -70.95934958874;
+  b_sind(&sinLambda);
+  t = cosPhi * -radarTrack_pState[4] - sinPhi * radarTrack_pState[0];
+  /*  Rotation matrix ECEF->NED (codegen-compatible) */
+  /*  Note dcmecef2ned not supported for codegen */
+  /*  NED->ECEF velocity: v_ecef = R' * v_ned */
+  memset(&velos[0], 0, 3U * sizeof(real_T));
+  r = _mm_loadu_pd(&velos[0]);
+  _mm_storeu_pd(&velos[0],
+                _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[0]),
+                                         _mm_set1_pd(radarTrack_pState[1]))));
+  velos[2] += 0.7385232156133259 * radarTrack_pState[1];
+  r = _mm_loadu_pd(&velos[0]);
+  _mm_storeu_pd(&velos[0],
+                _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[3]),
+                                         _mm_set1_pd(radarTrack_pState[3]))));
+  velos[2] += 0.0 * radarTrack_pState[3];
+  r = _mm_loadu_pd(&velos[0]);
+  _mm_storeu_pd(&velos[0],
+                _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[6]),
+                                         _mm_set1_pd(radarTrack_pState[5]))));
+  velos[2] += -0.67422804747366671 * radarTrack_pState[5];
+  centralTrack->pState[0] =
+      x0 + (cosLambda * t - sinLambda * radarTrack_pState[2]);
+  centralTrack->pState[1] = velos[0];
+  centralTrack->pState[2] =
+      b_y0 + (sinLambda * t + cosLambda * radarTrack_pState[2]);
+  centralTrack->pState[3] = velos[1];
+  centralTrack->pState[4] =
+      z0 + (sinPhi * -radarTrack_pState[4] + cosPhi * radarTrack_pState[0]);
+  centralTrack->pState[5] = velos[2];
+  /*  Convert NED state COVARIANCE to ECEF state COVARIANCE */
+  /*  Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz] */
+  /*  Permute covariance matrix to group pos/vel */
+  /*  NED->ECEF covariance: P_ecef = R' * P_ned * R */
+  /*  Unpermute back to original interleaved format */
+  memset(&a[0], 0, 36U * sizeof(real_T));
+  for (i = 0; i < 6; i++) {
+    i1 = 6 * i + 2;
+    i2 = 6 * i + 4;
+    for (i3 = 0; i3 < 6; i3++) {
+      r = _mm_loadu_pd(&a[6 * i]);
+      r1 = _mm_set1_pd(radarTrack_pStateCovariance[b_iv[i3] + 6 * b_iv[i]]);
+      _mm_storeu_pd(&a[6 * i],
+                    _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3]), r1)));
+      r = _mm_loadu_pd(&a[i1]);
+      _mm_storeu_pd(
+          &a[i1],
+          _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3 + 2]), r1)));
+      r = _mm_loadu_pd(&a[i2]);
+      _mm_storeu_pd(
+          &a[i2],
+          _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3 + 4]), r1)));
+    }
+  }
+  memset(&b_a[0], 0, 36U * sizeof(real_T));
+  for (i = 0; i < 6; i++) {
+    i1 = 6 * i + 2;
+    i2 = 6 * i + 4;
+    for (i3 = 0; i3 < 6; i3++) {
+      __m128d r2;
+      r = _mm_loadu_pd(&a[6 * i3]);
+      r1 = _mm_loadu_pd(&b_a[6 * i]);
+      r2 = _mm_set1_pd(dv2[i3 + 6 * i]);
+      _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+      r = _mm_loadu_pd(&a[6 * i3 + 2]);
+      r1 = _mm_loadu_pd(&b_a[i1]);
+      _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+      r = _mm_loadu_pd(&a[6 * i3 + 4]);
+      r1 = _mm_loadu_pd(&b_a[i2]);
+      _mm_storeu_pd(&b_a[i2], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+    }
+  }
+  for (i = 0; i < 6; i++) {
+    for (i3 = 0; i3 < 6; i3++) {
+      centralTrack->pStateCovariance[i3 + 6 * i] =
+          b_a[b_iv1[i3] + 6 * b_iv1[i]];
+    }
+  }
+  /*  Set state and covariance of central track */
+  st.site = &eh_emlrtRSI;
+  b_st.site = &rc_emlrtRSI;
+  validateattributes(&b_st, centralTrack->pState);
+  st.site = &fh_emlrtRSI;
+  b_st.site = &sc_emlrtRSI;
+  b_validateattributes(&b_st, centralTrack->pStateCovariance);
+  b_st.site = &tc_emlrtRSI;
+  isSymmetricPositiveSemiDefinite(&b_st, centralTrack->pStateCovariance);
 }
 
-void c_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
+void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
                      uint32_T localTrack_BranchID,
                      uint32_T localTrack_SourceIndex, uint32_T localTrack_Age,
                      real_T localTrack_ObjectClassID,
@@ -1321,9 +1048,10 @@ void c_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
   real_T cosPhi;
   real_T sinLambda;
   real_T sinPhi;
+  real_T x0;
   real_T z0;
   int32_T i;
-  int32_T i2;
+  int32_T i3;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -1347,9 +1075,9 @@ void c_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     __m128d r;
     __m128d r1;
     real_T t;
-    real_T x0;
-    int32_T b_i;
     int32_T i1;
+    int32_T i2;
+    /*  Radar */
     st.site = &ah_emlrtRSI;
     /*  Initialize a track of the correct state size */
     /*  Force 'Integrated' for codegen consistency */
@@ -1372,14 +1100,14 @@ void c_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     centralTrack->SourceIndex = 1U;
     c_st.site = &jh_emlrtRSI;
     d_st.site = &qc_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     if (localTrack_pUpdateTime < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &e_st, &l_emlrtRTEI,
           "Coder:toolbox:ValidateattributesexpectedNonnegative",
           "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
     }
-    e_st.site = &fb_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     if (muDoubleScalarIsInf(localTrack_pUpdateTime) ||
         muDoubleScalarIsNaN(localTrack_pUpdateTime)) {
       emlrtErrorWithMessageIdR2018a(
@@ -1392,23 +1120,7 @@ void c_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     centralTrack->Age = localTrack_Age;
     c_st.site = &lh_emlrtRSI;
     d_st.site = &ig_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
-    if (localTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    e_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(localTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(localTrack_ObjectClassID) ==
-           localTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
+    c_validateattributes(&d_st, localTrack_ObjectClassID);
     centralTrack->ObjectClassID = localTrack_ObjectClassID;
     c_st.site = &mh_emlrtRSI;
     d_objectTrack_set_ObjectClassPr(&c_st, centralTrack,
@@ -1445,6 +1157,7 @@ void c_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     b_sind(&sinLambda);
     t = cosPhi * -localTrack_pState[4] - sinPhi * localTrack_pState[0];
     /*  Rotation matrix ECEF->NED (codegen-compatible) */
+    /*  Note dcmecef2ned not supported for codegen */
     /*  NED->ECEF velocity: v_ecef = R' * v_ned */
     memset(&velos[0], 0, 3U * sizeof(real_T));
     r = _mm_loadu_pd(&velos[0]);
@@ -1478,46 +1191,46 @@ void c_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     /*  Unpermute back to original interleaved format */
     memset(&a[0], 0, 36U * sizeof(real_T));
     for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
         r = _mm_loadu_pd(&a[6 * i]);
-        r1 = _mm_set1_pd(localTrack_pStateCovariance[b_iv[i2] + 6 * b_iv[i]]);
+        r1 = _mm_set1_pd(localTrack_pStateCovariance[b_iv[i3] + 6 * b_iv[i]]);
         _mm_storeu_pd(
             &a[6 * i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i2]), r1)));
-        r = _mm_loadu_pd(&a[b_i]);
-        _mm_storeu_pd(
-            &a[b_i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i2 + 2]), r1)));
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3]), r1)));
         r = _mm_loadu_pd(&a[i1]);
         _mm_storeu_pd(
             &a[i1],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i2 + 4]), r1)));
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3 + 2]), r1)));
+        r = _mm_loadu_pd(&a[i2]);
+        _mm_storeu_pd(
+            &a[i2],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3 + 4]), r1)));
       }
     }
     memset(&b_a[0], 0, 36U * sizeof(real_T));
     for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
         __m128d r2;
-        r = _mm_loadu_pd(&a[6 * i2]);
+        r = _mm_loadu_pd(&a[6 * i3]);
         r1 = _mm_loadu_pd(&b_a[6 * i]);
-        r2 = _mm_set1_pd(dv2[i2 + 6 * i]);
+        r2 = _mm_set1_pd(dv2[i3 + 6 * i]);
         _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 2]);
-        r1 = _mm_loadu_pd(&b_a[b_i]);
-        _mm_storeu_pd(&b_a[b_i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 4]);
+        r = _mm_loadu_pd(&a[6 * i3 + 2]);
         r1 = _mm_loadu_pd(&b_a[i1]);
         _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+        r = _mm_loadu_pd(&a[6 * i3 + 4]);
+        r1 = _mm_loadu_pd(&b_a[i2]);
+        _mm_storeu_pd(&b_a[i2], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
       }
     }
     for (i = 0; i < 6; i++) {
-      for (i2 = 0; i2 < 6; i2++) {
-        centralTrack->pStateCovariance[i2 + 6 * i] =
-            b_a[b_iv1[i2] + 6 * b_iv1[i]];
+      for (i3 = 0; i3 < 6; i3++) {
+        centralTrack->pStateCovariance[i3 + 6 * i] =
+            b_a[b_iv1[i3] + 6 * b_iv1[i]];
       }
     }
     /*  Set state and covariance of central track */
@@ -1529,73 +1242,169 @@ void c_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     b_validateattributes(&c_st, centralTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&c_st, centralTrack->pStateCovariance);
+    /* radar2central(localTrack); %Ned2ecefTrack(localTrack); % UPDATED */
   } else if (localTrack_SourceIndex == 2U) {
+    __m128d r;
+    __m128d r1;
+    real_T t;
+    real_T u;
+    int32_T i1;
+    int32_T i2;
+    /*  ADSB */
     st.site = &bh_emlrtRSI;
-    /*  Central space is identical to ADS-B local space → copy with right types
+    /*  A function to transform a track in the central state-space to a track in
      */
-    /*  Preserve TrackLogic from input struct */
-    /*  Copy scalar properties as double to keep codegen type-stable */
-    centralTrack->ObjectClassProbabilities = 1.0;
-    centralTrack->TrackID = localTrack_TrackID;
-    centralTrack->BranchID = localTrack_BranchID;
-    centralTrack->SourceIndex = 2U;
+    /*  the radar state-space. */
+    /*  Initialize a track of the correct state size */
+    /*  Force 'Integrated' for codegen consistency */
+    /*  Sync properties of radarTrack except State and StateCovariance with */
+    /*  radarTrack See syncTrack defined below. */
     b_st.site = &yh_emlrtRSI;
-    c_st.site = &qc_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
+    /*  Updated to comply with codegen (different from local code only in that
+     */
+    /*  we're casting values for consistency) */
+    /*  Copy scalars (cast to double/logical for objectTrack assignments) */
+    c_st.site = &gh_emlrtRSI;
+    centralTrack->ObjectClassProbabilities = 1.0;
+    d_st.site = &ph_emlrtRSI;
+    centralTrack->TrackID = localTrack_TrackID;
+    c_st.site = &hh_emlrtRSI;
+    d_st.site = &qh_emlrtRSI;
+    centralTrack->BranchID = localTrack_BranchID;
+    c_st.site = &ih_emlrtRSI;
+    d_st.site = &rh_emlrtRSI;
+    centralTrack->SourceIndex = 2U;
+    c_st.site = &jh_emlrtRSI;
+    d_st.site = &qc_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     if (localTrack_pUpdateTime < 0.0) {
       emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
+          &e_st, &l_emlrtRTEI,
           "Coder:toolbox:ValidateattributesexpectedNonnegative",
           "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
     }
-    d_st.site = &fb_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     if (muDoubleScalarIsInf(localTrack_pUpdateTime) ||
         muDoubleScalarIsNaN(localTrack_pUpdateTime)) {
       emlrtErrorWithMessageIdR2018a(
-          &d_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
+          &e_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
     centralTrack->pUpdateTime = localTrack_pUpdateTime;
+    c_st.site = &kh_emlrtRSI;
+    d_st.site = &sh_emlrtRSI;
     centralTrack->Age = localTrack_Age;
-    b_st.site = &ai_emlrtRSI;
-    c_st.site = &ig_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
-    if (localTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    d_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(localTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(localTrack_ObjectClassID) ==
-           localTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
+    c_st.site = &lh_emlrtRSI;
+    d_st.site = &ig_emlrtRSI;
+    c_validateattributes(&d_st, localTrack_ObjectClassID);
     centralTrack->ObjectClassID = localTrack_ObjectClassID;
-    /*  Skip TrackLogicState - fuser manages this */
-    /* centralTrack.TrackLogicState= double(adsbTrack.TrackLogicState); */
+    c_st.site = &mh_emlrtRSI;
+    d_objectTrack_set_ObjectClassPr(&c_st, centralTrack,
+                                    c_localTrack_ObjectClassProbabi);
+    /* dst.TrackLogic = src.TrackLogic; */
+    /*  Skip TrackLogicState - fuser manages this internally, and copying causes
+     * codegen size issues */
+    /* dst.TrackLogicState = double(src.TrackLogicState); */
     centralTrack->IsConfirmed = localTrack_IsConfirmed;
     centralTrack->IsCoasted = localTrack_IsCoasted;
     centralTrack->IsSelfReported = localTrack_IsSelfReported;
-    /*  States/covariances → ensure double */
+    /*  States / covariance */
+    c_st.site = &nh_emlrtRSI;
+    d_st.site = &rc_emlrtRSI;
+    validateattributes(&d_st, localTrack_pState);
+    c_st.site = &oh_emlrtRSI;
+    d_st.site = &sc_emlrtRSI;
+    b_validateattributes(&d_st, localTrack_pStateCovariance);
+    d_st.site = &tc_emlrtRSI;
+    isSymmetricPositiveSemiDefinite(&d_st, localTrack_pStateCovariance);
+    /*  Parameters and Attributes */
+    /*  Convert ECEF state to NED */
+    b_st.site = &ai_emlrtRSI;
+    c_st.site = &di_emlrtRSI;
+    d_st.site = &ei_emlrtRSI;
+    b_y0 = geodetic2ecefFormula(&d_st, &z0, &x0);
+    u = localTrack_pState[0] - b_y0;
+    t = localTrack_pState[2] - z0;
+    b_y0 = localTrack_pState[4] - x0;
+    z0 = 42.39423231362;
+    b_cosd(&z0);
+    x0 = 42.39423231362;
+    b_sind(&x0);
+    cosPhi = -70.95934958874;
+    b_cosd(&cosPhi);
+    sinPhi = -70.95934958874;
+    b_sind(&sinPhi);
+    cosLambda = cosPhi * u + sinPhi * t;
+    /*  ECEF->NED velocity via built-in */
+    sinLambda = cosPhi * localTrack_pState[1] + sinPhi * localTrack_pState[3];
+    centralTrack->pState[0] = -x0 * cosLambda + z0 * b_y0;
+    centralTrack->pState[1] = -x0 * sinLambda + z0 * localTrack_pState[5];
+    centralTrack->pState[2] = -sinPhi * u + cosPhi * t;
+    centralTrack->pState[3] =
+        -sinPhi * localTrack_pState[1] + cosPhi * localTrack_pState[3];
+    centralTrack->pState[4] = -(z0 * cosLambda + x0 * b_y0);
+    centralTrack->pState[5] = -(z0 * sinLambda + x0 * localTrack_pState[5]);
+    /*  Convert ECEF state COVARIANCE to NED state COVARIANCE */
+    /*  Rotation matrix ECEF->NED (codegen-compatible) */
+    /*  Note dcmecef2ned not supported for codegen */
+    /*  Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz] */
+    /*  Permute covariance matrix to group pos/vel */
+    /*  ECEF->NED covariance: P_ned = R * P_ecef * R' */
+    /*  Unpermute back to original interleaved format */
+    memset(&a[0], 0, 36U * sizeof(real_T));
+    for (i = 0; i < 6; i++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
+        r = _mm_loadu_pd(&a[6 * i]);
+        r1 = _mm_set1_pd(localTrack_pStateCovariance[b_iv[i3] + 6 * b_iv[i]]);
+        _mm_storeu_pd(
+            &a[6 * i],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3]), r1)));
+        r = _mm_loadu_pd(&a[i1]);
+        _mm_storeu_pd(
+            &a[i1],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3 + 2]), r1)));
+        r = _mm_loadu_pd(&a[i2]);
+        _mm_storeu_pd(
+            &a[i2],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3 + 4]), r1)));
+      }
+    }
+    memset(&b_a[0], 0, 36U * sizeof(real_T));
+    for (i = 0; i < 6; i++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
+        __m128d r2;
+        r = _mm_loadu_pd(&a[6 * i3]);
+        r1 = _mm_loadu_pd(&b_a[6 * i]);
+        r2 = _mm_set1_pd(dv1[i3 + 6 * i]);
+        _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+        r = _mm_loadu_pd(&a[6 * i3 + 2]);
+        r1 = _mm_loadu_pd(&b_a[i1]);
+        _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+        r = _mm_loadu_pd(&a[6 * i3 + 4]);
+        r1 = _mm_loadu_pd(&b_a[i2]);
+        _mm_storeu_pd(&b_a[i2], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+      }
+    }
+    for (i = 0; i < 6; i++) {
+      for (i3 = 0; i3 < 6; i3++) {
+        centralTrack->pStateCovariance[i3 + 6 * i] =
+            b_a[b_iv1[i3] + 6 * b_iv1[i]];
+      }
+    }
+    /*  Set state and covariance of radar track */
     b_st.site = &bi_emlrtRSI;
     c_st.site = &rc_emlrtRSI;
-    validateattributes(&c_st, localTrack_pState);
-    for (i = 0; i < 6; i++) {
-      centralTrack->pState[i] = localTrack_pState[i];
-    }
+    validateattributes(&c_st, centralTrack->pState);
     b_st.site = &ci_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
-    b_validateattributes(&c_st, localTrack_pStateCovariance);
+    b_validateattributes(&c_st, centralTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&c_st, localTrack_pStateCovariance);
-    memcpy(&centralTrack->pStateCovariance[0], &localTrack_pStateCovariance[0],
-           36U * sizeof(real_T));
+    isSymmetricPositiveSemiDefinite(&c_st, centralTrack->pStateCovariance);
+    /* adsb2central(localTrack); % UPDATED */
   }
 }
 
@@ -1603,14 +1412,13 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
                    uint32_T centralTrack_BranchID,
                    uint32_T centralTrack_SourceIndex, uint32_T centralTrack_Age,
                    real_T centralTrack_ObjectClassID,
-                   const real_T c_centralTrack_ObjectClassProba[],
-                   const int32_T d_centralTrack_ObjectClassProba[2],
+                   real_T c_centralTrack_ObjectClassProba,
                    boolean_T centralTrack_IsConfirmed,
                    boolean_T centralTrack_IsCoasted,
                    boolean_T centralTrack_IsSelfReported,
                    const real_T centralTrack_pState[6],
                    const real_T centralTrack_pStateCovariance[36],
-                   real_T centralTrack_pUpdateTime, b_objectTrack *localTrack)
+                   real_T centralTrack_pUpdateTime, objectTrack *localTrack)
 {
   static const int8_T b_iv[6] = {0, 2, 4, 1, 3, 5};
   static const int8_T b_iv1[6] = {0, 3, 1, 4, 2, 5};
@@ -1621,12 +1429,16 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
   emlrtStack st;
   real_T a[36];
   real_T b_a[36];
+  real_T velos[3];
+  real_T b_t;
   real_T b_y0;
-  real_T cosLambda_tmp;
-  real_T sinLambda_tmp;
+  real_T c_t;
+  real_T cosPhi;
+  real_T sinPhi;
+  real_T x0;
   real_T z0;
   int32_T i;
-  int32_T i2;
+  int32_T i3;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -1638,23 +1450,21 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
   /*  Pre-define output with longest TrackLogic to force codegen consistency */
-  localTrack->TrackID = b_objectTrack_objectTrack(
+  localTrack->TrackID = objectTrack_objectTrack(
       &localTrack->BranchID, &localTrack->SourceIndex, &localTrack->Age,
-      &localTrack->ObjectClassID, localTrack->ObjectClassProbabilities.data,
-      localTrack->ObjectClassProbabilities.size, &localTrack->IsConfirmed,
-      &localTrack->IsCoasted, &localTrack->IsSelfReported, localTrack->pState,
+      &localTrack->ObjectClassID, &localTrack->ObjectClassProbabilities,
+      &localTrack->IsConfirmed, &localTrack->IsCoasted,
+      &localTrack->IsSelfReported, localTrack->pState,
       localTrack->pStateCovariance, &localTrack->pUpdateTime);
   if (centralTrack_SourceIndex == 1U) {
     __m128d r;
     __m128d r1;
-    real_T b_t;
     real_T t;
     real_T u;
-    real_T v;
-    real_T x0;
-    int32_T b_i;
     int32_T i1;
-    st.site = &di_emlrtRSI;
+    int32_T i2;
+    /*  Radar */
+    st.site = &fi_emlrtRSI;
     /*  A function to transform a track in the central state-space to a track in
      */
     /*  the radar state-space. */
@@ -1662,19 +1472,15 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     /*  Force 'Integrated' for codegen consistency */
     /*  Sync properties of radarTrack except State and StateCovariance with */
     /*  radarTrack See syncTrack defined below. */
-    b_st.site = &fi_emlrtRSI;
+    b_st.site = &yh_emlrtRSI;
     /*  Updated to comply with codegen (different from local code only in that
      */
     /*  we're casting values for consistency) */
     /*  Copy scalars (cast to double/logical for objectTrack assignments) */
     c_st.site = &gh_emlrtRSI;
-    localTrack->TrackID = objectTrack_set_TrackID(
-        &c_st, centralTrack_TrackID, &localTrack->BranchID,
-        &localTrack->SourceIndex, &localTrack->Age, &localTrack->ObjectClassID,
-        localTrack->ObjectClassProbabilities.data,
-        localTrack->ObjectClassProbabilities.size, &localTrack->IsConfirmed,
-        &localTrack->IsCoasted, &localTrack->IsSelfReported, localTrack->pState,
-        localTrack->pStateCovariance, &localTrack->pUpdateTime);
+    localTrack->ObjectClassProbabilities = 1.0;
+    d_st.site = &ph_emlrtRSI;
+    localTrack->TrackID = centralTrack_TrackID;
     c_st.site = &hh_emlrtRSI;
     d_st.site = &qh_emlrtRSI;
     localTrack->BranchID = centralTrack_BranchID;
@@ -1683,14 +1489,14 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     localTrack->SourceIndex = 1U;
     c_st.site = &jh_emlrtRSI;
     d_st.site = &qc_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     if (centralTrack_pUpdateTime < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &e_st, &l_emlrtRTEI,
           "Coder:toolbox:ValidateattributesexpectedNonnegative",
           "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
     }
-    e_st.site = &fb_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     if (muDoubleScalarIsInf(centralTrack_pUpdateTime) ||
         muDoubleScalarIsNaN(centralTrack_pUpdateTime)) {
       emlrtErrorWithMessageIdR2018a(
@@ -1703,28 +1509,11 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     localTrack->Age = centralTrack_Age;
     c_st.site = &lh_emlrtRSI;
     d_st.site = &ig_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
-    if (centralTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    e_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(centralTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(centralTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(centralTrack_ObjectClassID) ==
-           centralTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
+    c_validateattributes(&d_st, centralTrack_ObjectClassID);
     localTrack->ObjectClassID = centralTrack_ObjectClassID;
     c_st.site = &mh_emlrtRSI;
-    c_objectTrack_set_ObjectClassPr(&c_st, localTrack,
-                                    c_centralTrack_ObjectClassProba,
-                                    d_centralTrack_ObjectClassProba);
+    d_objectTrack_set_ObjectClassPr(&c_st, localTrack,
+                                    c_centralTrack_ObjectClassProba);
     /* dst.TrackLogic = src.TrackLogic; */
     /*  Skip TrackLogicState - fuser manages this internally, and copying causes
      * codegen size issues */
@@ -1743,160 +1532,265 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     isSymmetricPositiveSemiDefinite(&d_st, centralTrack_pStateCovariance);
     /*  Parameters and Attributes */
     /*  Convert ECEF state to NED */
-    b_st.site = &gi_emlrtRSI;
-    c_st.site = &ji_emlrtRSI;
-    d_st.site = &ki_emlrtRSI;
+    b_st.site = &ai_emlrtRSI;
+    c_st.site = &di_emlrtRSI;
+    d_st.site = &ei_emlrtRSI;
     x0 = geodetic2ecefFormula(&d_st, &b_y0, &z0);
     u = centralTrack_pState[0] - x0;
-    v = centralTrack_pState[2] - b_y0;
+    t = centralTrack_pState[2] - b_y0;
     x0 = centralTrack_pState[4] - z0;
     b_y0 = 42.39423231362;
     b_cosd(&b_y0);
     z0 = 42.39423231362;
     b_sind(&z0);
-    cosLambda_tmp = -70.95934958874;
-    b_cosd(&cosLambda_tmp);
-    sinLambda_tmp = -70.95934958874;
-    b_sind(&sinLambda_tmp);
-    t = cosLambda_tmp * u + sinLambda_tmp * v;
+    cosPhi = -70.95934958874;
+    b_cosd(&cosPhi);
+    sinPhi = -70.95934958874;
+    b_sind(&sinPhi);
+    b_t = cosPhi * u + sinPhi * t;
     /*  ECEF->NED velocity via built-in */
-    b_t = cosLambda_tmp * centralTrack_pState[1] +
-          sinLambda_tmp * centralTrack_pState[3];
-    localTrack->pState[0] = -z0 * t + b_y0 * x0;
-    localTrack->pState[1] = -z0 * b_t + b_y0 * centralTrack_pState[5];
-    localTrack->pState[2] = -sinLambda_tmp * u + cosLambda_tmp * v;
-    localTrack->pState[3] = -sinLambda_tmp * centralTrack_pState[1] +
-                            cosLambda_tmp * centralTrack_pState[3];
-    localTrack->pState[4] = -(b_y0 * t + z0 * x0);
-    localTrack->pState[5] = -(b_y0 * b_t + z0 * centralTrack_pState[5]);
+    c_t = cosPhi * centralTrack_pState[1] + sinPhi * centralTrack_pState[3];
+    localTrack->pState[0] = -z0 * b_t + b_y0 * x0;
+    localTrack->pState[1] = -z0 * c_t + b_y0 * centralTrack_pState[5];
+    localTrack->pState[2] = -sinPhi * u + cosPhi * t;
+    localTrack->pState[3] =
+        -sinPhi * centralTrack_pState[1] + cosPhi * centralTrack_pState[3];
+    localTrack->pState[4] = -(b_y0 * b_t + z0 * x0);
+    localTrack->pState[5] = -(b_y0 * c_t + z0 * centralTrack_pState[5]);
     /*  Convert ECEF state COVARIANCE to NED state COVARIANCE */
     /*  Rotation matrix ECEF->NED (codegen-compatible) */
+    /*  Note dcmecef2ned not supported for codegen */
     /*  Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz] */
     /*  Permute covariance matrix to group pos/vel */
     /*  ECEF->NED covariance: P_ned = R * P_ecef * R' */
     /*  Unpermute back to original interleaved format */
     memset(&a[0], 0, 36U * sizeof(real_T));
     for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
         r = _mm_loadu_pd(&a[6 * i]);
-        r1 = _mm_set1_pd(centralTrack_pStateCovariance[b_iv[i2] + 6 * b_iv[i]]);
+        r1 = _mm_set1_pd(centralTrack_pStateCovariance[b_iv[i3] + 6 * b_iv[i]]);
         _mm_storeu_pd(
             &a[6 * i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i2]), r1)));
-        r = _mm_loadu_pd(&a[b_i]);
-        _mm_storeu_pd(
-            &a[b_i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i2 + 2]), r1)));
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3]), r1)));
         r = _mm_loadu_pd(&a[i1]);
         _mm_storeu_pd(
             &a[i1],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i2 + 4]), r1)));
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3 + 2]), r1)));
+        r = _mm_loadu_pd(&a[i2]);
+        _mm_storeu_pd(
+            &a[i2],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3 + 4]), r1)));
       }
     }
     memset(&b_a[0], 0, 36U * sizeof(real_T));
     for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
         __m128d r2;
-        r = _mm_loadu_pd(&a[6 * i2]);
+        r = _mm_loadu_pd(&a[6 * i3]);
         r1 = _mm_loadu_pd(&b_a[6 * i]);
-        r2 = _mm_set1_pd(dv1[i2 + 6 * i]);
+        r2 = _mm_set1_pd(dv1[i3 + 6 * i]);
         _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 2]);
-        r1 = _mm_loadu_pd(&b_a[b_i]);
-        _mm_storeu_pd(&b_a[b_i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 4]);
+        r = _mm_loadu_pd(&a[6 * i3 + 2]);
         r1 = _mm_loadu_pd(&b_a[i1]);
         _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+        r = _mm_loadu_pd(&a[6 * i3 + 4]);
+        r1 = _mm_loadu_pd(&b_a[i2]);
+        _mm_storeu_pd(&b_a[i2], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
       }
     }
     for (i = 0; i < 6; i++) {
-      for (i2 = 0; i2 < 6; i2++) {
-        localTrack->pStateCovariance[i2 + 6 * i] =
-            b_a[b_iv1[i2] + 6 * b_iv1[i]];
+      for (i3 = 0; i3 < 6; i3++) {
+        localTrack->pStateCovariance[i3 + 6 * i] =
+            b_a[b_iv1[i3] + 6 * b_iv1[i]];
       }
     }
     /*  Set state and covariance of radar track */
-    b_st.site = &hi_emlrtRSI;
+    b_st.site = &bi_emlrtRSI;
     c_st.site = &rc_emlrtRSI;
     validateattributes(&c_st, localTrack->pState);
-    b_st.site = &ii_emlrtRSI;
+    b_st.site = &ci_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
     b_validateattributes(&c_st, localTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&c_st, localTrack->pStateCovariance);
+    /*  central2radar(centralTrack); %Ecef2nedTrack(centralTrack); % UPDATED */
   } else if (centralTrack_SourceIndex == 2U) {
-    st.site = &ei_emlrtRSI;
-    /*  Same layout → copy back */
-    /*  Preserve TrackLogic from input */
-    localTrack->TrackID = b_objectTrack_set_TrackID(
-        centralTrack_TrackID, &localTrack->BranchID, &localTrack->SourceIndex,
-        &localTrack->Age, &localTrack->ObjectClassID,
-        localTrack->ObjectClassProbabilities.data,
-        localTrack->ObjectClassProbabilities.size, &localTrack->IsConfirmed,
-        &localTrack->IsCoasted, &localTrack->IsSelfReported, localTrack->pState,
-        localTrack->pStateCovariance, &localTrack->pUpdateTime);
+    __m128d r;
+    __m128d r1;
+    real_T t;
+    int32_T i1;
+    int32_T i2;
+    /*  ADSB */
+    st.site = &gi_emlrtRSI;
+    /*  Initialize a track of the correct state size */
+    /*  Force 'Integrated' for codegen consistency */
+    /*  Sync properties of radarTrack except State and StateCovariance with */
+    /*  radarTrack See syncTrack defined below. */
+    b_st.site = &ch_emlrtRSI;
+    /*  Updated to comply with codegen (different from local code only in that
+     */
+    /*  we're casting values for consistency) */
+    /*  Copy scalars (cast to double/logical for objectTrack assignments) */
+    c_st.site = &gh_emlrtRSI;
+    localTrack->ObjectClassProbabilities = 1.0;
+    d_st.site = &ph_emlrtRSI;
+    localTrack->TrackID = centralTrack_TrackID;
+    c_st.site = &hh_emlrtRSI;
+    d_st.site = &qh_emlrtRSI;
     localTrack->BranchID = centralTrack_BranchID;
+    c_st.site = &ih_emlrtRSI;
+    d_st.site = &rh_emlrtRSI;
     localTrack->SourceIndex = 2U;
-    b_st.site = &li_emlrtRSI;
-    c_st.site = &qc_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
+    c_st.site = &jh_emlrtRSI;
+    d_st.site = &qc_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     if (centralTrack_pUpdateTime < 0.0) {
       emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
+          &e_st, &l_emlrtRTEI,
           "Coder:toolbox:ValidateattributesexpectedNonnegative",
           "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
     }
-    d_st.site = &fb_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
     if (muDoubleScalarIsInf(centralTrack_pUpdateTime) ||
         muDoubleScalarIsNaN(centralTrack_pUpdateTime)) {
       emlrtErrorWithMessageIdR2018a(
-          &d_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
+          &e_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
     localTrack->pUpdateTime = centralTrack_pUpdateTime;
+    c_st.site = &kh_emlrtRSI;
+    d_st.site = &sh_emlrtRSI;
     localTrack->Age = centralTrack_Age;
-    b_st.site = &mi_emlrtRSI;
-    c_st.site = &ig_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
-    if (centralTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    d_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(centralTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(centralTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(centralTrack_ObjectClassID) ==
-           centralTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
+    c_st.site = &lh_emlrtRSI;
+    d_st.site = &ig_emlrtRSI;
+    c_validateattributes(&d_st, centralTrack_ObjectClassID);
     localTrack->ObjectClassID = centralTrack_ObjectClassID;
-    /*  Skip TrackLogicState - fuser manages this */
-    /* adsbTrack.TrackLogicState= double(centralTrack.TrackLogicState); */
+    c_st.site = &mh_emlrtRSI;
+    d_objectTrack_set_ObjectClassPr(&c_st, localTrack,
+                                    c_centralTrack_ObjectClassProba);
+    /* dst.TrackLogic = src.TrackLogic; */
+    /*  Skip TrackLogicState - fuser manages this internally, and copying causes
+     * codegen size issues */
+    /* dst.TrackLogicState = double(src.TrackLogicState); */
     localTrack->IsConfirmed = centralTrack_IsConfirmed;
     localTrack->IsCoasted = centralTrack_IsCoasted;
     localTrack->IsSelfReported = centralTrack_IsSelfReported;
-    b_st.site = &ni_emlrtRSI;
-    c_st.site = &rc_emlrtRSI;
-    validateattributes(&c_st, centralTrack_pState);
+    /*  States / covariance */
+    c_st.site = &nh_emlrtRSI;
+    d_st.site = &rc_emlrtRSI;
+    validateattributes(&d_st, centralTrack_pState);
+    c_st.site = &oh_emlrtRSI;
+    d_st.site = &sc_emlrtRSI;
+    b_validateattributes(&d_st, centralTrack_pStateCovariance);
+    d_st.site = &tc_emlrtRSI;
+    isSymmetricPositiveSemiDefinite(&d_st, centralTrack_pStateCovariance);
+    /*  Parameters and Attributes */
+    /*  Convert NED state to ECEF state */
+    b_st.site = &dh_emlrtRSI;
+    c_st.site = &th_emlrtRSI;
+    d_st.site = &uh_emlrtRSI;
+    z0 = geodetic2ecefFormula(&d_st, &x0, &b_y0);
+    cosPhi = 42.39423231362;
+    b_cosd(&cosPhi);
+    sinPhi = 42.39423231362;
+    b_sind(&sinPhi);
+    b_t = -70.95934958874;
+    b_cosd(&b_t);
+    c_t = -70.95934958874;
+    b_sind(&c_t);
+    t = cosPhi * -centralTrack_pState[4] - sinPhi * centralTrack_pState[0];
+    /*  Rotation matrix ECEF->NED (codegen-compatible) */
+    /*  Note dcmecef2ned not supported for codegen */
+    /*  NED->ECEF velocity: v_ecef = R' * v_ned */
+    memset(&velos[0], 0, 3U * sizeof(real_T));
+    r = _mm_loadu_pd(&velos[0]);
+    _mm_storeu_pd(
+        &velos[0],
+        _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[0]),
+                                 _mm_set1_pd(centralTrack_pState[1]))));
+    velos[2] += 0.7385232156133259 * centralTrack_pState[1];
+    r = _mm_loadu_pd(&velos[0]);
+    _mm_storeu_pd(
+        &velos[0],
+        _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[3]),
+                                 _mm_set1_pd(centralTrack_pState[3]))));
+    velos[2] += 0.0 * centralTrack_pState[3];
+    r = _mm_loadu_pd(&velos[0]);
+    _mm_storeu_pd(
+        &velos[0],
+        _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[6]),
+                                 _mm_set1_pd(centralTrack_pState[5]))));
+    velos[2] += -0.67422804747366671 * centralTrack_pState[5];
+    localTrack->pState[0] = z0 + (b_t * t - c_t * centralTrack_pState[2]);
+    localTrack->pState[1] = velos[0];
+    localTrack->pState[2] = x0 + (c_t * t + b_t * centralTrack_pState[2]);
+    localTrack->pState[3] = velos[1];
+    localTrack->pState[4] = b_y0 + (sinPhi * -centralTrack_pState[4] +
+                                    cosPhi * centralTrack_pState[0]);
+    localTrack->pState[5] = velos[2];
+    /*  Convert NED state COVARIANCE to ECEF state COVARIANCE */
+    /*  Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz] */
+    /*  Permute covariance matrix to group pos/vel */
+    /*  NED->ECEF covariance: P_ecef = R' * P_ned * R */
+    /*  Unpermute back to original interleaved format */
+    memset(&a[0], 0, 36U * sizeof(real_T));
     for (i = 0; i < 6; i++) {
-      localTrack->pState[i] = centralTrack_pState[i];
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
+        r = _mm_loadu_pd(&a[6 * i]);
+        r1 = _mm_set1_pd(centralTrack_pStateCovariance[b_iv[i3] + 6 * b_iv[i]]);
+        _mm_storeu_pd(
+            &a[6 * i],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3]), r1)));
+        r = _mm_loadu_pd(&a[i1]);
+        _mm_storeu_pd(
+            &a[i1],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3 + 2]), r1)));
+        r = _mm_loadu_pd(&a[i2]);
+        _mm_storeu_pd(
+            &a[i2],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3 + 4]), r1)));
+      }
     }
-    b_st.site = &oi_emlrtRSI;
+    memset(&b_a[0], 0, 36U * sizeof(real_T));
+    for (i = 0; i < 6; i++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
+        __m128d r2;
+        r = _mm_loadu_pd(&a[6 * i3]);
+        r1 = _mm_loadu_pd(&b_a[6 * i]);
+        r2 = _mm_set1_pd(dv2[i3 + 6 * i]);
+        _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+        r = _mm_loadu_pd(&a[6 * i3 + 2]);
+        r1 = _mm_loadu_pd(&b_a[i1]);
+        _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+        r = _mm_loadu_pd(&a[6 * i3 + 4]);
+        r1 = _mm_loadu_pd(&b_a[i2]);
+        _mm_storeu_pd(&b_a[i2], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+      }
+    }
+    for (i = 0; i < 6; i++) {
+      for (i3 = 0; i3 < 6; i3++) {
+        localTrack->pStateCovariance[i3 + 6 * i] =
+            b_a[b_iv1[i3] + 6 * b_iv1[i]];
+      }
+    }
+    /*  Set state and covariance of central track */
+    b_st.site = &eh_emlrtRSI;
+    c_st.site = &rc_emlrtRSI;
+    validateattributes(&c_st, localTrack->pState);
+    b_st.site = &fh_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
-    b_validateattributes(&c_st, centralTrack_pStateCovariance);
+    b_validateattributes(&c_st, localTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&c_st, centralTrack_pStateCovariance);
-    memcpy(&localTrack->pStateCovariance[0], &centralTrack_pStateCovariance[0],
-           36U * sizeof(real_T));
+    isSymmetricPositiveSemiDefinite(&c_st, localTrack->pStateCovariance);
+    /* central2adsb(centralTrack); % UPDATED */
   }
 }
 
@@ -1918,7 +1812,8 @@ void fusionAlgorithm(const emlrtStack *sp, const emxArray_struct0_T *tracks,
                      int32_T fusedTracks_size[1])
 {
   static fuserSourceConfiguration gobj_1[2];
-  static const int8_T b_iv[9] = {1, 0, 0, 0, 1, 0, 0, 0, 1};
+  static const real_T varargin_6[9] = {33.3333, 0.0, 0.0, 0.0,   33.3333,
+                                       0.0,     0.0, 0.0, 0.3333};
   emlrtStack b_st;
   emlrtStack c_st;
   emlrtStack d_st;
@@ -1995,33 +1890,37 @@ void fusionAlgorithm(const emlrtStack *sp, const emxArray_struct0_T *tracks,
      * this */
     st.site = &c_emlrtRSI;
     obj = &fuser;
-    b_st.site = &r_emlrtRSI;
-    for (i = 0; i < 9; i++) {
-      fuser.ProcessNoise[i] = b_iv[i];
-    }
+    b_st.site = &s_emlrtRSI;
     c_st.site = &m_emlrtRSI;
     d_st.site = &n_emlrtRSI;
     e_st.site = &o_emlrtRSI;
     d_st.site = &n_emlrtRSI;
     e_st.site = &p_emlrtRSI;
     fuser.isInitialized = 0;
-    b_st.site = &r_emlrtRSI;
+    b_st.site = &s_emlrtRSI;
     c_st.site = &q_emlrtRSI;
-    b_st.site = &t_emlrtRSI;
-    c_st.site = &u_emlrtRSI;
-    d_st.site = &v_emlrtRSI;
-    e_st.site = &w_emlrtRSI;
+    b_st.site = &u_emlrtRSI;
+    c_st.site = &v_emlrtRSI;
+    d_st.site = &w_emlrtRSI;
+    e_st.site = &x_emlrtRSI;
     f_st.site = &o_emlrtRSI;
     flag = (fuser.isInitialized == 1);
     if (flag) {
       fuser.TunablePropsChanged = true;
     }
-    e_st.site = &w_emlrtRSI;
-    f_st.site = &x_emlrtRSI;
-    g_st.site = &ab_emlrtRSI;
+    memcpy(&fuser.ProcessNoise[0], &varargin_6[0], 9U * sizeof(real_T));
+    e_st.site = &x_emlrtRSI;
+    f_st.site = &o_emlrtRSI;
+    flag = (fuser.isInitialized == 1);
+    if (flag) {
+      fuser.TunablePropsChanged = true;
+    }
+    e_st.site = &x_emlrtRSI;
+    f_st.site = &y_emlrtRSI;
+    g_st.site = &bb_emlrtRSI;
     obj->pSourceConfigurations[0] = fuserSourceConfiguration_clone(
         &g_st, &gobj_1[0], &fuser.coder_buffer_pobj1[0]);
-    g_st.site = &ab_emlrtRSI;
+    g_st.site = &bb_emlrtRSI;
     obj->pSourceConfigurations[1] = fuserSourceConfiguration_clone(
         &g_st, &gobj_1[0], &fuser.coder_buffer_pobj1[1]);
     fuser.pSourceConfigurations[0] = &gobj_1[0];
@@ -2053,7 +1952,7 @@ void fusionAlgorithm(const emlrtStack *sp, const emxArray_struct0_T *tracks,
       }
       loop_ub = (int32_T)d;
     }
-    g_st.site = &y_emlrtRSI;
+    g_st.site = &ab_emlrtRSI;
     ids_size[0] = 1;
     ids_size[1] = loop_ub;
     if (loop_ub - 1 >= 0) {
@@ -2065,7 +1964,7 @@ void fusionAlgorithm(const emlrtStack *sp, const emxArray_struct0_T *tracks,
     b_ids_data.numDimensions = 2;
     b_ids_data.canFreeData = false;
     emxInit_real_T(&g_st, &r, 2, &mc_emlrtRTEI);
-    h_st.site = &hb_emlrtRSI;
+    h_st.site = &ib_emlrtRSI;
     unique_vector(&h_st, &b_ids_data, r);
     if (loop_ub != r->size[1]) {
       emlrtErrorWithMessageIdR2018a(
@@ -2077,14 +1976,14 @@ void fusionAlgorithm(const emlrtStack *sp, const emxArray_struct0_T *tracks,
     fuser.pSourceConfigIDs[1] = ids[1];
     fuser.pIsValidSource[0] = false;
     fuser.pIsValidSource[1] = false;
-    b_st.site = &s_emlrtRSI;
+    b_st.site = &t_emlrtRSI;
     c_st.site = &o_emlrtRSI;
     flag = (fuser.isInitialized == 1);
     if (flag) {
       fuser.TunablePropsChanged = true;
     }
-    b_st.site = &s_emlrtRSI;
-    c_st.site = &x_emlrtRSI;
+    b_st.site = &t_emlrtRSI;
+    c_st.site = &y_emlrtRSI;
     fuser.pSourceConfigurations[0] = &gobj_1[0];
     fuser.pSourceConfigurations[1] = &gobj_1[1];
     fuser.pNumUsedConfigs = 2.0;
@@ -2114,7 +2013,7 @@ void fusionAlgorithm(const emlrtStack *sp, const emxArray_struct0_T *tracks,
       }
       loop_ub = (int32_T)d;
     }
-    d_st.site = &y_emlrtRSI;
+    d_st.site = &ab_emlrtRSI;
     ids_size[0] = 1;
     ids_size[1] = loop_ub;
     if (loop_ub - 1 >= 0) {
@@ -2125,7 +2024,7 @@ void fusionAlgorithm(const emlrtStack *sp, const emxArray_struct0_T *tracks,
     b_ids_data.allocatedSize = 2;
     b_ids_data.numDimensions = 2;
     b_ids_data.canFreeData = false;
-    e_st.site = &hb_emlrtRSI;
+    e_st.site = &ib_emlrtRSI;
     unique_vector(&e_st, &b_ids_data, r);
     if (loop_ub != r->size[1]) {
       emlrtErrorWithMessageIdR2018a(
@@ -2182,16 +2081,17 @@ void fusionAlgorithm_new(void)
 
 void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
                    uint32_T localTrack_BranchID,
-                   uint32_T localTrack_SourceIndex, uint32_T localTrack_Age,
+                   uint32_T localTrack_SourceIndex,
+                   real_T localTrack_UpdateTime, uint32_T localTrack_Age,
+                   const real_T localTrack_State[6],
+                   const real_T localTrack_StateCovariance[36],
                    real_T localTrack_ObjectClassID,
                    const real_T c_localTrack_ObjectClassProbabi[],
                    const int32_T d_localTrack_ObjectClassProbabi[2],
                    boolean_T localTrack_IsConfirmed,
                    boolean_T localTrack_IsCoasted,
                    boolean_T localTrack_IsSelfReported,
-                   const real_T localTrack_pState[6],
-                   const real_T localTrack_pStateCovariance[36],
-                   real_T localTrack_pUpdateTime, b_objectTrack *centralTrack)
+                   b_objectTrack *centralTrack)
 {
   static const int8_T b_iv[6] = {0, 2, 4, 1, 3, 5};
   static const int8_T b_iv1[6] = {0, 3, 1, 4, 2, 5};
@@ -2208,9 +2108,10 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
   real_T cosPhi;
   real_T sinLambda;
   real_T sinPhi;
+  real_T x0;
   real_T z0;
   int32_T i;
-  int32_T i2;
+  int32_T i3;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -2235,9 +2136,9 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     __m128d r;
     __m128d r1;
     real_T t;
-    real_T x0;
-    int32_T b_i;
     int32_T i1;
+    int32_T i2;
+    /*  Radar */
     st.site = &ah_emlrtRSI;
     /*  Initialize a track of the correct state size */
     /*  Force 'Integrated' for codegen consistency */
@@ -2266,43 +2167,27 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     centralTrack->SourceIndex = 1U;
     c_st.site = &jh_emlrtRSI;
     d_st.site = &qc_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
-    if (localTrack_pUpdateTime < 0.0) {
+    e_st.site = &gb_emlrtRSI;
+    if (localTrack_UpdateTime < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &e_st, &l_emlrtRTEI,
           "Coder:toolbox:ValidateattributesexpectedNonnegative",
           "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
     }
-    e_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_pUpdateTime) ||
-        muDoubleScalarIsNaN(localTrack_pUpdateTime)) {
+    e_st.site = &gb_emlrtRSI;
+    if (muDoubleScalarIsInf(localTrack_UpdateTime) ||
+        muDoubleScalarIsNaN(localTrack_UpdateTime)) {
       emlrtErrorWithMessageIdR2018a(
           &e_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
-    centralTrack->pUpdateTime = localTrack_pUpdateTime;
+    centralTrack->pUpdateTime = localTrack_UpdateTime;
     c_st.site = &kh_emlrtRSI;
     d_st.site = &sh_emlrtRSI;
     centralTrack->Age = localTrack_Age;
     c_st.site = &lh_emlrtRSI;
     d_st.site = &ig_emlrtRSI;
-    e_st.site = &fb_emlrtRSI;
-    if (localTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    e_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(localTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(localTrack_ObjectClassID) ==
-           localTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &e_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
+    c_validateattributes(&d_st, localTrack_ObjectClassID);
     centralTrack->ObjectClassID = localTrack_ObjectClassID;
     c_st.site = &mh_emlrtRSI;
     c_objectTrack_set_ObjectClassPr(&c_st, centralTrack,
@@ -2318,12 +2203,12 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     /*  States / covariance */
     c_st.site = &nh_emlrtRSI;
     d_st.site = &rc_emlrtRSI;
-    validateattributes(&d_st, localTrack_pState);
+    validateattributes(&d_st, localTrack_State);
     c_st.site = &oh_emlrtRSI;
     d_st.site = &sc_emlrtRSI;
-    b_validateattributes(&d_st, localTrack_pStateCovariance);
+    b_validateattributes(&d_st, localTrack_StateCovariance);
     d_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&d_st, localTrack_pStateCovariance);
+    isSymmetricPositiveSemiDefinite(&d_st, localTrack_StateCovariance);
     /*  Parameters and Attributes */
     /*  Convert NED state to ECEF state */
     b_st.site = &dh_emlrtRSI;
@@ -2338,33 +2223,34 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     b_cosd(&cosLambda);
     sinLambda = -70.95934958874;
     b_sind(&sinLambda);
-    t = cosPhi * -localTrack_pState[4] - sinPhi * localTrack_pState[0];
+    t = cosPhi * -localTrack_State[4] - sinPhi * localTrack_State[0];
     /*  Rotation matrix ECEF->NED (codegen-compatible) */
+    /*  Note dcmecef2ned not supported for codegen */
     /*  NED->ECEF velocity: v_ecef = R' * v_ned */
     memset(&velos[0], 0, 3U * sizeof(real_T));
     r = _mm_loadu_pd(&velos[0]);
     _mm_storeu_pd(&velos[0],
                   _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[0]),
-                                           _mm_set1_pd(localTrack_pState[1]))));
-    velos[2] += 0.7385232156133259 * localTrack_pState[1];
+                                           _mm_set1_pd(localTrack_State[1]))));
+    velos[2] += 0.7385232156133259 * localTrack_State[1];
     r = _mm_loadu_pd(&velos[0]);
     _mm_storeu_pd(&velos[0],
                   _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[3]),
-                                           _mm_set1_pd(localTrack_pState[3]))));
-    velos[2] += 0.0 * localTrack_pState[3];
+                                           _mm_set1_pd(localTrack_State[3]))));
+    velos[2] += 0.0 * localTrack_State[3];
     r = _mm_loadu_pd(&velos[0]);
     _mm_storeu_pd(&velos[0],
                   _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv[6]),
-                                           _mm_set1_pd(localTrack_pState[5]))));
-    velos[2] += -0.67422804747366671 * localTrack_pState[5];
+                                           _mm_set1_pd(localTrack_State[5]))));
+    velos[2] += -0.67422804747366671 * localTrack_State[5];
     centralTrack->pState[0] =
-        x0 + (cosLambda * t - sinLambda * localTrack_pState[2]);
+        x0 + (cosLambda * t - sinLambda * localTrack_State[2]);
     centralTrack->pState[1] = velos[0];
     centralTrack->pState[2] =
-        b_y0 + (sinLambda * t + cosLambda * localTrack_pState[2]);
+        b_y0 + (sinLambda * t + cosLambda * localTrack_State[2]);
     centralTrack->pState[3] = velos[1];
     centralTrack->pState[4] =
-        z0 + (sinPhi * -localTrack_pState[4] + cosPhi * localTrack_pState[0]);
+        z0 + (sinPhi * -localTrack_State[4] + cosPhi * localTrack_State[0]);
     centralTrack->pState[5] = velos[2];
     /*  Convert NED state COVARIANCE to ECEF state COVARIANCE */
     /*  Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz] */
@@ -2373,46 +2259,46 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     /*  Unpermute back to original interleaved format */
     memset(&a[0], 0, 36U * sizeof(real_T));
     for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
         r = _mm_loadu_pd(&a[6 * i]);
-        r1 = _mm_set1_pd(localTrack_pStateCovariance[b_iv[i2] + 6 * b_iv[i]]);
+        r1 = _mm_set1_pd(localTrack_StateCovariance[b_iv[i3] + 6 * b_iv[i]]);
         _mm_storeu_pd(
             &a[6 * i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i2]), r1)));
-        r = _mm_loadu_pd(&a[b_i]);
-        _mm_storeu_pd(
-            &a[b_i],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i2 + 2]), r1)));
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3]), r1)));
         r = _mm_loadu_pd(&a[i1]);
         _mm_storeu_pd(
             &a[i1],
-            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i2 + 4]), r1)));
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3 + 2]), r1)));
+        r = _mm_loadu_pd(&a[i2]);
+        _mm_storeu_pd(
+            &a[i2],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv1[6 * i3 + 4]), r1)));
       }
     }
     memset(&b_a[0], 0, 36U * sizeof(real_T));
     for (i = 0; i < 6; i++) {
-      b_i = 6 * i + 2;
-      i1 = 6 * i + 4;
-      for (i2 = 0; i2 < 6; i2++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
         __m128d r2;
-        r = _mm_loadu_pd(&a[6 * i2]);
+        r = _mm_loadu_pd(&a[6 * i3]);
         r1 = _mm_loadu_pd(&b_a[6 * i]);
-        r2 = _mm_set1_pd(dv2[i2 + 6 * i]);
+        r2 = _mm_set1_pd(dv2[i3 + 6 * i]);
         _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 2]);
-        r1 = _mm_loadu_pd(&b_a[b_i]);
-        _mm_storeu_pd(&b_a[b_i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
-        r = _mm_loadu_pd(&a[6 * i2 + 4]);
+        r = _mm_loadu_pd(&a[6 * i3 + 2]);
         r1 = _mm_loadu_pd(&b_a[i1]);
         _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+        r = _mm_loadu_pd(&a[6 * i3 + 4]);
+        r1 = _mm_loadu_pd(&b_a[i2]);
+        _mm_storeu_pd(&b_a[i2], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
       }
     }
     for (i = 0; i < 6; i++) {
-      for (i2 = 0; i2 < 6; i2++) {
-        centralTrack->pStateCovariance[i2 + 6 * i] =
-            b_a[b_iv1[i2] + 6 * b_iv1[i]];
+      for (i3 = 0; i3 < 6; i3++) {
+        centralTrack->pStateCovariance[i3 + 6 * i] =
+            b_a[b_iv1[i3] + 6 * b_iv1[i]];
       }
     }
     /*  Set state and covariance of central track */
@@ -2424,79 +2310,176 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     b_validateattributes(&c_st, centralTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&c_st, centralTrack->pStateCovariance);
+    /* radar2central(localTrack); %Ned2ecefTrack(localTrack); % UPDATED */
   } else if (localTrack_SourceIndex == 2U) {
+    __m128d r;
+    __m128d r1;
+    real_T t;
+    real_T u;
+    int32_T i1;
+    int32_T i2;
+    /*  ADSB */
     st.site = &bh_emlrtRSI;
-    /*  Central space is identical to ADS-B local space → copy with right types
+    /*  A function to transform a track in the central state-space to a track in
      */
-    /*  Preserve TrackLogic from input struct */
-    /*  Copy scalar properties as double to keep codegen type-stable */
-    centralTrack->TrackID = b_objectTrack_set_TrackID(
-        localTrack_TrackID, &centralTrack->BranchID, &centralTrack->SourceIndex,
-        &centralTrack->Age, &centralTrack->ObjectClassID,
+    /*  the radar state-space. */
+    /*  Initialize a track of the correct state size */
+    /*  Force 'Integrated' for codegen consistency */
+    /*  Sync properties of radarTrack except State and StateCovariance with */
+    /*  radarTrack See syncTrack defined below. */
+    b_st.site = &yh_emlrtRSI;
+    /*  Updated to comply with codegen (different from local code only in that
+     */
+    /*  we're casting values for consistency) */
+    /*  Copy scalars (cast to double/logical for objectTrack assignments) */
+    c_st.site = &gh_emlrtRSI;
+    centralTrack->TrackID = objectTrack_set_TrackID(
+        &c_st, localTrack_TrackID, &centralTrack->BranchID,
+        &centralTrack->SourceIndex, &centralTrack->Age,
+        &centralTrack->ObjectClassID,
         centralTrack->ObjectClassProbabilities.data,
         centralTrack->ObjectClassProbabilities.size, &centralTrack->IsConfirmed,
         &centralTrack->IsCoasted, &centralTrack->IsSelfReported,
         centralTrack->pState, centralTrack->pStateCovariance,
         &centralTrack->pUpdateTime);
+    c_st.site = &hh_emlrtRSI;
+    d_st.site = &qh_emlrtRSI;
     centralTrack->BranchID = localTrack_BranchID;
+    c_st.site = &ih_emlrtRSI;
+    d_st.site = &rh_emlrtRSI;
     centralTrack->SourceIndex = 2U;
-    b_st.site = &yh_emlrtRSI;
-    c_st.site = &qc_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
-    if (localTrack_pUpdateTime < 0.0) {
+    c_st.site = &jh_emlrtRSI;
+    d_st.site = &qc_emlrtRSI;
+    e_st.site = &gb_emlrtRSI;
+    if (localTrack_UpdateTime < 0.0) {
       emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
+          &e_st, &l_emlrtRTEI,
           "Coder:toolbox:ValidateattributesexpectedNonnegative",
           "MATLAB:objectTrack:expectedNonnegative", 3, 4, 10, "UpdateTime");
     }
-    d_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_pUpdateTime) ||
-        muDoubleScalarIsNaN(localTrack_pUpdateTime)) {
+    e_st.site = &gb_emlrtRSI;
+    if (muDoubleScalarIsInf(localTrack_UpdateTime) ||
+        muDoubleScalarIsNaN(localTrack_UpdateTime)) {
       emlrtErrorWithMessageIdR2018a(
-          &d_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
+          &e_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
-    centralTrack->pUpdateTime = localTrack_pUpdateTime;
+    centralTrack->pUpdateTime = localTrack_UpdateTime;
+    c_st.site = &kh_emlrtRSI;
+    d_st.site = &sh_emlrtRSI;
     centralTrack->Age = localTrack_Age;
-    b_st.site = &ai_emlrtRSI;
-    c_st.site = &ig_emlrtRSI;
-    d_st.site = &fb_emlrtRSI;
-    if (localTrack_ObjectClassID < 0.0) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &l_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedNonnegative",
-          "MATLAB:objectTrack:expectedNonnegative", 3, 4, 13, "ObjectClassID");
-    }
-    d_st.site = &fb_emlrtRSI;
-    if (muDoubleScalarIsInf(localTrack_ObjectClassID) ||
-        muDoubleScalarIsNaN(localTrack_ObjectClassID) ||
-        (!(muDoubleScalarFloor(localTrack_ObjectClassID) ==
-           localTrack_ObjectClassID))) {
-      emlrtErrorWithMessageIdR2018a(
-          &d_st, &c_emlrtRTEI,
-          "Coder:toolbox:ValidateattributesexpectedInteger",
-          "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
-    }
+    c_st.site = &lh_emlrtRSI;
+    d_st.site = &ig_emlrtRSI;
+    c_validateattributes(&d_st, localTrack_ObjectClassID);
     centralTrack->ObjectClassID = localTrack_ObjectClassID;
-    /*  Skip TrackLogicState - fuser manages this */
-    /* centralTrack.TrackLogicState= double(adsbTrack.TrackLogicState); */
+    c_st.site = &mh_emlrtRSI;
+    c_objectTrack_set_ObjectClassPr(&c_st, centralTrack,
+                                    c_localTrack_ObjectClassProbabi,
+                                    d_localTrack_ObjectClassProbabi);
+    /* dst.TrackLogic = src.TrackLogic; */
+    /*  Skip TrackLogicState - fuser manages this internally, and copying causes
+     * codegen size issues */
+    /* dst.TrackLogicState = double(src.TrackLogicState); */
     centralTrack->IsConfirmed = localTrack_IsConfirmed;
     centralTrack->IsCoasted = localTrack_IsCoasted;
     centralTrack->IsSelfReported = localTrack_IsSelfReported;
-    /*  States/covariances → ensure double */
+    /*  States / covariance */
+    c_st.site = &nh_emlrtRSI;
+    d_st.site = &rc_emlrtRSI;
+    validateattributes(&d_st, localTrack_State);
+    c_st.site = &oh_emlrtRSI;
+    d_st.site = &sc_emlrtRSI;
+    b_validateattributes(&d_st, localTrack_StateCovariance);
+    d_st.site = &tc_emlrtRSI;
+    isSymmetricPositiveSemiDefinite(&d_st, localTrack_StateCovariance);
+    /*  Parameters and Attributes */
+    /*  Convert ECEF state to NED */
+    b_st.site = &ai_emlrtRSI;
+    c_st.site = &di_emlrtRSI;
+    d_st.site = &ei_emlrtRSI;
+    b_y0 = geodetic2ecefFormula(&d_st, &z0, &x0);
+    u = localTrack_State[0] - b_y0;
+    t = localTrack_State[2] - z0;
+    b_y0 = localTrack_State[4] - x0;
+    z0 = 42.39423231362;
+    b_cosd(&z0);
+    x0 = 42.39423231362;
+    b_sind(&x0);
+    cosPhi = -70.95934958874;
+    b_cosd(&cosPhi);
+    sinPhi = -70.95934958874;
+    b_sind(&sinPhi);
+    cosLambda = cosPhi * u + sinPhi * t;
+    /*  ECEF->NED velocity via built-in */
+    sinLambda = cosPhi * localTrack_State[1] + sinPhi * localTrack_State[3];
+    centralTrack->pState[0] = -x0 * cosLambda + z0 * b_y0;
+    centralTrack->pState[1] = -x0 * sinLambda + z0 * localTrack_State[5];
+    centralTrack->pState[2] = -sinPhi * u + cosPhi * t;
+    centralTrack->pState[3] =
+        -sinPhi * localTrack_State[1] + cosPhi * localTrack_State[3];
+    centralTrack->pState[4] = -(z0 * cosLambda + x0 * b_y0);
+    centralTrack->pState[5] = -(z0 * sinLambda + x0 * localTrack_State[5]);
+    /*  Convert ECEF state COVARIANCE to NED state COVARIANCE */
+    /*  Rotation matrix ECEF->NED (codegen-compatible) */
+    /*  Note dcmecef2ned not supported for codegen */
+    /*  Permutation indices: from [x vx y vy z vz] to [x y z vx vy vz] */
+    /*  Permute covariance matrix to group pos/vel */
+    /*  ECEF->NED covariance: P_ned = R * P_ecef * R' */
+    /*  Unpermute back to original interleaved format */
+    memset(&a[0], 0, 36U * sizeof(real_T));
+    for (i = 0; i < 6; i++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
+        r = _mm_loadu_pd(&a[6 * i]);
+        r1 = _mm_set1_pd(localTrack_StateCovariance[b_iv[i3] + 6 * b_iv[i]]);
+        _mm_storeu_pd(
+            &a[6 * i],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3]), r1)));
+        r = _mm_loadu_pd(&a[i1]);
+        _mm_storeu_pd(
+            &a[i1],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3 + 2]), r1)));
+        r = _mm_loadu_pd(&a[i2]);
+        _mm_storeu_pd(
+            &a[i2],
+            _mm_add_pd(r, _mm_mul_pd(_mm_loadu_pd(&dv2[6 * i3 + 4]), r1)));
+      }
+    }
+    memset(&b_a[0], 0, 36U * sizeof(real_T));
+    for (i = 0; i < 6; i++) {
+      i1 = 6 * i + 2;
+      i2 = 6 * i + 4;
+      for (i3 = 0; i3 < 6; i3++) {
+        __m128d r2;
+        r = _mm_loadu_pd(&a[6 * i3]);
+        r1 = _mm_loadu_pd(&b_a[6 * i]);
+        r2 = _mm_set1_pd(dv1[i3 + 6 * i]);
+        _mm_storeu_pd(&b_a[6 * i], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+        r = _mm_loadu_pd(&a[6 * i3 + 2]);
+        r1 = _mm_loadu_pd(&b_a[i1]);
+        _mm_storeu_pd(&b_a[i1], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+        r = _mm_loadu_pd(&a[6 * i3 + 4]);
+        r1 = _mm_loadu_pd(&b_a[i2]);
+        _mm_storeu_pd(&b_a[i2], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
+      }
+    }
+    for (i = 0; i < 6; i++) {
+      for (i3 = 0; i3 < 6; i3++) {
+        centralTrack->pStateCovariance[i3 + 6 * i] =
+            b_a[b_iv1[i3] + 6 * b_iv1[i]];
+      }
+    }
+    /*  Set state and covariance of radar track */
     b_st.site = &bi_emlrtRSI;
     c_st.site = &rc_emlrtRSI;
-    validateattributes(&c_st, localTrack_pState);
-    for (i = 0; i < 6; i++) {
-      centralTrack->pState[i] = localTrack_pState[i];
-    }
+    validateattributes(&c_st, centralTrack->pState);
     b_st.site = &ci_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
-    b_validateattributes(&c_st, localTrack_pStateCovariance);
+    b_validateattributes(&c_st, centralTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
-    isSymmetricPositiveSemiDefinite(&c_st, localTrack_pStateCovariance);
-    memcpy(&centralTrack->pStateCovariance[0], &localTrack_pStateCovariance[0],
-           36U * sizeof(real_T));
+    isSymmetricPositiveSemiDefinite(&c_st, centralTrack->pStateCovariance);
+    /* adsb2central(localTrack); % UPDATED */
   }
 }
 
