@@ -54,7 +54,7 @@ if recordDataFlag == 1
     sensorData = helperRecordSensorData(scenario);
 else
     %Load sensor data ----
-    load('SensorData2.mat','sensorData'); % CLEANUP RENAME
+    load('SensorData.mat','sensorData');
 end
 
 % Reset scenario, viewer, transponders
