@@ -23,7 +23,7 @@ a = tic;
 recordDataFlag = 0; % Set to 0 to load data, 1 to record scenario
 
 %% ---- Scenario ----
-truncatedStopTime = 100; % Limit Simulation time (s)
+truncatedStopTime = 60; % Limit Simulation time (s)
 scenario = helperCreateScenario(tuningData, mapOrigin,truncatedStopTime);
 
 %% ---- Globe Viewer ----
@@ -43,7 +43,7 @@ gps = gpsSensor('PositionInputFormat','Geodetic',...
     'VelocityAccuracy',velAccuracy);
 numTargets = numel(scenario.Platforms) - 2;
 
-transponderStruct = createTX(numTargets, gps);
+transponderStruct = helperCreateTX(numTargets, gps);
 adsbRx = adsbReceiver('ReceiverIndex',2);
 
 %% ---- Tracker ----
@@ -54,7 +54,7 @@ if recordDataFlag == 1
     sensorData = helperRecordSensorData(scenario);
 else
     %Load sensor data ----
-    load('SensorData.mat','sensorData');
+    load('SensorData2.mat','sensorData'); % CLEANUP RENAME
 end
 
 % Reset scenario, viewer, transponders
@@ -65,7 +65,7 @@ release(tracker);
 trackerUpdateInterval = 1;
 % Note scenario.StopTime matches the truncated duration indicated at
 % scenario initialization above in createScenario()
-activeRadarData = splitSensorData(sensorData, scenario.StopTime, trackerUpdateInterval);
+activeRadarData = helperSplitSensorData(sensorData, scenario.StopTime, trackerUpdateInterval);
 
 %% ---- Preallocate ----
 numStepsToRun = numel(activeRadarData);
@@ -111,7 +111,6 @@ assignmentMetrics = trackAssignmentMetrics(...
 
 %% ---- Clear MEX to reset persistent fuser state ----
 clear fusionAlgorithm_mex fusionAlgorithm
-
 wgs84 = wgs84Ellipsoid('meter');
 
 % Plot every Nth step to reduce globe-viewer overhead
@@ -119,8 +118,7 @@ plotInterval = 5;
 
 %% ---- Simulation Loop ----
 fprintf('  Running %d steps ...\n', numStepsToRun);
-% DEBUG
-radarTrackLogDebug = [];
+NEDPlat = scenario.Platforms{1};
 for ind = 1:numStepsToRun
     advance(scenario);
 
@@ -138,19 +136,9 @@ for ind = 1:numStepsToRun
         poseStruct.PlatformID = scenario.Platforms{i}.PlatformID;
         truePoseGPS(i) = poseStruct;
 
-        tmp = pose(scenario.Platforms{i},'CoordinateSystem','Cartesian');
-        tmp.PlatformID = scenario.Platforms{i}.PlatformID;
-
-        pECEF = tmp.Position;
-        vECEF = tmp.Velocity;
-        [xN, yE, zD] = ecef2ned(pECEF(1),pECEF(2),pECEF(3), mapOrigin(1),mapOrigin(2),mapOrigin(3), wgs84);
-        truePoseNED(i).Position = [xN, yE, zD];
-        [uN, vE, wD] = ecef2nedv(vECEF(1),vECEF(2),vECEF(3), mapOrigin(1),mapOrigin(2));
-        truePoseNED(i).Velocity  = [uN vE wD];
-        truePoseNED(i).PlatformID = tmp.PlatformID;
-        truePoseNED(i).Orientation = tmp.Orientation;
-        truePoseNED(i).AngularVelocity = tmp.AngularVelocity;
     end
+
+    truePoseNED = targetPoses(NEDPlat); % Note Indexing is shifted by one, omits the reference platform
 
     truePoseGPSAll{ind} = truePoseGPS;
     truePoseNEDAll{ind} = truePoseNED;
@@ -161,7 +149,7 @@ for ind = 1:numStepsToRun
         helperPlotActiveRadarData(mapViewer, activeRadarSpec, activeRadarData(ind));
     end
 
-    time = scenario.SimulationTime; %(ind - 1) * trackerUpdateInterval;
+    time = scenario.SimulationTime;
 
     % Init track arrays
     adsbTracks     = objectTrack.empty;
@@ -180,43 +168,34 @@ for ind = 1:numStepsToRun
     adsbTracks = adsbRx(adsbMessages, time);
     adsbTracks = adsbTracks';
     clear adsbMessages
-    adsbTracks = ensureTimeAndParams(adsbTracks, time, ecefParams());
+    adsbTracks = helperEnsureTimeAndParams(adsbTracks, time, helperEcefParams());
 
     for i = 1:length(adsbTracks)
-        adsbTracksPlot(i) = central2radar(adsbTracks(i), mapOrigin);
+        adsbTracksPlot(i) = helperEcef2nedTrack(adsbTracks(i));
     end
 
     % --- Radar ---
     radarTracksStruct = trackingAlgorithm_mex({activeRadarData(ind)}, targetSpec, activeRadarSpec);
-    radarTracks = convertToObjectTrack(radarTracksStruct);
-    radarTracks = ensureTimeAndParams(radarTracks, time, nedParams());
-
-    % DEBUG
-    radarTrackLogDebug = [radarTrackLogDebug; radarTracks];
+    radarTracks = helperConvertToObjectTrack(radarTracksStruct);
+    radarTracks = helperEnsureTimeAndParams(radarTracks, time, helperNedParams());
 
     % --- Fusion (MEX) ---
     if ~isempty([adsbTracks;radarTracks])
         trackObj    = [adsbTracks;radarTracks];
-        trackStruct = toStructForMEX(trackObj);
+        trackStruct = helperToStructForMEX(trackObj);
         fusedStructs = fusionAlgorithm_mex(trackStruct, time);
         if ~isempty(fusedStructs)
-            fusedTracks = convertToObjectTrack(fusedStructs);
+            fusedTracks = helperConvertToObjectTrack(fusedStructs);
         end
-    end
-
-    % --- Log (convert fused ECEF → NED) ---
-    fusedTracksNED = objectTrack.empty;
-    for i = 1:length(fusedTracks)
-        fusedTracksNED(i) = central2radar(fusedTracks(i), mapOrigin);
     end
 
     % --- Plot ---
     if plotThisStep
-        mapViewer = helperPlotTracks(3,mapViewer,adsbTracksPlot,radarTracks,fusedTracksNED',...
+        mapViewer = helperPlotTracks(3,mapViewer,adsbTracksPlot,radarTracks,fusedTracks,...
             adsblabel,adsbclr,radarlabel,radarclr,fusedlabel,fusedclr);
     end
 
-    fusedTrackLog{ind}  = fusedTracksNED;
+    fusedTrackLog{ind}  = fusedTracks;
     radarTrackLog{ind}  = radarTracks;
     adsbTrackLog{ind}   = adsbTracks;
     adsbTrackLogNED{ind} = adsbTracksPlot;
@@ -229,16 +208,12 @@ for ind = 1:numStepsToRun
         truthsForMetrics = truthsForMetrics([]);
     end
 
-    [trackAssignmentSummary(ind), truthAssignmentSummary(ind)] = assignmentMetrics(fusedTracksNED, truthsForMetrics);
+    [trackAssignmentSummary(ind), truthAssignmentSummary(ind)] = assignmentMetrics(fusedTracks, truthsForMetrics);
     [assignedTrackIDs, assignedTruthIDs] = currentAssignment(assignmentMetrics);
-    [posRMSE(ind), velRMSE(ind), posANEES(ind), velANEES(ind)] = errorMetrics(fusedTracksNED, assignedTrackIDs, truthsForMetrics, assignedTruthIDs);
+    [posRMSE(ind), velRMSE(ind), posANEES(ind), velANEES(ind)] = errorMetrics(fusedTracks, assignedTrackIDs, truthsForMetrics, assignedTruthIDs);
     trackError{ind} = cumulativeTrackMetrics(errorMetrics);
     truthError{ind} = cumulativeTruthMetrics(errorMetrics);
 end
-
-% DEBUG
-plotTrackLog(mapViewer,radarTrackLogDebug); % Plot all radar Tracks
-helperPlotActiveRadarData(mapViewer, activeRadarSpec, sensorData{1}); % Plot all Radar Detections
 
 wallClockTime = toc(a);
 fprintf('  Sim loop done (%.1f s wall-clock).\n', wallClockTime);
@@ -266,311 +241,3 @@ results.trackAssignmentSummary = trackAssignmentSummary;
 results.truthAssignmentSummary = truthAssignmentSummary;
 
 end % runFullSimulation
-
-
-%% ========================================================================
-%                          LOCAL HELPER FUNCTIONS
-%  ========================================================================
-% Self-contained copies — runFullSimulation does not rely on the main script.
-
-function params = ecefParams()
-params = struct('Frame','ECEF','IsCartesian',true,'AxesOrder','interleaved');
-end
-
-function params = nedParams()
-params = struct('Frame','NED','IsCartesian',true,'AxesOrder','interleaved');
-end
-
-function tracksOut = ensureTimeAndParams(tracksIn, time, params)
-tracksOut = tracksIn;
-for k = 1:numel(tracksOut)
-    tracksOut(k).UpdateTime      = double(time);
-    tracksOut(k).StateParameters = params;
-end
-end
-
-function s = toStructForMEX(tracks)
-s = toStruct(tracks);
-for k = 1:numel(s)
-    s(k).TrackID     = uint32(s(k).TrackID);
-    s(k).BranchID    = uint32(s(k).BranchID);
-    s(k).SourceIndex = uint32(s(k).SourceIndex);
-    s(k).Age         = uint32(s(k).Age);
-    s(k).UpdateTime  = double(s(k).UpdateTime);
-    s(k).State       = double(s(k).State);
-    s(k).StateCovariance = double(s(k).StateCovariance);
-    s(k).ObjectClassID   = double(s(k).ObjectClassID);
-    s(k).ObjectClassProbabilities = double(s(k).ObjectClassProbabilities);
-    s(k).TrackLogicState = double(s(k).TrackLogicState);
-    s(k).IsConfirmed    = logical(s(k).IsConfirmed);
-    s(k).IsCoasted      = logical(s(k).IsCoasted);
-    s(k).IsSelfReported = logical(s(k).IsSelfReported);
-    s(k).TrackLogic = 'Integrated';
-    s(k).StateParameters = struct();
-    attrs = s(k).ObjectAttributes;
-    if isempty(attrs) || ~isfield(attrs, 'Callsign') || ~isfield(attrs, 'Category')
-        s(k).ObjectAttributes = struct( ...
-            'Callsign', repmat(' ', 1, 8), ...
-            'Category', adsbCategory.No_Category_Information);
-    end
-end
-end
-
-function tracksObj = convertToObjectTrack(tracksStruct)
-tracksObj = repmat(objectTrack, numel(tracksStruct), 1);
-for i = 1:numel(tracksStruct)
-    trackLogic = strtrim(tracksStruct(i).TrackLogic);
-    tracksObj(i) = objectTrack( ...
-        'TrackID', tracksStruct(i).TrackID, ...
-        'BranchID', tracksStruct(i).BranchID, ...
-        'SourceIndex', tracksStruct(i).SourceIndex, ...
-        'UpdateTime', tracksStruct(i).UpdateTime, ...
-        'Age', tracksStruct(i).Age, ...
-        'State', tracksStruct(i).State, ...
-        'StateCovariance', tracksStruct(i).StateCovariance, ...
-        'StateParameters', tracksStruct(i).StateParameters, ...
-        'ObjectClassID', tracksStruct(i).ObjectClassID, ...
-        'ObjectClassProbabilities', tracksStruct(i).ObjectClassProbabilities, ...
-        'TrackLogic', trackLogic, ...
-        'TrackLogicState', tracksStruct(i).TrackLogicState, ...
-        'IsConfirmed', tracksStruct(i).IsConfirmed, ...
-        'IsCoasted', tracksStruct(i).IsCoasted, ...
-        'IsSelfReported', tracksStruct(i).IsSelfReported, ...
-        'ObjectAttributes', tracksStruct(i).ObjectAttributes ...
-    );
-end
-end
-
-function centralTrack = radar2central(radarTrack, mapOrigin)
-centralTrack = objectTrack('State',zeros(6,1),'StateCovariance',eye(6));
-centralTrack = syncTrack(centralTrack, radarTrack);
-
-radarState = radarTrack.State;
-[X,Y,Z] = ned2ecef(radarState(1),radarState(3),radarState(5), ...
-    mapOrigin(1),mapOrigin(2),mapOrigin(3),wgs84Ellipsoid);
-R = dcmecef2ned(mapOrigin(1), mapOrigin(2));
-velos = R' * [radarState(2);radarState(4);radarState(6)];
-centerState = [X, velos(1), Y, velos(2), Z, velos(3)];
-
-radarStateCov = radarTrack.StateCovariance;
-permute_idx   = [1, 3, 5, 2, 4, 6];
-unpermute_idx = [1, 4, 2, 5, 3, 6];
-P_perm = radarStateCov(permute_idx, permute_idx);
-R6 = blkdiag(R', R');
-P_rot = R6 * P_perm * R6';
-centerStateCov = P_rot(unpermute_idx, unpermute_idx);
-
-centralTrack.State = centerState;
-centralTrack.StateCovariance = centerStateCov;
-end
-
-function radarTrack = central2radar(centralTrack, mapOrigin)
-radarTrack = objectTrack('State',zeros(6,1),'StateCovariance',eye(6));
-radarTrack = syncTrack(radarTrack, centralTrack);
-
-centerState = centralTrack.State;
-[N,E,D] = ecef2ned(centerState(1),centerState(3),centerState(5), ...
-    mapOrigin(1),mapOrigin(2),mapOrigin(3),wgs84Ellipsoid);
-[vN,vE,vD] = ecef2nedv(centerState(2),centerState(4),centerState(6), ...
-    mapOrigin(1),mapOrigin(2));
-radarState = [N, vN, E, vE, D, vD];
-
-centerStateCov = centralTrack.StateCovariance;
-R = dcmecef2ned(mapOrigin(1), mapOrigin(2));
-permute_idx   = [1, 3, 5, 2, 4, 6];
-unpermute_idx = [1, 4, 2, 5, 3, 6];
-P_perm = centerStateCov(permute_idx, permute_idx);
-R6 = blkdiag(R, R);
-P_rot = R6 * P_perm * R6';
-radarStateCov = P_rot(unpermute_idx, unpermute_idx);
-
-radarTrack.State = radarState;
-radarTrack.StateCovariance = radarStateCov;
-end
-
-function tr1 = syncTrack(tr1, tr2)
-props = {'TrackID','BranchID','SourceIndex','UpdateTime','Age',...
-    'StateParameters','ObjectClassID','IsConfirmed','IsCoasted',...
-    'IsSelfReported','ObjectAttributes'};
-for i = 1:numel(props)
-    tr1.(props{i}) = tr2.(props{i});
-end
-end
-
-% function scenario = createScenario(tuningData, mapOrigin,scenarioDuration)
-% scenario = trackingScenario(UpdateRate=1,StopTime=scenarioDuration,IsEarthCentered=true);
-% radarTower = platform(scenario, Position=mapOrigin); %#ok<NASGU>
-% 
-% beamwidthAz = 360;
-% fov = [beamwidthAz; 15];
-% updaterate = 1;
-% activeRadar = fusionRadarSensor(1,"No Scanning", ...
-%     UpdateRate=updaterate, ...
-%     FieldOfView=fov, ...
-%     AzimuthResolution=1.4, ...
-%     ReferenceRange=111e3, ...
-%     ReferenceRCS=0, ...
-%     RangeResolution=135, ...
-%     HasElevation=true, ...
-%     HasNoise=true, ...
-%     HasFalseAlarms=true, ...
-%     FalseAlarmRate=1e-7,...
-%     HasRangeRate=true, ...
-%     RangeRateLimits=[-600 600], ...
-%     MountingLocation=[0 0 -15], ...
-%     MountingAngles=[0 0 0], ...
-%     HasINS=true, ...
-%     DetectionCoordinates="Sensor spherical");
-% 
-% scenario.Platforms{1}.Sensors = activeRadar;
-% elFov = fov(2);
-% activeRadar.FieldOfView(2) = elFov+1e-3;
-% 
-% applehillPos = [42.300498, -71.349157 0];
-% platform(scenario, Position=applehillPos);
-% 
-% for i = 1:numel(tuningData)
-%     Pos = tuningData{i}.Position;
-%     time = seconds(tuningData{i}.Time);
-%     validIdx = time <= scenarioDuration;
-%     truncatedTime = time(validIdx);
-%     truncatedPos = Pos(validIdx, :);
-%     traj = geoTrajectory(truncatedPos, truncatedTime);
-%     platform(scenario, Trajectory=traj);
-% end
-% end
-
-function transponderStruct = createTX(numPlats, gps)
-transponderStruct(numPlats) = struct();
-for i = 1:numPlats
-    tailNumber = sprintf('MW%d', 2019 + i);
-    transponderStruct(i).adsbTx = adsbTransponder( ...
-        tailNumber, 'UpdateRate', 1, ...
-        'GPS', gps, 'Category', adsbCategory.Large);
-end
-end
-
-function varargout = splitSensorData(sensorData, stopTime, trackerInterval)
-varargout = cell(1, nargout);
-if iscell(sensorData)
-    varargout = cellfun(@(s) splitOne(s,stopTime,trackerInterval), sensorData, UniformOutput=false);
-else
-    varargout{1} = splitOne(sensorData, stopTime, trackerInterval);
-end
-end
-
-function data = splitOne(sensorData, stopTime, trackerInterval)
-frameTime = 0;
-ind = 1;
-numFrames = ceil(stopTime/trackerInterval);
-data = repmat(sensorData, numFrames, 1);
-while frameTime < stopTime
-    withinInterval = sensorData.LookTime >= frameTime & sensorData.LookTime < frameTime+trackerInterval;
-    data(ind).LookTime = sensorData.LookTime(withinInterval);
-    data(ind).LookAzimuth = sensorData.LookAzimuth(withinInterval);
-    data(ind).LookElevation = sensorData.LookElevation(withinInterval);
-    withinInterval = sensorData.DetectionTime >= frameTime & sensorData.DetectionTime < frameTime+trackerInterval;
-    data(ind).DetectionTime = sensorData.DetectionTime(withinInterval);
-    if isfield(sensorData,"Azimuth")
-        data(ind).Azimuth = sensorData.Azimuth(1,withinInterval);
-        data(ind).AzimuthAccuracy = sensorData.AzimuthAccuracy(1,withinInterval);
-    end
-    if isfield(sensorData,"Elevation")
-        data(ind).Elevation = sensorData.Elevation(1,withinInterval);
-        data(ind).ElevationAccuracy = sensorData.ElevationAccuracy(1,withinInterval);
-    end
-    if isfield(sensorData,"Range")
-        data(ind).Range = sensorData.Range(1,withinInterval);
-        data(ind).RangeAccuracy = sensorData.RangeAccuracy(1,withinInterval);
-    end
-    if isfield(sensorData,"RangeRate")
-        data(ind).RangeRate = sensorData.RangeRate(1,withinInterval);
-        data(ind).RangeRateAccuracy = sensorData.RangeRateAccuracy(1,withinInterval);
-    end
-    if isfield(sensorData,"TargetIndex")
-        data(ind).TargetIndex = sensorData.TargetIndex(1,withinInterval);
-    end
-    frameTime = frameTime + trackerInterval;
-    ind = ind + 1;
-end
-end
-
-% function sensorData = helperRecordSensorData(scenario) %#ok<DEFNU>
-% if isa(scenario,"trackingScenarioRecording")
-%     recording = scenario.RecordedData; % We only need the struct
-% elseif isa(scenario,"struct")
-%     recording = scenario;
-% elseif isa(scenario,"trackingScenario") || isa(scenario,"radarScenario")
-%     seed = 2024; % Change this value if you want a different random number generator seed.
-%     disp("Recording the scenario to get sensor data. This may take several minutes.");
-%     recording = record(scenario,"Rotmat",IncludeSensors=true,RecordingFormat="struct",InitialSeed=seed);
-% else
-%     error("This example utility function can only be used with a trackingScenario a trackingScenarioRecording");
-% end
-% 
-% if ~isfield(recording,"SensorConfigurations") || ~isfield(recording,"Detections")
-%     error("Scenario recording must contain sensor configurations and detections to record sensor data");
-% end
-% % Assume all steps have the same sensors.
-% sensors = recording(1).SensorConfigurations;
-% detBuffer = vertcat(recording.Detections);
-% for i = 1:numel(recording)
-%     for j = 1:numel(recording(i).SensorConfigurations)
-%         recording(i).SensorConfigurations(j).Time = recording(i).SimulationTime;
-%     end
-% end
-% configBuffer = reshape([recording.SensorConfigurations],[],1);
-% sensorData = cell(1,numel(sensors));
-% for k = 1:numel(sensors)
-%     sensor = sensors(k);
-%     sensorIdx = sensor.SensorIndex;
-%     sensorMountingAngles =  eye(3); %rotmat(recording(1).CoverageConfig(k).Orientation,"frame");
-% 
-%     detSensorIndex = cellfun(@(x)x.SensorIndex,detBuffer);
-%     dets = detBuffer(detSensorIndex == sensorIdx);
-% 
-%     cfgSensorIndex = arrayfun(@(x)x.SensorIndex, configBuffer);
-%     cfgs = configBuffer(cfgSensorIndex == sensorIdx);
-%     if sensor.MeasurementParameters(1).HasRange
-%         sensorData{k} = recordMonostaticData(sensorMountingAngles, dets, cfgs);
-%     else
-%         %sensorData{k} = recordESMData(sensorMountingAngles, dets, cfgs);
-%         disp('no ESM sensor, not recording')
-%     end
-% end
-% end
-
-function activeRadarData = recordMonostaticData(sensorMountingAngles, detections, cfgs)
-% Reported config information
-lookMountRot = cell(numel(cfgs),1);
-for i = 1:numel(cfgs)
-    if cfgs(i).MeasurementParameters(1).IsParentToChild
-        lookMountRot{i} = cfgs(i).MeasurementParameters(1).Orientation;
-    else
-        lookMountRot{i} = cfgs(i).MeasurementParameters(1).Orientation';
-    end
-end
-beamRot = cellfun(@(x)x*sensorMountingAngles',lookMountRot,UniformOutput=false);
-ypr = cellfun(@(x)fusion.internal.frames.rotmat2ypr(x,"degrees"),beamRot,UniformOutput=false);
-lookTime = arrayfun(@(x)x.Time,cfgs);
-lookAzimuth = cellfun(@(x)x(1),ypr);
-lookElevation = cellfun(@(x)-x(2),ypr);
-
-% Reported measurement information
-detectionTime = cellfun(@(x)x.Time,detections);
-azimuth = cellfun(@(x)x.Measurement(1),detections);
-elevation = cellfun(@(x)x.Measurement(2),detections);
-range = cellfun(@(x)x.Measurement(3),detections);
-rangeRate = cellfun(@(x)x.Measurement(4),detections);
-azimuthAccuracy =  cellfun(@(x)x.MeasurementNoise(1,1),detections);
-elevationAccuracy =  cellfun(@(x)x.MeasurementNoise(2,2),detections);
-rangeAccuracy =  cellfun(@(x)x.MeasurementNoise(3,3),detections);
-rangeRateAccuracy =  cellfun(@(x)x.MeasurementNoise(4,4),detections);
-
-activeRadarData = struct(LookTime=lookTime(:)',LookAzimuth=lookAzimuth(:)', ...
-    LookElevation=lookElevation(:)', DetectionTime=detectionTime(:)', ...
-    Azimuth=azimuth(:)',Elevation=elevation(:)', Range=range(:)', ...
-    RangeRate=rangeRate(:)',AzimuthAccuracy=sqrt(azimuthAccuracy(:)'), ...
-    ElevationAccuracy=sqrt(elevationAccuracy(:)'),RangeAccuracy=sqrt(rangeAccuracy(:)'), ...
-    RangeRateAccuracy=sqrt(rangeRateAccuracy(:)'));
-end

@@ -33,7 +33,8 @@ ADSBTower = platform(scenario, Position=applehillPos); %#ok<NASGU>
 for i = 1:numel(tuningData)
     Pos = tuningData{i}.Position;
     time = seconds(tuningData{i}.Time);
-    
+    %validIdx = time <= scenarioDuration;
+
     % Find the first index strictly beyond scenarioDuration
     idxPast = find(time > scenarioDuration, 1, 'first');
 
@@ -47,11 +48,13 @@ for i = 1:numel(tuningData)
     % Build logical mask: all samples up to and including the first beyond
     validIdx = false(size(time));
     validIdx(1:lastIdx) = true;
+
     
     truncatedTime = time(validIdx);
     truncatedPos = Pos(validIdx, :);
     traj = geoTrajectory(truncatedPos,truncatedTime);
     platform(scenario,Trajectory=traj);
 end
-
+% DEBUG
+%scenario.StopTime = traj.TimeOfArrival(end);
 end

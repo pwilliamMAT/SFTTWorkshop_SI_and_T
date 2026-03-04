@@ -1,4 +1,4 @@
-function s = toStructForMEX(tracks)
+function s = helperToStructForMEX(tracks)
 s = toStruct(tracks);
 for k = 1:numel(s)
     s(k).TrackID     = uint32(s(k).TrackID);
