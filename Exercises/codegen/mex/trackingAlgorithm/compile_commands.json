@@ -1,0 +1,566 @@
+[
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  trackingAlgorithm_data.c -o build/glnxa64/trackingAlgorithm_data.o",
+    "file": "trackingAlgorithm_data.c",
+    "output": "build/glnxa64/trackingAlgorithm_data.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  rt_nonfinite.c -o build/glnxa64/rt_nonfinite.o",
+    "file": "rt_nonfinite.c",
+    "output": "build/glnxa64/rt_nonfinite.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  trackingAlgorithm_initialize.c -o build/glnxa64/trackingAlgorithm_initialize.o",
+    "file": "trackingAlgorithm_initialize.c",
+    "output": "build/glnxa64/trackingAlgorithm_initialize.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  trackingAlgorithm_terminate.c -o build/glnxa64/trackingAlgorithm_terminate.o",
+    "file": "trackingAlgorithm_terminate.c",
+    "output": "build/glnxa64/trackingAlgorithm_terminate.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  trackingAlgorithm.c -o build/glnxa64/trackingAlgorithm.o",
+    "file": "trackingAlgorithm.c",
+    "output": "build/glnxa64/trackingAlgorithm.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  JIPDATracker.c -o build/glnxa64/JIPDATracker.o",
+    "file": "JIPDATracker.c",
+    "output": "build/glnxa64/JIPDATracker.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  trackEstimator.c -o build/glnxa64/trackEstimator.o",
+    "file": "trackEstimator.c",
+    "output": "build/glnxa64/trackEstimator.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  trackingEKF.c -o build/glnxa64/trackingEKF.o",
+    "file": "trackingEKF.c",
+    "output": "build/glnxa64/trackingEKF.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xnrm2.c -o build/glnxa64/xnrm2.o",
+    "file": "xnrm2.c",
+    "output": "build/glnxa64/xnrm2.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xdotc.c -o build/glnxa64/xdotc.o",
+    "file": "xdotc.c",
+    "output": "build/glnxa64/xdotc.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  ExtendedKalmanFilter.c -o build/glnxa64/ExtendedKalmanFilter.o",
+    "file": "ExtendedKalmanFilter.c",
+    "output": "build/glnxa64/ExtendedKalmanFilter.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  eig.c -o build/glnxa64/eig.o",
+    "file": "eig.c",
+    "output": "build/glnxa64/eig.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  anyNonFinite.c -o build/glnxa64/anyNonFinite.o",
+    "file": "anyNonFinite.c",
+    "output": "build/glnxa64/anyNonFinite.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  warning.c -o build/glnxa64/warning.o",
+    "file": "warning.c",
+    "output": "build/glnxa64/warning.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xzlangeM.c -o build/glnxa64/xzlangeM.o",
+    "file": "xzlangeM.c",
+    "output": "build/glnxa64/xzlangeM.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  svd.c -o build/glnxa64/svd.o",
+    "file": "svd.c",
+    "output": "build/glnxa64/svd.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  TrackEstimator1.c -o build/glnxa64/TrackEstimator1.o",
+    "file": "TrackEstimator1.c",
+    "output": "build/glnxa64/TrackEstimator1.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  IPDAEstimator.c -o build/glnxa64/IPDAEstimator.o",
+    "file": "IPDAEstimator.c",
+    "output": "build/glnxa64/IPDAEstimator.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  isSymmetricPositiveSemiDefinite.c -o build/glnxa64/isSymmetricPositiveSemiDefinite.o",
+    "file": "isSymmetricPositiveSemiDefinite.c",
+    "output": "build/glnxa64/isSymmetricPositiveSemiDefinite.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  eigSkewHermitianStandard.c -o build/glnxa64/eigSkewHermitianStandard.o",
+    "file": "eigSkewHermitianStandard.c",
+    "output": "build/glnxa64/eigSkewHermitianStandard.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  AerospaceMonostaticRadar.c -o build/glnxa64/AerospaceMonostaticRadar.o",
+    "file": "AerospaceMonostaticRadar.c",
+    "output": "build/glnxa64/AerospaceMonostaticRadar.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  indexShapeCheck.c -o build/glnxa64/indexShapeCheck.o",
+    "file": "indexShapeCheck.c",
+    "output": "build/glnxa64/indexShapeCheck.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  ifWhileCond.c -o build/glnxa64/ifWhileCond.o",
+    "file": "ifWhileCond.c",
+    "output": "build/glnxa64/ifWhileCond.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  JIPDATrackAssigner.c -o build/glnxa64/JIPDATrackAssigner.o",
+    "file": "JIPDATrackAssigner.c",
+    "output": "build/glnxa64/JIPDATrackAssigner.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  repmat.c -o build/glnxa64/repmat.o",
+    "file": "repmat.c",
+    "output": "build/glnxa64/repmat.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  validator_check_size.c -o build/glnxa64/validator_check_size.o",
+    "file": "validator_check_size.c",
+    "output": "build/glnxa64/validator_check_size.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  quat2rotmat.c -o build/glnxa64/quat2rotmat.o",
+    "file": "quat2rotmat.c",
+    "output": "build/glnxa64/quat2rotmat.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  computeLikelihoodByIndex.c -o build/glnxa64/computeLikelihoodByIndex.o",
+    "file": "computeLikelihoodByIndex.c",
+    "output": "build/glnxa64/computeLikelihoodByIndex.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  ConstantVelocityModel.c -o build/glnxa64/ConstantVelocityModel.o",
+    "file": "ConstantVelocityModel.c",
+    "output": "build/glnxa64/ConstantVelocityModel.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  MultiModalEstimator.c -o build/glnxa64/MultiModalEstimator.o",
+    "file": "MultiModalEstimator.c",
+    "output": "build/glnxa64/MultiModalEstimator.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  logsumexp.c -o build/glnxa64/logsumexp.o",
+    "file": "logsumexp.c",
+    "output": "build/glnxa64/logsumexp.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  sumMatrixIncludeNaN.c -o build/glnxa64/sumMatrixIncludeNaN.o",
+    "file": "sumMatrixIncludeNaN.c",
+    "output": "build/glnxa64/sumMatrixIncludeNaN.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  CompositeFieldOfViewModel.c -o build/glnxa64/CompositeFieldOfViewModel.o",
+    "file": "CompositeFieldOfViewModel.c",
+    "output": "build/glnxa64/CompositeFieldOfViewModel.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  stateToMeasurementWrapped.c -o build/glnxa64/stateToMeasurementWrapped.o",
+    "file": "stateToMeasurementWrapped.c",
+    "output": "build/glnxa64/stateToMeasurementWrapped.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  stateToMeasurementJacobian.c -o build/glnxa64/stateToMeasurementJacobian.o",
+    "file": "stateToMeasurementJacobian.c",
+    "output": "build/glnxa64/stateToMeasurementJacobian.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  norm.c -o build/glnxa64/norm.o",
+    "file": "norm.c",
+    "output": "build/glnxa64/norm.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  mod.c -o build/glnxa64/mod.o",
+    "file": "mod.c",
+    "output": "build/glnxa64/mod.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  EKFStateEstimator.c -o build/glnxa64/EKFStateEstimator.o",
+    "file": "EKFStateEstimator.c",
+    "output": "build/glnxa64/EKFStateEstimator.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  connectedTracks.c -o build/glnxa64/connectedTracks.o",
+    "file": "connectedTracks.c",
+    "output": "build/glnxa64/connectedTracks.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  combineVectorElements.c -o build/glnxa64/combineVectorElements.o",
+    "file": "combineVectorElements.c",
+    "output": "build/glnxa64/combineVectorElements.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  colon.c -o build/glnxa64/colon.o",
+    "file": "colon.c",
+    "output": "build/glnxa64/colon.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  find.c -o build/glnxa64/find.o",
+    "file": "find.c",
+    "output": "build/glnxa64/find.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  jpda.c -o build/glnxa64/jpda.o",
+    "file": "jpda.c",
+    "output": "build/glnxa64/jpda.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  jpdaEvents.c -o build/glnxa64/jpdaEvents.o",
+    "file": "jpdaEvents.c",
+    "output": "build/glnxa64/jpdaEvents.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  all.c -o build/glnxa64/all.o",
+    "file": "all.c",
+    "output": "build/glnxa64/all.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  sum.c -o build/glnxa64/sum.o",
+    "file": "sum.c",
+    "output": "build/glnxa64/sum.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  numPotentialFeasibleEvents.c -o build/glnxa64/numPotentialFeasibleEvents.o",
+    "file": "numPotentialFeasibleEvents.c",
+    "output": "build/glnxa64/numPotentialFeasibleEvents.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  nchoosek.c -o build/glnxa64/nchoosek.o",
+    "file": "nchoosek.c",
+    "output": "build/glnxa64/nchoosek.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  murtyKBestEvents.c -o build/glnxa64/murtyKBestEvents.o",
+    "file": "murtyKBestEvents.c",
+    "output": "build/glnxa64/murtyKBestEvents.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  JVProblemSolutionPair.c -o build/glnxa64/JVProblemSolutionPair.o",
+    "file": "JVProblemSolutionPair.c",
+    "output": "build/glnxa64/JVProblemSolutionPair.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  ProblemSolutionQueue.c -o build/glnxa64/ProblemSolutionQueue.o",
+    "file": "ProblemSolutionQueue.c",
+    "output": "build/glnxa64/ProblemSolutionQueue.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  any.c -o build/glnxa64/any.o",
+    "file": "any.c",
+    "output": "build/glnxa64/any.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  AbstractProblemSolutionPair.c -o build/glnxa64/AbstractProblemSolutionPair.o",
+    "file": "AbstractProblemSolutionPair.c",
+    "output": "build/glnxa64/AbstractProblemSolutionPair.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  feasibleJPDAEvents.c -o build/glnxa64/feasibleJPDAEvents.o",
+    "file": "feasibleJPDAEvents.c",
+    "output": "build/glnxa64/feasibleJPDAEvents.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  GaussianStateInitiator.c -o build/glnxa64/GaussianStateInitiator.o",
+    "file": "GaussianStateInitiator.c",
+    "output": "build/glnxa64/GaussianStateInitiator.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  interface/_coder_trackingAlgorithm_api.c -o build/glnxa64/_coder_trackingAlgorithm_api.o",
+    "file": "interface/_coder_trackingAlgorithm_api.c",
+    "output": "build/glnxa64/_coder_trackingAlgorithm_api.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  interface/_coder_trackingAlgorithm_mex.c -o build/glnxa64/_coder_trackingAlgorithm_mex.o",
+    "file": "interface/_coder_trackingAlgorithm_mex.c",
+    "output": "build/glnxa64/_coder_trackingAlgorithm_mex.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  eml_int_forloop_overflow_check.c -o build/glnxa64/eml_int_forloop_overflow_check.o",
+    "file": "eml_int_forloop_overflow_check.c",
+    "output": "build/glnxa64/eml_int_forloop_overflow_check.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  TrackListManager.c -o build/glnxa64/TrackListManager.o",
+    "file": "TrackListManager.c",
+    "output": "build/glnxa64/TrackListManager.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xscal.c -o build/glnxa64/xscal.o",
+    "file": "xscal.c",
+    "output": "build/glnxa64/xscal.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xzlarfg.c -o build/glnxa64/xzlarfg.o",
+    "file": "xzlarfg.c",
+    "output": "build/glnxa64/xzlarfg.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xzlascl.c -o build/glnxa64/xzlascl.o",
+    "file": "xzlascl.c",
+    "output": "build/glnxa64/xzlascl.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xgemv.c -o build/glnxa64/xgemv.o",
+    "file": "xgemv.c",
+    "output": "build/glnxa64/xgemv.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xgerc.c -o build/glnxa64/xgerc.o",
+    "file": "xgerc.c",
+    "output": "build/glnxa64/xgerc.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xzlarf.c -o build/glnxa64/xzlarf.o",
+    "file": "xzlarf.c",
+    "output": "build/glnxa64/xzlarf.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xhseqr.c -o build/glnxa64/xhseqr.o",
+    "file": "xhseqr.c",
+    "output": "build/glnxa64/xhseqr.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xdlanv2.c -o build/glnxa64/xdlanv2.o",
+    "file": "xdlanv2.c",
+    "output": "build/glnxa64/xdlanv2.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xzgebal.c -o build/glnxa64/xzgebal.o",
+    "file": "xzgebal.c",
+    "output": "build/glnxa64/xzgebal.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xswap.c -o build/glnxa64/xswap.o",
+    "file": "xswap.c",
+    "output": "build/glnxa64/xswap.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xdlahqr.c -o build/glnxa64/xdlahqr.o",
+    "file": "xdlahqr.c",
+    "output": "build/glnxa64/xdlahqr.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xpotrf.c -o build/glnxa64/xpotrf.o",
+    "file": "xpotrf.c",
+    "output": "build/glnxa64/xpotrf.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xaxpy.c -o build/glnxa64/xaxpy.o",
+    "file": "xaxpy.c",
+    "output": "build/glnxa64/xaxpy.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xrot.c -o build/glnxa64/xrot.o",
+    "file": "xrot.c",
+    "output": "build/glnxa64/xrot.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  ObjectTrackOutputter.c -o build/glnxa64/ObjectTrackOutputter.o",
+    "file": "ObjectTrackOutputter.c",
+    "output": "build/glnxa64/ObjectTrackOutputter.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  sort.c -o build/glnxa64/sort.o",
+    "file": "sort.c",
+    "output": "build/glnxa64/sort.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  sortIdx.c -o build/glnxa64/sortIdx.o",
+    "file": "sortIdx.c",
+    "output": "build/glnxa64/sortIdx.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  predictStateNonAdditive.c -o build/glnxa64/predictStateNonAdditive.o",
+    "file": "predictStateNonAdditive.c",
+    "output": "build/glnxa64/predictStateNonAdditive.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  EKFCorrectorAdditive.c -o build/glnxa64/EKFCorrectorAdditive.o",
+    "file": "EKFCorrectorAdditive.c",
+    "output": "build/glnxa64/EKFCorrectorAdditive.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  wrapResidual.c -o build/glnxa64/wrapResidual.o",
+    "file": "wrapResidual.c",
+    "output": "build/glnxa64/wrapResidual.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  mrdivide_helper.c -o build/glnxa64/mrdivide_helper.o",
+    "file": "mrdivide_helper.c",
+    "output": "build/glnxa64/mrdivide_helper.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  xzgetrf.c -o build/glnxa64/xzgetrf.o",
+    "file": "xzgetrf.c",
+    "output": "build/glnxa64/xzgetrf.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  lapDijkstra.c -o build/glnxa64/lapDijkstra.o",
+    "file": "lapDijkstra.c",
+    "output": "build/glnxa64/lapDijkstra.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  kbestRemoveUnassigned.c -o build/glnxa64/kbestRemoveUnassigned.o",
+    "file": "kbestRemoveUnassigned.c",
+    "output": "build/glnxa64/kbestRemoveUnassigned.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  JIPDATrackUpdater.c -o build/glnxa64/JIPDATrackUpdater.o",
+    "file": "JIPDATrackUpdater.c",
+    "output": "build/glnxa64/JIPDATrackUpdater.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  trisolve.c -o build/glnxa64/trisolve.o",
+    "file": "trisolve.c",
+    "output": "build/glnxa64/trisolve.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  JIPDATrackInitiator.c -o build/glnxa64/JIPDATrackInitiator.o",
+    "file": "JIPDATrackInitiator.c",
+    "output": "build/glnxa64/JIPDATrackInitiator.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  rotmat.c -o build/glnxa64/rotmat.o",
+    "file": "rotmat.c",
+    "output": "build/glnxa64/rotmat.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  div.c -o build/glnxa64/div.o",
+    "file": "div.c",
+    "output": "build/glnxa64/div.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  normalize.c -o build/glnxa64/normalize.o",
+    "file": "normalize.c",
+    "output": "build/glnxa64/normalize.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  feul2qparts.c -o build/glnxa64/feul2qparts.o",
+    "file": "feul2qparts.c",
+    "output": "build/glnxa64/feul2qparts.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  trackingAlgorithm_emxutil.c -o build/glnxa64/trackingAlgorithm_emxutil.o",
+    "file": "trackingAlgorithm_emxutil.c",
+    "output": "build/glnxa64/trackingAlgorithm_emxutil.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  trackingAlgorithm_mexutil.c -o build/glnxa64/trackingAlgorithm_mexutil.o",
+    "file": "trackingAlgorithm_mexutil.c",
+    "output": "build/glnxa64/trackingAlgorithm_mexutil.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  interface/_coder_trackingAlgorithm_info.c -o build/glnxa64/_coder_trackingAlgorithm_info.o",
+    "file": "interface/_coder_trackingAlgorithm_info.c",
+    "output": "build/glnxa64/_coder_trackingAlgorithm_info.o"
+  },
+  {
+    "directory": "/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises/codegen/mex/trackingAlgorithm",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fno-predictive-commoning -std=c99 -I \".\" -I \"/MATLAB Drive/Repositories/SFTTWorkshop_SI_and_T-6/Exercises\" -I \"./interface\" -I \"/MATLAB/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=trackingAlgorithm_mex -msse2 -fno-predictive-commoning -Wno-stringop-overflow -Wno-maybe-uninitialized -c -fopenmp -DOMPLIBNAME=\"/MATLAB/sys/os/glnxa64/libiomp5.so\"  /MATLAB/extern/version/c_mexapi_version.c -o build/glnxa64/c_mexapi_version.o",
+    "file": "/MATLAB/extern/version/c_mexapi_version.c",
+    "output": "build/glnxa64/c_mexapi_version.o"
+  }
+]
