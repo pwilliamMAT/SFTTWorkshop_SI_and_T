@@ -19,362 +19,290 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ns_emlrtRSI = {
-    82,           /* lineNo */
-    "fusecovint", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pathName
-                                                                          */
-};
-
 static emlrtRSInfo os_emlrtRSI = {
-    106,          /* lineNo */
-    "fusecovint", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pathName
-                                                                          */
+    82,                                               /* lineNo */
+    "fusecovint",                                     /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pathName */
 };
 
 static emlrtRSInfo ps_emlrtRSI = {
-    124,          /* lineNo */
-    "fusecovint", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pathName
-                                                                          */
+    106,                                              /* lineNo */
+    "fusecovint",                                     /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pathName */
 };
 
 static emlrtRSInfo qs_emlrtRSI = {
-    136,          /* lineNo */
-    "fusecovint", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pathName
-                                                                          */
+    124,                                              /* lineNo */
+    "fusecovint",                                     /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pathName */
 };
 
 static emlrtRSInfo rs_emlrtRSI = {
-    142,          /* lineNo */
-    "fusecovint", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pathName
-                                                                          */
+    136,                                              /* lineNo */
+    "fusecovint",                                     /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pathName */
 };
 
 static emlrtRSInfo ss_emlrtRSI = {
-    150,          /* lineNo */
-    "fusecovint", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pathName
-                                                                          */
+    142,                                              /* lineNo */
+    "fusecovint",                                     /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pathName */
 };
 
 static emlrtRSInfo ts_emlrtRSI = {
-    154,          /* lineNo */
-    "fusecovint", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pathName
-                                                                          */
+    150,                                              /* lineNo */
+    "fusecovint",                                     /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pathName */
 };
 
 static emlrtRSInfo us_emlrtRSI = {
-    160,          /* lineNo */
-    "fusecovint", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pathName
-                                                                          */
+    154,                                              /* lineNo */
+    "fusecovint",                                     /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pathName */
 };
 
-static emlrtRSInfo ys_emlrtRSI =
-    {
-        74,               /* lineNo */
-        "validatestring", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\lang\\validatestring"
-        ".m" /* pathName */
+static emlrtRSInfo vs_emlrtRSI = {
+    160,                                              /* lineNo */
+    "fusecovint",                                     /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pathName */
 };
 
-static emlrtRSInfo at_emlrtRSI =
-    {
-        111,                  /* lineNo */
-        "fullValidatestring", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\lang\\validatestring"
-        ".m" /* pathName */
+static emlrtRSInfo at_emlrtRSI = {
+    74,                                                    /* lineNo */
+    "validatestring",                                      /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/lang/validatestring.m" /* pathName */
 };
 
-static emlrtRSInfo bt_emlrtRSI =
-    {
-        164,         /* lineNo */
-        "get_match", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\lang\\validatestring"
-        ".m" /* pathName */
+static emlrtRSInfo bt_emlrtRSI = {
+    111,                                                   /* lineNo */
+    "fullValidatestring",                                  /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/lang/validatestring.m" /* pathName */
 };
 
 static emlrtRSInfo ct_emlrtRSI = {
-    41,    /* lineNo */
-    "cat", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\cat.m" /* pathName
-                                                                          */
+    164,                                                   /* lineNo */
+    "get_match",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/lang/validatestring.m" /* pathName */
 };
 
-static emlrtRTEInfo wb_emlrtRTEI =
-    {
-        131,                  /* lineNo */
-        9,                    /* colNo */
-        "fullValidatestring", /* fName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\lang\\validatestring"
-        ".m" /* pName */
+static emlrtRSInfo dt_emlrtRSI = {
+    41,                                              /* lineNo */
+    "cat",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/cat.m" /* pathName */
+};
+
+static emlrtRTEInfo wb_emlrtRTEI = {
+    131,                                                   /* lineNo */
+    9,                                                     /* colNo */
+    "fullValidatestring",                                  /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/lang/validatestring.m" /* pName */
 };
 
 static emlrtBCInfo yf_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    160,          /* lineNo */
-    102,          /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    160,                                               /* lineNo */
+    102,                                               /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo ag_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    160,          /* lineNo */
-    76,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    160,                                               /* lineNo */
+    76,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo bg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    160,          /* lineNo */
-    54,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    160,                                               /* lineNo */
+    54,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo cg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    150,          /* lineNo */
-    70,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    150,                                               /* lineNo */
+    70,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo dg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    150,          /* lineNo */
-    48,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    150,                                               /* lineNo */
+    48,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo eg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    124,          /* lineNo */
-    48,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    124,                                               /* lineNo */
+    48,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo fg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    119,          /* lineNo */
-    50,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    119,                                               /* lineNo */
+    50,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo gg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    119,          /* lineNo */
-    23,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    119,                                               /* lineNo */
+    23,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo hg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    132,          /* lineNo */
-    23,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    132,                                               /* lineNo */
+    23,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo ig_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    132,          /* lineNo */
-    7,            /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    132,                                               /* lineNo */
+    7,                                                 /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo jg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    132,          /* lineNo */
-    9,            /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    132,                                               /* lineNo */
+    9,                                                 /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo kg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    133,          /* lineNo */
-    28,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    133,                                               /* lineNo */
+    28,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo lg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    133,          /* lineNo */
-    7,            /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    133,                                               /* lineNo */
+    7,                                                 /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo mg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    133,          /* lineNo */
-    9,            /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    133,                                               /* lineNo */
+    9,                                                 /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtBCInfo ng_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    124,          /* lineNo */
-    23,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
+    -1,                                                /* iFirst */
+    -1,                                                /* iLast */
+    124,                                               /* lineNo */
+    23,                                                /* colNo */
+    "",                                                /* aName */
+    "fusecovint",                                      /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtRTEInfo xf_emlrtRTEI = {
-    112,          /* lineNo */
-    1,            /* colNo */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pName
-                                                                          */
+    112,                                              /* lineNo */
+    1,                                                /* colNo */
+    "fusecovint",                                     /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pName */
 };
 
 static emlrtRTEInfo yf_emlrtRTEI = {
-    112,          /* lineNo */
-    13,           /* colNo */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pName
-                                                                          */
+    112,                                              /* lineNo */
+    13,                                               /* colNo */
+    "fusecovint",                                     /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pName */
 };
 
 static emlrtRTEInfo ag_emlrtRTEI = {
-    129,          /* lineNo */
-    1,            /* colNo */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pName
-                                                                          */
+    129,                                              /* lineNo */
+    1,                                                /* colNo */
+    "fusecovint",                                     /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pName */
 };
 
 static emlrtRTEInfo bg_emlrtRTEI = {
-    245,   /* lineNo */
-    14,    /* colNo */
-    "cat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\cat.m" /* pName
-                                                                          */
+    245,                                             /* lineNo */
+    14,                                              /* colNo */
+    "cat",                                           /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/cat.m" /* pName */
 };
 
 static emlrtRTEInfo cg_emlrtRTEI = {
-    139,          /* lineNo */
-    3,            /* colNo */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pName
-                                                                          */
+    139,                                              /* lineNo */
+    3,                                                /* colNo */
+    "fusecovint",                                     /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pName */
 };
 
 static emlrtRTEInfo dg_emlrtRTEI = {
-    142,          /* lineNo */
-    1,            /* colNo */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m" /* pName
-                                                                          */
+    142,                                              /* lineNo */
+    1,                                                /* colNo */
+    "fusecovint",                                     /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/fusecovint.m" /* pName */
 };
 
 /* Function Definitions */
@@ -451,7 +379,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
   trackCov_data = trackCov->data;
   trackState_data = trackState->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &ns_emlrtRSI;
+  st.site = &os_emlrtRSI;
   validateCovFusion(&st, trackState, trackCov);
   if (trackCov->size[2] == 1) {
     for (i = 0; i < 6; i++) {
@@ -462,23 +390,23 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       }
     }
   } else {
-    st.site = &os_emlrtRSI;
-    b_st.site = &ys_emlrtRSI;
-    c_st.site = &at_emlrtRSI;
+    st.site = &ps_emlrtRSI;
+    b_st.site = &at_emlrtRSI;
+    c_st.site = &bt_emlrtRSI;
     partial_match_size_idx_1 = 3;
     partial_match_data[0] = ' ';
     partial_match_data[1] = ' ';
     partial_match_data[2] = ' ';
     nmatched = 0;
-    d_st.site = &bt_emlrtRSI;
-    e_st.site = &jg_emlrtRSI;
-    f_st.site = &kg_emlrtRSI;
+    d_st.site = &ct_emlrtRSI;
+    e_st.site = &kg_emlrtRSI;
+    f_st.site = &lg_emlrtRSI;
     isodd = false;
     fusedCov_tmp = 0;
     do {
       exitg1 = 0;
       if (fusedCov_tmp < 5) {
-        g_st.site = &lg_emlrtRSI;
+        g_st.site = &mg_emlrtRSI;
         u = (uint8_T)minProp[fusedCov_tmp];
         if (u > 127) {
           emlrtErrorWithMessageIdR2018a(
@@ -502,15 +430,15 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       }
       nmatched = 1;
     }
-    d_st.site = &bt_emlrtRSI;
-    e_st.site = &jg_emlrtRSI;
-    f_st.site = &kg_emlrtRSI;
+    d_st.site = &ct_emlrtRSI;
+    e_st.site = &kg_emlrtRSI;
+    f_st.site = &lg_emlrtRSI;
     isodd = false;
     fusedCov_tmp = 0;
     do {
       exitg1 = 0;
       if (fusedCov_tmp < 5) {
-        g_st.site = &lg_emlrtRSI;
+        g_st.site = &mg_emlrtRSI;
         u = (uint8_T)minProp[fusedCov_tmp];
         if (u > 127) {
           emlrtErrorWithMessageIdR2018a(
@@ -643,7 +571,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       CovMatrix->size[1] = trackCov->size[2];
       emxEnsureCapacity_real_T(sp, CovMatrix, fusedCov_tmp, &yf_emlrtRTEI);
       CovMatrix_data = CovMatrix->data;
-      if (trackCov->size[2] * 6 < 800) {
+      if (trackCov->size[2] * 6 < 1600) {
         for (c_i = 0; c_i < partial_match_size_idx_1; c_i++) {
           if (c_i + 1 > partial_match_size_idx_1) {
             emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, partial_match_size_idx_1,
@@ -711,16 +639,16 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       emxEnsureCapacity_real_T(sp, CovMatrix, fusedCov_tmp, &yf_emlrtRTEI);
       CovMatrix_data = CovMatrix->data;
       for (b_i = 0; b_i < partial_match_size_idx_1; b_i++) {
-        st.site = &ps_emlrtRSI;
+        st.site = &qs_emlrtRSI;
         if (b_i + 1 > partial_match_size_idx_1) {
           emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, partial_match_size_idx_1,
                                         &eg_emlrtBCI, &st);
         }
-        b_st.site = &kl_emlrtRSI;
+        b_st.site = &ll_emlrtRSI;
         for (i = 0; i < 36; i++) {
           initialFusedCov[i] = trackCov_data[i + b_i * 36];
         }
-        c_st.site = &cl_emlrtRSI;
+        c_st.site = &dl_emlrtRSI;
         xzgetrf(&c_st, initialFusedCov, ipiv);
         y = initialFusedCov[0];
         isodd = false;
@@ -780,9 +708,9 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       A_data[i + A->size[0] * (i + 1)] = -CovMatrix_data[i + 1];
     }
     emxFree_real_T(sp, &CovMatrix);
-    st.site = &qs_emlrtRSI;
-    b_st.site = &ct_emlrtRSI;
-    c_st.site = &br_emlrtRSI;
+    st.site = &rs_emlrtRSI;
+    b_st.site = &dt_emlrtRSI;
+    c_st.site = &cr_emlrtRSI;
     if (A->size[1] != trackCov->size[2]) {
       emlrtErrorWithMessageIdR2018a(
           &c_st, &ob_emlrtRTEI, "MATLAB:catenate:matrixDimensionMismatch",
@@ -813,7 +741,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
     }
     CovMatrix_data[trackCov->size[2] - 1] = 1.0;
     emxInit_real_T(sp, &Weight, 1, &dg_emlrtRTEI);
-    st.site = &rs_emlrtRSI;
+    st.site = &ss_emlrtRSI;
     mldivide(&st, b_A, r, Weight);
     CovMatrix_data = Weight->data;
     emxFree_real_T(sp, &r);
@@ -828,7 +756,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, partial_match_size_idx_1,
                                       &cg_emlrtBCI, (emlrtConstCTX)sp);
       }
-      st.site = &ss_emlrtRSI;
+      st.site = &ts_emlrtRSI;
       b_mldivide(&st, &trackCov_data[36 * i], b);
       for (b_i = 0; b_i <= 34; b_i += 2) {
         r1 = _mm_loadu_pd(&b[b_i]);
@@ -838,7 +766,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
             _mm_add_pd(r2, _mm_mul_pd(_mm_set1_pd(CovMatrix_data[i]), r1)));
       }
     }
-    st.site = &ts_emlrtRSI;
+    st.site = &us_emlrtRSI;
     b_mldivide(&st, initialFusedCov, fusedCov);
     for (i = 0; i < 6; i++) {
       initialFusedState[i] = 0.0;
@@ -852,7 +780,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, partial_match_size_idx_1,
                                       &ag_emlrtBCI, (emlrtConstCTX)sp);
       }
-      st.site = &us_emlrtRSI;
+      st.site = &vs_emlrtRSI;
       b_mldivide(&st, &trackCov_data[36 * i], b);
       if (i + 1 > trackState->size[1]) {
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, trackState->size[1],

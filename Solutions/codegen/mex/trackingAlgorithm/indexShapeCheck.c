@@ -10,21 +10,17 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo dp_emlrtRSI = {
-    42,                /* lineNo */
-    "indexShapeCheck", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\indexShapeCheck.m" /* pathName */
+static emlrtRSInfo ep_emlrtRSI = {
+    42,                                                          /* lineNo */
+    "indexShapeCheck",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/indexShapeCheck.m" /* pathName */
 };
 
 static emlrtRTEInfo k_emlrtRTEI = {
-    122,           /* lineNo */
-    5,             /* colNo */
-    "errOrWarnIf", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\indexShapeCheck.m" /* pName */
+    122,                                                         /* lineNo */
+    5,                                                           /* colNo */
+    "errOrWarnIf",                                               /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/indexShapeCheck.m" /* pName */
 };
 
 /* Function Definitions */
@@ -40,7 +36,7 @@ void b_indexShapeCheck(const emlrtStack *sp, int32_T matrixSize,
   } else {
     c = false;
   }
-  st.site = &dp_emlrtRSI;
+  st.site = &ep_emlrtRSI;
   if (c) {
     emlrtErrorWithMessageIdR2018a(&st, &k_emlrtRTEI,
                                   "Coder:FE:PotentialVectorVector",
@@ -57,7 +53,7 @@ void indexShapeCheck(const emlrtStack *sp, int32_T matrixSize)
   emlrtStack st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &dp_emlrtRSI;
+  st.site = &ep_emlrtRSI;
   if (matrixSize == 1) {
     emlrtErrorWithMessageIdR2018a(&st, &k_emlrtRTEI,
                                   "Coder:FE:PotentialVectorVector",

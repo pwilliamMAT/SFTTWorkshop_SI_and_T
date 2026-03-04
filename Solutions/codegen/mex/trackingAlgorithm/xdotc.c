@@ -12,37 +12,28 @@
 #include "trackingAlgorithm_data.h"
 
 /* Variable Definitions */
-static emlrtRSInfo md_emlrtRSI = {
-    32,      /* lineNo */
-    "xdotc", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+blas\\xdotc."
-    "m" /* pathName */
-};
-
-static emlrtRSInfo nd_emlrtRSI =
-    {
-        35,     /* lineNo */
-        "xdot", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-        "blas\\xdot.m" /* pathName */
+static emlrtRSInfo nd_emlrtRSI = {
+    32,                                                      /* lineNo */
+    "xdotc",                                                 /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+blas/xdotc.m" /* pathName */
 };
 
 static emlrtRSInfo od_emlrtRSI = {
-    15,     /* lineNo */
-    "xdot", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "refblas\\xdot.m" /* pathName */
+    35,                                                     /* lineNo */
+    "xdot",                                                 /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+blas/xdot.m" /* pathName */
 };
 
 static emlrtRSInfo pd_emlrtRSI = {
-    42,      /* lineNo */
-    "xdotx", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "refblas\\xdotx.m" /* pathName */
+    15,                                                        /* lineNo */
+    "xdot",                                                    /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+refblas/xdot.m" /* pathName */
+};
+
+static emlrtRSInfo qd_emlrtRSI = {
+    42,                                                         /* lineNo */
+    "xdotx",                                                    /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+refblas/xdotx.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -66,13 +57,13 @@ real_T b_xdotc(const emlrtStack *sp, int32_T n, const real_T x[9], int32_T ix0,
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &md_emlrtRSI;
-  b_st.site = &nd_emlrtRSI;
-  c_st.site = &od_emlrtRSI;
+  st.site = &nd_emlrtRSI;
+  b_st.site = &od_emlrtRSI;
+  c_st.site = &pd_emlrtRSI;
   d = 0.0;
   if (n >= 1) {
     int32_T i;
-    d_st.site = &pd_emlrtRSI;
+    d_st.site = &qd_emlrtRSI;
     if (n > 2147483646) {
       e_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -105,13 +96,13 @@ real_T c_xdotc(const emlrtStack *sp, int32_T n, const real_T x[16], int32_T ix0,
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &md_emlrtRSI;
-  b_st.site = &nd_emlrtRSI;
-  c_st.site = &od_emlrtRSI;
+  st.site = &nd_emlrtRSI;
+  b_st.site = &od_emlrtRSI;
+  c_st.site = &pd_emlrtRSI;
   d = 0.0;
   if (n >= 1) {
     int32_T i;
-    d_st.site = &pd_emlrtRSI;
+    d_st.site = &qd_emlrtRSI;
     if (n > 2147483646) {
       e_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -144,13 +135,13 @@ real_T xdotc(const emlrtStack *sp, int32_T n, const real_T x[36], int32_T ix0,
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &md_emlrtRSI;
-  b_st.site = &nd_emlrtRSI;
-  c_st.site = &od_emlrtRSI;
+  st.site = &nd_emlrtRSI;
+  b_st.site = &od_emlrtRSI;
+  c_st.site = &pd_emlrtRSI;
   d = 0.0;
   if (n >= 1) {
     int32_T i;
-    d_st.site = &pd_emlrtRSI;
+    d_st.site = &qd_emlrtRSI;
     if (n > 2147483646) {
       e_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&e_st);

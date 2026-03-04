@@ -30,8 +30,7 @@ void mexFunction(int32_T nlhs, mxArray *plhs[], int32_T nrhs,
   c_trackingAlgorithmStackDataGlo = (trackingAlgorithmStackData *)emlrtMxCalloc(
       (size_t)1, (size_t)1U * sizeof(trackingAlgorithmStackData));
   mexAtExit(&trackingAlgorithm_atexit);
-  emlrtLoadLibrary("C:\\ProgramData\\MATLAB\\SupportPackages\\R2025b\\3P."
-                   "instrset\\mingw_w64.instrset\\bin\\libgomp-1.dll");
+  emlrtLoadMATLABLibrary("sys/os/glnxa64/libiomp5.so");
   /* Initialize the memory manager. */
   omp_init_lock(&emlrtLockGlobal);
   omp_init_nest_lock(&trackingAlgorithm_nestLockGlobal);
@@ -56,7 +55,7 @@ emlrtCTX mexFunctionCreateRootTLS(void)
 {
   emlrtCreateRootTLSR2022a(&emlrtRootTLSGlobal, &emlrtContextGlobal,
                            &emlrtLockerFunction, omp_get_num_procs(), NULL,
-                           "windows-1252", true);
+                           "UTF-8", true);
   return emlrtRootTLSGlobal;
 }
 

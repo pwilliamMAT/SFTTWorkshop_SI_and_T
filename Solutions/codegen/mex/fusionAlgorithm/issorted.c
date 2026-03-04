@@ -13,34 +13,22 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo
-    qp_emlrtRSI =
-        {
-            74,         /* lineNo */
-            "issorted", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\issorte"
-            "d.m" /* pathName */
+static emlrtRSInfo rp_emlrtRSI = {
+    74,                                                 /* lineNo */
+    "issorted",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/issorted.m" /* pathName */
 };
 
-static emlrtRSInfo
-    rp_emlrtRSI =
-        {
-            112,      /* lineNo */
-            "looper", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\issorte"
-            "d.m" /* pathName */
+static emlrtRSInfo sp_emlrtRSI = {
+    112,                                                /* lineNo */
+    "looper",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/issorted.m" /* pathName */
 };
 
-static emlrtRSInfo
-    sp_emlrtRSI =
-        {
-            95,       /* lineNo */
-            "looper", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\issorte"
-            "d.m" /* pathName */
+static emlrtRSInfo tp_emlrtRSI = {
+    95,                                                 /* lineNo */
+    "looper",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/issorted.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -77,25 +65,25 @@ boolean_T issorted(const emlrtStack *sp, const emxArray_uint32_T *x)
     if (n != 1) {
       int32_T i;
       boolean_T exitg1;
-      st.site = &qp_emlrtRSI;
+      st.site = &rp_emlrtRSI;
       if (dim == 2) {
         i = -1;
       } else {
         i = 0;
       }
-      b_st.site = &sp_emlrtRSI;
+      b_st.site = &tp_emlrtRSI;
       n = 0;
       exitg1 = false;
       while ((!exitg1) && (n <= i)) {
         int32_T k;
         boolean_T exitg2;
-        b_st.site = &rp_emlrtRSI;
+        b_st.site = &sp_emlrtRSI;
         if (dim == 1) {
           n = x->size[0] - 1;
         } else {
           n = x->size[0];
         }
-        c_st.site = &sp_emlrtRSI;
+        c_st.site = &tp_emlrtRSI;
         if (n > 2147483646) {
           d_st.site = &tb_emlrtRSI;
           check_forloop_overflow_error(&d_st);

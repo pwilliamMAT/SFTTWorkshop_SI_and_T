@@ -17,50 +17,50 @@
 #include <math.h>
 
 /* Variable Definitions */
-static emlrtRSInfo vs_emlrtRSI = {
-    15,                  /* lineNo */
-    "validateCovFusion", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\validateCovFusion.m" /* pathName */
+static emlrtRSInfo ws_emlrtRSI =
+    {
+        15,                  /* lineNo */
+        "validateCovFusion", /* fcnName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "validateCovFusion.m" /* pathName */
 };
 
-static emlrtRSInfo ws_emlrtRSI = {
-    16,                  /* lineNo */
-    "validateCovFusion", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\validateCovFusion.m" /* pathName */
+static emlrtRSInfo xs_emlrtRSI =
+    {
+        16,                  /* lineNo */
+        "validateCovFusion", /* fcnName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "validateCovFusion.m" /* pathName */
 };
 
-static emlrtRSInfo xs_emlrtRSI = {
-    24,                  /* lineNo */
-    "validateCovFusion", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\validateCovFusion.m" /* pathName */
+static emlrtRSInfo ys_emlrtRSI =
+    {
+        24,                  /* lineNo */
+        "validateCovFusion", /* fcnName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "validateCovFusion.m" /* pathName */
 };
 
-static emlrtBCInfo og_emlrtBCI = {
-    -1,                  /* iFirst */
-    -1,                  /* iLast */
-    24,                  /* lineNo */
-    86,                  /* colNo */
-    "",                  /* aName */
-    "validateCovFusion", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\validateCovFusion.m", /* pName */
-    0                                /* checkKind */
+static emlrtBCInfo og_emlrtBCI =
+    {
+        -1,                  /* iFirst */
+        -1,                  /* iLast */
+        24,                  /* lineNo */
+        86,                  /* colNo */
+        "",                  /* aName */
+        "validateCovFusion", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "validateCovFusion.m", /* pName */
+        0                      /* checkKind */
 };
 
-static emlrtRTEInfo xb_emlrtRTEI = {
-    21,                  /* lineNo */
-    41,                  /* colNo */
-    "validateCovFusion", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\validateCovFusion.m" /* pName */
+static emlrtRTEInfo xb_emlrtRTEI =
+    {
+        21,                  /* lineNo */
+        41,                  /* colNo */
+        "validateCovFusion", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "validateCovFusion.m" /* pName */
 };
 
 /* Function Definitions */
@@ -88,7 +88,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
   b_st.tls = st.tls;
   p_data = p->data;
   x_data = x->data;
-  st.site = &vs_emlrtRSI;
+  st.site = &ws_emlrtRSI;
   b_st.site = &gb_emlrtRSI;
   b_p = true;
   notSymmetric_tmp_tmp = 6 * x->size[1];
@@ -109,7 +109,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
         "MATLAB:fusecovint:expectedFinite", 3, 4, 27,
         "input number 1, trackState,");
   }
-  st.site = &ws_emlrtRSI;
+  st.site = &xs_emlrtRSI;
   b_st.site = &gb_emlrtRSI;
   b_p = true;
   notSymmetric_tmp_tmp = 36 * p->size[2];
@@ -148,7 +148,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
     boolean_T b_y[36];
     boolean_T c_x[6];
     boolean_T notPositiveSemidefinite;
-    st.site = &xs_emlrtRSI;
+    st.site = &ys_emlrtRSI;
     if (b_i + 1 > i) {
       emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, i, &og_emlrtBCI, &st);
     }

@@ -16,20 +16,18 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ux_emlrtRSI = {
+static emlrtRSInfo wx_emlrtRSI = {
     61,                                        /* lineNo */
     "CompositeFieldOfViewModel/detectability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "detectability\\CompositeFieldOfViewModel.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+detectability/"
+    "CompositeFieldOfViewModel.m" /* pathName */
 };
 
-static emlrtRSInfo vx_emlrtRSI = {
+static emlrtRSInfo xx_emlrtRSI = {
     62,                                        /* lineNo */
     "CompositeFieldOfViewModel/detectability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "detectability\\CompositeFieldOfViewModel.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+detectability/"
+    "CompositeFieldOfViewModel.m" /* pathName */
 };
 
 static emlrtBCInfo ad_emlrtBCI = {
@@ -39,10 +37,9 @@ static emlrtBCInfo ad_emlrtBCI = {
     55,                                        /* colNo */
     "",                                        /* aName */
     "CompositeFieldOfViewModel/detectability", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "detectability\\CompositeFieldOfViewModel.m", /* pName */
-    0                                             /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+detectability/"
+    "CompositeFieldOfViewModel.m", /* pName */
+    0                              /* checkKind */
 };
 
 /* Function Definitions */
@@ -65,7 +62,7 @@ real_T c_CompositeFieldOfViewModel_det(
   b_st.prev = &st;
   b_st.tls = st.tls;
   Pmiss = 1.0;
-  st.site = &ux_emlrtRSI;
+  st.site = &wx_emlrtRSI;
   if (model_NumModels > 2147483646) {
     b_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&b_st);
@@ -84,7 +81,7 @@ real_T c_CompositeFieldOfViewModel_det(
     real_T elevation;
     real_T rr;
     real_T xP_tmp;
-    st.site = &vx_emlrtRSI;
+    st.site = &xx_emlrtRSI;
     if (i > 107) {
       emlrtDynamicBoundsCheckR2012b(i, 0, 107, &ad_emlrtBCI, &st);
     }

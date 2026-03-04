@@ -14,32 +14,23 @@
 #include "trackingAlgorithm_types.h"
 
 /* Variable Definitions */
-static emlrtRSInfo jdb_emlrtRSI =
-    {
-        162,                            /* lineNo */
-        "eml_integer_colon_dispatcher", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\colon.m" /* pathName
-                                                                          */
+static emlrtRSInfo ldb_emlrtRSI = {
+    162,                                         /* lineNo */
+    "eml_integer_colon_dispatcher",              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/colon.m" /* pathName */
 };
 
-static emlrtRSInfo kdb_emlrtRSI =
-    {
-        190,                        /* lineNo */
-        "eml_signed_integer_colon", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\colon.m" /* pathName
-                                                                          */
+static emlrtRSInfo mdb_emlrtRSI = {
+    190,                                         /* lineNo */
+    "eml_signed_integer_colon",                  /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/colon.m" /* pathName */
 };
 
-static emlrtRTEInfo re_emlrtRTEI =
-    {
-        186,     /* lineNo */
-        20,      /* colNo */
-        "colon", /* fName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\colon.m" /* pName
-                                                                          */
+static emlrtRTEInfo re_emlrtRTEI = {
+    186,                                         /* lineNo */
+    20,                                          /* colNo */
+    "colon",                                     /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/colon.m" /* pName */
 };
 
 /* Function Definitions */
@@ -59,7 +50,7 @@ void eml_integer_colon_dispatcher(const emlrtStack *sp, int32_T b,
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &jdb_emlrtRSI;
+  st.site = &ldb_emlrtRSI;
   if (b < 1) {
     n = 0;
   } else {
@@ -73,7 +64,7 @@ void eml_integer_colon_dispatcher(const emlrtStack *sp, int32_T b,
   if (n > 0) {
     y_data[0] = 1;
     yk = 1;
-    b_st.site = &kdb_emlrtRSI;
+    b_st.site = &mdb_emlrtRSI;
     if (n > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);

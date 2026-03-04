@@ -8,6 +8,7 @@
 /* Include files */
 #include "JIPDATrackAssigner.h"
 #include "AerospaceMonostaticRadar.h"
+#include "MultiModalEstimator.h"
 #include "TrackEstimator1.h"
 #include "computeLikelihoodByIndex.h"
 #include "connectedTracks.h"
@@ -26,219 +27,200 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo hp_emlrtRSI = {
+static emlrtRSInfo ip_emlrtRSI = {
     93,                          /* lineNo */
     "JIPDATrackAssigner/assign", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
-};
-
-static emlrtRSInfo ip_emlrtRSI = {
-    90,                          /* lineNo */
-    "JIPDATrackAssigner/assign", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo jp_emlrtRSI = {
-    81,                          /* lineNo */
+    90,                          /* lineNo */
     "JIPDATrackAssigner/assign", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo kp_emlrtRSI = {
-    72,                          /* lineNo */
+    81,                          /* lineNo */
     "JIPDATrackAssigner/assign", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo lp_emlrtRSI = {
-    62,                          /* lineNo */
+    72,                          /* lineNo */
     "JIPDATrackAssigner/assign", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo mp_emlrtRSI = {
-    61,                          /* lineNo */
+    62,                          /* lineNo */
     "JIPDATrackAssigner/assign", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo np_emlrtRSI = {
-    60,                          /* lineNo */
+    61,                          /* lineNo */
     "JIPDATrackAssigner/assign", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo op_emlrtRSI = {
-    52,                          /* lineNo */
+    60,                          /* lineNo */
     "JIPDATrackAssigner/assign", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo pp_emlrtRSI = {
-    46,                          /* lineNo */
+    52,                          /* lineNo */
     "JIPDATrackAssigner/assign", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo qp_emlrtRSI = {
-    111,                                          /* lineNo */
-    "JIPDATrackAssigner/computeLikelihoodMatrix", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    46,                          /* lineNo */
+    "JIPDATrackAssigner/assign", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo rp_emlrtRSI = {
-    112,                                          /* lineNo */
+    111,                                          /* lineNo */
     "JIPDATrackAssigner/computeLikelihoodMatrix", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo sp_emlrtRSI = {
-    114,                                          /* lineNo */
+    112,                                          /* lineNo */
     "JIPDATrackAssigner/computeLikelihoodMatrix", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo tp_emlrtRSI = {
-    119,                                          /* lineNo */
+    114,                                          /* lineNo */
     "JIPDATrackAssigner/computeLikelihoodMatrix", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo up_emlrtRSI = {
-    121,                                          /* lineNo */
+    119,                                          /* lineNo */
     "JIPDATrackAssigner/computeLikelihoodMatrix", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
-static emlrtRSInfo jq_emlrtRSI = {
-    132,                                        /* lineNo */
-    "JIPDATrackAssigner/singleModelLikelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+static emlrtRSInfo vp_emlrtRSI = {
+    121,                                          /* lineNo */
+    "JIPDATrackAssigner/computeLikelihoodMatrix", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo kq_emlrtRSI = {
-    143,                                        /* lineNo */
+    132,                                        /* lineNo */
     "JIPDATrackAssigner/singleModelLikelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
-static emlrtRSInfo dt_emlrtRSI = {
-    9,                          /* lineNo */
-    "computeLikelihoodByIndex", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m" /* pathName */
+static emlrtRSInfo lq_emlrtRSI = {
+    143,                                        /* lineNo */
+    "JIPDATrackAssigner/singleModelLikelihood", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
 static emlrtRSInfo et_emlrtRSI = {
-    16,                         /* lineNo */
+    9,                          /* lineNo */
     "computeLikelihoodByIndex", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m" /* pathName */
 };
 
 static emlrtRSInfo ft_emlrtRSI = {
-    19,                         /* lineNo */
+    16,                         /* lineNo */
     "computeLikelihoodByIndex", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m" /* pathName */
 };
 
 static emlrtRSInfo gt_emlrtRSI = {
-    23,                         /* lineNo */
+    19,                         /* lineNo */
     "computeLikelihoodByIndex", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m" /* pathName */
 };
 
 static emlrtRSInfo ht_emlrtRSI = {
+    23,                         /* lineNo */
+    "computeLikelihoodByIndex", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m" /* pathName */
+};
+
+static emlrtRSInfo it_emlrtRSI = {
     25,                         /* lineNo */
     "computeLikelihoodByIndex", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m" /* pathName */
 };
 
-static emlrtRSInfo nt_emlrtRSI = {
+static emlrtRSInfo pt_emlrtRSI = {
     27,                                        /* lineNo */
     "TrackEstimator/get.SensorSpecifications", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\TrackEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "TrackEstimator.m" /* pathName */
 };
 
-static emlrtRSInfo pcb_emlrtRSI = {
+static emlrtRSInfo qt_emlrtRSI = {
+    92,                                    /* lineNo */
+    "TrackEstimator/likelihoodUnassigned", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "TrackEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo rt_emlrtRSI = {
+    93,                                    /* lineNo */
+    "TrackEstimator/likelihoodUnassigned", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "TrackEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo qx_emlrtRSI = {
+    107,                                  /* lineNo */
+    "IPDAEstimator/likelihoodUnassigned", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "IPDAEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo rx_emlrtRSI = {
+    108,                                  /* lineNo */
+    "IPDAEstimator/likelihoodUnassigned", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "IPDAEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo rcb_emlrtRSI = {
     160,                                                    /* lineNo */
     "JIPDATrackAssigner/measurementVaryingModelLikelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pathName */
 };
 
-static emlrtRSInfo qcb_emlrtRSI = {
+static emlrtRSInfo scb_emlrtRSI = {
     12,                         /* lineNo */
     "computeLikelihoodByIndex", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m" /* pathName */
 };
 
 static emlrtECInfo b_emlrtECI = {
@@ -246,10 +228,8 @@ static emlrtECInfo b_emlrtECI = {
     82,                          /* lineNo */
     21,                          /* colNo */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtECInfo c_emlrtECI = {
@@ -257,10 +237,8 @@ static emlrtECInfo c_emlrtECI = {
     90,                          /* lineNo */
     13,                          /* colNo */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtBCInfo hb_emlrtBCI = {
@@ -270,11 +248,9 @@ static emlrtBCInfo hb_emlrtBCI = {
     24,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo ib_emlrtBCI = {
@@ -284,11 +260,9 @@ static emlrtBCInfo ib_emlrtBCI = {
     60,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtECInfo d_emlrtECI = {
@@ -296,10 +270,8 @@ static emlrtECInfo d_emlrtECI = {
     76,                          /* lineNo */
     21,                          /* colNo */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtECInfo e_emlrtECI = {
@@ -307,10 +279,8 @@ static emlrtECInfo e_emlrtECI = {
     75,                          /* lineNo */
     21,                          /* colNo */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtBCInfo jb_emlrtBCI = {
@@ -320,11 +290,9 @@ static emlrtBCInfo jb_emlrtBCI = {
     62,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo kb_emlrtBCI = {
@@ -334,11 +302,9 @@ static emlrtBCInfo kb_emlrtBCI = {
     76,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo lb_emlrtBCI = {
@@ -348,106 +314,90 @@ static emlrtBCInfo lb_emlrtBCI = {
     42,                         /* colNo */
     "",                         /* aName */
     "computeLikelihoodByIndex", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo mb_emlrtBCI = {
     -1,                         /* iFirst */
     -1,                         /* iLast */
     19,                         /* lineNo */
-    71,                         /* colNo */
+    55,                         /* colNo */
     "",                         /* aName */
     "computeLikelihoodByIndex", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo nb_emlrtBCI = {
+    -1,                         /* iFirst */
+    -1,                         /* iLast */
+    19,                         /* lineNo */
+    71,                         /* colNo */
+    "",                         /* aName */
+    "computeLikelihoodByIndex", /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m", /* pName */
+    0                             /* checkKind */
+};
+
+static emlrtBCInfo ob_emlrtBCI = {
     -1,                         /* iFirst */
     -1,                         /* iLast */
     23,                         /* lineNo */
     54,                         /* colNo */
     "",                         /* aName */
     "computeLikelihoodByIndex", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m", /* pName */
+    0                             /* checkKind */
 };
 
-static emlrtBCInfo ob_emlrtBCI = {
+static emlrtBCInfo pb_emlrtBCI = {
     -1,                          /* iFirst */
     -1,                          /* iLast */
     88,                          /* lineNo */
     13,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
-static emlrtBCInfo pb_emlrtBCI = {
+static emlrtBCInfo qb_emlrtBCI = {
     -1,                          /* iFirst */
     -1,                          /* iLast */
     89,                          /* lineNo */
     13,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtDCInfo b_emlrtDCI = {
     140,                                        /* lineNo */
     37,                                         /* colNo */
     "JIPDATrackAssigner/singleModelLikelihood", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    1    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    1                       /* checkKind */
 };
 
-static emlrtBCInfo qb_emlrtBCI = {
+static emlrtBCInfo rb_emlrtBCI = {
     -1,                                         /* iFirst */
     -1,                                         /* iLast */
     143,                                        /* lineNo */
     28,                                         /* colNo */
     "",                                         /* aName */
     "JIPDATrackAssigner/singleModelLikelihood", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
-};
-
-static emlrtBCInfo rb_emlrtBCI = {
-    -1,                         /* iFirst */
-    -1,                         /* iLast */
-    19,                         /* lineNo */
-    55,                         /* colNo */
-    "",                         /* aName */
-    "computeLikelihoodByIndex", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo sb_emlrtBCI = {
@@ -457,11 +407,9 @@ static emlrtBCInfo sb_emlrtBCI = {
     39,                         /* colNo */
     "",                         /* aName */
     "computeLikelihoodByIndex", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo tb_emlrtBCI = {
@@ -471,11 +419,9 @@ static emlrtBCInfo tb_emlrtBCI = {
     71,                         /* colNo */
     "",                         /* aName */
     "computeLikelihoodByIndex", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo ub_emlrtBCI = {
@@ -485,11 +431,9 @@ static emlrtBCInfo ub_emlrtBCI = {
     38,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo vb_emlrtBCI = {
@@ -499,11 +443,9 @@ static emlrtBCInfo vb_emlrtBCI = {
     49,                         /* colNo */
     "",                         /* aName */
     "computeLikelihoodByIndex", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo wb_emlrtBCI = {
@@ -513,11 +455,9 @@ static emlrtBCInfo wb_emlrtBCI = {
     81,                         /* colNo */
     "",                         /* aName */
     "computeLikelihoodByIndex", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo xb_emlrtBCI = {
@@ -527,11 +467,9 @@ static emlrtBCInfo xb_emlrtBCI = {
     46,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo yb_emlrtBCI = {
@@ -541,11 +479,9 @@ static emlrtBCInfo yb_emlrtBCI = {
     71,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo ac_emlrtBCI = {
@@ -555,11 +491,9 @@ static emlrtBCInfo ac_emlrtBCI = {
     36,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo bc_emlrtBCI = {
@@ -569,11 +503,9 @@ static emlrtBCInfo bc_emlrtBCI = {
     32,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo cc_emlrtBCI = {
@@ -583,11 +515,9 @@ static emlrtBCInfo cc_emlrtBCI = {
     48,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo dc_emlrtBCI = {
@@ -597,11 +527,9 @@ static emlrtBCInfo dc_emlrtBCI = {
     36,                          /* colNo */
     "",                          /* aName */
     "JIPDATrackAssigner/assign", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtBCInfo bd_emlrtBCI = {
@@ -611,22 +539,18 @@ static emlrtBCInfo bd_emlrtBCI = {
     59,                         /* colNo */
     "",                         /* aName */
     "computeLikelihoodByIndex", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\computeLikelihoodByIndex"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "computeLikelihoodByIndex.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtDCInfo c_emlrtDCI = {
     154,                                                    /* lineNo */
     37,                                                     /* colNo */
     "JIPDATrackAssigner/measurementVaryingModelLikelihood", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    1    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    1                       /* checkKind */
 };
 
 static emlrtBCInfo cd_emlrtBCI = {
@@ -636,191 +560,153 @@ static emlrtBCInfo cd_emlrtBCI = {
     28,                                                     /* colNo */
     "",                                                     /* aName */
     "JIPDATrackAssigner/measurementVaryingModelLikelihood", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m", /* pName */
-    0    /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m", /* pName */
+    0                       /* checkKind */
 };
 
 static emlrtRTEInfo qd_emlrtRTEI = {
     49,                   /* lineNo */
     32,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo rd_emlrtRTEI = {
     55,                   /* lineNo */
     13,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo sd_emlrtRTEI = {
     57,                   /* lineNo */
     13,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo td_emlrtRTEI = {
     61,                   /* lineNo */
     42,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo ud_emlrtRTEI = {
     46,                   /* lineNo */
     13,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo vd_emlrtRTEI = {
     61,                   /* lineNo */
     17,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo wd_emlrtRTEI = {
     90,                   /* lineNo */
     47,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo xd_emlrtRTEI = {
     90,                   /* lineNo */
     39,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo yd_emlrtRTEI = {
     90,                   /* lineNo */
     33,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo ae_emlrtRTEI = {
     64,                   /* lineNo */
     38,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo be_emlrtRTEI = {
     69,                   /* lineNo */
     71,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo ce_emlrtRTEI = {
     69,                   /* lineNo */
     21,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo de_emlrtRTEI = {
     75,                   /* lineNo */
     48,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo ee_emlrtRTEI = {
     75,                   /* lineNo */
     69,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo fe_emlrtRTEI = {
     81,                   /* lineNo */
     45,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo ge_emlrtRTEI = {
     72,                   /* lineNo */
     21,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo he_emlrtRTEI = {
     44,                   /* lineNo */
     73,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 static emlrtRTEInfo me_emlrtRTEI = {
     154,                  /* lineNo */
     26,                   /* colNo */
     "JIPDATrackAssigner", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\JIPDATrackAssigner."
-    "m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "JIPDATrackAssigner.m" /* pName */
 };
 
 /* Function Declarations */
@@ -852,7 +738,7 @@ static void c_JIPDATrackAssigner_measuremen(
     emxArray_real_T *likelihood)
 {
   const b_struct_T *trackList_data;
-  b_struct_T b_trackList_data;
+  b_struct_T pdf;
   c_fusion_tracker_sensorspecs_Ae estimator_SensorSpecifications;
   const c_struct_T *modelData_data;
   emlrtStack b_st;
@@ -860,11 +746,12 @@ static void c_JIPDATrackAssigner_measuremen(
   emlrtStack d_st;
   emlrtStack e_st;
   emlrtStack f_st;
+  emlrtStack g_st;
   emlrtStack st;
   trackingEKF *c_estimator_StateEstimator_Stat;
   trackingEKF *d_estimator_StateEstimator_Stat;
   trackingEKF *e_estimator_StateEstimator_Stat;
-  real_T measIndex;
+  real_T Pg;
   real_T *likelihood_data;
   int32_T b_i;
   int32_T d_tmp;
@@ -881,6 +768,8 @@ static void c_JIPDATrackAssigner_measuremen(
   e_st.tls = d_st.tls;
   f_st.prev = &e_st;
   f_st.tls = e_st.tls;
+  g_st.prev = &f_st;
+  g_st.tls = f_st.tls;
   modelData_data = modelData->data;
   trackList_data = trackList->data;
   if ((real_T)trackList->size[0] + 1.0 != trackList->size[0] + 1) {
@@ -895,7 +784,7 @@ static void c_JIPDATrackAssigner_measuremen(
   likelihood_data = likelihood->data;
   for (b_i = 0; b_i < i; b_i++) {
     real_T trkIndex;
-    st.site = &pcb_emlrtRSI;
+    st.site = &rcb_emlrtRSI;
     SD->u1.f2.val = d_obj_Estimator_StateEstimator_->SensorSpecifications[0];
     c_estimator_StateEstimator_Stat =
         d_obj_Estimator_StateEstimator_->TrackingFilter;
@@ -905,104 +794,104 @@ static void c_JIPDATrackAssigner_measuremen(
     SD->u1.f2.c_val = f_obj_Estimator_StateEstimator_->SensorSpecifications[0];
     e_estimator_StateEstimator_Stat =
         f_obj_Estimator_StateEstimator_->TrackingFilter;
-    b_st.site = &dt_emlrtRSI;
-    trkIndex =
-        parseIndex(&b_st, trackList, z_size, (real_T)b_i + 1.0, &measIndex);
-    if (measIndex > 0.0) {
-      b_st.site = &qcb_emlrtRSI;
-      if (((int32_T)measIndex < 1) ||
-          ((int32_T)measIndex > modelData->size[0])) {
-        emlrtDynamicBoundsCheckR2012b((int32_T)measIndex, 1, modelData->size[0],
+    b_st.site = &et_emlrtRSI;
+    trkIndex = parseIndex(&b_st, trackList, z_size, (real_T)b_i + 1.0, &Pg);
+    if (Pg > 0.0) {
+      b_st.site = &scb_emlrtRSI;
+      if (((int32_T)Pg < 1) || ((int32_T)Pg > modelData->size[0])) {
+        emlrtDynamicBoundsCheckR2012b((int32_T)Pg, 1, modelData->size[0],
                                       &bd_emlrtBCI, &b_st);
       }
-      c_st.site = &lq_emlrtRSI;
-      d_st.site = &mq_emlrtRSI;
-      e_st.site = &oq_emlrtRSI;
+      c_st.site = &mq_emlrtRSI;
+      d_st.site = &nq_emlrtRSI;
+      e_st.site = &pq_emlrtRSI;
       SD->u1.f2.val = d_obj_Estimator_StateEstimator_->SensorSpecifications[0];
-      f_st.site = &pq_emlrtRSI;
+      f_st.site = &qq_emlrtRSI;
       c_AerospaceMonostaticRadar_upda(
-          &f_st, &SD->u1.f2.val,
-          modelData_data[(int32_T)measIndex - 1].LookTime.data,
-          modelData_data[(int32_T)measIndex - 1].LookTime.size,
-          modelData_data[(int32_T)measIndex - 1].LookAzimuth.data,
-          modelData_data[(int32_T)measIndex - 1].LookAzimuth.size,
-          modelData_data[(int32_T)measIndex - 1].LookElevation.data,
-          modelData_data[(int32_T)measIndex - 1].LookElevation.size,
-          modelData_data[(int32_T)measIndex - 1].DetectionTime.data,
-          modelData_data[(int32_T)measIndex - 1].DetectionTime.size,
-          modelData_data[(int32_T)measIndex - 1].AzimuthNoise.data,
-          modelData_data[(int32_T)measIndex - 1].AzimuthNoise.size,
-          modelData_data[(int32_T)measIndex - 1].ElevationNoise.data,
-          modelData_data[(int32_T)measIndex - 1].ElevationNoise.size,
-          modelData_data[(int32_T)measIndex - 1].RangeNoise.data,
-          modelData_data[(int32_T)measIndex - 1].RangeNoise.size,
-          modelData_data[(int32_T)measIndex - 1].RangeRateNoise.data,
-          modelData_data[(int32_T)measIndex - 1].RangeRateNoise.size);
-      e_st.site = &oq_emlrtRSI;
+          &f_st, &SD->u1.f2.val, modelData_data[(int32_T)Pg - 1].LookTime.data,
+          modelData_data[(int32_T)Pg - 1].LookTime.size,
+          modelData_data[(int32_T)Pg - 1].LookAzimuth.data,
+          modelData_data[(int32_T)Pg - 1].LookAzimuth.size,
+          modelData_data[(int32_T)Pg - 1].LookElevation.data,
+          modelData_data[(int32_T)Pg - 1].LookElevation.size,
+          modelData_data[(int32_T)Pg - 1].DetectionTime.data,
+          modelData_data[(int32_T)Pg - 1].DetectionTime.size,
+          modelData_data[(int32_T)Pg - 1].AzimuthNoise.data,
+          modelData_data[(int32_T)Pg - 1].AzimuthNoise.size,
+          modelData_data[(int32_T)Pg - 1].ElevationNoise.data,
+          modelData_data[(int32_T)Pg - 1].ElevationNoise.size,
+          modelData_data[(int32_T)Pg - 1].RangeNoise.data,
+          modelData_data[(int32_T)Pg - 1].RangeNoise.size,
+          modelData_data[(int32_T)Pg - 1].RangeRateNoise.data,
+          modelData_data[(int32_T)Pg - 1].RangeRateNoise.size);
+      f_st.site = &qq_emlrtRSI;
+      e_st.site = &pq_emlrtRSI;
       SD->u1.f2.b_val =
           e_obj_Estimator_StateEstimator_->SensorSpecifications[0];
-      f_st.site = &pq_emlrtRSI;
+      f_st.site = &qq_emlrtRSI;
       c_AerospaceMonostaticRadar_upda(
           &f_st, &SD->u1.f2.b_val,
-          modelData_data[(int32_T)measIndex - 1].LookTime.data,
-          modelData_data[(int32_T)measIndex - 1].LookTime.size,
-          modelData_data[(int32_T)measIndex - 1].LookAzimuth.data,
-          modelData_data[(int32_T)measIndex - 1].LookAzimuth.size,
-          modelData_data[(int32_T)measIndex - 1].LookElevation.data,
-          modelData_data[(int32_T)measIndex - 1].LookElevation.size,
-          modelData_data[(int32_T)measIndex - 1].DetectionTime.data,
-          modelData_data[(int32_T)measIndex - 1].DetectionTime.size,
-          modelData_data[(int32_T)measIndex - 1].AzimuthNoise.data,
-          modelData_data[(int32_T)measIndex - 1].AzimuthNoise.size,
-          modelData_data[(int32_T)measIndex - 1].ElevationNoise.data,
-          modelData_data[(int32_T)measIndex - 1].ElevationNoise.size,
-          modelData_data[(int32_T)measIndex - 1].RangeNoise.data,
-          modelData_data[(int32_T)measIndex - 1].RangeNoise.size,
-          modelData_data[(int32_T)measIndex - 1].RangeRateNoise.data,
-          modelData_data[(int32_T)measIndex - 1].RangeRateNoise.size);
-      e_st.site = &oq_emlrtRSI;
+          modelData_data[(int32_T)Pg - 1].LookTime.data,
+          modelData_data[(int32_T)Pg - 1].LookTime.size,
+          modelData_data[(int32_T)Pg - 1].LookAzimuth.data,
+          modelData_data[(int32_T)Pg - 1].LookAzimuth.size,
+          modelData_data[(int32_T)Pg - 1].LookElevation.data,
+          modelData_data[(int32_T)Pg - 1].LookElevation.size,
+          modelData_data[(int32_T)Pg - 1].DetectionTime.data,
+          modelData_data[(int32_T)Pg - 1].DetectionTime.size,
+          modelData_data[(int32_T)Pg - 1].AzimuthNoise.data,
+          modelData_data[(int32_T)Pg - 1].AzimuthNoise.size,
+          modelData_data[(int32_T)Pg - 1].ElevationNoise.data,
+          modelData_data[(int32_T)Pg - 1].ElevationNoise.size,
+          modelData_data[(int32_T)Pg - 1].RangeNoise.data,
+          modelData_data[(int32_T)Pg - 1].RangeNoise.size,
+          modelData_data[(int32_T)Pg - 1].RangeRateNoise.data,
+          modelData_data[(int32_T)Pg - 1].RangeRateNoise.size);
+      f_st.site = &qq_emlrtRSI;
+      e_st.site = &pq_emlrtRSI;
       SD->u1.f2.c_val =
           f_obj_Estimator_StateEstimator_->SensorSpecifications[0];
-      f_st.site = &pq_emlrtRSI;
+      f_st.site = &qq_emlrtRSI;
       c_AerospaceMonostaticRadar_upda(
           &f_st, &SD->u1.f2.c_val,
-          modelData_data[(int32_T)measIndex - 1].LookTime.data,
-          modelData_data[(int32_T)measIndex - 1].LookTime.size,
-          modelData_data[(int32_T)measIndex - 1].LookAzimuth.data,
-          modelData_data[(int32_T)measIndex - 1].LookAzimuth.size,
-          modelData_data[(int32_T)measIndex - 1].LookElevation.data,
-          modelData_data[(int32_T)measIndex - 1].LookElevation.size,
-          modelData_data[(int32_T)measIndex - 1].DetectionTime.data,
-          modelData_data[(int32_T)measIndex - 1].DetectionTime.size,
-          modelData_data[(int32_T)measIndex - 1].AzimuthNoise.data,
-          modelData_data[(int32_T)measIndex - 1].AzimuthNoise.size,
-          modelData_data[(int32_T)measIndex - 1].ElevationNoise.data,
-          modelData_data[(int32_T)measIndex - 1].ElevationNoise.size,
-          modelData_data[(int32_T)measIndex - 1].RangeNoise.data,
-          modelData_data[(int32_T)measIndex - 1].RangeNoise.size,
-          modelData_data[(int32_T)measIndex - 1].RangeRateNoise.data,
-          modelData_data[(int32_T)measIndex - 1].RangeRateNoise.size);
-      d_st.site = &nq_emlrtRSI;
+          modelData_data[(int32_T)Pg - 1].LookTime.data,
+          modelData_data[(int32_T)Pg - 1].LookTime.size,
+          modelData_data[(int32_T)Pg - 1].LookAzimuth.data,
+          modelData_data[(int32_T)Pg - 1].LookAzimuth.size,
+          modelData_data[(int32_T)Pg - 1].LookElevation.data,
+          modelData_data[(int32_T)Pg - 1].LookElevation.size,
+          modelData_data[(int32_T)Pg - 1].DetectionTime.data,
+          modelData_data[(int32_T)Pg - 1].DetectionTime.size,
+          modelData_data[(int32_T)Pg - 1].AzimuthNoise.data,
+          modelData_data[(int32_T)Pg - 1].AzimuthNoise.size,
+          modelData_data[(int32_T)Pg - 1].ElevationNoise.data,
+          modelData_data[(int32_T)Pg - 1].ElevationNoise.size,
+          modelData_data[(int32_T)Pg - 1].RangeNoise.data,
+          modelData_data[(int32_T)Pg - 1].RangeNoise.size,
+          modelData_data[(int32_T)Pg - 1].RangeRateNoise.data,
+          modelData_data[(int32_T)Pg - 1].RangeRateNoise.size);
+      f_st.site = &qq_emlrtRSI;
+      d_st.site = &oq_emlrtRSI;
       estimator_SensorSpecifications = *g_obj_Estimator_StateEstimator_;
-      e_st.site = &ct_emlrtRSI;
+      e_st.site = &dt_emlrtRSI;
       c_AerospaceMonostaticRadar_upda(
           &e_st, &estimator_SensorSpecifications,
-          modelData_data[(int32_T)measIndex - 1].LookTime.data,
-          modelData_data[(int32_T)measIndex - 1].LookTime.size,
-          modelData_data[(int32_T)measIndex - 1].LookAzimuth.data,
-          modelData_data[(int32_T)measIndex - 1].LookAzimuth.size,
-          modelData_data[(int32_T)measIndex - 1].LookElevation.data,
-          modelData_data[(int32_T)measIndex - 1].LookElevation.size,
-          modelData_data[(int32_T)measIndex - 1].DetectionTime.data,
-          modelData_data[(int32_T)measIndex - 1].DetectionTime.size,
-          modelData_data[(int32_T)measIndex - 1].AzimuthNoise.data,
-          modelData_data[(int32_T)measIndex - 1].AzimuthNoise.size,
-          modelData_data[(int32_T)measIndex - 1].ElevationNoise.data,
-          modelData_data[(int32_T)measIndex - 1].ElevationNoise.size,
-          modelData_data[(int32_T)measIndex - 1].RangeNoise.data,
-          modelData_data[(int32_T)measIndex - 1].RangeNoise.size,
-          modelData_data[(int32_T)measIndex - 1].RangeRateNoise.data,
-          modelData_data[(int32_T)measIndex - 1].RangeRateNoise.size);
+          modelData_data[(int32_T)Pg - 1].LookTime.data,
+          modelData_data[(int32_T)Pg - 1].LookTime.size,
+          modelData_data[(int32_T)Pg - 1].LookAzimuth.data,
+          modelData_data[(int32_T)Pg - 1].LookAzimuth.size,
+          modelData_data[(int32_T)Pg - 1].LookElevation.data,
+          modelData_data[(int32_T)Pg - 1].LookElevation.size,
+          modelData_data[(int32_T)Pg - 1].DetectionTime.data,
+          modelData_data[(int32_T)Pg - 1].DetectionTime.size,
+          modelData_data[(int32_T)Pg - 1].AzimuthNoise.data,
+          modelData_data[(int32_T)Pg - 1].AzimuthNoise.size,
+          modelData_data[(int32_T)Pg - 1].ElevationNoise.data,
+          modelData_data[(int32_T)Pg - 1].ElevationNoise.size,
+          modelData_data[(int32_T)Pg - 1].RangeNoise.data,
+          modelData_data[(int32_T)Pg - 1].RangeNoise.size,
+          modelData_data[(int32_T)Pg - 1].RangeRateNoise.data,
+          modelData_data[(int32_T)Pg - 1].RangeRateNoise.size);
       c_estimator_StateEstimator_Stat =
           d_obj_Estimator_StateEstimator_->TrackingFilter;
       d_estimator_StateEstimator_Stat =
@@ -1010,12 +899,12 @@ static void c_JIPDATrackAssigner_measuremen(
       e_estimator_StateEstimator_Stat =
           f_obj_Estimator_StateEstimator_->TrackingFilter;
     }
-    if ((trkIndex == 0.0) && (measIndex > 0.0)) {
-      b_st.site = &et_emlrtRSI;
-      c_st.site = &nt_emlrtRSI;
-      if (((int32_T)measIndex < 1) || ((int32_T)measIndex > z_size[1])) {
-        emlrtDynamicBoundsCheckR2012b((int32_T)measIndex, 1, z_size[1],
-                                      &lb_emlrtBCI, &st);
+    if ((trkIndex == 0.0) && (Pg > 0.0)) {
+      b_st.site = &ft_emlrtRSI;
+      c_st.site = &pt_emlrtRSI;
+      if (((int32_T)Pg < 1) || ((int32_T)Pg > z_size[1])) {
+        emlrtDynamicBoundsCheckR2012b((int32_T)Pg, 1, z_size[1], &lb_emlrtBCI,
+                                      &st);
       }
       d_tmp = likelihood->size[0] * likelihood->size[1];
       if (((int32_T)((uint32_T)b_i + 1U) < 1) ||
@@ -1025,31 +914,54 @@ static void c_JIPDATrackAssigner_measuremen(
       }
       likelihood_data[b_i] =
           c_obj_Estimator_StateEstimator_->ClutterModel.ClutterDensity;
-    } else if ((measIndex == 0.0) && (trkIndex > 0.0)) {
+    } else if ((Pg == 0.0) && (trkIndex > 0.0)) {
       if (time_size[1] < 1) {
-        emlrtDynamicBoundsCheckR2012b(1, 1, time_size[1], &mb_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(1, 1, time_size[1], &nb_emlrtBCI, &st);
       }
+      b_st.site = &gt_emlrtRSI;
       if (((int32_T)trkIndex < 1) || ((int32_T)trkIndex > trackList->size[0])) {
         emlrtDynamicBoundsCheckR2012b((int32_T)trkIndex, 1, trackList->size[0],
-                                      &rb_emlrtBCI, &st);
+                                      &mb_emlrtBCI, &b_st);
+      }
+      pdf = trackList_data[(int32_T)trkIndex - 1];
+      c_st.site = &qt_emlrtRSI;
+      TrackEstimator_predict(
+          &c_st, &d_obj_Estimator_StateEstimator_->TargetSpecifications[0],
+          c_estimator_StateEstimator_Stat,
+          &e_obj_Estimator_StateEstimator_->TargetSpecifications[0],
+          d_estimator_StateEstimator_Stat,
+          &f_obj_Estimator_StateEstimator_->TargetSpecifications[0],
+          e_estimator_StateEstimator_Stat, &pdf, time_data[0]);
+      c_st.site = &rt_emlrtRSI;
+      d_st.site = &qx_emlrtRSI;
+      Pg = c_MultiModalEstimator_gateProba(&d_st, obj_AssignmentThreshold);
+      d_st.site = &rx_emlrtRSI;
+      e_st.site = &rx_emlrtRSI;
+      Pg *= c_MultiModalEstimator_detection(
+          &e_st, &SD->u1.f2.val, &SD->u1.f2.b_val, &SD->u1.f2.c_val,
+          pdf.Hypothesis, pdf.LogWeights, pdf.IsValid);
+      e_st.site = &cy_emlrtRSI;
+      f_st.site = &dy_emlrtRSI;
+      if (!(Pg >= 0.0)) {
+        emlrtErrorWithMessageIdR2018a(&f_st, &l_emlrtRTEI,
+                                      "MATLAB:validators:mustBeNonnegative",
+                                      "MATLAB:validators:mustBeNonnegative", 0);
+      }
+      f_st.site = &dy_emlrtRSI;
+      g_st.site = &il_emlrtRSI;
+      if (!(Pg < 1.0)) {
+        emlrtErrorWithMessageIdR2018a(
+            &g_st, &c_emlrtRTEI, "MATLAB:validators:mustBeLessThan",
+            "MATLAB:validators:mustBeLessThan", 3, 4, 1, "1");
       }
       d_tmp = likelihood->size[0] * likelihood->size[1];
       if (((int32_T)((uint32_T)b_i + 1U) < 1) ||
           ((int32_T)((uint32_T)b_i + 1U) > d_tmp)) {
         emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)b_i + 1U), 1, d_tmp,
-                                      &cd_emlrtBCI, &st);
+                                      &cd_emlrtBCI, &c_st);
       }
-      b_trackList_data = trackList_data[(int32_T)trkIndex - 1];
-      b_st.site = &ft_emlrtRSI;
-      likelihood_data[b_i] = c_TrackEstimator_likelihoodUnas(
-          &b_st, &d_obj_Estimator_StateEstimator_->TargetSpecifications[0],
-          &SD->u1.f2.val, c_estimator_StateEstimator_Stat,
-          &e_obj_Estimator_StateEstimator_->TargetSpecifications[0],
-          &SD->u1.f2.b_val, d_estimator_StateEstimator_Stat,
-          &f_obj_Estimator_StateEstimator_->TargetSpecifications[0],
-          &SD->u1.f2.c_val, e_estimator_StateEstimator_Stat, &b_trackList_data,
-          time_data[0], obj_AssignmentThreshold);
-    } else if ((measIndex == 0.0) && (trkIndex == 0.0)) {
+      likelihood_data[b_i] = 1.0 - Pg * pdf.ExistenceProbability;
+    } else if ((Pg == 0.0) && (trkIndex == 0.0)) {
       d_tmp = likelihood->size[0] * likelihood->size[1];
       if (((int32_T)((uint32_T)b_i + 1U) < 1) ||
           ((int32_T)((uint32_T)b_i + 1U) > d_tmp)) {
@@ -1061,30 +973,30 @@ static void c_JIPDATrackAssigner_measuremen(
       real_T b_d_tmp;
       real_T d;
       boolean_T b;
-      if (((int32_T)measIndex < 1) || ((int32_T)measIndex > z_size[1])) {
-        emlrtDynamicBoundsCheckR2012b((int32_T)measIndex, 1, z_size[1],
-                                      &nb_emlrtBCI, &st);
+      if (((int32_T)Pg < 1) || ((int32_T)Pg > z_size[1])) {
+        emlrtDynamicBoundsCheckR2012b((int32_T)Pg, 1, z_size[1], &ob_emlrtBCI,
+                                      &st);
       }
       if (((int32_T)trkIndex < 1) || ((int32_T)trkIndex > trackList->size[0])) {
         emlrtDynamicBoundsCheckR2012b((int32_T)trkIndex, 1, trackList->size[0],
                                       &sb_emlrtBCI, &st);
       }
-      b = (((int32_T)measIndex < 1) || ((int32_T)measIndex > time_size[1]));
+      b = (((int32_T)Pg < 1) || ((int32_T)Pg > time_size[1]));
       if (b) {
-        emlrtDynamicBoundsCheckR2012b((int32_T)measIndex, 1, time_size[1],
+        emlrtDynamicBoundsCheckR2012b((int32_T)Pg, 1, time_size[1],
                                       &tb_emlrtBCI, &st);
       }
-      b_d_tmp = time_data[(int32_T)measIndex - 1];
-      d_tmp = 4 * ((int32_T)measIndex - 1);
-      b_trackList_data = trackList_data[(int32_T)trkIndex - 1];
-      b_st.site = &gt_emlrtRSI;
+      b_d_tmp = time_data[(int32_T)Pg - 1];
+      d_tmp = 4 * ((int32_T)Pg - 1);
+      pdf = trackList_data[(int32_T)trkIndex - 1];
+      b_st.site = &ht_emlrtRSI;
       d = TrackEstimator_distance(
           &b_st, &d_obj_Estimator_StateEstimator_->TargetSpecifications[0],
           &SD->u1.f2.val, c_estimator_StateEstimator_Stat,
           &e_obj_Estimator_StateEstimator_->TargetSpecifications[0],
           &SD->u1.f2.b_val, d_estimator_StateEstimator_Stat,
           &f_obj_Estimator_StateEstimator_->TargetSpecifications[0],
-          &SD->u1.f2.c_val, e_estimator_StateEstimator_Stat, &b_trackList_data,
+          &SD->u1.f2.c_val, e_estimator_StateEstimator_Stat, &pdf,
           &z_data[d_tmp], b_d_tmp);
       if (d < obj_AssignmentThreshold) {
         int32_T i1;
@@ -1094,7 +1006,7 @@ static void c_JIPDATrackAssigner_measuremen(
                                         trackList->size[0], &vb_emlrtBCI, &st);
         }
         if (b) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)measIndex, 1, time_size[1],
+          emlrtDynamicBoundsCheckR2012b((int32_T)Pg, 1, time_size[1],
                                         &wb_emlrtBCI, &st);
         }
         i1 = likelihood->size[0] * likelihood->size[1];
@@ -1103,16 +1015,16 @@ static void c_JIPDATrackAssigner_measuremen(
           emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)b_i + 1U), 1, i1,
                                         &cd_emlrtBCI, &st);
         }
-        b_trackList_data = trackList_data[(int32_T)trkIndex - 1];
-        b_st.site = &ht_emlrtRSI;
+        pdf = trackList_data[(int32_T)trkIndex - 1];
+        b_st.site = &it_emlrtRSI;
         likelihood_data[b_i] = TrackEstimator_likelihood(
             &b_st, &d_obj_Estimator_StateEstimator_->TargetSpecifications[0],
             &SD->u1.f2.val, c_estimator_StateEstimator_Stat,
             &e_obj_Estimator_StateEstimator_->TargetSpecifications[0],
             &SD->u1.f2.b_val, d_estimator_StateEstimator_Stat,
             &f_obj_Estimator_StateEstimator_->TargetSpecifications[0],
-            &SD->u1.f2.c_val, e_estimator_StateEstimator_Stat,
-            &b_trackList_data, &z_data[d_tmp], b_d_tmp);
+            &SD->u1.f2.c_val, e_estimator_StateEstimator_Stat, &pdf,
+            &z_data[d_tmp], b_d_tmp);
       } else {
         d_tmp = likelihood->size[0] * likelihood->size[1];
         if (((int32_T)((uint32_T)b_i + 1U) < 1) ||
@@ -1142,7 +1054,7 @@ void JIPDATrackAssigner_assign(
   jmp_buf *volatile emlrtJBStack;
   b_emxArray_struct_T *modelData;
   const b_struct_T *trackList_data;
-  b_struct_T b_trackList_data;
+  b_struct_T pdf;
   c_fusion_tracker_targetspecs_Ge b_estimator_TargetSpecification;
   c_fusion_tracker_targetspecs_He c_estimator_TargetSpecification;
   c_fusion_tracker_targetspecs_Pa estimator_TargetSpecifications;
@@ -1153,6 +1065,8 @@ void JIPDATrackAssigner_assign(
   emlrtStack e_st;
   emlrtStack f_st;
   emlrtStack g_st;
+  emlrtStack h_st;
+  emlrtStack i_st;
   emlrtStack st;
   emxArray_boolean_T c_clustDets_data;
   emxArray_boolean_T *b_likelihoodMatrix;
@@ -1169,7 +1083,7 @@ void JIPDATrackAssigner_assign(
   real_T z_data[200];
   real_T b_time_data[100];
   real_T detAssignmentProb_data[51];
-  real_T measIndex;
+  real_T Pg;
   real_T varargin_2;
   real_T *assignment_data;
   real_T *jpda_data;
@@ -1223,11 +1137,15 @@ void JIPDATrackAssigner_assign(
   f_st.tls = e_st.tls;
   g_st.prev = &f_st;
   g_st.tls = f_st.tls;
+  h_st.prev = &g_st;
+  h_st.tls = g_st.tls;
+  i_st.prev = &h_st;
+  i_st.tls = h_st.tls;
   trackList_data = trackList->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &pp_emlrtRSI;
+  st.site = &qp_emlrtRSI;
   emxInit_struct_T1(&st, &modelData, &he_emlrtRTEI);
-  b_st.site = &qp_emlrtRSI;
+  b_st.site = &rp_emlrtRSI;
   c_AerospaceMonostaticRadar_pars(
       &b_st, sensorData->LookTime.data, sensorData->LookTime.size,
       sensorData->LookAzimuth.data, sensorData->LookAzimuth.size,
@@ -1243,7 +1161,7 @@ void JIPDATrackAssigner_assign(
       sensorData->RangeRateAccuracy.data, sensorData->RangeRateAccuracy.size,
       z_data, z_size, modelData);
   modelData_data = modelData->data;
-  b_st.site = &rp_emlrtRSI;
+  b_st.site = &sp_emlrtRSI;
   c_AerospaceMonostaticRadar_time(
       sensorData->LookTime.data, sensorData->LookTime.size,
       sensorData->DetectionTime.data, sensorData->DetectionTime.size, time_data,
@@ -1256,20 +1174,20 @@ void JIPDATrackAssigner_assign(
       memcpy(&b_time_data[0], &time_data[0],
              (uint32_T)(loop_ub + 1) * sizeof(real_T));
     }
-    b_st.site = &sp_emlrtRSI;
+    b_st.site = &tp_emlrtRSI;
     repmat(&b_st, b_time_data, b_time_size, z_size[1], time_data, time_size);
   }
   emxInit_real_T(&st, &likelihoodMatrix, 2, &ud_emlrtRTEI, true);
   if (modelData->size[0] == 1) {
-    b_st.site = &tp_emlrtRSI;
-    c_st.site = &jq_emlrtRSI;
-    d_st.site = &lq_emlrtRSI;
-    e_st.site = &mq_emlrtRSI;
-    f_st.site = &oq_emlrtRSI;
+    b_st.site = &up_emlrtRSI;
+    c_st.site = &kq_emlrtRSI;
+    d_st.site = &mq_emlrtRSI;
+    e_st.site = &nq_emlrtRSI;
+    f_st.site = &pq_emlrtRSI;
     estimator_TargetSpecifications =
         d_assigner_Estimator_StateEstim->TargetSpecifications[0];
     SD->u2.f7.val = d_assigner_Estimator_StateEstim->SensorSpecifications[0];
-    g_st.site = &pq_emlrtRSI;
+    g_st.site = &qq_emlrtRSI;
     c_AerospaceMonostaticRadar_upda(
         &g_st, &SD->u2.f7.val, modelData_data[0].LookTime.data,
         modelData_data[0].LookTime.size, modelData_data[0].LookAzimuth.data,
@@ -1285,11 +1203,12 @@ void JIPDATrackAssigner_assign(
         modelData_data[0].RangeNoise.data, modelData_data[0].RangeNoise.size,
         modelData_data[0].RangeRateNoise.data,
         modelData_data[0].RangeRateNoise.size);
-    f_st.site = &oq_emlrtRSI;
+    g_st.site = &qq_emlrtRSI;
+    f_st.site = &pq_emlrtRSI;
     b_estimator_TargetSpecification =
         e_assigner_Estimator_StateEstim->TargetSpecifications[0];
     SD->u2.f7.b_val = e_assigner_Estimator_StateEstim->SensorSpecifications[0];
-    g_st.site = &pq_emlrtRSI;
+    g_st.site = &qq_emlrtRSI;
     c_AerospaceMonostaticRadar_upda(
         &g_st, &SD->u2.f7.b_val, modelData_data[0].LookTime.data,
         modelData_data[0].LookTime.size, modelData_data[0].LookAzimuth.data,
@@ -1305,11 +1224,12 @@ void JIPDATrackAssigner_assign(
         modelData_data[0].RangeNoise.data, modelData_data[0].RangeNoise.size,
         modelData_data[0].RangeRateNoise.data,
         modelData_data[0].RangeRateNoise.size);
-    f_st.site = &oq_emlrtRSI;
+    g_st.site = &qq_emlrtRSI;
+    f_st.site = &pq_emlrtRSI;
     c_estimator_TargetSpecification =
         f_assigner_Estimator_StateEstim->TargetSpecifications[0];
     SD->u2.f7.c_val = f_assigner_Estimator_StateEstim->SensorSpecifications[0];
-    g_st.site = &pq_emlrtRSI;
+    g_st.site = &qq_emlrtRSI;
     c_AerospaceMonostaticRadar_upda(
         &g_st, &SD->u2.f7.c_val, modelData_data[0].LookTime.data,
         modelData_data[0].LookTime.size, modelData_data[0].LookAzimuth.data,
@@ -1325,9 +1245,10 @@ void JIPDATrackAssigner_assign(
         modelData_data[0].RangeNoise.data, modelData_data[0].RangeNoise.size,
         modelData_data[0].RangeRateNoise.data,
         modelData_data[0].RangeRateNoise.size);
-    e_st.site = &nq_emlrtRSI;
+    g_st.site = &qq_emlrtRSI;
+    e_st.site = &oq_emlrtRSI;
     SD->u2.f7.estimator_SensorSpecifications = *g_assigner_Estimator_StateEstim;
-    f_st.site = &ct_emlrtRSI;
+    f_st.site = &dt_emlrtRSI;
     c_AerospaceMonostaticRadar_upda(
         &f_st, &SD->u2.f7.estimator_SensorSpecifications,
         modelData_data[0].LookTime.data, modelData_data[0].LookTime.size,
@@ -1355,87 +1276,110 @@ void JIPDATrackAssigner_assign(
     likelihoodMatrix_data = likelihoodMatrix->data;
     for (i = 0; i < d_loop_ub; i++) {
       real_T trkIndex;
-      c_st.site = &kq_emlrtRSI;
-      d_st.site = &dt_emlrtRSI;
-      trkIndex =
-          parseIndex(&d_st, trackList, z_size, (real_T)i + 1.0, &measIndex);
-      if ((trkIndex == 0.0) && (measIndex > 0.0)) {
-        d_st.site = &et_emlrtRSI;
-        e_st.site = &nt_emlrtRSI;
-        if (((int32_T)measIndex < 1) || ((int32_T)measIndex > z_size[1])) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)measIndex, 1, z_size[1],
-                                        &lb_emlrtBCI, &c_st);
+      c_st.site = &lq_emlrtRSI;
+      d_st.site = &et_emlrtRSI;
+      trkIndex = parseIndex(&d_st, trackList, z_size, (real_T)i + 1.0, &Pg);
+      if ((trkIndex == 0.0) && (Pg > 0.0)) {
+        d_st.site = &ft_emlrtRSI;
+        e_st.site = &pt_emlrtRSI;
+        if (((int32_T)Pg < 1) || ((int32_T)Pg > z_size[1])) {
+          emlrtDynamicBoundsCheckR2012b((int32_T)Pg, 1, z_size[1], &lb_emlrtBCI,
+                                        &c_st);
         }
         loop_ub = likelihoodMatrix->size[0] * likelihoodMatrix->size[1];
         if (((int32_T)((uint32_T)i + 1U) < 1) ||
             ((int32_T)((uint32_T)i + 1U) > loop_ub)) {
           emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)i + 1U), 1, loop_ub,
-                                        &qb_emlrtBCI, &c_st);
+                                        &rb_emlrtBCI, &c_st);
         }
         likelihoodMatrix_data[i] =
             c_assigner_Estimator_StateEstim->ClutterModel.ClutterDensity;
-      } else if ((measIndex == 0.0) && (trkIndex > 0.0)) {
+      } else if ((Pg == 0.0) && (trkIndex > 0.0)) {
         if (time_size[1] < 1) {
-          emlrtDynamicBoundsCheckR2012b(1, 1, time_size[1], &mb_emlrtBCI,
+          emlrtDynamicBoundsCheckR2012b(1, 1, time_size[1], &nb_emlrtBCI,
                                         &c_st);
         }
+        d_st.site = &gt_emlrtRSI;
         if (((int32_T)trkIndex < 1) ||
             ((int32_T)trkIndex > trackList->size[0])) {
           emlrtDynamicBoundsCheckR2012b(
-              (int32_T)trkIndex, 1, trackList->size[0], &rb_emlrtBCI, &c_st);
+              (int32_T)trkIndex, 1, trackList->size[0], &mb_emlrtBCI, &d_st);
+        }
+        pdf = trackList_data[(int32_T)trkIndex - 1];
+        e_st.site = &qt_emlrtRSI;
+        TrackEstimator_predict(&e_st, &estimator_TargetSpecifications,
+                               d_assigner_Estimator_StateEstim->TrackingFilter,
+                               &b_estimator_TargetSpecification,
+                               e_assigner_Estimator_StateEstim->TrackingFilter,
+                               &c_estimator_TargetSpecification,
+                               f_assigner_Estimator_StateEstim->TrackingFilter,
+                               &pdf, time_data[0]);
+        e_st.site = &rt_emlrtRSI;
+        f_st.site = &qx_emlrtRSI;
+        Pg = c_MultiModalEstimator_gateProba(&f_st,
+                                             assigner_AssignmentThreshold);
+        f_st.site = &rx_emlrtRSI;
+        g_st.site = &rx_emlrtRSI;
+        Pg *= c_MultiModalEstimator_detection(
+            &g_st, &SD->u2.f7.val, &SD->u2.f7.b_val, &SD->u2.f7.c_val,
+            pdf.Hypothesis, pdf.LogWeights, pdf.IsValid);
+        g_st.site = &cy_emlrtRSI;
+        h_st.site = &dy_emlrtRSI;
+        if (!(Pg >= 0.0)) {
+          emlrtErrorWithMessageIdR2018a(
+              &h_st, &l_emlrtRTEI, "MATLAB:validators:mustBeNonnegative",
+              "MATLAB:validators:mustBeNonnegative", 0);
+        }
+        h_st.site = &dy_emlrtRSI;
+        i_st.site = &il_emlrtRSI;
+        if (!(Pg < 1.0)) {
+          emlrtErrorWithMessageIdR2018a(
+              &i_st, &c_emlrtRTEI, "MATLAB:validators:mustBeLessThan",
+              "MATLAB:validators:mustBeLessThan", 3, 4, 1, "1");
         }
         loop_ub = likelihoodMatrix->size[0] * likelihoodMatrix->size[1];
         if (((int32_T)((uint32_T)i + 1U) < 1) ||
             ((int32_T)((uint32_T)i + 1U) > loop_ub)) {
           emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)i + 1U), 1, loop_ub,
-                                        &qb_emlrtBCI, &c_st);
+                                        &rb_emlrtBCI, &e_st);
         }
-        b_trackList_data = trackList_data[(int32_T)trkIndex - 1];
-        d_st.site = &ft_emlrtRSI;
-        likelihoodMatrix_data[i] = c_TrackEstimator_likelihoodUnas(
-            &d_st, &estimator_TargetSpecifications, &SD->u2.f7.val,
-            d_assigner_Estimator_StateEstim->TrackingFilter,
-            &b_estimator_TargetSpecification, &SD->u2.f7.b_val,
-            e_assigner_Estimator_StateEstim->TrackingFilter,
-            &c_estimator_TargetSpecification, &SD->u2.f7.c_val,
-            f_assigner_Estimator_StateEstim->TrackingFilter, &b_trackList_data,
-            time_data[0], assigner_AssignmentThreshold);
-      } else if ((measIndex == 0.0) && (trkIndex == 0.0)) {
+        likelihoodMatrix_data[i] = 1.0 - Pg * pdf.ExistenceProbability;
+      } else if ((Pg == 0.0) && (trkIndex == 0.0)) {
         loop_ub = likelihoodMatrix->size[0] * likelihoodMatrix->size[1];
         if (((int32_T)((uint32_T)i + 1U) < 1) ||
             ((int32_T)((uint32_T)i + 1U) > loop_ub)) {
           emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)i + 1U), 1, loop_ub,
-                                        &qb_emlrtBCI, &c_st);
+                                        &rb_emlrtBCI, &c_st);
         }
         likelihoodMatrix_data[i] = 1.0;
       } else {
         real_T d;
         real_T d_tmp;
-        if (((int32_T)measIndex < 1) || ((int32_T)measIndex > z_size[1])) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)measIndex, 1, z_size[1],
-                                        &nb_emlrtBCI, &c_st);
+        if (((int32_T)Pg < 1) || ((int32_T)Pg > z_size[1])) {
+          emlrtDynamicBoundsCheckR2012b((int32_T)Pg, 1, z_size[1], &ob_emlrtBCI,
+                                        &c_st);
         }
         if (((int32_T)trkIndex < 1) ||
             ((int32_T)trkIndex > trackList->size[0])) {
           emlrtDynamicBoundsCheckR2012b(
               (int32_T)trkIndex, 1, trackList->size[0], &sb_emlrtBCI, &c_st);
         }
-        b = (((int32_T)measIndex < 1) || ((int32_T)measIndex > time_size[1]));
+        b = (((int32_T)Pg < 1) || ((int32_T)Pg > time_size[1]));
         if (b) {
-          emlrtDynamicBoundsCheckR2012b((int32_T)measIndex, 1, time_size[1],
+          emlrtDynamicBoundsCheckR2012b((int32_T)Pg, 1, time_size[1],
                                         &tb_emlrtBCI, &c_st);
         }
-        d_tmp = time_data[(int32_T)measIndex - 1];
-        loop_ub = 4 * ((int32_T)measIndex - 1);
-        b_trackList_data = trackList_data[(int32_T)trkIndex - 1];
-        d_st.site = &gt_emlrtRSI;
+        d_tmp = time_data[(int32_T)Pg - 1];
+        loop_ub = 4 * ((int32_T)Pg - 1);
+        pdf = trackList_data[(int32_T)trkIndex - 1];
+        d_st.site = &ht_emlrtRSI;
         d = TrackEstimator_distance(
             &d_st, &estimator_TargetSpecifications, &SD->u2.f7.val,
             d_assigner_Estimator_StateEstim->TrackingFilter,
             &b_estimator_TargetSpecification, &SD->u2.f7.b_val,
             e_assigner_Estimator_StateEstim->TrackingFilter,
             &c_estimator_TargetSpecification, &SD->u2.f7.c_val,
-            f_assigner_Estimator_StateEstim->TrackingFilter, &b_trackList_data,
+            f_assigner_Estimator_StateEstim->TrackingFilter, &pdf,
             &z_data[loop_ub], d_tmp);
         if (d < assigner_AssignmentThreshold) {
           if (((int32_T)trkIndex < 1) ||
@@ -1444,31 +1388,31 @@ void JIPDATrackAssigner_assign(
                 (int32_T)trkIndex, 1, trackList->size[0], &vb_emlrtBCI, &c_st);
           }
           if (b) {
-            emlrtDynamicBoundsCheckR2012b((int32_T)measIndex, 1, time_size[1],
+            emlrtDynamicBoundsCheckR2012b((int32_T)Pg, 1, time_size[1],
                                           &wb_emlrtBCI, &c_st);
           }
           c_loop_ub = likelihoodMatrix->size[0] * likelihoodMatrix->size[1];
           if (((int32_T)((uint32_T)i + 1U) < 1) ||
               ((int32_T)((uint32_T)i + 1U) > c_loop_ub)) {
             emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)i + 1U), 1,
-                                          c_loop_ub, &qb_emlrtBCI, &c_st);
+                                          c_loop_ub, &rb_emlrtBCI, &c_st);
           }
-          b_trackList_data = trackList_data[(int32_T)trkIndex - 1];
-          d_st.site = &ht_emlrtRSI;
+          pdf = trackList_data[(int32_T)trkIndex - 1];
+          d_st.site = &it_emlrtRSI;
           likelihoodMatrix_data[i] = TrackEstimator_likelihood(
               &d_st, &estimator_TargetSpecifications, &SD->u2.f7.val,
               d_assigner_Estimator_StateEstim->TrackingFilter,
               &b_estimator_TargetSpecification, &SD->u2.f7.b_val,
               e_assigner_Estimator_StateEstim->TrackingFilter,
               &c_estimator_TargetSpecification, &SD->u2.f7.c_val,
-              f_assigner_Estimator_StateEstim->TrackingFilter,
-              &b_trackList_data, &z_data[loop_ub], d_tmp);
+              f_assigner_Estimator_StateEstim->TrackingFilter, &pdf,
+              &z_data[loop_ub], d_tmp);
         } else {
           loop_ub = likelihoodMatrix->size[0] * likelihoodMatrix->size[1];
           if (((int32_T)((uint32_T)i + 1U) < 1) ||
               ((int32_T)((uint32_T)i + 1U) > loop_ub)) {
             emlrtDynamicBoundsCheckR2012b((int32_T)((uint32_T)i + 1U), 1,
-                                          loop_ub, &qb_emlrtBCI, &c_st);
+                                          loop_ub, &rb_emlrtBCI, &c_st);
           }
           likelihoodMatrix_data[i] = 0.0;
         }
@@ -1481,7 +1425,7 @@ void JIPDATrackAssigner_assign(
         *e_assigner_Estimator_StateEstim;
     SD->u2.f7.c_assigner_Estimator_StateEstim =
         *f_assigner_Estimator_StateEstim;
-    b_st.site = &up_emlrtRSI;
+    b_st.site = &vp_emlrtRSI;
     c_JIPDATrackAssigner_measuremen(SD, &b_st, assigner_AssignmentThreshold,
                                     c_assigner_Estimator_StateEstim,
                                     &SD->u2.f7.assigner_Estimator_StateEstimat,
@@ -1523,7 +1467,7 @@ void JIPDATrackAssigner_assign(
     }
   }
   emxInit_int32_T(sp, &clustTracks, 2, &he_emlrtRTEI);
-  st.site = &op_emlrtRSI;
+  st.site = &pp_emlrtRSI;
   nClusters = connectedTracks(&st, b_likelihoodMatrix, clustDets_data,
                               clustDets_size, clustTracks);
   clustTracks_data = clustTracks->data;
@@ -1552,7 +1496,7 @@ void JIPDATrackAssigner_assign(
   for (i = 0; i < g_loop_ub; i++) {
     assignment_data[i] = 0.0;
   }
-  st.site = &np_emlrtRSI;
+  st.site = &op_emlrtRSI;
   if (nClusters > 2147483646) {
     b_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&b_st);
@@ -1568,7 +1512,7 @@ void JIPDATrackAssigner_assign(
   for (c_i = 0; c_i < nClusters; c_i++) {
     int32_T h_loop_ub;
     int32_T i_loop_ub;
-    st.site = &mp_emlrtRSI;
+    st.site = &np_emlrtRSI;
     loop_ub = unassignedTracks->size[0] * unassignedTracks->size[1];
     unassignedTracks->size[0] = 1;
     c_loop_ub = clustTracks->size[1];
@@ -1578,7 +1522,7 @@ void JIPDATrackAssigner_assign(
     for (k = 0; k < c_loop_ub; k++) {
       b_clustTracks_data[k] = (clustTracks_data[k] == c_i + 1);
     }
-    b_st.site = &ldb_emlrtRSI;
+    b_st.site = &ndb_emlrtRSI;
     eml_find(&b_st, unassignedTracks, ii);
     ii_data = ii->data;
     loop_ub = thisClusterTracks->size[0] * thisClusterTracks->size[1];
@@ -1590,7 +1534,7 @@ void JIPDATrackAssigner_assign(
     for (k = 0; k < h_loop_ub; k++) {
       thisClusterTracks_data[k] = ii_data[k];
     }
-    st.site = &lp_emlrtRSI;
+    st.site = &mp_emlrtRSI;
     b_clustDets_size[0] = 1;
     loop_ub = clustDets_size[1];
     b_clustDets_size[1] = clustDets_size[1];
@@ -1602,7 +1546,7 @@ void JIPDATrackAssigner_assign(
     c_clustDets_data.allocatedSize = 51;
     c_clustDets_data.numDimensions = 2;
     c_clustDets_data.canFreeData = false;
-    b_st.site = &ldb_emlrtRSI;
+    b_st.site = &ndb_emlrtRSI;
     eml_find(&b_st, &c_clustDets_data, ii);
     ii_data = ii->data;
     loop_ub = 0;
@@ -1722,7 +1666,7 @@ void JIPDATrackAssigner_assign(
                                       likelihoodMatrix->size[0] * r4[i]];
           }
         }
-        st.site = &kp_emlrtRSI;
+        st.site = &lp_emlrtRSI;
         jpda(&st, lhood, assigner_MaxNumEvents, b_jpda);
         jpda_data = b_jpda->data;
         j_loop_ub = b_jpda->size[0];
@@ -1803,7 +1747,7 @@ void JIPDATrackAssigner_assign(
                 jpda_data[k + b_jpda->size[0] * i];
           }
         }
-        st.site = &jp_emlrtRSI;
+        st.site = &kp_emlrtRSI;
         loop_ub = b_sum(d_jpda, detAssignmentProb_data);
         c_loop_ub = ii->size[1];
         for (i = 0; i < i_loop_ub; i++) {
@@ -1839,7 +1783,7 @@ void JIPDATrackAssigner_assign(
     loop_ub = assignment->size[0] * assignment->size[1];
     if (assignment_data[i] > 1.0) {
       if (i > loop_ub - 1) {
-        emlrtDynamicBoundsCheckR2012b(i, 0, loop_ub - 1, &ob_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(i, 0, loop_ub - 1, &pb_emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       assignment_data[i] = 1.0;
@@ -1850,7 +1794,7 @@ void JIPDATrackAssigner_assign(
     c_loop_ub = assignment->size[0] * assignment->size[1];
     if (assignment_data[i] < 0.0) {
       if (i > c_loop_ub - 1) {
-        emlrtDynamicBoundsCheckR2012b(i, 0, c_loop_ub - 1, &pb_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(i, 0, c_loop_ub - 1, &qb_emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       assignment_data[i] = 0.0;
@@ -1883,7 +1827,7 @@ void JIPDATrackAssigner_assign(
           assignment_data[k + assignment->size[0] * i];
     }
   }
-  st.site = &ip_emlrtRSI;
+  st.site = &jp_emlrtRSI;
   sum(&st, b_jpda, thisClusterTracks);
   emxFree_real_T(sp, &b_jpda);
   loop_ub = thisClusterTracks->size[0] * thisClusterTracks->size[1];
@@ -1907,10 +1851,10 @@ void JIPDATrackAssigner_assign(
   thisClusterTracks_data = thisClusterTracks->data;
   loop_ub = thisClusterTracks->size[1] - 1;
   c_loop_ub = thisClusterTracks->size[1] - 1;
-  if (thisClusterTracks->size[1] < 800) {
+  if (thisClusterTracks->size[1] < 1600) {
     for (i1 = 0; i1 <= loop_ub; i1++) {
-      measIndex = thisClusterTracks_data[i1];
-      thisClusterTracks_data[i1] = muDoubleScalarMax(0.0, measIndex);
+      Pg = thisClusterTracks_data[i1];
+      thisClusterTracks_data[i1] = muDoubleScalarMax(0.0, Pg);
     }
   } else {
     emlrtEnterParallelRegion((emlrtCTX)sp, omp_in_parallel());
@@ -1936,7 +1880,7 @@ void JIPDATrackAssigner_assign(
         thisClusterTracks_data[i];
   }
   emxFree_real_T(sp, &thisClusterTracks);
-  st.site = &hp_emlrtRSI;
+  st.site = &ip_emlrtRSI;
   *unassignedSensorData = *sensorData;
   c_loop_ub = 0;
   loop_ub = 0;

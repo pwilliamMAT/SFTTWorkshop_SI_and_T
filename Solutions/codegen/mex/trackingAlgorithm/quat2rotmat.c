@@ -17,99 +17,77 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ir_emlrtRSI = {
+static emlrtRSInfo jr_emlrtRSI = {
     19,                      /* lineNo */
     "quaternionBase/rotmat", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m" /* pathName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m" /* pathName */
 };
 
-static emlrtRSInfo jr_emlrtRSI = {
+static emlrtRSInfo kr_emlrtRSI = {
     10,                         /* lineNo */
     "quaternionBase/normalize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\normalize.m" /* pathName */
-};
-
-static emlrtRSInfo os_emlrtRSI = {
-    47,                      /* lineNo */
-    "quaternionBase/rotmat", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m" /* pathName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/normalize.m" /* pathName */
 };
 
 static emlrtRSInfo ps_emlrtRSI = {
-    11,                         /* lineNo */
-    "quaternionBase/normalize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\normalize.m" /* pathName */
+    47,                      /* lineNo */
+    "quaternionBase/rotmat", /* fcnName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m" /* pathName */
 };
 
 static emlrtRSInfo qs_emlrtRSI = {
-    12,                         /* lineNo */
+    11,                         /* lineNo */
     "quaternionBase/normalize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\normalize.m" /* pathName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/normalize.m" /* pathName */
 };
 
 static emlrtRSInfo rs_emlrtRSI = {
-    13,                         /* lineNo */
+    12,                         /* lineNo */
     "quaternionBase/normalize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\normalize.m" /* pathName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/normalize.m" /* pathName */
 };
 
 static emlrtRSInfo ss_emlrtRSI = {
-    14,                         /* lineNo */
+    13,                         /* lineNo */
     "quaternionBase/normalize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\normalize.m" /* pathName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/normalize.m" /* pathName */
 };
 
 static emlrtRSInfo ts_emlrtRSI = {
-    16,     /* lineNo */
-    "sqrt", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elfun\\sqrt.m" /* pathName
-                                                                       */
+    14,                         /* lineNo */
+    "quaternionBase/normalize", /* fcnName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/normalize.m" /* pathName */
 };
 
 static emlrtRSInfo us_emlrtRSI = {
-    34,               /* lineNo */
-    "rdivide_helper", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\rdivide_"
-    "helper.m" /* pathName */
+    16,                                           /* lineNo */
+    "sqrt",                                       /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/elfun/sqrt.m" /* pathName */
 };
 
 static emlrtRSInfo vs_emlrtRSI = {
-    53,    /* lineNo */
-    "div", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\div.m" /* pathName
-                                                                          */
+    34,                                                         /* lineNo */
+    "rdivide_helper",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/rdivide_helper.m" /* pathName */
 };
 
 static emlrtRSInfo ws_emlrtRSI = {
-    38,        /* lineNo */
-    "squeeze", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\squeeze.m" /* pathName
-                                                                          */
+    53,                                              /* lineNo */
+    "div",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/div.m" /* pathName */
+};
+
+static emlrtRSInfo xs_emlrtRSI = {
+    38,                                              /* lineNo */
+    "squeeze",                                       /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/elmat/squeeze.m" /* pathName */
 };
 
 static emlrtECInfo f_emlrtECI = {
@@ -117,10 +95,8 @@ static emlrtECInfo f_emlrtECI = {
     10,                         /* lineNo */
     10,                         /* colNo */
     "quaternionBase/normalize", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\normalize.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/normalize.m" /* pName */
 };
 
 static emlrtBCInfo oc_emlrtBCI = {
@@ -130,11 +106,9 @@ static emlrtBCInfo oc_emlrtBCI = {
     14,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtBCInfo pc_emlrtBCI = {
@@ -144,11 +118,9 @@ static emlrtBCInfo pc_emlrtBCI = {
     16,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtBCInfo qc_emlrtBCI = {
@@ -158,11 +130,9 @@ static emlrtBCInfo qc_emlrtBCI = {
     16,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtBCInfo rc_emlrtBCI = {
@@ -172,11 +142,9 @@ static emlrtBCInfo rc_emlrtBCI = {
     16,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtBCInfo sc_emlrtBCI = {
@@ -186,11 +154,9 @@ static emlrtBCInfo sc_emlrtBCI = {
     16,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtBCInfo tc_emlrtBCI = {
@@ -200,11 +166,9 @@ static emlrtBCInfo tc_emlrtBCI = {
     16,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtBCInfo uc_emlrtBCI = {
@@ -214,11 +178,9 @@ static emlrtBCInfo uc_emlrtBCI = {
     16,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtBCInfo vc_emlrtBCI = {
@@ -228,11 +190,9 @@ static emlrtBCInfo vc_emlrtBCI = {
     18,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtECInfo g_emlrtECI = {
@@ -240,10 +200,8 @@ static emlrtECInfo g_emlrtECI = {
     31,                      /* lineNo */
     7,                       /* colNo */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m" /* pName */
 };
 
 static emlrtECInfo h_emlrtECI = {
@@ -251,10 +209,8 @@ static emlrtECInfo h_emlrtECI = {
     30,                      /* lineNo */
     7,                       /* colNo */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m" /* pName */
 };
 
 static emlrtECInfo i_emlrtECI = {
@@ -262,10 +218,8 @@ static emlrtECInfo i_emlrtECI = {
     29,                      /* lineNo */
     7,                       /* colNo */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m" /* pName */
 };
 
 static emlrtECInfo j_emlrtECI = {
@@ -273,10 +227,8 @@ static emlrtECInfo j_emlrtECI = {
     28,                      /* lineNo */
     7,                       /* colNo */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m" /* pName */
 };
 
 static emlrtECInfo k_emlrtECI = {
@@ -284,10 +236,8 @@ static emlrtECInfo k_emlrtECI = {
     27,                      /* lineNo */
     7,                       /* colNo */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m" /* pName */
 };
 
 static emlrtECInfo l_emlrtECI = {
@@ -295,19 +245,16 @@ static emlrtECInfo l_emlrtECI = {
     26,                      /* lineNo */
     7,                       /* colNo */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m" /* pName */
 };
 
-static emlrtRTEInfo q_emlrtRTEI = {
+static emlrtRTEInfo r_emlrtRTEI = {
     13,                     /* lineNo */
     27,                     /* colNo */
     "assertCompatibleDims", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\coder\\coder\\lib\\+coder\\+"
-    "internal\\assertCompatibleDims.m" /* pName */
+    "/MATLAB/toolbox/shared/coder/coder/lib/+coder/+internal/"
+    "assertCompatibleDims.m" /* pName */
 };
 
 static emlrtBCInfo wc_emlrtBCI = {
@@ -317,11 +264,9 @@ static emlrtBCInfo wc_emlrtBCI = {
     23,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtBCInfo xc_emlrtBCI = {
@@ -331,11 +276,9 @@ static emlrtBCInfo xc_emlrtBCI = {
     85,                      /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 static emlrtBCInfo yc_emlrtBCI = {
@@ -345,11 +288,9 @@ static emlrtBCInfo yc_emlrtBCI = {
     147,                     /* colNo */
     "",                      /* aName */
     "quaternionBase/rotmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\rotmat.m", /* pName */
-    0               /* checkKind */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/rotmat.m", /* pName */
+    0                                     /* checkKind */
 };
 
 /* Function Definitions */
@@ -404,8 +345,8 @@ void quat2rotmat(const emlrtStack *sp, const real_T q_a_data[],
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &hr_emlrtRSI;
-  b_st.site = &ir_emlrtRSI;
+  st.site = &ir_emlrtRSI;
+  b_st.site = &jr_emlrtRSI;
   n_size = q_a_size;
   scalarLB = (q_a_size / 2) << 1;
   nx = scalarLB - 2;
@@ -483,7 +424,7 @@ void quat2rotmat(const emlrtStack *sp, const real_T q_a_data[],
   if ((n_size != q_d_size) && ((n_size != 1) && (q_d_size != 1))) {
     emlrtDimSizeImpxCheckR2021b(n_size, q_d_size, &f_emlrtECI, &b_st);
   }
-  c_st.site = &jr_emlrtRSI;
+  c_st.site = &kr_emlrtRSI;
   if (n_size == q_d_size) {
     nx = (n_size / 2) << 1;
     n = nx - 2;
@@ -509,7 +450,7 @@ void quat2rotmat(const emlrtStack *sp, const real_T q_a_data[],
         &c_st, &d_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
         "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
   }
-  d_st.site = &ts_emlrtRSI;
+  d_st.site = &us_emlrtRSI;
   nx = (n_size / 2) << 1;
   n = nx - 2;
   for (k = 0; k <= n; k += 2) {
@@ -519,11 +460,11 @@ void quat2rotmat(const emlrtStack *sp, const real_T q_a_data[],
   for (k = nx; k < n_size; k++) {
     n_data[k] = muDoubleScalarSqrt(n_data[k]);
   }
-  c_st.site = &ps_emlrtRSI;
-  d_st.site = &us_emlrtRSI;
-  e_st.site = &vs_emlrtRSI;
+  c_st.site = &qs_emlrtRSI;
+  d_st.site = &vs_emlrtRSI;
+  e_st.site = &ws_emlrtRSI;
   if ((q_a_size != 1) && (n_size != 1) && (q_a_size != n_size)) {
-    emlrtErrorWithMessageIdR2018a(&e_st, &q_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&e_st, &r_emlrtRTEI,
                                   "MATLAB:sizeDimensionsMustMatch",
                                   "MATLAB:sizeDimensionsMustMatch", 0);
   }
@@ -540,11 +481,11 @@ void quat2rotmat(const emlrtStack *sp, const real_T q_a_data[],
   } else {
     b_q_a_size = rdivide(b_q_a_data, q_a_data, &q_a_size, n_data, &n_size);
   }
-  c_st.site = &qs_emlrtRSI;
-  d_st.site = &us_emlrtRSI;
-  e_st.site = &vs_emlrtRSI;
+  c_st.site = &rs_emlrtRSI;
+  d_st.site = &vs_emlrtRSI;
+  e_st.site = &ws_emlrtRSI;
   if ((q_b_size != 1) && (n_size != 1) && (q_b_size != n_size)) {
-    emlrtErrorWithMessageIdR2018a(&e_st, &q_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&e_st, &r_emlrtRTEI,
                                   "MATLAB:sizeDimensionsMustMatch",
                                   "MATLAB:sizeDimensionsMustMatch", 0);
   }
@@ -561,11 +502,11 @@ void quat2rotmat(const emlrtStack *sp, const real_T q_a_data[],
   } else {
     bbsq_size = rdivide(bbsq_data, q_b_data, &q_b_size, n_data, &n_size);
   }
-  c_st.site = &rs_emlrtRSI;
-  d_st.site = &us_emlrtRSI;
-  e_st.site = &vs_emlrtRSI;
+  c_st.site = &ss_emlrtRSI;
+  d_st.site = &vs_emlrtRSI;
+  e_st.site = &ws_emlrtRSI;
   if ((q_c_size != 1) && (n_size != 1) && (q_c_size != n_size)) {
-    emlrtErrorWithMessageIdR2018a(&e_st, &q_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&e_st, &r_emlrtRTEI,
                                   "MATLAB:sizeDimensionsMustMatch",
                                   "MATLAB:sizeDimensionsMustMatch", 0);
   }
@@ -582,11 +523,11 @@ void quat2rotmat(const emlrtStack *sp, const real_T q_a_data[],
   } else {
     ccsq_size = rdivide(ccsq_data, q_c_data, &q_c_size, n_data, &n_size);
   }
-  c_st.site = &ss_emlrtRSI;
-  d_st.site = &us_emlrtRSI;
-  e_st.site = &vs_emlrtRSI;
+  c_st.site = &ts_emlrtRSI;
+  d_st.site = &vs_emlrtRSI;
+  e_st.site = &ws_emlrtRSI;
   if ((q_d_size != 1) && (n_size != 1) && (q_d_size != n_size)) {
-    emlrtErrorWithMessageIdR2018a(&e_st, &q_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&e_st, &r_emlrtRTEI,
                                   "MATLAB:sizeDimensionsMustMatch",
                                   "MATLAB:sizeDimensionsMustMatch", 0);
   }
@@ -833,26 +774,26 @@ void quat2rotmat(const emlrtStack *sp, const real_T q_a_data[],
     }
     rot_data[9 * k + 8] = d1 + ddsq_data[k];
   }
-  b_st.site = &os_emlrtRSI;
+  b_st.site = &ps_emlrtRSI;
   szb_idx_2 = 1;
   if (b_q_a_size != 1) {
     szb_idx_2 = (int8_T)b_q_a_size;
   }
-  c_st.site = &ws_emlrtRSI;
+  c_st.site = &xs_emlrtRSI;
   nx = 9 * b_q_a_size;
-  d_st.site = &xs_emlrtRSI;
+  d_st.site = &ys_emlrtRSI;
   n = 3;
   if (b_q_a_size > 3) {
     n = b_q_a_size;
   }
   if (szb_idx_2 > muIntScalarMax_sint32(nx, n)) {
-    emlrtErrorWithMessageIdR2018a(&c_st, &o_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&c_st, &p_emlrtRTEI,
                                   "Coder:toolbox:reshape_emptyReshapeLimit",
                                   "Coder:toolbox:reshape_emptyReshapeLimit", 0);
   }
   if (9 * szb_idx_2 != nx) {
     emlrtErrorWithMessageIdR2018a(
-        &c_st, &p_emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
+        &c_st, &q_emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
         "Coder:MATLAB:getReshapeDims_notSameNumel", 0);
   }
   rot_size[0] = 3;

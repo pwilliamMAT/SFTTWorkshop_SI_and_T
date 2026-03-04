@@ -14,26 +14,23 @@ static emlrtMCInfo emlrtMCI = {
     14,        /* lineNo */
     25,        /* colNo */
     "warning", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\coder\\coder\\lib\\+coder\\+"
-    "internal\\warning.m" /* pName */
+    "/MATLAB/toolbox/shared/coder/coder/lib/+coder/+internal/warning.m" /* pName
+                                                                         */
 };
 
 static emlrtMCInfo b_emlrtMCI = {
     14,        /* lineNo */
     9,         /* colNo */
     "warning", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\coder\\coder\\lib\\+coder\\+"
-    "internal\\warning.m" /* pName */
+    "/MATLAB/toolbox/shared/coder/coder/lib/+coder/+internal/warning.m" /* pName
+                                                                         */
 };
 
-static emlrtRSInfo wob_emlrtRSI = {
+static emlrtRSInfo yob_emlrtRSI = {
     14,        /* lineNo */
     "warning", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\coder\\coder\\lib\\+coder\\+"
-    "internal\\warning.m" /* pathName */
+    "/MATLAB/toolbox/shared/coder/coder/lib/+coder/+internal/warning.m" /* pathName
+                                                                         */
 };
 
 /* Function Declarations */
@@ -129,7 +126,7 @@ void b_warning(const emlrtStack *sp)
   m = emlrtCreateCharArray(2, &iv2[0]);
   emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 26, m, &msgID[0]);
   emlrtAssign(&c_y, m);
-  st.site = &wob_emlrtRSI;
+  st.site = &yob_emlrtRSI;
   b_feval(&st, y, feval(&st, b_y, c_y, &emlrtMCI), &b_emlrtMCI);
 }
 
@@ -162,7 +159,7 @@ void c_warning(const emlrtStack *sp)
   m = emlrtCreateCharArray(2, &iv2[0]);
   emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 21, m, &msgID[0]);
   emlrtAssign(&c_y, m);
-  st.site = &wob_emlrtRSI;
+  st.site = &yob_emlrtRSI;
   b_feval(&st, y, feval(&st, b_y, c_y, &emlrtMCI), &b_emlrtMCI);
 }
 
@@ -209,7 +206,7 @@ void d_warning(const emlrtStack *sp, const char_T varargin_1[23],
   m = emlrtCreateCharArray(2, &iv4[0]);
   emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 23, m, &varargin_2[0]);
   emlrtAssign(&e_y, m);
-  st.site = &wob_emlrtRSI;
+  st.site = &yob_emlrtRSI;
   b_feval(&st, y, c_feval(&st, b_y, c_y, d_y, e_y, &emlrtMCI), &b_emlrtMCI);
 }
 
@@ -249,7 +246,7 @@ void e_warning(const emlrtStack *sp, const char_T varargin_1[14])
   m = emlrtCreateCharArray(2, &iv3[0]);
   emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 14, m, &varargin_1[0]);
   emlrtAssign(&d_y, m);
-  st.site = &wob_emlrtRSI;
+  st.site = &yob_emlrtRSI;
   b_feval(&st, y, d_feval(&st, b_y, c_y, d_y, &emlrtMCI), &b_emlrtMCI);
 }
 
@@ -282,7 +279,7 @@ void warning(const emlrtStack *sp)
   m = emlrtCreateCharArray(2, &iv2[0]);
   emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 24, m, &msgID[0]);
   emlrtAssign(&c_y, m);
-  st.site = &wob_emlrtRSI;
+  st.site = &yob_emlrtRSI;
   b_feval(&st, y, feval(&st, b_y, c_y, &emlrtMCI), &b_emlrtMCI);
 }
 

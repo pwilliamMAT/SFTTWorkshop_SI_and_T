@@ -14,119 +14,93 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo op_emlrtRSI = {
-    241,          /* lineNo */
-    "do_vectors", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pathName */
+static emlrtRSInfo pp_emlrtRSI = {
+    241,                                                     /* lineNo */
+    "do_vectors",                                            /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pathName */
 };
 
-static emlrtRSInfo pp_emlrtRSI = {
-    244,          /* lineNo */
-    "do_vectors", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pathName */
+static emlrtRSInfo qp_emlrtRSI = {
+    244,                                                     /* lineNo */
+    "do_vectors",                                            /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pathName */
 };
 
 static emlrtRTEInfo jb_emlrtRTEI = {
-    242,          /* lineNo */
-    13,           /* colNo */
-    "do_vectors", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    242,                                                     /* lineNo */
+    13,                                                      /* colNo */
+    "do_vectors",                                            /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo kb_emlrtRTEI = {
-    245,          /* lineNo */
-    13,           /* colNo */
-    "do_vectors", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    245,                                                     /* lineNo */
+    13,                                                      /* colNo */
+    "do_vectors",                                            /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo lb_emlrtRTEI = {
-    409,          /* lineNo */
-    5,            /* colNo */
-    "do_vectors", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    409,                                                     /* lineNo */
+    5,                                                       /* colNo */
+    "do_vectors",                                            /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo mb_emlrtRTEI = {
-    420,          /* lineNo */
-    9,            /* colNo */
-    "do_vectors", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    420,                                                     /* lineNo */
+    9,                                                       /* colNo */
+    "do_vectors",                                            /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo nb_emlrtRTEI = {
-    447,          /* lineNo */
-    5,            /* colNo */
-    "do_vectors", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    447,                                                     /* lineNo */
+    5,                                                       /* colNo */
+    "do_vectors",                                            /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo ff_emlrtRTEI = {
-    223,         /* lineNo */
-    24,          /* colNo */
-    "eml_setop", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    223,                                                     /* lineNo */
+    24,                                                      /* colNo */
+    "eml_setop",                                             /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo gf_emlrtRTEI = {
-    224,         /* lineNo */
-    25,          /* colNo */
-    "eml_setop", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    224,                                                     /* lineNo */
+    25,                                                      /* colNo */
+    "eml_setop",                                             /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo hf_emlrtRTEI = {
-    225,         /* lineNo */
-    25,          /* colNo */
-    "eml_setop", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    225,                                                     /* lineNo */
+    25,                                                      /* colNo */
+    "eml_setop",                                             /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo if_emlrtRTEI = {
-    415,         /* lineNo */
-    9,           /* colNo */
-    "eml_setop", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    415,                                                     /* lineNo */
+    9,                                                       /* colNo */
+    "eml_setop",                                             /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo jf_emlrtRTEI = {
-    426,         /* lineNo */
-    13,          /* colNo */
-    "eml_setop", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    426,                                                     /* lineNo */
+    13,                                                      /* colNo */
+    "eml_setop",                                             /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 static emlrtRTEInfo kf_emlrtRTEI = {
-    451,         /* lineNo */
-    9,           /* colNo */
-    "eml_setop", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop."
-    "m" /* pName */
+    451,                                                     /* lineNo */
+    9,                                                       /* colNo */
+    "eml_setop",                                             /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/private/eml_setop.m" /* pName */
 };
 
 /* Function Definitions */
@@ -167,13 +141,13 @@ void do_vectors(const emlrtStack *sp, const emxArray_uint32_T *a,
   ib->size[0] = ncmax;
   emxEnsureCapacity_int32_T(sp, ib, iafirst, &hf_emlrtRTEI);
   ib_data = ib->data;
-  st.site = &op_emlrtRSI;
+  st.site = &pp_emlrtRSI;
   if (!issorted(&st, a)) {
     emlrtErrorWithMessageIdR2018a(sp, &jb_emlrtRTEI,
                                   "Coder:toolbox:eml_setop_unsortedA",
                                   "Coder:toolbox:eml_setop_unsortedA", 0);
   }
-  st.site = &pp_emlrtRSI;
+  st.site = &qp_emlrtRSI;
   if (!issorted(&st, b)) {
     emlrtErrorWithMessageIdR2018a(sp, &kb_emlrtRTEI,
                                   "Coder:toolbox:eml_setop_unsortedB",

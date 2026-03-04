@@ -13,37 +13,32 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo vh_emlrtRSI = {
+static emlrtRSInfo wh_emlrtRSI = {
     25,                     /* lineNo */
     "geodetic2ecefFormula", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\geodesy\\private\\geodetic2ecefFor"
-    "mula.m" /* pathName */
-};
-
-static emlrtRSInfo wh_emlrtRSI = {
-    59,                     /* lineNo */
-    "geodetic2cylindrical", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\geodesy\\private\\geodetic2ecefFor"
-    "mula.m" /* pathName */
+    "/MATLAB/toolbox/shared/geodesy/private/geodetic2ecefFormula.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo xh_emlrtRSI = {
+    59,                     /* lineNo */
+    "geodetic2cylindrical", /* fcnName */
+    "/MATLAB/toolbox/shared/geodesy/private/geodetic2ecefFormula.m" /* pathName
+                                                                     */
+};
+
+static emlrtRSInfo yh_emlrtRSI = {
     78,                     /* lineNo */
     "geodetic2cylindrical", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\mapgeodesy\\+map\\+geodesy\\+"
-    "internal\\geodetic2cylindrical.m" /* pathName */
+    "/MATLAB/toolbox/shared/mapgeodesy/+map/+geodesy/+internal/"
+    "geodetic2cylindrical.m" /* pathName */
 };
 
 static emlrtRTEInfo ec_emlrtRTEI = {
-    13,     /* lineNo */
-    9,      /* colNo */
-    "sqrt", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elfun\\sqrt.m" /* pName
-                                                                       */
+    13,                                           /* lineNo */
+    9,                                            /* colNo */
+    "sqrt",                                       /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/elfun/sqrt.m" /* pName */
 };
 
 /* Function Definitions */
@@ -62,11 +57,11 @@ real_T geodetic2ecefFormula(const emlrtStack *sp, real_T *y, real_T *z)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &vh_emlrtRSI;
-  b_st.site = &wh_emlrtRSI;
+  st.site = &wh_emlrtRSI;
+  b_st.site = &xh_emlrtRSI;
   sinphi = 42.39423231362;
   b_sind(&sinphi);
-  c_st.site = &xh_emlrtRSI;
+  c_st.site = &yh_emlrtRSI;
   x = 1.0 - 0.0066943799901413165 * (sinphi * sinphi);
   if (x < 0.0) {
     emlrtErrorWithMessageIdR2018a(

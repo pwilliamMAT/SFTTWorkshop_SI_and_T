@@ -107,13 +107,13 @@ void emxEnsureCapacity_boolean_T(const emlrtStack *sp,
                                  emxArray_boolean_T *emxArray, int32_T oldNumel,
                                  const emlrtRTEInfo *srcLocation);
 
-void emxEnsureCapacity_cell_wrap_81(const emlrtStack *sp,
-                                    emxArray_cell_wrap_81 *emxArray,
+void emxEnsureCapacity_cell_wrap_80(const emlrtStack *sp,
+                                    emxArray_cell_wrap_80 *emxArray,
                                     int32_T oldNumel,
                                     const emlrtRTEInfo *srcLocation);
 
-void emxEnsureCapacity_cell_wrap_82(const emlrtStack *sp,
-                                    emxArray_cell_wrap_82 *emxArray,
+void emxEnsureCapacity_cell_wrap_81(const emlrtStack *sp,
+                                    emxArray_cell_wrap_81 *emxArray,
                                     int32_T oldNumel,
                                     const emlrtRTEInfo *srcLocation);
 
@@ -151,25 +151,25 @@ void emxEnsureCapacity_uint32_T(const emlrtStack *sp,
                                 emxArray_uint32_T *emxArray, int32_T oldNumel,
                                 const emlrtRTEInfo *srcLocation);
 
-void emxExpand_cell_wrap_81(emxArray_cell_wrap_81 *emxArray, int32_T fromIndex,
+void emxExpand_cell_wrap_80(emxArray_cell_wrap_80 *emxArray, int32_T fromIndex,
                             int32_T toIndex);
 
-void emxExpand_cell_wrap_82(const emlrtStack *sp,
-                            emxArray_cell_wrap_82 *emxArray, int32_T fromIndex,
+void emxExpand_cell_wrap_81(const emlrtStack *sp,
+                            emxArray_cell_wrap_81 *emxArray, int32_T fromIndex,
                             int32_T toIndex, const emlrtRTEInfo *srcLocation);
 
 void emxExpand_struct_T(b_emxArray_struct_T *emxArray, int32_T fromIndex,
                         int32_T toIndex);
 
-void emxFreeStruct_cell_wrap_82(const emlrtStack *sp, cell_wrap_82 *pStruct);
+void emxFreeStruct_cell_wrap_81(const emlrtStack *sp, cell_wrap_81 *pStruct);
 
 void emxFree_boolean_T(const emlrtStack *sp, emxArray_boolean_T **pEmxArray);
 
+void emxFree_cell_wrap_80(const emlrtStack *sp,
+                          emxArray_cell_wrap_80 **pEmxArray);
+
 void emxFree_cell_wrap_81(const emlrtStack *sp,
                           emxArray_cell_wrap_81 **pEmxArray);
-
-void emxFree_cell_wrap_82(const emlrtStack *sp,
-                          emxArray_cell_wrap_82 **pEmxArray);
 
 void emxFree_int32_T(const emlrtStack *sp, emxArray_int32_T **pEmxArray);
 
@@ -187,9 +187,9 @@ void emxFree_struct_T2(const emlrtStack *sp, c_emxArray_struct_T **pEmxArray);
 
 void emxFree_uint32_T(const emlrtStack *sp, emxArray_uint32_T **pEmxArray);
 
-void emxInitStruct_cell_wrap_81(cell_wrap_81 *pStruct);
+void emxInitStruct_cell_wrap_80(cell_wrap_80 *pStruct);
 
-void emxInitStruct_cell_wrap_82(const emlrtStack *sp, cell_wrap_82 *pStruct,
+void emxInitStruct_cell_wrap_81(const emlrtStack *sp, cell_wrap_81 *pStruct,
                                 const emlrtRTEInfo *srcLocation);
 
 void emxInitStruct_struct_T(c_struct_T *pStruct);
@@ -198,12 +198,12 @@ void emxInit_boolean_T(const emlrtStack *sp, emxArray_boolean_T **pEmxArray,
                        int32_T numDimensions, const emlrtRTEInfo *srcLocation,
                        boolean_T doPush);
 
-void emxInit_cell_wrap_81(const emlrtStack *sp,
-                          emxArray_cell_wrap_81 **pEmxArray,
+void emxInit_cell_wrap_80(const emlrtStack *sp,
+                          emxArray_cell_wrap_80 **pEmxArray,
                           const emlrtRTEInfo *srcLocation);
 
-void emxInit_cell_wrap_82(const emlrtStack *sp,
-                          emxArray_cell_wrap_82 **pEmxArray,
+void emxInit_cell_wrap_81(const emlrtStack *sp,
+                          emxArray_cell_wrap_81 **pEmxArray,
                           const emlrtRTEInfo *srcLocation);
 
 void emxInit_int32_T(const emlrtStack *sp, emxArray_int32_T **pEmxArray,
@@ -232,7 +232,7 @@ void emxInit_uint32_T(const emlrtStack *sp, emxArray_uint32_T **pEmxArray,
                       int32_T numDimensions, const emlrtRTEInfo *srcLocation,
                       boolean_T doPush);
 
-void emxTrim_cell_wrap_82(const emlrtStack *sp, emxArray_cell_wrap_82 *emxArray,
+void emxTrim_cell_wrap_81(const emlrtStack *sp, emxArray_cell_wrap_81 *emxArray,
                           int32_T fromIndex, int32_T toIndex);
 
 /* End of code generation (trackingAlgorithm_emxutil.h) */

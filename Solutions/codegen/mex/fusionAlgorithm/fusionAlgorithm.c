@@ -30,417 +30,397 @@ static trackFuser fuser;
 
 static boolean_T fuser_not_empty;
 
-static emlrtRSInfo emlrtRSI = {
-    11,                /* lineNo */
-    "fusionAlgorithm", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    emlrtRSI =
+        {
+            11,                /* lineNo */
+            "fusionAlgorithm", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo b_emlrtRSI = {
-    17,                /* lineNo */
-    "fusionAlgorithm", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    b_emlrtRSI =
+        {
+            17,                /* lineNo */
+            "fusionAlgorithm", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo c_emlrtRSI = {
-    25,                /* lineNo */
-    "fusionAlgorithm", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    c_emlrtRSI =
+        {
+            25,                /* lineNo */
+            "fusionAlgorithm", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo d_emlrtRSI = {
-    38,                /* lineNo */
-    "fusionAlgorithm", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    d_emlrtRSI =
+        {
+            38,                /* lineNo */
+            "fusionAlgorithm", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
 static emlrtRSInfo h_emlrtRSI = {
     1,                                                         /* lineNo */
     "AbstractFusingConfiguration/AbstractFusingConfiguration", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusingConfiguration.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusingConfiguration.m" /* pathName */
 };
 
 static emlrtRSInfo i_emlrtRSI = {
     323,                                      /* lineNo */
     "fuserSourceConfiguration/setProperties", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/fuserSourceConfiguration.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo j_emlrtRSI = {
     324,                                      /* lineNo */
     "fuserSourceConfiguration/setProperties", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/fuserSourceConfiguration.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo k_emlrtRSI = {
     325,                                      /* lineNo */
     "fuserSourceConfiguration/setProperties", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/fuserSourceConfiguration.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo l_emlrtRSI = {
     326,                                      /* lineNo */
     "fuserSourceConfiguration/setProperties", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/fuserSourceConfiguration.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo m_emlrtRSI = {
     295,                         /* lineNo */
     "FuserManager/FuserManager", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\FuserManager.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/FuserManager.m" /* pathName
+                                                                           */
 };
 
 static emlrtRSInfo n_emlrtRSI = {
     1,               /* lineNo */
     "System/System", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+"
-    "coder\\System.p" /* pathName */
+    "/MATLAB/toolbox/shared/system/coder/+matlab/+system/+coder/System.p" /* pathName
+                                                                           */
 };
 
-static emlrtRSInfo o_emlrtRSI = {
-    1,                                        /* lineNo */
-    "SystemProp/clearTunablePropertyChanged", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+"
-    "coder\\SystemProp.p" /* pathName */
+static emlrtRSInfo o_emlrtRSI =
+    {
+        1,                                        /* lineNo */
+        "SystemProp/clearTunablePropertyChanged", /* fcnName */
+        "/MATLAB/toolbox/shared/system/coder/+matlab/+system/+coder/"
+        "SystemProp.p" /* pathName */
 };
 
 static emlrtRSInfo q_emlrtRSI = {
     1,                                                     /* lineNo */
     "ExportToSimulinkInterface/ExportToSimulinkInterface", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\ExportToSimulinkInterface.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "ExportToSimulinkInterface.m" /* pathName */
 };
 
 static emlrtRSInfo s_emlrtRSI = {
-    351,                     /* lineNo */
-    "trackFuser/trackFuser", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m" /* pathName
-                                                                          */
+    351,                                              /* lineNo */
+    "trackFuser/trackFuser",                          /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/trackFuser.m" /* pathName */
 };
 
 static emlrtRSInfo t_emlrtRSI = {
-    357,                     /* lineNo */
-    "trackFuser/trackFuser", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m" /* pathName
-                                                                          */
+    357,                                              /* lineNo */
+    "trackFuser/trackFuser",                          /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/trackFuser.m" /* pathName */
 };
 
 static emlrtRSInfo u_emlrtRSI = {
-    353,                     /* lineNo */
-    "trackFuser/trackFuser", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m" /* pathName
-                                                                          */
+    353,                                              /* lineNo */
+    "trackFuser/trackFuser",                          /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/trackFuser.m" /* pathName */
 };
 
-static emlrtRSInfo v_emlrtRSI = {
-    1,                          /* lineNo */
-    "SystemProp/setProperties", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+"
-    "coder\\SystemProp.p" /* pathName */
+static emlrtRSInfo v_emlrtRSI =
+    {
+        1,                          /* lineNo */
+        "SystemProp/setProperties", /* fcnName */
+        "/MATLAB/toolbox/shared/system/coder/+matlab/+system/+coder/"
+        "SystemProp.p" /* pathName */
 };
 
 static emlrtRSInfo w_emlrtRSI = {
     1,                                /* lineNo */
     "ProcessConstructorArguments/do", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+"
-    "coder\\ProcessConstructorArguments.p" /* pathName */
+    "/MATLAB/toolbox/shared/system/coder/+matlab/+system/+coder/"
+    "ProcessConstructorArguments.p" /* pathName */
 };
 
 static emlrtRSInfo x_emlrtRSI = {
     1,                                           /* lineNo */
     "ProcessConstructorArguments/setProperties", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+"
-    "coder\\ProcessConstructorArguments.p" /* pathName */
+    "/MATLAB/toolbox/shared/system/coder/+matlab/+system/+coder/"
+    "ProcessConstructorArguments.p" /* pathName */
 };
 
 static emlrtRSInfo y_emlrtRSI = {
-    466,                                   /* lineNo */
-    "trackFuser/set.SourceConfigurations", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m" /* pathName
-                                                                          */
+    466,                                              /* lineNo */
+    "trackFuser/set.SourceConfigurations",            /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/trackFuser.m" /* pathName */
 };
 
 static emlrtRSInfo ab_emlrtRSI = {
     584,                       /* lineNo */
     "FuserManager/setSources", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\FuserManager.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/FuserManager.m" /* pathName
+                                                                           */
 };
 
 static emlrtRSInfo bb_emlrtRSI = {
     566,                       /* lineNo */
     "FuserManager/setSources", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\FuserManager.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/FuserManager.m" /* pathName
+                                                                           */
 };
 
-static emlrtRSInfo ch_emlrtRSI = {
-    83,              /* lineNo */
-    "Ned2ecefTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    dh_emlrtRSI =
+        {
+            83,              /* lineNo */
+            "Ned2ecefTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo dh_emlrtRSI = {
-    87,              /* lineNo */
-    "Ned2ecefTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    eh_emlrtRSI =
+        {
+            87,              /* lineNo */
+            "Ned2ecefTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo eh_emlrtRSI = {
-    114,             /* lineNo */
-    "Ned2ecefTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    fh_emlrtRSI =
+        {
+            114,             /* lineNo */
+            "Ned2ecefTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo fh_emlrtRSI = {
-    115,             /* lineNo */
-    "Ned2ecefTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    gh_emlrtRSI =
+        {
+            115,             /* lineNo */
+            "Ned2ecefTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo gh_emlrtRSI = {
-    169,         /* lineNo */
-    "syncTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    hh_emlrtRSI =
+        {
+            169,         /* lineNo */
+            "syncTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo hh_emlrtRSI = {
-    170,         /* lineNo */
-    "syncTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    ih_emlrtRSI =
+        {
+            170,         /* lineNo */
+            "syncTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo ih_emlrtRSI = {
-    171,         /* lineNo */
-    "syncTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    jh_emlrtRSI =
+        {
+            171,         /* lineNo */
+            "syncTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo jh_emlrtRSI = {
-    172,         /* lineNo */
-    "syncTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    kh_emlrtRSI =
+        {
+            172,         /* lineNo */
+            "syncTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo kh_emlrtRSI = {
-    173,         /* lineNo */
-    "syncTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    lh_emlrtRSI =
+        {
+            173,         /* lineNo */
+            "syncTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo lh_emlrtRSI = {
-    174,         /* lineNo */
-    "syncTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    mh_emlrtRSI =
+        {
+            174,         /* lineNo */
+            "syncTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo mh_emlrtRSI = {
-    175,         /* lineNo */
-    "syncTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    nh_emlrtRSI =
+        {
+            175,         /* lineNo */
+            "syncTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo nh_emlrtRSI = {
-    184,         /* lineNo */
-    "syncTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    oh_emlrtRSI =
+        {
+            184,         /* lineNo */
+            "syncTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo oh_emlrtRSI = {
-    185,         /* lineNo */
-    "syncTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    ph_emlrtRSI =
+        {
+            185,         /* lineNo */
+            "syncTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo qh_emlrtRSI =
-    {
-        267,                        /* lineNo */
-        "objectTrack/set.BranchID", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo rh_emlrtRSI = {
+    267,                                                      /* lineNo */
+    "objectTrack/set.BranchID",                               /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo rh_emlrtRSI =
-    {
-        272,                           /* lineNo */
-        "objectTrack/set.SourceIndex", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo sh_emlrtRSI = {
+    272,                                                      /* lineNo */
+    "objectTrack/set.SourceIndex",                            /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo sh_emlrtRSI =
-    {
-        282,                   /* lineNo */
-        "objectTrack/set.Age", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
-};
-
-static emlrtRSInfo th_emlrtRSI =
-    {
-        11,         /* lineNo */
-        "ned2ecef", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\geodesy\\ned2ecef.m" /* pathName
-                                                                       */
+static emlrtRSInfo th_emlrtRSI = {
+    282,                                                      /* lineNo */
+    "objectTrack/set.Age",                                    /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
 static emlrtRSInfo uh_emlrtRSI = {
-    17,                /* lineNo */
-    "enu2ecefFormula", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\geodesy\\private\\enu2ecefFormula."
-    "m" /* pathName */
+    11,                                         /* lineNo */
+    "ned2ecef",                                 /* fcnName */
+    "/MATLAB/toolbox/shared/geodesy/ned2ecef.m" /* pathName */
 };
 
-static emlrtRSInfo yh_emlrtRSI = {
-    129,             /* lineNo */
-    "Ecef2nedTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo vh_emlrtRSI = {
+    17,                                                        /* lineNo */
+    "enu2ecefFormula",                                         /* fcnName */
+    "/MATLAB/toolbox/shared/geodesy/private/enu2ecefFormula.m" /* pathName */
 };
 
-static emlrtRSInfo ai_emlrtRSI = {
-    133,             /* lineNo */
-    "Ecef2nedTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    ai_emlrtRSI =
+        {
+            129,             /* lineNo */
+            "Ecef2nedTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo bi_emlrtRSI = {
-    160,             /* lineNo */
-    "Ecef2nedTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    bi_emlrtRSI =
+        {
+            133,             /* lineNo */
+            "Ecef2nedTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo ci_emlrtRSI = {
-    161,             /* lineNo */
-    "Ecef2nedTrack", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
+static emlrtRSInfo
+    ci_emlrtRSI =
+        {
+            160,             /* lineNo */
+            "Ecef2nedTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo di_emlrtRSI =
-    {
-        11,         /* lineNo */
-        "ecef2ned", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\geodesy\\ecef2ned.m" /* pathName
-                                                                       */
+static emlrtRSInfo
+    di_emlrtRSI =
+        {
+            161,             /* lineNo */
+            "Ecef2nedTrack", /* fcnName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pathName */
 };
 
 static emlrtRSInfo ei_emlrtRSI = {
-    17,                /* lineNo */
-    "ecef2enuFormula", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\geodesy\\private\\ecef2enuFormula."
-    "m" /* pathName */
+    11,                                         /* lineNo */
+    "ecef2ned",                                 /* fcnName */
+    "/MATLAB/toolbox/shared/geodesy/ecef2ned.m" /* pathName */
+};
+
+static emlrtRSInfo fi_emlrtRSI = {
+    17,                                                        /* lineNo */
+    "ecef2enuFormula",                                         /* fcnName */
+    "/MATLAB/toolbox/shared/geodesy/private/ecef2enuFormula.m" /* pathName */
 };
 
 static emlrtRTEInfo emlrtRTEI = {
     580,                       /* lineNo */
     21,                        /* colNo */
     "FuserManager/setSources", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\FuserManager.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/FuserManager.m" /* pName
+                                                                           */
 };
 
 static emlrtDCInfo emlrtDCI = {
     583,                       /* lineNo */
     29,                        /* colNo */
     "FuserManager/setSources", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\FuserManager.m", /* pName */
-    1                           /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/FuserManager.m", /* pName
+                                                                            */
+    1 /* checkKind */
 };
 
 static emlrtBCInfo emlrtBCI = {
@@ -450,19 +430,17 @@ static emlrtBCInfo emlrtBCI = {
     29,                        /* colNo */
     "",                        /* aName */
     "FuserManager/setSources", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\FuserManager.m", /* pName */
-    0                           /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/FuserManager.m", /* pName
+                                                                            */
+    0 /* checkKind */
 };
 
 static emlrtRTEInfo b_emlrtRTEI = {
     585,                       /* lineNo */
     61,                        /* colNo */
     "FuserManager/setSources", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\FuserManager.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/FuserManager.m" /* pName
+                                                                           */
 };
 
 static emlrtBCInfo b_emlrtBCI = {
@@ -472,29 +450,27 @@ static emlrtBCInfo b_emlrtBCI = {
     21,                        /* colNo */
     "",                        /* aName */
     "FuserManager/setSources", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\FuserManager.m", /* pName */
-    3                           /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/FuserManager.m", /* pName
+                                                                            */
+    3 /* checkKind */
 };
 
-static emlrtRTEInfo lc_emlrtRTEI = {
-    5,                 /* lineNo */
-    12,                /* colNo */
-    "fusionAlgorithm", /* fName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pName */
+static emlrtRTEInfo
+    lc_emlrtRTEI =
+        {
+            5,                 /* lineNo */
+            12,                /* colNo */
+            "fusionAlgorithm", /* fName */
+            "/MATLAB "
+            "Drive/Repositories/SFTTWorkshop_SI_and_T-6/Solutions/"
+            "fusionAlgorithm.m" /* pName */
 };
 
 static emlrtRTEInfo mc_emlrtRTEI = {
-    48,       /* lineNo */
-    13,       /* colNo */
-    "unique", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pName
-                                                                       */
+    48,                                           /* lineNo */
+    13,                                           /* colNo */
+    "unique",                                     /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pName */
 };
 
 static const real_T dv[9] = {
@@ -628,11 +604,11 @@ void Ecef2nedTrack(const emlrtStack *sp, uint32_T centralTrack_TrackID,
   /*  Force 'Integrated' for codegen consistency */
   /*  Sync properties of radarTrack except State and StateCovariance with */
   /*  radarTrack See syncTrack defined below. */
-  st.site = &yh_emlrtRSI;
+  st.site = &ai_emlrtRSI;
   /*  Updated to comply with codegen (different from local code only in that */
   /*  we're casting values for consistency) */
   /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-  b_st.site = &gh_emlrtRSI;
+  b_st.site = &hh_emlrtRSI;
   radarTrack->TrackID = objectTrack_set_TrackID(
       &b_st, centralTrack_TrackID, &radarTrack->BranchID,
       &radarTrack->SourceIndex, &radarTrack->Age, &radarTrack->ObjectClassID,
@@ -640,13 +616,13 @@ void Ecef2nedTrack(const emlrtStack *sp, uint32_T centralTrack_TrackID,
       radarTrack->ObjectClassProbabilities.size, &radarTrack->IsConfirmed,
       &radarTrack->IsCoasted, &radarTrack->IsSelfReported, radarTrack->pState,
       radarTrack->pStateCovariance, &radarTrack->pUpdateTime);
-  b_st.site = &hh_emlrtRSI;
-  c_st.site = &qh_emlrtRSI;
-  radarTrack->BranchID = centralTrack_BranchID;
   b_st.site = &ih_emlrtRSI;
   c_st.site = &rh_emlrtRSI;
-  radarTrack->SourceIndex = centralTrack_SourceIndex;
+  radarTrack->BranchID = centralTrack_BranchID;
   b_st.site = &jh_emlrtRSI;
+  c_st.site = &sh_emlrtRSI;
+  radarTrack->SourceIndex = centralTrack_SourceIndex;
+  b_st.site = &kh_emlrtRSI;
   c_st.site = &qc_emlrtRSI;
   d_st.site = &gb_emlrtRSI;
   if (centralTrack_pUpdateTime < 0.0) {
@@ -663,11 +639,11 @@ void Ecef2nedTrack(const emlrtStack *sp, uint32_T centralTrack_TrackID,
         "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
   }
   radarTrack->pUpdateTime = centralTrack_pUpdateTime;
-  b_st.site = &kh_emlrtRSI;
-  c_st.site = &sh_emlrtRSI;
-  radarTrack->Age = centralTrack_Age;
   b_st.site = &lh_emlrtRSI;
-  c_st.site = &ig_emlrtRSI;
+  c_st.site = &th_emlrtRSI;
+  radarTrack->Age = centralTrack_Age;
+  b_st.site = &mh_emlrtRSI;
+  c_st.site = &jg_emlrtRSI;
   d_st.site = &gb_emlrtRSI;
   if (centralTrack_ObjectClassID < 0.0) {
     emlrtErrorWithMessageIdR2018a(
@@ -685,7 +661,7 @@ void Ecef2nedTrack(const emlrtStack *sp, uint32_T centralTrack_TrackID,
         "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
   }
   radarTrack->ObjectClassID = centralTrack_ObjectClassID;
-  b_st.site = &mh_emlrtRSI;
+  b_st.site = &nh_emlrtRSI;
   c_objectTrack_set_ObjectClassPr(&b_st, radarTrack,
                                   c_centralTrack_ObjectClassProba,
                                   d_centralTrack_ObjectClassProba);
@@ -697,19 +673,19 @@ void Ecef2nedTrack(const emlrtStack *sp, uint32_T centralTrack_TrackID,
   radarTrack->IsCoasted = centralTrack_IsCoasted;
   radarTrack->IsSelfReported = centralTrack_IsSelfReported;
   /*  States / covariance */
-  b_st.site = &nh_emlrtRSI;
+  b_st.site = &oh_emlrtRSI;
   c_st.site = &rc_emlrtRSI;
   validateattributes(&c_st, centralTrack_pState);
-  b_st.site = &oh_emlrtRSI;
+  b_st.site = &ph_emlrtRSI;
   c_st.site = &sc_emlrtRSI;
   b_validateattributes(&c_st, centralTrack_pStateCovariance);
   c_st.site = &tc_emlrtRSI;
   isSymmetricPositiveSemiDefinite(&c_st, centralTrack_pStateCovariance);
   /*  Parameters and Attributes */
   /*  Convert ECEF state to NED */
-  st.site = &ai_emlrtRSI;
-  b_st.site = &di_emlrtRSI;
-  c_st.site = &ei_emlrtRSI;
+  st.site = &bi_emlrtRSI;
+  b_st.site = &ei_emlrtRSI;
+  c_st.site = &fi_emlrtRSI;
   x0 = geodetic2ecefFormula(&c_st, &b_y0, &z0);
   u = centralTrack_pState[0] - x0;
   v = centralTrack_pState[2] - b_y0;
@@ -783,10 +759,10 @@ void Ecef2nedTrack(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     }
   }
   /*  Set state and covariance of radar track */
-  st.site = &bi_emlrtRSI;
+  st.site = &ci_emlrtRSI;
   b_st.site = &rc_emlrtRSI;
   validateattributes(&b_st, radarTrack->pState);
-  st.site = &ci_emlrtRSI;
+  st.site = &di_emlrtRSI;
   b_st.site = &sc_emlrtRSI;
   b_validateattributes(&b_st, radarTrack->pStateCovariance);
   b_st.site = &tc_emlrtRSI;
@@ -841,11 +817,11 @@ void Ned2ecefTrack(const emlrtStack *sp, uint32_T radarTrack_TrackID,
   /*  Force 'Integrated' for codegen consistency */
   /*  Sync properties of radarTrack except State and StateCovariance with */
   /*  radarTrack See syncTrack defined below. */
-  st.site = &ch_emlrtRSI;
+  st.site = &dh_emlrtRSI;
   /*  Updated to comply with codegen (different from local code only in that */
   /*  we're casting values for consistency) */
   /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-  b_st.site = &gh_emlrtRSI;
+  b_st.site = &hh_emlrtRSI;
   centralTrack->TrackID = objectTrack_set_TrackID(
       &b_st, radarTrack_TrackID, &centralTrack->BranchID,
       &centralTrack->SourceIndex, &centralTrack->Age,
@@ -854,13 +830,13 @@ void Ned2ecefTrack(const emlrtStack *sp, uint32_T radarTrack_TrackID,
       &centralTrack->IsCoasted, &centralTrack->IsSelfReported,
       centralTrack->pState, centralTrack->pStateCovariance,
       &centralTrack->pUpdateTime);
-  b_st.site = &hh_emlrtRSI;
-  c_st.site = &qh_emlrtRSI;
-  centralTrack->BranchID = radarTrack_BranchID;
   b_st.site = &ih_emlrtRSI;
   c_st.site = &rh_emlrtRSI;
-  centralTrack->SourceIndex = radarTrack_SourceIndex;
+  centralTrack->BranchID = radarTrack_BranchID;
   b_st.site = &jh_emlrtRSI;
+  c_st.site = &sh_emlrtRSI;
+  centralTrack->SourceIndex = radarTrack_SourceIndex;
+  b_st.site = &kh_emlrtRSI;
   c_st.site = &qc_emlrtRSI;
   d_st.site = &gb_emlrtRSI;
   if (radarTrack_pUpdateTime < 0.0) {
@@ -877,11 +853,11 @@ void Ned2ecefTrack(const emlrtStack *sp, uint32_T radarTrack_TrackID,
         "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
   }
   centralTrack->pUpdateTime = radarTrack_pUpdateTime;
-  b_st.site = &kh_emlrtRSI;
-  c_st.site = &sh_emlrtRSI;
-  centralTrack->Age = radarTrack_Age;
   b_st.site = &lh_emlrtRSI;
-  c_st.site = &ig_emlrtRSI;
+  c_st.site = &th_emlrtRSI;
+  centralTrack->Age = radarTrack_Age;
+  b_st.site = &mh_emlrtRSI;
+  c_st.site = &jg_emlrtRSI;
   d_st.site = &gb_emlrtRSI;
   if (radarTrack_ObjectClassID < 0.0) {
     emlrtErrorWithMessageIdR2018a(
@@ -899,7 +875,7 @@ void Ned2ecefTrack(const emlrtStack *sp, uint32_T radarTrack_TrackID,
         "MATLAB:objectTrack:expectedInteger", 3, 4, 13, "ObjectClassID");
   }
   centralTrack->ObjectClassID = radarTrack_ObjectClassID;
-  b_st.site = &mh_emlrtRSI;
+  b_st.site = &nh_emlrtRSI;
   c_objectTrack_set_ObjectClassPr(&b_st, centralTrack,
                                   c_radarTrack_ObjectClassProbabi,
                                   d_radarTrack_ObjectClassProbabi);
@@ -911,19 +887,19 @@ void Ned2ecefTrack(const emlrtStack *sp, uint32_T radarTrack_TrackID,
   centralTrack->IsCoasted = radarTrack_IsCoasted;
   centralTrack->IsSelfReported = radarTrack_IsSelfReported;
   /*  States / covariance */
-  b_st.site = &nh_emlrtRSI;
+  b_st.site = &oh_emlrtRSI;
   c_st.site = &rc_emlrtRSI;
   validateattributes(&c_st, radarTrack_pState);
-  b_st.site = &oh_emlrtRSI;
+  b_st.site = &ph_emlrtRSI;
   c_st.site = &sc_emlrtRSI;
   b_validateattributes(&c_st, radarTrack_pStateCovariance);
   c_st.site = &tc_emlrtRSI;
   isSymmetricPositiveSemiDefinite(&c_st, radarTrack_pStateCovariance);
   /*  Parameters and Attributes */
   /*  Convert NED state to ECEF state */
-  st.site = &dh_emlrtRSI;
-  b_st.site = &th_emlrtRSI;
-  c_st.site = &uh_emlrtRSI;
+  st.site = &eh_emlrtRSI;
+  b_st.site = &uh_emlrtRSI;
+  c_st.site = &vh_emlrtRSI;
   x0 = geodetic2ecefFormula(&c_st, &b_y0, &z0);
   cosPhi = 42.39423231362;
   b_cosd(&cosPhi);
@@ -1011,10 +987,10 @@ void Ned2ecefTrack(const emlrtStack *sp, uint32_T radarTrack_TrackID,
     }
   }
   /*  Set state and covariance of central track */
-  st.site = &eh_emlrtRSI;
+  st.site = &fh_emlrtRSI;
   b_st.site = &rc_emlrtRSI;
   validateattributes(&b_st, centralTrack->pState);
-  st.site = &fh_emlrtRSI;
+  st.site = &gh_emlrtRSI;
   b_st.site = &sc_emlrtRSI;
   b_validateattributes(&b_st, centralTrack->pStateCovariance);
   b_st.site = &tc_emlrtRSI;
@@ -1078,27 +1054,27 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     int32_T i1;
     int32_T i2;
     /*  Radar */
-    st.site = &ah_emlrtRSI;
+    st.site = &bh_emlrtRSI;
     /*  Initialize a track of the correct state size */
     /*  Force 'Integrated' for codegen consistency */
     /*  Sync properties of radarTrack except State and StateCovariance with */
     /*  radarTrack See syncTrack defined below. */
-    b_st.site = &ch_emlrtRSI;
+    b_st.site = &dh_emlrtRSI;
     /*  Updated to comply with codegen (different from local code only in that
      */
     /*  we're casting values for consistency) */
     /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-    c_st.site = &gh_emlrtRSI;
-    centralTrack->ObjectClassProbabilities = 1.0;
-    d_st.site = &ph_emlrtRSI;
-    centralTrack->TrackID = localTrack_TrackID;
     c_st.site = &hh_emlrtRSI;
+    centralTrack->ObjectClassProbabilities = 1.0;
     d_st.site = &qh_emlrtRSI;
-    centralTrack->BranchID = localTrack_BranchID;
+    centralTrack->TrackID = localTrack_TrackID;
     c_st.site = &ih_emlrtRSI;
     d_st.site = &rh_emlrtRSI;
-    centralTrack->SourceIndex = 1U;
+    centralTrack->BranchID = localTrack_BranchID;
     c_st.site = &jh_emlrtRSI;
+    d_st.site = &sh_emlrtRSI;
+    centralTrack->SourceIndex = 1U;
+    c_st.site = &kh_emlrtRSI;
     d_st.site = &qc_emlrtRSI;
     e_st.site = &gb_emlrtRSI;
     if (localTrack_pUpdateTime < 0.0) {
@@ -1115,14 +1091,14 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
     centralTrack->pUpdateTime = localTrack_pUpdateTime;
-    c_st.site = &kh_emlrtRSI;
-    d_st.site = &sh_emlrtRSI;
-    centralTrack->Age = localTrack_Age;
     c_st.site = &lh_emlrtRSI;
-    d_st.site = &ig_emlrtRSI;
+    d_st.site = &th_emlrtRSI;
+    centralTrack->Age = localTrack_Age;
+    c_st.site = &mh_emlrtRSI;
+    d_st.site = &jg_emlrtRSI;
     c_validateattributes(&d_st, localTrack_ObjectClassID);
     centralTrack->ObjectClassID = localTrack_ObjectClassID;
-    c_st.site = &mh_emlrtRSI;
+    c_st.site = &nh_emlrtRSI;
     d_objectTrack_set_ObjectClassPr(&c_st, centralTrack,
                                     c_localTrack_ObjectClassProbabi);
     /* dst.TrackLogic = src.TrackLogic; */
@@ -1133,19 +1109,19 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     centralTrack->IsCoasted = localTrack_IsCoasted;
     centralTrack->IsSelfReported = localTrack_IsSelfReported;
     /*  States / covariance */
-    c_st.site = &nh_emlrtRSI;
+    c_st.site = &oh_emlrtRSI;
     d_st.site = &rc_emlrtRSI;
     validateattributes(&d_st, localTrack_pState);
-    c_st.site = &oh_emlrtRSI;
+    c_st.site = &ph_emlrtRSI;
     d_st.site = &sc_emlrtRSI;
     b_validateattributes(&d_st, localTrack_pStateCovariance);
     d_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&d_st, localTrack_pStateCovariance);
     /*  Parameters and Attributes */
     /*  Convert NED state to ECEF state */
-    b_st.site = &dh_emlrtRSI;
-    c_st.site = &th_emlrtRSI;
-    d_st.site = &uh_emlrtRSI;
+    b_st.site = &eh_emlrtRSI;
+    c_st.site = &uh_emlrtRSI;
+    d_st.site = &vh_emlrtRSI;
     x0 = geodetic2ecefFormula(&d_st, &b_y0, &z0);
     cosPhi = 42.39423231362;
     b_cosd(&cosPhi);
@@ -1234,15 +1210,14 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
       }
     }
     /*  Set state and covariance of central track */
-    b_st.site = &eh_emlrtRSI;
+    b_st.site = &fh_emlrtRSI;
     c_st.site = &rc_emlrtRSI;
     validateattributes(&c_st, centralTrack->pState);
-    b_st.site = &fh_emlrtRSI;
+    b_st.site = &gh_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
     b_validateattributes(&c_st, centralTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&c_st, centralTrack->pStateCovariance);
-    /* radar2central(localTrack); %Ned2ecefTrack(localTrack); % UPDATED */
   } else if (localTrack_SourceIndex == 2U) {
     __m128d r;
     __m128d r1;
@@ -1251,7 +1226,7 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     int32_T i1;
     int32_T i2;
     /*  ADSB */
-    st.site = &bh_emlrtRSI;
+    st.site = &ch_emlrtRSI;
     /*  A function to transform a track in the central state-space to a track in
      */
     /*  the radar state-space. */
@@ -1259,22 +1234,22 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     /*  Force 'Integrated' for codegen consistency */
     /*  Sync properties of radarTrack except State and StateCovariance with */
     /*  radarTrack See syncTrack defined below. */
-    b_st.site = &yh_emlrtRSI;
+    b_st.site = &ai_emlrtRSI;
     /*  Updated to comply with codegen (different from local code only in that
      */
     /*  we're casting values for consistency) */
     /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-    c_st.site = &gh_emlrtRSI;
-    centralTrack->ObjectClassProbabilities = 1.0;
-    d_st.site = &ph_emlrtRSI;
-    centralTrack->TrackID = localTrack_TrackID;
     c_st.site = &hh_emlrtRSI;
+    centralTrack->ObjectClassProbabilities = 1.0;
     d_st.site = &qh_emlrtRSI;
-    centralTrack->BranchID = localTrack_BranchID;
+    centralTrack->TrackID = localTrack_TrackID;
     c_st.site = &ih_emlrtRSI;
     d_st.site = &rh_emlrtRSI;
-    centralTrack->SourceIndex = 2U;
+    centralTrack->BranchID = localTrack_BranchID;
     c_st.site = &jh_emlrtRSI;
+    d_st.site = &sh_emlrtRSI;
+    centralTrack->SourceIndex = 2U;
+    c_st.site = &kh_emlrtRSI;
     d_st.site = &qc_emlrtRSI;
     e_st.site = &gb_emlrtRSI;
     if (localTrack_pUpdateTime < 0.0) {
@@ -1291,14 +1266,14 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
     centralTrack->pUpdateTime = localTrack_pUpdateTime;
-    c_st.site = &kh_emlrtRSI;
-    d_st.site = &sh_emlrtRSI;
-    centralTrack->Age = localTrack_Age;
     c_st.site = &lh_emlrtRSI;
-    d_st.site = &ig_emlrtRSI;
+    d_st.site = &th_emlrtRSI;
+    centralTrack->Age = localTrack_Age;
+    c_st.site = &mh_emlrtRSI;
+    d_st.site = &jg_emlrtRSI;
     c_validateattributes(&d_st, localTrack_ObjectClassID);
     centralTrack->ObjectClassID = localTrack_ObjectClassID;
-    c_st.site = &mh_emlrtRSI;
+    c_st.site = &nh_emlrtRSI;
     d_objectTrack_set_ObjectClassPr(&c_st, centralTrack,
                                     c_localTrack_ObjectClassProbabi);
     /* dst.TrackLogic = src.TrackLogic; */
@@ -1309,19 +1284,19 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     centralTrack->IsCoasted = localTrack_IsCoasted;
     centralTrack->IsSelfReported = localTrack_IsSelfReported;
     /*  States / covariance */
-    c_st.site = &nh_emlrtRSI;
+    c_st.site = &oh_emlrtRSI;
     d_st.site = &rc_emlrtRSI;
     validateattributes(&d_st, localTrack_pState);
-    c_st.site = &oh_emlrtRSI;
+    c_st.site = &ph_emlrtRSI;
     d_st.site = &sc_emlrtRSI;
     b_validateattributes(&d_st, localTrack_pStateCovariance);
     d_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&d_st, localTrack_pStateCovariance);
     /*  Parameters and Attributes */
     /*  Convert ECEF state to NED */
-    b_st.site = &ai_emlrtRSI;
-    c_st.site = &di_emlrtRSI;
-    d_st.site = &ei_emlrtRSI;
+    b_st.site = &bi_emlrtRSI;
+    c_st.site = &ei_emlrtRSI;
+    d_st.site = &fi_emlrtRSI;
     b_y0 = geodetic2ecefFormula(&d_st, &z0, &x0);
     u = localTrack_pState[0] - b_y0;
     t = localTrack_pState[2] - z0;
@@ -1396,15 +1371,14 @@ void b_local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
       }
     }
     /*  Set state and covariance of radar track */
-    b_st.site = &bi_emlrtRSI;
+    b_st.site = &ci_emlrtRSI;
     c_st.site = &rc_emlrtRSI;
     validateattributes(&c_st, centralTrack->pState);
-    b_st.site = &ci_emlrtRSI;
+    b_st.site = &di_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
     b_validateattributes(&c_st, centralTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&c_st, centralTrack->pStateCovariance);
-    /* adsb2central(localTrack); % UPDATED */
   }
 }
 
@@ -1464,7 +1438,7 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     int32_T i1;
     int32_T i2;
     /*  Radar */
-    st.site = &fi_emlrtRSI;
+    st.site = &gi_emlrtRSI;
     /*  A function to transform a track in the central state-space to a track in
      */
     /*  the radar state-space. */
@@ -1472,22 +1446,22 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     /*  Force 'Integrated' for codegen consistency */
     /*  Sync properties of radarTrack except State and StateCovariance with */
     /*  radarTrack See syncTrack defined below. */
-    b_st.site = &yh_emlrtRSI;
+    b_st.site = &ai_emlrtRSI;
     /*  Updated to comply with codegen (different from local code only in that
      */
     /*  we're casting values for consistency) */
     /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-    c_st.site = &gh_emlrtRSI;
-    localTrack->ObjectClassProbabilities = 1.0;
-    d_st.site = &ph_emlrtRSI;
-    localTrack->TrackID = centralTrack_TrackID;
     c_st.site = &hh_emlrtRSI;
+    localTrack->ObjectClassProbabilities = 1.0;
     d_st.site = &qh_emlrtRSI;
-    localTrack->BranchID = centralTrack_BranchID;
+    localTrack->TrackID = centralTrack_TrackID;
     c_st.site = &ih_emlrtRSI;
     d_st.site = &rh_emlrtRSI;
-    localTrack->SourceIndex = 1U;
+    localTrack->BranchID = centralTrack_BranchID;
     c_st.site = &jh_emlrtRSI;
+    d_st.site = &sh_emlrtRSI;
+    localTrack->SourceIndex = 1U;
+    c_st.site = &kh_emlrtRSI;
     d_st.site = &qc_emlrtRSI;
     e_st.site = &gb_emlrtRSI;
     if (centralTrack_pUpdateTime < 0.0) {
@@ -1504,14 +1478,14 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
     localTrack->pUpdateTime = centralTrack_pUpdateTime;
-    c_st.site = &kh_emlrtRSI;
-    d_st.site = &sh_emlrtRSI;
-    localTrack->Age = centralTrack_Age;
     c_st.site = &lh_emlrtRSI;
-    d_st.site = &ig_emlrtRSI;
+    d_st.site = &th_emlrtRSI;
+    localTrack->Age = centralTrack_Age;
+    c_st.site = &mh_emlrtRSI;
+    d_st.site = &jg_emlrtRSI;
     c_validateattributes(&d_st, centralTrack_ObjectClassID);
     localTrack->ObjectClassID = centralTrack_ObjectClassID;
-    c_st.site = &mh_emlrtRSI;
+    c_st.site = &nh_emlrtRSI;
     d_objectTrack_set_ObjectClassPr(&c_st, localTrack,
                                     c_centralTrack_ObjectClassProba);
     /* dst.TrackLogic = src.TrackLogic; */
@@ -1522,19 +1496,19 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     localTrack->IsCoasted = centralTrack_IsCoasted;
     localTrack->IsSelfReported = centralTrack_IsSelfReported;
     /*  States / covariance */
-    c_st.site = &nh_emlrtRSI;
+    c_st.site = &oh_emlrtRSI;
     d_st.site = &rc_emlrtRSI;
     validateattributes(&d_st, centralTrack_pState);
-    c_st.site = &oh_emlrtRSI;
+    c_st.site = &ph_emlrtRSI;
     d_st.site = &sc_emlrtRSI;
     b_validateattributes(&d_st, centralTrack_pStateCovariance);
     d_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&d_st, centralTrack_pStateCovariance);
     /*  Parameters and Attributes */
     /*  Convert ECEF state to NED */
-    b_st.site = &ai_emlrtRSI;
-    c_st.site = &di_emlrtRSI;
-    d_st.site = &ei_emlrtRSI;
+    b_st.site = &bi_emlrtRSI;
+    c_st.site = &ei_emlrtRSI;
+    d_st.site = &fi_emlrtRSI;
     x0 = geodetic2ecefFormula(&d_st, &b_y0, &z0);
     u = centralTrack_pState[0] - x0;
     t = centralTrack_pState[2] - b_y0;
@@ -1609,15 +1583,14 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
       }
     }
     /*  Set state and covariance of radar track */
-    b_st.site = &bi_emlrtRSI;
+    b_st.site = &ci_emlrtRSI;
     c_st.site = &rc_emlrtRSI;
     validateattributes(&c_st, localTrack->pState);
-    b_st.site = &ci_emlrtRSI;
+    b_st.site = &di_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
     b_validateattributes(&c_st, localTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&c_st, localTrack->pStateCovariance);
-    /*  central2radar(centralTrack); %Ecef2nedTrack(centralTrack); % UPDATED */
   } else if (centralTrack_SourceIndex == 2U) {
     __m128d r;
     __m128d r1;
@@ -1625,27 +1598,27 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     int32_T i1;
     int32_T i2;
     /*  ADSB */
-    st.site = &gi_emlrtRSI;
+    st.site = &hi_emlrtRSI;
     /*  Initialize a track of the correct state size */
     /*  Force 'Integrated' for codegen consistency */
     /*  Sync properties of radarTrack except State and StateCovariance with */
     /*  radarTrack See syncTrack defined below. */
-    b_st.site = &ch_emlrtRSI;
+    b_st.site = &dh_emlrtRSI;
     /*  Updated to comply with codegen (different from local code only in that
      */
     /*  we're casting values for consistency) */
     /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-    c_st.site = &gh_emlrtRSI;
-    localTrack->ObjectClassProbabilities = 1.0;
-    d_st.site = &ph_emlrtRSI;
-    localTrack->TrackID = centralTrack_TrackID;
     c_st.site = &hh_emlrtRSI;
+    localTrack->ObjectClassProbabilities = 1.0;
     d_st.site = &qh_emlrtRSI;
-    localTrack->BranchID = centralTrack_BranchID;
+    localTrack->TrackID = centralTrack_TrackID;
     c_st.site = &ih_emlrtRSI;
     d_st.site = &rh_emlrtRSI;
-    localTrack->SourceIndex = 2U;
+    localTrack->BranchID = centralTrack_BranchID;
     c_st.site = &jh_emlrtRSI;
+    d_st.site = &sh_emlrtRSI;
+    localTrack->SourceIndex = 2U;
+    c_st.site = &kh_emlrtRSI;
     d_st.site = &qc_emlrtRSI;
     e_st.site = &gb_emlrtRSI;
     if (centralTrack_pUpdateTime < 0.0) {
@@ -1662,14 +1635,14 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
     localTrack->pUpdateTime = centralTrack_pUpdateTime;
-    c_st.site = &kh_emlrtRSI;
-    d_st.site = &sh_emlrtRSI;
-    localTrack->Age = centralTrack_Age;
     c_st.site = &lh_emlrtRSI;
-    d_st.site = &ig_emlrtRSI;
+    d_st.site = &th_emlrtRSI;
+    localTrack->Age = centralTrack_Age;
+    c_st.site = &mh_emlrtRSI;
+    d_st.site = &jg_emlrtRSI;
     c_validateattributes(&d_st, centralTrack_ObjectClassID);
     localTrack->ObjectClassID = centralTrack_ObjectClassID;
-    c_st.site = &mh_emlrtRSI;
+    c_st.site = &nh_emlrtRSI;
     d_objectTrack_set_ObjectClassPr(&c_st, localTrack,
                                     c_centralTrack_ObjectClassProba);
     /* dst.TrackLogic = src.TrackLogic; */
@@ -1680,19 +1653,19 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
     localTrack->IsCoasted = centralTrack_IsCoasted;
     localTrack->IsSelfReported = centralTrack_IsSelfReported;
     /*  States / covariance */
-    c_st.site = &nh_emlrtRSI;
+    c_st.site = &oh_emlrtRSI;
     d_st.site = &rc_emlrtRSI;
     validateattributes(&d_st, centralTrack_pState);
-    c_st.site = &oh_emlrtRSI;
+    c_st.site = &ph_emlrtRSI;
     d_st.site = &sc_emlrtRSI;
     b_validateattributes(&d_st, centralTrack_pStateCovariance);
     d_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&d_st, centralTrack_pStateCovariance);
     /*  Parameters and Attributes */
     /*  Convert NED state to ECEF state */
-    b_st.site = &dh_emlrtRSI;
-    c_st.site = &th_emlrtRSI;
-    d_st.site = &uh_emlrtRSI;
+    b_st.site = &eh_emlrtRSI;
+    c_st.site = &uh_emlrtRSI;
+    d_st.site = &vh_emlrtRSI;
     z0 = geodetic2ecefFormula(&d_st, &x0, &b_y0);
     cosPhi = 42.39423231362;
     b_cosd(&cosPhi);
@@ -1782,15 +1755,14 @@ void central2local(const emlrtStack *sp, uint32_T centralTrack_TrackID,
       }
     }
     /*  Set state and covariance of central track */
-    b_st.site = &eh_emlrtRSI;
+    b_st.site = &fh_emlrtRSI;
     c_st.site = &rc_emlrtRSI;
     validateattributes(&c_st, localTrack->pState);
-    b_st.site = &fh_emlrtRSI;
+    b_st.site = &gh_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
     b_validateattributes(&c_st, localTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&c_st, localTrack->pStateCovariance);
-    /* central2adsb(centralTrack); % UPDATED */
   }
 }
 
@@ -2139,17 +2111,17 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     int32_T i1;
     int32_T i2;
     /*  Radar */
-    st.site = &ah_emlrtRSI;
+    st.site = &bh_emlrtRSI;
     /*  Initialize a track of the correct state size */
     /*  Force 'Integrated' for codegen consistency */
     /*  Sync properties of radarTrack except State and StateCovariance with */
     /*  radarTrack See syncTrack defined below. */
-    b_st.site = &ch_emlrtRSI;
+    b_st.site = &dh_emlrtRSI;
     /*  Updated to comply with codegen (different from local code only in that
      */
     /*  we're casting values for consistency) */
     /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-    c_st.site = &gh_emlrtRSI;
+    c_st.site = &hh_emlrtRSI;
     centralTrack->TrackID = objectTrack_set_TrackID(
         &c_st, localTrack_TrackID, &centralTrack->BranchID,
         &centralTrack->SourceIndex, &centralTrack->Age,
@@ -2159,13 +2131,13 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
         &centralTrack->IsCoasted, &centralTrack->IsSelfReported,
         centralTrack->pState, centralTrack->pStateCovariance,
         &centralTrack->pUpdateTime);
-    c_st.site = &hh_emlrtRSI;
-    d_st.site = &qh_emlrtRSI;
-    centralTrack->BranchID = localTrack_BranchID;
     c_st.site = &ih_emlrtRSI;
     d_st.site = &rh_emlrtRSI;
-    centralTrack->SourceIndex = 1U;
+    centralTrack->BranchID = localTrack_BranchID;
     c_st.site = &jh_emlrtRSI;
+    d_st.site = &sh_emlrtRSI;
+    centralTrack->SourceIndex = 1U;
+    c_st.site = &kh_emlrtRSI;
     d_st.site = &qc_emlrtRSI;
     e_st.site = &gb_emlrtRSI;
     if (localTrack_UpdateTime < 0.0) {
@@ -2182,14 +2154,14 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
     centralTrack->pUpdateTime = localTrack_UpdateTime;
-    c_st.site = &kh_emlrtRSI;
-    d_st.site = &sh_emlrtRSI;
-    centralTrack->Age = localTrack_Age;
     c_st.site = &lh_emlrtRSI;
-    d_st.site = &ig_emlrtRSI;
+    d_st.site = &th_emlrtRSI;
+    centralTrack->Age = localTrack_Age;
+    c_st.site = &mh_emlrtRSI;
+    d_st.site = &jg_emlrtRSI;
     c_validateattributes(&d_st, localTrack_ObjectClassID);
     centralTrack->ObjectClassID = localTrack_ObjectClassID;
-    c_st.site = &mh_emlrtRSI;
+    c_st.site = &nh_emlrtRSI;
     c_objectTrack_set_ObjectClassPr(&c_st, centralTrack,
                                     c_localTrack_ObjectClassProbabi,
                                     d_localTrack_ObjectClassProbabi);
@@ -2201,19 +2173,19 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     centralTrack->IsCoasted = localTrack_IsCoasted;
     centralTrack->IsSelfReported = localTrack_IsSelfReported;
     /*  States / covariance */
-    c_st.site = &nh_emlrtRSI;
+    c_st.site = &oh_emlrtRSI;
     d_st.site = &rc_emlrtRSI;
     validateattributes(&d_st, localTrack_State);
-    c_st.site = &oh_emlrtRSI;
+    c_st.site = &ph_emlrtRSI;
     d_st.site = &sc_emlrtRSI;
     b_validateattributes(&d_st, localTrack_StateCovariance);
     d_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&d_st, localTrack_StateCovariance);
     /*  Parameters and Attributes */
     /*  Convert NED state to ECEF state */
-    b_st.site = &dh_emlrtRSI;
-    c_st.site = &th_emlrtRSI;
-    d_st.site = &uh_emlrtRSI;
+    b_st.site = &eh_emlrtRSI;
+    c_st.site = &uh_emlrtRSI;
+    d_st.site = &vh_emlrtRSI;
     x0 = geodetic2ecefFormula(&d_st, &b_y0, &z0);
     cosPhi = 42.39423231362;
     b_cosd(&cosPhi);
@@ -2302,15 +2274,14 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
       }
     }
     /*  Set state and covariance of central track */
-    b_st.site = &eh_emlrtRSI;
+    b_st.site = &fh_emlrtRSI;
     c_st.site = &rc_emlrtRSI;
     validateattributes(&c_st, centralTrack->pState);
-    b_st.site = &fh_emlrtRSI;
+    b_st.site = &gh_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
     b_validateattributes(&c_st, centralTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&c_st, centralTrack->pStateCovariance);
-    /* radar2central(localTrack); %Ned2ecefTrack(localTrack); % UPDATED */
   } else if (localTrack_SourceIndex == 2U) {
     __m128d r;
     __m128d r1;
@@ -2319,7 +2290,7 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     int32_T i1;
     int32_T i2;
     /*  ADSB */
-    st.site = &bh_emlrtRSI;
+    st.site = &ch_emlrtRSI;
     /*  A function to transform a track in the central state-space to a track in
      */
     /*  the radar state-space. */
@@ -2327,12 +2298,12 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     /*  Force 'Integrated' for codegen consistency */
     /*  Sync properties of radarTrack except State and StateCovariance with */
     /*  radarTrack See syncTrack defined below. */
-    b_st.site = &yh_emlrtRSI;
+    b_st.site = &ai_emlrtRSI;
     /*  Updated to comply with codegen (different from local code only in that
      */
     /*  we're casting values for consistency) */
     /*  Copy scalars (cast to double/logical for objectTrack assignments) */
-    c_st.site = &gh_emlrtRSI;
+    c_st.site = &hh_emlrtRSI;
     centralTrack->TrackID = objectTrack_set_TrackID(
         &c_st, localTrack_TrackID, &centralTrack->BranchID,
         &centralTrack->SourceIndex, &centralTrack->Age,
@@ -2342,13 +2313,13 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
         &centralTrack->IsCoasted, &centralTrack->IsSelfReported,
         centralTrack->pState, centralTrack->pStateCovariance,
         &centralTrack->pUpdateTime);
-    c_st.site = &hh_emlrtRSI;
-    d_st.site = &qh_emlrtRSI;
-    centralTrack->BranchID = localTrack_BranchID;
     c_st.site = &ih_emlrtRSI;
     d_st.site = &rh_emlrtRSI;
-    centralTrack->SourceIndex = 2U;
+    centralTrack->BranchID = localTrack_BranchID;
     c_st.site = &jh_emlrtRSI;
+    d_st.site = &sh_emlrtRSI;
+    centralTrack->SourceIndex = 2U;
+    c_st.site = &kh_emlrtRSI;
     d_st.site = &qc_emlrtRSI;
     e_st.site = &gb_emlrtRSI;
     if (localTrack_UpdateTime < 0.0) {
@@ -2365,14 +2336,14 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
           "MATLAB:objectTrack:expectedFinite", 3, 4, 10, "UpdateTime");
     }
     centralTrack->pUpdateTime = localTrack_UpdateTime;
-    c_st.site = &kh_emlrtRSI;
-    d_st.site = &sh_emlrtRSI;
-    centralTrack->Age = localTrack_Age;
     c_st.site = &lh_emlrtRSI;
-    d_st.site = &ig_emlrtRSI;
+    d_st.site = &th_emlrtRSI;
+    centralTrack->Age = localTrack_Age;
+    c_st.site = &mh_emlrtRSI;
+    d_st.site = &jg_emlrtRSI;
     c_validateattributes(&d_st, localTrack_ObjectClassID);
     centralTrack->ObjectClassID = localTrack_ObjectClassID;
-    c_st.site = &mh_emlrtRSI;
+    c_st.site = &nh_emlrtRSI;
     c_objectTrack_set_ObjectClassPr(&c_st, centralTrack,
                                     c_localTrack_ObjectClassProbabi,
                                     d_localTrack_ObjectClassProbabi);
@@ -2384,19 +2355,19 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
     centralTrack->IsCoasted = localTrack_IsCoasted;
     centralTrack->IsSelfReported = localTrack_IsSelfReported;
     /*  States / covariance */
-    c_st.site = &nh_emlrtRSI;
+    c_st.site = &oh_emlrtRSI;
     d_st.site = &rc_emlrtRSI;
     validateattributes(&d_st, localTrack_State);
-    c_st.site = &oh_emlrtRSI;
+    c_st.site = &ph_emlrtRSI;
     d_st.site = &sc_emlrtRSI;
     b_validateattributes(&d_st, localTrack_StateCovariance);
     d_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&d_st, localTrack_StateCovariance);
     /*  Parameters and Attributes */
     /*  Convert ECEF state to NED */
-    b_st.site = &ai_emlrtRSI;
-    c_st.site = &di_emlrtRSI;
-    d_st.site = &ei_emlrtRSI;
+    b_st.site = &bi_emlrtRSI;
+    c_st.site = &ei_emlrtRSI;
+    d_st.site = &fi_emlrtRSI;
     b_y0 = geodetic2ecefFormula(&d_st, &z0, &x0);
     u = localTrack_State[0] - b_y0;
     t = localTrack_State[2] - z0;
@@ -2471,15 +2442,14 @@ void local2central(const emlrtStack *sp, uint32_T localTrack_TrackID,
       }
     }
     /*  Set state and covariance of radar track */
-    b_st.site = &bi_emlrtRSI;
+    b_st.site = &ci_emlrtRSI;
     c_st.site = &rc_emlrtRSI;
     validateattributes(&c_st, centralTrack->pState);
-    b_st.site = &ci_emlrtRSI;
+    b_st.site = &di_emlrtRSI;
     c_st.site = &sc_emlrtRSI;
     b_validateattributes(&c_st, centralTrack->pStateCovariance);
     c_st.site = &tc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&c_st, centralTrack->pStateCovariance);
-    /* adsb2central(localTrack); % UPDATED */
   }
 }
 

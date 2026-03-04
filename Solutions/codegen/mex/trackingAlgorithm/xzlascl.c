@@ -14,12 +14,11 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo qd_emlrtRSI = {
+static emlrtRSInfo rd_emlrtRSI = {
     34,        /* lineNo */
     "xzlascl", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzlascl.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzlascl.m" /* pathName
+                                                                     */
 };
 
 /* Function Definitions */
@@ -59,7 +58,7 @@ void b_xzlascl(const emlrtStack *sp, real_T cfrom, real_T cto, int32_T m,
       mul = ctoc / cfromc;
       notdone = false;
     }
-    st.site = &qd_emlrtRSI;
+    st.site = &rd_emlrtRSI;
     if (m > 2147483646) {
       b_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&b_st);
@@ -326,7 +325,7 @@ void xzlascl(const emlrtStack *sp, real_T cfrom, real_T cto, int32_T m,
       mul = ctoc / cfromc;
       notdone = false;
     }
-    st.site = &qd_emlrtRSI;
+    st.site = &rd_emlrtRSI;
     if (m > 2147483646) {
       b_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&b_st);

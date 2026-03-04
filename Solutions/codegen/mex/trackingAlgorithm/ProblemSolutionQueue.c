@@ -25,268 +25,232 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo cgb_emlrtRSI = {
+static emlrtRSInfo egb_emlrtRSI = {
     26,                                          /* lineNo */
     "ProblemSolutionQueue/ProblemSolutionQueue", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
-};
-
-static emlrtRSInfo dgb_emlrtRSI = {
-    158,      /* lineNo */
-    "repmat", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\repmat.m" /* pathName
-                                                                         */
-};
-
-static emlrtRSInfo egb_emlrtRSI = {
-    45,                                         /* lineNo */
-    "ProblemSolutionQueue/extractBestSolution", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
 };
 
 static emlrtRSInfo fgb_emlrtRSI = {
-    48,                                         /* lineNo */
-    "ProblemSolutionQueue/extractBestSolution", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+    158,                                            /* lineNo */
+    "repmat",                                       /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/elmat/repmat.m" /* pathName */
 };
 
 static emlrtRSInfo ggb_emlrtRSI = {
-    50,                                         /* lineNo */
+    45,                                         /* lineNo */
     "ProblemSolutionQueue/extractBestSolution", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
 };
 
 static emlrtRSInfo hgb_emlrtRSI = {
-    52,                                         /* lineNo */
+    48,                                         /* lineNo */
     "ProblemSolutionQueue/extractBestSolution", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
 };
 
 static emlrtRSInfo igb_emlrtRSI = {
-    67,                                         /* lineNo */
+    50,                                         /* lineNo */
     "ProblemSolutionQueue/extractBestSolution", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
 };
 
 static emlrtRSInfo jgb_emlrtRSI = {
-    68,                                         /* lineNo */
+    52,                                         /* lineNo */
     "ProblemSolutionQueue/extractBestSolution", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
 };
 
 static emlrtRSInfo kgb_emlrtRSI = {
-    120,                                 /* lineNo */
-    "AbstractProblemSolutionPair/solve", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pathName */
+    67,                                         /* lineNo */
+    "ProblemSolutionQueue/extractBestSolution", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
 };
 
 static emlrtRSInfo lgb_emlrtRSI = {
-    121,                                 /* lineNo */
-    "AbstractProblemSolutionPair/solve", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pathName */
+    68,                                         /* lineNo */
+    "ProblemSolutionQueue/extractBestSolution", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
 };
 
 static emlrtRSInfo mgb_emlrtRSI = {
-    125,                                 /* lineNo */
+    120,                                 /* lineNo */
     "AbstractProblemSolutionPair/solve", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pathName */
 };
 
 static emlrtRSInfo ngb_emlrtRSI = {
-    127,                                 /* lineNo */
+    121,                                 /* lineNo */
     "AbstractProblemSolutionPair/solve", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pathName */
 };
 
 static emlrtRSInfo ogb_emlrtRSI = {
-    131,                                 /* lineNo */
+    125,                                 /* lineNo */
     "AbstractProblemSolutionPair/solve", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pathName */
 };
 
 static emlrtRSInfo pgb_emlrtRSI = {
-    133,                                 /* lineNo */
+    127,                                 /* lineNo */
     "AbstractProblemSolutionPair/solve", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pathName */
 };
 
 static emlrtRSInfo qgb_emlrtRSI = {
-    165,                                      /* lineNo */
-    "AbstractProblemSolutionPair/isFeasible", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pathName */
+    131,                                 /* lineNo */
+    "AbstractProblemSolutionPair/solve", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pathName */
+};
+
+static emlrtRSInfo rgb_emlrtRSI = {
+    133,                                 /* lineNo */
+    "AbstractProblemSolutionPair/solve", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pathName */
 };
 
 static emlrtRSInfo sgb_emlrtRSI = {
-    193,                /* lineNo */
-    "colMajorFlatIter", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\combin"
-    "eVectorElements.m" /* pathName */
+    165,                                      /* lineNo */
+    "AbstractProblemSolutionPair/isFeasible", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pathName */
 };
 
-static emlrtRSInfo tgb_emlrtRSI = {
-    211,                /* lineNo */
-    "colMajorFlatIter", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\combin"
-    "eVectorElements.m" /* pathName */
+static emlrtRSInfo
+    ugb_emlrtRSI =
+        {
+            193,                /* lineNo */
+            "colMajorFlatIter", /* fcnName */
+            "/MATLAB/toolbox/eml/lib/matlab/datafun/private/"
+            "combineVectorElements.m" /* pathName */
 };
 
-static emlrtRSInfo ugb_emlrtRSI = {
+static emlrtRSInfo
+    vgb_emlrtRSI =
+        {
+            211,                /* lineNo */
+            "colMajorFlatIter", /* fcnName */
+            "/MATLAB/toolbox/eml/lib/matlab/datafun/private/"
+            "combineVectorElements.m" /* pathName */
+};
+
+static emlrtRSInfo wgb_emlrtRSI = {
     49,                                   /* lineNo */
     "JVProblemSolutionPair/solveProblem", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\JVProblemSolutionPair.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "JVProblemSolutionPair.m" /* pathName */
 };
 
-static emlrtRSInfo vgb_emlrtRSI = {
+static emlrtRSInfo xgb_emlrtRSI = {
     50,                                   /* lineNo */
     "JVProblemSolutionPair/solveProblem", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\JVProblemSolutionPair.m" /* pathName */
-};
-
-static emlrtRSInfo uhb_emlrtRSI = {
-    290,             /* lineNo */
-    "unaryMinOrMax", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\unaryMinOrMax.m" /* pathName */
-};
-
-static emlrtRSInfo vhb_emlrtRSI = {
-    383,                     /* lineNo */
-    "unaryMinOrMaxDispatch", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\unaryMinOrMax.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "JVProblemSolutionPair.m" /* pathName */
 };
 
 static emlrtRSInfo whb_emlrtRSI = {
-    457,          /* lineNo */
-    "minOrMax2D", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\unaryMinOrMax.m" /* pathName */
+    290,                                                       /* lineNo */
+    "unaryMinOrMax",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
 };
 
 static emlrtRSInfo xhb_emlrtRSI = {
-    562,                         /* lineNo */
-    "minOrMax2DColumnMajorDim2", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\unaryMinOrMax.m" /* pathName */
+    383,                                                       /* lineNo */
+    "unaryMinOrMaxDispatch",                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
 };
 
 static emlrtRSInfo yhb_emlrtRSI = {
-    561,                         /* lineNo */
-    "minOrMax2DColumnMajorDim2", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\unaryMinOrMax.m" /* pathName */
+    457,                                                       /* lineNo */
+    "minOrMax2D",                                              /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
 };
 
 static emlrtRSInfo aib_emlrtRSI = {
-    558,                         /* lineNo */
-    "minOrMax2DColumnMajorDim2", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\unaryMinOrMax.m" /* pathName */
+    562,                                                       /* lineNo */
+    "minOrMax2DColumnMajorDim2",                               /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo eib_emlrtRSI = {
-    111,                                   /* lineNo */
-    "AbstractProblemSolutionPair/isValid", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pathName */
+static emlrtRSInfo bib_emlrtRSI = {
+    561,                                                       /* lineNo */
+    "minOrMax2DColumnMajorDim2",                               /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo fib_emlrtRSI = {
-    139,                              /* lineNo */
-    "ProblemSolutionQueue/sortQueue", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+static emlrtRSInfo cib_emlrtRSI = {
+    558,                                                       /* lineNo */
+    "minOrMax2DColumnMajorDim2",                               /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
 };
 
 static emlrtRSInfo gib_emlrtRSI = {
-    143,                              /* lineNo */
-    "ProblemSolutionQueue/sortQueue", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+    111,                                   /* lineNo */
+    "AbstractProblemSolutionPair/isValid", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pathName */
 };
 
 static emlrtRSInfo hib_emlrtRSI = {
-    148,                              /* lineNo */
+    139,                              /* lineNo */
     "ProblemSolutionQueue/sortQueue", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
 };
 
 static emlrtRSInfo iib_emlrtRSI = {
+    143,                              /* lineNo */
+    "ProblemSolutionQueue/sortQueue", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
+};
+
+static emlrtRSInfo jib_emlrtRSI = {
+    148,                              /* lineNo */
+    "ProblemSolutionQueue/sortQueue", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
+};
+
+static emlrtRSInfo kib_emlrtRSI = {
     76,                                      /* lineNo */
     "ProblemSolutionQueue/removeTopProblem", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
-};
-
-static emlrtRSInfo djb_emlrtRSI = {
-    161,                                   /* lineNo */
-    "ProblemSolutionQueue/formatSolution", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
-};
-
-static emlrtRSInfo ejb_emlrtRSI = {
-    163,                                   /* lineNo */
-    "ProblemSolutionQueue/formatSolution", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
 };
 
 static emlrtRSInfo fjb_emlrtRSI = {
+    161,                                   /* lineNo */
+    "ProblemSolutionQueue/formatSolution", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
+};
+
+static emlrtRSInfo gjb_emlrtRSI = {
+    163,                                   /* lineNo */
+    "ProblemSolutionQueue/formatSolution", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pathName */
+};
+
+static emlrtRSInfo hjb_emlrtRSI = {
     103,                                          /* lineNo */
     "AbstractProblemSolutionPair/formatSolution", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pathName */
 };
 
 static emlrtBCInfo rf_emlrtBCI = {
@@ -296,10 +260,9 @@ static emlrtBCInfo rf_emlrtBCI = {
     30,                                    /* colNo */
     "",                                    /* aName */
     "ProblemSolutionQueue/formatSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo sf_emlrtBCI = {
@@ -309,29 +272,26 @@ static emlrtBCInfo sf_emlrtBCI = {
     46,                                    /* colNo */
     "",                                    /* aName */
     "ProblemSolutionQueue/formatSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtRTEInfo cc_emlrtRTEI = {
     156,                                   /* lineNo */
     13,                                    /* colNo */
     "ProblemSolutionQueue/formatSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtDCInfo i_emlrtDCI = {
     157,                                   /* lineNo */
     32,                                    /* colNo */
     "ProblemSolutionQueue/formatSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    4                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    4                         /* checkKind */
 };
 
 static emlrtBCInfo tf_emlrtBCI = {
@@ -341,10 +301,9 @@ static emlrtBCInfo tf_emlrtBCI = {
     34,                                    /* colNo */
     "",                                    /* aName */
     "ProblemSolutionQueue/formatSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo uf_emlrtBCI = {
@@ -354,10 +313,9 @@ static emlrtBCInfo uf_emlrtBCI = {
     68,                                    /* colNo */
     "",                                    /* aName */
     "ProblemSolutionQueue/formatSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo vf_emlrtBCI = {
@@ -367,10 +325,9 @@ static emlrtBCInfo vf_emlrtBCI = {
     77,                                    /* colNo */
     "",                                    /* aName */
     "ProblemSolutionQueue/formatSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo wf_emlrtBCI = {
@@ -380,10 +337,9 @@ static emlrtBCInfo wf_emlrtBCI = {
     34,                                    /* colNo */
     "",                                    /* aName */
     "ProblemSolutionQueue/formatSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo ah_emlrtBCI = {
@@ -393,10 +349,9 @@ static emlrtBCInfo ah_emlrtBCI = {
     45,                                         /* colNo */
     "",                                         /* aName */
     "ProblemSolutionQueue/extractBestSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo bh_emlrtBCI = {
@@ -406,10 +361,9 @@ static emlrtBCInfo bh_emlrtBCI = {
     40,                                         /* colNo */
     "",                                         /* aName */
     "ProblemSolutionQueue/extractBestSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo ch_emlrtBCI = {
@@ -419,10 +373,9 @@ static emlrtBCInfo ch_emlrtBCI = {
     49,                                         /* colNo */
     "",                                         /* aName */
     "ProblemSolutionQueue/extractBestSolution", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtECInfo gb_emlrtECI = {
@@ -430,18 +383,15 @@ static emlrtECInfo gb_emlrtECI = {
     130,                                 /* lineNo */
     39,                                  /* colNo */
     "AbstractProblemSolutionPair/solve", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo gc_emlrtRTEI = {
-    53,       /* lineNo */
-    15,       /* colNo */
-    "bsxfun", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\bsxfun.m" /* pName
-                                                                         */
+    53,                                             /* lineNo */
+    15,                                             /* colNo */
+    "bsxfun",                                       /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/elmat/bsxfun.m" /* pName */
 };
 
 static emlrtBCInfo dh_emlrtBCI = {
@@ -451,10 +401,9 @@ static emlrtBCInfo dh_emlrtBCI = {
     60,                                      /* colNo */
     "",                                      /* aName */
     "ProblemSolutionQueue/removeTopProblem", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo eh_emlrtBCI = {
@@ -464,10 +413,9 @@ static emlrtBCInfo eh_emlrtBCI = {
     36,                                      /* colNo */
     "",                                      /* aName */
     "ProblemSolutionQueue/removeTopProblem", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo fh_emlrtBCI = {
@@ -477,19 +425,17 @@ static emlrtBCInfo fh_emlrtBCI = {
     49,                                  /* colNo */
     "",                                  /* aName */
     "AbstractProblemSolutionPair/solve", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m", /* pName */
-    0                                                       /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m", /* pName */
+    0                                /* checkKind */
 };
 
 static emlrtRTEInfo mc_emlrtRTEI = {
     137,                              /* lineNo */
     17,                               /* colNo */
     "ProblemSolutionQueue/sortQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtBCInfo aj_emlrtBCI = {
@@ -499,20 +445,18 @@ static emlrtBCInfo aj_emlrtBCI = {
     71,                               /* colNo */
     "",                               /* aName */
     "ProblemSolutionQueue/sortQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtDCInfo j_emlrtDCI = {
     138,                              /* lineNo */
     17,                               /* colNo */
     "ProblemSolutionQueue/sortQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    4                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    4                         /* checkKind */
 };
 
 static emlrtBCInfo bj_emlrtBCI = {
@@ -522,10 +466,9 @@ static emlrtBCInfo bj_emlrtBCI = {
     33,                               /* colNo */
     "",                               /* aName */
     "ProblemSolutionQueue/sortQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo cj_emlrtBCI = {
@@ -535,10 +478,9 @@ static emlrtBCInfo cj_emlrtBCI = {
     20,                            /* colNo */
     "",                            /* aName */
     "cellArrayIdxMemoryEfficient", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo dj_emlrtBCI = {
@@ -548,10 +490,9 @@ static emlrtBCInfo dj_emlrtBCI = {
     28,                            /* colNo */
     "",                            /* aName */
     "cellArrayIdxMemoryEfficient", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo ej_emlrtBCI = {
@@ -561,10 +502,9 @@ static emlrtBCInfo ej_emlrtBCI = {
     38,                            /* colNo */
     "",                            /* aName */
     "cellArrayIdxMemoryEfficient", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo fj_emlrtBCI = {
@@ -574,10 +514,9 @@ static emlrtBCInfo fj_emlrtBCI = {
     14,                            /* colNo */
     "",                            /* aName */
     "cellArrayIdxMemoryEfficient", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo gj_emlrtBCI = {
@@ -587,10 +526,9 @@ static emlrtBCInfo gj_emlrtBCI = {
     14,                            /* colNo */
     "",                            /* aName */
     "cellArrayIdxMemoryEfficient", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo hj_emlrtBCI = {
@@ -600,10 +538,9 @@ static emlrtBCInfo hj_emlrtBCI = {
     24,                            /* colNo */
     "",                            /* aName */
     "cellArrayIdxMemoryEfficient", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo ij_emlrtBCI = {
@@ -613,10 +550,9 @@ static emlrtBCInfo ij_emlrtBCI = {
     43,                            /* colNo */
     "",                            /* aName */
     "cellArrayIdxMemoryEfficient", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtBCInfo jj_emlrtBCI = {
@@ -626,289 +562,253 @@ static emlrtBCInfo jj_emlrtBCI = {
     5,                             /* colNo */
     "",                            /* aName */
     "cellArrayIdxMemoryEfficient", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m", /* pName */
-    0                                                /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m", /* pName */
+    0                         /* checkKind */
 };
 
 static emlrtRTEInfo yg_emlrtRTEI = {
-    106,      /* lineNo */
-    25,       /* colNo */
-    "repmat", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\repmat.m" /* pName
-                                                                         */
+    106,                                            /* lineNo */
+    25,                                             /* colNo */
+    "repmat",                                       /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/elmat/repmat.m" /* pName */
 };
 
 static emlrtRTEInfo ah_emlrtRTEI = {
     26,                     /* lineNo */
     13,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo vh_emlrtRTEI = {
     152,                    /* lineNo */
     72,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo wh_emlrtRTEI = {
     160,                    /* lineNo */
     20,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo xh_emlrtRTEI = {
     157,                    /* lineNo */
     34,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo yh_emlrtRTEI = {
     103,                           /* lineNo */
     14,                            /* colNo */
     "AbstractProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo ci_emlrtRTEI = {
     163,                    /* lineNo */
     34,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo di_emlrtRTEI = {
     103,                           /* lineNo */
     117,                           /* colNo */
     "AbstractProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo ui_emlrtRTEI = {
     37,                     /* lineNo */
     13,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo vi_emlrtRTEI = {
-    14,         /* lineNo */
-    5,          /* colNo */
-    "isfinite", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\isfinite.m" /* pName
-                                                                           */
+    14,                                               /* lineNo */
+    5,                                                /* colNo */
+    "isfinite",                                       /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/elmat/isfinite.m" /* pName */
 };
 
 static emlrtRTEInfo wi_emlrtRTEI = {
     164,                           /* lineNo */
     13,                            /* colNo */
     "AbstractProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo xi_emlrtRTEI = {
     165,                           /* lineNo */
     22,                            /* colNo */
     "AbstractProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo yi_emlrtRTEI = {
     68,                     /* lineNo */
     17,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo aj_emlrtRTEI = {
-    60,       /* lineNo */
-    20,       /* colNo */
-    "bsxfun", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\bsxfun.m" /* pName
-                                                                         */
+    60,                                             /* lineNo */
+    20,                                             /* colNo */
+    "bsxfun",                                       /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/elmat/bsxfun.m" /* pName */
 };
 
 static emlrtRTEInfo bj_emlrtRTEI = {
     130,                           /* lineNo */
     39,                            /* colNo */
     "AbstractProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo cj_emlrtRTEI = {
     130,                           /* lineNo */
     61,                            /* colNo */
     "AbstractProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo dj_emlrtRTEI = {
     45,                     /* lineNo */
     17,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo ej_emlrtRTEI = {
     165,                           /* lineNo */
     56,                            /* colNo */
     "AbstractProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo fj_emlrtRTEI = {
     49,                     /* lineNo */
     21,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo gj_emlrtRTEI = {
-    550,             /* lineNo */
-    21,              /* colNo */
-    "unaryMinOrMax", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\unaryMinOrMax.m" /* pName */
+    550,                                                       /* lineNo */
+    21,                                                        /* colNo */
+    "unaryMinOrMax",                                           /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pName */
 };
 
 static emlrtRTEInfo hj_emlrtRTEI = {
     62,                     /* lineNo */
     17,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo ij_emlrtRTEI = {
     52,                     /* lineNo */
     21,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo jj_emlrtRTEI = {
     133,                           /* lineNo */
     44,                            /* colNo */
     "AbstractProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo kj_emlrtRTEI = {
     127,                           /* lineNo */
     17,                            /* colNo */
     "AbstractProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\AbstractProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "AbstractProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo lj_emlrtRTEI = {
     50,                      /* lineNo */
     36,                      /* colNo */
     "JVProblemSolutionPair", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\JVProblemSolutionPair.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "JVProblemSolutionPair.m" /* pName */
 };
 
 static emlrtRTEInfo sk_emlrtRTEI = {
     138,                    /* lineNo */
     17,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo tk_emlrtRTEI = {
     177,                    /* lineNo */
     5,                      /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo uk_emlrtRTEI = {
     148,                    /* lineNo */
     17,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo vk_emlrtRTEI = {
     180,                    /* lineNo */
     15,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo wk_emlrtRTEI = {
     134,                    /* lineNo */
     17,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 static emlrtRTEInfo xk_emlrtRTEI = {
     127,                    /* lineNo */
     24,                     /* colNo */
     "ProblemSolutionQueue", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\ProblemSolutionQueue.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "ProblemSolutionQueue.m" /* pName */
 };
 
 /* Function Definitions */
@@ -959,12 +859,12 @@ void ProblemSolutionQueue_sortQueue(const emlrtStack *sp,
   for (i = 0; i < loop_ub; i++) {
     costsToSort_data[i] = 0.0;
   }
-  st.site = &fib_emlrtRSI;
+  st.site = &hib_emlrtRSI;
   if (obj->NumProblems > 2147483646) {
     b_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&b_st);
   }
-  if (loop_ub < 800) {
+  if (loop_ub < 1600) {
     for (b_i = 0; b_i < loop_ub; b_i++) {
       partialTrueCount = obj->AllProblemList->size[0] - 1;
       if (b_i > partialTrueCount) {
@@ -1023,9 +923,9 @@ void ProblemSolutionQueue_sortQueue(const emlrtStack *sp,
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  st.site = &gib_emlrtRSI;
+  st.site = &iib_emlrtRSI;
   emxInit_int32_T(&st, &iidx, 1, &xk_emlrtRTEI);
-  b_st.site = &yn_emlrtRSI;
+  b_st.site = &ao_emlrtRSI;
   sort(&b_st, costsToSort, iidx);
   iidx_data = iidx->data;
   b_loop_ub = iidx->size[0];
@@ -1037,7 +937,7 @@ void ProblemSolutionQueue_sortQueue(const emlrtStack *sp,
     costsToSort_data[i] = iidx_data[i];
   }
   emxFree_int32_T(&st, &iidx);
-  st.site = &hib_emlrtRSI;
+  st.site = &jib_emlrtRSI;
   c_emxInitStruct_fusion_internal(&st, &tmp, &tk_emlrtRTEI, true);
   emxInit_int32_T(&st, &r, 1, &vk_emlrtRTEI);
   for (d_i = 0; d_i < b_loop_ub; d_i++) {
@@ -1133,8 +1033,8 @@ int32_T c_ProblemSolutionQueue_ProblemS(
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &cgb_emlrtRSI;
-  b_st.site = &gq_emlrtRSI;
+  st.site = &egb_emlrtRSI;
+  b_st.site = &hq_emlrtRSI;
   if (maxNumSubProblems < 0) {
     emlrtNonNegativeCheckR2012b(maxNumSubProblems, &g_emlrtDCI, &st);
   }
@@ -1144,7 +1044,7 @@ int32_T c_ProblemSolutionQueue_ProblemS(
                                   &yg_emlrtRTEI);
   obj_AllProblemList_data = obj_AllProblemList->data;
   if (maxNumSubProblems != 0) {
-    b_st.site = &dgb_emlrtRSI;
+    b_st.site = &fgb_emlrtRSI;
     if (maxNumSubProblems > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -1240,8 +1140,8 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
       int32_T loop_ub;
       int32_T n;
       int32_T xoffset;
-      st.site = &egb_emlrtRSI;
-      b_st.site = &kgb_emlrtRSI;
+      st.site = &ggb_emlrtRSI;
+      b_st.site = &mgb_emlrtRSI;
       loop_ub = topProblem->PaddedCostMatrix->size[0];
       xoffset = isFiniteMatrix->size[0] * isFiniteMatrix->size[1];
       isFiniteMatrix->size[0] = topProblem->PaddedCostMatrix->size[0];
@@ -1257,9 +1157,9 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
             ((!muDoubleScalarIsInf(topProblem->PaddedCostMatrix->data[j])) &&
              (!muDoubleScalarIsNaN(topProblem->PaddedCostMatrix->data[j])));
       }
-      c_st.site = &qgb_emlrtRSI;
-      d_st.site = &edb_emlrtRSI;
-      e_st.site = &mw_emlrtRSI;
+      c_st.site = &sgb_emlrtRSI;
+      d_st.site = &gdb_emlrtRSI;
+      e_st.site = &ow_emlrtRSI;
       b_combineVectorElements(&e_st, isFiniteMatrix, nz);
       nz_data = nz->data;
       m = c_nz->size[0] * c_nz->size[1];
@@ -1271,17 +1171,17 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
       for (j = 0; j < xoffset; j++) {
         b_nz_data[j] = (nz_data[j] > 0);
       }
-      c_st.site = &qgb_emlrtRSI;
+      c_st.site = &sgb_emlrtRSI;
       if (all(&c_st, c_nz)) {
-        c_st.site = &qgb_emlrtRSI;
-        d_st.site = &edb_emlrtRSI;
-        e_st.site = &mw_emlrtRSI;
-        f_st.site = &fdb_emlrtRSI;
+        c_st.site = &sgb_emlrtRSI;
+        d_st.site = &gdb_emlrtRSI;
+        e_st.site = &ow_emlrtRSI;
+        f_st.site = &hdb_emlrtRSI;
         xoffset = b_nz->size[0];
         b_nz->size[0] = topProblem->PaddedCostMatrix->size[0];
         emxEnsureCapacity_int32_T(&f_st, b_nz, xoffset, &bh_emlrtRTEI);
         nz_data = b_nz->data;
-        g_st.site = &sgb_emlrtRSI;
+        g_st.site = &ugb_emlrtRSI;
         if (isFiniteMatrix->size[0] > 2147483646) {
           h_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&h_st);
@@ -1289,14 +1189,14 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
         for (j = 0; j < loop_ub; j++) {
           nz_data[j] = isFiniteMatrix_data[j];
         }
-        g_st.site = &gdb_emlrtRSI;
+        g_st.site = &idb_emlrtRSI;
         if (isFiniteMatrix->size[1] > 2147483646) {
           h_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&h_st);
         }
         for (j = 2; j <= n; j++) {
           xoffset = (j - 1) * loop_ub;
-          g_st.site = &tgb_emlrtRSI;
+          g_st.site = &vgb_emlrtRSI;
           for (b_j = 0; b_j < loop_ub; b_j++) {
             nz_data[b_j] += isFiniteMatrix_data[xoffset + b_j];
           }
@@ -1308,7 +1208,7 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
         for (j = 0; j < loop_ub; j++) {
           isFiniteMatrix_data[j] = (nz_data[j] > 0);
         }
-        c_st.site = &qgb_emlrtRSI;
+        c_st.site = &sgb_emlrtRSI;
         if (b_all(&c_st, d_nz)) {
           isValidProblem = true;
         } else {
@@ -1318,12 +1218,12 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
         isValidProblem = false;
       }
       if (isValidProblem) {
-        b_st.site = &lgb_emlrtRSI;
-        c_st.site = &ugb_emlrtRSI;
+        b_st.site = &ngb_emlrtRSI;
+        c_st.site = &wgb_emlrtRSI;
         lapDijkstra(&c_st, topProblem->PaddedCostMatrix, topProblem->RowSoln,
                     topProblem->ColSoln, topProblem->ColReduction);
-        c_st.site = &vgb_emlrtRSI;
-        d_st.site = &vgb_emlrtRSI;
+        c_st.site = &xgb_emlrtRSI;
+        d_st.site = &xgb_emlrtRSI;
         if (topProblem->PaddedCostMatrix->size[1] ==
             topProblem->ColReduction->size[1]) {
           csz_idx_1 = topProblem->PaddedCostMatrix->size[1];
@@ -1357,19 +1257,19 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
                 topProblem->ColReduction->data[j];
           }
         }
-        d_st.site = &phb_emlrtRSI;
-        e_st.site = &qhb_emlrtRSI;
-        f_st.site = &rhb_emlrtRSI;
-        g_st.site = &uhb_emlrtRSI;
-        h_st.site = &vhb_emlrtRSI;
-        i_st.site = &whb_emlrtRSI;
+        d_st.site = &rhb_emlrtRSI;
+        e_st.site = &shb_emlrtRSI;
+        f_st.site = &thb_emlrtRSI;
+        g_st.site = &whb_emlrtRSI;
+        h_st.site = &xhb_emlrtRSI;
+        i_st.site = &yhb_emlrtRSI;
         m = varargin_1->size[0];
         n = varargin_1->size[1];
         xoffset = topProblem->RowReduction->size[0];
         topProblem->RowReduction->size[0] = varargin_1->size[0];
         emxEnsureCapacity_real_T(&i_st, topProblem->RowReduction, xoffset,
                                  &gj_emlrtRTEI);
-        j_st.site = &aib_emlrtRSI;
+        j_st.site = &cib_emlrtRSI;
         if (varargin_1->size[0] > 2147483646) {
           k_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&k_st);
@@ -1377,13 +1277,13 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
         for (j = 0; j < m; j++) {
           topProblem->RowReduction->data[j] = assignment_data[j];
         }
-        j_st.site = &yhb_emlrtRSI;
+        j_st.site = &bib_emlrtRSI;
         if (varargin_1->size[1] > 2147483646) {
           k_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&k_st);
         }
         for (j = 2; j <= n; j++) {
-          j_st.site = &xhb_emlrtRSI;
+          j_st.site = &aib_emlrtRSI;
           if (m > 2147483646) {
             k_st.site = &k_emlrtRSI;
             check_forloop_overflow_error(&k_st);
@@ -1414,13 +1314,13 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
             ((!muDoubleScalarIsInf(topProblem->RowSoln->data[j])) &&
              (!muDoubleScalarIsNaN(topProblem->RowSoln->data[j])));
       }
-      b_st.site = &mgb_emlrtRSI;
+      b_st.site = &ogb_emlrtRSI;
       if (b_all(&b_st, d_nz)) {
         int32_T sz[2];
         int32_T b_loop_ub;
         uint32_T varargin_2[2];
         boolean_T exitg2;
-        b_st.site = &ngb_emlrtRSI;
+        b_st.site = &pgb_emlrtRSI;
         c_AbstractProblemSolutionPair_g(&b_st, topProblem->RowSoln,
                                         topProblem->CostSize, assignment);
         assignment_data = assignment->data;
@@ -1455,8 +1355,8 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
           topProblem->IsDummySolution->data[j] =
               (isFiniteMatrix_data[j] && b_nz_data[j]);
         }
-        b_st.site = &ogb_emlrtRSI;
-        c_st.site = &dib_emlrtRSI;
+        b_st.site = &qgb_emlrtRSI;
+        c_st.site = &fib_emlrtRSI;
         loop_ub = topProblem->PaddedCostMatrix->size[0];
         n = topProblem->PaddedCostMatrix->size[1];
         m = 0;
@@ -1516,13 +1416,13 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
           }
           topProblem_data[j] = topProblem->PaddedCostMatrix->data[m - 1];
         }
-        b_st.site = &pgb_emlrtRSI;
+        b_st.site = &rgb_emlrtRSI;
         topProblem->BestSolutionCost = c_sum(&b_st, b_topProblem);
       } else {
         topProblem->BestSolutionCost = rtInf;
       }
       topProblem->IsSolved = true;
-      st.site = &fgb_emlrtRSI;
+      st.site = &hgb_emlrtRSI;
       xoffset = topProblem->RowSoln->size[0];
       m = d_nz->size[0];
       d_nz->size[0] = topProblem->RowSoln->size[0];
@@ -1533,7 +1433,7 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
             ((!muDoubleScalarIsInf(topProblem->RowSoln->data[j])) &&
              (!muDoubleScalarIsNaN(topProblem->RowSoln->data[j])));
       }
-      b_st.site = &eib_emlrtRSI;
+      b_st.site = &gib_emlrtRSI;
       if (b_all(&b_st, d_nz)) {
         xoffset = topProblem->ColSoln->size[1];
         m = d_nz->size[0];
@@ -1545,7 +1445,7 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
           isFiniteMatrix_data[j] =
               ((!muDoubleScalarIsInf(b)) && (!muDoubleScalarIsNaN(b)));
         }
-        b_st.site = &eib_emlrtRSI;
+        b_st.site = &gib_emlrtRSI;
         if (b_all(&b_st, d_nz) &&
             ((!muDoubleScalarIsInf(topProblem->BestSolutionCost)) &&
              (!muDoubleScalarIsNaN(topProblem->BestSolutionCost)))) {
@@ -1564,12 +1464,12 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
         }
         c_emxCopyStruct_fusion_internal(sp, &obj->AllProblemList->data[0],
                                         topProblem, &fj_emlrtRTEI);
-        st.site = &ggb_emlrtRSI;
+        st.site = &igb_emlrtRSI;
         ProblemSolutionQueue_sortQueue(&st, obj);
       } else {
-        st.site = &hgb_emlrtRSI;
+        st.site = &jgb_emlrtRSI;
         m = obj->NumProblems;
-        b_st.site = &iib_emlrtRSI;
+        b_st.site = &kib_emlrtRSI;
         if (obj->NumProblems - 1 > 2147483646) {
           c_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&c_st);
@@ -1602,7 +1502,7 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
       }
     } else {
       int32_T xoffset;
-      st.site = &igb_emlrtRSI;
+      st.site = &kgb_emlrtRSI;
       xoffset = topProblem->RowSoln->size[0];
       m = d_nz->size[0];
       d_nz->size[0] = topProblem->RowSoln->size[0];
@@ -1613,7 +1513,7 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
             ((!muDoubleScalarIsInf(topProblem->RowSoln->data[j])) &&
              (!muDoubleScalarIsNaN(topProblem->RowSoln->data[j])));
       }
-      b_st.site = &eib_emlrtRSI;
+      b_st.site = &gib_emlrtRSI;
       if (b_all(&b_st, d_nz)) {
         xoffset = topProblem->ColSoln->size[1];
         m = d_nz->size[0];
@@ -1626,7 +1526,7 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
           isFiniteMatrix_data[j] =
               ((!muDoubleScalarIsInf(b)) && (!muDoubleScalarIsNaN(b)));
         }
-        b_st.site = &eib_emlrtRSI;
+        b_st.site = &gib_emlrtRSI;
         if (b_all(&b_st, d_nz) &&
             ((!muDoubleScalarIsInf(topProblem->BestSolutionCost)) &&
              (!muDoubleScalarIsNaN(topProblem->BestSolutionCost)))) {
@@ -1638,9 +1538,9 @@ c_ProblemSolutionQueue_extractB(const emlrtStack *sp,
         isValidProblem = false;
       }
       if (isValidProblem) {
-        st.site = &jgb_emlrtRSI;
+        st.site = &lgb_emlrtRSI;
         m = obj->NumProblems;
-        b_st.site = &iib_emlrtRSI;
+        b_st.site = &kib_emlrtRSI;
         if (obj->NumProblems - 1 > 2147483646) {
           c_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&c_st);
@@ -1682,13 +1582,13 @@ void c_ProblemSolutionQueue_formatSo(
     const emlrtStack *sp, int32_T obj_NumProblems,
     int32_T obj_MaxNumSubProblems,
     const c_emxArray_fusion_internal_assi *obj_AllProblemList,
-    emxArray_cell_wrap_81 *assignments, emxArray_cell_wrap_82 *unassignedRows,
-    emxArray_cell_wrap_82 *unassignedCols, emxArray_real_T *cost)
+    emxArray_cell_wrap_80 *assignments, emxArray_cell_wrap_81 *unassignedRows,
+    emxArray_cell_wrap_81 *unassignedCols, emxArray_real_T *cost)
 {
   const c_fusion_internal_assignment_JV *obj_AllProblemList_data;
-  cell_wrap_81 *assignments_data;
-  cell_wrap_82 *unassignedCols_data;
-  cell_wrap_82 *unassignedRows_data;
+  cell_wrap_80 *assignments_data;
+  cell_wrap_81 *unassignedCols_data;
+  cell_wrap_81 *unassignedRows_data;
   emlrtStack b_st;
   emlrtStack st;
   emxArray_real_T *r;
@@ -1721,7 +1621,7 @@ void c_ProblemSolutionQueue_formatSo(
   }
   pEnd = assignments->size[0];
   assignments->size[0] = obj_NumProblems;
-  emxEnsureCapacity_cell_wrap_81(sp, assignments, pEnd, &vh_emlrtRTEI);
+  emxEnsureCapacity_cell_wrap_80(sp, assignments, pEnd, &vh_emlrtRTEI);
   assignments_data = assignments->data;
   for (k = 0; k < obj_NumProblems; k++) {
     if (k > assignments->size[0] - 1) {
@@ -1737,7 +1637,7 @@ void c_ProblemSolutionQueue_formatSo(
   }
   pEnd = unassignedRows->size[0];
   unassignedRows->size[0] = obj_NumProblems;
-  emxEnsureCapacity_cell_wrap_82(sp, unassignedRows, pEnd, &vh_emlrtRTEI);
+  emxEnsureCapacity_cell_wrap_81(sp, unassignedRows, pEnd, &vh_emlrtRTEI);
   unassignedRows_data = unassignedRows->data;
   for (k = 0; k < obj_NumProblems; k++) {
     if (k > unassignedRows->size[0] - 1) {
@@ -1748,7 +1648,7 @@ void c_ProblemSolutionQueue_formatSo(
   }
   pEnd = unassignedCols->size[0];
   unassignedCols->size[0] = obj_NumProblems;
-  emxEnsureCapacity_cell_wrap_82(sp, unassignedCols, pEnd, &vh_emlrtRTEI);
+  emxEnsureCapacity_cell_wrap_81(sp, unassignedCols, pEnd, &vh_emlrtRTEI);
   unassignedCols_data = unassignedCols->data;
   for (k = 0; k < obj_NumProblems; k++) {
     if (k > unassignedCols->size[0] - 1) {
@@ -1761,22 +1661,22 @@ void c_ProblemSolutionQueue_formatSo(
   cost->size[0] = obj_NumProblems;
   emxEnsureCapacity_real_T(sp, cost, pEnd, &wh_emlrtRTEI);
   cost_data = cost->data;
-  st.site = &djb_emlrtRSI;
+  st.site = &fjb_emlrtRSI;
   if (obj_NumProblems > 2147483646) {
     b_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&b_st);
   }
   pEnd = unassignedCols->size[0];
   unassignedCols->size[0] = obj_NumProblems;
-  emxEnsureCapacity_cell_wrap_82(sp, unassignedCols, pEnd, &xh_emlrtRTEI);
+  emxEnsureCapacity_cell_wrap_81(sp, unassignedCols, pEnd, &xh_emlrtRTEI);
   unassignedCols_data = unassignedCols->data;
   pEnd = unassignedRows->size[0];
   unassignedRows->size[0] = obj_NumProblems;
-  emxEnsureCapacity_cell_wrap_82(sp, unassignedRows, pEnd, &xh_emlrtRTEI);
+  emxEnsureCapacity_cell_wrap_81(sp, unassignedRows, pEnd, &xh_emlrtRTEI);
   unassignedRows_data = unassignedRows->data;
   pEnd = assignments->size[0];
   assignments->size[0] = obj_NumProblems;
-  emxEnsureCapacity_cell_wrap_81(sp, assignments, pEnd, &xh_emlrtRTEI);
+  emxEnsureCapacity_cell_wrap_80(sp, assignments, pEnd, &xh_emlrtRTEI);
   assignments_data = assignments->data;
   emxInit_uint32_T(sp, &b_assignments, 2, &vh_emlrtRTEI, true);
   emxInit_real_T(sp, &r, 2, &di_emlrtRTEI, true);
@@ -1791,8 +1691,8 @@ void c_ProblemSolutionQueue_formatSo(
       emlrtDynamicBoundsCheckR2012b(i, 0, obj_AllProblemList->size[0] - 1,
                                     &sf_emlrtBCI, (emlrtConstCTX)sp);
     }
-    st.site = &ejb_emlrtRSI;
-    b_st.site = &fjb_emlrtRSI;
+    st.site = &gjb_emlrtRSI;
+    b_st.site = &hjb_emlrtRSI;
     c_AbstractProblemSolutionPair_g(&b_st, obj_AllProblemList_data[i].RowSoln,
                                     obj_AllProblemList_data[i].CostSize, r);
     r1 = r->data;
@@ -1823,7 +1723,7 @@ void c_ProblemSolutionQueue_formatSo(
       emlrtDynamicBoundsCheckR2012b(i, 0, unassignedCols->size[0] - 1,
                                     &uf_emlrtBCI, &st);
     }
-    b_st.site = &fjb_emlrtRSI;
+    b_st.site = &hjb_emlrtRSI;
     unassignedRows_size = kbestRemoveUnassigned(
         &b_st, b_assignments, obj_AllProblemList_data[i].CostSize,
         b_unassignedRows_data, unassignedCols_data[i].f1);

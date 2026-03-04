@@ -18,167 +18,117 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo kk_emlrtRSI = {
+static emlrtRSInfo lk_emlrtRSI = {
     36,                           /* lineNo */
     "ObjectTrackOutputter/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\ObjectTrackOutputte"
-    "r.m" /* pathName */
-};
-
-static emlrtRSInfo lk_emlrtRSI = {
-    39,                           /* lineNo */
-    "ObjectTrackOutputter/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\ObjectTrackOutputte"
-    "r.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "ObjectTrackOutputter.m" /* pathName */
 };
 
 static emlrtRSInfo mk_emlrtRSI = {
+    39,                           /* lineNo */
+    "ObjectTrackOutputter/setup", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "ObjectTrackOutputter.m" /* pathName */
+};
+
+static emlrtRSInfo nk_emlrtRSI = {
     33,                           /* lineNo */
     "ObjectTrackOutputter/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\ObjectTrackOutputte"
-    "r.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "ObjectTrackOutputter.m" /* pathName */
 };
 
-static emlrtRSInfo nk_emlrtRSI =
-    {
-        255,                       /* lineNo */
-        "objectTrack/objectTrack", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo ok_emlrtRSI = {
+    255,                                                      /* lineNo */
+    "objectTrack/objectTrack",                                /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo ok_emlrtRSI =
-    {
-        524,                         /* lineNo */
-        "objectTrack/setProperties", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo pk_emlrtRSI = {
+    524,                                                      /* lineNo */
+    "objectTrack/setProperties",                              /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo pk_emlrtRSI =
-    {
-        492,                         /* lineNo */
-        "objectTrack/setProperties", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo qk_emlrtRSI = {
+    492,                                                      /* lineNo */
+    "objectTrack/setProperties",                              /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo qk_emlrtRSI =
-    {
-        488,                         /* lineNo */
-        "objectTrack/setProperties", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo rk_emlrtRSI = {
+    488,                                                      /* lineNo */
+    "objectTrack/setProperties",                              /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo rk_emlrtRSI =
-    {
-        487,                         /* lineNo */
-        "objectTrack/setProperties", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo sk_emlrtRSI = {
+    487,                                                      /* lineNo */
+    "objectTrack/setProperties",                              /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo sk_emlrtRSI =
-    {
-        485,                         /* lineNo */
-        "objectTrack/setProperties", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo tk_emlrtRSI = {
+    485,                                                      /* lineNo */
+    "objectTrack/setProperties",                              /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo tk_emlrtRSI =
-    {
-        277,                          /* lineNo */
-        "objectTrack/set.UpdateTime", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo uk_emlrtRSI = {
+    277,                                                      /* lineNo */
+    "objectTrack/set.UpdateTime",                             /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo uk_emlrtRSI =
-    {
-        287,                     /* lineNo */
-        "objectTrack/set.State", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo vk_emlrtRSI = {
+    287,                                                      /* lineNo */
+    "objectTrack/set.State",                                  /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo vk_emlrtRSI =
-    {
-        293,                               /* lineNo */
-        "objectTrack/set.StateCovariance", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo wk_emlrtRSI = {
+    293,                                                      /* lineNo */
+    "objectTrack/set.StateCovariance",                        /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo wk_emlrtRSI =
-    {
-        295,                               /* lineNo */
-        "objectTrack/set.StateCovariance", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo xk_emlrtRSI = {
+    295,                                                      /* lineNo */
+    "objectTrack/set.StateCovariance",                        /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo al_emlrtRSI =
-    {
-        355,                                        /* lineNo */
-        "objectTrack/set.ObjectClassProbabilities", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo bl_emlrtRSI = {
+    355,                                                      /* lineNo */
+    "objectTrack/set.ObjectClassProbabilities",               /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo bl_emlrtRSI =
-    {
-        358,                                        /* lineNo */
-        "objectTrack/set.ObjectClassProbabilities", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo cl_emlrtRSI = {
+    358,                                                      /* lineNo */
+    "objectTrack/set.ObjectClassProbabilities",               /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
-static emlrtRSInfo cl_emlrtRSI =
-    {
-        324,                               /* lineNo */
-        "objectTrack/set.TrackLogicState", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
+static emlrtRSInfo dl_emlrtRSI = {
+    324,                                                      /* lineNo */
+    "objectTrack/set.TrackLogicState",                        /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pathName */
 };
 
 static emlrtRTEInfo ec_emlrtRTEI = {
     28,           /* lineNo */
     27,           /* colNo */
     "validatele", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "valattr\\validatele.m" /* pName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+valattr/validatele.m" /* pName */
 };
 
-static emlrtRTEInfo fc_emlrtRTEI =
-    {
-        359,                                        /* lineNo */
-        17,                                         /* colNo */
-        "objectTrack/set.ObjectClassProbabilities", /* fName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pName */
+static emlrtRTEInfo fc_emlrtRTEI = {
+    359,                                                      /* lineNo */
+    17,                                                       /* colNo */
+    "objectTrack/set.ObjectClassProbabilities",               /* fName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/objectTrack.m" /* pName */
 };
 
 /* Function Definitions */
@@ -220,12 +170,12 @@ void ObjectTrackOutputter_setup(trackingAlgorithmStackData *SD,
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
   SD->u3.f10.outputter = outputter->SensorSpecifications[0];
-  st.site = &mk_emlrtRSI;
+  st.site = &nk_emlrtRSI;
   trackEstimator(SD, &st, &outputter->TargetSpecifications.f1,
                  &outputter->TargetSpecifications.f2,
                  &outputter->TargetSpecifications.f3, &SD->u3.f10.outputter,
                  &iobj_0[0], &SD->u3.f10.estimator);
-  st.site = &kk_emlrtRSI;
+  st.site = &lk_emlrtRSI;
   c_TrackEstimator_sampleDistribu(
       SD->u3.f10.estimator.StateEstimator.StateEstimator.Estimators.f1
           .TrackingFilter,
@@ -240,13 +190,13 @@ void ObjectTrackOutputter_setup(trackingAlgorithmStackData *SD,
       sampleTrackFromList_Hypothesis, sampleTrackFromList_LogWeights,
       c_sampleTrackFromList_Existence, statePdf_State, statePdf_StateCovariance,
       c_statePdf_ObjectClassProbabili, f_expl_temp, &g_expl_temp);
-  st.site = &lk_emlrtRSI;
-  b_st.site = &nk_emlrtRSI;
-  c_st.site = &sk_emlrtRSI;
-  d_st.site = &tk_emlrtRSI;
-  c_st.site = &rk_emlrtRSI;
+  st.site = &mk_emlrtRSI;
+  b_st.site = &ok_emlrtRSI;
+  c_st.site = &tk_emlrtRSI;
   d_st.site = &uk_emlrtRSI;
-  e_st.site = &fe_emlrtRSI;
+  c_st.site = &sk_emlrtRSI;
+  d_st.site = &vk_emlrtRSI;
+  e_st.site = &ge_emlrtRSI;
   c_expl_temp = true;
   k = 0;
   exitg1 = false;
@@ -264,9 +214,9 @@ void ObjectTrackOutputter_setup(trackingAlgorithmStackData *SD,
         &e_st, &f_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:objectTrack:expectedFinite", 3, 4, 5, "State");
   }
-  c_st.site = &qk_emlrtRSI;
-  d_st.site = &vk_emlrtRSI;
-  e_st.site = &fe_emlrtRSI;
+  c_st.site = &rk_emlrtRSI;
+  d_st.site = &wk_emlrtRSI;
+  e_st.site = &ge_emlrtRSI;
   c_expl_temp = true;
   k = 0;
   exitg1 = false;
@@ -284,11 +234,11 @@ void ObjectTrackOutputter_setup(trackingAlgorithmStackData *SD,
         &e_st, &f_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:objectTrack:expectedFinite", 3, 4, 15, "StateCovariance");
   }
-  d_st.site = &wk_emlrtRSI;
+  d_st.site = &xk_emlrtRSI;
   isSymmetricPositiveSemiDefinite(&d_st, statePdf_StateCovariance);
-  c_st.site = &pk_emlrtRSI;
-  d_st.site = &al_emlrtRSI;
-  e_st.site = &fe_emlrtRSI;
+  c_st.site = &qk_emlrtRSI;
+  d_st.site = &bl_emlrtRSI;
+  e_st.site = &ge_emlrtRSI;
   c_expl_temp = true;
   k = 0;
   exitg1 = false;
@@ -307,7 +257,7 @@ void ObjectTrackOutputter_setup(trackingAlgorithmStackData *SD,
         "MATLAB:objectTrack:expectedFinite", 3, 4, 24,
         "ObjectClassProbabilities");
   }
-  e_st.site = &fe_emlrtRSI;
+  e_st.site = &ge_emlrtRSI;
   c_expl_temp = true;
   k = 0;
   exitg1 = false;
@@ -326,7 +276,7 @@ void ObjectTrackOutputter_setup(trackingAlgorithmStackData *SD,
         "MATLAB:objectTrack:expectedNonnegative", 3, 4, 24,
         "ObjectClassProbabilities");
   }
-  e_st.site = &fe_emlrtRSI;
+  e_st.site = &ge_emlrtRSI;
   c_expl_temp = true;
   k = 0;
   exitg1 = false;
@@ -344,7 +294,7 @@ void ObjectTrackOutputter_setup(trackingAlgorithmStackData *SD,
         "MATLAB:objectTrack:notLessEqual", 9, 4, 24, "ObjectClassProbabilities",
         4, 2, "<=", 4, 1, "1");
   }
-  d_st.site = &bl_emlrtRSI;
+  d_st.site = &cl_emlrtRSI;
   if (muDoubleScalarAbs(d_sumColumnB(c_statePdf_ObjectClassProbabili) - 1.0) >
       1.4901161193847656E-8) {
     emlrtErrorWithMessageIdR2018a(
@@ -353,8 +303,8 @@ void ObjectTrackOutputter_setup(trackingAlgorithmStackData *SD,
         "shared_tracking:objectTrack:invalidClassProbabilityVector", 3, 4, 24,
         "ObjectClassProbabilities");
   }
-  c_st.site = &ok_emlrtRSI;
-  d_st.site = &cl_emlrtRSI;
+  c_st.site = &pk_emlrtRSI;
+  d_st.site = &dl_emlrtRSI;
   outputter->SampleTrack.TrackID = 0U;
   outputter->SampleTrack.BranchID = 0U;
   outputter->SampleTrack.SourceIndex = 1U;

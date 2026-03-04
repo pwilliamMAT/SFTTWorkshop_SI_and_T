@@ -22,248 +22,200 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo tt_emlrtRSI = {
+static emlrtRSInfo vt_emlrtRSI = {
     165,                           /* lineNo */
     "MultiModalEstimator/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo ut_emlrtRSI = {
-    114,                         /* lineNo */
-    "EKFStateEstimator/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo vt_emlrtRSI = {
-    115,                         /* lineNo */
-    "EKFStateEstimator/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo wt_emlrtRSI = {
-    119,                         /* lineNo */
+    114,                         /* lineNo */
     "EKFStateEstimator/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo xt_emlrtRSI = {
+    115,                         /* lineNo */
+    "EKFStateEstimator/predict", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo yt_emlrtRSI = {
+    119,                         /* lineNo */
+    "EKFStateEstimator/predict", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo au_emlrtRSI = {
     122,                         /* lineNo */
     "EKFStateEstimator/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo dw_emlrtRSI = {
-    127,                                       /* lineNo */
-    "MultiModalEstimator/survivalProbability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo ew_emlrtRSI = {
-    130,                                       /* lineNo */
-    "MultiModalEstimator/survivalProbability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo fw_emlrtRSI = {
-    131,                                       /* lineNo */
+    127,                                       /* lineNo */
     "MultiModalEstimator/survivalProbability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo gw_emlrtRSI = {
-    86,                                      /* lineNo */
-    "EKFStateEstimator/survivalProbability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
+    130,                                       /* lineNo */
+    "MultiModalEstimator/survivalProbability", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo hw_emlrtRSI = {
+    131,                                       /* lineNo */
+    "MultiModalEstimator/survivalProbability", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo iw_emlrtRSI = {
+    86,                                      /* lineNo */
+    "EKFStateEstimator/survivalProbability", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo jw_emlrtRSI = {
     37,                                             /* lineNo */
     "UniformSurvivalRateModel/survivalProbability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "survival\\UniformSurvivalRateModel.m" /* pathName */
-};
-
-static emlrtRSInfo ax_emlrtRSI = {
-    137,                                   /* lineNo */
-    "MultiModalEstimator/gateProbability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo bx_emlrtRSI = {
-    91,                                  /* lineNo */
-    "EKFStateEstimator/gateProbability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+survival/"
+    "UniformSurvivalRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo cx_emlrtRSI = {
-    12,                /* lineNo */
-    "gateProbability", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\gateProbability.m" /* pathName */
+    137,                                   /* lineNo */
+    "MultiModalEstimator/gateProbability", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
-static emlrtRSInfo
-    dx_emlrtRSI =
-        {
-            43,         /* lineNo */
-            "gammainc", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\gammain"
-            "c.m" /* pathName */
+static emlrtRSInfo dx_emlrtRSI = {
+    91,                                  /* lineNo */
+    "EKFStateEstimator/gateProbability", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo
     ex_emlrtRSI =
         {
-            92,                /* lineNo */
-            "scalar_gammainc", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\gammain"
-            "c.m" /* pathName */
+            12,                /* lineNo */
+            "gateProbability", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "gateProbability.m" /* pathName */
 };
 
 static emlrtRSInfo fx_emlrtRSI = {
-    374,            /* lineNo */
-    "eml_gammainc", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\private\\eml_"
-    "gammainc.m" /* pathName */
+    43,                                                 /* lineNo */
+    "gammainc",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/gammainc.m" /* pathName */
+};
+
+static emlrtRSInfo gx_emlrtRSI = {
+    92,                                                 /* lineNo */
+    "scalar_gammainc",                                  /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/gammainc.m" /* pathName */
 };
 
 static emlrtRSInfo hx_emlrtRSI = {
+    374,            /* lineNo */
+    "eml_gammainc", /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/private/eml_gammainc.m" /* pathName
+                                                                     */
+};
+
+static emlrtRSInfo jx_emlrtRSI = {
     294,            /* lineNo */
     "eml_gammainc", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\private\\eml_"
-    "gammainc.m" /* pathName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/private/eml_gammainc.m" /* pathName
+                                                                     */
 };
 
-static emlrtRSInfo ix_emlrtRSI = {
+static emlrtRSInfo kx_emlrtRSI = {
     198,            /* lineNo */
     "eml_gammainc", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\private\\eml_"
-    "gammainc.m" /* pathName */
-};
-
-static emlrtRSInfo dnb_emlrtRSI = {
-    233,                         /* lineNo */
-    "MultiModalEstimator/merge", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
-};
-
-static emlrtRSInfo enb_emlrtRSI = {
-    238,                         /* lineNo */
-    "MultiModalEstimator/merge", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/private/eml_gammainc.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo fnb_emlrtRSI = {
-    244,                         /* lineNo */
+    233,                         /* lineNo */
     "MultiModalEstimator/merge", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo gnb_emlrtRSI = {
-    245,                         /* lineNo */
+    238,                         /* lineNo */
     "MultiModalEstimator/merge", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo hnb_emlrtRSI = {
-    249,                         /* lineNo */
+    244,                         /* lineNo */
     "MultiModalEstimator/merge", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo inb_emlrtRSI = {
-    252,                         /* lineNo */
+    245,                         /* lineNo */
     "MultiModalEstimator/merge", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo jnb_emlrtRSI = {
-    259,                         /* lineNo */
+    249,                         /* lineNo */
     "MultiModalEstimator/merge", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
-static emlrtRTEInfo w_emlrtRTEI =
-    {
-        82,         /* lineNo */
-        5,          /* colNo */
-        "fltpower", /* fName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\power.m" /* pName
-                                                                          */
+static emlrtRSInfo knb_emlrtRSI = {
+    252,                         /* lineNo */
+    "MultiModalEstimator/merge", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo lnb_emlrtRSI = {
+    259,                         /* lineNo */
+    "MultiModalEstimator/merge", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
+};
+
+static emlrtRTEInfo w_emlrtRTEI = {
+    82,                                          /* lineNo */
+    5,                                           /* colNo */
+    "fltpower",                                  /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/power.m" /* pName */
 };
 
 static emlrtRTEInfo ab_emlrtRTEI = {
-    356,            /* lineNo */
-    13,             /* colNo */
-    "eml_gammainc", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\private\\eml_"
-    "gammainc.m" /* pName */
+    356,                                                            /* lineNo */
+    13,                                                             /* colNo */
+    "eml_gammainc",                                                 /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/private/eml_gammainc.m" /* pName */
 };
 
 static emlrtRTEInfo bb_emlrtRTEI = {
-    276,            /* lineNo */
-    13,             /* colNo */
-    "eml_gammainc", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\private\\eml_"
-    "gammainc.m" /* pName */
+    276,                                                            /* lineNo */
+    13,                                                             /* colNo */
+    "eml_gammainc",                                                 /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/private/eml_gammainc.m" /* pName */
 };
 
 static emlrtBCInfo jk_emlrtBCI = {
@@ -273,11 +225,9 @@ static emlrtBCInfo jk_emlrtBCI = {
     77,                          /* colNo */
     "",                          /* aName */
     "MultiModalEstimator/merge", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m", /* pName */
+    0                        /* checkKind */
 };
 
 static emlrtBCInfo kk_emlrtBCI = {
@@ -287,11 +237,9 @@ static emlrtBCInfo kk_emlrtBCI = {
     46,                          /* colNo */
     "",                          /* aName */
     "MultiModalEstimator/merge", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m", /* pName */
+    0                        /* checkKind */
 };
 
 static emlrtBCInfo lk_emlrtBCI = {
@@ -301,11 +249,9 @@ static emlrtBCInfo lk_emlrtBCI = {
     39,                          /* colNo */
     "",                          /* aName */
     "MultiModalEstimator/merge", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m", /* pName */
+    0                        /* checkKind */
 };
 
 static emlrtBCInfo mk_emlrtBCI = {
@@ -315,11 +261,9 @@ static emlrtBCInfo mk_emlrtBCI = {
     29,                          /* colNo */
     "",                          /* aName */
     "MultiModalEstimator/merge", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m", /* pName */
+    0                        /* checkKind */
 };
 
 static emlrtBCInfo nk_emlrtBCI = {
@@ -329,11 +273,9 @@ static emlrtBCInfo nk_emlrtBCI = {
     32,                          /* colNo */
     "",                          /* aName */
     "MultiModalEstimator/merge", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m", /* pName */
+    0                        /* checkKind */
 };
 
 static emlrtBCInfo ok_emlrtBCI = {
@@ -343,11 +285,9 @@ static emlrtBCInfo ok_emlrtBCI = {
     36,                          /* colNo */
     "",                          /* aName */
     "MultiModalEstimator/merge", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m", /* pName */
+    0                        /* checkKind */
 };
 
 static emlrtBCInfo pk_emlrtBCI = {
@@ -357,31 +297,25 @@ static emlrtBCInfo pk_emlrtBCI = {
     36,                          /* colNo */
     "",                          /* aName */
     "MultiModalEstimator/merge", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m", /* pName */
-    0     /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m", /* pName */
+    0                        /* checkKind */
 };
 
 static emlrtRTEInfo ol_emlrtRTEI = {
     233,                   /* lineNo */
     17,                    /* colNo */
     "MultiModalEstimator", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pName */
 };
 
 static emlrtRTEInfo pl_emlrtRTEI = {
     234,                   /* lineNo */
     17,                    /* colNo */
     "MultiModalEstimator", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pName */
 };
 
 /* Function Definitions */
@@ -430,7 +364,7 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
   weights_data = weights->data;
   pdfs_data = pdfs->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &dnb_emlrtRSI;
+  st.site = &fnb_emlrtRSI;
   emxInit_struct_T2(&st, &hypPdfs, &ol_emlrtRTEI);
   loop_ub = pdfs->size[0];
   partialTrueCount = hypPdfs->size[0];
@@ -449,7 +383,7 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
     hypWeights_data[i] = 0.0;
   }
   partialTrueCount = pdfs->size[0];
-  trueCount = (pdfs->size[0] < 800);
+  trueCount = (pdfs->size[0] < 1600);
   if (trueCount) {
     for (k = 0; k < loop_ub; k++) {
       if (k + 1 > loop_ub) {
@@ -466,7 +400,7 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
                                       (emlrtConstCTX)sp);
       }
       if (weights_data[k] > 0.0) {
-        st.site = &enb_emlrtRSI;
+        st.site = &gnb_emlrtRSI;
         if (k + 1 > weights->size[0]) {
           emlrtDynamicBoundsCheckR2012b(k + 1, 1, weights->size[0],
                                         &jk_emlrtBCI, &st);
@@ -533,7 +467,7 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
                                           &nk_emlrtBCI, &b_st);
           }
           if (weights_data[k] > 0.0) {
-            c_st.site = &enb_emlrtRSI;
+            c_st.site = &gnb_emlrtRSI;
             if (k + 1 > weights->size[0]) {
               emlrtDynamicBoundsCheckR2012b(k + 1, 1, weights->size[0],
                                             &jk_emlrtBCI, &c_st);
@@ -569,11 +503,11 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  st.site = &fnb_emlrtRSI;
+  st.site = &hnb_emlrtRSI;
   EKFStateEstimator_merge(&st, hypPdfs, weights, &pdf->Hypothesis[0]);
-  st.site = &gnb_emlrtRSI;
+  st.site = &inb_emlrtRSI;
   mergedWeights[0] = b_logsumexp(&st, hypWeights);
-  st.site = &dnb_emlrtRSI;
+  st.site = &fnb_emlrtRSI;
   partialTrueCount = hypPdfs->size[0];
   hypPdfs->size[0] = loop_ub;
   emxEnsureCapacity_struct_T2(&st, hypPdfs, partialTrueCount, &ol_emlrtRTEI);
@@ -604,7 +538,7 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
                                       &nk_emlrtBCI, (emlrtConstCTX)sp);
       }
       if (weights_data[b_k] > 0.0) {
-        st.site = &enb_emlrtRSI;
+        st.site = &gnb_emlrtRSI;
         if (b_k + 1 > weights->size[0]) {
           emlrtDynamicBoundsCheckR2012b(b_k + 1, 1, weights->size[0],
                                         &jk_emlrtBCI, &st);
@@ -672,7 +606,7 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
                                           &nk_emlrtBCI, &d_st);
           }
           if (weights_data[b_k] > 0.0) {
-            e_st.site = &enb_emlrtRSI;
+            e_st.site = &gnb_emlrtRSI;
             if (b_k + 1 > weights->size[0]) {
               emlrtDynamicBoundsCheckR2012b(b_k + 1, 1, weights->size[0],
                                             &jk_emlrtBCI, &e_st);
@@ -708,11 +642,11 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  st.site = &fnb_emlrtRSI;
+  st.site = &hnb_emlrtRSI;
   EKFStateEstimator_merge(&st, hypPdfs, weights, &pdf->Hypothesis[1]);
-  st.site = &gnb_emlrtRSI;
+  st.site = &inb_emlrtRSI;
   mergedWeights[1] = b_logsumexp(&st, hypWeights);
-  st.site = &dnb_emlrtRSI;
+  st.site = &fnb_emlrtRSI;
   partialTrueCount = hypPdfs->size[0];
   hypPdfs->size[0] = loop_ub;
   emxEnsureCapacity_struct_T2(&st, hypPdfs, partialTrueCount, &ol_emlrtRTEI);
@@ -743,7 +677,7 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
                                       &nk_emlrtBCI, (emlrtConstCTX)sp);
       }
       if (weights_data[c_k] > 0.0) {
-        st.site = &enb_emlrtRSI;
+        st.site = &gnb_emlrtRSI;
         if (c_k + 1 > weights->size[0]) {
           emlrtDynamicBoundsCheckR2012b(c_k + 1, 1, weights->size[0],
                                         &jk_emlrtBCI, &st);
@@ -811,7 +745,7 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
                                           &nk_emlrtBCI, &f_st);
           }
           if (weights_data[c_k] > 0.0) {
-            g_st.site = &enb_emlrtRSI;
+            g_st.site = &gnb_emlrtRSI;
             if (c_k + 1 > weights->size[0]) {
               emlrtDynamicBoundsCheckR2012b(c_k + 1, 1, weights->size[0],
                                             &jk_emlrtBCI, &g_st);
@@ -847,18 +781,18 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  st.site = &fnb_emlrtRSI;
+  st.site = &hnb_emlrtRSI;
   EKFStateEstimator_merge(&st, hypPdfs, weights, &pdf->Hypothesis[2]);
   emxFree_struct_T2(sp, &hypPdfs);
-  st.site = &gnb_emlrtRSI;
+  st.site = &inb_emlrtRSI;
   mergedWeights[2] = b_logsumexp(&st, hypWeights);
   emxFree_real_T(sp, &hypWeights);
-  st.site = &hnb_emlrtRSI;
+  st.site = &jnb_emlrtRSI;
   x = c_logsumexp(&st, mergedWeights);
   r = _mm_loadu_pd(&mergedWeights[0]);
   _mm_storeu_pd(&mergedWeights[0], _mm_sub_pd(r, _mm_set1_pd(x)));
   mergedWeights[2] -= x;
-  st.site = &inb_emlrtRSI;
+  st.site = &knb_emlrtRSI;
   if (estimator_DeletionThreshold < 0.0) {
     emlrtErrorWithMessageIdR2018a(
         &st, &v_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -904,7 +838,7 @@ void MultiModalEstimator_merge(const emlrtStack *sp,
   if (!pdf->IsValid[2]) {
     pdf->LogWeights[2] = -1.7976931348623157E+308;
   }
-  st.site = &jnb_emlrtRSI;
+  st.site = &lnb_emlrtRSI;
   x = logsumexp(&st, mergedWeights_data, mergedWeights_size);
   for (i = 0; i < trueCount; i++) {
     i1 = tmp_data[i];
@@ -939,19 +873,19 @@ void MultiModalEstimator_predict(
   b_st.prev = &st;
   b_st.tls = st.tls;
   if (pdf->IsValid[0]) {
-    st.site = &tt_emlrtRSI;
-    b_st.site = &ut_emlrtRSI;
+    st.site = &vt_emlrtRSI;
+    b_st.site = &wt_emlrtRSI;
     ExtendedKalmanFilter_set_State(&b_st, c_estimator_Estimators_f1_Track,
                                    pdf->Hypothesis[0].State);
-    b_st.site = &vt_emlrtRSI;
+    b_st.site = &xt_emlrtRSI;
     c_ExtendedKalmanFilter_set_Stat(&b_st, c_estimator_Estimators_f1_Track,
                                     pdf->Hypothesis[0].StateCovariance);
-    b_st.site = &wt_emlrtRSI;
+    b_st.site = &yt_emlrtRSI;
     c_ExtendedKalmanFilter_set_Proc(
         &b_st, c_estimator_Estimators_f1_Track,
         c_estimator_Estimators_f1_Targe->StateTransitionModel
             .PropAccelerationVariance);
-    b_st.site = &xt_emlrtRSI;
+    b_st.site = &au_emlrtRSI;
     trackingEKF_predict(&b_st, c_estimator_Estimators_f1_Track, dT);
     for (i = 0; i < 6; i++) {
       pdf->Hypothesis[0].State[i] = c_estimator_Estimators_f1_Track->pState[i];
@@ -994,19 +928,19 @@ void MultiModalEstimator_predict(
     }
   }
   if (pdf->IsValid[1]) {
-    st.site = &tt_emlrtRSI;
-    b_st.site = &ut_emlrtRSI;
+    st.site = &vt_emlrtRSI;
+    b_st.site = &wt_emlrtRSI;
     ExtendedKalmanFilter_set_State(&b_st, c_estimator_Estimators_f2_Track,
                                    pdf->Hypothesis[1].State);
-    b_st.site = &vt_emlrtRSI;
+    b_st.site = &xt_emlrtRSI;
     c_ExtendedKalmanFilter_set_Stat(&b_st, c_estimator_Estimators_f2_Track,
                                     pdf->Hypothesis[1].StateCovariance);
-    b_st.site = &wt_emlrtRSI;
+    b_st.site = &yt_emlrtRSI;
     c_ExtendedKalmanFilter_set_Proc(
         &b_st, c_estimator_Estimators_f2_Track,
         c_estimator_Estimators_f2_Targe->StateTransitionModel
             .PropAccelerationVariance);
-    b_st.site = &xt_emlrtRSI;
+    b_st.site = &au_emlrtRSI;
     trackingEKF_predict(&b_st, c_estimator_Estimators_f2_Track, dT);
     for (i = 0; i < 6; i++) {
       pdf->Hypothesis[1].State[i] = c_estimator_Estimators_f2_Track->pState[i];
@@ -1049,19 +983,19 @@ void MultiModalEstimator_predict(
     }
   }
   if (pdf->IsValid[2]) {
-    st.site = &tt_emlrtRSI;
-    b_st.site = &ut_emlrtRSI;
+    st.site = &vt_emlrtRSI;
+    b_st.site = &wt_emlrtRSI;
     ExtendedKalmanFilter_set_State(&b_st, c_estimator_Estimators_f3_Track,
                                    pdf->Hypothesis[2].State);
-    b_st.site = &vt_emlrtRSI;
+    b_st.site = &xt_emlrtRSI;
     c_ExtendedKalmanFilter_set_Stat(&b_st, c_estimator_Estimators_f3_Track,
                                     pdf->Hypothesis[2].StateCovariance);
-    b_st.site = &wt_emlrtRSI;
+    b_st.site = &yt_emlrtRSI;
     c_ExtendedKalmanFilter_set_Proc(
         &b_st, c_estimator_Estimators_f3_Track,
         c_estimator_Estimators_f3_Targe->StateTransitionModel
             .PropAccelerationVariance);
-    b_st.site = &xt_emlrtRSI;
+    b_st.site = &au_emlrtRSI;
     trackingEKF_predict(&b_st, c_estimator_Estimators_f3_Track, dT);
     for (i = 0; i < 6; i++) {
       pdf->Hypothesis[2].State[i] = c_estimator_Estimators_f3_Track->pState[i];
@@ -1133,48 +1067,48 @@ real_T c_MultiModalEstimator_detection(
   Pdi[1] = 0.0;
   Pdi[2] = 0.0;
   if (pdf_IsValid[0]) {
-    st.site = &qx_emlrtRSI;
+    st.site = &sx_emlrtRSI;
     b_pdf_Hypothesis[0] = pdf_Hypothesis[0].State[0];
     b_pdf_Hypothesis[3] = pdf_Hypothesis[0].State[1];
     b_pdf_Hypothesis[1] = pdf_Hypothesis[0].State[2];
     b_pdf_Hypothesis[4] = pdf_Hypothesis[0].State[3];
     b_pdf_Hypothesis[2] = pdf_Hypothesis[0].State[4];
     b_pdf_Hypothesis[5] = pdf_Hypothesis[0].State[5];
-    b_st.site = &tx_emlrtRSI;
+    b_st.site = &vx_emlrtRSI;
     Pdi[0] = c_CompositeFieldOfViewModel_det(
         &b_st, c_estimator_Estimators_f1_Senso->DetectabilityModel.FieldsOfView,
         c_estimator_Estimators_f1_Senso->DetectabilityModel.NumModels,
         b_pdf_Hypothesis);
   }
   if (pdf_IsValid[1]) {
-    st.site = &qx_emlrtRSI;
+    st.site = &sx_emlrtRSI;
     b_pdf_Hypothesis[0] = pdf_Hypothesis[1].State[0];
     b_pdf_Hypothesis[3] = pdf_Hypothesis[1].State[1];
     b_pdf_Hypothesis[1] = pdf_Hypothesis[1].State[2];
     b_pdf_Hypothesis[4] = pdf_Hypothesis[1].State[3];
     b_pdf_Hypothesis[2] = pdf_Hypothesis[1].State[4];
     b_pdf_Hypothesis[5] = pdf_Hypothesis[1].State[5];
-    b_st.site = &tx_emlrtRSI;
+    b_st.site = &vx_emlrtRSI;
     Pdi[1] = c_CompositeFieldOfViewModel_det(
         &b_st, c_estimator_Estimators_f2_Senso->DetectabilityModel.FieldsOfView,
         c_estimator_Estimators_f2_Senso->DetectabilityModel.NumModels,
         b_pdf_Hypothesis);
   }
   if (pdf_IsValid[2]) {
-    st.site = &qx_emlrtRSI;
+    st.site = &sx_emlrtRSI;
     b_pdf_Hypothesis[0] = pdf_Hypothesis[2].State[0];
     b_pdf_Hypothesis[3] = pdf_Hypothesis[2].State[1];
     b_pdf_Hypothesis[1] = pdf_Hypothesis[2].State[2];
     b_pdf_Hypothesis[4] = pdf_Hypothesis[2].State[3];
     b_pdf_Hypothesis[2] = pdf_Hypothesis[2].State[4];
     b_pdf_Hypothesis[5] = pdf_Hypothesis[2].State[5];
-    b_st.site = &tx_emlrtRSI;
+    b_st.site = &vx_emlrtRSI;
     Pdi[2] = c_CompositeFieldOfViewModel_det(
         &b_st, c_estimator_Estimators_f3_Senso->DetectabilityModel.FieldsOfView,
         c_estimator_Estimators_f3_Senso->DetectabilityModel.NumModels,
         b_pdf_Hypothesis);
   }
-  st.site = &rx_emlrtRSI;
+  st.site = &tx_emlrtRSI;
   p = false;
   for (k = 0; k < 3; k++) {
     if (p || (Pdi[k] < 0.0)) {
@@ -1218,7 +1152,7 @@ real_T c_MultiModalEstimator_detection(
     i = tmp_data[k];
     pdf_LogWeights_data[k] = pdf_LogWeights[i] + Pdi[i];
   }
-  st.site = &sx_emlrtRSI;
+  st.site = &ux_emlrtRSI;
   Pd = logsumexp(&st, pdf_LogWeights_data, pdf_LogWeights_size);
   return muDoubleScalarExp(Pd);
 }
@@ -1246,16 +1180,16 @@ real_T c_MultiModalEstimator_gateProba(const emlrtStack *sp, real_T gateSize)
   e_st.tls = d_st.tls;
   f_st.prev = &e_st;
   f_st.tls = e_st.tls;
-  st.site = &ax_emlrtRSI;
-  b_st.site = &bx_emlrtRSI;
-  c_st.site = &rd_emlrtRSI;
-  d_st.site = &sd_emlrtRSI;
-  b_st.site = &bx_emlrtRSI;
-  c_st.site = &cx_emlrtRSI;
-  c_st.site = &cx_emlrtRSI;
+  st.site = &cx_emlrtRSI;
+  b_st.site = &dx_emlrtRSI;
+  c_st.site = &sd_emlrtRSI;
+  d_st.site = &td_emlrtRSI;
+  b_st.site = &dx_emlrtRSI;
+  c_st.site = &ex_emlrtRSI;
+  c_st.site = &ex_emlrtRSI;
   x = muDoubleScalarSqrt(gateSize * gateSize) / 2.0;
-  d_st.site = &dx_emlrtRSI;
-  e_st.site = &ex_emlrtRSI;
+  d_st.site = &fx_emlrtRSI;
+  e_st.site = &gx_emlrtRSI;
   if (!(x > 0.0)) {
     if (x == 0.0) {
       Pg = 0.0;
@@ -1375,7 +1309,7 @@ real_T c_MultiModalEstimator_gateProba(const emlrtStack *sp, real_T gateSize)
       if (-1.3068528194400546 - xD0 < 709.782712893384) {
         Pg *= muDoubleScalarExp(-1.3068528194400546 - xD0);
       } else {
-        f_st.site = &ix_emlrtRSI;
+        f_st.site = &kx_emlrtRSI;
         if (Pg < 0.0) {
           emlrtErrorWithMessageIdR2018a(
               &f_st, &v_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -1413,7 +1347,7 @@ real_T c_MultiModalEstimator_gateProba(const emlrtStack *sp, real_T gateSize)
       if (-1.3068528194400546 - xD0 < 709.782712893384) {
         Pg *= muDoubleScalarExp(-1.3068528194400546 - xD0);
       } else {
-        f_st.site = &hx_emlrtRSI;
+        f_st.site = &jx_emlrtRSI;
         if (Pg < 0.0) {
           emlrtErrorWithMessageIdR2018a(
               &f_st, &v_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -1459,7 +1393,7 @@ real_T c_MultiModalEstimator_gateProba(const emlrtStack *sp, real_T gateSize)
       if (-1.3068528194400546 - xD0 < 709.782712893384) {
         Pg *= muDoubleScalarExp(-1.3068528194400546 - xD0);
       } else {
-        f_st.site = &fx_emlrtRSI;
+        f_st.site = &hx_emlrtRSI;
         if (Pg < 0.0) {
           emlrtErrorWithMessageIdR2018a(
               &f_st, &v_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -1512,11 +1446,11 @@ real_T c_MultiModalEstimator_survivalP(
   Psi[1] = 0.0;
   Psi[2] = 0.0;
   if (pdf_IsValid[0]) {
-    st.site = &dw_emlrtRSI;
-    b_st.site = &gw_emlrtRSI;
-    c_st.site = &hw_emlrtRSI;
-    d_st.site = &rd_emlrtRSI;
-    e_st.site = &sd_emlrtRSI;
+    st.site = &fw_emlrtRSI;
+    b_st.site = &iw_emlrtRSI;
+    c_st.site = &jw_emlrtRSI;
+    d_st.site = &sd_emlrtRSI;
+    e_st.site = &td_emlrtRSI;
     if ((c_estimator_Estimators_f1_Targe->SurvivalModel.SurvivalRate < 0.0) &&
         (!muDoubleScalarIsNaN(dT)) && (muDoubleScalarFloor(dT) != dT)) {
       emlrtErrorWithMessageIdR2018a(&e_st, &w_emlrtRTEI,
@@ -1527,11 +1461,11 @@ real_T c_MultiModalEstimator_survivalP(
         c_estimator_Estimators_f1_Targe->SurvivalModel.SurvivalRate, dT);
   }
   if (pdf_IsValid[1]) {
-    st.site = &dw_emlrtRSI;
-    b_st.site = &gw_emlrtRSI;
-    c_st.site = &hw_emlrtRSI;
-    d_st.site = &rd_emlrtRSI;
-    e_st.site = &sd_emlrtRSI;
+    st.site = &fw_emlrtRSI;
+    b_st.site = &iw_emlrtRSI;
+    c_st.site = &jw_emlrtRSI;
+    d_st.site = &sd_emlrtRSI;
+    e_st.site = &td_emlrtRSI;
     if ((c_estimator_Estimators_f2_Targe->SurvivalModel.SurvivalRate < 0.0) &&
         (!muDoubleScalarIsNaN(dT)) && (muDoubleScalarFloor(dT) != dT)) {
       emlrtErrorWithMessageIdR2018a(&e_st, &w_emlrtRTEI,
@@ -1542,11 +1476,11 @@ real_T c_MultiModalEstimator_survivalP(
         c_estimator_Estimators_f2_Targe->SurvivalModel.SurvivalRate, dT);
   }
   if (pdf_IsValid[2]) {
-    st.site = &dw_emlrtRSI;
-    b_st.site = &gw_emlrtRSI;
-    c_st.site = &hw_emlrtRSI;
-    d_st.site = &rd_emlrtRSI;
-    e_st.site = &sd_emlrtRSI;
+    st.site = &fw_emlrtRSI;
+    b_st.site = &iw_emlrtRSI;
+    c_st.site = &jw_emlrtRSI;
+    d_st.site = &sd_emlrtRSI;
+    e_st.site = &td_emlrtRSI;
     if ((c_estimator_Estimators_f3_Targe->SurvivalModel.SurvivalRate < 0.0) &&
         (!muDoubleScalarIsNaN(dT)) && (muDoubleScalarFloor(dT) != dT)) {
       emlrtErrorWithMessageIdR2018a(&e_st, &w_emlrtRTEI,
@@ -1556,7 +1490,7 @@ real_T c_MultiModalEstimator_survivalP(
     Psi[2] = muDoubleScalarPower(
         c_estimator_Estimators_f3_Targe->SurvivalModel.SurvivalRate, dT);
   }
-  st.site = &ew_emlrtRSI;
+  st.site = &gw_emlrtRSI;
   p = false;
   for (k = 0; k < 3; k++) {
     if (p || (Psi[k] < 0.0)) {
@@ -1600,7 +1534,7 @@ real_T c_MultiModalEstimator_survivalP(
     i = tmp_data[k];
     pdf_LogWeights_data[k] = pdf_LogWeights[i] + Psi[i];
   }
-  st.site = &fw_emlrtRSI;
+  st.site = &hw_emlrtRSI;
   Ps = logsumexp(&st, pdf_LogWeights_data, pdf_LogWeights_size);
   return muDoubleScalarExp(Ps);
 }

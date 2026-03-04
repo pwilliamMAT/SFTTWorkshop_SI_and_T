@@ -25,231 +25,169 @@
 static emlrtRSInfo hc_emlrtRSI = {
     56,                     /* lineNo */
     "TrackEstimator/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\TrackEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "TrackEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo ic_emlrtRSI = {
     71,                    /* lineNo */
     "IPDAEstimator/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\IPDAEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "IPDAEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo jc_emlrtRSI = {
     72,                    /* lineNo */
     "IPDAEstimator/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\IPDAEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "IPDAEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo kc_emlrtRSI = {
     67,                    /* lineNo */
     "IPDAEstimator/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\IPDAEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "IPDAEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo lc_emlrtRSI = {
     90,                          /* lineNo */
     "MultiModalEstimator/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo mc_emlrtRSI = {
     91,                          /* lineNo */
     "MultiModalEstimator/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo nc_emlrtRSI = {
     92,                          /* lineNo */
     "MultiModalEstimator/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo oc_emlrtRSI = {
     58,                        /* lineNo */
     "EKFStateEstimator/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
 };
 
-static emlrtRSInfo ot_emlrtRSI = {
-    92,                                    /* lineNo */
-    "TrackEstimator/likelihoodUnassigned", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\TrackEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo pt_emlrtRSI = {
-    93,                                    /* lineNo */
-    "TrackEstimator/likelihoodUnassigned", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\TrackEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo qt_emlrtRSI = {
+static emlrtRSInfo st_emlrtRSI = {
     80,                       /* lineNo */
     "TrackEstimator/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\TrackEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo ox_emlrtRSI = {
-    107,                                  /* lineNo */
-    "IPDAEstimator/likelihoodUnassigned", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\IPDAEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo px_emlrtRSI = {
-    108,                                  /* lineNo */
-    "IPDAEstimator/likelihoodUnassigned", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\IPDAEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo cy_emlrtRSI = {
-    107,                       /* lineNo */
-    "TrackEstimator/distance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\TrackEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo dy_emlrtRSI = {
-    108,                       /* lineNo */
-    "TrackEstimator/distance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\TrackEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "TrackEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo ey_emlrtRSI = {
-    174,                      /* lineNo */
-    "IPDAEstimator/distance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\IPDAEstimator.m" /* pathName */
+    107,                       /* lineNo */
+    "TrackEstimator/distance", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "TrackEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo fy_emlrtRSI = {
-    220,                            /* lineNo */
-    "MultiModalEstimator/distance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    108,                       /* lineNo */
+    "TrackEstimator/distance", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "TrackEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo gy_emlrtRSI = {
-    190,                          /* lineNo */
-    "EKFStateEstimator/distance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
+    174,                      /* lineNo */
+    "IPDAEstimator/distance", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "IPDAEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo hy_emlrtRSI = {
-    191,                          /* lineNo */
-    "EKFStateEstimator/distance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
+    220,                            /* lineNo */
+    "MultiModalEstimator/distance", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo iy_emlrtRSI = {
-    196,                          /* lineNo */
+    190,                          /* lineNo */
     "EKFStateEstimator/distance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo jy_emlrtRSI = {
-    199,                          /* lineNo */
+    191,                          /* lineNo */
     "EKFStateEstimator/distance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo ky_emlrtRSI = {
+    196,                          /* lineNo */
+    "EKFStateEstimator/distance", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo ly_emlrtRSI = {
+    199,                          /* lineNo */
+    "EKFStateEstimator/distance", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo my_emlrtRSI = {
     202,                          /* lineNo */
     "EKFStateEstimator/distance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\EKFStateEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo acb_emlrtRSI = {
-    87,                          /* lineNo */
-    "TrackEstimator/likelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\TrackEstimator.m" /* pathName */
-};
-
-static emlrtRSInfo bcb_emlrtRSI = {
-    88,                          /* lineNo */
-    "TrackEstimator/likelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\TrackEstimator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "EKFStateEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo ccb_emlrtRSI = {
-    99,                         /* lineNo */
-    "IPDAEstimator/likelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\IPDAEstimator.m" /* pathName */
+    87,                          /* lineNo */
+    "TrackEstimator/likelihood", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "TrackEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo dcb_emlrtRSI = {
-    100,                        /* lineNo */
-    "IPDAEstimator/likelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\IPDAEstimator.m" /* pathName */
+    88,                          /* lineNo */
+    "TrackEstimator/likelihood", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "TrackEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo ecb_emlrtRSI = {
-    175,                              /* lineNo */
-    "MultiModalEstimator/likelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    99,                         /* lineNo */
+    "IPDAEstimator/likelihood", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "IPDAEstimator.m" /* pathName */
 };
 
 static emlrtRSInfo fcb_emlrtRSI = {
+    100,                        /* lineNo */
+    "IPDAEstimator/likelihood", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "IPDAEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo gcb_emlrtRSI = {
+    175,                              /* lineNo */
+    "MultiModalEstimator/likelihood", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo hcb_emlrtRSI = {
     178,                              /* lineNo */
     "MultiModalEstimator/likelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+estimators\\MultiModalEstimator"
-    ".m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
+    "MultiModalEstimator.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -288,23 +226,23 @@ real_T TrackEstimator_distance(
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &cy_emlrtRSI;
+  st.site = &ey_emlrtRSI;
   TrackEstimator_predict(
       &st, c_estimator_StateEstimator_Stat, e_estimator_StateEstimator_Stat,
       f_estimator_StateEstimator_Stat, h_estimator_StateEstimator_Stat,
       i_estimator_StateEstimator_Stat, k_estimator_StateEstimator_Stat, pdf,
       b_time);
-  st.site = &dy_emlrtRSI;
-  b_st.site = &ey_emlrtRSI;
+  st.site = &fy_emlrtRSI;
+  b_st.site = &gy_emlrtRSI;
   di[0] = 1.7976931348623157E+308;
   di[1] = 1.7976931348623157E+308;
   di[2] = 1.7976931348623157E+308;
   if (pdf->IsValid[0]) {
-    c_st.site = &fy_emlrtRSI;
-    d_st.site = &gy_emlrtRSI;
+    c_st.site = &hy_emlrtRSI;
+    d_st.site = &iy_emlrtRSI;
     ExtendedKalmanFilter_set_State(&d_st, e_estimator_StateEstimator_Stat,
                                    pdf->Hypothesis[0].State);
-    d_st.site = &hy_emlrtRSI;
+    d_st.site = &jy_emlrtRSI;
     c_ExtendedKalmanFilter_set_Stat(&d_st, e_estimator_StateEstimator_Stat,
                                     pdf->Hypothesis[0].StateCovariance);
     memset(&R[0], 0, 16U * sizeof(real_T));
@@ -312,23 +250,23 @@ real_T TrackEstimator_distance(
     R[5] = d_estimator_StateEstimator_Stat->MeasurementModel.ElevationVariance;
     R[10] = d_estimator_StateEstimator_Stat->MeasurementModel.RangeVariance;
     R[15] = d_estimator_StateEstimator_Stat->MeasurementModel.RangeRateVariance;
-    d_st.site = &iy_emlrtRSI;
+    d_st.site = &ky_emlrtRSI;
     c_ExtendedKalmanFilter_set_Meas(&d_st, e_estimator_StateEstimator_Stat, R);
-    d_st.site = &jy_emlrtRSI;
+    d_st.site = &ly_emlrtRSI;
     trackingEKF_residual(
         &d_st, e_estimator_StateEstimator_Stat, measurement,
         d_estimator_StateEstimator_Stat->MeasurementModel.OriginPosition,
         d_estimator_StateEstimator_Stat->MeasurementModel.OriginVelocity,
         d_estimator_StateEstimator_Stat->MeasurementModel.Orientation, r, R);
-    d_st.site = &ky_emlrtRSI;
+    d_st.site = &my_emlrtRSI;
     Y[0] = r[0];
     Y[1] = r[1];
     Y[2] = r[2];
     Y[3] = r[3];
-    e_st.site = &kbb_emlrtRSI;
+    e_st.site = &mbb_emlrtRSI;
     mrdiv(&e_st, Y, R);
     d = ((Y[0] * r[0] + Y[1] * r[1]) + Y[2] * r[2]) + Y[3] * r[3];
-    d_st.site = &ky_emlrtRSI;
+    d_st.site = &my_emlrtRSI;
     if (d < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &d_st, &d_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -337,11 +275,11 @@ real_T TrackEstimator_distance(
     di[0] = muDoubleScalarSqrt(d);
   }
   if (pdf->IsValid[1]) {
-    c_st.site = &fy_emlrtRSI;
-    d_st.site = &gy_emlrtRSI;
+    c_st.site = &hy_emlrtRSI;
+    d_st.site = &iy_emlrtRSI;
     ExtendedKalmanFilter_set_State(&d_st, h_estimator_StateEstimator_Stat,
                                    pdf->Hypothesis[1].State);
-    d_st.site = &hy_emlrtRSI;
+    d_st.site = &jy_emlrtRSI;
     c_ExtendedKalmanFilter_set_Stat(&d_st, h_estimator_StateEstimator_Stat,
                                     pdf->Hypothesis[1].StateCovariance);
     memset(&R[0], 0, 16U * sizeof(real_T));
@@ -349,23 +287,23 @@ real_T TrackEstimator_distance(
     R[5] = g_estimator_StateEstimator_Stat->MeasurementModel.ElevationVariance;
     R[10] = g_estimator_StateEstimator_Stat->MeasurementModel.RangeVariance;
     R[15] = g_estimator_StateEstimator_Stat->MeasurementModel.RangeRateVariance;
-    d_st.site = &iy_emlrtRSI;
+    d_st.site = &ky_emlrtRSI;
     c_ExtendedKalmanFilter_set_Meas(&d_st, h_estimator_StateEstimator_Stat, R);
-    d_st.site = &jy_emlrtRSI;
+    d_st.site = &ly_emlrtRSI;
     trackingEKF_residual(
         &d_st, h_estimator_StateEstimator_Stat, measurement,
         g_estimator_StateEstimator_Stat->MeasurementModel.OriginPosition,
         g_estimator_StateEstimator_Stat->MeasurementModel.OriginVelocity,
         g_estimator_StateEstimator_Stat->MeasurementModel.Orientation, r, R);
-    d_st.site = &ky_emlrtRSI;
+    d_st.site = &my_emlrtRSI;
     Y[0] = r[0];
     Y[1] = r[1];
     Y[2] = r[2];
     Y[3] = r[3];
-    e_st.site = &kbb_emlrtRSI;
+    e_st.site = &mbb_emlrtRSI;
     mrdiv(&e_st, Y, R);
     d = ((Y[0] * r[0] + Y[1] * r[1]) + Y[2] * r[2]) + Y[3] * r[3];
-    d_st.site = &ky_emlrtRSI;
+    d_st.site = &my_emlrtRSI;
     if (d < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &d_st, &d_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -374,11 +312,11 @@ real_T TrackEstimator_distance(
     di[1] = muDoubleScalarSqrt(d);
   }
   if (pdf->IsValid[2]) {
-    c_st.site = &fy_emlrtRSI;
-    d_st.site = &gy_emlrtRSI;
+    c_st.site = &hy_emlrtRSI;
+    d_st.site = &iy_emlrtRSI;
     ExtendedKalmanFilter_set_State(&d_st, k_estimator_StateEstimator_Stat,
                                    pdf->Hypothesis[2].State);
-    d_st.site = &hy_emlrtRSI;
+    d_st.site = &jy_emlrtRSI;
     c_ExtendedKalmanFilter_set_Stat(&d_st, k_estimator_StateEstimator_Stat,
                                     pdf->Hypothesis[2].StateCovariance);
     memset(&R[0], 0, 16U * sizeof(real_T));
@@ -386,23 +324,23 @@ real_T TrackEstimator_distance(
     R[5] = j_estimator_StateEstimator_Stat->MeasurementModel.ElevationVariance;
     R[10] = j_estimator_StateEstimator_Stat->MeasurementModel.RangeVariance;
     R[15] = j_estimator_StateEstimator_Stat->MeasurementModel.RangeRateVariance;
-    d_st.site = &iy_emlrtRSI;
+    d_st.site = &ky_emlrtRSI;
     c_ExtendedKalmanFilter_set_Meas(&d_st, k_estimator_StateEstimator_Stat, R);
-    d_st.site = &jy_emlrtRSI;
+    d_st.site = &ly_emlrtRSI;
     trackingEKF_residual(
         &d_st, k_estimator_StateEstimator_Stat, measurement,
         j_estimator_StateEstimator_Stat->MeasurementModel.OriginPosition,
         j_estimator_StateEstimator_Stat->MeasurementModel.OriginVelocity,
         j_estimator_StateEstimator_Stat->MeasurementModel.Orientation, r, R);
-    d_st.site = &ky_emlrtRSI;
+    d_st.site = &my_emlrtRSI;
     Y[0] = r[0];
     Y[1] = r[1];
     Y[2] = r[2];
     Y[3] = r[3];
-    e_st.site = &kbb_emlrtRSI;
+    e_st.site = &mbb_emlrtRSI;
     mrdiv(&e_st, Y, R);
     d = ((Y[0] * r[0] + Y[1] * r[1]) + Y[2] * r[2]) + Y[3] * r[3];
-    d_st.site = &ky_emlrtRSI;
+    d_st.site = &my_emlrtRSI;
     if (d < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &d_st, &d_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -476,16 +414,16 @@ real_T TrackEstimator_likelihood(
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &acb_emlrtRSI;
+  st.site = &ccb_emlrtRSI;
   TrackEstimator_predict(
       &st, c_estimator_StateEstimator_Stat, e_estimator_StateEstimator_Stat,
       f_estimator_StateEstimator_Stat, h_estimator_StateEstimator_Stat,
       i_estimator_StateEstimator_Stat, k_estimator_StateEstimator_Stat, pdf,
       b_time);
-  st.site = &bcb_emlrtRSI;
-  b_st.site = &ccb_emlrtRSI;
-  c_st.site = &ecb_emlrtRSI;
-  d_st.site = &ecb_emlrtRSI;
+  st.site = &dcb_emlrtRSI;
+  b_st.site = &ecb_emlrtRSI;
+  c_st.site = &gcb_emlrtRSI;
+  d_st.site = &gcb_emlrtRSI;
   l = EKFStateEstimator_likelihood(
       &d_st, d_estimator_StateEstimator_Stat, e_estimator_StateEstimator_Stat,
       pdf->Hypothesis[0].State, pdf->Hypothesis[0].StateCovariance,
@@ -496,8 +434,8 @@ real_T TrackEstimator_likelihood(
         "Coder:toolbox:ElFunDomainError", 3, 4, 3, "log");
   }
   Li[0] = muDoubleScalarLog(l) + pdf->LogWeights[0];
-  c_st.site = &ecb_emlrtRSI;
-  d_st.site = &ecb_emlrtRSI;
+  c_st.site = &gcb_emlrtRSI;
+  d_st.site = &gcb_emlrtRSI;
   l = EKFStateEstimator_likelihood(
       &d_st, g_estimator_StateEstimator_Stat, h_estimator_StateEstimator_Stat,
       pdf->Hypothesis[1].State, pdf->Hypothesis[1].StateCovariance,
@@ -509,8 +447,8 @@ real_T TrackEstimator_likelihood(
   }
   Li[1] = muDoubleScalarLog(l);
   Li[1] += pdf->LogWeights[1];
-  c_st.site = &ecb_emlrtRSI;
-  d_st.site = &ecb_emlrtRSI;
+  c_st.site = &gcb_emlrtRSI;
+  d_st.site = &gcb_emlrtRSI;
   l = EKFStateEstimator_likelihood(
       &d_st, j_estimator_StateEstimator_Stat, k_estimator_StateEstimator_Stat,
       pdf->Hypothesis[2].State, pdf->Hypothesis[2].StateCovariance,
@@ -522,7 +460,7 @@ real_T TrackEstimator_likelihood(
   }
   Li[2] = muDoubleScalarLog(l);
   Li[2] += pdf->LogWeights[2];
-  c_st.site = &fcb_emlrtRSI;
+  c_st.site = &hcb_emlrtRSI;
   if (!muDoubleScalarIsNaN(Li[0])) {
     idx = 1;
   } else {
@@ -557,7 +495,7 @@ real_T TrackEstimator_likelihood(
     Li[1] = muDoubleScalarExp(Li[1] - xmax);
     Li[2] = muDoubleScalarExp(Li[2] - xmax);
     l = d_sumColumnB(Li);
-    d_st.site = &jw_emlrtRSI;
+    d_st.site = &lw_emlrtRSI;
     if (l < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &d_st, &v_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -567,21 +505,21 @@ real_T TrackEstimator_likelihood(
     xmax += l;
   }
   xmax = muDoubleScalarExp(xmax);
-  b_st.site = &dcb_emlrtRSI;
-  c_st.site = &dcb_emlrtRSI;
+  b_st.site = &fcb_emlrtRSI;
+  c_st.site = &fcb_emlrtRSI;
   l = c_MultiModalEstimator_detection(
       &c_st, d_estimator_StateEstimator_Stat, g_estimator_StateEstimator_Stat,
       j_estimator_StateEstimator_Stat, pdf->Hypothesis, pdf->LogWeights,
       pdf->IsValid);
-  c_st.site = &ay_emlrtRSI;
-  d_st.site = &by_emlrtRSI;
+  c_st.site = &cy_emlrtRSI;
+  d_st.site = &dy_emlrtRSI;
   if (!(l >= 0.0)) {
-    emlrtErrorWithMessageIdR2018a(&d_st, &u_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&d_st, &l_emlrtRTEI,
                                   "MATLAB:validators:mustBeNonnegative",
                                   "MATLAB:validators:mustBeNonnegative", 0);
   }
-  d_st.site = &by_emlrtRSI;
-  e_st.site = &hl_emlrtRSI;
+  d_st.site = &dy_emlrtRSI;
+  e_st.site = &il_emlrtRSI;
   if (!(l < 1.0)) {
     emlrtErrorWithMessageIdR2018a(
         &e_st, &c_emlrtRTEI, "MATLAB:validators:mustBeLessThan",
@@ -619,27 +557,27 @@ void TrackEstimator_predict(
   dT = b_time - pdf->Time;
   if (dT > 0.0) {
     real_T val;
-    st.site = &qt_emlrtRSI;
-    b_st.site = &st_emlrtRSI;
+    st.site = &st_emlrtRSI;
+    b_st.site = &ut_emlrtRSI;
     MultiModalEstimator_predict(
         &b_st, c_estimator_StateEstimator_Stat, d_estimator_StateEstimator_Stat,
         e_estimator_StateEstimator_Stat, f_estimator_StateEstimator_Stat,
         g_estimator_StateEstimator_Stat, h_estimator_StateEstimator_Stat, pdf,
         dT);
-    b_st.site = &rt_emlrtRSI;
-    c_st.site = &rt_emlrtRSI;
+    b_st.site = &tt_emlrtRSI;
+    c_st.site = &tt_emlrtRSI;
     val = c_MultiModalEstimator_survivalP(
         &c_st, c_estimator_StateEstimator_Stat, e_estimator_StateEstimator_Stat,
         g_estimator_StateEstimator_Stat, pdf->LogWeights, pdf->IsValid, dT);
-    c_st.site = &xw_emlrtRSI;
-    d_st.site = &yw_emlrtRSI;
+    c_st.site = &ax_emlrtRSI;
+    d_st.site = &bx_emlrtRSI;
     if (!(val >= 0.0)) {
-      emlrtErrorWithMessageIdR2018a(&d_st, &u_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&d_st, &l_emlrtRTEI,
                                     "MATLAB:validators:mustBeNonnegative",
                                     "MATLAB:validators:mustBeNonnegative", 0);
     }
-    d_st.site = &yw_emlrtRSI;
-    e_st.site = &hl_emlrtRSI;
+    d_st.site = &bx_emlrtRSI;
+    e_st.site = &il_emlrtRSI;
     if (!(val < 1.0)) {
       emlrtErrorWithMessageIdR2018a(
           &e_st, &c_emlrtRTEI, "MATLAB:validators:mustBeLessThan",
@@ -864,67 +802,6 @@ void TrackEstimator_setup(trackingAlgorithmStackData *SD, const emlrtStack *sp,
       d_estimator_ExistenceEstimator_;
 }
 
-real_T c_TrackEstimator_likelihoodUnas(
-    const emlrtStack *sp,
-    const c_fusion_tracker_targetspecs_Pa *c_estimator_StateEstimator_Stat,
-    const c_fusion_tracker_sensorspecs_Ae *d_estimator_StateEstimator_Stat,
-    trackingEKF *e_estimator_StateEstimator_Stat,
-    const c_fusion_tracker_targetspecs_Ge *f_estimator_StateEstimator_Stat,
-    const c_fusion_tracker_sensorspecs_Ae *g_estimator_StateEstimator_Stat,
-    trackingEKF *h_estimator_StateEstimator_Stat,
-    const c_fusion_tracker_targetspecs_He *i_estimator_StateEstimator_Stat,
-    const c_fusion_tracker_sensorspecs_Ae *j_estimator_StateEstimator_Stat,
-    trackingEKF *k_estimator_StateEstimator_Stat, b_struct_T *pdf,
-    real_T b_time, real_T gateSize)
-{
-  emlrtStack b_st;
-  emlrtStack c_st;
-  emlrtStack d_st;
-  emlrtStack e_st;
-  emlrtStack st;
-  real_T l;
-  st.prev = sp;
-  st.tls = sp->tls;
-  b_st.prev = &st;
-  b_st.tls = st.tls;
-  c_st.prev = &b_st;
-  c_st.tls = b_st.tls;
-  d_st.prev = &c_st;
-  d_st.tls = c_st.tls;
-  e_st.prev = &d_st;
-  e_st.tls = d_st.tls;
-  st.site = &ot_emlrtRSI;
-  TrackEstimator_predict(
-      &st, c_estimator_StateEstimator_Stat, e_estimator_StateEstimator_Stat,
-      f_estimator_StateEstimator_Stat, h_estimator_StateEstimator_Stat,
-      i_estimator_StateEstimator_Stat, k_estimator_StateEstimator_Stat, pdf,
-      b_time);
-  st.site = &pt_emlrtRSI;
-  b_st.site = &ox_emlrtRSI;
-  l = c_MultiModalEstimator_gateProba(&b_st, gateSize);
-  b_st.site = &px_emlrtRSI;
-  c_st.site = &px_emlrtRSI;
-  l *= c_MultiModalEstimator_detection(
-      &c_st, d_estimator_StateEstimator_Stat, g_estimator_StateEstimator_Stat,
-      j_estimator_StateEstimator_Stat, pdf->Hypothesis, pdf->LogWeights,
-      pdf->IsValid);
-  c_st.site = &ay_emlrtRSI;
-  d_st.site = &by_emlrtRSI;
-  if (!(l >= 0.0)) {
-    emlrtErrorWithMessageIdR2018a(&d_st, &u_emlrtRTEI,
-                                  "MATLAB:validators:mustBeNonnegative",
-                                  "MATLAB:validators:mustBeNonnegative", 0);
-  }
-  d_st.site = &by_emlrtRSI;
-  e_st.site = &hl_emlrtRSI;
-  if (!(l < 1.0)) {
-    emlrtErrorWithMessageIdR2018a(
-        &e_st, &c_emlrtRTEI, "MATLAB:validators:mustBeLessThan",
-        "MATLAB:validators:mustBeLessThan", 3, 4, 1, "1");
-  }
-  return 1.0 - l * pdf->ExistenceProbability;
-}
-
 real_T c_TrackEstimator_sampleDistribu(
     trackingEKF *c_estimator_StateEstimator_Stat,
     trackingEKF *d_estimator_StateEstimator_Stat,
@@ -1140,14 +1017,14 @@ void c_TrackEstimator_updateEstimato(
   c_st.tls = b_st.tls;
   d_st.prev = &c_st;
   d_st.tls = c_st.tls;
-  st.site = &lq_emlrtRSI;
-  b_st.site = &mq_emlrtRSI;
+  st.site = &mq_emlrtRSI;
+  b_st.site = &nq_emlrtRSI;
   SD->u1.f0.r = estimator->StateEstimator.StateEstimator;
-  c_st.site = &oq_emlrtRSI;
+  c_st.site = &pq_emlrtRSI;
   SD->u1.f0.r1 = estimator->StateEstimator.StateEstimator.Estimators.f1;
   SD->u1.f0.val = estimator->StateEstimator.StateEstimator.Estimators.f1
                       .SensorSpecifications[0];
-  d_st.site = &pq_emlrtRSI;
+  d_st.site = &qq_emlrtRSI;
   c_AerospaceMonostaticRadar_upda(
       &d_st, &SD->u1.f0.val, modelData_LookTime_data, modelData_LookTime_size,
       modelData_LookAzimuth_data, modelData_LookAzimuth_size,
@@ -1157,11 +1034,11 @@ void c_TrackEstimator_updateEstimato(
       modelData_ElevationNoise_data, modelData_ElevationNoise_size,
       modelData_RangeNoise_data, modelData_RangeNoise_size,
       modelData_RangeRateNoise_data, modelData_RangeRateNoise_size);
-  c_st.site = &oq_emlrtRSI;
+  c_st.site = &pq_emlrtRSI;
   SD->u1.f0.r2 = estimator->StateEstimator.StateEstimator.Estimators.f2;
   SD->u1.f0.b_val = estimator->StateEstimator.StateEstimator.Estimators.f2
                         .SensorSpecifications[0];
-  d_st.site = &pq_emlrtRSI;
+  d_st.site = &qq_emlrtRSI;
   c_AerospaceMonostaticRadar_upda(
       &d_st, &SD->u1.f0.b_val, modelData_LookTime_data, modelData_LookTime_size,
       modelData_LookAzimuth_data, modelData_LookAzimuth_size,
@@ -1171,11 +1048,11 @@ void c_TrackEstimator_updateEstimato(
       modelData_ElevationNoise_data, modelData_ElevationNoise_size,
       modelData_RangeNoise_data, modelData_RangeNoise_size,
       modelData_RangeRateNoise_data, modelData_RangeRateNoise_size);
-  c_st.site = &oq_emlrtRSI;
+  c_st.site = &pq_emlrtRSI;
   SD->u1.f0.r3 = estimator->StateEstimator.StateEstimator.Estimators.f3;
   val = estimator->StateEstimator.StateEstimator.Estimators.f3
             .SensorSpecifications[0];
-  d_st.site = &pq_emlrtRSI;
+  d_st.site = &qq_emlrtRSI;
   c_AerospaceMonostaticRadar_upda(
       &d_st, &val, modelData_LookTime_data, modelData_LookTime_size,
       modelData_LookAzimuth_data, modelData_LookAzimuth_size,
@@ -1185,14 +1062,14 @@ void c_TrackEstimator_updateEstimato(
       modelData_ElevationNoise_data, modelData_ElevationNoise_size,
       modelData_RangeNoise_data, modelData_RangeNoise_size,
       modelData_RangeRateNoise_data, modelData_RangeRateNoise_size);
-  b_st.site = &nq_emlrtRSI;
+  b_st.site = &oq_emlrtRSI;
   estimator_DetectionProbability =
       estimator->StateEstimator.ExistenceEstimator.DetectionProbability;
   estimator_SurvivalProbability =
       estimator->StateEstimator.ExistenceEstimator.SurvivalProbability;
   estimator_SensorSpecifications =
       estimator->StateEstimator.ExistenceEstimator.SensorSpecifications[0];
-  c_st.site = &ct_emlrtRSI;
+  c_st.site = &dt_emlrtRSI;
   c_AerospaceMonostaticRadar_upda(
       &c_st, &estimator_SensorSpecifications, modelData_LookTime_data,
       modelData_LookTime_size, modelData_LookAzimuth_data,

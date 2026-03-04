@@ -16,84 +16,74 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo yf_emlrtRSI = {
+static emlrtRSInfo ag_emlrtRSI = {
     337,       /* lineNo */
     "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
-};
-
-static emlrtRSInfo ag_emlrtRSI = {
-    301,       /* lineNo */
-    "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo bg_emlrtRSI = {
-    273,       /* lineNo */
+    301,       /* lineNo */
     "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
 };
 
-static emlrtRSInfo dg_emlrtRSI = {
-    240,       /* lineNo */
+static emlrtRSInfo cg_emlrtRSI = {
+    273,       /* lineNo */
     "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo eg_emlrtRSI = {
-    226,       /* lineNo */
+    240,       /* lineNo */
     "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo fg_emlrtRSI = {
-    172,       /* lineNo */
+    226,       /* lineNo */
     "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
 };
 
-static emlrtRSInfo sh_emlrtRSI = {
-    292,       /* lineNo */
+static emlrtRSInfo gg_emlrtRSI = {
+    172,       /* lineNo */
     "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo th_emlrtRSI = {
-    264,       /* lineNo */
+    292,       /* lineNo */
     "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo uh_emlrtRSI = {
-    33,        /* lineNo */
+    264,       /* lineNo */
     "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo vh_emlrtRSI = {
+    33,        /* lineNo */
+    "xdlahqr", /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
+};
+
+static emlrtRSInfo wh_emlrtRSI = {
     16,        /* lineNo */
     "xdlahqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdlahqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdlahqr.m" /* pathName
+                                                                     */
 };
 
 /* Function Definitions */
@@ -119,7 +109,7 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
   b_st.prev = &st;
   b_st.tls = st.tls;
   info = 0;
-  st.site = &vh_emlrtRSI;
+  st.site = &wh_emlrtRSI;
   if (ilo - 1 > 2147483646) {
     b_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&b_st);
@@ -142,7 +132,7 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
     int32_T b_i;
     int32_T kdefl;
     boolean_T exitg1;
-    st.site = &uh_emlrtRSI;
+    st.site = &vh_emlrtRSI;
     if ((ilo <= ihi - 3) && (ihi - 3 > 2147483646)) {
       b_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&b_st);
@@ -254,7 +244,7 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
             h22 /= s;
             d_sum = (h11 + h22) / 2.0;
             h11 = (h11 - d_sum) * (h22 - d_sum) - h12 * h21;
-            st.site = &fg_emlrtRSI;
+            st.site = &gg_emlrtRSI;
             h12 = muDoubleScalarSqrt(muDoubleScalarAbs(h11));
             if (h11 >= 0.0) {
               rt1r = d_sum * s;
@@ -291,7 +281,7 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
             _mm_storeu_pd(&v[0], _mm_div_pd(r, _mm_set1_pd(s)));
             v[2] /= s;
           }
-          st.site = &eg_emlrtRSI;
+          st.site = &fg_emlrtRSI;
           if ((b_i - 1 <= b_i) && (b_i > 2147483646)) {
             b_st.site = &k_emlrtRSI;
             check_forloop_overflow_error(&b_st);
@@ -301,14 +291,14 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
             k = muIntScalarMin_sint32(3, sum_tmp_tmp);
             if (b_k > b_i - 1) {
               ix0 = ((b_k - 2) * 3 + b_k) - 1;
-              st.site = &dg_emlrtRSI;
+              st.site = &eg_emlrtRSI;
               sum_tmp_tmp = (uint8_T)k;
               for (i = 0; i < sum_tmp_tmp; i++) {
                 v[i] = h[ix0 + i];
               }
             }
             h11 = v[0];
-            st.site = &cg_emlrtRSI;
+            st.site = &dg_emlrtRSI;
             h22 = b_xzlarfg(&st, k, &h11, v);
             if (b_k > b_i - 1) {
               h[b_k - 1] = h11;
@@ -325,7 +315,7 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
               int32_T scalarLB;
               h12 = v[2];
               h21 = h22 * v[2];
-              st.site = &th_emlrtRSI;
+              st.site = &uh_emlrtRSI;
               if ((b_k <= b_i + 1) && (b_i + 1 > 2147483646)) {
                 b_st.site = &k_emlrtRSI;
                 check_forloop_overflow_error(&b_st);
@@ -342,7 +332,7 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
               sum_tmp_tmp = b_k + 3;
               k = b_i + 1;
               b = muIntScalarMin_sint32(sum_tmp_tmp, k);
-              st.site = &bg_emlrtRSI;
+              st.site = &cg_emlrtRSI;
               if (b > 2147483646) {
                 b_st.site = &k_emlrtRSI;
                 check_forloop_overflow_error(&b_st);
@@ -381,7 +371,7 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
               }
             } else if (k == 2) {
               int32_T b;
-              st.site = &sh_emlrtRSI;
+              st.site = &th_emlrtRSI;
               if ((b_k <= b_i + 1) && (b_i + 1 > 2147483646)) {
                 b_st.site = &k_emlrtRSI;
                 check_forloop_overflow_error(&b_st);
@@ -396,7 +386,7 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
                 h12 -= d_sum * rt1r;
                 h[sum_tmp_tmp] = h12;
               }
-              st.site = &ag_emlrtRSI;
+              st.site = &bg_emlrtRSI;
               if ((b_i >= 0) && (b_i + 1 > 2147483646)) {
                 b_st.site = &k_emlrtRSI;
                 check_forloop_overflow_error(&b_st);
@@ -445,7 +435,7 @@ int32_T xdlahqr(const emlrtStack *sp, int32_T ilo, int32_T ihi, real_T h[9],
           sum_tmp_tmp = b_i + 3 * (b_i - 1);
           h12 = h[sum_tmp_tmp];
           h21 = h[k];
-          st.site = &yf_emlrtRSI;
+          st.site = &ag_emlrtRSI;
           wr[b_i - 1] = xdlanv2(&h[sum_tmp_tmp - 1], &h11, &h12, &h21,
                                 &wi[b_i - 1], &d_sum, &h22, &rt2r, &rt1r);
           wr[b_i] = d_sum;

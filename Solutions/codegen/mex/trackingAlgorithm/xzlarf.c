@@ -14,12 +14,11 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo sf_emlrtRSI = {
-    103,      /* lineNo */
-    "ilazlc", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzlarf.m" /* pathName */
+static emlrtRSInfo tf_emlrtRSI = {
+    103,                                                           /* lineNo */
+    "ilazlc",                                                      /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzlarf.m" /* pathName
+                                                                    */
 };
 
 /* Function Definitions */
@@ -42,7 +41,7 @@ int32_T b_ilazlc(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[40],
     int32_T exitg1;
     coltop = ia0 + (j - 1) * 10;
     colbottom = (coltop + m) - 1;
-    st.site = &sf_emlrtRSI;
+    st.site = &tf_emlrtRSI;
     if ((coltop <= colbottom) && (colbottom > 2147483646)) {
       b_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&b_st);
@@ -102,14 +101,14 @@ void b_xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0,
       lastv--;
       i--;
     }
-    st.site = &pf_emlrtRSI;
+    st.site = &qf_emlrtRSI;
     lastc = n;
     exitg2 = false;
     while ((!exitg2) && (lastc > 0)) {
       int32_T exitg1;
       i = ic0 + (lastc - 1) * 6;
       colbottom = i + lastv;
-      b_st.site = &sf_emlrtRSI;
+      b_st.site = &tf_emlrtRSI;
       if ((i <= colbottom) && (colbottom > 2147483646)) {
         c_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&c_st);
@@ -137,10 +136,10 @@ void b_xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0,
   }
   if (lastv + 1 > 0) {
     real_T c;
-    st.site = &qf_emlrtRSI;
-    b_st.site = &hf_emlrtRSI;
+    st.site = &rf_emlrtRSI;
+    b_st.site = &if_emlrtRSI;
     if (lastc != 0) {
-      c_st.site = &jf_emlrtRSI;
+      c_st.site = &kf_emlrtRSI;
       if (lastc > 2147483646) {
         d_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&d_st);
@@ -153,7 +152,7 @@ void b_xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0,
       for (iac = ic0; iac <= colbottom; iac += 6) {
         c = 0.0;
         i = iac + lastv;
-        c_st.site = &tf_emlrtRSI;
+        c_st.site = &uf_emlrtRSI;
         if ((iac <= i) && (i > 2147483646)) {
           d_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&d_st);
@@ -165,21 +164,21 @@ void b_xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0,
         work[i] += c;
       }
     }
-    st.site = &rf_emlrtRSI;
-    b_st.site = &kf_emlrtRSI;
-    c_st.site = &lf_emlrtRSI;
-    d_st.site = &mf_emlrtRSI;
+    st.site = &sf_emlrtRSI;
+    b_st.site = &lf_emlrtRSI;
+    c_st.site = &mf_emlrtRSI;
+    d_st.site = &nf_emlrtRSI;
     if (!(-tau == 0.0)) {
       int32_T jA;
       jA = ic0;
-      e_st.site = &nf_emlrtRSI;
+      e_st.site = &of_emlrtRSI;
       i = (uint8_T)lastc;
       for (ia = 0; ia < i; ia++) {
         c = work[ia];
         if (c != 0.0) {
           c *= -tau;
           colbottom = lastv + jA;
-          e_st.site = &of_emlrtRSI;
+          e_st.site = &pf_emlrtRSI;
           if ((jA <= colbottom) && (colbottom > 2147483646)) {
             f_st.site = &k_emlrtRSI;
             check_forloop_overflow_error(&f_st);
@@ -213,7 +212,7 @@ int32_T c_ilazlc(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[60],
     int32_T exitg1;
     coltop = ia0 + (j - 1) * 10;
     colbottom = (coltop + m) - 1;
-    st.site = &sf_emlrtRSI;
+    st.site = &tf_emlrtRSI;
     if ((coltop <= colbottom) && (colbottom > 2147483646)) {
       b_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&b_st);
@@ -273,14 +272,14 @@ void c_xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0,
       lastv--;
       i--;
     }
-    st.site = &pf_emlrtRSI;
+    st.site = &qf_emlrtRSI;
     lastc = n;
     exitg2 = false;
     while ((!exitg2) && (lastc > 0)) {
       int32_T exitg1;
       i = ic0 + ((lastc - 1) << 2);
       colbottom = i + lastv;
-      b_st.site = &sf_emlrtRSI;
+      b_st.site = &tf_emlrtRSI;
       if ((i <= colbottom) && (colbottom > 2147483646)) {
         c_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&c_st);
@@ -308,10 +307,10 @@ void c_xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0,
   }
   if (lastv + 1 > 0) {
     real_T c;
-    st.site = &qf_emlrtRSI;
-    b_st.site = &hf_emlrtRSI;
+    st.site = &rf_emlrtRSI;
+    b_st.site = &if_emlrtRSI;
     if (lastc != 0) {
-      c_st.site = &jf_emlrtRSI;
+      c_st.site = &kf_emlrtRSI;
       if (lastc > 2147483646) {
         d_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&d_st);
@@ -324,7 +323,7 @@ void c_xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0,
       for (iac = ic0; iac <= colbottom; iac += 4) {
         c = 0.0;
         i = iac + lastv;
-        c_st.site = &tf_emlrtRSI;
+        c_st.site = &uf_emlrtRSI;
         if ((iac <= i) && (i > 2147483646)) {
           d_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&d_st);
@@ -336,21 +335,21 @@ void c_xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0,
         work[i] += c;
       }
     }
-    st.site = &rf_emlrtRSI;
-    b_st.site = &kf_emlrtRSI;
-    c_st.site = &lf_emlrtRSI;
-    d_st.site = &mf_emlrtRSI;
+    st.site = &sf_emlrtRSI;
+    b_st.site = &lf_emlrtRSI;
+    c_st.site = &mf_emlrtRSI;
+    d_st.site = &nf_emlrtRSI;
     if (!(-tau == 0.0)) {
       int32_T jA;
       jA = ic0;
-      e_st.site = &nf_emlrtRSI;
+      e_st.site = &of_emlrtRSI;
       i = (uint8_T)lastc;
       for (ia = 0; ia < i; ia++) {
         c = work[ia];
         if (c != 0.0) {
           c *= -tau;
           colbottom = lastv + jA;
-          e_st.site = &of_emlrtRSI;
+          e_st.site = &pf_emlrtRSI;
           if ((jA <= colbottom) && (colbottom > 2147483646)) {
             f_st.site = &k_emlrtRSI;
             check_forloop_overflow_error(&f_st);
@@ -384,7 +383,7 @@ int32_T ilazlc(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[54],
     int32_T exitg1;
     coltop = ia0 + (j - 1) * 9;
     colbottom = (coltop + m) - 1;
-    st.site = &sf_emlrtRSI;
+    st.site = &tf_emlrtRSI;
     if ((coltop <= colbottom) && (colbottom > 2147483646)) {
       b_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&b_st);
@@ -444,14 +443,14 @@ void xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0, real_T tau,
       lastv--;
       i--;
     }
-    st.site = &pf_emlrtRSI;
+    st.site = &qf_emlrtRSI;
     lastc = n;
     exitg2 = false;
     while ((!exitg2) && (lastc > 0)) {
       int32_T exitg1;
       i = ic0 + (lastc - 1) * 3;
       colbottom = i + lastv;
-      b_st.site = &sf_emlrtRSI;
+      b_st.site = &tf_emlrtRSI;
       if ((i <= colbottom) && (colbottom > 2147483646)) {
         c_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&c_st);
@@ -479,10 +478,10 @@ void xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0, real_T tau,
   }
   if (lastv + 1 > 0) {
     real_T c;
-    st.site = &qf_emlrtRSI;
-    b_st.site = &hf_emlrtRSI;
+    st.site = &rf_emlrtRSI;
+    b_st.site = &if_emlrtRSI;
     if (lastc != 0) {
-      c_st.site = &jf_emlrtRSI;
+      c_st.site = &kf_emlrtRSI;
       if (lastc > 2147483646) {
         d_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&d_st);
@@ -495,7 +494,7 @@ void xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0, real_T tau,
       for (iac = ic0; iac <= colbottom; iac += 3) {
         c = 0.0;
         i = iac + lastv;
-        c_st.site = &tf_emlrtRSI;
+        c_st.site = &uf_emlrtRSI;
         if ((iac <= i) && (i > 2147483646)) {
           d_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&d_st);
@@ -507,21 +506,21 @@ void xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0, real_T tau,
         work[i] += c;
       }
     }
-    st.site = &rf_emlrtRSI;
-    b_st.site = &kf_emlrtRSI;
-    c_st.site = &lf_emlrtRSI;
-    d_st.site = &mf_emlrtRSI;
+    st.site = &sf_emlrtRSI;
+    b_st.site = &lf_emlrtRSI;
+    c_st.site = &mf_emlrtRSI;
+    d_st.site = &nf_emlrtRSI;
     if (!(-tau == 0.0)) {
       int32_T jA;
       jA = ic0;
-      e_st.site = &nf_emlrtRSI;
+      e_st.site = &of_emlrtRSI;
       i = (uint8_T)lastc;
       for (ia = 0; ia < i; ia++) {
         c = work[ia];
         if (c != 0.0) {
           c *= -tau;
           colbottom = lastv + jA;
-          e_st.site = &of_emlrtRSI;
+          e_st.site = &pf_emlrtRSI;
           if ((jA <= colbottom) && (colbottom > 2147483646)) {
             f_st.site = &k_emlrtRSI;
             check_forloop_overflow_error(&f_st);

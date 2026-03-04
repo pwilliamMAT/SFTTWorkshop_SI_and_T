@@ -13,36 +13,32 @@
 #include "trackingAlgorithm_types.h"
 
 /* Variable Definitions */
-static emlrtRSInfo tw_emlrtRSI = {
+static emlrtRSInfo vw_emlrtRSI = {
     178,          /* lineNo */
     "sumColumnB", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
-    "rixIncludeNaN.m" /* pathName */
-};
-
-static emlrtRSInfo uw_emlrtRSI = {
-    183,          /* lineNo */
-    "sumColumnB", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
-    "rixIncludeNaN.m" /* pathName */
-};
-
-static emlrtRSInfo vw_emlrtRSI = {
-    189,          /* lineNo */
-    "sumColumnB", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
-    "rixIncludeNaN.m" /* pathName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
+                                                                            */
 };
 
 static emlrtRSInfo ww_emlrtRSI = {
+    183,          /* lineNo */
+    "sumColumnB", /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
+                                                                            */
+};
+
+static emlrtRSInfo xw_emlrtRSI = {
+    189,          /* lineNo */
+    "sumColumnB", /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
+                                                                            */
+};
+
+static emlrtRSInfo yw_emlrtRSI = {
     210,         /* lineNo */
     "sumColumn", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
-    "rixIncludeNaN.m" /* pathName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
+                                                                            */
 };
 
 /* Function Definitions */
@@ -64,9 +60,9 @@ real_T b_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x,
   c_st.tls = b_st.tls;
   x_data = x->data;
   if (vlen <= 1024) {
-    st.site = &tw_emlrtRSI;
+    st.site = &vw_emlrtRSI;
     y = x_data[vstart - 1];
-    b_st.site = &ww_emlrtRSI;
+    b_st.site = &yw_emlrtRSI;
     if (vlen - 1 > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -85,7 +81,7 @@ real_T b_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x,
     for (k = 0; k < 1023; k++) {
       y += x_data[vstart + k];
     }
-    st.site = &uw_emlrtRSI;
+    st.site = &ww_emlrtRSI;
     for (k = 2; k <= nfb; k++) {
       b_vstart = vstart + ((k - 1) << 10);
       b_y = x_data[b_vstart - 1];
@@ -96,10 +92,10 @@ real_T b_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x,
     }
     if (vlen > inb) {
       nfb = vstart + inb;
-      st.site = &vw_emlrtRSI;
+      st.site = &xw_emlrtRSI;
       b_y = x_data[nfb - 1];
       b_vstart = vlen - inb;
-      b_st.site = &ww_emlrtRSI;
+      b_st.site = &yw_emlrtRSI;
       for (k = 0; k <= b_vstart - 2; k++) {
         b_y += x_data[nfb + k];
       }
@@ -127,10 +123,10 @@ real_T c_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T col,
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   x_data = x->data;
-  st.site = &tw_emlrtRSI;
+  st.site = &vw_emlrtRSI;
   i0 = (col - 1) * x->size[0];
   y = x_data[i0];
-  b_st.site = &ww_emlrtRSI;
+  b_st.site = &yw_emlrtRSI;
   if (vlen - 1 > 2147483646) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -165,9 +161,9 @@ real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T vlen)
   x_data = x->data;
   if (vlen <= 1024) {
     int32_T vstart;
-    st.site = &tw_emlrtRSI;
+    st.site = &vw_emlrtRSI;
     y = x_data[0];
-    b_st.site = &ww_emlrtRSI;
+    b_st.site = &yw_emlrtRSI;
     if (vlen - 1 > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -187,7 +183,7 @@ real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T vlen)
     for (k = 0; k < 1023; k++) {
       y += x_data[k + 1];
     }
-    st.site = &uw_emlrtRSI;
+    st.site = &ww_emlrtRSI;
     for (k = 2; k <= nfb; k++) {
       vstart = (k - 1) << 10;
       b_y = x_data[vstart];
@@ -197,10 +193,10 @@ real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T vlen)
       y += b_y;
     }
     if (vlen > inb) {
-      st.site = &vw_emlrtRSI;
+      st.site = &xw_emlrtRSI;
       b_y = x_data[inb];
       vstart = vlen - inb;
-      b_st.site = &ww_emlrtRSI;
+      b_st.site = &yw_emlrtRSI;
       for (k = 0; k <= vstart - 2; k++) {
         b_y += x_data[(inb + k) + 1];
       }

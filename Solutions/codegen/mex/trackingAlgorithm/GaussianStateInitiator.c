@@ -19,107 +19,85 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo dob_emlrtRSI = {
+static emlrtRSInfo fob_emlrtRSI = {
     108,                           /* lineNo */
     "ConstantVelocityModel/prior", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "transition\\ConstantVelocityModel.m" /* pathName */
-};
-
-static emlrtRSInfo eob_emlrtRSI = {
-    31,    /* lineNo */
-    "inv", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\inv.m" /* pathName
-                                                                       */
-};
-
-static emlrtRSInfo fob_emlrtRSI = {
-    42,          /* lineNo */
-    "checkcond", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\inv.m" /* pathName
-                                                                       */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+transition/"
+    "ConstantVelocityModel.m" /* pathName */
 };
 
 static emlrtRSInfo gob_emlrtRSI = {
-    46,          /* lineNo */
-    "checkcond", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\inv.m" /* pathName
-                                                                       */
+    31,                                           /* lineNo */
+    "inv",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/inv.m" /* pathName */
 };
 
 static emlrtRSInfo hob_emlrtRSI = {
-    12,                   /* lineNo */
-    "measurementToState", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\measurementToState.m" /* pathName */
+    42,                                           /* lineNo */
+    "checkcond",                                  /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/inv.m" /* pathName */
 };
 
 static emlrtRSInfo iob_emlrtRSI = {
-    148,                                                         /* lineNo */
-    "AzimuthElevationRangeAndRangeRateModel/inverseMeasurement", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+    46,                                           /* lineNo */
+    "checkcond",                                  /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/inv.m" /* pathName */
 };
 
 static emlrtRSInfo job_emlrtRSI = {
-    16,                                  /* lineNo */
-    "GaussianStateInitiator/initialize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+stateInitiator\\GaussianStateIn"
-    "itiator.m" /* pathName */
+    12,                   /* lineNo */
+    "measurementToState", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "measurementToState.m" /* pathName */
 };
 
 static emlrtRSInfo kob_emlrtRSI = {
-    20,                                  /* lineNo */
-    "GaussianStateInitiator/initialize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+stateInitiator\\GaussianStateIn"
-    "itiator.m" /* pathName */
+    148,                                                         /* lineNo */
+    "AzimuthElevationRangeAndRangeRateModel/inverseMeasurement", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo lob_emlrtRSI = {
-    22,                                  /* lineNo */
+    16,                                  /* lineNo */
     "GaussianStateInitiator/initialize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+stateInitiator\\GaussianStateIn"
-    "itiator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/"
+    "+stateInitiator/GaussianStateInitiator.m" /* pathName */
 };
 
 static emlrtRSInfo mob_emlrtRSI = {
-    24,                                  /* lineNo */
+    20,                                  /* lineNo */
     "GaussianStateInitiator/initialize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+stateInitiator\\GaussianStateIn"
-    "itiator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/"
+    "+stateInitiator/GaussianStateInitiator.m" /* pathName */
 };
 
 static emlrtRSInfo nob_emlrtRSI = {
-    31,                                  /* lineNo */
+    22,                                  /* lineNo */
     "GaussianStateInitiator/initialize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+stateInitiator\\GaussianStateIn"
-    "itiator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/"
+    "+stateInitiator/GaussianStateInitiator.m" /* pathName */
 };
 
 static emlrtRSInfo oob_emlrtRSI = {
+    24,                                  /* lineNo */
+    "GaussianStateInitiator/initialize", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/"
+    "+stateInitiator/GaussianStateInitiator.m" /* pathName */
+};
+
+static emlrtRSInfo pob_emlrtRSI = {
+    31,                                  /* lineNo */
+    "GaussianStateInitiator/initialize", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/"
+    "+stateInitiator/GaussianStateInitiator.m" /* pathName */
+};
+
+static emlrtRSInfo qob_emlrtRSI = {
     35,                                  /* lineNo */
     "GaussianStateInitiator/initialize", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+stateInitiator\\GaussianStateIn"
-    "itiator.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/"
+    "+stateInitiator/GaussianStateInitiator.m" /* pathName */
 };
 
 /* Function Declarations */
@@ -247,7 +225,7 @@ void c_GaussianStateInitiator_initia(
   f_st.tls = e_st.tls;
   g_st.prev = &f_st;
   g_st.tls = f_st.tls;
-  st.site = &job_emlrtRSI;
+  st.site = &lob_emlrtRSI;
   for (i = 0; i < 6; i++) {
     pMotion_Mean[i] = 0.0;
   }
@@ -255,7 +233,7 @@ void c_GaussianStateInitiator_initia(
   pMotion_Mean[3] = motionModel_PropVelocityMean[1];
   pMotion_Mean[5] = motionModel_PropVelocityMean[2];
   memset(&pMotion_Information[0], 0, 36U * sizeof(real_T));
-  b_st.site = &dob_emlrtRSI;
+  b_st.site = &fob_emlrtRSI;
   memcpy(&x[0], &c_motionModel_PropVelocityVaria[0], 9U * sizeof(real_T));
   p1 = 0;
   p2 = 3;
@@ -319,7 +297,7 @@ void c_GaussianStateInitiator_initia(
   y[p3] = -(x[3] * absx21 + x[6] * absx11) / x[0];
   y[p3 + 1] = absx21;
   y[p3 + 2] = absx11;
-  c_st.site = &eob_emlrtRSI;
+  c_st.site = &gob_emlrtRSI;
   absx31 = 0.0;
   p1 = 0;
   exitg1 = false;
@@ -356,14 +334,14 @@ void c_GaussianStateInitiator_initia(
   absx11 = 1.0 / (absx31 * absx21);
   if ((absx31 == 0.0) || (absx21 == 0.0) || (absx11 == 0.0)) {
     if (!emlrtSetWarningFlag(&c_st)) {
-      d_st.site = &fob_emlrtRSI;
+      d_st.site = &hob_emlrtRSI;
       c_warning(&d_st);
     }
   } else if ((muDoubleScalarIsNaN(absx11) ||
               (absx11 < 2.2204460492503131E-16)) &&
              (!emlrtSetWarningFlag(&c_st))) {
     char_T str[14];
-    d_st.site = &gob_emlrtRSI;
+    d_st.site = &iob_emlrtRSI;
     b_y = NULL;
     m = emlrtCreateCharArray(2, &b_iv[0]);
     emlrtInitCharArrayR2013a(&d_st, 6, m, &rfmt[0]);
@@ -371,10 +349,10 @@ void c_GaussianStateInitiator_initia(
     c_y = NULL;
     m = emlrtCreateDoubleScalar(absx11);
     emlrtAssign(&c_y, m);
-    e_st.site = &yob_emlrtRSI;
+    e_st.site = &bpb_emlrtRSI;
     c_emlrt_marshallIn(&e_st, b_sprintf(&e_st, b_y, c_y, &d_emlrtMCI),
                        "<output of sprintf>", str);
-    d_st.site = &gob_emlrtRSI;
+    d_st.site = &iob_emlrtRSI;
     e_warning(&d_st, str);
   }
   for (i = 0; i < 3; i++) {
@@ -384,21 +362,21 @@ void c_GaussianStateInitiator_initia(
     pMotion_Information[p1 + 5] = y[3 * i + 2];
   }
   real_T pz;
-  st.site = &kob_emlrtRSI;
-  b_st.site = &hob_emlrtRSI;
+  st.site = &mob_emlrtRSI;
+  b_st.site = &job_emlrtRSI;
   absx21 = 0.017453292519943295 * measurement[0];
   absx11 = 0.017453292519943295 * measurement[1];
   pz = measurement[2] * muDoubleScalarSin(absx11);
   absx11 = measurement[2] * muDoubleScalarCos(absx11);
   absx31 = absx11 * muDoubleScalarCos(absx21);
   absx21 = absx11 * muDoubleScalarSin(absx21);
-  c_st.site = &iob_emlrtRSI;
-  d_st.site = &sd_emlrtRSI;
-  c_st.site = &iob_emlrtRSI;
-  d_st.site = &sd_emlrtRSI;
-  c_st.site = &iob_emlrtRSI;
-  d_st.site = &sd_emlrtRSI;
-  c_st.site = &iob_emlrtRSI;
+  c_st.site = &kob_emlrtRSI;
+  d_st.site = &td_emlrtRSI;
+  c_st.site = &kob_emlrtRSI;
+  d_st.site = &td_emlrtRSI;
+  c_st.site = &kob_emlrtRSI;
+  d_st.site = &td_emlrtRSI;
+  c_st.site = &kob_emlrtRSI;
   absx11 = measurement[3] /
            muDoubleScalarSqrt((absx31 * absx31 + absx21 * absx21) + pz * pz);
   xP_idx_0 = absx11 * absx31;
@@ -470,7 +448,7 @@ void c_GaussianStateInitiator_initia(
     b_i = tmp_data[i];
     xE[b_i] = pMotion_Mean[b_i];
   }
-  st.site = &lob_emlrtRSI;
+  st.site = &nob_emlrtRSI;
   stateToMeasurementJacobian(&st, xE, measModel_OriginPosition,
                              measModel_OriginVelocity, measModel_Orientation,
                              H);
@@ -479,20 +457,20 @@ void c_GaussianStateInitiator_initia(
   R[5] = measModel_ElevationVariance;
   R[10] = measModel_RangeVariance;
   R[15] = measModel_RangeRateVariance;
-  st.site = &mob_emlrtRSI;
+  st.site = &oob_emlrtRSI;
   for (i = 0; i < 4; i++) {
     for (k = 0; k < 6; k++) {
       X[k + 6 * i] = H[i + (k << 2)];
     }
   }
-  b_st.site = &kbb_emlrtRSI;
-  c_st.site = &lbb_emlrtRSI;
-  d_st.site = &mbb_emlrtRSI;
-  e_st.site = &nbb_emlrtRSI;
-  f_st.site = &pbb_emlrtRSI;
-  g_st.site = &rbb_emlrtRSI;
+  b_st.site = &mbb_emlrtRSI;
+  c_st.site = &nbb_emlrtRSI;
+  d_st.site = &obb_emlrtRSI;
+  e_st.site = &pbb_emlrtRSI;
+  f_st.site = &rbb_emlrtRSI;
+  g_st.site = &tbb_emlrtRSI;
   info = xzgetrf(&g_st, R, ipiv);
-  f_st.site = &qbb_emlrtRSI;
+  f_st.site = &sbb_emlrtRSI;
   for (i = 0; i < 4; i++) {
     p1 = 6 * i - 1;
     p2 = i << 2;
@@ -543,9 +521,9 @@ void c_GaussianStateInitiator_initia(
     }
   }
   if (info > 0) {
-    e_st.site = &obb_emlrtRSI;
+    e_st.site = &qbb_emlrtRSI;
     if (!emlrtSetWarningFlag(&e_st)) {
-      f_st.site = &ybb_emlrtRSI;
+      f_st.site = &bcb_emlrtRSI;
       c_warning(&f_st);
     }
   }
@@ -630,11 +608,11 @@ void c_GaussianStateInitiator_initia(
   Istate[33] = b_I[33] + pMotion_Information[33];
   Istate[34] = b_I[34] + pMotion_Information[34];
   Istate[35] = b_I[35] + pMotion_Information[35];
-  st.site = &nob_emlrtRSI;
+  st.site = &pob_emlrtRSI;
   for (i = 0; i < 36; i++) {
     Y[i] = In[i];
   }
-  b_st.site = &kbb_emlrtRSI;
+  b_st.site = &mbb_emlrtRSI;
   b_mrdiv(&b_st, Y, Istate);
   memset(&c_I[0], 0, 6U * sizeof(real_T));
   memset(&xEModel[0], 0, 6U * sizeof(real_T));
@@ -677,11 +655,11 @@ void c_GaussianStateInitiator_initia(
     r1 = _mm_loadu_pd(&pdf_State[4]);
     _mm_storeu_pd(&pdf_State[4], _mm_add_pd(r1, _mm_mul_pd(r, r12)));
   }
-  st.site = &oob_emlrtRSI;
+  st.site = &qob_emlrtRSI;
   for (i = 0; i < 36; i++) {
     pdf_StateCovariance[i] = In[i];
   }
-  b_st.site = &kbb_emlrtRSI;
+  b_st.site = &mbb_emlrtRSI;
   b_mrdiv(&b_st, pdf_StateCovariance, Istate);
 }
 

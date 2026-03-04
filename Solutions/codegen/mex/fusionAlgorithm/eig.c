@@ -18,59 +18,46 @@
 
 /* Variable Definitions */
 static emlrtRSInfo ad_emlrtRSI = {
-    127,   /* lineNo */
-    "eig", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\eig.m" /* pathName
-                                                                       */
+    127,                                          /* lineNo */
+    "eig",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/eig.m" /* pathName */
 };
 
 static emlrtRSInfo bd_emlrtRSI = {
-    135,   /* lineNo */
-    "eig", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\eig.m" /* pathName
-                                                                       */
+    135,                                          /* lineNo */
+    "eig",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/eig.m" /* pathName */
 };
 
 static emlrtRSInfo cd_emlrtRSI = {
-    143,   /* lineNo */
-    "eig", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\eig.m" /* pathName
-                                                                       */
+    143,                                          /* lineNo */
+    "eig",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/eig.m" /* pathName */
 };
 
 static emlrtRSInfo gd_emlrtRSI = {
     13,                     /* lineNo */
     "eigHermitianStandard", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\private\\eigHerm"
-    "itianStandard.m" /* pathName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/private/eigHermitianStandard.m" /* pathName
+                                                                            */
 };
 
 static emlrtRSInfo id_emlrtRSI = {
-    8,         /* lineNo */
-    "xsyheev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xsyheev.m" /* pathName */
+    8,                                                           /* lineNo */
+    "xsyheev",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xsyheev.m" /* pathName */
 };
 
-static emlrtRSInfo rf_emlrtRSI = {
-    34,            /* lineNo */
-    "eigStandard", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\private\\eigStan"
-    "dard.m" /* pathName */
+static emlrtRSInfo sf_emlrtRSI = {
+    34,                                                           /* lineNo */
+    "eigStandard",                                                /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/private/eigStandard.m" /* pathName */
 };
 
-static emlrtRSInfo uf_emlrtRSI = {
-    42,      /* lineNo */
-    "xgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeev.m" /* pathName */
+static emlrtRSInfo vf_emlrtRSI = {
+    42,                                                        /* lineNo */
+    "xgeev",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeev.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -204,14 +191,14 @@ void eig(const emlrtStack *sp, const real_T A[36], creal_T V[6])
         eigSkewHermitianStandard(&st, A, V);
       } else {
         st.site = &cd_emlrtRSI;
-        b_st.site = &rf_emlrtRSI;
-        c_st.site = &uf_emlrtRSI;
+        b_st.site = &sf_emlrtRSI;
+        c_st.site = &vf_emlrtRSI;
         memcpy(&b_A[0], &A[0], 36U * sizeof(real_T));
         n_t = LAPACKE_dgeevx(102, 'B', 'N', 'N', 'N', (ptrdiff_t)6, &b_A[0],
                              (ptrdiff_t)6, &wreal[0], &wimag[0], &vleft,
                              (ptrdiff_t)1, &vright, (ptrdiff_t)1, &n_t, &ihi_t,
                              &scale[0], &abnrm, &rconde, &rcondv);
-        d_st.site = &tf_emlrtRSI;
+        d_st.site = &uf_emlrtRSI;
         if ((int32_T)n_t < 0) {
           if ((int32_T)n_t == -1010) {
             emlrtErrorWithMessageIdR2018a(&d_st, &p_emlrtRTEI, "MATLAB:nomem",
@@ -228,7 +215,7 @@ void eig(const emlrtStack *sp, const real_T A[36], creal_T V[6])
           V[i].im = wimag[i];
         }
         if (((int32_T)n_t != 0) && (!emlrtSetWarningFlag(&st))) {
-          b_st.site = &sf_emlrtRSI;
+          b_st.site = &tf_emlrtRSI;
           warning(&b_st);
         }
       }

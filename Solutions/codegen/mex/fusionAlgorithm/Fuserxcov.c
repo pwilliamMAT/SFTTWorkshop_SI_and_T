@@ -24,124 +24,108 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo tr_emlrtRSI = {
+static emlrtRSInfo ur_emlrtRSI = {
     25,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
-};
-
-static emlrtRSInfo ur_emlrtRSI = {
-    26,               /* lineNo */
-    "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo vr_emlrtRSI = {
-    33,               /* lineNo */
+    26,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo wr_emlrtRSI = {
-    36,               /* lineNo */
+    33,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo xr_emlrtRSI = {
-    37,               /* lineNo */
+    36,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo yr_emlrtRSI = {
-    39,               /* lineNo */
+    37,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo as_emlrtRSI = {
-    40,               /* lineNo */
+    39,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo bs_emlrtRSI = {
-    48,               /* lineNo */
+    40,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo cs_emlrtRSI = {
-    55,               /* lineNo */
+    48,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo ds_emlrtRSI = {
-    56,               /* lineNo */
+    55,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo es_emlrtRSI = {
-    57,               /* lineNo */
+    56,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo fs_emlrtRSI = {
-    39,                                         /* lineNo */
-    "AbstractFusionAlgorithm/sortTracksByTime", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m" /* pathName */
+    57,               /* lineNo */
+    "Fuserxcov/fuse", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pathName
+                                                                        */
 };
 
 static emlrtRSInfo gs_emlrtRSI = {
-    44,                                         /* lineNo */
+    39,                                         /* lineNo */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m" /* pathName */
 };
 
 static emlrtRSInfo hs_emlrtRSI = {
-    45,                                         /* lineNo */
+    44,                                         /* lineNo */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m" /* pathName */
 };
 
 static emlrtRSInfo is_emlrtRSI = {
-    37,     /* lineNo */
-    "sort", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sort.m" /* pathName
-                                                                         */
+    45,                                         /* lineNo */
+    "AbstractFusionAlgorithm/sortTracksByTime", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m" /* pathName */
+};
+
+static emlrtRSInfo js_emlrtRSI = {
+    37,                                             /* lineNo */
+    "sort",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/sort.m" /* pathName */
 };
 
 static emlrtBCInfo dj_emlrtBCI = {
@@ -151,10 +135,9 @@ static emlrtBCInfo dj_emlrtBCI = {
     42,                                         /* colNo */
     "",                                         /* aName */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m", /* pName */
-    0                                      /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m", /* pName */
+    0                            /* checkKind */
 };
 
 static emlrtBCInfo ej_emlrtBCI = {
@@ -164,10 +147,9 @@ static emlrtBCInfo ej_emlrtBCI = {
     42,                                         /* colNo */
     "",                                         /* aName */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m", /* pName */
-    0                                      /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m", /* pName */
+    0                            /* checkKind */
 };
 
 static emlrtBCInfo fj_emlrtBCI = {
@@ -177,10 +159,9 @@ static emlrtBCInfo fj_emlrtBCI = {
     47,                                         /* colNo */
     "",                                         /* aName */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m", /* pName */
-    0                                      /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m", /* pName */
+    0                            /* checkKind */
 };
 
 static emlrtBCInfo gj_emlrtBCI = {
@@ -190,10 +171,9 @@ static emlrtBCInfo gj_emlrtBCI = {
     55,               /* colNo */
     "",               /* aName */
     "Fuserxcov/fuse", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m", /* pName */
-    0                        /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m", /* pName
+                                                                         */
+    0 /* checkKind */
 };
 
 static emlrtBCInfo hj_emlrtBCI = {
@@ -203,10 +183,9 @@ static emlrtBCInfo hj_emlrtBCI = {
     53,               /* colNo */
     "",               /* aName */
     "Fuserxcov/fuse", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m", /* pName */
-    0                        /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m", /* pName
+                                                                         */
+    0 /* checkKind */
 };
 
 static emlrtBCInfo ij_emlrtBCI = {
@@ -216,10 +195,9 @@ static emlrtBCInfo ij_emlrtBCI = {
     42,               /* colNo */
     "",               /* aName */
     "Fuserxcov/fuse", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m", /* pName */
-    0                        /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m", /* pName
+                                                                         */
+    0 /* checkKind */
 };
 
 static emlrtBCInfo jj_emlrtBCI = {
@@ -229,10 +207,9 @@ static emlrtBCInfo jj_emlrtBCI = {
     33,               /* colNo */
     "",               /* aName */
     "Fuserxcov/fuse", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m", /* pName */
-    0                        /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m", /* pName
+                                                                         */
+    0 /* checkKind */
 };
 
 static emlrtBCInfo kj_emlrtBCI = {
@@ -242,10 +219,9 @@ static emlrtBCInfo kj_emlrtBCI = {
     35,               /* colNo */
     "",               /* aName */
     "Fuserxcov/fuse", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m", /* pName */
-    0                        /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m", /* pName
+                                                                         */
+    0 /* checkKind */
 };
 
 static emlrtBCInfo lj_emlrtBCI = {
@@ -255,10 +231,9 @@ static emlrtBCInfo lj_emlrtBCI = {
     47,                                         /* colNo */
     "",                                         /* aName */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m", /* pName */
-    0                                      /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m", /* pName */
+    0                            /* checkKind */
 };
 
 static emlrtBCInfo mj_emlrtBCI = {
@@ -268,10 +243,9 @@ static emlrtBCInfo mj_emlrtBCI = {
     30,                                         /* colNo */
     "",                                         /* aName */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m", /* pName */
-    0                                      /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m", /* pName */
+    0                            /* checkKind */
 };
 
 static emlrtBCInfo nj_emlrtBCI = {
@@ -281,10 +255,9 @@ static emlrtBCInfo nj_emlrtBCI = {
     37,                                         /* colNo */
     "",                                         /* aName */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m", /* pName */
-    0                                      /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m", /* pName */
+    0                            /* checkKind */
 };
 
 static emlrtBCInfo oj_emlrtBCI = {
@@ -294,10 +267,9 @@ static emlrtBCInfo oj_emlrtBCI = {
     51,               /* colNo */
     "",               /* aName */
     "Fuserxcov/fuse", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m", /* pName */
-    0                        /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m", /* pName
+                                                                         */
+    0 /* checkKind */
 };
 
 static emlrtBCInfo pj_emlrtBCI = {
@@ -307,10 +279,9 @@ static emlrtBCInfo pj_emlrtBCI = {
     68,               /* colNo */
     "",               /* aName */
     "Fuserxcov/fuse", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m", /* pName */
-    0                        /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m", /* pName
+                                                                         */
+    0 /* checkKind */
 };
 
 static emlrtBCInfo qj_emlrtBCI = {
@@ -320,109 +291,94 @@ static emlrtBCInfo qj_emlrtBCI = {
     70,               /* colNo */
     "",               /* aName */
     "Fuserxcov/fuse", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m", /* pName */
-    0                        /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m", /* pName
+                                                                         */
+    0 /* checkKind */
 };
 
 static emlrtRTEInfo sg_emlrtRTEI = {
-    39,     /* lineNo */
-    5,      /* colNo */
-    "find", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\find.m" /* pName
-                                                                       */
+    39,                                           /* lineNo */
+    5,                                            /* colNo */
+    "find",                                       /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/elmat/find.m" /* pName */
 };
 
 static emlrtRTEInfo ai_emlrtRTEI = {
     39,                        /* lineNo */
     17,                        /* colNo */
     "AbstractFusionAlgorithm", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m" /* pName */
 };
 
 static emlrtRTEInfo bi_emlrtRTEI = {
-    38,     /* lineNo */
-    5,      /* colNo */
-    "sort", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sort.m" /* pName
-                                                                         */
+    38,                                             /* lineNo */
+    5,                                              /* colNo */
+    "sort",                                         /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/sort.m" /* pName */
 };
 
 static emlrtRTEInfo ci_emlrtRTEI = {
     36,          /* lineNo */
     41,          /* colNo */
     "Fuserxcov", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pName
+                                                                        */
 };
 
 static emlrtRTEInfo di_emlrtRTEI = {
-    358,    /* lineNo */
-    24,     /* colNo */
-    "find", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\find.m" /* pName
-                                                                       */
+    358,                                          /* lineNo */
+    24,                                           /* colNo */
+    "find",                                       /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/elmat/find.m" /* pName */
 };
 
 static emlrtRTEInfo ei_emlrtRTEI = {
     36,          /* lineNo */
     17,          /* colNo */
     "Fuserxcov", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pName
+                                                                        */
 };
 
 static emlrtRTEInfo fi_emlrtRTEI = {
     26,          /* lineNo */
     13,          /* colNo */
     "Fuserxcov", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pName
+                                                                        */
 };
 
 static emlrtRTEInfo gi_emlrtRTEI = {
     39,          /* lineNo */
     17,          /* colNo */
     "Fuserxcov", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pName
+                                                                        */
 };
 
 static emlrtRTEInfo hi_emlrtRTEI = {
     40,          /* lineNo */
     17,          /* colNo */
     "Fuserxcov", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pName
+                                                                        */
 };
 
 static emlrtRTEInfo ii_emlrtRTEI = {
     36,                        /* lineNo */
     17,                        /* colNo */
     "AbstractFusionAlgorithm", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\AbstractFusionAlgorithm.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+    "AbstractFusionAlgorithm.m" /* pName */
 };
 
 static emlrtRTEInfo ji_emlrtRTEI = {
     20,          /* lineNo */
     31,          /* colNo */
     "Fuserxcov", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\Fuserxcov.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/Fuserxcov.m" /* pName
+                                                                        */
 };
 
 /* Function Definitions */
@@ -481,7 +437,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
   inAssigned_data = inAssigned->data;
   sourceTracks_data = sourceTracks->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &tr_emlrtRSI;
+  st.site = &ur_emlrtRSI;
   loop_ub = inAssigned->size[0];
   if (inAssigned->size[0] < 1) {
     emlrtDynamicBoundsCheckR2012b(1, 1, inAssigned->size[0], &fj_emlrtBCI, &st);
@@ -493,8 +449,8 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     emlrtDynamicBoundsCheckR2012b((int32_T)inAssigned_data[0] - 1, 0,
                                   sourceTracks->size[1] - 1, &ej_emlrtBCI, &st);
   }
-  b_st.site = &fs_emlrtRSI;
-  c_st.site = &jk_emlrtRSI;
+  b_st.site = &gs_emlrtRSI;
+  c_st.site = &kk_emlrtRSI;
   emxInit_real_T(&b_st, &allTimes, 2, &ii_emlrtRTEI);
   ibtile = allTimes->size[0] * allTimes->size[1];
   allTimes->size[0] = 1;
@@ -519,9 +475,9 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     allTimes_data[b_i + 1] =
         sourceTracks_data[(int32_T)inAssigned_data[b_i + 1] - 1].pUpdateTime;
   }
-  b_st.site = &gs_emlrtRSI;
+  b_st.site = &hs_emlrtRSI;
   emxInit_int32_T(&b_st, &ii, 2, &sd_emlrtRTEI);
-  c_st.site = &is_emlrtRSI;
+  c_st.site = &js_emlrtRSI;
   b_sort(&c_st, allTimes, ii);
   ii_data = ii->data;
   allTimes_data = allTimes->data;
@@ -535,7 +491,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
   for (b_i = 0; b_i < idx; b_i++) {
     I_data[b_i] = ii_data[b_i];
   }
-  b_st.site = &hs_emlrtRSI;
+  b_st.site = &is_emlrtRSI;
   indexShapeCheck(&b_st, inAssigned->size[0], b_I->size);
   for (b_i = 0; b_i < idx; b_i++) {
     ibtile = I_data[b_i];
@@ -543,7 +499,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
       emlrtDynamicBoundsCheckR2012b(ibtile, 1, loop_ub, &nj_emlrtBCI, &st);
     }
   }
-  st.site = &ur_emlrtRSI;
+  st.site = &vr_emlrtRSI;
   emxInit_real_T(&st, &uniqueTimes, 2, &fi_emlrtRTEI);
   b_st.site = &ib_emlrtRSI;
   unique_vector(&b_st, allTimes, uniqueTimes);
@@ -570,11 +526,11 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
       emlrtDynamicBoundsCheckR2012b(j + 1, 1, i1, &ij_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
-    st.site = &vr_emlrtRSI;
+    st.site = &wr_emlrtRSI;
     b_gaussEKFilter_predict(&st, centralTrack->pState,
                             centralTrack->pStateCovariance, obj->ProcessNoise,
                             uniqueTimes_data[j] - trackTime, b_x);
-    st.site = &wr_emlrtRSI;
+    st.site = &xr_emlrtRSI;
     ibtile = x->size[0] * x->size[1];
     x->size[0] = 1;
     loop_ub = allTimes->size[1];
@@ -585,15 +541,15 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     for (b_i = 0; b_i < b_loop_ub; b_i++) {
       x_data[b_i] = (trackTime == allTimes_data[b_i]);
     }
-    b_st.site = &yl_emlrtRSI;
-    c_st.site = &am_emlrtRSI;
+    b_st.site = &am_emlrtRSI;
+    c_st.site = &bm_emlrtRSI;
     idx = 0;
     ibtile = ii->size[0] * ii->size[1];
     ii->size[0] = 1;
     ii->size[1] = allTimes->size[1];
     emxEnsureCapacity_int32_T(&c_st, ii, ibtile, &di_emlrtRTEI);
     ii_data = ii->data;
-    d_st.site = &bm_emlrtRSI;
+    d_st.site = &cm_emlrtRSI;
     if (x->size[1] > 2147483646) {
       e_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -642,7 +598,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     for (b_i = 0; b_i < c_loop_ub; b_i++) {
       tracksAtThisTime_data[b_i] = (uint32_T)ii_data[b_i];
     }
-    st.site = &xr_emlrtRSI;
+    st.site = &yr_emlrtRSI;
     indexShapeCheck(&st, b_I->size[1], tracksAtThisTime->size);
     for (b_i = 0; b_i < c_loop_ub; b_i++) {
       idx = (int32_T)tracksAtThisTime_data[b_i];
@@ -651,9 +607,9 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
                                       (emlrtConstCTX)sp);
       }
     }
-    st.site = &yr_emlrtRSI;
+    st.site = &as_emlrtRSI;
     varargin_1[1] = (real_T)tracksAtThisTime->size[1] + 1.0;
-    b_st.site = &jk_emlrtRSI;
+    b_st.site = &kk_emlrtRSI;
     assertValidSizeArg(&b_st, varargin_1);
     idx = allStates->size[0] * allStates->size[1];
     allStates->size[0] = 6;
@@ -661,7 +617,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     allStates->size[1] = tracksAtThisTime->size[1] + 1;
     emxEnsureCapacity_real_T(&st, allStates, idx, &bh_emlrtRTEI);
     allStates_data = allStates->data;
-    b_st.site = &mk_emlrtRSI;
+    b_st.site = &nk_emlrtRSI;
     if (tracksAtThisTime->size[1] + 1 > 2147483646) {
       c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -672,9 +628,9 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
         allStates_data[ibtile + k] = b_x[k];
       }
     }
-    st.site = &as_emlrtRSI;
+    st.site = &bs_emlrtRSI;
     b_varargin_1[2] = (uint32_T)tracksAtThisTime->size[1] + 1U;
-    b_st.site = &jk_emlrtRSI;
+    b_st.site = &kk_emlrtRSI;
     idx = 0;
     exitg1 = false;
     while ((!exitg1) && (idx < 3)) {
@@ -700,7 +656,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     allCovars->size[2] = (int32_T)((uint32_T)tracksAtThisTime->size[1] + 1U);
     emxEnsureCapacity_real_T(&st, allCovars, ibtile, &bh_emlrtRTEI);
     allCovars_data = allCovars->data;
-    b_st.site = &mk_emlrtRSI;
+    b_st.site = &nk_emlrtRSI;
     if ((int32_T)((uint32_T)tracksAtThisTime->size[1] + 1U) > 2147483646) {
       c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -762,7 +718,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
         }
       }
     }
-    st.site = &bs_emlrtRSI;
+    st.site = &cs_emlrtRSI;
     fusecovint(&st, allStates, allCovars, obj->StateFusionParameters,
                centralTrack->pState, centralTrack->pStateCovariance);
     trackTime = uniqueTimes_data[j];
@@ -775,17 +731,17 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
   emxFree_real_T(sp, &allStates);
   emxFree_uint32_T(sp, &tracksAtThisTime);
   emxFree_real_T(sp, &uniqueTimes);
-  st.site = &cs_emlrtRSI;
+  st.site = &ds_emlrtRSI;
   b_st.site = &rc_emlrtRSI;
   validateattributes(&b_st, centralTrack->pState);
-  st.site = &ds_emlrtRSI;
-  b_st.site = &ds_emlrtRSI;
+  st.site = &es_emlrtRSI;
+  b_st.site = &es_emlrtRSI;
   ensurePosDefMatrix(&b_st, centralTrack->pStateCovariance);
   b_st.site = &sc_emlrtRSI;
   b_validateattributes(&b_st, centralTrack->pStateCovariance);
   b_st.site = &tc_emlrtRSI;
   isSymmetricPositiveSemiDefinite(&b_st, centralTrack->pStateCovariance);
-  st.site = &es_emlrtRSI;
+  st.site = &fs_emlrtRSI;
   b_st.site = &qc_emlrtRSI;
   c_st.site = &gb_emlrtRSI;
   if (trackTime < 0.0) {

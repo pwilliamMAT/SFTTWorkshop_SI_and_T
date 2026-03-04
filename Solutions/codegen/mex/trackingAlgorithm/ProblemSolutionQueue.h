@@ -36,7 +36,7 @@ void c_ProblemSolutionQueue_formatSo(
     const emlrtStack *sp, int32_T obj_NumProblems,
     int32_T obj_MaxNumSubProblems,
     const c_emxArray_fusion_internal_assi *obj_AllProblemList,
-    emxArray_cell_wrap_81 *assignments, emxArray_cell_wrap_82 *unassignedRows,
-    emxArray_cell_wrap_82 *unassignedCols, emxArray_real_T *cost);
+    emxArray_cell_wrap_80 *assignments, emxArray_cell_wrap_81 *unassignedRows,
+    emxArray_cell_wrap_81 *unassignedCols, emxArray_real_T *cost);
 
 /* End of code generation (ProblemSolutionQueue.h) */

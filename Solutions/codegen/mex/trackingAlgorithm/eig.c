@@ -26,92 +26,80 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo rg_emlrtRSI = {
-    54,      /* lineNo */
-    "xgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeev.m" /* pathName */
-};
-
 static emlrtRSInfo sg_emlrtRSI = {
-    49,       /* lineNo */
-    "xdgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdgeev.m" /* pathName */
+    54,                                                        /* lineNo */
+    "xgeev",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeev.m" /* pathName */
 };
 
 static emlrtRSInfo tg_emlrtRSI = {
-    67,       /* lineNo */
-    "xdgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdgeev.m" /* pathName */
+    49,                                                            /* lineNo */
+    "xdgeev",                                                      /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdgeev.m" /* pathName
+                                                                    */
 };
 
 static emlrtRSInfo ug_emlrtRSI = {
-    73,       /* lineNo */
-    "xdgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdgeev.m" /* pathName */
+    67,                                                            /* lineNo */
+    "xdgeev",                                                      /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdgeev.m" /* pathName
+                                                                    */
 };
 
 static emlrtRSInfo vg_emlrtRSI = {
-    130,      /* lineNo */
-    "xdgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdgeev.m" /* pathName */
+    73,                                                            /* lineNo */
+    "xdgeev",                                                      /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdgeev.m" /* pathName
+                                                                    */
 };
 
 static emlrtRSInfo wg_emlrtRSI = {
-    131,      /* lineNo */
-    "xdgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdgeev.m" /* pathName */
+    130,                                                           /* lineNo */
+    "xdgeev",                                                      /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdgeev.m" /* pathName
+                                                                    */
 };
 
 static emlrtRSInfo xg_emlrtRSI = {
-    133,      /* lineNo */
-    "xdgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdgeev.m" /* pathName */
+    131,                                                           /* lineNo */
+    "xdgeev",                                                      /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdgeev.m" /* pathName
+                                                                    */
 };
 
 static emlrtRSInfo yg_emlrtRSI = {
-    134,      /* lineNo */
-    "xdgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdgeev.m" /* pathName */
+    133,                                                           /* lineNo */
+    "xdgeev",                                                      /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdgeev.m" /* pathName
+                                                                    */
 };
 
 static emlrtRSInfo ah_emlrtRSI = {
-    139,      /* lineNo */
-    "xdgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xdgeev.m" /* pathName */
+    134,                                                           /* lineNo */
+    "xdgeev",                                                      /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdgeev.m" /* pathName
+                                                                    */
 };
 
-static emlrtRSInfo qh_emlrtRSI = {
-    28,        /* lineNo */
-    "xzgehrd", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzgehrd.m" /* pathName */
+static emlrtRSInfo bh_emlrtRSI = {
+    139,                                                           /* lineNo */
+    "xdgeev",                                                      /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdgeev.m" /* pathName
+                                                                    */
 };
 
 static emlrtRSInfo rh_emlrtRSI = {
+    28,        /* lineNo */
+    "xzgehrd", /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgehrd.m" /* pathName
+                                                                     */
+};
+
+static emlrtRSInfo sh_emlrtRSI = {
     37,        /* lineNo */
     "xzgehrd", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzgehrd.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgehrd.m" /* pathName
+                                                                     */
 };
 
 /* Function Definitions */
@@ -145,7 +133,7 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
   f_st.tls = e_st.tls;
   g_st.prev = &f_st;
   g_st.tls = f_st.tls;
-  st.site = &ke_emlrtRSI;
+  st.site = &le_emlrtRSI;
   if (anyNonFinite(A)) {
     V[0].re = rtNaN;
     V[0].im = 0.0;
@@ -184,9 +172,9 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
     }
     if (scalea) {
       ptrdiff_t n_t;
-      st.site = &le_emlrtRSI;
-      b_st.site = &re_emlrtRSI;
-      c_st.site = &te_emlrtRSI;
+      st.site = &me_emlrtRSI;
+      b_st.site = &se_emlrtRSI;
+      c_st.site = &ue_emlrtRSI;
       memcpy(&T[0], &A[0], 9U * sizeof(real_T));
       n_t = (ptrdiff_t)3;
       n_t = LAPACKE_dsyev(102, 'N', 'L', n_t, &T[0], n_t, &work[0]);
@@ -209,7 +197,7 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
       V[2].re = work[2];
       V[2].im = 0.0;
       if (((int32_T)n_t != 0) && (!emlrtSetWarningFlag(&st))) {
-        b_st.site = &se_emlrtRSI;
+        b_st.site = &te_emlrtRSI;
         warning(&b_st);
       }
     } else {
@@ -237,11 +225,11 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
         }
       }
       if (scalea) {
-        st.site = &me_emlrtRSI;
-        b_st.site = &ue_emlrtRSI;
-        c_st.site = &ve_emlrtRSI;
+        st.site = &ne_emlrtRSI;
+        b_st.site = &ve_emlrtRSI;
+        c_st.site = &we_emlrtRSI;
         memcpy(&T[0], &A[0], 9U * sizeof(real_T));
-        d_st.site = &we_emlrtRSI;
+        d_st.site = &xe_emlrtRSI;
         if (anyNonFinite(A)) {
           for (j = 0; j < 9; j++) {
             T[j] = rtNaN;
@@ -255,8 +243,8 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
             istart++;
           }
         } else {
-          d_st.site = &xe_emlrtRSI;
-          e_st.site = &bf_emlrtRSI;
+          d_st.site = &ye_emlrtRSI;
+          e_st.site = &cf_emlrtRSI;
           work[0] = 0.0;
           work[1] = 0.0;
           work[2] = 0.0;
@@ -267,11 +255,11 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
             in = (j + 1) * 3;
             b_in = j + 3 * j;
             lambda = T[b_in + 1];
-            f_st.site = &cf_emlrtRSI;
+            f_st.site = &df_emlrtRSI;
             alpha1 = xzlarfg(&f_st, 2 - j, &lambda, T, j * 3 + 3);
             tau[j] = alpha1;
             T[b_in + 1] = 1.0;
-            f_st.site = &df_emlrtRSI;
+            f_st.site = &ef_emlrtRSI;
             if (alpha1 != 0.0) {
               lastv = 2 - j;
               i = (b_in - j) + 2;
@@ -307,20 +295,20 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
               istart = 0;
             }
             if (lastv > 0) {
-              g_st.site = &ff_emlrtRSI;
-              xgemv(&g_st, istart, lastv, T, in + 1, T, b_in + 2, work);
               g_st.site = &gf_emlrtRSI;
+              xgemv(&g_st, istart, lastv, T, in + 1, T, b_in + 2, work);
+              g_st.site = &hf_emlrtRSI;
               xgerc(&g_st, istart, lastv, -tau[j], work, b_in + 2, T, in + 1);
             }
-            f_st.site = &ef_emlrtRSI;
+            f_st.site = &ff_emlrtRSI;
             xzlarf(&f_st, 2 - j, 2 - j, b_in + 2, tau[j], T, (j + in) + 2,
                    work);
             T[b_in + 1] = lambda;
           }
-          d_st.site = &ye_emlrtRSI;
+          d_st.site = &af_emlrtRSI;
           istart = xhseqr(&d_st, T);
           if ((istart != 0) && (!emlrtSetWarningFlag(&c_st))) {
-            d_st.site = &af_emlrtRSI;
+            d_st.site = &bf_emlrtRSI;
             b_warning(&d_st);
           }
         }
@@ -356,9 +344,9 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
         } while (exitg1 == 0);
       } else {
         real_T anrm;
-        st.site = &ne_emlrtRSI;
-        b_st.site = &pg_emlrtRSI;
-        c_st.site = &rg_emlrtRSI;
+        st.site = &oe_emlrtRSI;
+        b_st.site = &qg_emlrtRSI;
+        c_st.site = &sg_emlrtRSI;
         memcpy(&T[0], &A[0], 9U * sizeof(real_T));
         istart = 0;
         anrm = 0.0;
@@ -397,11 +385,11 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
             lambda = 1.4885657073574029E+138;
             f_xzlascl(anrm, lambda, T);
           }
-          d_st.site = &sg_emlrtRSI;
-          ilo = xzgebal(&d_st, T, &ihi, work);
           d_st.site = &tg_emlrtRSI;
+          ilo = xzgebal(&d_st, T, &ihi, work);
+          d_st.site = &ug_emlrtRSI;
           if ((ihi - ilo) + 1 > 1) {
-            e_st.site = &qh_emlrtRSI;
+            e_st.site = &rh_emlrtRSI;
             if (ilo - 1 > 2147483646) {
               f_st.site = &k_emlrtRSI;
               check_forloop_overflow_error(&f_st);
@@ -416,7 +404,7 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
             work[0] = 0.0;
             work[1] = 0.0;
             work[2] = 0.0;
-            e_st.site = &rh_emlrtRSI;
+            e_st.site = &sh_emlrtRSI;
             if ((ilo <= ihi - 1) && (ihi - 1 > 2147483646)) {
               f_st.site = &k_emlrtRSI;
               check_forloop_overflow_error(&f_st);
@@ -432,11 +420,11 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
               lastv = ihi - j;
               alpha1_tmp = j + istart;
               alpha1 = T[alpha1_tmp];
-              e_st.site = &cf_emlrtRSI;
+              e_st.site = &df_emlrtRSI;
               d = xzlarfg(&e_st, lastv, &alpha1, T, istart + 3);
               tau[j - 1] = d;
               T[alpha1_tmp] = 1.0;
-              e_st.site = &df_emlrtRSI;
+              e_st.site = &ef_emlrtRSI;
               if (d != 0.0) {
                 in = lastv;
                 istart = (alpha1_tmp + lastv) + 1;
@@ -472,34 +460,34 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
                 istart = 0;
               }
               if (in > 0) {
-                f_st.site = &ff_emlrtRSI;
-                xgemv(&f_st, istart, in, T, b_in, T, alpha1_tmp + 1, work);
                 f_st.site = &gf_emlrtRSI;
+                xgemv(&f_st, istart, in, T, b_in, T, alpha1_tmp + 1, work);
+                f_st.site = &hf_emlrtRSI;
                 xgerc(&f_st, istart, in, -tau[j - 1], work, alpha1_tmp + 1, T,
                       b_in);
               }
-              e_st.site = &ef_emlrtRSI;
+              e_st.site = &ff_emlrtRSI;
               xzlarf(&e_st, lastv, 3 - j, alpha1_tmp + 1, tau[j - 1], T,
                      j + b_in, work);
               T[alpha1_tmp] = alpha1;
             }
           }
-          d_st.site = &ug_emlrtRSI;
+          d_st.site = &vg_emlrtRSI;
           istart = xdlahqr(&d_st, ilo, ihi, T, work, wi);
           if (scalea) {
-            d_st.site = &vg_emlrtRSI;
-            xzlascl(&d_st, lambda, anrm, 3 - istart, work, istart + 1);
             d_st.site = &wg_emlrtRSI;
+            xzlascl(&d_st, lambda, anrm, 3 - istart, work, istart + 1);
+            d_st.site = &xg_emlrtRSI;
             xzlascl(&d_st, lambda, anrm, 3 - istart, wi, istart + 1);
             if (istart != 0) {
-              d_st.site = &xg_emlrtRSI;
-              b_xzlascl(&d_st, lambda, anrm, ilo - 1, work);
               d_st.site = &yg_emlrtRSI;
+              b_xzlascl(&d_st, lambda, anrm, ilo - 1, work);
+              d_st.site = &ah_emlrtRSI;
               b_xzlascl(&d_st, lambda, anrm, ilo - 1, wi);
             }
           }
           if (istart != 0) {
-            d_st.site = &ah_emlrtRSI;
+            d_st.site = &bh_emlrtRSI;
             if ((ilo <= istart) && (istart > 2147483646)) {
               e_st.site = &k_emlrtRSI;
               check_forloop_overflow_error(&e_st);
@@ -517,7 +505,7 @@ void eig(const emlrtStack *sp, const real_T A[9], creal_T V[3])
           V[2].im = wi[2];
         }
         if ((istart != 0) && (!emlrtSetWarningFlag(&st))) {
-          b_st.site = &qg_emlrtRSI;
+          b_st.site = &rg_emlrtRSI;
           warning(&b_st);
         }
       }

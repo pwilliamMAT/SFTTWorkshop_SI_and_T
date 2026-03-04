@@ -14,28 +14,24 @@
 #include <stddef.h>
 
 /* Variable Definitions */
-static emlrtRSInfo wd_emlrtRSI = {
+static emlrtRSInfo xd_emlrtRSI = {
     42,        /* lineNo */
     "zpotrfU", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzpotrf.m" /* pathName */
-};
-
-static emlrtRSInfo ei_emlrtRSI = {
-    16,       /* lineNo */
-    "xpotrf", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xpotrf.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzpotrf.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo fi_emlrtRSI = {
+    16,                                                         /* lineNo */
+    "xpotrf",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xpotrf.m" /* pathName */
+};
+
+static emlrtRSInfo gi_emlrtRSI = {
     19,        /* lineNo */
     "xzpotrf", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzpotrf.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzpotrf.m" /* pathName
+                                                                     */
 };
 
 /* Function Definitions */
@@ -62,8 +58,8 @@ int32_T b_xpotrf(const emlrtStack *sp, real_T A[36])
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ei_emlrtRSI;
-  b_st.site = &fi_emlrtRSI;
+  st.site = &fi_emlrtRSI;
+  b_st.site = &gi_emlrtRSI;
   info = 0;
   j = 0;
   exitg1 = false;
@@ -73,7 +69,7 @@ int32_T b_xpotrf(const emlrtStack *sp, real_T A[36])
     int32_T idxAjj;
     idxA1j = j * 6;
     idxAjj = idxA1j + j;
-    c_st.site = &wd_emlrtRSI;
+    c_st.site = &xd_emlrtRSI;
     ssq = xdotc(&c_st, j, A, idxA1j + 1, A, idxA1j + 1);
     ssq = A[idxAjj] - ssq;
     if (ssq > 0.0) {
@@ -133,8 +129,8 @@ int32_T c_xpotrf(const emlrtStack *sp, real_T A[16])
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ei_emlrtRSI;
-  b_st.site = &fi_emlrtRSI;
+  st.site = &fi_emlrtRSI;
+  b_st.site = &gi_emlrtRSI;
   info = 0;
   j = 0;
   exitg1 = false;
@@ -144,7 +140,7 @@ int32_T c_xpotrf(const emlrtStack *sp, real_T A[16])
     int32_T idxAjj;
     idxA1j = j << 2;
     idxAjj = idxA1j + j;
-    c_st.site = &wd_emlrtRSI;
+    c_st.site = &xd_emlrtRSI;
     ssq = c_xdotc(&c_st, j, A, idxA1j + 1, A, idxA1j + 1);
     ssq = A[idxAjj] - ssq;
     if (ssq > 0.0) {
@@ -204,8 +200,8 @@ int32_T xpotrf(const emlrtStack *sp, real_T A[9])
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ei_emlrtRSI;
-  b_st.site = &fi_emlrtRSI;
+  st.site = &fi_emlrtRSI;
+  b_st.site = &gi_emlrtRSI;
   info = 0;
   j = 0;
   exitg1 = false;
@@ -215,7 +211,7 @@ int32_T xpotrf(const emlrtStack *sp, real_T A[9])
     int32_T idxAjj;
     idxA1j = j * 3;
     idxAjj = idxA1j + j;
-    c_st.site = &wd_emlrtRSI;
+    c_st.site = &xd_emlrtRSI;
     ssq = b_xdotc(&c_st, j, A, idxA1j + 1, A, idxA1j + 1);
     ssq = A[idxAjj] - ssq;
     if (ssq > 0.0) {

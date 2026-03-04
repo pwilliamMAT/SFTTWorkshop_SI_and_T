@@ -12,20 +12,18 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo gg_emlrtRSI = {
+static emlrtRSInfo hg_emlrtRSI = {
     178,          /* lineNo */
     "sumColumnB", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
-    "rixIncludeNaN.m" /* pathName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
+                                                                            */
 };
 
-static emlrtRSInfo hg_emlrtRSI = {
+static emlrtRSInfo ig_emlrtRSI = {
     210,         /* lineNo */
     "sumColumn", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
-    "rixIncludeNaN.m" /* pathName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
+                                                                            */
 };
 
 /* Function Definitions */
@@ -48,9 +46,9 @@ real_T sumColumnB(const emlrtStack *sp, const real_T x_data[], int32_T vlen)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &gg_emlrtRSI;
+  st.site = &hg_emlrtRSI;
   y = x_data[0];
-  b_st.site = &hg_emlrtRSI;
+  b_st.site = &ig_emlrtRSI;
   if (vlen - 1 > 2147483646) {
     c_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&c_st);

@@ -20,140 +20,116 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ju_emlrtRSI = {
-    19,                   /* lineNo */
-    "ensurePosDefMatrix", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\ensurePosDefMatrix.m" /* pathName */
-};
-
-static emlrtRSInfo ku_emlrtRSI = {
-    125,   /* lineNo */
-    "eig", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\eig.m" /* pathName
-                                                                       */
+static emlrtRSInfo ku_emlrtRSI =
+    {
+        19,                   /* lineNo */
+        "ensurePosDefMatrix", /* fcnName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "ensurePosDefMatrix.m" /* pathName */
 };
 
 static emlrtRSInfo lu_emlrtRSI = {
-    133,   /* lineNo */
-    "eig", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\eig.m" /* pathName
-                                                                       */
+    125,                                          /* lineNo */
+    "eig",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/eig.m" /* pathName */
 };
 
 static emlrtRSInfo mu_emlrtRSI = {
-    141,   /* lineNo */
-    "eig", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\eig.m" /* pathName
-                                                                       */
+    133,                                          /* lineNo */
+    "eig",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/eig.m" /* pathName */
 };
 
 static emlrtRSInfo nu_emlrtRSI = {
-    27,                     /* lineNo */
-    "eigHermitianStandard", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\private\\eigHerm"
-    "itianStandard.m" /* pathName */
+    141,                                          /* lineNo */
+    "eig",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/eig.m" /* pathName */
 };
 
 static emlrtRSInfo ou_emlrtRSI = {
-    10,        /* lineNo */
-    "xsyheev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xsyheev.m" /* pathName */
+    27,                     /* lineNo */
+    "eigHermitianStandard", /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/private/eigHermitianStandard.m" /* pathName
+                                                                            */
 };
 
 static emlrtRSInfo pu_emlrtRSI = {
+    10,                                                          /* lineNo */
+    "xsyheev",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xsyheev.m" /* pathName */
+};
+
+static emlrtRSInfo qu_emlrtRSI = {
     34,        /* lineNo */
     "xzungqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzungqr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzungqr.m" /* pathName
+                                                                     */
 };
 
-static emlrtRSInfo su_emlrtRSI = {
-    12,                         /* lineNo */
-    "eigSkewHermitianStandard", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\private\\eigSkew"
-    "HermitianStandard.m" /* pathName */
-};
-
-static emlrtRSInfo tu_emlrtRSI = {
-    22,                             /* lineNo */
-    "eigRealSkewSymmetricStandard", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\private\\eigReal"
-    "SkewSymmetricStandard.m" /* pathName */
+static emlrtRSInfo tu_emlrtRSI =
+    {
+        12,                         /* lineNo */
+        "eigSkewHermitianStandard", /* fcnName */
+        "/MATLAB/toolbox/eml/lib/matlab/matfun/private/"
+        "eigSkewHermitianStandard.m" /* pathName */
 };
 
 static emlrtRSInfo uu_emlrtRSI = {
-    66,      /* lineNo */
-    "schur", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\schur.m" /* pathName
-                                                                         */
+    22,                             /* lineNo */
+    "eigRealSkewSymmetricStandard", /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/private/"
+    "eigRealSkewSymmetricStandard.m" /* pathName */
 };
 
 static emlrtRSInfo vu_emlrtRSI = {
-    69,      /* lineNo */
-    "schur", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\schur.m" /* pathName
-                                                                         */
+    66,                                             /* lineNo */
+    "schur",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/schur.m" /* pathName */
 };
 
 static emlrtRSInfo wu_emlrtRSI = {
-    70,      /* lineNo */
-    "schur", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\schur.m" /* pathName
-                                                                         */
+    69,                                             /* lineNo */
+    "schur",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/schur.m" /* pathName */
 };
 
 static emlrtRSInfo xu_emlrtRSI = {
-    14,          /* lineNo */
-    "xungorghr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xungorghr.m" /* pathName */
+    70,                                             /* lineNo */
+    "schur",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/schur.m" /* pathName */
 };
 
 static emlrtRSInfo yu_emlrtRSI = {
-    15,        /* lineNo */
-    "xzunghr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzunghr.m" /* pathName */
+    14,                                                            /* lineNo */
+    "xungorghr",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xungorghr.m" /* pathName
+                                                                    */
 };
 
 static emlrtRSInfo av_emlrtRSI = {
-    53,        /* lineNo */
+    15,        /* lineNo */
     "xzunghr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzunghr.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzunghr.m" /* pathName
+                                                                     */
 };
 
-static emlrtRSInfo dv_emlrtRSI = {
-    26,            /* lineNo */
-    "eigStandard", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\private\\eigStan"
-    "dard.m" /* pathName */
+static emlrtRSInfo bv_emlrtRSI = {
+    53,        /* lineNo */
+    "xzunghr", /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzunghr.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo ev_emlrtRSI = {
-    40,      /* lineNo */
-    "xgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeev.m" /* pathName */
+    26,                                                           /* lineNo */
+    "eigStandard",                                                /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/private/eigStandard.m" /* pathName */
+};
+
+static emlrtRSInfo fv_emlrtRSI = {
+    40,                                                        /* lineNo */
+    "xgeev",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeev.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -203,7 +179,7 @@ void ensurePosDefMatrix(const emlrtStack *sp, real_T P[36])
   g_st.tls = f_st.tls;
   h_st.prev = &g_st;
   h_st.tls = g_st.tls;
-  st.site = &ju_emlrtRSI;
+  st.site = &ku_emlrtRSI;
   for (i = 0; i < 6; i++) {
     for (j = 0; j < 6; j++) {
       A_tmp = j + 6 * i;
@@ -264,9 +240,9 @@ void ensurePosDefMatrix(const emlrtStack *sp, real_T P[36])
       }
     }
     if (p) {
-      b_st.site = &ku_emlrtRSI;
-      c_st.site = &nu_emlrtRSI;
-      d_st.site = &ou_emlrtRSI;
+      b_st.site = &lu_emlrtRSI;
+      c_st.site = &ou_emlrtRSI;
+      d_st.site = &pu_emlrtRSI;
       n_t = (ptrdiff_t)6;
       n_t = LAPACKE_dsyev(102, 'V', 'L', n_t, &A[0], n_t, &scale[0]);
       e_st.site = &jd_emlrtRSI;
@@ -323,10 +299,10 @@ void ensurePosDefMatrix(const emlrtStack *sp, real_T P[36])
         int32_T itau;
         int32_T sgn;
         int32_T vectorUB;
-        b_st.site = &lu_emlrtRSI;
-        c_st.site = &su_emlrtRSI;
-        d_st.site = &tu_emlrtRSI;
-        e_st.site = &yd_emlrtRSI;
+        b_st.site = &mu_emlrtRSI;
+        c_st.site = &tu_emlrtRSI;
+        d_st.site = &uu_emlrtRSI;
+        e_st.site = &ae_emlrtRSI;
         f_st.site = &dd_emlrtRSI;
         g_st.site = &ed_emlrtRSI;
         p = true;
@@ -357,15 +333,15 @@ void ensurePosDefMatrix(const emlrtStack *sp, real_T P[36])
           }
         } else {
           real_T tau[5];
-          e_st.site = &uu_emlrtRSI;
-          f_st.site = &de_emlrtRSI;
-          xzgehrd(&f_st, A, tau);
           e_st.site = &vu_emlrtRSI;
+          f_st.site = &ee_emlrtRSI;
+          xzgehrd(&f_st, A, tau);
+          e_st.site = &wu_emlrtRSI;
           memcpy(&vright[0], &A[0], 36U * sizeof(real_T));
-          f_st.site = &xu_emlrtRSI;
+          f_st.site = &yu_emlrtRSI;
           for (j = 4; j >= 0; j--) {
             sgn = (j + 1) * 6;
-            g_st.site = &yu_emlrtRSI;
+            g_st.site = &av_emlrtRSI;
             for (i = 0; i <= j; i++) {
               vright[sgn + i] = 0.0;
             }
@@ -379,7 +355,7 @@ void ensurePosDefMatrix(const emlrtStack *sp, real_T P[36])
             vright[i] = 0.0;
           }
           vright[0] = 1.0;
-          g_st.site = &av_emlrtRSI;
+          g_st.site = &bv_emlrtRSI;
           itau = 4;
           for (i = 0; i < 6; i++) {
             scale[i] = 0.0;
@@ -389,7 +365,7 @@ void ensurePosDefMatrix(const emlrtStack *sp, real_T P[36])
             iaii = (b_i + b_i * 6) + 7;
             if (b_i + 1 < 5) {
               vright[iaii] = 1.0;
-              h_st.site = &pu_emlrtRSI;
+              h_st.site = &qu_emlrtRSI;
               xzlarf(&h_st, 5 - b_i, 4 - b_i, iaii + 1, tau[itau], vright,
                      iaii + 7, scale);
               istart = iaii + 2;
@@ -412,10 +388,10 @@ void ensurePosDefMatrix(const emlrtStack *sp, real_T P[36])
             }
             itau = b_i - 1;
           }
-          e_st.site = &wu_emlrtRSI;
+          e_st.site = &xu_emlrtRSI;
           istart = xhseqr(&e_st, A, vright);
           if ((istart != 0) && (!emlrtSetWarningFlag(&d_st))) {
-            e_st.site = &ce_emlrtRSI;
+            e_st.site = &de_emlrtRSI;
             b_warning(&e_st);
           }
         }
@@ -493,14 +469,14 @@ void ensurePosDefMatrix(const emlrtStack *sp, real_T P[36])
         } while (exitg1 == 0);
       } else {
         creal_T d[6];
-        b_st.site = &mu_emlrtRSI;
-        c_st.site = &dv_emlrtRSI;
-        d_st.site = &ev_emlrtRSI;
+        b_st.site = &nu_emlrtRSI;
+        c_st.site = &ev_emlrtRSI;
+        d_st.site = &fv_emlrtRSI;
         n_t = LAPACKE_dgeevx(102, 'B', 'N', 'V', 'N', (ptrdiff_t)6, &A[0],
                              (ptrdiff_t)6, &wreal[0], &wimag[0], &lambda,
                              (ptrdiff_t)1, &vright[0], (ptrdiff_t)6, &n_t,
                              &ihi_t, &scale[0], &abnrm, &rconde, &rcondv);
-        e_st.site = &tf_emlrtRSI;
+        e_st.site = &uf_emlrtRSI;
         if ((int32_T)n_t < 0) {
           if ((int32_T)n_t == -1010) {
             emlrtErrorWithMessageIdR2018a(&e_st, &p_emlrtRTEI, "MATLAB:nomem",
@@ -537,7 +513,7 @@ void ensurePosDefMatrix(const emlrtStack *sp, real_T P[36])
           D[i + 6 * i] = d[i];
         }
         if (((int32_T)n_t != 0) && (!emlrtSetWarningFlag(&b_st))) {
-          c_st.site = &sf_emlrtRSI;
+          c_st.site = &tf_emlrtRSI;
           warning(&c_st);
         }
       }

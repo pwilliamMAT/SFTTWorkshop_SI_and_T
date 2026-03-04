@@ -16,9 +16,8 @@
 static emlrtRSInfo bb_emlrtRSI = {
     51,                       /* lineNo */
     "TrackListManager/setup", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+components\\TrackListManager.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
+    "TrackListManager.m" /* pathName */
 };
 
 /* Function Definitions */

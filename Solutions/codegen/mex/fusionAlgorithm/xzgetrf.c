@@ -14,52 +14,43 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo vf_emlrtRSI = {
-    23,       /* lineNo */
-    "ixamax", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "blas\\ixamax.m" /* pathName */
-};
-
 static emlrtRSInfo wf_emlrtRSI = {
-    24,       /* lineNo */
-    "ixamax", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "refblas\\ixamax.m" /* pathName */
+    23,                                                       /* lineNo */
+    "ixamax",                                                 /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+blas/ixamax.m" /* pathName */
 };
 
-static emlrtRSInfo dl_emlrtRSI = {
-    41,        /* lineNo */
-    "xzgetrf", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzgetrf.m" /* pathName */
+static emlrtRSInfo xf_emlrtRSI = {
+    24,                                                          /* lineNo */
+    "ixamax",                                                    /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+refblas/ixamax.m" /* pathName */
 };
 
 static emlrtRSInfo el_emlrtRSI = {
-    55,        /* lineNo */
+    41,        /* lineNo */
     "xzgetrf", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzgetrf.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgetrf.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo fl_emlrtRSI = {
-    63,        /* lineNo */
+    55,        /* lineNo */
     "xzgetrf", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "reflapack\\xzgetrf.m" /* pathName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgetrf.m" /* pathName
+                                                                     */
 };
 
 static emlrtRSInfo gl_emlrtRSI = {
-    45,      /* lineNo */
-    "xgeru", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+blas\\xgeru."
-    "m" /* pathName */
+    63,        /* lineNo */
+    "xzgetrf", /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgetrf.m" /* pathName
+                                                                     */
+};
+
+static emlrtRSInfo hl_emlrtRSI = {
+    45,                                                      /* lineNo */
+    "xgeru",                                                 /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+blas/xgeru.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -108,11 +99,11 @@ int32_T xzgetrf(const emlrtStack *sp, real_T A[36], int32_T ipiv[6])
     jj = j * 7;
     jp1j = b + 2;
     jA = 7 - j;
-    st.site = &dl_emlrtRSI;
-    b_st.site = &vf_emlrtRSI;
+    st.site = &el_emlrtRSI;
+    b_st.site = &wf_emlrtRSI;
     a = 0;
     smax = muDoubleScalarAbs(A[jj]);
-    c_st.site = &wf_emlrtRSI;
+    c_st.site = &xf_emlrtRSI;
     for (k = 2; k < jA; k++) {
       real_T s;
       s = muDoubleScalarAbs(A[(b + k) - 1]);
@@ -135,24 +126,24 @@ int32_T xzgetrf(const emlrtStack *sp, real_T A[36], int32_T ipiv[6])
         }
       }
       jA = (jj - j) + 6;
-      st.site = &el_emlrtRSI;
+      st.site = &fl_emlrtRSI;
       for (k = jp1j; k <= jA; k++) {
         A[k - 1] /= A[jj];
       }
     } else {
       info = j + 1;
     }
-    st.site = &fl_emlrtRSI;
-    b_st.site = &gl_emlrtRSI;
-    c_st.site = &ne_emlrtRSI;
-    d_st.site = &oe_emlrtRSI;
+    st.site = &gl_emlrtRSI;
+    b_st.site = &hl_emlrtRSI;
+    c_st.site = &oe_emlrtRSI;
+    d_st.site = &pe_emlrtRSI;
     jA = jj + 8;
-    e_st.site = &pe_emlrtRSI;
+    e_st.site = &qe_emlrtRSI;
     for (k = 0; k <= mmj; k++) {
       smax = A[(b + k * 6) + 6];
       if (smax != 0.0) {
         a = (jA - j) + 4;
-        e_st.site = &qe_emlrtRSI;
+        e_st.site = &re_emlrtRSI;
         if ((jA <= a) && (a > 2147483646)) {
           f_st.site = &tb_emlrtRSI;
           check_forloop_overflow_error(&f_st);

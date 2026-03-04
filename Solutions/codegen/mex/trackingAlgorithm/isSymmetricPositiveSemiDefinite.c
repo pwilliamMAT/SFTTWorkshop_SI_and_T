@@ -19,20 +19,16 @@
 #include <stddef.h>
 
 /* Variable Definitions */
-static emlrtRSInfo xk_emlrtRSI = {
-    159,           /* lineNo */
-    "ceval_xgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeev.m" /* pathName */
+static emlrtRSInfo yk_emlrtRSI = {
+    159,                                                       /* lineNo */
+    "ceval_xgeev",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeev.m" /* pathName */
 };
 
-static emlrtRSInfo yk_emlrtRSI = {
-    42,      /* lineNo */
-    "xgeev", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeev.m" /* pathName */
+static emlrtRSInfo al_emlrtRSI = {
+    42,                                                        /* lineNo */
+    "xgeev",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeev.m" /* pathName */
 };
 
 static const char_T cv2[14] = {'L', 'A', 'P', 'A', 'C', 'K', 'E',
@@ -138,10 +134,10 @@ void b_isSymmetricPositiveSemiDefini(const emlrtStack *sp,
     r = _mm_loadu_pd(&dv1[0]);
     _mm_storeu_pd(&y[k], r);
   }
-  st.site = &ge_emlrtRSI;
+  st.site = &he_emlrtRSI;
   absx = muDoubleScalarSqrt(tol);
-  st.site = &ge_emlrtRSI;
-  b_st.site = &ie_emlrtRSI;
+  st.site = &he_emlrtRSI;
+  b_st.site = &je_emlrtRSI;
   b_y[0] = true;
   b_y[1] = true;
   b_y[2] = true;
@@ -151,7 +147,7 @@ void b_isSymmetricPositiveSemiDefini(const emlrtStack *sp,
     idx = i2;
     i1 = i2 - 3;
     i2 += 4;
-    c_st.site = &je_emlrtRSI;
+    c_st.site = &ke_emlrtRSI;
     if ((i1 <= idx) && (idx > 2147483646)) {
       d_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&d_st);
@@ -177,15 +173,15 @@ void b_isSymmetricPositiveSemiDefini(const emlrtStack *sp,
       idx++;
     }
   }
-  st.site = &he_emlrtRSI;
+  st.site = &ie_emlrtRSI;
   for (k = 0; k <= 14; k += 2) {
     r = _mm_loadu_pd(&A[k]);
     _mm_storeu_pd(&A[k], _mm_div_pd(_mm_add_pd(_mm_loadu_pd(&b_value[k]), r),
                                     _mm_set1_pd(2.0)));
   }
-  b_st.site = &ke_emlrtRSI;
-  c_st.site = &oe_emlrtRSI;
-  d_st.site = &pe_emlrtRSI;
+  b_st.site = &le_emlrtRSI;
+  c_st.site = &pe_emlrtRSI;
+  d_st.site = &qe_emlrtRSI;
   p = true;
   for (k = 0; k < 16; k++) {
     if (p) {
@@ -228,9 +224,9 @@ void b_isSymmetricPositiveSemiDefini(const emlrtStack *sp,
       }
     }
     if (p) {
-      b_st.site = &le_emlrtRSI;
-      c_st.site = &re_emlrtRSI;
-      d_st.site = &te_emlrtRSI;
+      b_st.site = &me_emlrtRSI;
+      c_st.site = &se_emlrtRSI;
+      d_st.site = &ue_emlrtRSI;
       n_t = (ptrdiff_t)4;
       n_t = LAPACKE_dsyev(102, 'N', 'L', n_t, &A[0], n_t, &scale[0]);
       e_st.site = &bd_emlrtRSI;
@@ -250,7 +246,7 @@ void b_isSymmetricPositiveSemiDefini(const emlrtStack *sp,
       d[2].re = scale[2];
       d[3].re = scale[3];
       if (((int32_T)n_t != 0) && (!emlrtSetWarningFlag(&b_st))) {
-        c_st.site = &se_emlrtRSI;
+        c_st.site = &te_emlrtRSI;
         warning(&c_st);
       }
     } else {
@@ -278,17 +274,17 @@ void b_isSymmetricPositiveSemiDefini(const emlrtStack *sp,
         }
       }
       if (p) {
-        b_st.site = &me_emlrtRSI;
+        b_st.site = &ne_emlrtRSI;
         b_eigSkewHermitianStandard(&b_st, A, d);
       } else {
-        b_st.site = &ne_emlrtRSI;
-        c_st.site = &pg_emlrtRSI;
-        d_st.site = &yk_emlrtRSI;
+        b_st.site = &oe_emlrtRSI;
+        c_st.site = &qg_emlrtRSI;
+        d_st.site = &al_emlrtRSI;
         n_t = LAPACKE_dgeevx(102, 'B', 'N', 'N', 'N', (ptrdiff_t)4, &A[0],
                              (ptrdiff_t)4, &wreal[0], &wimag[0], &absx,
                              (ptrdiff_t)1, &vright, (ptrdiff_t)1, &n_t, &ihi_t,
                              &scale[0], &abnrm, &rconde, &rcondv);
-        e_st.site = &xk_emlrtRSI;
+        e_st.site = &yk_emlrtRSI;
         if ((int32_T)n_t < 0) {
           if ((int32_T)n_t == -1010) {
             emlrtErrorWithMessageIdR2018a(&e_st, &h_emlrtRTEI, "MATLAB:nomem",
@@ -305,7 +301,7 @@ void b_isSymmetricPositiveSemiDefini(const emlrtStack *sp,
         d[2].re = wreal[2];
         d[3].re = wreal[3];
         if (((int32_T)n_t != 0) && (!emlrtSetWarningFlag(&b_st))) {
-          c_st.site = &qg_emlrtRSI;
+          c_st.site = &rg_emlrtRSI;
           warning(&c_st);
         }
       }
@@ -431,10 +427,10 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
     r = _mm_loadu_pd(&dv1[0]);
     _mm_storeu_pd(&y[i], r);
   }
-  st.site = &ge_emlrtRSI;
+  st.site = &he_emlrtRSI;
   absx = muDoubleScalarSqrt(tol);
-  st.site = &ge_emlrtRSI;
-  b_st.site = &ie_emlrtRSI;
+  st.site = &he_emlrtRSI;
+  b_st.site = &je_emlrtRSI;
   for (i = 0; i < 6; i++) {
     b_y[i] = true;
   }
@@ -443,7 +439,7 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
     idx = i2;
     i1 = i2 - 5;
     i2 += 6;
-    c_st.site = &je_emlrtRSI;
+    c_st.site = &ke_emlrtRSI;
     if ((i1 <= idx) && (idx > 2147483646)) {
       d_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&d_st);
@@ -469,15 +465,15 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
       idx++;
     }
   }
-  st.site = &he_emlrtRSI;
+  st.site = &ie_emlrtRSI;
   for (i = 0; i <= 34; i += 2) {
     r = _mm_loadu_pd(&A[i]);
     _mm_storeu_pd(&A[i], _mm_div_pd(_mm_add_pd(_mm_loadu_pd(&b_value[i]), r),
                                     _mm_set1_pd(2.0)));
   }
-  b_st.site = &ke_emlrtRSI;
-  c_st.site = &oe_emlrtRSI;
-  d_st.site = &pe_emlrtRSI;
+  b_st.site = &le_emlrtRSI;
+  c_st.site = &pe_emlrtRSI;
+  d_st.site = &qe_emlrtRSI;
   p = true;
   for (i = 0; i < 36; i++) {
     if (p) {
@@ -520,9 +516,9 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
       }
     }
     if (p) {
-      b_st.site = &le_emlrtRSI;
-      c_st.site = &re_emlrtRSI;
-      d_st.site = &te_emlrtRSI;
+      b_st.site = &me_emlrtRSI;
+      c_st.site = &se_emlrtRSI;
+      d_st.site = &ue_emlrtRSI;
       n_t = (ptrdiff_t)6;
       n_t = LAPACKE_dsyev(102, 'N', 'L', n_t, &A[0], n_t, &scale[0]);
       e_st.site = &bd_emlrtRSI;
@@ -542,7 +538,7 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
         d[i].im = 0.0;
       }
       if (((int32_T)n_t != 0) && (!emlrtSetWarningFlag(&b_st))) {
-        c_st.site = &se_emlrtRSI;
+        c_st.site = &te_emlrtRSI;
         warning(&c_st);
       }
     } else {
@@ -570,17 +566,17 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
         }
       }
       if (p) {
-        b_st.site = &me_emlrtRSI;
+        b_st.site = &ne_emlrtRSI;
         eigSkewHermitianStandard(&b_st, A, d);
       } else {
-        b_st.site = &ne_emlrtRSI;
-        c_st.site = &pg_emlrtRSI;
-        d_st.site = &yk_emlrtRSI;
+        b_st.site = &oe_emlrtRSI;
+        c_st.site = &qg_emlrtRSI;
+        d_st.site = &al_emlrtRSI;
         n_t = LAPACKE_dgeevx(102, 'B', 'N', 'N', 'N', (ptrdiff_t)6, &A[0],
                              (ptrdiff_t)6, &wreal[0], &wimag[0], &absx,
                              (ptrdiff_t)1, &vright, (ptrdiff_t)1, &n_t, &ihi_t,
                              &scale[0], &abnrm, &rconde, &rcondv);
-        e_st.site = &xk_emlrtRSI;
+        e_st.site = &yk_emlrtRSI;
         if ((int32_T)n_t < 0) {
           if ((int32_T)n_t == -1010) {
             emlrtErrorWithMessageIdR2018a(&e_st, &h_emlrtRTEI, "MATLAB:nomem",
@@ -597,7 +593,7 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
           d[i].im = wimag[i];
         }
         if (((int32_T)n_t != 0) && (!emlrtSetWarningFlag(&b_st))) {
-          c_st.site = &qg_emlrtRSI;
+          c_st.site = &rg_emlrtRSI;
           warning(&c_st);
         }
       }

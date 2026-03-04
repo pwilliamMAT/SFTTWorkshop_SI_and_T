@@ -20,40 +20,32 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo bbb_emlrtRSI = {
+static emlrtRSInfo dbb_emlrtRSI = {
     163,                                        /* lineNo */
     "EKFCorrectorAdditive/measurementMatrices", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrectorAddi"
-    "tive.m" /* pathName */
-};
-
-static emlrtRSInfo ebb_emlrtRSI = {
-    121,                                                        /* lineNo */
-    "EKFCorrectorAdditive/getMeasurementJacobianAndCovariance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrectorAddi"
-    "tive.m" /* pathName */
-};
-
-static emlrtRSInfo fbb_emlrtRSI = {
-    126,                                                        /* lineNo */
-    "EKFCorrectorAdditive/getMeasurementJacobianAndCovariance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrectorAddi"
-    "tive.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrectorAdditive.m" /* pathName */
 };
 
 static emlrtRSInfo gbb_emlrtRSI = {
+    121,                                                        /* lineNo */
+    "EKFCorrectorAdditive/getMeasurementJacobianAndCovariance", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrectorAdditive.m" /* pathName */
+};
+
+static emlrtRSInfo hbb_emlrtRSI = {
+    126,                                                        /* lineNo */
+    "EKFCorrectorAdditive/getMeasurementJacobianAndCovariance", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrectorAdditive.m" /* pathName */
+};
+
+static emlrtRSInfo ibb_emlrtRSI = {
     137,                                                        /* lineNo */
     "EKFCorrectorAdditive/getMeasurementJacobianAndCovariance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrectorAddi"
-    "tive.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrectorAdditive.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -112,12 +104,12 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
   h_st.tls = g_st.tls;
   i_st.prev = &h_st;
   i_st.tls = h_st.tls;
-  st.site = &ebb_emlrtRSI;
-  b_st.site = &bbb_emlrtRSI;
+  st.site = &gbb_emlrtRSI;
+  b_st.site = &dbb_emlrtRSI;
   stateToMeasurementJacobian(&b_st, x, varargin_2_OriginPosition,
                              varargin_2_OriginVelocity, varargin_2_Orientation,
                              dHdx);
-  st.site = &fbb_emlrtRSI;
+  st.site = &hbb_emlrtRSI;
   stateToMeasurementWrapped(&st, x, varargin_2_OriginPosition,
                             varargin_2_OriginVelocity, varargin_2_Orientation,
                             zEstimated);
@@ -165,7 +157,7 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
       _mm_storeu_pd(&Pxy[lastc], _mm_add_pd(r1, _mm_mul_pd(r, r2)));
     }
   }
-  st.site = &gbb_emlrtRSI;
+  st.site = &ibb_emlrtRSI;
   memset(&b_y_tmp[0], 0, 24U * sizeof(real_T));
   for (i = 0; i < 4; i++) {
     b_i = 6 * i + 2;
@@ -190,12 +182,12 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
     M[10 * i + 8] = Rs[i + 8];
     M[10 * i + 9] = Rs[i + 12];
   }
-  b_st.site = &nv_emlrtRSI;
-  c_st.site = &ov_emlrtRSI;
-  d_st.site = &pv_emlrtRSI;
-  e_st.site = &qv_emlrtRSI;
-  f_st.site = &tv_emlrtRSI;
-  g_st.site = &uv_emlrtRSI;
+  b_st.site = &pv_emlrtRSI;
+  c_st.site = &qv_emlrtRSI;
+  d_st.site = &rv_emlrtRSI;
+  e_st.site = &sv_emlrtRSI;
+  f_st.site = &vv_emlrtRSI;
+  g_st.site = &wv_emlrtRSI;
   work[0] = 0.0;
   work[1] = 0.0;
   work[2] = 0.0;
@@ -205,7 +197,7 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
     real_T xnorm;
     ii = c_i * 10 + c_i;
     atmp = M[ii];
-    h_st.site = &wv_emlrtRSI;
+    h_st.site = &yv_emlrtRSI;
     itau = ii + 2;
     tau[c_i] = 0.0;
     i_st.site = &cd_emlrtRSI;
@@ -276,7 +268,7 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
     M[ii] = atmp;
     if (c_i + 1 < 4) {
       M[ii] = 1.0;
-      h_st.site = &vv_emlrtRSI;
+      h_st.site = &xv_emlrtRSI;
       if (tau[c_i] != 0.0) {
         lastv = 10 - c_i;
         b_i = (ii - c_i) + 9;
@@ -284,23 +276,23 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
           lastv--;
           b_i--;
         }
-        i_st.site = &pf_emlrtRSI;
+        i_st.site = &qf_emlrtRSI;
         lastc = b_ilazlc(&i_st, lastv, 3 - c_i, M, ii + 11);
       } else {
         lastv = 0;
         lastc = 0;
       }
       if (lastv > 0) {
-        i_st.site = &qf_emlrtRSI;
-        c_xgemv(&i_st, lastv, lastc, M, ii + 11, M, ii + 1, work);
         i_st.site = &rf_emlrtRSI;
+        c_xgemv(&i_st, lastv, lastc, M, ii + 11, M, ii + 1, work);
+        i_st.site = &sf_emlrtRSI;
         c_xgerc(&i_st, lastv, lastc, -tau[c_i], ii + 1, work, M, ii + 11);
       }
       M[ii] = atmp;
     }
   }
   for (i = 0; i < 4; i++) {
-    e_st.site = &rv_emlrtRSI;
+    e_st.site = &tv_emlrtRSI;
     for (k = 0; k <= i; k++) {
       R[k + (i << 2)] = M[k + 10 * i];
     }
@@ -309,9 +301,9 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
       memset(&R[(i * 4 + b_i) + -1], 0, (uint32_T)(-b_i + 5) * sizeof(real_T));
     }
   }
-  e_st.site = &sv_emlrtRSI;
-  f_st.site = &xv_emlrtRSI;
-  g_st.site = &yv_emlrtRSI;
+  e_st.site = &uv_emlrtRSI;
+  f_st.site = &aw_emlrtRSI;
+  g_st.site = &bw_emlrtRSI;
   itau = 3;
   work[0] = 0.0;
   work[1] = 0.0;
@@ -321,7 +313,7 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
     ii = i + i * 10;
     if (i + 1 < 4) {
       M[ii] = 1.0;
-      h_st.site = &cw_emlrtRSI;
+      h_st.site = &ew_emlrtRSI;
       if (tau[itau] != 0.0) {
         lastc = 10 - i;
         b_i = (ii - i) + 9;
@@ -329,21 +321,21 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
           lastc--;
           b_i--;
         }
-        i_st.site = &pf_emlrtRSI;
+        i_st.site = &qf_emlrtRSI;
         b_i = b_ilazlc(&i_st, lastc, 3 - i, M, ii + 11);
       } else {
         lastc = 0;
         b_i = 0;
       }
       if (lastc > 0) {
-        i_st.site = &qf_emlrtRSI;
-        c_xgemv(&i_st, lastc, b_i, M, ii + 11, M, ii + 1, work);
         i_st.site = &rf_emlrtRSI;
+        c_xgemv(&i_st, lastc, b_i, M, ii + 11, M, ii + 1, work);
+        i_st.site = &sf_emlrtRSI;
         c_xgerc(&i_st, lastc, b_i, -tau[itau], ii + 1, work, M, ii + 11);
       }
     }
     b_i = ii + 2;
-    h_st.site = &bw_emlrtRSI;
+    h_st.site = &dw_emlrtRSI;
     lastc = (ii - i) + 10;
     lastv = (((((lastc - ii) - 1) / 2) << 1) + ii) + 2;
     knt = lastv - 2;
@@ -355,7 +347,7 @@ void c_EKFCorrectorAdditive_getMeasu(const emlrtStack *sp, const real_T Rs[16],
       M[k - 1] *= -tau[itau];
     }
     M[ii] = 1.0 - tau[itau];
-    h_st.site = &aw_emlrtRSI;
+    h_st.site = &cw_emlrtRSI;
     for (k = 0; k < i; k++) {
       M[(ii - k) - 1] = 0.0;
     }

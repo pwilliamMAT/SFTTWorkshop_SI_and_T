@@ -19,45 +19,38 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo rn_emlrtRSI = {
-    255,             /* lineNo */
-    "unaryMinOrMax", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\unaryMinOrMax.m" /* pathName */
-};
-
 static emlrtRSInfo sn_emlrtRSI = {
-    966,                    /* lineNo */
-    "maxRealVectorOmitNaN", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\unaryMinOrMax.m" /* pathName */
+    255,                                                       /* lineNo */
+    "unaryMinOrMax",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo iw_emlrtRSI = {
+static emlrtRSInfo tn_emlrtRSI = {
+    966,                                                       /* lineNo */
+    "maxRealVectorOmitNaN",                                    /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
+};
+
+static emlrtRSInfo kw_emlrtRSI = {
     12,          /* lineNo */
     "logsumexp", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\logsumexp.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/logsumexp.m" /* pathName
+                                                                        */
 };
 
-static emlrtRSInfo ow_emlrtRSI = {
+static emlrtRSInfo qw_emlrtRSI = {
     99,                 /* lineNo */
     "blockedSummation", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
-    "dSummation.m" /* pathName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
+                                                                         */
 };
 
 static emlrtRTEInfo le_emlrtRTEI = {
     16,          /* lineNo */
     5,           /* colNo */
     "logsumexp", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\logsumexp.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/logsumexp.m" /* pName
+                                                                        */
 };
 
 /* Function Definitions */
@@ -104,17 +97,17 @@ real_T b_logsumexp(const emlrtStack *sp, const emxArray_real_T *x)
   i_st.tls = h_st.tls;
   x_data = x->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &iw_emlrtRSI;
-  b_st.site = &on_emlrtRSI;
-  c_st.site = &pn_emlrtRSI;
-  d_st.site = &qn_emlrtRSI;
+  st.site = &kw_emlrtRSI;
+  b_st.site = &pn_emlrtRSI;
+  c_st.site = &qn_emlrtRSI;
+  d_st.site = &rn_emlrtRSI;
   if (x->size[0] < 1) {
     emlrtErrorWithMessageIdR2018a(&d_st, &x_emlrtRTEI,
                                   "Coder:toolbox:eml_min_or_max_varDimZero",
                                   "Coder:toolbox:eml_min_or_max_varDimZero", 0);
   }
-  e_st.site = &rn_emlrtRSI;
-  f_st.site = &sn_emlrtRSI;
+  e_st.site = &sn_emlrtRSI;
+  f_st.site = &tn_emlrtRSI;
   last = x->size[0];
   if (x->size[0] <= 2) {
     if (x->size[0] == 1) {
@@ -126,13 +119,13 @@ real_T b_logsumexp(const emlrtStack *sp, const emxArray_real_T *x)
       s = x_data[0];
     }
   } else {
-    g_st.site = &un_emlrtRSI;
+    g_st.site = &vn_emlrtRSI;
     if (!muDoubleScalarIsNaN(x_data[0])) {
       idx = 1;
     } else {
       boolean_T exitg1;
       idx = 0;
-      h_st.site = &vn_emlrtRSI;
+      h_st.site = &wn_emlrtRSI;
       if (x->size[0] > 2147483646) {
         i_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&i_st);
@@ -151,10 +144,10 @@ real_T b_logsumexp(const emlrtStack *sp, const emxArray_real_T *x)
     if (idx == 0) {
       s = x_data[0];
     } else {
-      g_st.site = &tn_emlrtRSI;
+      g_st.site = &un_emlrtRSI;
       s = x_data[idx - 1];
       nx = idx + 1;
-      h_st.site = &wn_emlrtRSI;
+      h_st.site = &xn_emlrtRSI;
       if ((idx + 1 <= x->size[0]) && (x->size[0] > 2147483646)) {
         i_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&i_st);
@@ -182,15 +175,15 @@ real_T b_logsumexp(const emlrtStack *sp, const emxArray_real_T *x)
     for (k = nx; k < last; k++) {
       xdiff_data[k] = x_data[k] - s;
     }
-    st.site = &jw_emlrtRSI;
-    b_st.site = &kw_emlrtRSI;
+    st.site = &lw_emlrtRSI;
+    b_st.site = &mw_emlrtRSI;
     nx = xdiff->size[0];
-    c_st.site = &ms_emlrtRSI;
+    c_st.site = &ns_emlrtRSI;
     if (xdiff->size[0] > 2147483646) {
       d_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&d_st);
     }
-    if (xdiff->size[0] < 800) {
+    if (xdiff->size[0] < 1600) {
       for (b_k = 0; b_k < nx; b_k++) {
         xdiff_data[b_k] = muDoubleScalarExp(xdiff_data[b_k]);
       }
@@ -208,8 +201,8 @@ real_T b_logsumexp(const emlrtStack *sp, const emxArray_real_T *x)
       emlrtPopJmpBuf(&b_st, &emlrtJBStack);
       emlrtExitParallelRegion(&b_st, omp_in_parallel());
     }
-    st.site = &jw_emlrtRSI;
-    b_st.site = &jw_emlrtRSI;
+    st.site = &lw_emlrtRSI;
+    b_st.site = &lw_emlrtRSI;
     b_x = c_sum(&b_st, xdiff);
     emxFree_real_T(&st, &xdiff);
     if (b_x < 0.0) {
@@ -268,7 +261,7 @@ real_T c_logsumexp(const emlrtStack *sp, const real_T x[3])
     xdiff[1] = muDoubleScalarExp(x[1] - s);
     xdiff[2] = muDoubleScalarExp(x[2] - s);
     b_x = d_sumColumnB(xdiff);
-    st.site = &jw_emlrtRSI;
+    st.site = &lw_emlrtRSI;
     if (b_x < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &st, &v_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -313,17 +306,17 @@ real_T logsumexp(const emlrtStack *sp, const real_T x_data[],
   f_st.tls = e_st.tls;
   g_st.prev = &f_st;
   g_st.tls = f_st.tls;
-  st.site = &iw_emlrtRSI;
-  b_st.site = &on_emlrtRSI;
-  c_st.site = &pn_emlrtRSI;
-  d_st.site = &qn_emlrtRSI;
+  st.site = &kw_emlrtRSI;
+  b_st.site = &pn_emlrtRSI;
+  c_st.site = &qn_emlrtRSI;
+  d_st.site = &rn_emlrtRSI;
   if (x_size[1] < 1) {
     emlrtErrorWithMessageIdR2018a(&d_st, &x_emlrtRTEI,
                                   "Coder:toolbox:eml_min_or_max_varDimZero",
                                   "Coder:toolbox:eml_min_or_max_varDimZero", 0);
   }
-  e_st.site = &rn_emlrtRSI;
-  f_st.site = &sn_emlrtRSI;
+  e_st.site = &sn_emlrtRSI;
+  f_st.site = &tn_emlrtRSI;
   last = x_size[1];
   if (x_size[1] <= 2) {
     if (x_size[1] == 1) {
@@ -376,27 +369,27 @@ real_T logsumexp(const emlrtStack *sp, const real_T x_data[],
     for (k = idx; k < last; k++) {
       xdiff_data[k] = x_data[k] - s;
     }
-    st.site = &jw_emlrtRSI;
-    b_st.site = &kw_emlrtRSI;
+    st.site = &lw_emlrtRSI;
+    b_st.site = &mw_emlrtRSI;
     idx = xdiff_size[1];
-    c_st.site = &ms_emlrtRSI;
+    c_st.site = &ns_emlrtRSI;
     for (k = 0; k < idx; k++) {
       xdiff_data[k] = muDoubleScalarExp(xdiff_data[k]);
     }
-    st.site = &jw_emlrtRSI;
-    b_st.site = &lw_emlrtRSI;
-    c_st.site = &mw_emlrtRSI;
-    d_st.site = &nw_emlrtRSI;
-    e_st.site = &ow_emlrtRSI;
-    f_st.site = &pw_emlrtRSI;
+    st.site = &lw_emlrtRSI;
+    b_st.site = &nw_emlrtRSI;
+    c_st.site = &ow_emlrtRSI;
+    d_st.site = &pw_emlrtRSI;
+    e_st.site = &qw_emlrtRSI;
+    f_st.site = &rw_emlrtRSI;
     b_xdiff_data.data = &xdiff_data[0];
     b_xdiff_data.size = &xdiff_size[1];
     b_xdiff_data.allocatedSize = 3;
     b_xdiff_data.numDimensions = 1;
     b_xdiff_data.canFreeData = false;
-    g_st.site = &qw_emlrtRSI;
+    g_st.site = &sw_emlrtRSI;
     x = sumColumnB(&g_st, &b_xdiff_data, xdiff_size[1]);
-    st.site = &jw_emlrtRSI;
+    st.site = &lw_emlrtRSI;
     if (x < 0.0) {
       emlrtErrorWithMessageIdR2018a(
           &st, &v_emlrtRTEI, "Coder:toolbox:ElFunDomainError",

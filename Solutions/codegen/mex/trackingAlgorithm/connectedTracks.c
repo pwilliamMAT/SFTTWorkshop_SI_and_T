@@ -16,337 +16,343 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo rcb_emlrtRSI = {
-    26,                /* lineNo */
-    "connectedTracks", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pathName */
+static emlrtRSInfo
+    tcb_emlrtRSI =
+        {
+            26,                /* lineNo */
+            "connectedTracks", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pathName */
 };
 
-static emlrtRSInfo scb_emlrtRSI = {
-    27,                /* lineNo */
-    "connectedTracks", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pathName */
+static emlrtRSInfo
+    ucb_emlrtRSI =
+        {
+            27,                /* lineNo */
+            "connectedTracks", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pathName */
 };
 
-static emlrtRSInfo tcb_emlrtRSI = {
-    29,                /* lineNo */
-    "connectedTracks", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pathName */
+static emlrtRSInfo
+    vcb_emlrtRSI =
+        {
+            29,                /* lineNo */
+            "connectedTracks", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pathName */
 };
 
-static emlrtRSInfo ucb_emlrtRSI = {
-    30,                /* lineNo */
-    "connectedTracks", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pathName */
+static emlrtRSInfo
+    wcb_emlrtRSI =
+        {
+            30,                /* lineNo */
+            "connectedTracks", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pathName */
 };
 
-static emlrtRSInfo vcb_emlrtRSI = {
-    41,                /* lineNo */
-    "connectedTracks", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pathName */
+static emlrtRSInfo
+    xcb_emlrtRSI =
+        {
+            41,                /* lineNo */
+            "connectedTracks", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pathName */
 };
 
-static emlrtRSInfo wcb_emlrtRSI = {
-    42,                /* lineNo */
-    "connectedTracks", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pathName */
+static emlrtRSInfo
+    ycb_emlrtRSI =
+        {
+            42,                /* lineNo */
+            "connectedTracks", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pathName */
 };
 
-static emlrtRSInfo xcb_emlrtRSI = {
-    45,                /* lineNo */
-    "connectedTracks", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pathName */
+static emlrtRSInfo
+    adb_emlrtRSI =
+        {
+            45,                /* lineNo */
+            "connectedTracks", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pathName */
 };
 
-static emlrtRSInfo ycb_emlrtRSI = {
-    60,                /* lineNo */
-    "connectedTracks", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pathName */
+static emlrtRSInfo
+    bdb_emlrtRSI =
+        {
+            60,                /* lineNo */
+            "connectedTracks", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pathName */
 };
 
-static emlrtRSInfo adb_emlrtRSI = {
-    62,                /* lineNo */
-    "connectedTracks", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pathName */
-};
-
-static emlrtRSInfo bdb_emlrtRSI = {
-    13,               /* lineNo */
-    "nullAssignment", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\nullAssignment.m" /* pathName */
-};
-
-static emlrtRSInfo cdb_emlrtRSI = {
-    17,               /* lineNo */
-    "nullAssignment", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\nullAssignment.m" /* pathName */
+static emlrtRSInfo
+    cdb_emlrtRSI =
+        {
+            62,                /* lineNo */
+            "connectedTracks", /* fcnName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pathName */
 };
 
 static emlrtRSInfo ddb_emlrtRSI = {
-    152,                      /* lineNo */
-    "onearg_null_assignment", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\nullAssignment.m" /* pathName */
+    13,                                                         /* lineNo */
+    "nullAssignment",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/nullAssignment.m" /* pathName */
 };
 
-static emlrtBCInfo dd_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    36,                /* lineNo */
-    18,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtRSInfo edb_emlrtRSI = {
+    17,                                                         /* lineNo */
+    "nullAssignment",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/nullAssignment.m" /* pathName */
 };
 
-static emlrtRTEInfo eb_emlrtRTEI = {
-    61,                /* lineNo */
-    1,                 /* colNo */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pName */
+static emlrtRSInfo fdb_emlrtRSI = {
+    152,                                                        /* lineNo */
+    "onearg_null_assignment",                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/nullAssignment.m" /* pathName */
 };
 
-static emlrtECInfo m_emlrtECI = {
-    -1,                /* nDims */
-    62,                /* lineNo */
-    1,                 /* colNo */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pName */
+static emlrtBCInfo dd_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        36,                /* lineNo */
+        18,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
+};
+
+static emlrtRTEInfo
+    eb_emlrtRTEI =
+        {
+            61,                /* lineNo */
+            1,                 /* colNo */
+            "connectedTracks", /* fName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pName */
+};
+
+static emlrtECInfo
+    m_emlrtECI =
+        {
+            -1,                /* nDims */
+            62,                /* lineNo */
+            1,                 /* colNo */
+            "connectedTracks", /* fName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pName */
 };
 
 static emlrtRTEInfo gb_emlrtRTEI = {
-    85,                /* lineNo */
-    27,                /* colNo */
-    "validate_inputs", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-    "internal\\nullAssignment.m" /* pName */
+    85,                                                         /* lineNo */
+    27,                                                         /* colNo */
+    "validate_inputs",                                          /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/nullAssignment.m" /* pName */
 };
 
-static emlrtBCInfo ed_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    31,                /* lineNo */
-    18,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo ed_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        31,                /* lineNo */
+        18,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo fd_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    34,                /* lineNo */
-    19,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo fd_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        34,                /* lineNo */
+        19,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo gd_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    39,                /* lineNo */
-    35,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo gd_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        39,                /* lineNo */
+        35,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo hd_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    62,                /* lineNo */
-    1,                 /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo hd_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        62,                /* lineNo */
+        1,                 /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo id_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    43,                /* lineNo */
-    22,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo id_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        43,                /* lineNo */
+        22,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo jd_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    43,                /* lineNo */
-    26,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo jd_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        43,                /* lineNo */
+        26,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo kd_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    43,                /* lineNo */
-    51,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo kd_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        43,                /* lineNo */
+        51,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo ld_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    44,                /* lineNo */
-    31,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo ld_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        44,                /* lineNo */
+        31,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo md_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    46,                /* lineNo */
-    30,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo md_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        46,                /* lineNo */
+        30,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo nd_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    46,                /* lineNo */
-    34,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo nd_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        46,                /* lineNo */
+        34,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo od_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    46,                /* lineNo */
-    56,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo od_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        46,                /* lineNo */
+        56,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo pd_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    47,                /* lineNo */
-    39,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo pd_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        47,                /* lineNo */
+        39,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtBCInfo qd_emlrtBCI = {
-    -1,                /* iFirst */
-    -1,                /* iLast */
-    49,                /* lineNo */
-    38,                /* colNo */
-    "",                /* aName */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m", /* pName */
-    0                              /* checkKind */
+static emlrtBCInfo qd_emlrtBCI =
+    {
+        -1,                /* iFirst */
+        -1,                /* iLast */
+        49,                /* lineNo */
+        38,                /* colNo */
+        "",                /* aName */
+        "connectedTracks", /* fName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+        "connectedTracks.m", /* pName */
+        0                    /* checkKind */
 };
 
-static emlrtRTEInfo ne_emlrtRTEI = {
-    27,                /* lineNo */
-    1,                 /* colNo */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pName */
+static emlrtRTEInfo
+    ne_emlrtRTEI =
+        {
+            27,                /* lineNo */
+            1,                 /* colNo */
+            "connectedTracks", /* fName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pName */
 };
 
-static emlrtRTEInfo oe_emlrtRTEI = {
-    29,                /* lineNo */
-    1,                 /* colNo */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pName */
+static emlrtRTEInfo
+    oe_emlrtRTEI =
+        {
+            29,                /* lineNo */
+            1,                 /* colNo */
+            "connectedTracks", /* fName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pName */
 };
 
-static emlrtRTEInfo pe_emlrtRTEI = {
-    41,                /* lineNo */
-    13,                /* colNo */
-    "connectedTracks", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\connectedTracks.m" /* pName */
+static emlrtRTEInfo
+    pe_emlrtRTEI =
+        {
+            41,                /* lineNo */
+            13,                /* colNo */
+            "connectedTracks", /* fName */
+            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
+            "connectedTracks.m" /* pName */
 };
 
 /* Function Definitions */
@@ -391,15 +397,15 @@ int32_T connectedTracks(const emlrtStack *sp, const emxArray_boolean_T *A,
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   nz = A->size[0];
   n = A->size[1];
-  st.site = &rcb_emlrtRSI;
-  b_st.site = &gq_emlrtRSI;
+  st.site = &tcb_emlrtRSI;
+  b_st.site = &hq_emlrtRSI;
   clustRows_size[0] = 1;
   clustRows_size[1] = A->size[0];
   if (nz - 1 >= 0) {
     memset(&clustRows_data[0], 0, (uint32_T)nz * sizeof(int32_T));
   }
-  st.site = &scb_emlrtRSI;
-  b_st.site = &gq_emlrtRSI;
+  st.site = &ucb_emlrtRSI;
+  b_st.site = &hq_emlrtRSI;
   vlen = clustCols->size[0] * clustCols->size[1];
   clustCols->size[0] = 1;
   clustCols->size[1] = A->size[1];
@@ -409,8 +415,8 @@ int32_T connectedTracks(const emlrtStack *sp, const emxArray_boolean_T *A,
     clustCols_data[k] = 0;
   }
   numClusters = 0;
-  st.site = &tcb_emlrtRSI;
-  b_st.site = &gq_emlrtRSI;
+  st.site = &vcb_emlrtRSI;
+  b_st.site = &hq_emlrtRSI;
   emxInit_int32_T(&st, &colStack, 2, &oe_emlrtRTEI);
   vlen = colStack->size[0] * colStack->size[1];
   colStack->size[0] = 1;
@@ -420,7 +426,7 @@ int32_T connectedTracks(const emlrtStack *sp, const emxArray_boolean_T *A,
   for (k = 0; k < n; k++) {
     colStack_data[k] = 1;
   }
-  st.site = &ucb_emlrtRSI;
+  st.site = &wcb_emlrtRSI;
   if (A->size[1] > 2147483646) {
     b_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&b_st);
@@ -451,15 +457,15 @@ int32_T connectedTracks(const emlrtStack *sp, const emxArray_boolean_T *A,
         }
         currentCol = colStack_data[colStackSize - 1];
         colStackSize--;
-        st.site = &vcb_emlrtRSI;
-        b_st.site = &bdb_emlrtRSI;
+        st.site = &xcb_emlrtRSI;
+        b_st.site = &ddb_emlrtRSI;
         if (colStack->size[1] < 1) {
           emlrtErrorWithMessageIdR2018a(&b_st, &gb_emlrtRTEI,
                                         "MATLAB:subsdeldimmismatch",
                                         "MATLAB:subsdeldimmismatch", 0);
         }
-        b_st.site = &cdb_emlrtRSI;
-        c_st.site = &ddb_emlrtRSI;
+        b_st.site = &edb_emlrtRSI;
+        c_st.site = &fdb_emlrtRSI;
         for (k = vlen; k < vlen; k++) {
           colStack_data[k - 1] = colStack_data[k];
         }
@@ -467,7 +473,7 @@ int32_T connectedTracks(const emlrtStack *sp, const emxArray_boolean_T *A,
         colStack->size[1]--;
         emxEnsureCapacity_int32_T(&b_st, colStack, vlen, &pe_emlrtRTEI);
         colStack_data = colStack->data;
-        st.site = &wcb_emlrtRSI;
+        st.site = &ycb_emlrtRSI;
         for (row = 0; row < nz; row++) {
           if (row + 1 > nz) {
             emlrtDynamicBoundsCheckR2012b(row + 1, 1, nz, &id_emlrtBCI,
@@ -489,7 +495,7 @@ int32_T connectedTracks(const emlrtStack *sp, const emxArray_boolean_T *A,
                                               (emlrtConstCTX)sp);
               }
               clustRows_data[row] = numClusters;
-              st.site = &xcb_emlrtRSI;
+              st.site = &adb_emlrtRSI;
               if (n > 2147483646) {
                 b_st.site = &k_emlrtRSI;
                 check_forloop_overflow_error(&b_st);
@@ -536,16 +542,16 @@ int32_T connectedTracks(const emlrtStack *sp, const emxArray_boolean_T *A,
   for (k = 0; k < currentCol; k++) {
     unassignedDetCluster_data[k] = (clustRows_data[k] == 0);
   }
-  st.site = &ycb_emlrtRSI;
-  b_st.site = &edb_emlrtRSI;
-  c_st.site = &mw_emlrtRSI;
+  st.site = &bdb_emlrtRSI;
+  b_st.site = &gdb_emlrtRSI;
+  c_st.site = &ow_emlrtRSI;
   vlen = clustRows_size[1];
   if (clustRows_size[1] == 0) {
     nz = 0;
   } else {
-    d_st.site = &fdb_emlrtRSI;
+    d_st.site = &hdb_emlrtRSI;
     nz = unassignedDetCluster_data[0];
-    e_st.site = &gdb_emlrtRSI;
+    e_st.site = &idb_emlrtRSI;
     if (clustRows_size[1] > 2147483646) {
       f_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&f_st);
@@ -568,9 +574,9 @@ int32_T connectedTracks(const emlrtStack *sp, const emxArray_boolean_T *A,
       vlen++;
     }
   }
-  st.site = &adb_emlrtRSI;
-  b_st.site = &hdb_emlrtRSI;
-  c_st.site = &idb_emlrtRSI;
+  st.site = &cdb_emlrtRSI;
+  b_st.site = &jdb_emlrtRSI;
+  c_st.site = &kdb_emlrtRSI;
   eml_integer_colon_dispatcher(&c_st, nz, colStack);
   colStack_data = colStack->data;
   currentCol = colStack->size[1];

@@ -72,8 +72,8 @@ void xswap(const emlrtStack *sp, int32_T n, real_T x[9], int32_T ix0,
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &mh_emlrtRSI;
-  b_st.site = &nh_emlrtRSI;
+  st.site = &nh_emlrtRSI;
+  b_st.site = &oh_emlrtRSI;
   if (n > 2147483646) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);

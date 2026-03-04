@@ -13,54 +13,34 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo
-    gp_emlrtRSI =
-        {
-            488,           /* lineNo */
-            "merge_block", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\sortIdx.m" /* pathName */
+static emlrtRSInfo hp_emlrtRSI = {
+    488,                                                 /* lineNo */
+    "merge_block",                                       /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName */
 };
 
-static emlrtRSInfo
-    ip_emlrtRSI =
-        {
-            496,           /* lineNo */
-            "merge_block", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\sortIdx.m" /* pathName */
+static emlrtRSInfo jp_emlrtRSI = {
+    496,                                                 /* lineNo */
+    "merge_block",                                       /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName */
 };
 
-static emlrtRSInfo
-    jp_emlrtRSI =
-        {
-            503,           /* lineNo */
-            "merge_block", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\sortIdx.m" /* pathName */
+static emlrtRSInfo kp_emlrtRSI = {
+    503,                                                 /* lineNo */
+    "merge_block",                                       /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName */
 };
 
-static emlrtRSInfo
-    kp_emlrtRSI =
-        {
-            550,     /* lineNo */
-            "merge", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\sortIdx.m" /* pathName */
+static emlrtRSInfo lp_emlrtRSI = {
+    550,                                                 /* lineNo */
+    "merge",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName */
 };
 
-static emlrtRSInfo
-    lp_emlrtRSI =
-        {
-            519,     /* lineNo */
-            "merge", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\sortIdx.m" /* pathName */
+static emlrtRSInfo mp_emlrtRSI = {
+    519,                                                 /* lineNo */
+    "merge",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName */
 };
 
 /* Function Declarations */
@@ -98,7 +78,7 @@ static void b_merge(const emlrtStack *sp, emxArray_int32_T *idx,
     int32_T p;
     int32_T q;
     n = np + nq;
-    st.site = &lp_emlrtRSI;
+    st.site = &mp_emlrtRSI;
     if (n > 2147483646) {
       b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);
@@ -130,7 +110,7 @@ static void b_merge(const emlrtStack *sp, emxArray_int32_T *idx,
           q++;
         } else {
           q = iout - p;
-          st.site = &kp_emlrtRSI;
+          st.site = &lp_emlrtRSI;
           if ((p + 1 <= np) && (np > 2147483646)) {
             b_st.site = &tb_emlrtRSI;
             check_forloop_overflow_error(&b_st);
@@ -172,7 +152,7 @@ static void merge(const emlrtStack *sp, emxArray_int32_T *idx,
     int32_T p;
     int32_T q;
     n = np + nq;
-    st.site = &lp_emlrtRSI;
+    st.site = &mp_emlrtRSI;
     if (n > 2147483646) {
       b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);
@@ -204,7 +184,7 @@ static void merge(const emlrtStack *sp, emxArray_int32_T *idx,
           q++;
         } else {
           q = iout - p;
-          st.site = &kp_emlrtRSI;
+          st.site = &lp_emlrtRSI;
           if ((p + 1 <= np) && (np > 2147483646)) {
             b_st.site = &tb_emlrtRSI;
             check_forloop_overflow_error(&b_st);
@@ -242,7 +222,7 @@ void b_merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
       tailOffset = bLen * nPairs;
       nTail = n - tailOffset;
       if (nTail > bLen) {
-        st.site = &gp_emlrtRSI;
+        st.site = &hp_emlrtRSI;
         b_merge(&st, idx, x, offset + tailOffset, bLen, nTail - bLen, iwork,
                 xwork);
       }
@@ -250,13 +230,13 @@ void b_merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
     tailOffset = bLen << 1;
     nPairs >>= 1;
     for (k = 0; k < nPairs; k++) {
-      st.site = &ip_emlrtRSI;
+      st.site = &jp_emlrtRSI;
       b_merge(&st, idx, x, offset + k * tailOffset, bLen, bLen, iwork, xwork);
     }
     bLen = tailOffset;
   }
   if (n > bLen) {
-    st.site = &jp_emlrtRSI;
+    st.site = &kp_emlrtRSI;
     b_merge(&st, idx, x, offset, bLen, n - bLen, iwork, xwork);
   }
 }
@@ -282,7 +262,7 @@ void merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
       tailOffset = bLen * nPairs;
       nTail = n - tailOffset;
       if (nTail > bLen) {
-        st.site = &gp_emlrtRSI;
+        st.site = &hp_emlrtRSI;
         merge(&st, idx, x, offset + tailOffset, bLen, nTail - bLen, iwork,
               xwork);
       }
@@ -290,13 +270,13 @@ void merge_block(const emlrtStack *sp, emxArray_int32_T *idx,
     tailOffset = bLen << 1;
     nPairs >>= 1;
     for (k = 0; k < nPairs; k++) {
-      st.site = &ip_emlrtRSI;
+      st.site = &jp_emlrtRSI;
       merge(&st, idx, x, offset + k * tailOffset, bLen, bLen, iwork, xwork);
     }
     bLen = tailOffset;
   }
   if (n > bLen) {
-    st.site = &jp_emlrtRSI;
+    st.site = &kp_emlrtRSI;
     merge(&st, idx, x, offset, bLen, n - bLen, iwork, xwork);
   }
 }

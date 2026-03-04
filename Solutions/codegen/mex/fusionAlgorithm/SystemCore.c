@@ -14,38 +14,34 @@
 #include "trackFuser.h"
 
 /* Variable Definitions */
-static emlrtRSInfo ub_emlrtRSI = {
-    1,                 /* lineNo */
-    "SystemCore/step", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+"
-    "coder\\SystemCore.p" /* pathName */
+static emlrtRSInfo ub_emlrtRSI =
+    {
+        1,                 /* lineNo */
+        "SystemCore/step", /* fcnName */
+        "/MATLAB/toolbox/shared/system/coder/+matlab/+system/+coder/"
+        "SystemCore.p" /* pathName */
 };
 
 static emlrtRSInfo wb_emlrtRSI = {
-    950,                    /* lineNo */
-    "trackFuser/setupImpl", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m" /* pathName
-                                                                          */
+    950,                                              /* lineNo */
+    "trackFuser/setupImpl",                           /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/trackFuser.m" /* pathName */
 };
 
-static emlrtRTEInfo f_emlrtRTEI = {
-    1,                 /* lineNo */
-    1,                 /* colNo */
-    "SystemCore/step", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+"
-    "coder\\SystemCore.p" /* pName */
+static emlrtRTEInfo f_emlrtRTEI =
+    {
+        1,                 /* lineNo */
+        1,                 /* colNo */
+        "SystemCore/step", /* fName */
+        "/MATLAB/toolbox/shared/system/coder/+matlab/+system/+coder/"
+        "SystemCore.p" /* pName */
 };
 
 static emlrtRTEInfo h_emlrtRTEI = {
-    947,                    /* lineNo */
-    17,                     /* colNo */
-    "trackFuser/setupImpl", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m" /* pName
-                                                                          */
+    947,                                              /* lineNo */
+    17,                                               /* colNo */
+    "trackFuser/setupImpl",                           /* fName */
+    "/MATLAB/toolbox/fusion/core/fusion/trackFuser.m" /* pName */
 };
 
 /* Function Definitions */

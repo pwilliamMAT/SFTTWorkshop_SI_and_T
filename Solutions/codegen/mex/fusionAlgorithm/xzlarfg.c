@@ -56,8 +56,8 @@ real_T xzlarfg(const emlrtStack *sp, int32_T n, real_T *alpha1, real_T x[3])
         do {
           knt++;
           st.site = &ld_emlrtRSI;
-          b_st.site = &sd_emlrtRSI;
-          c_st.site = &td_emlrtRSI;
+          b_st.site = &td_emlrtRSI;
+          c_st.site = &ud_emlrtRSI;
           if (overflow) {
             d_st.site = &tb_emlrtRSI;
             check_forloop_overflow_error(&d_st);
@@ -83,8 +83,8 @@ real_T xzlarfg(const emlrtStack *sp, int32_T n, real_T *alpha1, real_T x[3])
         tau = (beta1 - *alpha1) / beta1;
         xnorm = 1.0 / (*alpha1 - beta1);
         st.site = &nd_emlrtRSI;
-        b_st.site = &sd_emlrtRSI;
-        c_st.site = &td_emlrtRSI;
+        b_st.site = &td_emlrtRSI;
+        c_st.site = &ud_emlrtRSI;
         if (n > 2147483646) {
           d_st.site = &tb_emlrtRSI;
           check_forloop_overflow_error(&d_st);
@@ -108,8 +108,8 @@ real_T xzlarfg(const emlrtStack *sp, int32_T n, real_T *alpha1, real_T x[3])
         tau = (beta1 - *alpha1) / beta1;
         xnorm = 1.0 / (*alpha1 - beta1);
         st.site = &pd_emlrtRSI;
-        b_st.site = &sd_emlrtRSI;
-        c_st.site = &td_emlrtRSI;
+        b_st.site = &td_emlrtRSI;
+        c_st.site = &ud_emlrtRSI;
         if (n > 2147483646) {
           d_st.site = &tb_emlrtRSI;
           check_forloop_overflow_error(&d_st);

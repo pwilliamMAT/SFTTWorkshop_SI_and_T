@@ -17,151 +17,111 @@
 
 /* Variable Definitions */
 static emlrtRSInfo jb_emlrtRSI = {
-    161,             /* lineNo */
-    "unique_vector", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pathName
-                                                                       */
+    161,                                          /* lineNo */
+    "unique_vector",                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pathName */
 };
 
 static emlrtRSInfo kb_emlrtRSI = {
-    163,             /* lineNo */
-    "unique_vector", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pathName
-                                                                       */
+    163,                                          /* lineNo */
+    "unique_vector",                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pathName */
 };
 
 static emlrtRSInfo lb_emlrtRSI = {
-    180,             /* lineNo */
-    "unique_vector", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pathName
-                                                                       */
+    180,                                          /* lineNo */
+    "unique_vector",                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pathName */
 };
 
 static emlrtRSInfo mb_emlrtRSI = {
-    211,             /* lineNo */
-    "unique_vector", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pathName
-                                                                       */
+    211,                                          /* lineNo */
+    "unique_vector",                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pathName */
 };
 
 static emlrtRSInfo nb_emlrtRSI = {
-    224,             /* lineNo */
-    "unique_vector", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pathName
-                                                                       */
+    224,                                          /* lineNo */
+    "unique_vector",                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pathName */
 };
 
 static emlrtRSInfo ob_emlrtRSI = {
-    235,             /* lineNo */
-    "unique_vector", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pathName
-                                                                       */
+    235,                                          /* lineNo */
+    "unique_vector",                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pathName */
 };
 
 static emlrtRSInfo pb_emlrtRSI = {
-    249,             /* lineNo */
-    "unique_vector", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pathName
-                                                                       */
+    249,                                          /* lineNo */
+    "unique_vector",                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pathName */
 };
 
-static emlrtRSInfo
-    qb_emlrtRSI =
-        {
-            145,       /* lineNo */
-            "sortIdx", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\sortIdx.m" /* pathName */
+static emlrtRSInfo qb_emlrtRSI = {
+    145,                                                 /* lineNo */
+    "sortIdx",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName */
 };
 
-static emlrtRSInfo rb_emlrtRSI =
-    {
-        57,          /* lineNo */
-        "mergesort", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\mergesort.m" /* pathName */
+static emlrtRSInfo rb_emlrtRSI = {
+    57,                                                    /* lineNo */
+    "mergesort",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/mergesort.m" /* pathName */
 };
 
-static emlrtRSInfo sb_emlrtRSI =
-    {
-        113,         /* lineNo */
-        "mergesort", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\mergesort.m" /* pathName */
+static emlrtRSInfo sb_emlrtRSI = {
+    113,                                                   /* lineNo */
+    "mergesort",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/mergesort.m" /* pathName */
 };
 
-static emlrtRSInfo tp_emlrtRSI = {
-    243,             /* lineNo */
-    "unique_vector", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pathName
-                                                                       */
+static emlrtRSInfo up_emlrtRSI = {
+    243,                                          /* lineNo */
+    "unique_vector",                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pathName */
 };
 
 static emlrtRTEInfo e_emlrtRTEI = {
-    242,             /* lineNo */
-    1,               /* colNo */
-    "unique_vector", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pName
-                                                                       */
+    242,                                          /* lineNo */
+    1,                                            /* colNo */
+    "unique_vector",                              /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pName */
 };
 
 static emlrtRTEInfo nc_emlrtRTEI = {
-    161,      /* lineNo */
-    1,        /* colNo */
-    "unique", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pName
-                                                                       */
+    161,                                          /* lineNo */
+    1,                                            /* colNo */
+    "unique",                                     /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pName */
 };
 
-static emlrtRTEInfo oc_emlrtRTEI =
-    {
-        52,          /* lineNo */
-        9,           /* colNo */
-        "mergesort", /* fName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\mergesort.m" /* pName */
+static emlrtRTEInfo oc_emlrtRTEI = {
+    52,                                                    /* lineNo */
+    9,                                                     /* colNo */
+    "mergesort",                                           /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/mergesort.m" /* pName */
 };
 
 static emlrtRTEInfo pc_emlrtRTEI = {
-    162,      /* lineNo */
-    20,       /* colNo */
-    "unique", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pName
-                                                                       */
+    162,                                          /* lineNo */
+    20,                                           /* colNo */
+    "unique",                                     /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pName */
 };
 
 static emlrtRTEInfo qc_emlrtRTEI = {
-    243,      /* lineNo */
-    1,        /* colNo */
-    "unique", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\unique.m" /* pName
-                                                                       */
+    243,                                          /* lineNo */
+    1,                                            /* colNo */
+    "unique",                                     /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/unique.m" /* pName */
 };
 
-static emlrtRTEInfo rc_emlrtRTEI =
-    {
-        52,          /* lineNo */
-        1,           /* colNo */
-        "mergesort", /* fName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\mergesort.m" /* pName */
+static emlrtRTEInfo rc_emlrtRTEI = {
+    52,                                                    /* lineNo */
+    1,                                                     /* colNo */
+    "mergesort",                                           /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/mergesort.m" /* pName */
 };
 
 /* Function Definitions */
@@ -329,7 +289,7 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   }
   b_iv[0] = 1;
   b_iv[1] = q;
-  st.site = &tp_emlrtRSI;
+  st.site = &up_emlrtRSI;
   indexShapeCheck(&st, b->size[0], b_iv);
   pEnd = b->size[0];
   b->size[0] = q;

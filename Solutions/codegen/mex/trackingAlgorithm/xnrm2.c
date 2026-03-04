@@ -14,19 +14,21 @@
 
 /* Variable Definitions */
 static emlrtRSInfo id_emlrtRSI = {
-    23,      /* lineNo */
-    "xnrm2", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+blas\\xnrm2."
-    "m" /* pathName */
+    23,                                                      /* lineNo */
+    "xnrm2",                                                 /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+blas/xnrm2.m" /* pathName */
 };
 
 static emlrtRSInfo jd_emlrtRSI = {
-    38,      /* lineNo */
-    "xnrm2", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "refblas\\xnrm2.m" /* pathName */
+    38,                                                         /* lineNo */
+    "xnrm2",                                                    /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+refblas/xnrm2.m" /* pathName */
+};
+
+static emlrtRSInfo kd_emlrtRSI = {
+    64,                                                         /* lineNo */
+    "xnrm2",                                                    /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+refblas/xnrm2.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -73,6 +75,25 @@ real_T b_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[9], int32_T ix0)
         }
       }
       y = scale * muDoubleScalarSqrt(y);
+      if (muDoubleScalarIsNaN(y)) {
+        int32_T b_k;
+        b_st.site = &kd_emlrtRSI;
+        b_k = ix0;
+        int32_T exitg1;
+        do {
+          exitg1 = 0;
+          if (b_k <= kend) {
+            if (muDoubleScalarIsNaN(x[b_k - 1])) {
+              exitg1 = 1;
+            } else {
+              b_k++;
+            }
+          } else {
+            y = rtInf;
+            exitg1 = 1;
+          }
+        } while (exitg1 == 0);
+      }
     }
   }
   return y;
@@ -108,6 +129,24 @@ real_T c_xnrm2(int32_T n, const real_T x[3])
         y += t * t;
       }
       y = scale * muDoubleScalarSqrt(y);
+      if (muDoubleScalarIsNaN(y)) {
+        int32_T k;
+        k = 2;
+        int32_T exitg1;
+        do {
+          exitg1 = 0;
+          if (k < 4) {
+            if (muDoubleScalarIsNaN(x[k - 1])) {
+              exitg1 = 1;
+            } else {
+              k++;
+            }
+          } else {
+            y = rtInf;
+            exitg1 = 1;
+          }
+        } while (exitg1 == 0);
+      }
     }
   }
   return y;
@@ -122,6 +161,7 @@ real_T d_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[6], int32_T ix0)
   real_T y;
   int32_T k;
   int32_T kend;
+  boolean_T b;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -151,7 +191,28 @@ real_T d_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[6], int32_T ix0)
       y += t * t;
     }
   }
-  return scale * muDoubleScalarSqrt(y);
+  y = scale * muDoubleScalarSqrt(y);
+  b = muDoubleScalarIsNaN(y);
+  if (b) {
+    int32_T b_k;
+    b_st.site = &kd_emlrtRSI;
+    b_k = ix0;
+    int32_T exitg1;
+    do {
+      exitg1 = 0;
+      if (b_k <= kend) {
+        if (muDoubleScalarIsNaN(x[b_k - 1])) {
+          exitg1 = 1;
+        } else {
+          b_k++;
+        }
+      } else {
+        y = rtInf;
+        exitg1 = 1;
+      }
+    } while (exitg1 == 0);
+  }
+  return y;
 }
 
 real_T e_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[54], int32_T ix0)
@@ -163,6 +224,7 @@ real_T e_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[54], int32_T ix0)
   real_T y;
   int32_T k;
   int32_T kend;
+  boolean_T b;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -192,7 +254,28 @@ real_T e_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[54], int32_T ix0)
       y += t * t;
     }
   }
-  return scale * muDoubleScalarSqrt(y);
+  y = scale * muDoubleScalarSqrt(y);
+  b = muDoubleScalarIsNaN(y);
+  if (b) {
+    int32_T b_k;
+    b_st.site = &kd_emlrtRSI;
+    b_k = ix0;
+    int32_T exitg1;
+    do {
+      exitg1 = 0;
+      if (b_k <= kend) {
+        if (muDoubleScalarIsNaN(x[b_k - 1])) {
+          exitg1 = 1;
+        } else {
+          b_k++;
+        }
+      } else {
+        y = rtInf;
+        exitg1 = 1;
+      }
+    } while (exitg1 == 0);
+  }
+  return y;
 }
 
 real_T f_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[16], int32_T ix0)
@@ -238,6 +321,25 @@ real_T f_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[16], int32_T ix0)
         }
       }
       y = scale * muDoubleScalarSqrt(y);
+      if (muDoubleScalarIsNaN(y)) {
+        int32_T b_k;
+        b_st.site = &kd_emlrtRSI;
+        b_k = ix0;
+        int32_T exitg1;
+        do {
+          exitg1 = 0;
+          if (b_k <= kend) {
+            if (muDoubleScalarIsNaN(x[b_k - 1])) {
+              exitg1 = 1;
+            } else {
+              b_k++;
+            }
+          } else {
+            y = rtInf;
+            exitg1 = 1;
+          }
+        } while (exitg1 == 0);
+      }
     }
   }
   return y;
@@ -252,6 +354,7 @@ real_T g_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[4], int32_T ix0)
   real_T y;
   int32_T k;
   int32_T kend;
+  boolean_T b;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -281,7 +384,28 @@ real_T g_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[4], int32_T ix0)
       y += t * t;
     }
   }
-  return scale * muDoubleScalarSqrt(y);
+  y = scale * muDoubleScalarSqrt(y);
+  b = muDoubleScalarIsNaN(y);
+  if (b) {
+    int32_T b_k;
+    b_st.site = &kd_emlrtRSI;
+    b_k = ix0;
+    int32_T exitg1;
+    do {
+      exitg1 = 0;
+      if (b_k <= kend) {
+        if (muDoubleScalarIsNaN(x[b_k - 1])) {
+          exitg1 = 1;
+        } else {
+          b_k++;
+        }
+      } else {
+        y = rtInf;
+        exitg1 = 1;
+      }
+    } while (exitg1 == 0);
+  }
+  return y;
 }
 
 real_T h_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[40], int32_T ix0)
@@ -293,6 +417,7 @@ real_T h_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[40], int32_T ix0)
   real_T y;
   int32_T k;
   int32_T kend;
+  boolean_T b;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -322,7 +447,28 @@ real_T h_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[40], int32_T ix0)
       y += t * t;
     }
   }
-  return scale * muDoubleScalarSqrt(y);
+  y = scale * muDoubleScalarSqrt(y);
+  b = muDoubleScalarIsNaN(y);
+  if (b) {
+    int32_T b_k;
+    b_st.site = &kd_emlrtRSI;
+    b_k = ix0;
+    int32_T exitg1;
+    do {
+      exitg1 = 0;
+      if (b_k <= kend) {
+        if (muDoubleScalarIsNaN(x[b_k - 1])) {
+          exitg1 = 1;
+        } else {
+          b_k++;
+        }
+      } else {
+        y = rtInf;
+        exitg1 = 1;
+      }
+    } while (exitg1 == 0);
+  }
+  return y;
 }
 
 real_T i_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[60], int32_T ix0)
@@ -334,6 +480,7 @@ real_T i_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[60], int32_T ix0)
   real_T y;
   int32_T k;
   int32_T kend;
+  boolean_T b;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
@@ -363,7 +510,28 @@ real_T i_xnrm2(const emlrtStack *sp, int32_T n, const real_T x[60], int32_T ix0)
       y += t * t;
     }
   }
-  return scale * muDoubleScalarSqrt(y);
+  y = scale * muDoubleScalarSqrt(y);
+  b = muDoubleScalarIsNaN(y);
+  if (b) {
+    int32_T b_k;
+    b_st.site = &kd_emlrtRSI;
+    b_k = ix0;
+    int32_T exitg1;
+    do {
+      exitg1 = 0;
+      if (b_k <= kend) {
+        if (muDoubleScalarIsNaN(x[b_k - 1])) {
+          exitg1 = 1;
+        } else {
+          b_k++;
+        }
+      } else {
+        y = rtInf;
+        exitg1 = 1;
+      }
+    } while (exitg1 == 0);
+  }
+  return y;
 }
 
 real_T j_xnrm2(const real_T x[3])
@@ -371,6 +539,7 @@ real_T j_xnrm2(const real_T x[3])
   real_T scale;
   real_T y;
   int32_T k;
+  boolean_T b;
   y = 0.0;
   scale = 3.3121686421112381E-170;
   for (k = 2; k < 4; k++) {
@@ -387,7 +556,27 @@ real_T j_xnrm2(const real_T x[3])
       y += t * t;
     }
   }
-  return scale * muDoubleScalarSqrt(y);
+  y = scale * muDoubleScalarSqrt(y);
+  b = muDoubleScalarIsNaN(y);
+  if (b) {
+    int32_T b_k;
+    b_k = 2;
+    int32_T exitg1;
+    do {
+      exitg1 = 0;
+      if (b_k <= 3) {
+        if (muDoubleScalarIsNaN(x[b_k - 1])) {
+          exitg1 = 1;
+        } else {
+          b_k++;
+        }
+      } else {
+        y = rtInf;
+        exitg1 = 1;
+      }
+    } while (exitg1 == 0);
+  }
+  return y;
 }
 
 real_T xnrm2(const emlrtStack *sp, int32_T n, const real_T x[36], int32_T ix0)
@@ -433,6 +622,25 @@ real_T xnrm2(const emlrtStack *sp, int32_T n, const real_T x[36], int32_T ix0)
         }
       }
       y = scale * muDoubleScalarSqrt(y);
+      if (muDoubleScalarIsNaN(y)) {
+        int32_T b_k;
+        b_st.site = &kd_emlrtRSI;
+        b_k = ix0;
+        int32_T exitg1;
+        do {
+          exitg1 = 0;
+          if (b_k <= kend) {
+            if (muDoubleScalarIsNaN(x[b_k - 1])) {
+              exitg1 = 1;
+            } else {
+              b_k++;
+            }
+          } else {
+            y = rtInf;
+            exitg1 = 1;
+          }
+        } while (exitg1 == 0);
+      }
     }
   }
   return y;

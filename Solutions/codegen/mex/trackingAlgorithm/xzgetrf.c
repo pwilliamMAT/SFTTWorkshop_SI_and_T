@@ -59,11 +59,11 @@ int32_T xzgetrf(const emlrtStack *sp, real_T A[16], int32_T ipiv[4])
     jj = j * 5;
     jp1j = b + 2;
     jA = 5 - j;
-    st.site = &sbb_emlrtRSI;
-    b_st.site = &oh_emlrtRSI;
+    st.site = &ubb_emlrtRSI;
+    b_st.site = &ph_emlrtRSI;
     a = 0;
     smax = muDoubleScalarAbs(A[jj]);
-    c_st.site = &ph_emlrtRSI;
+    c_st.site = &qh_emlrtRSI;
     for (k = 2; k < jA; k++) {
       real_T s;
       s = muDoubleScalarAbs(A[(b + k) - 1]);
@@ -90,24 +90,24 @@ int32_T xzgetrf(const emlrtStack *sp, real_T A[16], int32_T ipiv[4])
         A[jA + 12] = smax;
       }
       jA = (jj - j) + 4;
-      st.site = &tbb_emlrtRSI;
+      st.site = &vbb_emlrtRSI;
       for (k = jp1j; k <= jA; k++) {
         A[k - 1] /= A[jj];
       }
     } else {
       info = j + 1;
     }
-    st.site = &ubb_emlrtRSI;
-    b_st.site = &vbb_emlrtRSI;
-    c_st.site = &lf_emlrtRSI;
-    d_st.site = &mf_emlrtRSI;
+    st.site = &wbb_emlrtRSI;
+    b_st.site = &xbb_emlrtRSI;
+    c_st.site = &mf_emlrtRSI;
+    d_st.site = &nf_emlrtRSI;
     jA = jj + 6;
-    e_st.site = &nf_emlrtRSI;
+    e_st.site = &of_emlrtRSI;
     for (k = 0; k <= mmj; k++) {
       smax = A[(b + (k << 2)) + 4];
       if (smax != 0.0) {
         a = (jA - j) + 2;
-        e_st.site = &of_emlrtRSI;
+        e_st.site = &pf_emlrtRSI;
         if ((jA <= a) && (a > 2147483646)) {
           f_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&f_st);

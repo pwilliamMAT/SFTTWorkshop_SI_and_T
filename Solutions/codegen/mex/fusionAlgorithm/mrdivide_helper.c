@@ -14,42 +14,28 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo vk_emlrtRSI = {
-    42,      /* lineNo */
-    "mrdiv", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\mrdivide_"
-    "helper.m" /* pathName */
+static emlrtRSInfo wk_emlrtRSI = {
+    42,                                                          /* lineNo */
+    "mrdiv",                                                     /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/mrdivide_helper.m" /* pathName */
 };
 
-static emlrtRSInfo
-    xk_emlrtRSI =
-        {
-            107,          /* lineNo */
-            "lusolveNxN", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\lusolve.m" /* pathName */
+static emlrtRSInfo yk_emlrtRSI = {
+    107,                                                 /* lineNo */
+    "lusolveNxN",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/lusolve.m" /* pathName */
 };
 
-static emlrtRSInfo
-    al_emlrtRSI =
-        {
-            135,          /* lineNo */
-            "XtimesInvA", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\lusolve.m" /* pathName */
+static emlrtRSInfo bl_emlrtRSI = {
+    135,                                                 /* lineNo */
+    "XtimesInvA",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/lusolve.m" /* pathName */
 };
 
-static emlrtRSInfo
-    bl_emlrtRSI =
-        {
-            140,          /* lineNo */
-            "XtimesInvA", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\lusolve.m" /* pathName */
+static emlrtRSInfo cl_emlrtRSI = {
+    140,                                                 /* lineNo */
+    "XtimesInvA",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/lusolve.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -77,14 +63,14 @@ void mrdiv(const emlrtStack *sp, real_T A[6], const real_T B[36])
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &vk_emlrtRSI;
-  b_st.site = &wk_emlrtRSI;
-  c_st.site = &xk_emlrtRSI;
-  d_st.site = &al_emlrtRSI;
-  memcpy(&b_A[0], &B[0], 36U * sizeof(real_T));
-  e_st.site = &cl_emlrtRSI;
-  info = xzgetrf(&e_st, b_A, ipiv);
+  st.site = &wk_emlrtRSI;
+  b_st.site = &xk_emlrtRSI;
+  c_st.site = &yk_emlrtRSI;
   d_st.site = &bl_emlrtRSI;
+  memcpy(&b_A[0], &B[0], 36U * sizeof(real_T));
+  e_st.site = &dl_emlrtRSI;
+  info = xzgetrf(&e_st, b_A, ipiv);
+  d_st.site = &cl_emlrtRSI;
   for (j = 0; j < 6; j++) {
     jAcol = 6 * j;
     for (k = 0; k < j; k++) {
@@ -115,9 +101,9 @@ void mrdiv(const emlrtStack *sp, real_T A[6], const real_T B[36])
     }
   }
   if (info > 0) {
-    c_st.site = &yk_emlrtRSI;
+    c_st.site = &al_emlrtRSI;
     if (!emlrtSetWarningFlag(&c_st)) {
-      d_st.site = &jl_emlrtRSI;
+      d_st.site = &kl_emlrtRSI;
       c_warning(&d_st);
     }
   }

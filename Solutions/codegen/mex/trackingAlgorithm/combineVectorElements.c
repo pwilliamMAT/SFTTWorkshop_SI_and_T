@@ -14,12 +14,13 @@
 #include "trackingAlgorithm_types.h"
 
 /* Variable Definitions */
-static emlrtRSInfo rgb_emlrtRSI = {
-    188,                /* lineNo */
-    "colMajorFlatIter", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\combin"
-    "eVectorElements.m" /* pathName */
+static emlrtRSInfo
+    tgb_emlrtRSI =
+        {
+            188,                /* lineNo */
+            "colMajorFlatIter", /* fcnName */
+            "/MATLAB/toolbox/eml/lib/matlab/datafun/private/"
+            "combineVectorElements.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -49,14 +50,14 @@ void b_combineVectorElements(const emlrtStack *sp, const emxArray_boolean_T *x,
     int32_T npages;
     int32_T xpageoffset;
     boolean_T overflow;
-    st.site = &fdb_emlrtRSI;
+    st.site = &hdb_emlrtRSI;
     npages = x->size[1];
     xpageoffset = y->size[0] * y->size[1];
     y->size[0] = 1;
     y->size[1] = x->size[1];
     emxEnsureCapacity_int32_T(&st, y, xpageoffset, &bh_emlrtRTEI);
     y_data = y->data;
-    b_st.site = &rgb_emlrtRSI;
+    b_st.site = &tgb_emlrtRSI;
     if (x->size[1] > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -65,7 +66,7 @@ void b_combineVectorElements(const emlrtStack *sp, const emxArray_boolean_T *x,
     for (i = 0; i < npages; i++) {
       xpageoffset = i * x->size[0];
       y_data[i] = x_data[xpageoffset];
-      b_st.site = &gdb_emlrtRSI;
+      b_st.site = &idb_emlrtRSI;
       if (overflow) {
         c_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&c_st);
@@ -98,9 +99,9 @@ int32_T c_combineVectorElements(const emlrtStack *sp,
   if (x->size[0] == 0) {
     y = 0;
   } else {
-    st.site = &fdb_emlrtRSI;
+    st.site = &hdb_emlrtRSI;
     y = x_data[0];
-    b_st.site = &gdb_emlrtRSI;
+    b_st.site = &idb_emlrtRSI;
     if (x->size[0] > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -132,9 +133,9 @@ int32_T combineVectorElements(const emlrtStack *sp, const emxArray_boolean_T *x)
   if (x->size[1] == 0) {
     y = 0;
   } else {
-    st.site = &fdb_emlrtRSI;
+    st.site = &hdb_emlrtRSI;
     y = x_data[0];
-    b_st.site = &gdb_emlrtRSI;
+    b_st.site = &idb_emlrtRSI;
     if (x->size[1] > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);

@@ -332,23 +332,23 @@ struct emxArray_uint32_T_51x2 {
 typedef struct emxArray_uint32_T_51x2 emxArray_uint32_T_51x2;
 #endif /* typedef_emxArray_uint32_T_51x2 */
 
-#ifndef typedef_cell_wrap_81
-#define typedef_cell_wrap_81
+#ifndef typedef_cell_wrap_80
+#define typedef_cell_wrap_80
 typedef struct {
   emxArray_uint32_T_51x2 f1;
-} cell_wrap_81;
-#endif /* typedef_cell_wrap_81 */
+} cell_wrap_80;
+#endif /* typedef_cell_wrap_80 */
 
-#ifndef typedef_emxArray_cell_wrap_81
-#define typedef_emxArray_cell_wrap_81
+#ifndef typedef_emxArray_cell_wrap_80
+#define typedef_emxArray_cell_wrap_80
 typedef struct {
-  cell_wrap_81 *data;
+  cell_wrap_80 *data;
   int32_T *size;
   int32_T allocatedSize;
   int32_T numDimensions;
   boolean_T canFreeData;
-} emxArray_cell_wrap_81;
-#endif /* typedef_emxArray_cell_wrap_81 */
+} emxArray_cell_wrap_80;
+#endif /* typedef_emxArray_cell_wrap_80 */
 
 #ifndef struct_emxArray_uint32_T
 #define struct_emxArray_uint32_T
@@ -365,23 +365,23 @@ struct emxArray_uint32_T {
 typedef struct emxArray_uint32_T emxArray_uint32_T;
 #endif /* typedef_emxArray_uint32_T */
 
-#ifndef typedef_cell_wrap_82
-#define typedef_cell_wrap_82
+#ifndef typedef_cell_wrap_81
+#define typedef_cell_wrap_81
 typedef struct {
   emxArray_uint32_T *f1;
-} cell_wrap_82;
-#endif /* typedef_cell_wrap_82 */
+} cell_wrap_81;
+#endif /* typedef_cell_wrap_81 */
 
-#ifndef typedef_emxArray_cell_wrap_82
-#define typedef_emxArray_cell_wrap_82
+#ifndef typedef_emxArray_cell_wrap_81
+#define typedef_emxArray_cell_wrap_81
 typedef struct {
-  cell_wrap_82 *data;
+  cell_wrap_81 *data;
   int32_T *size;
   int32_T allocatedSize;
   int32_T numDimensions;
   boolean_T canFreeData;
-} emxArray_cell_wrap_82;
-#endif /* typedef_emxArray_cell_wrap_82 */
+} emxArray_cell_wrap_81;
+#endif /* typedef_emxArray_cell_wrap_81 */
 
 #ifndef typedef_c_emxArray_struct_T
 #define typedef_c_emxArray_struct_T

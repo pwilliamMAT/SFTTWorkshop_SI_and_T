@@ -21,368 +21,264 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo dt_emlrtRSI = {
-    20,         /* lineNo */
-    "mldivide", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\mldivide.m" /* pathName
-                                                                         */
-};
-
 static emlrtRSInfo et_emlrtRSI = {
-    44,      /* lineNo */
-    "mldiv", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\mldivide.m" /* pathName
-                                                                         */
+    20,                                             /* lineNo */
+    "mldivide",                                     /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/mldivide.m" /* pathName */
 };
 
 static emlrtRSInfo ft_emlrtRSI = {
-    42,      /* lineNo */
-    "mldiv", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\mldivide.m" /* pathName
-                                                                         */
+    44,                                             /* lineNo */
+    "mldiv",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/mldivide.m" /* pathName */
 };
 
-static emlrtRSInfo
-    gt_emlrtRSI =
-        {
-            109,          /* lineNo */
-            "lusolveNxN", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\lusolve.m" /* pathName */
+static emlrtRSInfo gt_emlrtRSI = {
+    42,                                             /* lineNo */
+    "mldiv",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/mldivide.m" /* pathName */
 };
 
-static emlrtRSInfo
-    ht_emlrtRSI =
-        {
-            124,          /* lineNo */
-            "InvAtimesX", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\lusolve.m" /* pathName */
+static emlrtRSInfo ht_emlrtRSI = {
+    109,                                                 /* lineNo */
+    "lusolveNxN",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/lusolve.m" /* pathName */
 };
 
 static emlrtRSInfo it_emlrtRSI = {
-    19,        /* lineNo */
-    "xgetrfs", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgetrfs.m" /* pathName */
+    124,                                                 /* lineNo */
+    "InvAtimesX",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/lusolve.m" /* pathName */
 };
 
 static emlrtRSInfo jt_emlrtRSI = {
-    108,      /* lineNo */
-    "cmldiv", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgetrfs.m" /* pathName */
+    19,                                                          /* lineNo */
+    "xgetrfs",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgetrfs.m" /* pathName */
 };
 
 static emlrtRSInfo kt_emlrtRSI = {
-    70,       /* lineNo */
-    "cmldiv", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgetrfs.m" /* pathName */
+    108,                                                         /* lineNo */
+    "cmldiv",                                                    /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgetrfs.m" /* pathName */
 };
 
-static emlrtRSInfo
-    nt_emlrtRSI =
-        {
-            61,        /* lineNo */
-            "qrsolve", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pathName */
+static emlrtRSInfo lt_emlrtRSI = {
+    70,                                                          /* lineNo */
+    "cmldiv",                                                    /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgetrfs.m" /* pathName */
 };
 
-static emlrtRSInfo
-    ot_emlrtRSI =
-        {
-            72,        /* lineNo */
-            "qrsolve", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pathName */
+static emlrtRSInfo ot_emlrtRSI = {
+    61,                                                  /* lineNo */
+    "qrsolve",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pathName */
 };
 
-static emlrtRSInfo
-    pt_emlrtRSI =
-        {
-            85,        /* lineNo */
-            "qrsolve", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pathName */
+static emlrtRSInfo pt_emlrtRSI = {
+    72,                                                  /* lineNo */
+    "qrsolve",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pathName */
 };
 
 static emlrtRSInfo qt_emlrtRSI = {
-    63,       /* lineNo */
-    "xgeqp3", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pathName */
+    85,                                                  /* lineNo */
+    "qrsolve",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pathName */
 };
 
 static emlrtRSInfo rt_emlrtRSI = {
-    158,            /* lineNo */
-    "ceval_xgeqp3", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pathName */
+    63,                                                         /* lineNo */
+    "xgeqp3",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pathName */
 };
 
 static emlrtRSInfo st_emlrtRSI = {
-    154,            /* lineNo */
-    "ceval_xgeqp3", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pathName */
+    158,                                                        /* lineNo */
+    "ceval_xgeqp3",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pathName */
 };
 
 static emlrtRSInfo tt_emlrtRSI = {
-    151,            /* lineNo */
-    "ceval_xgeqp3", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pathName */
+    154,                                                        /* lineNo */
+    "ceval_xgeqp3",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pathName */
 };
 
 static emlrtRSInfo ut_emlrtRSI = {
-    148,            /* lineNo */
-    "ceval_xgeqp3", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pathName */
+    151,                                                        /* lineNo */
+    "ceval_xgeqp3",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pathName */
 };
 
 static emlrtRSInfo vt_emlrtRSI = {
-    143,            /* lineNo */
-    "ceval_xgeqp3", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pathName */
+    148,                                                        /* lineNo */
+    "ceval_xgeqp3",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pathName */
 };
 
 static emlrtRSInfo wt_emlrtRSI = {
-    141,            /* lineNo */
-    "ceval_xgeqp3", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pathName */
+    143,                                                        /* lineNo */
+    "ceval_xgeqp3",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pathName */
 };
 
 static emlrtRSInfo xt_emlrtRSI = {
-    138,            /* lineNo */
-    "ceval_xgeqp3", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pathName */
+    141,                                                        /* lineNo */
+    "ceval_xgeqp3",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pathName */
 };
 
-static emlrtRSInfo
-    yt_emlrtRSI =
-        {
-            172,          /* lineNo */
-            "rankFromQR", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pathName */
+static emlrtRSInfo yt_emlrtRSI = {
+    138,                                                        /* lineNo */
+    "ceval_xgeqp3",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pathName */
 };
 
-static emlrtRSInfo
-    au_emlrtRSI =
-        {
-            173,          /* lineNo */
-            "rankFromQR", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pathName */
+static emlrtRSInfo au_emlrtRSI = {
+    172,                                                 /* lineNo */
+    "rankFromQR",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pathName */
 };
 
-static emlrtRSInfo
-    bu_emlrtRSI =
-        {
-            119,         /* lineNo */
-            "LSQFromQR", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pathName */
+static emlrtRSInfo bu_emlrtRSI = {
+    173,                                                 /* lineNo */
+    "rankFromQR",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pathName */
 };
 
-static emlrtRSInfo
-    cu_emlrtRSI =
-        {
-            128,         /* lineNo */
-            "LSQFromQR", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pathName */
+static emlrtRSInfo cu_emlrtRSI = {
+    119,                                                 /* lineNo */
+    "LSQFromQR",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pathName */
 };
 
-static emlrtRSInfo
-    du_emlrtRSI =
-        {
-            138,         /* lineNo */
-            "LSQFromQR", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pathName */
+static emlrtRSInfo du_emlrtRSI = {
+    128,                                                 /* lineNo */
+    "LSQFromQR",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pathName */
 };
 
 static emlrtRSInfo eu_emlrtRSI = {
-    40,         /* lineNo */
-    "xunormqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xunormqr.m" /* pathName */
+    138,                                                 /* lineNo */
+    "LSQFromQR",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pathName */
 };
 
 static emlrtRSInfo fu_emlrtRSI = {
-    106,              /* lineNo */
-    "ceval_xunormqr", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xunormqr.m" /* pathName */
+    40,                                                           /* lineNo */
+    "xunormqr",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xunormqr.m" /* pathName */
 };
 
 static emlrtRSInfo gu_emlrtRSI = {
-    26,        /* lineNo */
-    "xgetrfs", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgetrfs.m" /* pathName */
+    106,                                                          /* lineNo */
+    "ceval_xunormqr",                                             /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xunormqr.m" /* pathName */
 };
 
 static emlrtRSInfo hu_emlrtRSI = {
-    27,        /* lineNo */
-    "xgetrfs", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgetrfs.m" /* pathName */
+    26,                                                          /* lineNo */
+    "xgetrfs",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgetrfs.m" /* pathName */
+};
+
+static emlrtRSInfo iu_emlrtRSI = {
+    27,                                                          /* lineNo */
+    "xgetrfs",                                                   /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgetrfs.m" /* pathName */
 };
 
 static emlrtMCInfo c_emlrtMCI = {
     53,        /* lineNo */
     19,        /* colNo */
     "flt2str", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\coder\\coder\\lib\\+coder\\+"
-    "internal\\flt2str.m" /* pName */
+    "/MATLAB/toolbox/shared/coder/coder/lib/+coder/+internal/flt2str.m" /* pName
+                                                                         */
 };
 
 static emlrtRTEInfo yb_emlrtRTEI = {
-    16,         /* lineNo */
-    19,         /* colNo */
-    "mldivide", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\mldivide.m" /* pName
-                                                                         */
+    16,                                             /* lineNo */
+    19,                                             /* colNo */
+    "mldivide",                                     /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/mldivide.m" /* pName */
 };
 
 static emlrtRTEInfo eg_emlrtRTEI = {
-    20,         /* lineNo */
-    5,          /* colNo */
-    "mldivide", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\mldivide.m" /* pName
-                                                                         */
+    20,                                             /* lineNo */
+    5,                                              /* colNo */
+    "mldivide",                                     /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/mldivide.m" /* pName */
 };
 
 static emlrtRTEInfo fg_emlrtRTEI = {
-    1,        /* lineNo */
-    32,       /* colNo */
-    "xgeqp3", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pName */
+    1,                                                          /* lineNo */
+    32,                                                         /* colNo */
+    "xgeqp3",                                                   /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pName */
 };
 
 static emlrtRTEInfo gg_emlrtRTEI = {
-    61,       /* lineNo */
-    9,        /* colNo */
-    "xgeqp3", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pName */
+    61,                                                         /* lineNo */
+    9,                                                          /* colNo */
+    "xgeqp3",                                                   /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pName */
 };
 
 static emlrtRTEInfo hg_emlrtRTEI = {
-    48,        /* lineNo */
-    37,        /* colNo */
-    "xgetrfs", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgetrfs.m" /* pName */
+    48,                                                          /* lineNo */
+    37,                                                          /* colNo */
+    "xgetrfs",                                                   /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgetrfs.m" /* pName */
 };
 
 static emlrtRTEInfo ig_emlrtRTEI = {
-    92,       /* lineNo */
-    22,       /* colNo */
-    "xgeqp3", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pName */
+    92,                                                         /* lineNo */
+    22,                                                         /* colNo */
+    "xgeqp3",                                                   /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pName */
 };
 
 static emlrtRTEInfo jg_emlrtRTEI = {
-    105,      /* lineNo */
-    1,        /* colNo */
-    "xgeqp3", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgeqp3.m" /* pName */
+    105,                                                        /* lineNo */
+    1,                                                          /* colNo */
+    "xgeqp3",                                                   /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgeqp3.m" /* pName */
 };
 
 static emlrtRTEInfo kg_emlrtRTEI = {
-    70,        /* lineNo */
-    23,        /* colNo */
-    "xgetrfs", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
-    "lapack\\xgetrfs.m" /* pName */
+    70,                                                          /* lineNo */
+    23,                                                          /* colNo */
+    "xgetrfs",                                                   /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xgetrfs.m" /* pName */
 };
 
-static emlrtRTEInfo
-    lg_emlrtRTEI =
-        {
-            85,        /* lineNo */
-            26,        /* colNo */
-            "qrsolve", /* fName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pName */
+static emlrtRTEInfo lg_emlrtRTEI = {
+    85,                                                  /* lineNo */
+    26,                                                  /* colNo */
+    "qrsolve",                                           /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pName */
 };
 
-static emlrtRTEInfo
-    mg_emlrtRTEI =
-        {
-            119,       /* lineNo */
-            5,         /* colNo */
-            "qrsolve", /* fName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\qrsolve.m" /* pName */
+static emlrtRTEInfo mg_emlrtRTEI = {
+    119,                                                 /* lineNo */
+    5,                                                   /* colNo */
+    "qrsolve",                                           /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/qrsolve.m" /* pName */
 };
 
 static emlrtRTEInfo ng_emlrtRTEI = {
-    1,          /* lineNo */
-    14,         /* colNo */
-    "mldivide", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\mldivide.m" /* pName
-                                                                         */
+    1,                                              /* lineNo */
+    14,                                             /* colNo */
+    "mldivide",                                     /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/ops/mldivide.m" /* pName */
 };
 
-static emlrtRSInfo hw_emlrtRSI = {
+static emlrtRSInfo iw_emlrtRSI = {
     53,        /* lineNo */
     "flt2str", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\coder\\coder\\lib\\+coder\\+"
-    "internal\\flt2str.m" /* pathName */
+    "/MATLAB/toolbox/shared/coder/coder/lib/+coder/+internal/flt2str.m" /* pathName
+                                                                         */
 };
 
 /* Function Declarations */
@@ -474,16 +370,16 @@ void b_mldivide(const emlrtStack *sp, const real_T A[36], real_T Y[36])
   f_st.tls = e_st.tls;
   g_st.prev = &f_st;
   g_st.tls = f_st.tls;
-  st.site = &dt_emlrtRSI;
-  b_st.site = &ft_emlrtRSI;
-  c_st.site = &wk_emlrtRSI;
-  d_st.site = &gt_emlrtRSI;
-  e_st.site = &ht_emlrtRSI;
-  f_st.site = &gu_emlrtRSI;
-  memcpy(&b_A[0], &A[0], 36U * sizeof(real_T));
-  g_st.site = &cl_emlrtRSI;
-  info = xzgetrf(&g_st, b_A, ipiv);
+  st.site = &et_emlrtRSI;
+  b_st.site = &gt_emlrtRSI;
+  c_st.site = &xk_emlrtRSI;
+  d_st.site = &ht_emlrtRSI;
+  e_st.site = &it_emlrtRSI;
   f_st.site = &hu_emlrtRSI;
+  memcpy(&b_A[0], &A[0], 36U * sizeof(real_T));
+  g_st.site = &dl_emlrtRSI;
+  info = xzgetrf(&g_st, b_A, ipiv);
+  f_st.site = &iu_emlrtRSI;
   for (i = 0; i < 36; i++) {
     Y[i] = iv[i];
   }
@@ -531,9 +427,9 @@ void b_mldivide(const emlrtStack *sp, const real_T A[36], real_T Y[36])
     }
   }
   if (info > 0) {
-    d_st.site = &yk_emlrtRSI;
+    d_st.site = &al_emlrtRSI;
     if (!emlrtSetWarningFlag(&d_st)) {
-      e_st.site = &jl_emlrtRSI;
+      e_st.site = &kl_emlrtRSI;
       c_warning(&e_st);
     }
   }
@@ -597,7 +493,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     emlrtErrorWithMessageIdR2018a(sp, &yb_emlrtRTEI, "MATLAB:dimagree",
                                   "MATLAB:dimagree", 0);
   }
-  st.site = &dt_emlrtRSI;
+  st.site = &et_emlrtRSI;
   emxInit_real_T(&st, &b_A, 2, &ng_emlrtRTEI);
   emxInit_ptrdiff_t(&st, &jpvt_t, &jg_emlrtRTEI);
   if (A->size[0] == A->size[1]) {
@@ -607,8 +503,8 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     int32_T ma;
     int32_T na;
     int32_T rankA;
-    b_st.site = &ft_emlrtRSI;
-    c_st.site = &wk_emlrtRSI;
+    b_st.site = &gt_emlrtRSI;
+    c_st.site = &xk_emlrtRSI;
     rankA = B->size[0];
     ma = Y->size[0];
     Y->size[0] = B->size[0];
@@ -617,13 +513,13 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     for (j = 0; j < rankA; j++) {
       Y_data[j] = B_data[j];
     }
-    d_st.site = &gt_emlrtRSI;
-    e_st.site = &ht_emlrtRSI;
+    d_st.site = &ht_emlrtRSI;
+    e_st.site = &it_emlrtRSI;
     ma = A->size[0];
     na = A->size[1];
     ma = muIntScalarMin_sint32(ma, na);
     na = muIntScalarMin_sint32(rankA, ma);
-    f_st.site = &it_emlrtRSI;
+    f_st.site = &jt_emlrtRSI;
     ma = b_A->size[0] * b_A->size[1];
     b_A->size[0] = A->size[0];
     b_A->size[1] = A->size[1];
@@ -633,7 +529,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     for (j = 0; j < ma; j++) {
       b_A_data[j] = A_data[j];
     }
-    g_st.site = &kt_emlrtRSI;
+    g_st.site = &lt_emlrtRSI;
     ma = jpvt_t->size[0];
     jpvt_t->size[0] = na;
     emxEnsureCapacity_ptrdiff_t(&g_st, jpvt_t, ma, &kg_emlrtRTEI);
@@ -641,7 +537,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     N = (ptrdiff_t)na;
     LDA = (ptrdiff_t)b_A->size[0];
     INFO = LAPACKE_dgetrf_work(102, N, N, &b_A_data[0], LDA, &jpvt_t_data[0]);
-    g_st.site = &jt_emlrtRSI;
+    g_st.site = &kt_emlrtRSI;
     if ((int32_T)INFO < 0) {
       if ((int32_T)INFO == -1010) {
         emlrtErrorWithMessageIdR2018a(&g_st, &p_emlrtRTEI, "MATLAB:nomem",
@@ -656,9 +552,9 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     LAPACKE_dgetrs_work(102, 'N', N, (ptrdiff_t)1, &b_A_data[0], LDA,
                         &jpvt_t_data[0], &Y_data[0], (ptrdiff_t)B->size[0]);
     if ((int32_T)INFO > 0) {
-      d_st.site = &yk_emlrtRSI;
+      d_st.site = &al_emlrtRSI;
       if (!emlrtSetWarningFlag(&d_st)) {
-        e_st.site = &jl_emlrtRSI;
+        e_st.site = &kl_emlrtRSI;
         c_warning(&e_st);
       }
     }
@@ -670,8 +566,8 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     int32_T na;
     int32_T rankA;
     boolean_T overflow;
-    b_st.site = &et_emlrtRSI;
-    c_st.site = &nt_emlrtRSI;
+    b_st.site = &ft_emlrtRSI;
+    c_st.site = &ot_emlrtRSI;
     rankA = A->size[0];
     ma = b_A->size[0] * b_A->size[1];
     b_A->size[0] = A->size[0];
@@ -692,7 +588,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     for (j = 0; j < loop_ub; j++) {
       jpvt_data[j] = 0;
     }
-    d_st.site = &qt_emlrtRSI;
+    d_st.site = &rt_emlrtRSI;
     na = muIntScalarMin_sint32(rankA, loop_ub);
     emxInit_real_T(&d_st, &tau, 1, &ng_emlrtRTEI);
     ma = tau->size[0];
@@ -709,7 +605,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     N = LAPACKE_dgeqp3(102, (ptrdiff_t)b_A->size[0], (ptrdiff_t)b_A->size[1],
                        &b_A_data[0], (ptrdiff_t)b_A->size[0], &jpvt_t_data[0],
                        &tau_data[0]);
-    e_st.site = &xt_emlrtRSI;
+    e_st.site = &yt_emlrtRSI;
     if ((int32_T)N != 0) {
       overflow = true;
       if ((int32_T)N != -4) {
@@ -727,14 +623,14 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
       overflow = false;
     }
     if (overflow) {
-      e_st.site = &wt_emlrtRSI;
+      e_st.site = &xt_emlrtRSI;
       if (b_A->size[1] > 2147483646) {
         f_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&f_st);
       }
       overflow = (b_A->size[0] > 2147483646);
       for (j = 0; j < loop_ub; j++) {
-        e_st.site = &vt_emlrtRSI;
+        e_st.site = &wt_emlrtRSI;
         if (overflow) {
           f_st.site = &tb_emlrtRSI;
           check_forloop_overflow_error(&f_st);
@@ -743,7 +639,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
           b_A_data[j * rankA + i] = rtNaN;
         }
       }
-      e_st.site = &ut_emlrtRSI;
+      e_st.site = &vt_emlrtRSI;
       if (na > 2147483646) {
         f_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&f_st);
@@ -752,11 +648,11 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
         tau_data[j] = rtNaN;
       }
       ma = na + 1;
-      e_st.site = &tt_emlrtRSI;
+      e_st.site = &ut_emlrtRSI;
       for (j = ma; j <= na; j++) {
         tau_data[j - 1] = 0.0;
       }
-      e_st.site = &st_emlrtRSI;
+      e_st.site = &tt_emlrtRSI;
       ma = (b_A->size[1] / 4) << 2;
       na = ma - 4;
       for (j = 0; j <= na; j += 4) {
@@ -771,7 +667,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
         jpvt_data[j] = j + 1;
       }
     } else {
-      e_st.site = &rt_emlrtRSI;
+      e_st.site = &st_emlrtRSI;
       if (b_A->size[1] > 2147483646) {
         f_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&f_st);
@@ -780,7 +676,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
         jpvt_data[j] = (int32_T)jpvt_t_data[j];
       }
     }
-    c_st.site = &ot_emlrtRSI;
+    c_st.site = &pt_emlrtRSI;
     rankA = 0;
     if (b_A->size[0] < b_A->size[1]) {
       ma = b_A->size[0];
@@ -799,7 +695,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     }
     if ((rankA < ma) && (!emlrtSetWarningFlag(&c_st))) {
       char_T str[14];
-      d_st.site = &au_emlrtRSI;
+      d_st.site = &bu_emlrtRSI;
       y = NULL;
       m = emlrtCreateCharArray(2, &b_iv[0]);
       emlrtInitCharArrayR2013a(&d_st, 6, m, &rfmt[0]);
@@ -807,13 +703,13 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
       b_y = NULL;
       m = emlrtCreateDoubleScalar(tol);
       emlrtAssign(&b_y, m);
-      e_st.site = &hw_emlrtRSI;
+      e_st.site = &iw_emlrtRSI;
       emlrt_marshallIn(&e_st, b_sprintf(&e_st, y, b_y, &c_emlrtMCI),
                        "<output of sprintf>", str);
-      d_st.site = &yt_emlrtRSI;
+      d_st.site = &au_emlrtRSI;
       d_warning(&d_st, rankA, str);
     }
-    c_st.site = &pt_emlrtRSI;
+    c_st.site = &qt_emlrtRSI;
     emxInit_real_T(&c_st, &b_B, 1, &lg_emlrtRTEI);
     na = B->size[0];
     ma = b_B->size[0];
@@ -831,15 +727,15 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     for (j = 0; j < na; j++) {
       Y_data[j] = 0.0;
     }
-    d_st.site = &bu_emlrtRSI;
-    e_st.site = &eu_emlrtRSI;
+    d_st.site = &cu_emlrtRSI;
+    e_st.site = &fu_emlrtRSI;
     N = (ptrdiff_t)b_B->size[0];
     N = LAPACKE_dormqr(
         102, 'L', 'T', N, (ptrdiff_t)1,
         (ptrdiff_t)muIntScalarMin_sint32(b_A->size[0], b_A->size[1]),
         &b_A_data[0], (ptrdiff_t)b_A->size[0], &tau_data[0], &b_B_data[0], N);
     emxFree_real_T(&e_st, &tau);
-    f_st.site = &fu_emlrtRSI;
+    f_st.site = &gu_emlrtRSI;
     if ((int32_T)N != 0) {
       boolean_T p;
       overflow = true;
@@ -875,7 +771,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
         b_B_data[j] = rtNaN;
       }
     }
-    d_st.site = &cu_emlrtRSI;
+    d_st.site = &du_emlrtRSI;
     if (rankA > 2147483646) {
       e_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -887,7 +783,7 @@ void mldivide(const emlrtStack *sp, const emxArray_real_T *A,
     for (j = rankA; j >= 1; j--) {
       ma = jpvt_data[j - 1];
       Y_data[ma - 1] /= b_A_data[(j + b_A->size[0] * (j - 1)) - 1];
-      d_st.site = &du_emlrtRSI;
+      d_st.site = &eu_emlrtRSI;
       for (i = 0; i <= j - 2; i++) {
         Y_data[jpvt_data[i] - 1] -=
             Y_data[ma - 1] * b_A_data[i + b_A->size[0] * (j - 1)];

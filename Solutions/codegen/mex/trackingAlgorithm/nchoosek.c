@@ -15,87 +15,55 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo
-    feb_emlrtRSI =
-        {
-            56,         /* lineNo */
-            "nchoosek", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\nchoose"
-            "k.m" /* pathName */
+static emlrtRSInfo heb_emlrtRSI = {
+    56,                                                 /* lineNo */
+    "nchoosek",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/nchoosek.m" /* pathName */
 };
 
-static emlrtRSInfo
-    geb_emlrtRSI =
-        {
-            141,   /* lineNo */
-            "nCk", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\nchoose"
-            "k.m" /* pathName */
+static emlrtRSInfo ieb_emlrtRSI = {
+    141,                                                /* lineNo */
+    "nCk",                                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/nchoosek.m" /* pathName */
 };
 
-static emlrtRSInfo
-    heb_emlrtRSI =
-        {
-            142,   /* lineNo */
-            "nCk", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\nchoose"
-            "k.m" /* pathName */
+static emlrtRSInfo jeb_emlrtRSI = {
+    142,                                                /* lineNo */
+    "nCk",                                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/nchoosek.m" /* pathName */
 };
 
-static emlrtRSInfo
-    ieb_emlrtRSI =
-        {
-            129,   /* lineNo */
-            "nCk", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\nchoose"
-            "k.m" /* pathName */
+static emlrtRSInfo keb_emlrtRSI = {
+    129,                                                /* lineNo */
+    "nCk",                                              /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/nchoosek.m" /* pathName */
 };
 
-static emlrtRSInfo
-    jeb_emlrtRSI =
-        {
-            153,        /* lineNo */
-            "nCkInt64", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\nchoose"
-            "k.m" /* pathName */
+static emlrtRSInfo leb_emlrtRSI = {
+    153,                                                /* lineNo */
+    "nCkInt64",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/nchoosek.m" /* pathName */
 };
 
-static emlrtRTEInfo
-    sb_emlrtRTEI =
-        {
-            38,         /* lineNo */
-            26,         /* colNo */
-            "nchoosek", /* fName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\nchoose"
-            "k.m" /* pName */
+static emlrtRTEInfo sb_emlrtRTEI = {
+    38,                                                 /* lineNo */
+    26,                                                 /* colNo */
+    "nchoosek",                                         /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/nchoosek.m" /* pName */
 };
 
-static emlrtRTEInfo
-    tb_emlrtRTEI =
-        {
-            17,         /* lineNo */
-            23,         /* colNo */
-            "nchoosek", /* fName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\nchoose"
-            "k.m" /* pName */
+static emlrtRTEInfo tb_emlrtRTEI = {
+    17,                                                 /* lineNo */
+    23,                                                 /* colNo */
+    "nchoosek",                                         /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/nchoosek.m" /* pName */
 };
 
-static emlrtRTEInfo
-    ql_emlrtRTEI =
-        {
-            155,        /* lineNo */
-            13,         /* colNo */
-            "nCkInt64", /* fName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\nchoose"
-            "k.m" /* pName */
+static emlrtRTEInfo ql_emlrtRTEI = {
+    155,                                                /* lineNo */
+    13,                                                 /* colNo */
+    "nCkInt64",                                         /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/specfun/nchoosek.m" /* pName */
 };
 
 /* Function Declarations */
@@ -186,7 +154,7 @@ real_T nchoosek(const emlrtStack *sp, real_T x, real_T k)
   } else if (r == 1.0) {
     y = x;
   } else {
-    st.site = &feb_emlrtRSI;
+    st.site = &heb_emlrtRSI;
     if (muDoubleScalarIsInf(x) ||
         (muDoubleScalarIsInf(r) || muDoubleScalarIsNaN(r))) {
       y = rtNaN;
@@ -211,7 +179,7 @@ real_T nchoosek(const emlrtStack *sp, real_T x, real_T k)
         uint64_T n;
         uint64_T yint;
         boolean_T exitg1;
-        b_st.site = &ieb_emlrtRSI;
+        b_st.site = &keb_emlrtRSI;
         y = muDoubleScalarRound(x);
         if (y < 1.8446744073709552E+19) {
           n = (uint64_T)y;
@@ -223,23 +191,23 @@ real_T nchoosek(const emlrtStack *sp, real_T x, real_T k)
           if (y >= 0.0) {
             b_k = (uint64_T)y;
           } else {
-            b_k = 0ULL;
+            b_k = 0UL;
           }
         } else {
-          b_k = 0ULL;
+          b_k = 0UL;
         }
-        yint = 1ULL;
-        c_st.site = &jeb_emlrtRSI;
-        if (b_k > 18446744073709551614ULL) {
+        yint = 1UL;
+        c_st.site = &leb_emlrtRSI;
+        if (b_k > 18446744073709551614UL) {
           d_st.site = &k_emlrtRSI;
           b_check_forloop_overflow_error(&d_st);
         }
-        b_i = 1ULL;
+        b_i = 1UL;
         exitg1 = false;
         while ((!exitg1) && (b_i <= b_k)) {
           uint64_T q_tmp;
           q_tmp = yint / b_i;
-          if (n == 0ULL) {
+          if (n == 0UL) {
             emlrtDivisionByZeroErrorR2012b(&ql_emlrtRTEI, &b_st);
           } else {
             u = MAX_uint64_T / n;
@@ -264,7 +232,7 @@ real_T nchoosek(const emlrtStack *sp, real_T x, real_T k)
           (!emlrtSetWarningFlag(&st))) {
         char_T b_str[23];
         char_T str[23];
-        b_st.site = &heb_emlrtRSI;
+        b_st.site = &jeb_emlrtRSI;
         b_y = NULL;
         m = emlrtCreateCharArray(2, &b_iv[0]);
         emlrtInitCharArrayR2013a(&b_st, 7, m, &rfmt[0]);
@@ -272,10 +240,10 @@ real_T nchoosek(const emlrtStack *sp, real_T x, real_T k)
         c_y = NULL;
         m = emlrtCreateDoubleScalar(maxRelErr);
         emlrtAssign(&c_y, m);
-        c_st.site = &yob_emlrtRSI;
+        c_st.site = &bpb_emlrtRSI;
         emlrt_marshallIn(&c_st, b_sprintf(&c_st, b_y, c_y, &d_emlrtMCI),
                          "<output of sprintf>", str);
-        b_st.site = &heb_emlrtRSI;
+        b_st.site = &jeb_emlrtRSI;
         d_y = NULL;
         m = emlrtCreateCharArray(2, &b_iv1[0]);
         emlrtInitCharArrayR2013a(&b_st, 7, m, &rfmt[0]);
@@ -283,10 +251,10 @@ real_T nchoosek(const emlrtStack *sp, real_T x, real_T k)
         e_y = NULL;
         m = emlrtCreateDoubleScalar(muDoubleScalarCeil(maxRelErr * y));
         emlrtAssign(&e_y, m);
-        c_st.site = &yob_emlrtRSI;
+        c_st.site = &bpb_emlrtRSI;
         emlrt_marshallIn(&c_st, b_sprintf(&c_st, d_y, e_y, &d_emlrtMCI),
                          "<output of sprintf>", b_str);
-        b_st.site = &geb_emlrtRSI;
+        b_st.site = &ieb_emlrtRSI;
         d_warning(&b_st, str, b_str);
       }
     }

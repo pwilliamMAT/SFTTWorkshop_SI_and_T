@@ -28,509 +28,393 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo pc_emlrtRSI =
-    {
-        142,                       /* lineNo */
-        "trackingEKF/trackingEKF", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
+static emlrtRSInfo pc_emlrtRSI = {
+    142,                                                      /* lineNo */
+    "trackingEKF/trackingEKF",                                /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
-static emlrtRSInfo qc_emlrtRSI =
-    {
-        143,                       /* lineNo */
-        "trackingEKF/trackingEKF", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
+static emlrtRSInfo qc_emlrtRSI = {
+    143,                                                      /* lineNo */
+    "trackingEKF/trackingEKF",                                /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
-static emlrtRSInfo rc_emlrtRSI =
-    {
-        135,                       /* lineNo */
-        "trackingEKF/trackingEKF", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
+static emlrtRSInfo rc_emlrtRSI = {
+    135,                                                      /* lineNo */
+    "trackingEKF/trackingEKF",                                /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
-static emlrtRSInfo sc_emlrtRSI =
-    {
-        144,                       /* lineNo */
-        "trackingEKF/trackingEKF", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
+static emlrtRSInfo sc_emlrtRSI = {
+    144,                                                      /* lineNo */
+    "trackingEKF/trackingEKF",                                /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
 static emlrtRSInfo yc_emlrtRSI = {
     535,                                         /* lineNo */
     "ExtendedKalmanFilter/ExtendedKalmanFilter", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
-static emlrtRSInfo fk_emlrtRSI = {
+static emlrtRSInfo gk_emlrtRSI = {
     1639,                                                          /* lineNo */
     "ExtendedKalmanFilter/stateCovarianceScalarExpandIfNecessary", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
-};
-
-static emlrtRSInfo fu_emlrtRSI =
-    {
-        168,                   /* lineNo */
-        "trackingEKF/predict", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
-};
-
-static emlrtRSInfo gu_emlrtRSI =
-    {
-        171,                   /* lineNo */
-        "trackingEKF/predict", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo hu_emlrtRSI = {
-    154,                                          /* lineNo */
-    "AbstractSmoother/setupInitialDistributions", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\smoothers\\+matlabshared\\+"
-    "smoothers\\+internal\\AbstractSmoother.m" /* pathName */
+    168,                                                      /* lineNo */
+    "trackingEKF/predict",                                    /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
 static emlrtRSInfo iu_emlrtRSI = {
-    42,                                          /* lineNo */
-    "LinearizedSmoother/ensureMethodDefinition", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\smoothers\\+matlabshared\\+"
-    "smoothers\\+internal\\LinearizedSmoother.m" /* pathName */
+    171,                                                      /* lineNo */
+    "trackingEKF/predict",                                    /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
 static emlrtRSInfo ju_emlrtRSI = {
-    31,                                               /* lineNo */
-    "LinearizedSmoother/ensureLastJacobianIsDefined", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\smoothers\\+matlabshared\\+"
-    "smoothers\\+internal\\LinearizedSmoother.m" /* pathName */
+    154,                                          /* lineNo */
+    "AbstractSmoother/setupInitialDistributions", /* fcnName */
+    "/MATLAB/toolbox/shared/smoothers/+matlabshared/+smoothers/+internal/"
+    "AbstractSmoother.m" /* pathName */
 };
 
 static emlrtRSInfo ku_emlrtRSI = {
-    220,                                      /* lineNo */
-    "GaussianSmoother/getStateAndCovariance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\smoothers\\+matlabshared\\+"
-    "smoothers\\+internal\\GaussianSmoother.m" /* pathName */
+    42,                                          /* lineNo */
+    "LinearizedSmoother/ensureMethodDefinition", /* fcnName */
+    "/MATLAB/toolbox/shared/smoothers/+matlabshared/+smoothers/+internal/"
+    "LinearizedSmoother.m" /* pathName */
 };
 
 static emlrtRSInfo lu_emlrtRSI = {
-    611,                            /* lineNo */
-    "ExtendedKalmanFilter/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    31,                                               /* lineNo */
+    "LinearizedSmoother/ensureLastJacobianIsDefined", /* fcnName */
+    "/MATLAB/toolbox/shared/smoothers/+matlabshared/+smoothers/+internal/"
+    "LinearizedSmoother.m" /* pathName */
 };
 
 static emlrtRSInfo mu_emlrtRSI = {
-    614,                            /* lineNo */
-    "ExtendedKalmanFilter/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    220,                                      /* lineNo */
+    "GaussianSmoother/getStateAndCovariance", /* fcnName */
+    "/MATLAB/toolbox/shared/smoothers/+matlabshared/+smoothers/+internal/"
+    "GaussianSmoother.m" /* pathName */
 };
 
 static emlrtRSInfo nu_emlrtRSI = {
-    1593,                                                   /* lineNo */
-    "ExtendedKalmanFilter/ensureFilterPredictionReadiness", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    611,                            /* lineNo */
+    "ExtendedKalmanFilter/predict", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo ou_emlrtRSI = {
-    1594,                                                   /* lineNo */
-    "ExtendedKalmanFilter/ensureFilterPredictionReadiness", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    614,                            /* lineNo */
+    "ExtendedKalmanFilter/predict", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo pu_emlrtRSI = {
-    1618,                                                   /* lineNo */
+    1593,                                                   /* lineNo */
     "ExtendedKalmanFilter/ensureFilterPredictionReadiness", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo qu_emlrtRSI = {
-    1628,                                                   /* lineNo */
+    1594,                                                   /* lineNo */
     "ExtendedKalmanFilter/ensureFilterPredictionReadiness", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
+};
+
+static emlrtRSInfo ru_emlrtRSI = {
+    1618,                                                   /* lineNo */
+    "ExtendedKalmanFilter/ensureFilterPredictionReadiness", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo su_emlrtRSI = {
-    1920,                                               /* lineNo */
-    "ExtendedKalmanFilter/ensureProcessNoiseIsDefined", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
-};
-
-static emlrtRSInfo tu_emlrtRSI = {
-    1652,                                                       /* lineNo */
-    "ExtendedKalmanFilter/processNoiseScalarExpandIfNecessary", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    1628,                                                   /* lineNo */
+    "ExtendedKalmanFilter/ensureFilterPredictionReadiness", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo uu_emlrtRSI = {
+    1920,                                               /* lineNo */
+    "ExtendedKalmanFilter/ensureProcessNoiseIsDefined", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
+};
+
+static emlrtRSInfo vu_emlrtRSI = {
+    1652,                                                       /* lineNo */
+    "ExtendedKalmanFilter/processNoiseScalarExpandIfNecessary", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
+};
+
+static emlrtRSInfo wu_emlrtRSI = {
     13,                                                   /* lineNo */
     "EKFPredictorNonAdditive/validateStateTransitionFcn", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFPredictorNonA"
-    "dditive.m" /* pathName */
-};
-
-static emlrtRSInfo bv_emlrtRSI = {
-    1941,                                                      /* lineNo */
-    "ExtendedKalmanFilter/validateStateTransitionJacobianFcn", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
-};
-
-static emlrtRSInfo cv_emlrtRSI = {
-    1943,                                                      /* lineNo */
-    "ExtendedKalmanFilter/validateStateTransitionJacobianFcn", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFPredictorNonAdditive.m" /* pathName */
 };
 
 static emlrtRSInfo dv_emlrtRSI = {
-    18,                                                           /* lineNo */
-    "EKFPredictorNonAdditive/validateStateTransitionJacobianFcn", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFPredictorNonA"
-    "dditive.m" /* pathName */
+    1941,                                                      /* lineNo */
+    "ExtendedKalmanFilter/validateStateTransitionJacobianFcn", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo ev_emlrtRSI = {
+    1943,                                                      /* lineNo */
+    "ExtendedKalmanFilter/validateStateTransitionJacobianFcn", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
+};
+
+static emlrtRSInfo fv_emlrtRSI = {
+    18,                                                           /* lineNo */
+    "EKFPredictorNonAdditive/validateStateTransitionJacobianFcn", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFPredictorNonAdditive.m" /* pathName */
+};
+
+static emlrtRSInfo gv_emlrtRSI = {
     13,                                /* lineNo */
     "predictStateNonAdditiveJacobian", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "internal\\+utils\\predictStateNonAdditiveJ"
-    "acobian.m" /* pathName */
-};
-
-static emlrtRSInfo jv_emlrtRSI = {
-    64,                                /* lineNo */
-    "EKFPredictorNonAdditive/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFPredictorNonA"
-    "dditive.m" /* pathName */
-};
-
-static emlrtRSInfo kv_emlrtRSI = {
-    66,                                /* lineNo */
-    "EKFPredictorNonAdditive/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFPredictorNonA"
-    "dditive.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
+    "predictStateNonAdditiveJacobian.m" /* pathName */
 };
 
 static emlrtRSInfo lv_emlrtRSI = {
-    67,                                /* lineNo */
+    64,                                /* lineNo */
     "EKFPredictorNonAdditive/predict", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFPredictorNonA"
-    "dditive.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFPredictorNonAdditive.m" /* pathName */
 };
 
 static emlrtRSInfo mv_emlrtRSI = {
+    66,                                /* lineNo */
+    "EKFPredictorNonAdditive/predict", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFPredictorNonAdditive.m" /* pathName */
+};
+
+static emlrtRSInfo nv_emlrtRSI = {
+    67,                                /* lineNo */
+    "EKFPredictorNonAdditive/predict", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFPredictorNonAdditive.m" /* pathName */
+};
+
+static emlrtRSInfo ov_emlrtRSI = {
     102,                                          /* lineNo */
     "EKFPredictorNonAdditive/predictionMatrices", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFPredictorNonA"
-    "dditive.m" /* pathName */
-};
-
-static emlrtRSInfo sy_emlrtRSI =
-    {
-        349,                    /* lineNo */
-        "trackingEKF/residual", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
-};
-
-static emlrtRSInfo ty_emlrtRSI = {
-    720,                             /* lineNo */
-    "ExtendedKalmanFilter/residual", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFPredictorNonAdditive.m" /* pathName */
 };
 
 static emlrtRSInfo uy_emlrtRSI = {
-    730,                             /* lineNo */
-    "ExtendedKalmanFilter/residual", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    349,                                                      /* lineNo */
+    "trackingEKF/residual",                                   /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
 static emlrtRSInfo vy_emlrtRSI = {
-    735,                             /* lineNo */
+    720,                             /* lineNo */
     "ExtendedKalmanFilter/residual", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo wy_emlrtRSI = {
-    733,                             /* lineNo */
+    730,                             /* lineNo */
     "ExtendedKalmanFilter/residual", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo xy_emlrtRSI = {
+    735,                             /* lineNo */
+    "ExtendedKalmanFilter/residual", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
+};
+
+static emlrtRSInfo yy_emlrtRSI = {
+    733,                             /* lineNo */
+    "ExtendedKalmanFilter/residual", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
+};
+
+static emlrtRSInfo aab_emlrtRSI = {
     14,                         /* lineNo */
     "validateInputSizeAndType", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\validateInputSiz"
-    "eAndType.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/validateInputSizeAndType.m" /* pathName */
 };
 
-static emlrtRSInfo cbb_emlrtRSI = {
+static emlrtRSInfo ebb_emlrtRSI = {
     128,                     /* lineNo */
     "EKFCorrector/residual", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrector.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrector.m" /* pathName */
 };
 
-static emlrtRSInfo dbb_emlrtRSI = {
+static emlrtRSInfo fbb_emlrtRSI = {
     129,                     /* lineNo */
     "EKFCorrector/residual", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrector.m" /* pathName */
-};
-
-static emlrtRSInfo kcb_emlrtRSI =
-    {
-        395,                      /* lineNo */
-        "trackingEKF/likelihood", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
-};
-
-static emlrtRSInfo lcb_emlrtRSI =
-    {
-        396,                      /* lineNo */
-        "trackingEKF/likelihood", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrector.m" /* pathName */
 };
 
 static emlrtRSInfo mcb_emlrtRSI = {
-    19,                 /* lineNo */
-    "KalmanLikelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\KalmanLikelihood"
-    ".m" /* pathName */
+    395,                                                      /* lineNo */
+    "trackingEKF/likelihood",                                 /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
 static emlrtRSInfo ncb_emlrtRSI = {
-    21,                 /* lineNo */
-    "KalmanLikelihood", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\KalmanLikelihood"
-    ".m" /* pathName */
+    396,                                                      /* lineNo */
+    "trackingEKF/likelihood",                                 /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
 static emlrtRSInfo ocb_emlrtRSI = {
-    21,    /* lineNo */
-    "det", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\det.m" /* pathName
-                                                                       */
+    19,                 /* lineNo */
+    "KalmanLikelihood", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/KalmanLikelihood.m" /* pathName */
 };
 
-static emlrtRSInfo imb_emlrtRSI =
-    {
-        188,                   /* lineNo */
-        "trackingEKF/correct", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
+static emlrtRSInfo pcb_emlrtRSI = {
+    21,                 /* lineNo */
+    "KalmanLikelihood", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/KalmanLikelihood.m" /* pathName */
 };
 
-static emlrtRSInfo jmb_emlrtRSI =
-    {
-        191,                   /* lineNo */
-        "trackingEKF/correct", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackingE"
-        "KF.m" /* pathName */
+static emlrtRSInfo qcb_emlrtRSI = {
+    21,                                           /* lineNo */
+    "det",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/det.m" /* pathName */
 };
 
 static emlrtRSInfo kmb_emlrtRSI = {
-    660,                            /* lineNo */
-    "ExtendedKalmanFilter/correct", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    188,                                                      /* lineNo */
+    "trackingEKF/correct",                                    /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
 static emlrtRSInfo lmb_emlrtRSI = {
-    670,                            /* lineNo */
-    "ExtendedKalmanFilter/correct", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    191,                                                      /* lineNo */
+    "trackingEKF/correct",                                    /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/fusionlib/trackingEKF.m" /* pathName */
 };
 
 static emlrtRSInfo mmb_emlrtRSI = {
-    676,                            /* lineNo */
+    660,                            /* lineNo */
     "ExtendedKalmanFilter/correct", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo nmb_emlrtRSI = {
-    673,                            /* lineNo */
+    670,                            /* lineNo */
     "ExtendedKalmanFilter/correct", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\ExtendedKalmanFi"
-    "lter.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo omb_emlrtRSI = {
-    93,                     /* lineNo */
-    "EKFCorrector/correct", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrector.m" /* pathName */
+    676,                            /* lineNo */
+    "ExtendedKalmanFilter/correct", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo pmb_emlrtRSI = {
-    94,                     /* lineNo */
-    "EKFCorrector/correct", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrector.m" /* pathName */
+    673,                            /* lineNo */
+    "ExtendedKalmanFilter/correct", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/ExtendedKalmanFilter.m" /* pathName */
 };
 
 static emlrtRSInfo qmb_emlrtRSI = {
-    101,                    /* lineNo */
+    93,                     /* lineNo */
     "EKFCorrector/correct", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrector.m" /* pathName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrector.m" /* pathName */
 };
 
 static emlrtRSInfo rmb_emlrtRSI = {
-    44,                                           /* lineNo */
-    "EKFCorrector/correctStateAndSqrtCovariance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrector.m" /* pathName */
+    94,                     /* lineNo */
+    "EKFCorrector/correct", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrector.m" /* pathName */
 };
 
 static emlrtRSInfo smb_emlrtRSI = {
-    58,                                           /* lineNo */
-    "EKFCorrector/correctStateAndSqrtCovariance", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\trackinglib\\+"
-    "matlabshared\\+tracking\\+internal\\EKFCorrector.m" /* pathName */
+    101,                    /* lineNo */
+    "EKFCorrector/correct", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrector.m" /* pathName */
 };
 
 static emlrtRSInfo tmb_emlrtRSI = {
-    95,         /* lineNo */
-    "linsolve", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\linsolve.m" /* pathName
-                                                                            */
+    44,                                           /* lineNo */
+    "EKFCorrector/correctStateAndSqrtCovariance", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrector.m" /* pathName */
 };
 
 static emlrtRSInfo umb_emlrtRSI = {
-    406,       /* lineNo */
-    "solveLT", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\linsolve.m" /* pathName
-                                                                            */
+    58,                                           /* lineNo */
+    "EKFCorrector/correctStateAndSqrtCovariance", /* fcnName */
+    "/MATLAB/toolbox/shared/tracking/trackinglib/+matlabshared/+tracking/"
+    "+internal/EKFCorrector.m" /* pathName */
 };
 
 static emlrtRSInfo vmb_emlrtRSI = {
-    102,        /* lineNo */
-    "linsolve", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\linsolve.m" /* pathName
-                                                                            */
+    95,                                                /* lineNo */
+    "linsolve",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/linsolve.m" /* pathName */
 };
 
 static emlrtRSInfo wmb_emlrtRSI = {
-    444,       /* lineNo */
-    "solveUT", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\linsolve.m" /* pathName
-                                                                            */
+    406,                                               /* lineNo */
+    "solveLT",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/linsolve.m" /* pathName */
 };
 
 static emlrtRSInfo xmb_emlrtRSI = {
-    448,       /* lineNo */
-    "solveUT", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\linsolve.m" /* pathName
-                                                                            */
+    102,                                               /* lineNo */
+    "linsolve",                                        /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/linsolve.m" /* pathName */
+};
+
+static emlrtRSInfo ymb_emlrtRSI = {
+    444,                                               /* lineNo */
+    "solveUT",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/linsolve.m" /* pathName */
+};
+
+static emlrtRSInfo anb_emlrtRSI = {
+    448,                                               /* lineNo */
+    "solveUT",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/matfun/linsolve.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -604,10 +488,10 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
   k_st.tls = j_st.tls;
   l_st.prev = &k_st;
   l_st.tls = k_st.tls;
-  st.site = &imb_emlrtRSI;
-  b_st.site = &kmb_emlrtRSI;
-  c_st.site = &xy_emlrtRSI;
-  d_st.site = &fe_emlrtRSI;
+  st.site = &kmb_emlrtRSI;
+  b_st.site = &mmb_emlrtRSI;
+  c_st.site = &aab_emlrtRSI;
+  d_st.site = &ge_emlrtRSI;
   p = true;
   i = 0;
   exitg1 = false;
@@ -625,13 +509,13 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
         &d_st, &f_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:ExtendedKalmanFilter:expectedFinite", 3, 4, 1, "z");
   }
-  b_st.site = &lmb_emlrtRSI;
+  b_st.site = &nmb_emlrtRSI;
   c_ExtendedKalmanFilter_validate(&b_st, filter, varargin_3_OriginPosition,
                                   varargin_3_OriginVelocity,
                                   varargin_3_Orientation);
-  b_st.site = &mmb_emlrtRSI;
-  b_st.site = &nmb_emlrtRSI;
-  c_st.site = &omb_emlrtRSI;
+  b_st.site = &omb_emlrtRSI;
+  b_st.site = &pmb_emlrtRSI;
+  c_st.site = &qmb_emlrtRSI;
   c_EKFCorrectorAdditive_getMeasu(
       &c_st, filter->pSqrtMeasurementNoise, filter->pState,
       filter->pSqrtStateCovariance, varargin_3_OriginPosition,
@@ -640,10 +524,10 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
   _mm_storeu_pd(&residue[0], _mm_sub_pd(_mm_loadu_pd(&varargin_1[0]), r));
   r = _mm_loadu_pd(&residue[2]);
   _mm_storeu_pd(&residue[2], _mm_sub_pd(_mm_loadu_pd(&varargin_1[2]), r));
-  c_st.site = &pmb_emlrtRSI;
+  c_st.site = &rmb_emlrtRSI;
   wrapResidual(&c_st, residue);
-  c_st.site = &qmb_emlrtRSI;
-  d_st.site = &rmb_emlrtRSI;
+  c_st.site = &smb_emlrtRSI;
+  d_st.site = &tmb_emlrtRSI;
   for (b_i = 0; b_i < 6; b_i++) {
     i = b_i << 2;
     B[i] = K[b_i];
@@ -651,7 +535,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     B[i + 2] = K[b_i + 12];
     B[i + 3] = K[b_i + 18];
   }
-  e_st.site = &tmb_emlrtRSI;
+  e_st.site = &vmb_emlrtRSI;
   for (b_i = 0; b_i < 6; b_i++) {
     i = b_i << 2;
     K[i] = B[i];
@@ -666,9 +550,9 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     xnorm = Sy[i + (i << 2)];
     if ((xnorm == 0.0) ||
         (muDoubleScalarIsInf(xnorm) || muDoubleScalarIsNaN(xnorm))) {
-      f_st.site = &umb_emlrtRSI;
+      f_st.site = &wmb_emlrtRSI;
       if (!emlrtSetWarningFlag(&f_st)) {
-        g_st.site = &ybb_emlrtRSI;
+        g_st.site = &bcb_emlrtRSI;
         c_warning(&g_st);
       }
       exitg1 = true;
@@ -676,7 +560,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
       i++;
     }
   }
-  d_st.site = &rmb_emlrtRSI;
+  d_st.site = &tmb_emlrtRSI;
   for (b_i = 0; b_i < 4; b_i++) {
     i = b_i << 2;
     A[i] = Sy[b_i];
@@ -684,7 +568,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     A[i + 2] = Sy[b_i + 8];
     A[i + 3] = Sy[b_i + 12];
   }
-  e_st.site = &vmb_emlrtRSI;
+  e_st.site = &xmb_emlrtRSI;
   for (b_i = 0; b_i < 6; b_i++) {
     i = b_i << 2;
     B[i] = K[i];
@@ -692,7 +576,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     B[i + 2] = K[i + 2];
     B[i + 3] = K[i + 3];
   }
-  f_st.site = &wmb_emlrtRSI;
+  f_st.site = &ymb_emlrtRSI;
   b_trisolve(A, B);
   i = 0;
   exitg1 = false;
@@ -700,9 +584,9 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     xnorm = A[i + (i << 2)];
     if ((xnorm == 0.0) ||
         (muDoubleScalarIsInf(xnorm) || muDoubleScalarIsNaN(xnorm))) {
-      f_st.site = &xmb_emlrtRSI;
+      f_st.site = &anb_emlrtRSI;
       if (!emlrtSetWarningFlag(&f_st)) {
-        g_st.site = &ybb_emlrtRSI;
+        g_st.site = &bcb_emlrtRSI;
         c_warning(&g_st);
       }
       exitg1 = true;
@@ -740,7 +624,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     i = b_i + 6 * b_i;
     b_A[i]++;
   }
-  d_st.site = &smb_emlrtRSI;
+  d_st.site = &umb_emlrtRSI;
   for (b_i = 0; b_i < 6; b_i++) {
     for (c_i = 0; c_i < 6; c_i++) {
       xnorm = 0.0;
@@ -777,12 +661,12 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     M[10 * b_i + 8] = B[b_i + 12];
     M[10 * b_i + 9] = B[b_i + 18];
   }
-  e_st.site = &nv_emlrtRSI;
-  f_st.site = &ov_emlrtRSI;
-  g_st.site = &pv_emlrtRSI;
-  h_st.site = &qv_emlrtRSI;
-  i_st.site = &tv_emlrtRSI;
-  j_st.site = &uv_emlrtRSI;
+  e_st.site = &pv_emlrtRSI;
+  f_st.site = &qv_emlrtRSI;
+  g_st.site = &rv_emlrtRSI;
+  h_st.site = &sv_emlrtRSI;
+  i_st.site = &vv_emlrtRSI;
+  j_st.site = &wv_emlrtRSI;
   for (b_i = 0; b_i < 6; b_i++) {
     work[b_i] = 0.0;
   }
@@ -790,7 +674,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     int32_T ii;
     ii = d_i * 10 + d_i;
     atmp = M[ii];
-    k_st.site = &wv_emlrtRSI;
+    k_st.site = &yv_emlrtRSI;
     iaii = ii + 2;
     tau[d_i] = 0.0;
     l_st.site = &cd_emlrtRSI;
@@ -859,7 +743,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     M[ii] = atmp;
     if (d_i + 1 < 6) {
       M[ii] = 1.0;
-      k_st.site = &vv_emlrtRSI;
+      k_st.site = &xv_emlrtRSI;
       if (tau[d_i] != 0.0) {
         lastv = 10 - d_i;
         i = (ii - d_i) + 9;
@@ -867,23 +751,23 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
           lastv--;
           i--;
         }
-        l_st.site = &pf_emlrtRSI;
+        l_st.site = &qf_emlrtRSI;
         lastc = c_ilazlc(&l_st, lastv, 5 - d_i, M, ii + 11);
       } else {
         lastv = 0;
         lastc = 0;
       }
       if (lastv > 0) {
-        l_st.site = &qf_emlrtRSI;
-        d_xgemv(&l_st, lastv, lastc, M, ii + 11, M, ii + 1, work);
         l_st.site = &rf_emlrtRSI;
+        d_xgemv(&l_st, lastv, lastc, M, ii + 11, M, ii + 1, work);
+        l_st.site = &sf_emlrtRSI;
         d_xgerc(&l_st, lastv, lastc, -tau[d_i], ii + 1, work, M, ii + 11);
       }
       M[ii] = atmp;
     }
   }
   for (c_i = 0; c_i < 6; c_i++) {
-    h_st.site = &rv_emlrtRSI;
+    h_st.site = &tv_emlrtRSI;
     for (b_i = 0; b_i <= c_i; b_i++) {
       b_A[b_i + 6 * c_i] = M[b_i + 10 * c_i];
     }
@@ -892,9 +776,9 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
       memset(&b_A[(c_i * 6 + i) + -1], 0, (uint32_T)(-i + 7) * sizeof(real_T));
     }
   }
-  h_st.site = &sv_emlrtRSI;
-  i_st.site = &xv_emlrtRSI;
-  j_st.site = &yv_emlrtRSI;
+  h_st.site = &uv_emlrtRSI;
+  i_st.site = &aw_emlrtRSI;
+  j_st.site = &bw_emlrtRSI;
   for (b_i = 0; b_i < 6; b_i++) {
     work[b_i] = 0.0;
   }
@@ -902,7 +786,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     iaii = c_i + c_i * 10;
     if (c_i + 1 < 6) {
       M[iaii] = 1.0;
-      k_st.site = &cw_emlrtRSI;
+      k_st.site = &ew_emlrtRSI;
       if (tau[c_i] != 0.0) {
         lastc = 10 - c_i;
         i = (iaii - c_i) + 9;
@@ -910,21 +794,21 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
           lastc--;
           i--;
         }
-        l_st.site = &pf_emlrtRSI;
+        l_st.site = &qf_emlrtRSI;
         i = c_ilazlc(&l_st, lastc, 5 - c_i, M, iaii + 11);
       } else {
         lastc = 0;
         i = 0;
       }
       if (lastc > 0) {
-        l_st.site = &qf_emlrtRSI;
-        d_xgemv(&l_st, lastc, i, M, iaii + 11, M, iaii + 1, work);
         l_st.site = &rf_emlrtRSI;
+        d_xgemv(&l_st, lastc, i, M, iaii + 11, M, iaii + 1, work);
+        l_st.site = &sf_emlrtRSI;
         d_xgerc(&l_st, lastc, i, -tau[c_i], iaii + 1, work, M, iaii + 11);
       }
     }
     i = iaii + 2;
-    k_st.site = &bw_emlrtRSI;
+    k_st.site = &dw_emlrtRSI;
     lastc = (iaii - c_i) + 10;
     lastv = (((((lastc - iaii) - 1) / 2) << 1) + iaii) + 2;
     knt = lastv - 2;
@@ -936,7 +820,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
       M[b_i - 1] *= -tau[c_i];
     }
     M[iaii] = 1.0 - tau[c_i];
-    k_st.site = &aw_emlrtRSI;
+    k_st.site = &cw_emlrtRSI;
     for (b_i = 0; b_i < c_i; b_i++) {
       M[(iaii - b_i) - 1] = 0.0;
     }
@@ -961,7 +845,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
     r = _mm_add_pd(r1, r);
     _mm_storeu_pd(&filter->pState[b_i], r);
   }
-  b_st.site = &nmb_emlrtRSI;
+  b_st.site = &pmb_emlrtRSI;
   for (b_i = 0; b_i < 6; b_i++) {
     for (c_i = 0; c_i < 6; c_i++) {
       filter->pSqrtStateCovariance[c_i + 6 * b_i] = b_A[b_i + 6 * c_i];
@@ -969,7 +853,7 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
   }
   filter->pIsSetStateCovariance = true;
   filter->pSqrtStateCovarianceScalar = -1.0;
-  st.site = &jmb_emlrtRSI;
+  st.site = &lmb_emlrtRSI;
   if (!filter->pIsInitialized) {
     filter->pIsDistributionsSetup = true;
   }
@@ -999,21 +883,21 @@ real_T trackingEKF_likelihood(const emlrtStack *sp, trackingEKF *EKF,
   c_st.tls = b_st.tls;
   d_st.prev = &c_st;
   d_st.tls = c_st.tls;
-  st.site = &kcb_emlrtRSI;
+  st.site = &mcb_emlrtRSI;
   trackingEKF_residual(&st, EKF, z, varargin_1_f2_OriginPosition,
                        varargin_1_f2_OriginVelocity, varargin_1_f2_Orientation,
                        zres, S);
-  st.site = &lcb_emlrtRSI;
-  b_st.site = &mcb_emlrtRSI;
+  st.site = &ncb_emlrtRSI;
+  b_st.site = &ocb_emlrtRSI;
   Y[0] = zres[0];
   Y[1] = zres[1];
   Y[2] = zres[2];
   Y[3] = zres[3];
-  c_st.site = &kbb_emlrtRSI;
+  c_st.site = &mbb_emlrtRSI;
   mrdiv(&c_st, Y, S);
-  b_st.site = &ncb_emlrtRSI;
-  c_st.site = &ocb_emlrtRSI;
-  d_st.site = &rbb_emlrtRSI;
+  b_st.site = &pcb_emlrtRSI;
+  c_st.site = &qcb_emlrtRSI;
+  d_st.site = &tbb_emlrtRSI;
   xzgetrf(&d_st, S, ipiv);
   isodd = (ipiv[0] > 1);
   if (ipiv[1] > 2) {
@@ -1026,7 +910,7 @@ real_T trackingEKF_likelihood(const emlrtStack *sp, trackingEKF *EKF,
   if (isodd) {
     l = -l;
   }
-  b_st.site = &ncb_emlrtRSI;
+  b_st.site = &pcb_emlrtRSI;
   if (l < 0.0) {
     emlrtErrorWithMessageIdR2018a(
         &b_st, &d_emlrtRTEI, "Coder:toolbox:ElFunDomainError",
@@ -1095,35 +979,35 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
   j_st.tls = i_st.tls;
   k_st.prev = &j_st;
   k_st.tls = j_st.tls;
-  st.site = &fu_emlrtRSI;
-  b_st.site = &hu_emlrtRSI;
-  c_st.site = &iu_emlrtRSI;
+  st.site = &hu_emlrtRSI;
+  b_st.site = &ju_emlrtRSI;
+  c_st.site = &ku_emlrtRSI;
   if (!filter->IsLastJacobianInitialized) {
-    d_st.site = &ju_emlrtRSI;
-    e_st.site = &ku_emlrtRSI;
+    d_st.site = &lu_emlrtRSI;
+    e_st.site = &mu_emlrtRSI;
     filter->IsLastJacobianInitialized = true;
   }
   if (!filter->pIsDistributionsSetup) {
     filter->pIsDistributionsSetup = true;
   }
-  st.site = &gu_emlrtRSI;
-  b_st.site = &lu_emlrtRSI;
-  c_st.site = &nu_emlrtRSI;
-  d_st.site = &ru_emlrtRSI;
+  st.site = &iu_emlrtRSI;
+  b_st.site = &nu_emlrtRSI;
+  c_st.site = &pu_emlrtRSI;
+  d_st.site = &tu_emlrtRSI;
   if ((!filter->pIsSetStateCovariance) ||
       (filter->pSqrtStateCovarianceScalar != -1.0)) {
     xnorm = filter->pSqrtStateCovarianceScalar;
-    e_st.site = &fk_emlrtRSI;
+    e_st.site = &gk_emlrtRSI;
     for (i = 0; i < 36; i++) {
       filter->pSqrtStateCovariance[i] = xnorm * (real_T)iv[i];
     }
   }
-  c_st.site = &ou_emlrtRSI;
-  d_st.site = &su_emlrtRSI;
+  c_st.site = &qu_emlrtRSI;
+  d_st.site = &uu_emlrtRSI;
   if ((!filter->pIsSetProcessNoise) ||
       (filter->pSqrtProcessNoiseScalar != -1.0)) {
     xnorm = filter->pSqrtProcessNoiseScalar;
-    e_st.site = &tu_emlrtRSI;
+    e_st.site = &vu_emlrtRSI;
     for (i = 0; i < 9; i++) {
       filter->pSqrtProcessNoise[i] = xnorm * (real_T)b[i];
     }
@@ -1132,35 +1016,35 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
   }
   if (filter->pIsFirstCallPredict) {
     if (!filter->pIsValidStateTransitionFcn) {
-      c_st.site = &pu_emlrtRSI;
+      c_st.site = &ru_emlrtRSI;
       for (i = 0; i < 6; i++) {
         dv[i] = filter->pState[i];
       }
-      d_st.site = &uu_emlrtRSI;
+      d_st.site = &wu_emlrtRSI;
       predictStateNonAdditive(&d_st, dv, varargin_1);
       filter->pIsValidStateTransitionFcn = true;
     }
-    c_st.site = &qu_emlrtRSI;
-    d_st.site = &bv_emlrtRSI;
-    e_st.site = &dv_emlrtRSI;
-    f_st.site = &ev_emlrtRSI;
+    c_st.site = &su_emlrtRSI;
+    d_st.site = &dv_emlrtRSI;
+    e_st.site = &fv_emlrtRSI;
+    f_st.site = &gv_emlrtRSI;
     c_ConstantVelocityModel_predict(&f_st, filter->pState, varargin_1,
                                     filter->pJacobian, B);
-    d_st.site = &cv_emlrtRSI;
+    d_st.site = &ev_emlrtRSI;
     filter->pIsFirstCallPredict = false;
   }
-  b_st.site = &mu_emlrtRSI;
-  c_st.site = &jv_emlrtRSI;
-  d_st.site = &mv_emlrtRSI;
-  e_st.site = &ev_emlrtRSI;
+  b_st.site = &ou_emlrtRSI;
+  c_st.site = &lv_emlrtRSI;
+  d_st.site = &ov_emlrtRSI;
+  e_st.site = &gv_emlrtRSI;
   c_ConstantVelocityModel_predict(&e_st, filter->pState, varargin_1,
                                   filter->pJacobian, B);
   for (i = 0; i < 6; i++) {
     dv[i] = filter->pState[i];
   }
-  c_st.site = &kv_emlrtRSI;
+  c_st.site = &mv_emlrtRSI;
   predictStateNonAdditive(&c_st, dv, varargin_1);
-  c_st.site = &lv_emlrtRSI;
+  c_st.site = &nv_emlrtRSI;
   for (i = 0; i < 6; i++) {
     for (b_i = 0; b_i < 6; b_i++) {
       xnorm = 0.0;
@@ -1198,12 +1082,12 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
     M[9 * i + 7] = dv1[i + 6];
     M[9 * i + 8] = dv1[i + 12];
   }
-  d_st.site = &nv_emlrtRSI;
-  e_st.site = &ov_emlrtRSI;
-  f_st.site = &pv_emlrtRSI;
-  g_st.site = &qv_emlrtRSI;
-  h_st.site = &tv_emlrtRSI;
-  i_st.site = &uv_emlrtRSI;
+  d_st.site = &pv_emlrtRSI;
+  e_st.site = &qv_emlrtRSI;
+  f_st.site = &rv_emlrtRSI;
+  g_st.site = &sv_emlrtRSI;
+  h_st.site = &vv_emlrtRSI;
+  i_st.site = &wv_emlrtRSI;
   for (i = 0; i < 6; i++) {
     work[i] = 0.0;
   }
@@ -1211,7 +1095,7 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
     real_T atmp;
     ii = b_i * 9 + b_i;
     atmp = M[ii];
-    j_st.site = &wv_emlrtRSI;
+    j_st.site = &yv_emlrtRSI;
     itau = ii + 2;
     tau[b_i] = 0.0;
     k_st.site = &cd_emlrtRSI;
@@ -1282,7 +1166,7 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
     M[ii] = atmp;
     if (b_i + 1 < 6) {
       M[ii] = 1.0;
-      j_st.site = &vv_emlrtRSI;
+      j_st.site = &xv_emlrtRSI;
       if (tau[b_i] != 0.0) {
         lastv = 9 - b_i;
         d_i = (ii - b_i) + 8;
@@ -1290,23 +1174,23 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
           lastv--;
           d_i--;
         }
-        k_st.site = &pf_emlrtRSI;
+        k_st.site = &qf_emlrtRSI;
         lastc = ilazlc(&k_st, lastv, 5 - b_i, M, ii + 10);
       } else {
         lastv = 0;
         lastc = 0;
       }
       if (lastv > 0) {
-        k_st.site = &qf_emlrtRSI;
-        b_xgemv(&k_st, lastv, lastc, M, ii + 10, M, ii + 1, work);
         k_st.site = &rf_emlrtRSI;
+        b_xgemv(&k_st, lastv, lastc, M, ii + 10, M, ii + 1, work);
+        k_st.site = &sf_emlrtRSI;
         b_xgerc(&k_st, lastv, lastc, -tau[b_i], ii + 1, work, M, ii + 10);
       }
       M[ii] = atmp;
     }
   }
   for (b_i = 0; b_i < 6; b_i++) {
-    g_st.site = &rv_emlrtRSI;
+    g_st.site = &tv_emlrtRSI;
     for (i = 0; i <= b_i; i++) {
       b_filter[i + 6 * b_i] = M[i + 9 * b_i];
     }
@@ -1316,9 +1200,9 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
              (uint32_T)(-d_i + 7) * sizeof(real_T));
     }
   }
-  g_st.site = &sv_emlrtRSI;
-  h_st.site = &xv_emlrtRSI;
-  i_st.site = &yv_emlrtRSI;
+  g_st.site = &uv_emlrtRSI;
+  h_st.site = &aw_emlrtRSI;
+  i_st.site = &bw_emlrtRSI;
   itau = 5;
   for (i = 0; i < 6; i++) {
     work[i] = 0.0;
@@ -1327,7 +1211,7 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
     ii = c_i + c_i * 9;
     if (c_i + 1 < 6) {
       M[ii] = 1.0;
-      j_st.site = &cw_emlrtRSI;
+      j_st.site = &ew_emlrtRSI;
       if (tau[itau] != 0.0) {
         lastc = 9 - c_i;
         d_i = (ii - c_i) + 8;
@@ -1335,21 +1219,21 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
           lastc--;
           d_i--;
         }
-        k_st.site = &pf_emlrtRSI;
+        k_st.site = &qf_emlrtRSI;
         d_i = ilazlc(&k_st, lastc, 5 - c_i, M, ii + 10);
       } else {
         lastc = 0;
         d_i = 0;
       }
       if (lastc > 0) {
-        k_st.site = &qf_emlrtRSI;
-        b_xgemv(&k_st, lastc, d_i, M, ii + 10, M, ii + 1, work);
         k_st.site = &rf_emlrtRSI;
+        b_xgemv(&k_st, lastc, d_i, M, ii + 10, M, ii + 1, work);
+        k_st.site = &sf_emlrtRSI;
         b_xgerc(&k_st, lastc, d_i, -tau[itau], ii + 1, work, M, ii + 10);
       }
     }
     d_i = ii + 2;
-    j_st.site = &bw_emlrtRSI;
+    j_st.site = &dw_emlrtRSI;
     lastc = (ii - c_i) + 9;
     lastv = (((((lastc - ii) - 1) / 2) << 1) + ii) + 2;
     knt = lastv - 2;
@@ -1361,7 +1245,7 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
       M[i - 1] *= -tau[itau];
     }
     M[ii] = 1.0 - tau[itau];
-    j_st.site = &aw_emlrtRSI;
+    j_st.site = &cw_emlrtRSI;
     for (i = 0; i < c_i; i++) {
       M[(ii - i) - 1] = 0.0;
     }
@@ -1370,7 +1254,7 @@ void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
   for (i = 0; i < 6; i++) {
     filter->pState[i] = dv[i];
   }
-  b_st.site = &mu_emlrtRSI;
+  b_st.site = &ou_emlrtRSI;
   for (i = 0; i < 6; i++) {
     for (b_i = 0; b_i < 6; b_i++) {
       filter->pSqrtStateCovariance[b_i + 6 * i] = b_filter[i + 6 * b_i];
@@ -1408,10 +1292,10 @@ void trackingEKF_residual(const emlrtStack *sp, trackingEKF *EKF,
   c_st.tls = b_st.tls;
   d_st.prev = &c_st;
   d_st.tls = c_st.tls;
-  st.site = &sy_emlrtRSI;
-  b_st.site = &ty_emlrtRSI;
-  c_st.site = &xy_emlrtRSI;
-  d_st.site = &fe_emlrtRSI;
+  st.site = &uy_emlrtRSI;
+  b_st.site = &vy_emlrtRSI;
+  c_st.site = &aab_emlrtRSI;
+  d_st.site = &ge_emlrtRSI;
   p = true;
   k = 0;
   exitg1 = false;
@@ -1428,13 +1312,13 @@ void trackingEKF_residual(const emlrtStack *sp, trackingEKF *EKF,
         &d_st, &f_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:residual:expectedFinite", 3, 4, 1, "z");
   }
-  b_st.site = &uy_emlrtRSI;
+  b_st.site = &wy_emlrtRSI;
   c_ExtendedKalmanFilter_validate(&b_st, EKF, c_measurementParams_f2_OriginPo,
                                   c_measurementParams_f2_OriginVe,
                                   c_measurementParams_f2_Orientat);
-  b_st.site = &vy_emlrtRSI;
-  b_st.site = &wy_emlrtRSI;
-  c_st.site = &cbb_emlrtRSI;
+  b_st.site = &xy_emlrtRSI;
+  b_st.site = &yy_emlrtRSI;
+  c_st.site = &ebb_emlrtRSI;
   c_EKFCorrectorAdditive_getMeasu(
       &c_st, EKF->pSqrtMeasurementNoise, EKF->pState, EKF->pSqrtStateCovariance,
       c_measurementParams_f2_OriginPo, c_measurementParams_f2_OriginVe,
@@ -1443,7 +1327,7 @@ void trackingEKF_residual(const emlrtStack *sp, trackingEKF *EKF,
   _mm_storeu_pd(&res[0], _mm_sub_pd(_mm_loadu_pd(&z[0]), r));
   r = _mm_loadu_pd(&res[2]);
   _mm_storeu_pd(&res[2], _mm_sub_pd(_mm_loadu_pd(&z[2]), r));
-  c_st.site = &dbb_emlrtRSI;
+  c_st.site = &fbb_emlrtRSI;
   wrapResidual(&c_st, res);
   memset(&S[0], 0, sizeof(real_T) << 4);
   for (i = 0; i < 4; i++) {

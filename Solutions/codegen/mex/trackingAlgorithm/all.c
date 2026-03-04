@@ -29,9 +29,9 @@ boolean_T all(const emlrtStack *sp, const emxArray_boolean_T *x)
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   x_data = x->data;
-  st.site = &ie_emlrtRSI;
+  st.site = &je_emlrtRSI;
   y = true;
-  b_st.site = &je_emlrtRSI;
+  b_st.site = &ke_emlrtRSI;
   if (x->size[1] > 2147483646) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -65,9 +65,9 @@ boolean_T b_all(const emlrtStack *sp, const emxArray_boolean_T *x)
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   x_data = x->data;
-  st.site = &ie_emlrtRSI;
+  st.site = &je_emlrtRSI;
   y = true;
-  b_st.site = &je_emlrtRSI;
+  b_st.site = &ke_emlrtRSI;
   if (x->size[0] > 2147483646) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);

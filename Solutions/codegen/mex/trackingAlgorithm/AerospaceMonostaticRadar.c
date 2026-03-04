@@ -19,373 +19,311 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo vp_emlrtRSI = {
+static emlrtRSInfo wp_emlrtRSI = {
     217,                                   /* lineNo */
     "AerospaceMonostaticRadar/parseInput", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
-};
-
-static emlrtRSInfo wp_emlrtRSI = {
-    219,                                   /* lineNo */
-    "AerospaceMonostaticRadar/parseInput", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo xp_emlrtRSI = {
-    402,                                          /* lineNo */
-    "AerospaceMonostaticRadar/parseMeasurements", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    219,                                   /* lineNo */
+    "AerospaceMonostaticRadar/parseInput", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
-static emlrtRSInfo bq_emlrtRSI = {
-    444,                                       /* lineNo */
-    "AerospaceMonostaticRadar/parseModelData", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+static emlrtRSInfo yp_emlrtRSI = {
+    402,                                          /* lineNo */
+    "AerospaceMonostaticRadar/parseMeasurements", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo cq_emlrtRSI = {
-    449,                                       /* lineNo */
+    444,                                       /* lineNo */
     "AerospaceMonostaticRadar/parseModelData", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo dq_emlrtRSI = {
-    455,                                       /* lineNo */
+    449,                                       /* lineNo */
     "AerospaceMonostaticRadar/parseModelData", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo eq_emlrtRSI = {
-    462,                                       /* lineNo */
+    455,                                       /* lineNo */
     "AerospaceMonostaticRadar/parseModelData", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo fq_emlrtRSI = {
-    463,                                       /* lineNo */
+    462,                                       /* lineNo */
     "AerospaceMonostaticRadar/parseModelData", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
-static emlrtRSInfo qq_emlrtRSI = {
-    228,                                    /* lineNo */
-    "AerospaceMonostaticRadar/updateModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+static emlrtRSInfo gq_emlrtRSI = {
+    463,                                       /* lineNo */
+    "AerospaceMonostaticRadar/parseModelData", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo rq_emlrtRSI = {
-    229,                                    /* lineNo */
+    228,                                    /* lineNo */
     "AerospaceMonostaticRadar/updateModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo sq_emlrtRSI = {
-    322,                                               /* lineNo */
-    "AerospaceMonostaticRadar/updateMeasurementModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    229,                                    /* lineNo */
+    "AerospaceMonostaticRadar/updateModel", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo tq_emlrtRSI = {
-    342,                                               /* lineNo */
+    322,                                               /* lineNo */
     "AerospaceMonostaticRadar/updateMeasurementModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo uq_emlrtRSI = {
-    343,                                               /* lineNo */
+    342,                                               /* lineNo */
     "AerospaceMonostaticRadar/updateMeasurementModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo vq_emlrtRSI = {
-    346,                                               /* lineNo */
+    343,                                               /* lineNo */
     "AerospaceMonostaticRadar/updateMeasurementModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo wq_emlrtRSI = {
-    347,                                               /* lineNo */
+    346,                                               /* lineNo */
     "AerospaceMonostaticRadar/updateMeasurementModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo xq_emlrtRSI = {
-    348,                                               /* lineNo */
+    347,                                               /* lineNo */
     "AerospaceMonostaticRadar/updateMeasurementModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo yq_emlrtRSI = {
+    348,                                               /* lineNo */
+    "AerospaceMonostaticRadar/updateMeasurementModel", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
+};
+
+static emlrtRSInfo ar_emlrtRSI = {
     349,                                               /* lineNo */
     "AerospaceMonostaticRadar/updateMeasurementModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
-static emlrtRSInfo ar_emlrtRSI =
+static emlrtRSInfo br_emlrtRSI = {
+    19,                                          /* lineNo */
+    "abs",                                       /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/elfun/abs.m" /* pathName */
+};
+
+static emlrtRSInfo dr_emlrtRSI = {
+    17,                                            /* lineNo */
+    "min",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/min.m" /* pathName */
+};
+
+static emlrtRSInfo er_emlrtRSI = {
+    69,                                                   /* lineNo */
+    "minOrMax",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/minOrMax.m" /* pathName */
+};
+
+static emlrtRSInfo fr_emlrtRSI = {
+    119,                                                  /* lineNo */
+    "minimum",                                            /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/minOrMax.m" /* pathName */
+};
+
+static emlrtRSInfo hr_emlrtRSI =
     {
-        19,    /* lineNo */
-        "abs", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elfun\\abs.m" /* pathName
-                                                                          */
+        126,          /* lineNo */
+        "ypr2rotmat", /* fcnName */
+        "/MATLAB/toolbox/shared/radarfusion/+fusion/+internal/+frames/"
+        "ypr2rotmat.m" /* pathName */
 };
 
-static emlrtRSInfo cr_emlrtRSI = {
-    17,    /* lineNo */
-    "min", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\min.m" /* pathName
-                                                                        */
-};
-
-static emlrtRSInfo dr_emlrtRSI =
-    {
-        69,         /* lineNo */
-        "minOrMax", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\minOrMax."
-        "m" /* pathName */
-};
-
-static emlrtRSInfo er_emlrtRSI =
-    {
-        119,       /* lineNo */
-        "minimum", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\minOrMax."
-        "m" /* pathName */
-};
-
-static emlrtRSInfo gr_emlrtRSI = {
-    126,          /* lineNo */
-    "ypr2rotmat", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\radarfusion\\+fusion\\+internal\\+"
-    "frames\\ypr2rotmat.m" /* pathName */
-};
-
-static emlrtRSInfo kr_emlrtRSI = {
+static emlrtRSInfo lr_emlrtRSI = {
     80, /* lineNo */
     "AzimuthElevationRangeAndRangeRateModel/Orientation (generated property "
     "set method)", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
-static emlrtRSInfo lr_emlrtRSI =
+static emlrtRSInfo mr_emlrtRSI =
     {
         80, /* lineNo */
         "AzimuthElevationRangeAndRangeRateModel/Orientation (property "
         "validation)", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-        "tracker\\+measurement\\AzimuthElevationRangeAndRange"
-        "RateModel.m" /* pathName */
-};
-
-static emlrtRSInfo mr_emlrtRSI = {
-    84, /* lineNo */
-    "AzimuthElevationRangeAndRangeRateModel/AzimuthVariance (generated "
-    "property set method)", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+        "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo nr_emlrtRSI = {
     84, /* lineNo */
-    "AzimuthElevationRangeAndRangeRateModel/AzimuthVariance (property "
-    "validation)", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+    "AzimuthElevationRangeAndRangeRateModel/AzimuthVariance (generated "
+    "property set method)", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
-static emlrtRSInfo qr_emlrtRSI = {
-    88, /* lineNo */
-    "AzimuthElevationRangeAndRangeRateModel/ElevationVariance (generated "
-    "property set method)", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+static emlrtRSInfo or_emlrtRSI = {
+    84, /* lineNo */
+    "AzimuthElevationRangeAndRangeRateModel/AzimuthVariance (property "
+    "validation)", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo rr_emlrtRSI = {
     88, /* lineNo */
-    "AzimuthElevationRangeAndRangeRateModel/ElevationVariance (property "
-    "validation)", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+    "AzimuthElevationRangeAndRangeRateModel/ElevationVariance (generated "
+    "property set method)", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo sr_emlrtRSI = {
-    92, /* lineNo */
-    "AzimuthElevationRangeAndRangeRateModel/RangeVariance (generated property "
-    "set method)", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+    88, /* lineNo */
+    "AzimuthElevationRangeAndRangeRateModel/ElevationVariance (property "
+    "validation)", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo tr_emlrtRSI = {
     92, /* lineNo */
-    "AzimuthElevationRangeAndRangeRateModel/RangeVariance (property "
-    "validation)", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+    "AzimuthElevationRangeAndRangeRateModel/RangeVariance (generated property "
+    "set method)", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo ur_emlrtRSI = {
-    96, /* lineNo */
-    "AzimuthElevationRangeAndRangeRateModel/RangeRateVariance (generated "
-    "property set method)", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+    92, /* lineNo */
+    "AzimuthElevationRangeAndRangeRateModel/RangeVariance (property "
+    "validation)", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo vr_emlrtRSI = {
     96, /* lineNo */
-    "AzimuthElevationRangeAndRangeRateModel/RangeRateVariance (property "
-    "validation)", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "measurement\\AzimuthElevationRangeAndRange"
-    "RateModel.m" /* pathName */
+    "AzimuthElevationRangeAndRangeRateModel/RangeRateVariance (generated "
+    "property set method)", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo wr_emlrtRSI = {
-    373,                                                 /* lineNo */
-    "AerospaceMonostaticRadar/updateDetectabilityModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    96, /* lineNo */
+    "AzimuthElevationRangeAndRangeRateModel/RangeRateVariance (property "
+    "validation)", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
+    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtRSInfo xr_emlrtRSI = {
-    390,                                                 /* lineNo */
+    373,                                                 /* lineNo */
     "AerospaceMonostaticRadar/updateDetectabilityModel", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
 static emlrtRSInfo yr_emlrtRSI = {
-    125,          /* lineNo */
-    "ypr2rotmat", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\radarfusion\\+fusion\\+internal\\+"
-    "frames\\ypr2rotmat.m" /* pathName */
+    390,                                                 /* lineNo */
+    "AerospaceMonostaticRadar/updateDetectabilityModel", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pathName */
 };
 
-static emlrtRSInfo as_emlrtRSI = {
-    111,        /* lineNo */
-    "ypr2quat", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\radarfusion\\+fusion\\+internal\\+"
-    "frames\\ypr2quat.m" /* pathName */
+static emlrtRSInfo as_emlrtRSI =
+    {
+        125,          /* lineNo */
+        "ypr2rotmat", /* fcnName */
+        "/MATLAB/toolbox/shared/radarfusion/+fusion/+internal/+frames/"
+        "ypr2rotmat.m" /* pathName */
 };
 
-static emlrtRSInfo bs_emlrtRSI = {
-    12,                          /* lineNo */
-    "quaternioncg/quaternioncg", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\+coder\\@quat"
-    "ernioncg\\quaternioncg.m" /* pathName */
+static emlrtRSInfo bs_emlrtRSI =
+    {
+        111,        /* lineNo */
+        "ypr2quat", /* fcnName */
+        "/MATLAB/toolbox/shared/radarfusion/+fusion/+internal/+frames/"
+        "ypr2quat.m" /* pathName */
 };
 
 static emlrtRSInfo cs_emlrtRSI = {
-    69,                              /* lineNo */
-    "quaternionBase/quaternionBase", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\quaternionBase.m" /* pathName */
+    12,                          /* lineNo */
+    "quaternioncg/quaternioncg", /* fcnName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/+coder/@quaternioncg/quaternioncg.m" /* pathName */
 };
 
 static emlrtRSInfo ds_emlrtRSI = {
-    191,                   /* lineNo */
-    "partsFromConversion", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\quaternionBase.m" /* pathName */
+    69,                              /* lineNo */
+    "quaternionBase/quaternionBase", /* fcnName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/quaternionBase.m" /* pathName */
 };
 
 static emlrtRSInfo es_emlrtRSI = {
-    269,              /* lineNo */
-    "partsFromEuler", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations\\rotationslib\\+"
-    "matlabshared\\+rotations\\+internal\\@quaternionBa"
-    "se\\quaternionBase.m" /* pathName */
+    191,                   /* lineNo */
+    "partsFromConversion", /* fcnName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/quaternionBase.m" /* pathName */
 };
 
-static emlrtRSInfo at_emlrtRSI =
+static emlrtRSInfo fs_emlrtRSI = {
+    269,              /* lineNo */
+    "partsFromEuler", /* fcnName */
+    "/MATLAB/toolbox/shared/rotations/rotationslib/+matlabshared/+rotations/"
+    "+internal/@quaternionBase/quaternionBase.m" /* pathName */
+};
+
+static emlrtRSInfo bt_emlrtRSI =
     {
         77, /* lineNo */
         "FieldOfViewAndRangeRateModel/Orientation (generated property set "
         "method)", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-        "tracker\\+detectability\\FieldOfViewAndRangeRateMode"
-        "l.m" /* pathName */
+        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+detectability/"
+        "FieldOfViewAndRangeRateModel.m" /* pathName */
 };
 
-static emlrtRSInfo bt_emlrtRSI = {
+static emlrtRSInfo ct_emlrtRSI = {
     77, /* lineNo */
     "FieldOfViewAndRangeRateModel/Orientation (property validation)", /* fcnName
                                                                        */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "detectability\\FieldOfViewAndRangeRateMode"
-    "l.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+detectability/"
+    "FieldOfViewAndRangeRateModel.m" /* pathName */
 };
 
 static emlrtBCInfo ec_emlrtBCI = {
@@ -395,10 +333,9 @@ static emlrtBCInfo ec_emlrtBCI = {
     31,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo fc_emlrtBCI = {
@@ -408,10 +345,9 @@ static emlrtBCInfo fc_emlrtBCI = {
     76,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo gc_emlrtBCI = {
@@ -421,10 +357,9 @@ static emlrtBCInfo gc_emlrtBCI = {
     31,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo hc_emlrtBCI = {
@@ -434,10 +369,9 @@ static emlrtBCInfo hc_emlrtBCI = {
     72,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo ic_emlrtBCI = {
@@ -447,10 +381,9 @@ static emlrtBCInfo ic_emlrtBCI = {
     31,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo jc_emlrtBCI = {
@@ -460,10 +393,9 @@ static emlrtBCInfo jc_emlrtBCI = {
     31,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo kc_emlrtBCI = {
@@ -473,10 +405,9 @@ static emlrtBCInfo kc_emlrtBCI = {
     31,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo lc_emlrtBCI = {
@@ -486,10 +417,9 @@ static emlrtBCInfo lc_emlrtBCI = {
     21,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo mc_emlrtBCI = {
@@ -499,10 +429,9 @@ static emlrtBCInfo mc_emlrtBCI = {
     21,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo nc_emlrtBCI = {
@@ -512,10 +441,9 @@ static emlrtBCInfo nc_emlrtBCI = {
     21,                                        /* colNo */
     "",                                        /* aName */
     "AerospaceMonostaticRadar/parseModelData", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo sg_emlrtBCI = {
@@ -525,10 +453,9 @@ static emlrtBCInfo sg_emlrtBCI = {
     24,                                                /* colNo */
     "",                                                /* aName */
     "AerospaceMonostaticRadar/updateMeasurementModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo tg_emlrtBCI = {
@@ -538,10 +465,9 @@ static emlrtBCInfo tg_emlrtBCI = {
     59,                                                /* colNo */
     "",                                                /* aName */
     "AerospaceMonostaticRadar/updateMeasurementModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtECInfo t_emlrtECI = {
@@ -549,9 +475,8 @@ static emlrtECInfo t_emlrtECI = {
     114,           /* lineNo */
     14,            /* colNo */
     "feul2qparts", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations_utils\\+matlabshared\\+"
-    "rotations\\+internal\\feul2qparts.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations_utils/+matlabshared/+rotations/+internal/"
+    "feul2qparts.m" /* pName */
 };
 
 static emlrtECInfo u_emlrtECI = {
@@ -559,9 +484,8 @@ static emlrtECInfo u_emlrtECI = {
     114,           /* lineNo */
     33,            /* colNo */
     "feul2qparts", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations_utils\\+matlabshared\\+"
-    "rotations\\+internal\\feul2qparts.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations_utils/+matlabshared/+rotations/+internal/"
+    "feul2qparts.m" /* pName */
 };
 
 static emlrtECInfo v_emlrtECI = {
@@ -569,9 +493,8 @@ static emlrtECInfo v_emlrtECI = {
     113,           /* lineNo */
     14,            /* colNo */
     "feul2qparts", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations_utils\\+matlabshared\\+"
-    "rotations\\+internal\\feul2qparts.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations_utils/+matlabshared/+rotations/+internal/"
+    "feul2qparts.m" /* pName */
 };
 
 static emlrtECInfo w_emlrtECI = {
@@ -579,9 +502,8 @@ static emlrtECInfo w_emlrtECI = {
     113,           /* lineNo */
     33,            /* colNo */
     "feul2qparts", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations_utils\\+matlabshared\\+"
-    "rotations\\+internal\\feul2qparts.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations_utils/+matlabshared/+rotations/+internal/"
+    "feul2qparts.m" /* pName */
 };
 
 static emlrtECInfo x_emlrtECI = {
@@ -589,9 +511,8 @@ static emlrtECInfo x_emlrtECI = {
     112,           /* lineNo */
     14,            /* colNo */
     "feul2qparts", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations_utils\\+matlabshared\\+"
-    "rotations\\+internal\\feul2qparts.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations_utils/+matlabshared/+rotations/+internal/"
+    "feul2qparts.m" /* pName */
 };
 
 static emlrtECInfo y_emlrtECI = {
@@ -599,9 +520,8 @@ static emlrtECInfo y_emlrtECI = {
     112,           /* lineNo */
     33,            /* colNo */
     "feul2qparts", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations_utils\\+matlabshared\\+"
-    "rotations\\+internal\\feul2qparts.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations_utils/+matlabshared/+rotations/+internal/"
+    "feul2qparts.m" /* pName */
 };
 
 static emlrtECInfo ab_emlrtECI = {
@@ -609,9 +529,8 @@ static emlrtECInfo ab_emlrtECI = {
     111,           /* lineNo */
     14,            /* colNo */
     "feul2qparts", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations_utils\\+matlabshared\\+"
-    "rotations\\+internal\\feul2qparts.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations_utils/+matlabshared/+rotations/+internal/"
+    "feul2qparts.m" /* pName */
 };
 
 static emlrtECInfo bb_emlrtECI = {
@@ -619,9 +538,8 @@ static emlrtECInfo bb_emlrtECI = {
     111,           /* lineNo */
     33,            /* colNo */
     "feul2qparts", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\shared\\rotations_utils\\+matlabshared\\+"
-    "rotations\\+internal\\feul2qparts.m" /* pName */
+    "/MATLAB/toolbox/shared/rotations_utils/+matlabshared/+rotations/+internal/"
+    "feul2qparts.m" /* pName */
 };
 
 static emlrtECInfo cb_emlrtECI = {
@@ -629,9 +547,8 @@ static emlrtECInfo cb_emlrtECI = {
     390,                                                 /* lineNo */
     17,                                                  /* colNo */
     "AerospaceMonostaticRadar/updateDetectabilityModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pName */
 };
 
 static emlrtBCInfo ug_emlrtBCI = {
@@ -641,10 +558,9 @@ static emlrtBCInfo ug_emlrtBCI = {
     60,                                                  /* colNo */
     "",                                                  /* aName */
     "AerospaceMonostaticRadar/updateDetectabilityModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtECInfo db_emlrtECI = {
@@ -652,9 +568,8 @@ static emlrtECInfo db_emlrtECI = {
     372,                                                 /* lineNo */
     13,                                                  /* colNo */
     "AerospaceMonostaticRadar/updateDetectabilityModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pName */
 };
 
 static emlrtECInfo eb_emlrtECI = {
@@ -662,9 +577,8 @@ static emlrtECInfo eb_emlrtECI = {
     371,                                                 /* lineNo */
     13,                                                  /* colNo */
     "AerospaceMonostaticRadar/updateDetectabilityModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pName */
 };
 
 static emlrtBCInfo vg_emlrtBCI = {
@@ -674,10 +588,9 @@ static emlrtBCInfo vg_emlrtBCI = {
     53,                                                  /* colNo */
     "",                                                  /* aName */
     "AerospaceMonostaticRadar/updateDetectabilityModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo wg_emlrtBCI = {
@@ -687,10 +600,9 @@ static emlrtBCInfo wg_emlrtBCI = {
     51,                                                  /* colNo */
     "",                                                  /* aName */
     "AerospaceMonostaticRadar/updateDetectabilityModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo xg_emlrtBCI = {
@@ -700,10 +612,9 @@ static emlrtBCInfo xg_emlrtBCI = {
     50,                                                  /* colNo */
     "",                                                  /* aName */
     "AerospaceMonostaticRadar/updateDetectabilityModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtBCInfo yg_emlrtBCI = {
@@ -713,19 +624,17 @@ static emlrtBCInfo yg_emlrtBCI = {
     48,                                                  /* colNo */
     "",                                                  /* aName */
     "AerospaceMonostaticRadar/updateDetectabilityModel", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m", /* pName */
-    0                                          /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m", /* pName */
+    0                             /* checkKind */
 };
 
 static emlrtRTEInfo je_emlrtRTEI = {
     219,                        /* lineNo */
     13,                         /* colNo */
     "AerospaceMonostaticRadar", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
-    "sensorspecs\\AerospaceMonostaticRadar.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+sensorspecs/"
+    "AerospaceMonostaticRadar.m" /* pName */
 };
 
 /* Function Declarations */
@@ -868,13 +777,13 @@ d_AerospaceMonostaticRadar_upda(const emlrtStack *sp,
   for (k = 0; k < loop_ub; k++) {
     ypr_data[k + ypr_size_idx_0] = tmp_data[k];
   }
-  st.site = &wr_emlrtRSI;
-  b_st.site = &yr_emlrtRSI;
-  c_st.site = &as_emlrtRSI;
-  d_st.site = &bs_emlrtRSI;
-  e_st.site = &cs_emlrtRSI;
-  f_st.site = &ds_emlrtRSI;
-  g_st.site = &es_emlrtRSI;
+  st.site = &xr_emlrtRSI;
+  b_st.site = &as_emlrtRSI;
+  c_st.site = &bs_emlrtRSI;
+  d_st.site = &cs_emlrtRSI;
+  e_st.site = &ds_emlrtRSI;
+  f_st.site = &es_emlrtRSI;
+  g_st.site = &fs_emlrtRSI;
   c_loop_ub = (b_loop_ub / 2) << 1;
   scalarLB = c_loop_ub - 2;
   for (k = 0; k <= scalarLB; k += 2) {
@@ -1225,7 +1134,7 @@ d_AerospaceMonostaticRadar_upda(const emlrtStack *sp,
   } else {
     b_size = b_minus(q_d_data, b_data, &b_size, a_data, &ypr_size_idx_0);
   }
-  b_st.site = &gr_emlrtRSI;
+  b_st.site = &hr_emlrtRSI;
   quat2rotmat(&b_st, tmp_data, c_tmp_size, q_b_data, b_loop_ub, q_c_data,
               b_tmp_size, q_d_data, b_size, lookRot_data, lookRot_size);
   if (modelData_LookTime_size[1] - 1 >= 0) {
@@ -1247,9 +1156,9 @@ d_AerospaceMonostaticRadar_upda(const emlrtStack *sp,
       beamModel.Orientation[3 * k + 1] = lookRot_data[c_loop_ub + 1];
       beamModel.Orientation[3 * k + 2] = lookRot_data[c_loop_ub + 2];
     }
-    st.site = &xr_emlrtRSI;
-    b_st.site = &at_emlrtRSI;
-    c_st.site = &bt_emlrtRSI;
+    st.site = &yr_emlrtRSI;
+    b_st.site = &bt_emlrtRSI;
+    c_st.site = &ct_emlrtRSI;
     p = true;
     for (k = 0; k < 27; k++) {
       if (p) {
@@ -1263,7 +1172,7 @@ d_AerospaceMonostaticRadar_upda(const emlrtStack *sp,
       }
     }
     if (!p) {
-      emlrtErrorWithMessageIdR2018a(&c_st, &s_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&c_st, &t_emlrtRTEI,
                                     "MATLAB:validators:mustBeFinite",
                                     "MATLAB:validators:mustBeFinite", 0);
     }
@@ -1338,22 +1247,22 @@ void c_AerospaceMonostaticRadar_pars(
   c_st.tls = b_st.tls;
   d_st.prev = &c_st;
   d_st.tls = c_st.tls;
-  st.site = &vp_emlrtRSI;
-  b_st.site = &xp_emlrtRSI;
-  c_st.site = &yp_emlrtRSI;
-  d_st.site = &aq_emlrtRSI;
+  st.site = &wp_emlrtRSI;
+  b_st.site = &yp_emlrtRSI;
+  c_st.site = &aq_emlrtRSI;
+  d_st.site = &bq_emlrtRSI;
   if (sensorData_Elevation_size[1] != sensorData_Azimuth_size[1]) {
-    emlrtErrorWithMessageIdR2018a(&d_st, &l_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&d_st, &m_emlrtRTEI,
                                   "MATLAB:catenate:matrixDimensionMismatch",
                                   "MATLAB:catenate:matrixDimensionMismatch", 0);
   }
   if (sensorData_Range_size[1] != sensorData_Azimuth_size[1]) {
-    emlrtErrorWithMessageIdR2018a(&d_st, &l_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&d_st, &m_emlrtRTEI,
                                   "MATLAB:catenate:matrixDimensionMismatch",
                                   "MATLAB:catenate:matrixDimensionMismatch", 0);
   }
   if (sensorData_RangeRate_size[1] != sensorData_Azimuth_size[1]) {
-    emlrtErrorWithMessageIdR2018a(&d_st, &l_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&d_st, &m_emlrtRTEI,
                                   "MATLAB:catenate:matrixDimensionMismatch",
                                   "MATLAB:catenate:matrixDimensionMismatch", 0);
   }
@@ -1375,7 +1284,7 @@ void c_AerospaceMonostaticRadar_pars(
   for (i = 0; i < loop_ub; i++) {
     z_data[4 * i + 3] = sensorData_RangeRate_data[i];
   }
-  st.site = &wp_emlrtRSI;
+  st.site = &xp_emlrtRSI;
   sampleModelData.LookTime.size[0] = 1;
   loop_ub = sensorData_LookTime_size[1];
   sampleModelData.LookTime.size[1] = sensorData_LookTime_size[1];
@@ -1415,8 +1324,8 @@ void c_AerospaceMonostaticRadar_pars(
     int32_T c_loop_ub;
     int32_T d_loop_ub;
     int32_T vectorUB;
-    b_st.site = &bq_emlrtRSI;
-    c_st.site = &gq_emlrtRSI;
+    b_st.site = &cq_emlrtRSI;
+    c_st.site = &hq_emlrtRSI;
     b_loop_ub = sensorData_DetectionTime_size[1];
     loop_ub = modelData->size[0];
     modelData->size[0] = sensorData_DetectionTime_size[1];
@@ -1425,8 +1334,8 @@ void c_AerospaceMonostaticRadar_pars(
     for (i = 0; i < b_loop_ub; i++) {
       modelData_data[i] = sampleModelData;
     }
-    b_st.site = &cq_emlrtRSI;
-    c_st.site = &sd_emlrtRSI;
+    b_st.site = &dq_emlrtRSI;
+    c_st.site = &td_emlrtRSI;
     c_loop_ub = d_sensorData_ElevationAccuracy_[1];
     loop_ub = c_loop_ub / 2 * 2;
     vectorUB = loop_ub - 2;
@@ -1439,8 +1348,8 @@ void c_AerospaceMonostaticRadar_pars(
       varargin_1 = c_sensorData_ElevationAccuracy_[i];
       elNoise_data[i] = varargin_1 * varargin_1;
     }
-    b_st.site = &dq_emlrtRSI;
-    c_st.site = &sd_emlrtRSI;
+    b_st.site = &eq_emlrtRSI;
+    c_st.site = &td_emlrtRSI;
     d_loop_ub = d_sensorData_RangeRateAccuracy_[1];
     loop_ub = d_loop_ub / 2 * 2;
     vectorUB = loop_ub - 2;
@@ -1464,12 +1373,12 @@ void c_AerospaceMonostaticRadar_pars(
       }
       modelData_data[i].DetectionTime.data[0] =
           sensorData_DetectionTime_data[i];
-      b_st.site = &eq_emlrtRSI;
+      b_st.site = &fq_emlrtRSI;
       if (i + 1 > sensorData_AzimuthAccuracy_size[1]) {
         emlrtDynamicBoundsCheckR2012b(
             i + 1, 1, sensorData_AzimuthAccuracy_size[1], &fc_emlrtBCI, &b_st);
       }
-      c_st.site = &rd_emlrtRSI;
+      c_st.site = &sd_emlrtRSI;
       if (i + 1 > b_loop_ub) {
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, b_loop_ub, &gc_emlrtBCI, &st);
       }
@@ -1477,12 +1386,12 @@ void c_AerospaceMonostaticRadar_pars(
       modelData_data[i].AzimuthNoise.size[1] = 1;
       varargin_1 = sensorData_AzimuthAccuracy_data[i];
       modelData_data[i].AzimuthNoise.data[0] = varargin_1 * varargin_1;
-      b_st.site = &fq_emlrtRSI;
+      b_st.site = &gq_emlrtRSI;
       if (i + 1 > sensorData_RangeAccuracy_size[1]) {
         emlrtDynamicBoundsCheckR2012b(
             i + 1, 1, sensorData_RangeAccuracy_size[1], &hc_emlrtBCI, &b_st);
       }
-      c_st.site = &rd_emlrtRSI;
+      c_st.site = &sd_emlrtRSI;
       if (i + 1 > b_loop_ub) {
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, b_loop_ub, &ic_emlrtBCI, &st);
       }
@@ -1767,7 +1676,7 @@ void c_AerospaceMonostaticRadar_upda(
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &qq_emlrtRSI;
+  st.site = &rq_emlrtRSI;
   if (modelData_DetectionTime_size[1] != 0) {
     __m128d r;
     real_T varargin_1_data[100];
@@ -1785,8 +1694,8 @@ void c_AerospaceMonostaticRadar_upda(
     int32_T idx;
     int32_T last;
     boolean_T p;
-    b_st.site = &sq_emlrtRSI;
-    c_st.site = &sq_emlrtRSI;
+    b_st.site = &tq_emlrtRSI;
+    c_st.site = &tq_emlrtRSI;
     if (modelData_LookTime_size[1] == 1) {
       x_size[1] = 1;
       x_data[0] = modelData_DetectionTime_data[0] - modelData_LookTime_data[0];
@@ -1795,14 +1704,14 @@ void c_AerospaceMonostaticRadar_upda(
             modelData_DetectionTime_size, modelData_LookTime_data,
             modelData_LookTime_size);
     }
-    d_st.site = &ar_emlrtRSI;
+    d_st.site = &br_emlrtRSI;
     last = x_size[1];
     for (k = 0; k < last; k++) {
       varargin_1_data[k] = muDoubleScalarAbs(x_data[k]);
     }
-    c_st.site = &cr_emlrtRSI;
-    d_st.site = &dr_emlrtRSI;
-    e_st.site = &er_emlrtRSI;
+    c_st.site = &dr_emlrtRSI;
+    d_st.site = &er_emlrtRSI;
+    e_st.site = &fr_emlrtRSI;
     if (x_size[1] < 1) {
       emlrtErrorWithMessageIdR2018a(
           &e_st, &x_emlrtRTEI, "Coder:toolbox:eml_min_or_max_varDimZero",
@@ -1861,7 +1770,7 @@ void c_AerospaceMonostaticRadar_upda(
     ypr[2] = 0.0;
     ypr[0] = modelData_LookAzimuth_data[idx - 1];
     ypr[1] = -modelData_LookElevation_data[idx - 1];
-    b_st.site = &tq_emlrtRSI;
+    b_st.site = &uq_emlrtRSI;
     r = _mm_loadu_pd(&ypr[0]);
     _mm_storeu_pd(
         &ypr[0],
@@ -1880,8 +1789,8 @@ void c_AerospaceMonostaticRadar_upda(
     q_b = aasq * sinc - cosc * sina * sinb;
     q_c = cosa * cosc * sinb + cosb * sina * sinc;
     q_d = cosb * cosc * sina - cosa * sinb * sinc;
-    c_st.site = &gr_emlrtRSI;
-    d_st.site = &hr_emlrtRSI;
+    c_st.site = &hr_emlrtRSI;
+    d_st.site = &ir_emlrtRSI;
     sina =
         muDoubleScalarSqrt(((q_a * q_a + q_b * q_b) + q_c * q_c) + q_d * q_d);
     q_a /= sina;
@@ -1904,9 +1813,9 @@ void c_AerospaceMonostaticRadar_upda(
     obj->MeasurementModel.Orientation[2] = cosb + sinb;
     obj->MeasurementModel.Orientation[5] = cosc - sina;
     obj->MeasurementModel.Orientation[8] = aasq + q_d * q_d * 2.0;
-    b_st.site = &uq_emlrtRSI;
-    c_st.site = &kr_emlrtRSI;
-    d_st.site = &lr_emlrtRSI;
+    b_st.site = &vq_emlrtRSI;
+    c_st.site = &lr_emlrtRSI;
+    d_st.site = &mr_emlrtRSI;
     p = true;
     for (k = 0; k < 27; k++) {
       if (p) {
@@ -1919,60 +1828,60 @@ void c_AerospaceMonostaticRadar_upda(
       }
     }
     if (!p) {
-      emlrtErrorWithMessageIdR2018a(&d_st, &s_emlrtRTEI,
-                                    "MATLAB:validators:mustBeFinite",
-                                    "MATLAB:validators:mustBeFinite", 0);
-    }
-    b_st.site = &vq_emlrtRSI;
-    c_st.site = &mr_emlrtRSI;
-    d_st.site = &nr_emlrtRSI;
-    sina = validator_check_size(&d_st, modelData_AzimuthNoise_data,
-                                modelData_AzimuthNoise_size);
-    obj->MeasurementModel.AzimuthVariance = sina;
-    d_st.site = &nr_emlrtRSI;
-    if (muDoubleScalarIsInf(sina) || muDoubleScalarIsNaN(sina)) {
-      emlrtErrorWithMessageIdR2018a(&d_st, &s_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&d_st, &t_emlrtRTEI,
                                     "MATLAB:validators:mustBeFinite",
                                     "MATLAB:validators:mustBeFinite", 0);
     }
     b_st.site = &wq_emlrtRSI;
-    c_st.site = &qr_emlrtRSI;
-    d_st.site = &rr_emlrtRSI;
-    sina = validator_check_size(&d_st, modelData_ElevationNoise_data,
-                                modelData_ElevationNoise_size);
-    obj->MeasurementModel.ElevationVariance = sina;
-    d_st.site = &rr_emlrtRSI;
+    c_st.site = &nr_emlrtRSI;
+    d_st.site = &or_emlrtRSI;
+    sina = validator_check_size(&d_st, modelData_AzimuthNoise_data,
+                                modelData_AzimuthNoise_size);
+    obj->MeasurementModel.AzimuthVariance = sina;
+    d_st.site = &or_emlrtRSI;
     if (muDoubleScalarIsInf(sina) || muDoubleScalarIsNaN(sina)) {
-      emlrtErrorWithMessageIdR2018a(&d_st, &s_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&d_st, &t_emlrtRTEI,
                                     "MATLAB:validators:mustBeFinite",
                                     "MATLAB:validators:mustBeFinite", 0);
     }
     b_st.site = &xq_emlrtRSI;
-    c_st.site = &sr_emlrtRSI;
-    d_st.site = &tr_emlrtRSI;
-    sina = validator_check_size(&d_st, modelData_RangeNoise_data,
-                                modelData_RangeNoise_size);
-    obj->MeasurementModel.RangeVariance = sina;
-    d_st.site = &tr_emlrtRSI;
+    c_st.site = &rr_emlrtRSI;
+    d_st.site = &sr_emlrtRSI;
+    sina = validator_check_size(&d_st, modelData_ElevationNoise_data,
+                                modelData_ElevationNoise_size);
+    obj->MeasurementModel.ElevationVariance = sina;
+    d_st.site = &sr_emlrtRSI;
     if (muDoubleScalarIsInf(sina) || muDoubleScalarIsNaN(sina)) {
-      emlrtErrorWithMessageIdR2018a(&d_st, &s_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&d_st, &t_emlrtRTEI,
                                     "MATLAB:validators:mustBeFinite",
                                     "MATLAB:validators:mustBeFinite", 0);
     }
     b_st.site = &yq_emlrtRSI;
-    c_st.site = &ur_emlrtRSI;
-    d_st.site = &vr_emlrtRSI;
+    c_st.site = &tr_emlrtRSI;
+    d_st.site = &ur_emlrtRSI;
+    sina = validator_check_size(&d_st, modelData_RangeNoise_data,
+                                modelData_RangeNoise_size);
+    obj->MeasurementModel.RangeVariance = sina;
+    d_st.site = &ur_emlrtRSI;
+    if (muDoubleScalarIsInf(sina) || muDoubleScalarIsNaN(sina)) {
+      emlrtErrorWithMessageIdR2018a(&d_st, &t_emlrtRTEI,
+                                    "MATLAB:validators:mustBeFinite",
+                                    "MATLAB:validators:mustBeFinite", 0);
+    }
+    b_st.site = &ar_emlrtRSI;
+    c_st.site = &vr_emlrtRSI;
+    d_st.site = &wr_emlrtRSI;
     sina = validator_check_size(&d_st, modelData_RangeRateNoise_data,
                                 modelData_RangeRateNoise_size);
     obj->MeasurementModel.RangeRateVariance = sina;
-    d_st.site = &vr_emlrtRSI;
+    d_st.site = &wr_emlrtRSI;
     if (muDoubleScalarIsInf(sina) || muDoubleScalarIsNaN(sina)) {
-      emlrtErrorWithMessageIdR2018a(&d_st, &s_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&d_st, &t_emlrtRTEI,
                                     "MATLAB:validators:mustBeFinite",
                                     "MATLAB:validators:mustBeFinite", 0);
     }
   }
-  st.site = &rq_emlrtRSI;
+  st.site = &sq_emlrtRSI;
   d_AerospaceMonostaticRadar_upda(
       &st, obj, modelData_LookTime_size, modelData_LookAzimuth_data,
       modelData_LookAzimuth_size, modelData_LookElevation_data,

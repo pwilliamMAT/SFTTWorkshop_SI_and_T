@@ -13,20 +13,22 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo xq_emlrtRSI = {
-    149,                     /* lineNo */
-    "combineVectorElements", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\combin"
-    "eVectorElements.m" /* pathName */
+static emlrtRSInfo
+    yq_emlrtRSI =
+        {
+            149,                     /* lineNo */
+            "combineVectorElements", /* fcnName */
+            "/MATLAB/toolbox/eml/lib/matlab/datafun/private/"
+            "combineVectorElements.m" /* pathName */
 };
 
-static emlrtRSInfo yq_emlrtRSI = {
-    209,                /* lineNo */
-    "colMajorFlatIter", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\combin"
-    "eVectorElements.m" /* pathName */
+static emlrtRSInfo
+    ar_emlrtRSI =
+        {
+            209,                /* lineNo */
+            "colMajorFlatIter", /* fcnName */
+            "/MATLAB/toolbox/eml/lib/matlab/datafun/private/"
+            "combineVectorElements.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -51,9 +53,9 @@ int32_T b_combineVectorElements(const emlrtStack *sp,
   if (x->size[0] == 0) {
     y = 0;
   } else {
-    st.site = &xq_emlrtRSI;
+    st.site = &yq_emlrtRSI;
     y = x_data[0];
-    b_st.site = &yq_emlrtRSI;
+    b_st.site = &ar_emlrtRSI;
     if (x->size[0] > 2147483646) {
       c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);

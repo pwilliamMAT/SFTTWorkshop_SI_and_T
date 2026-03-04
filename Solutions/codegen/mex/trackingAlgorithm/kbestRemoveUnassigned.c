@@ -17,112 +17,81 @@
 #include "omp.h"
 
 /* Variable Definitions */
-static emlrtRSInfo hjb_emlrtRSI = {
+static emlrtRSInfo jjb_emlrtRSI = {
     30,                      /* lineNo */
     "kbestRemoveUnassigned", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pathName */
-};
-
-static emlrtRSInfo ijb_emlrtRSI = {
-    28,                      /* lineNo */
-    "kbestRemoveUnassigned", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pathName */
-};
-
-static emlrtRSInfo jjb_emlrtRSI = {
-    27,                      /* lineNo */
-    "kbestRemoveUnassigned", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pathName */
 };
 
 static emlrtRSInfo kjb_emlrtRSI = {
-    23,                      /* lineNo */
+    28,                      /* lineNo */
     "kbestRemoveUnassigned", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pathName */
 };
 
 static emlrtRSInfo ljb_emlrtRSI = {
+    27,                      /* lineNo */
+    "kbestRemoveUnassigned", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pathName */
+};
+
+static emlrtRSInfo mjb_emlrtRSI = {
+    23,                      /* lineNo */
+    "kbestRemoveUnassigned", /* fcnName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pathName */
+};
+
+static emlrtRSInfo njb_emlrtRSI = {
     21,                      /* lineNo */
     "kbestRemoveUnassigned", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pathName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pathName */
 };
 
-static emlrtRSInfo
-    mjb_emlrtRSI =
-        {
-            27,         /* lineNo */
-            "sortrows", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sortrow"
-            "s.m" /* pathName */
+static emlrtRSInfo ojb_emlrtRSI = {
+    27,                                                 /* lineNo */
+    "sortrows",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/sortrows.m" /* pathName */
 };
 
-static emlrtRSInfo
-    njb_emlrtRSI =
-        {
-            28,         /* lineNo */
-            "sortrows", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sortrow"
-            "s.m" /* pathName */
+static emlrtRSInfo pjb_emlrtRSI = {
+    28,                                                 /* lineNo */
+    "sortrows",                                         /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/sortrows.m" /* pathName */
 };
 
-static emlrtRSInfo
-    ojb_emlrtRSI =
-        {
-            86,        /* lineNo */
-            "sortIdx", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-            "internal\\sortIdx.m" /* pathName */
+static emlrtRSInfo qjb_emlrtRSI = {
+    86,                                                  /* lineNo */
+    "sortIdx",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/sortIdx.m" /* pathName */
 };
 
-static emlrtRSInfo pjb_emlrtRSI =
-    {
-        57,          /* lineNo */
-        "mergesort", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\mergesort.m" /* pathName */
+static emlrtRSInfo rjb_emlrtRSI = {
+    57,                                                    /* lineNo */
+    "mergesort",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/mergesort.m" /* pathName */
 };
 
-static emlrtRSInfo qjb_emlrtRSI =
-    {
-        113,         /* lineNo */
-        "mergesort", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\mergesort.m" /* pathName */
+static emlrtRSInfo sjb_emlrtRSI = {
+    113,                                                   /* lineNo */
+    "mergesort",                                           /* fcnName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/mergesort.m" /* pathName */
 };
 
-static emlrtRSInfo
-    rjb_emlrtRSI =
-        {
-            39,                      /* lineNo */
-            "apply_row_permutation", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sortrow"
-            "s.m" /* pathName */
+static emlrtRSInfo tjb_emlrtRSI = {
+    39,                                                 /* lineNo */
+    "apply_row_permutation",                            /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/sortrows.m" /* pathName */
 };
 
-static emlrtRSInfo
-    sjb_emlrtRSI =
-        {
-            42,                      /* lineNo */
-            "apply_row_permutation", /* fcnName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sortrow"
-            "s.m" /* pathName */
+static emlrtRSInfo ujb_emlrtRSI = {
+    42,                                                 /* lineNo */
+    "apply_row_permutation",                            /* fcnName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/sortrows.m" /* pathName */
 };
 
 static emlrtBCInfo kj_emlrtBCI = {
@@ -132,10 +101,9 @@ static emlrtBCInfo kj_emlrtBCI = {
     21,                      /* colNo */
     "",                      /* aName */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m", /* pName */
-    0                                                 /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m", /* pName */
+    0                          /* checkKind */
 };
 
 static emlrtBCInfo lj_emlrtBCI = {
@@ -145,10 +113,9 @@ static emlrtBCInfo lj_emlrtBCI = {
     25,                      /* colNo */
     "",                      /* aName */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m", /* pName */
-    0                                                 /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m", /* pName */
+    0                          /* checkKind */
 };
 
 static emlrtBCInfo mj_emlrtBCI = {
@@ -158,10 +125,9 @@ static emlrtBCInfo mj_emlrtBCI = {
     27,                      /* colNo */
     "",                      /* aName */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m", /* pName */
-    0                                                 /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m", /* pName */
+    0                          /* checkKind */
 };
 
 static emlrtBCInfo nj_emlrtBCI = {
@@ -171,10 +137,9 @@ static emlrtBCInfo nj_emlrtBCI = {
     1,                       /* colNo */
     "",                      /* aName */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m", /* pName */
-    0                                                 /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m", /* pName */
+    0                          /* checkKind */
 };
 
 static emlrtBCInfo oj_emlrtBCI = {
@@ -184,10 +149,9 @@ static emlrtBCInfo oj_emlrtBCI = {
     26,                      /* colNo */
     "",                      /* aName */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m", /* pName */
-    0                                                 /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m", /* pName */
+    0                          /* checkKind */
 };
 
 static emlrtBCInfo pj_emlrtBCI = {
@@ -197,10 +161,9 @@ static emlrtBCInfo pj_emlrtBCI = {
     5,                       /* colNo */
     "",                      /* aName */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m", /* pName */
-    0                                                 /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m", /* pName */
+    0                          /* checkKind */
 };
 
 static emlrtBCInfo qj_emlrtBCI = {
@@ -210,10 +173,9 @@ static emlrtBCInfo qj_emlrtBCI = {
     5,                       /* colNo */
     "",                      /* aName */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m", /* pName */
-    0                                                 /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m", /* pName */
+    0                          /* checkKind */
 };
 
 static emlrtBCInfo rj_emlrtBCI = {
@@ -223,10 +185,9 @@ static emlrtBCInfo rj_emlrtBCI = {
     5,                       /* colNo */
     "",                      /* aName */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m", /* pName */
-    0                                                 /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m", /* pName */
+    0                          /* checkKind */
 };
 
 static emlrtBCInfo sj_emlrtBCI = {
@@ -236,131 +197,110 @@ static emlrtBCInfo sj_emlrtBCI = {
     25,                      /* colNo */
     "",                      /* aName */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m", /* pName */
-    0                                                 /* checkKind */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m", /* pName */
+    0                          /* checkKind */
 };
 
-static emlrtRTEInfo
-    ai_emlrtRTEI =
-        {
-            27,         /* lineNo */
-            1,          /* colNo */
-            "sortrows", /* fName */
-            "C:\\Program "
-            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sortrow"
-            "s.m" /* pName */
+static emlrtRTEInfo ai_emlrtRTEI = {
+    27,                                                 /* lineNo */
+    1,                                                  /* colNo */
+    "sortrows",                                         /* fName */
+    "/MATLAB/toolbox/eml/lib/matlab/datafun/sortrows.m" /* pName */
 };
 
-static emlrtRTEInfo bi_emlrtRTEI =
-    {
-        52,          /* lineNo */
-        9,           /* colNo */
-        "mergesort", /* fName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\mergesort.m" /* pName */
+static emlrtRTEInfo bi_emlrtRTEI = {
+    52,                                                    /* lineNo */
+    9,                                                     /* colNo */
+    "mergesort",                                           /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/mergesort.m" /* pName */
 };
 
 static emlrtRTEInfo yk_emlrtRTEI = {
     23,                      /* lineNo */
     1,                       /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
 static emlrtRTEInfo al_emlrtRTEI = {
     27,                      /* lineNo */
     5,                       /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
 static emlrtRTEInfo bl_emlrtRTEI = {
     29,                      /* lineNo */
     5,                       /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
 static emlrtRTEInfo cl_emlrtRTEI = {
     30,                      /* lineNo */
     5,                       /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
 static emlrtRTEInfo dl_emlrtRTEI = {
     34,                      /* lineNo */
     5,                       /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
 static emlrtRTEInfo el_emlrtRTEI = {
     36,                      /* lineNo */
     1,                       /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
 static emlrtRTEInfo fl_emlrtRTEI = {
     37,                      /* lineNo */
     14,                      /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
 static emlrtRTEInfo gl_emlrtRTEI = {
     37,                      /* lineNo */
     1,                       /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
 static emlrtRTEInfo hl_emlrtRTEI = {
     22,                      /* lineNo */
     1,                       /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
 static emlrtRTEInfo il_emlrtRTEI = {
     21,                      /* lineNo */
     17,                      /* colNo */
     "kbestRemoveUnassigned", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
-    "internal\\+assignment\\kbestRemoveUnassigned.m" /* pName */
+    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
+    "kbestRemoveUnassigned.m" /* pName */
 };
 
-static emlrtRTEInfo jl_emlrtRTEI =
-    {
-        52,          /* lineNo */
-        1,           /* colNo */
-        "mergesort", /* fName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\mergesort.m" /* pName */
+static emlrtRTEInfo jl_emlrtRTEI = {
+    52,                                                    /* lineNo */
+    1,                                                     /* colNo */
+    "mergesort",                                           /* fName */
+    "/MATLAB/toolbox/eml/eml/+coder/+internal/mergesort.m" /* pName */
 };
 
 /* Function Definitions */
@@ -422,9 +362,9 @@ int32_T kbestRemoveUnassigned(const emlrtStack *sp,
   assignment_data = assignment->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   emxInit_int32_T(sp, &y, 2, &il_emlrtRTEI);
-  st.site = &ljb_emlrtRSI;
-  b_st.site = &hdb_emlrtRSI;
-  c_st.site = &idb_emlrtRSI;
+  st.site = &njb_emlrtRSI;
+  b_st.site = &jdb_emlrtRSI;
+  c_st.site = &kdb_emlrtRSI;
   eml_integer_colon_dispatcher(&c_st, costSize[0], y);
   idx_data = y->data;
   pEnd = y->size[1];
@@ -443,7 +383,7 @@ int32_T kbestRemoveUnassigned(const emlrtStack *sp,
   }
   b_iv[0] = 1;
   b_iv[1] = costSize[0];
-  st.site = &kjb_emlrtRSI;
+  st.site = &mjb_emlrtRSI;
   b_indexShapeCheck(&st, assignment->size[0], b_iv);
   p = costSize[0];
   emxInit_uint32_T(sp, &rowSoln, 1, &hl_emlrtRTEI, true);
@@ -466,7 +406,7 @@ int32_T kbestRemoveUnassigned(const emlrtStack *sp,
   }
   b_loop_ub = rowSoln->size[0];
   pEnd = rowSoln->size[0];
-  if (rowSoln->size[0] < 800) {
+  if (rowSoln->size[0] < 1600) {
     for (b_i = 0; b_i < b_loop_ub; b_i++) {
       isRowAssigned_data[b_i] = (rowSoln_data[b_i] != 0U);
     }
@@ -483,9 +423,9 @@ int32_T kbestRemoveUnassigned(const emlrtStack *sp,
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  st.site = &jjb_emlrtRSI;
-  b_st.site = &hdb_emlrtRSI;
-  c_st.site = &idb_emlrtRSI;
+  st.site = &ljb_emlrtRSI;
+  b_st.site = &jdb_emlrtRSI;
+  c_st.site = &kdb_emlrtRSI;
   eml_integer_colon_dispatcher(&c_st, costSize[1], y);
   idx_data = y->data;
   p = y->size[1];
@@ -501,8 +441,8 @@ int32_T kbestRemoveUnassigned(const emlrtStack *sp,
     rowSoln_data[i] = (uint32_T)pEnd;
   }
   emxFree_int32_T(sp, &y);
-  st.site = &ijb_emlrtRSI;
-  b_st.site = &mjb_emlrtRSI;
+  st.site = &kjb_emlrtRSI;
+  b_st.site = &ojb_emlrtRSI;
   n = assignment->size[0] + 1;
   emxInit_int32_T(&b_st, &idx, 1, &ai_emlrtRTEI);
   pEnd = idx->size[0];
@@ -512,14 +452,14 @@ int32_T kbestRemoveUnassigned(const emlrtStack *sp,
   for (i = 0; i < loop_ub; i++) {
     idx_data[i] = 0;
   }
-  c_st.site = &ojb_emlrtRSI;
+  c_st.site = &qjb_emlrtRSI;
   emxInit_int32_T(&c_st, &iwork, 1, &jl_emlrtRTEI);
   pEnd = iwork->size[0];
   iwork->size[0] = loop_ub;
   emxEnsureCapacity_int32_T(&c_st, iwork, pEnd, &bi_emlrtRTEI);
   iwork_data = iwork->data;
   pEnd = assignment->size[0] - 1;
-  d_st.site = &pjb_emlrtRSI;
+  d_st.site = &rjb_emlrtRSI;
   if (assignment->size[0] - 1 > 2147483645) {
     e_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&e_st);
@@ -588,7 +528,7 @@ int32_T kbestRemoveUnassigned(const emlrtStack *sp,
         }
         unassignedRows_size++;
       }
-      d_st.site = &qjb_emlrtRSI;
+      d_st.site = &sjb_emlrtRSI;
       for (i = 0; i < kEnd; i++) {
         idx_data[(j + i) - 1] = iwork_data[i];
       }
@@ -597,13 +537,13 @@ int32_T kbestRemoveUnassigned(const emlrtStack *sp,
     c_i = i2;
   }
   emxFree_int32_T(&c_st, &iwork);
-  b_st.site = &njb_emlrtRSI;
-  c_st.site = &rjb_emlrtRSI;
+  b_st.site = &pjb_emlrtRSI;
+  c_st.site = &tjb_emlrtRSI;
   if (assignment->size[0] > 2147483646) {
     d_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&d_st);
   }
-  c_st.site = &sjb_emlrtRSI;
+  c_st.site = &ujb_emlrtRSI;
   if (assignment->size[0] > 2147483646) {
     d_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&d_st);
@@ -630,7 +570,7 @@ int32_T kbestRemoveUnassigned(const emlrtStack *sp,
     emlrtDynamicBoundsCheckR2012b(costSize[1], 1, pEnd, &lj_emlrtBCI,
                                   (emlrtConstCTX)sp);
   }
-  st.site = &hjb_emlrtRSI;
+  st.site = &jjb_emlrtRSI;
   c_indexShapeCheck();
   p = costSize[1];
   emxInit_uint32_T(sp, &b_colSoln, 2, &bl_emlrtRTEI, true);
