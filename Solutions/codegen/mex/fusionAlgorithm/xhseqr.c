@@ -16,17 +16,20 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo cv_emlrtRSI = {
-    21,                                                         /* lineNo */
-    "xhseqr",                                                   /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xhseqr.m" /* pathName */
+static emlrtRSInfo bv_emlrtRSI = {
+    21,       /* lineNo */
+    "xhseqr", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "lapack\\xhseqr.m" /* pathName */
 };
 
-static emlrtRSInfo dv_emlrtRSI = {
+static emlrtRSInfo cv_emlrtRSI = {
     16,        /* lineNo */
     "xdhseqr", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdhseqr.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xdhseqr.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -56,8 +59,8 @@ int32_T xhseqr(const emlrtStack *sp, real_T h[36], real_T z[36])
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &cv_emlrtRSI;
-  b_st.site = &dv_emlrtRSI;
+  st.site = &bv_emlrtRSI;
+  b_st.site = &cv_emlrtRSI;
   info = 0;
   h[2] = 0.0;
   h[3] = 0.0;
@@ -238,7 +241,7 @@ int32_T xhseqr(const emlrtStack *sp, real_T h[36], real_T z[36])
             }
           }
           h11 = v[0];
-          c_st.site = &df_emlrtRSI;
+          c_st.site = &cf_emlrtRSI;
           s = xzlarfg(&c_st, nr, &h11, v);
           if (b_i > m) {
             iy = b_i + 6 * (b_i - 2);
@@ -434,10 +437,10 @@ int32_T xhseqr(const emlrtStack *sp, real_T h[36], real_T z[36])
         h[iy] = h21;
         if (i + 1 < 6) {
           iy = (i + 1) * 6 + i;
-          c_st.site = &hf_emlrtRSI;
+          c_st.site = &gf_emlrtRSI;
           xrot(&c_st, 5 - i, h, iy, iy + 1, rt2r, rt1r);
         }
-        c_st.site = &if_emlrtRSI;
+        c_st.site = &hf_emlrtRSI;
         b_xrot(&c_st, i - 1, h, c_i + 1, i * 6 + 1, rt2r, rt1r);
         iy = i * 6;
         for (j = 0; j < 6; j++) {

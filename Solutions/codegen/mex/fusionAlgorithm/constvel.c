@@ -46,7 +46,7 @@ void binary_expand_op(const emlrtStack *sp, emxArray_real_T *in1,
   b_in2_data = b_in2->data;
   stride_0_1 = (in2->size[1] != 1);
   stride_1_1 = (in1->size[1] != 1);
-  if (loop_ub < 1600) {
+  if (loop_ub < 800) {
     for (i = 0; i < loop_ub; i++) {
       b_in2_data[i] =
           in2_data[in3 + 6 * (i * stride_0_1)] + in1_data[i * stride_1_1];
@@ -107,7 +107,7 @@ void binary_expand_op_1(const emlrtStack *sp, emxArray_real_T *in1,
   b_in2_data = b_in2->data;
   stride_0_1 = (in2->size[1] != 1);
   stride_1_1 = (in1->size[1] != 1);
-  if (loop_ub < 1600) {
+  if (loop_ub < 800) {
     for (i = 0; i < loop_ub; i++) {
       b_in2_data[i] =
           in2_data[(in3 + 6 * (i * stride_0_1)) - 1] + in1_data[i * stride_1_1];
@@ -149,29 +149,29 @@ void constvel(const emlrtStack *sp, real_T state[6], const real_T varargin_1[3],
   st.tls = sp->tls;
   b_st.prev = &st;
   b_st.tls = st.tls;
-  st.site = &li_emlrtRSI;
+  st.site = &ki_emlrtRSI;
   d_validateattributes(&st, state);
-  st.site = &oi_emlrtRSI;
+  st.site = &ni_emlrtRSI;
   e_validateattributes(&st, varargin_1);
-  st.site = &pi_emlrtRSI;
+  st.site = &oi_emlrtRSI;
   b_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(varargin_2) || muDoubleScalarIsNaN(varargin_2)) {
     emlrtErrorWithMessageIdR2018a(
         &b_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:constvel:expectedFinite", 3, 4, 19, "input number 3, dt,");
   }
-  st.site = &qi_emlrtRSI;
+  st.site = &pi_emlrtRSI;
   d = state[1];
   d1 = 0.5 * (varargin_2 * varargin_2);
   state[0] = (state[0] + d * varargin_2) + d1 * varargin_1[0];
   d += varargin_1[0] * varargin_2;
   state[1] = d;
-  st.site = &qi_emlrtRSI;
+  st.site = &pi_emlrtRSI;
   d = state[3];
   state[2] = (state[2] + d * varargin_2) + d1 * varargin_1[1];
   d += varargin_1[1] * varargin_2;
   state[3] = d;
-  st.site = &qi_emlrtRSI;
+  st.site = &pi_emlrtRSI;
   d = state[5];
   state[4] = (state[4] + d * varargin_2) + d1 * varargin_1[2];
   d += varargin_1[2] * varargin_2;
@@ -208,7 +208,7 @@ void plus(const emlrtStack *sp, emxArray_real_T *in1,
   b_in1_data = b_in1->data;
   stride_0_1 = (in1->size[1] != 1);
   stride_1_1 = (in2->size[1] != 1);
-  if (loop_ub < 1600) {
+  if (loop_ub < 800) {
     for (i = 0; i < loop_ub; i++) {
       b_in1_data[i] = in1_data[i * stride_0_1] + in2_data[i * stride_1_1];
     }

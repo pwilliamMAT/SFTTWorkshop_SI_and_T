@@ -15,24 +15,30 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo dm_emlrtRSI = {
-    396,                                          /* lineNo */
-    "find_first_indices",                         /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/elmat/find.m" /* pathName */
+static emlrtRSInfo cm_emlrtRSI = {
+    396,                  /* lineNo */
+    "find_first_indices", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\find.m" /* pathName
+                                                                       */
 };
 
 static emlrtRTEInfo vd_emlrtRTEI = {
-    363,                                          /* lineNo */
-    24,                                           /* colNo */
-    "find",                                       /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/elmat/find.m" /* pName */
+    363,    /* lineNo */
+    24,     /* colNo */
+    "find", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\find.m" /* pName
+                                                                       */
 };
 
 static emlrtRTEInfo wd_emlrtRTEI = {
-    138,                                          /* lineNo */
-    9,                                            /* colNo */
-    "find",                                       /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/elmat/find.m" /* pName */
+    138,    /* lineNo */
+    9,      /* colNo */
+    "find", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\find.m" /* pName
+                                                                       */
 };
 
 /* Function Definitions */
@@ -56,13 +62,13 @@ void eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
   c_st.tls = b_st.tls;
   x_data = x->data;
   nx = x->size[0];
-  st.site = &bm_emlrtRSI;
+  st.site = &am_emlrtRSI;
   idx = 0;
   ii = i->size[0];
   i->size[0] = x->size[0];
   emxEnsureCapacity_int32_T(&st, i, ii, &vd_emlrtRTEI);
   i_data = i->data;
-  b_st.site = &cm_emlrtRSI;
+  b_st.site = &bm_emlrtRSI;
   if (x->size[0] > 2147483646) {
     c_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -98,7 +104,7 @@ void eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
     }
     b_iv[0] = 1;
     b_iv[1] = idx;
-    b_st.site = &dm_emlrtRSI;
+    b_st.site = &cm_emlrtRSI;
     indexShapeCheck(&b_st, i->size[0], b_iv);
     ii = i->size[0];
     i->size[0] = idx;

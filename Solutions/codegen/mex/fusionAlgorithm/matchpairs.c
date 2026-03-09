@@ -17,154 +17,207 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo in_emlrtRSI = {
-    179,                                                  /* lineNo */
-    "matlabPerfectMatching",                              /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pathName */
+static emlrtRSInfo hn_emlrtRSI =
+    {
+        179,                     /* lineNo */
+        "matlabPerfectMatching", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pathName */
 };
 
-static emlrtRSInfo jn_emlrtRSI = {
-    181,                                                  /* lineNo */
-    "matlabPerfectMatching",                              /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pathName */
+static emlrtRSInfo in_emlrtRSI =
+    {
+        181,                     /* lineNo */
+        "matlabPerfectMatching", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pathName */
+};
+
+static emlrtRSInfo jn_emlrtRSI =
+    {
+        230,                     /* lineNo */
+        "matlabPerfectMatching", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pathName */
 };
 
 static emlrtRSInfo kn_emlrtRSI = {
-    230,                                                  /* lineNo */
-    "matlabPerfectMatching",                              /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pathName */
+    17,    /* lineNo */
+    "min", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\min.m" /* pathName
+                                                                        */
 };
 
-static emlrtRSInfo ln_emlrtRSI = {
-    17,                                            /* lineNo */
-    "min",                                         /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/min.m" /* pathName */
+static emlrtRSInfo ln_emlrtRSI =
+    {
+        69,         /* lineNo */
+        "minOrMax", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\minOrMax."
+        "m" /* pathName */
 };
 
-static emlrtRSInfo mn_emlrtRSI = {
-    69,                                                   /* lineNo */
-    "minOrMax",                                           /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/minOrMax.m" /* pathName */
+static emlrtRSInfo mn_emlrtRSI =
+    {
+        119,       /* lineNo */
+        "minimum", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\minOrMax."
+        "m" /* pathName */
 };
 
 static emlrtRSInfo nn_emlrtRSI = {
-    119,                                                  /* lineNo */
-    "minimum",                                            /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/minOrMax.m" /* pathName */
+    288,             /* lineNo */
+    "unaryMinOrMax", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pathName */
 };
 
 static emlrtRSInfo on_emlrtRSI = {
-    288,                                                       /* lineNo */
-    "unaryMinOrMax",                                           /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
+    381,                     /* lineNo */
+    "unaryMinOrMaxDispatch", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pathName */
 };
 
 static emlrtRSInfo pn_emlrtRSI = {
-    381,                                                       /* lineNo */
-    "unaryMinOrMaxDispatch",                                   /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
+    455,          /* lineNo */
+    "minOrMax2D", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pathName */
 };
 
 static emlrtRSInfo qn_emlrtRSI = {
-    455,                                                       /* lineNo */
-    "minOrMax2D",                                              /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
+    562,                         /* lineNo */
+    "minOrMax2DColumnMajorDim2", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pathName */
 };
 
 static emlrtRSInfo rn_emlrtRSI = {
-    562,                                                       /* lineNo */
-    "minOrMax2DColumnMajorDim2",                               /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
+    561,                         /* lineNo */
+    "minOrMax2DColumnMajorDim2", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pathName */
 };
 
 static emlrtRSInfo sn_emlrtRSI = {
-    561,                                                       /* lineNo */
-    "minOrMax2DColumnMajorDim2",                               /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
+    558,                         /* lineNo */
+    "minOrMax2DColumnMajorDim2", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo tn_emlrtRSI = {
-    558,                                                       /* lineNo */
-    "minOrMax2DColumnMajorDim2",                               /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pathName */
+static emlrtRSInfo tn_emlrtRSI =
+    {
+        288,                     /* lineNo */
+        "augmentedShortestPath", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pathName */
 };
 
-static emlrtRSInfo un_emlrtRSI = {
-    288,                                                  /* lineNo */
-    "augmentedShortestPath",                              /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pathName */
+static emlrtRSInfo un_emlrtRSI =
+    {
+        305,                     /* lineNo */
+        "augmentedShortestPath", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pathName */
 };
 
-static emlrtRSInfo vn_emlrtRSI = {
-    305,                                                  /* lineNo */
-    "augmentedShortestPath",                              /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pathName */
+static emlrtRSInfo vn_emlrtRSI =
+    {
+        308,                     /* lineNo */
+        "augmentedShortestPath", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pathName */
 };
 
-static emlrtRSInfo wn_emlrtRSI = {
-    308,                                                  /* lineNo */
-    "augmentedShortestPath",                              /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pathName */
+static emlrtRSInfo wn_emlrtRSI =
+    {
+        323,                     /* lineNo */
+        "augmentedShortestPath", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pathName */
 };
 
-static emlrtRSInfo xn_emlrtRSI = {
-    323,                                                  /* lineNo */
-    "augmentedShortestPath",                              /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pathName */
+static emlrtRSInfo xn_emlrtRSI =
+    {
+        373,                     /* lineNo */
+        "augmentedShortestPath", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pathName */
 };
 
-static emlrtRSInfo yn_emlrtRSI = {
-    373,                                                  /* lineNo */
-    "augmentedShortestPath",                              /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pathName */
+static emlrtRSInfo yn_emlrtRSI =
+    {
+        379,                     /* lineNo */
+        "augmentedShortestPath", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pathName */
 };
 
 static emlrtRSInfo ao_emlrtRSI = {
-    379,                                                  /* lineNo */
-    "augmentedShortestPath",                              /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pathName */
-};
-
-static emlrtRSInfo bo_emlrtRSI = {
     46,                      /* lineNo */
     "minPriorityQueue/push", /* fcnName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pathName */
+};
+
+static emlrtRSInfo do_emlrtRSI = {
+    69,                        /* lineNo */
+    "minPriorityQueue/update", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
 static emlrtRSInfo eo_emlrtRSI = {
-    69,                        /* lineNo */
-    "minPriorityQueue/update", /* fcnName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pathName */
+    56,                     /* lineNo */
+    "minPriorityQueue/pop", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
 static emlrtRSInfo fo_emlrtRSI = {
-    56,                     /* lineNo */
-    "minPriorityQueue/pop", /* fcnName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pathName */
+    99,                          /* lineNo */
+    "minPriorityQueue/percDown", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
 static emlrtRSInfo go_emlrtRSI = {
-    99,                          /* lineNo */
+    105,                         /* lineNo */
     "minPriorityQueue/percDown", /* fcnName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
 static emlrtRSInfo ho_emlrtRSI = {
-    105,                         /* lineNo */
-    "minPriorityQueue/percDown", /* fcnName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pathName */
-};
-
-static emlrtRSInfo io_emlrtRSI = {
     107,                         /* lineNo */
     "minPriorityQueue/percDown", /* fcnName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
 static emlrtBCInfo lc_emlrtBCI = {
@@ -174,16 +227,19 @@ static emlrtBCInfo lc_emlrtBCI = {
     35,                        /* colNo */
     "",                        /* aName */
     "minPriorityQueue/update", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtRTEInfo ib_emlrtRTEI = {
-    198,                                                       /* lineNo */
-    27,                                                        /* colNo */
-    "unaryMinOrMax",                                           /* fName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pName */
+    198,             /* lineNo */
+    27,              /* colNo */
+    "unaryMinOrMax", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pName */
 };
 
 static emlrtBCInfo mc_emlrtBCI = {
@@ -193,9 +249,10 @@ static emlrtBCInfo mc_emlrtBCI = {
     38,                     /* colNo */
     "",                     /* aName */
     "minPriorityQueue/pop", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo nc_emlrtBCI = {
@@ -205,9 +262,10 @@ static emlrtBCInfo nc_emlrtBCI = {
     29,                     /* colNo */
     "",                     /* aName */
     "minPriorityQueue/pop", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo oc_emlrtBCI = {
@@ -217,9 +275,10 @@ static emlrtBCInfo oc_emlrtBCI = {
     22,                      /* colNo */
     "",                      /* aName */
     "minPriorityQueue/push", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo pc_emlrtBCI = {
@@ -229,9 +288,10 @@ static emlrtBCInfo pc_emlrtBCI = {
     29,                      /* colNo */
     "",                      /* aName */
     "minPriorityQueue/push", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo uc_emlrtBCI = {
@@ -241,9 +301,10 @@ static emlrtBCInfo uc_emlrtBCI = {
     53,                          /* colNo */
     "",                          /* aName */
     "minPriorityQueue/percDown", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo vc_emlrtBCI = {
@@ -253,9 +314,10 @@ static emlrtBCInfo vc_emlrtBCI = {
     30,                          /* colNo */
     "",                          /* aName */
     "minPriorityQueue/percDown", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo wc_emlrtBCI = {
@@ -265,9 +327,10 @@ static emlrtBCInfo wc_emlrtBCI = {
     86,                          /* colNo */
     "",                          /* aName */
     "minPriorityQueue/percDown", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo xc_emlrtBCI = {
@@ -277,9 +340,10 @@ static emlrtBCInfo xc_emlrtBCI = {
     46,                          /* colNo */
     "",                          /* aName */
     "minPriorityQueue/percDown", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo yc_emlrtBCI = {
@@ -289,9 +353,10 @@ static emlrtBCInfo yc_emlrtBCI = {
     21,                          /* colNo */
     "",                          /* aName */
     "minPriorityQueue/percDown", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo ad_emlrtBCI = {
@@ -301,151 +366,205 @@ static emlrtBCInfo ad_emlrtBCI = {
     77,                          /* colNo */
     "",                          /* aName */
     "minPriorityQueue/percDown", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtRTEInfo ke_emlrtRTEI = {
-    167,                                                  /* lineNo */
-    1,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo ke_emlrtRTEI =
+    {
+        167,          /* lineNo */
+        1,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo le_emlrtRTEI = {
-    168,                                                  /* lineNo */
-    1,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo le_emlrtRTEI =
+    {
+        168,          /* lineNo */
+        1,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo me_emlrtRTEI = {
-    169,                                                  /* lineNo */
-    1,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo me_emlrtRTEI =
+    {
+        169,          /* lineNo */
+        1,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
 static emlrtRTEInfo ne_emlrtRTEI = {
-    550,                                                       /* lineNo */
-    21,                                                        /* colNo */
-    "unaryMinOrMax",                                           /* fName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pName */
+    550,             /* lineNo */
+    21,              /* colNo */
+    "unaryMinOrMax", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pName */
 };
 
 static emlrtRTEInfo oe_emlrtRTEI = {
-    552,                                                       /* lineNo */
-    5,                                                         /* colNo */
-    "unaryMinOrMax",                                           /* fName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/unaryMinOrMax.m" /* pName */
+    552,             /* lineNo */
+    5,               /* colNo */
+    "unaryMinOrMax", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pName */
 };
 
 static emlrtRTEInfo pe_emlrtRTEI = {
-    18,                                            /* lineNo */
-    5,                                             /* colNo */
-    "min",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/min.m" /* pName */
+    18,    /* lineNo */
+    5,     /* colNo */
+    "min", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\min.m" /* pName
+                                                                        */
 };
 
-static emlrtRTEInfo qe_emlrtRTEI = {
-    188,                                                  /* lineNo */
-    1,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo qe_emlrtRTEI =
+    {
+        188,          /* lineNo */
+        1,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
 static emlrtRTEInfo re_emlrtRTEI = {
     26,                 /* lineNo */
     39,                 /* colNo */
     "minPriorityQueue", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pName */
 };
 
 static emlrtRTEInfo se_emlrtRTEI = {
     27,                 /* lineNo */
     46,                 /* colNo */
     "minPriorityQueue", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pName */
 };
 
-static emlrtRTEInfo te_emlrtRTEI = {
-    233,                                                  /* lineNo */
-    61,                                                   /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo te_emlrtRTEI =
+    {
+        233,          /* lineNo */
+        61,           /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo ue_emlrtRTEI = {
-    254,                                                  /* lineNo */
-    1,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo ue_emlrtRTEI =
+    {
+        254,          /* lineNo */
+        1,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo ve_emlrtRTEI = {
-    258,                                                  /* lineNo */
-    1,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo ve_emlrtRTEI =
+    {
+        258,          /* lineNo */
+        1,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo we_emlrtRTEI = {
-    263,                                                  /* lineNo */
-    1,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo we_emlrtRTEI =
+    {
+        263,          /* lineNo */
+        1,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo xe_emlrtRTEI = {
-    267,                                                  /* lineNo */
-    1,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo xe_emlrtRTEI =
+    {
+        267,          /* lineNo */
+        1,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo ye_emlrtRTEI = {
-    218,                                                  /* lineNo */
-    1,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo ye_emlrtRTEI =
+    {
+        218,          /* lineNo */
+        1,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo af_emlrtRTEI = {
-    233,                                                  /* lineNo */
-    9,                                                    /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo af_emlrtRTEI =
+    {
+        233,          /* lineNo */
+        9,            /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo bf_emlrtRTEI = {
-    233,                                                  /* lineNo */
-    25,                                                   /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo bf_emlrtRTEI =
+    {
+        233,          /* lineNo */
+        25,           /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo cf_emlrtRTEI = {
-    233,                                                  /* lineNo */
-    40,                                                   /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo cf_emlrtRTEI =
+    {
+        233,          /* lineNo */
+        40,           /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo df_emlrtRTEI = {
-    233,                                                  /* lineNo */
-    52,                                                   /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo df_emlrtRTEI =
+    {
+        233,          /* lineNo */
+        52,           /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo ef_emlrtRTEI = {
-    162,                                                  /* lineNo */
-    66,                                                   /* colNo */
-    "matchpairs",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/matchpairs.m" /* pName */
+static emlrtRTEInfo ef_emlrtRTEI =
+    {
+        162,          /* lineNo */
+        66,           /* colNo */
+        "matchpairs", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\matchpairs."
+        "m" /* pName */
 };
 
 /* Function Definitions */
@@ -537,18 +656,18 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
   } else {
     real_T edge_weight_shifted;
     int32_T b_n;
-    st.site = &in_emlrtRSI;
-    b_st.site = &ln_emlrtRSI;
-    c_st.site = &mn_emlrtRSI;
-    d_st.site = &nn_emlrtRSI;
+    st.site = &hn_emlrtRSI;
+    b_st.site = &kn_emlrtRSI;
+    c_st.site = &ln_emlrtRSI;
+    d_st.site = &mn_emlrtRSI;
     if (matrixRep->size[1] < 1) {
       emlrtErrorWithMessageIdR2018a(
           &d_st, &ib_emlrtRTEI, "Coder:toolbox:eml_min_or_max_varDimZero",
           "Coder:toolbox:eml_min_or_max_varDimZero", 0);
     }
-    e_st.site = &on_emlrtRSI;
-    f_st.site = &pn_emlrtRSI;
-    g_st.site = &qn_emlrtRSI;
+    e_st.site = &nn_emlrtRSI;
+    f_st.site = &on_emlrtRSI;
+    g_st.site = &pn_emlrtRSI;
     b_n = matrixRep->size[1];
     c = rowWeight->size[0];
     rowWeight->size[0] = n;
@@ -562,7 +681,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
       idx_data[i] = 1;
     }
     if (matrixRep->size[0] >= 1) {
-      h_st.site = &tn_emlrtRSI;
+      h_st.site = &sn_emlrtRSI;
       if (matrixRep->size[0] > 2147483646) {
         i_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&i_st);
@@ -570,13 +689,13 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
       for (i = 0; i < n; i++) {
         rowWeight_data[i] = matrixRep_data[i];
       }
-      h_st.site = &sn_emlrtRSI;
+      h_st.site = &rn_emlrtRSI;
       if (matrixRep->size[1] > 2147483646) {
         i_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&i_st);
       }
       for (i = 2; i <= b_n; i++) {
-        h_st.site = &rn_emlrtRSI;
+        h_st.site = &qn_emlrtRSI;
         if (n > 2147483646) {
           i_st.site = &tb_emlrtRSI;
           check_forloop_overflow_error(&i_st);
@@ -605,7 +724,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
     for (i = 0; i < n; i++) {
       minIndices_data[i] = idx_data[i];
     }
-    st.site = &jn_emlrtRSI;
+    st.site = &in_emlrtRSI;
     b_st.site = &ed_emlrtRSI;
     success = true;
     c_st.site = &fd_emlrtRSI;
@@ -666,7 +785,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
             int32_T exitg2;
             int32_T rlast;
             boolean_T guard1;
-            st.site = &kn_emlrtRSI;
+            st.site = &jn_emlrtRSI;
             c = queue.heap->size[0];
             queue.heap->size[0] = n;
             emxEnsureCapacity_int32_T(&st, queue.heap, c, &te_emlrtRTEI);
@@ -715,7 +834,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
             do {
               real_T edge_weight;
               exitg3 = 0;
-              b_st.site = &un_emlrtRSI;
+              b_st.site = &tn_emlrtRSI;
               b_n = 0;
               do {
                 exitg2 = 0;
@@ -739,7 +858,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                         idx_data[matchRtoC_data[b_n] - 1] = c + 1;
                         minIndices_data[b_n] = edge_weight;
                         if (colorsR_data[b_n] == 0) {
-                          b_st.site = &vn_emlrtRSI;
+                          b_st.site = &un_emlrtRSI;
                           queue.len++;
                           if ((queue.len < 1) ||
                               (queue.len > queue.heap->size[0])) {
@@ -754,18 +873,18 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                                 &pc_emlrtBCI, &b_st);
                           }
                           queue.indexToHeap->data[b_n] = queue.len;
-                          c_st.site = &bo_emlrtRSI;
+                          c_st.site = &ao_emlrtRSI;
                           minPriorityQueue_percUp(&c_st, &queue, queue.len,
                                                   distancesR);
                           colorsR_data[b_n] = 1U;
                         } else {
-                          b_st.site = &wn_emlrtRSI;
+                          b_st.site = &vn_emlrtRSI;
                           if (b_n + 1 > queue.indexToHeap->size[0]) {
                             emlrtDynamicBoundsCheckR2012b(
                                 b_n + 1, 1, queue.indexToHeap->size[0],
                                 &lc_emlrtBCI, &b_st);
                           }
-                          c_st.site = &eo_emlrtRSI;
+                          c_st.site = &do_emlrtRSI;
                           minPriorityQueue_percUp(&c_st, &queue,
                                                   queue.indexToHeap->data[b_n],
                                                   distancesR);
@@ -794,7 +913,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                   int32_T c_i;
                   int32_T d_i;
                   int32_T rCandidate;
-                  b_st.site = &xn_emlrtRSI;
+                  b_st.site = &wn_emlrtRSI;
                   rCandidate = queue.heap->data[0] - 1;
                   if ((queue.len < 1) || (queue.len > queue.heap->size[0])) {
                     emlrtDynamicBoundsCheckR2012b(
@@ -810,7 +929,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                   }
                   queue.indexToHeap->data[queue.heap->data[0] - 1] = 1;
                   queue.len--;
-                  c_st.site = &fo_emlrtRSI;
+                  c_st.site = &eo_emlrtRSI;
                   d_i = 1;
                   int32_T exitg4;
                   int32_T ichild;
@@ -819,7 +938,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                     ichild = d_i << 1;
                     if (ichild <= c_i) {
                       if (ichild + 1 <= c_i) {
-                        d_st.site = &go_emlrtRSI;
+                        d_st.site = &fo_emlrtRSI;
                         if ((ichild < 1) || (ichild > queue.heap->size[0])) {
                           emlrtDynamicBoundsCheckR2012b(ichild, 1,
                                                         queue.heap->size[0],
@@ -868,7 +987,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                           ichild++;
                         }
                       }
-                      d_st.site = &ho_emlrtRSI;
+                      d_st.site = &go_emlrtRSI;
                       if (d_i > queue.heap->size[0]) {
                         emlrtDynamicBoundsCheckR2012b(
                             d_i, 1, queue.heap->size[0], &kc_emlrtBCI, &d_st);
@@ -927,7 +1046,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                         queue.heap->data[d_i - 1] =
                             queue.heap->data[ichild - 1];
                         queue.heap->data[ichild - 1] = c;
-                        d_st.site = &io_emlrtRSI;
+                        d_st.site = &ho_emlrtRSI;
                         b_indexShapeCheck(&d_st, queue.heap->size[0]);
                         if (ichild > queue.heap->size[0]) {
                           emlrtDynamicBoundsCheckR2012b(ichild, 1,
@@ -1018,14 +1137,14 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                     last_weight_sap = minIndices_data[b_n - 1];
                   }
                 } while (exitg2 == 0);
-                b_st.site = &yn_emlrtRSI;
+                b_st.site = &xn_emlrtRSI;
                 for (i = 0; i <= c_n; i++) {
                   if (colorsR_data[i] == 2) {
                     rowWeight_data[i] =
                         (rowWeight_data[i] - lsap) + distancesR_data[i];
                   }
                 }
-                b_st.site = &ao_emlrtRSI;
+                b_st.site = &yn_emlrtRSI;
                 for (i = 0; i <= c_n; i++) {
                   if (matchCtoR_data[i] != 0) {
                     colWeight_data[i] =

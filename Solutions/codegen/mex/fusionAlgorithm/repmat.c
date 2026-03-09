@@ -15,17 +15,21 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo lk_emlrtRSI = {
-    153,                                            /* lineNo */
-    "repmat",                                       /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/elmat/repmat.m" /* pathName */
+static emlrtRSInfo kk_emlrtRSI = {
+    153,      /* lineNo */
+    "repmat", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\repmat.m" /* pathName
+                                                                         */
 };
 
 static emlrtRTEInfo fd_emlrtRTEI = {
-    106,                                            /* lineNo */
-    25,                                             /* colNo */
-    "repmat",                                       /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/elmat/repmat.m" /* pName */
+    106,      /* lineNo */
+    25,       /* colNo */
+    "repmat", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\repmat.m" /* pName
+                                                                         */
 };
 
 /* Function Definitions */
@@ -42,7 +46,7 @@ void repmat(const emlrtStack *sp, const c_objectTrack *a,
   st.tls = sp->tls;
   b_st.prev = &st;
   b_st.tls = st.tls;
-  st.site = &kk_emlrtRSI;
+  st.site = &jk_emlrtRSI;
   assertValidSizeArg(&st, varargin_1);
   i = b->size[0] * b->size[1];
   b->size[0] = 1;
@@ -51,7 +55,7 @@ void repmat(const emlrtStack *sp, const c_objectTrack *a,
   emxEnsureCapacity_objectTrack(sp, b, i, &fd_emlrtRTEI);
   b_data = b->data;
   if ((int32_T)varargin_1[1] != 0) {
-    st.site = &lk_emlrtRSI;
+    st.site = &kk_emlrtRSI;
     if ((int32_T)varargin_1[1] > 2147483646) {
       b_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&b_st);

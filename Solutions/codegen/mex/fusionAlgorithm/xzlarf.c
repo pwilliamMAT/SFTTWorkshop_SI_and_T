@@ -13,38 +13,44 @@
 #include <string.h>
 
 /* Variable Definitions */
+static emlrtRSInfo re_emlrtRSI = {
+    50,       /* lineNo */
+    "xzlarf", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzlarf.m" /* pathName */
+};
+
 static emlrtRSInfo se_emlrtRSI = {
-    50,                                                            /* lineNo */
-    "xzlarf",                                                      /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzlarf.m" /* pathName
-                                                                    */
+    68,       /* lineNo */
+    "xzlarf", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzlarf.m" /* pathName */
 };
 
 static emlrtRSInfo te_emlrtRSI = {
-    68,                                                            /* lineNo */
-    "xzlarf",                                                      /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzlarf.m" /* pathName
-                                                                    */
+    75,       /* lineNo */
+    "xzlarf", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzlarf.m" /* pathName */
 };
 
 static emlrtRSInfo ue_emlrtRSI = {
-    75,                                                            /* lineNo */
-    "xzlarf",                                                      /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzlarf.m" /* pathName
-                                                                    */
+    103,      /* lineNo */
+    "ilazlc", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzlarf.m" /* pathName */
 };
 
 static emlrtRSInfo ve_emlrtRSI = {
-    103,                                                           /* lineNo */
-    "ilazlc",                                                      /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzlarf.m" /* pathName
-                                                                    */
-};
-
-static emlrtRSInfo we_emlrtRSI = {
-    74,                                                         /* lineNo */
-    "xgemv",                                                    /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+refblas/xgemv.m" /* pathName */
+    74,      /* lineNo */
+    "xgemv", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "refblas\\xgemv.m" /* pathName */
 };
 
 /* Function Declarations */
@@ -98,14 +104,14 @@ void xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0, real_T tau,
       lastv--;
       i--;
     }
-    st.site = &se_emlrtRSI;
+    st.site = &re_emlrtRSI;
     lastc = n;
     exitg2 = false;
     while ((!exitg2) && (lastc > 0)) {
       int32_T exitg1;
       i = ic0 + (lastc - 1) * 6;
       colbottom = i + lastv;
-      b_st.site = &ve_emlrtRSI;
+      b_st.site = &ue_emlrtRSI;
       if ((i <= colbottom) && (colbottom > 2147483646)) {
         c_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&c_st);
@@ -133,10 +139,10 @@ void xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0, real_T tau,
   }
   if (lastv + 1 > 0) {
     real_T c;
-    st.site = &te_emlrtRSI;
-    b_st.site = &ke_emlrtRSI;
+    st.site = &se_emlrtRSI;
+    b_st.site = &je_emlrtRSI;
     if (lastc != 0) {
-      c_st.site = &me_emlrtRSI;
+      c_st.site = &le_emlrtRSI;
       if (lastc > 2147483646) {
         d_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&d_st);
@@ -149,7 +155,7 @@ void xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0, real_T tau,
       for (iac = ic0; iac <= colbottom; iac += 6) {
         c = 0.0;
         i = iac + lastv;
-        c_st.site = &we_emlrtRSI;
+        c_st.site = &ve_emlrtRSI;
         if ((iac <= i) && (i > 2147483646)) {
           d_st.site = &tb_emlrtRSI;
           check_forloop_overflow_error(&d_st);
@@ -161,21 +167,21 @@ void xzlarf(const emlrtStack *sp, int32_T m, int32_T n, int32_T iv0, real_T tau,
         work[i] += c;
       }
     }
-    st.site = &ue_emlrtRSI;
-    b_st.site = &ne_emlrtRSI;
-    c_st.site = &oe_emlrtRSI;
-    d_st.site = &pe_emlrtRSI;
+    st.site = &te_emlrtRSI;
+    b_st.site = &me_emlrtRSI;
+    c_st.site = &ne_emlrtRSI;
+    d_st.site = &oe_emlrtRSI;
     if (!(-tau == 0.0)) {
       int32_T jA;
       jA = ic0;
-      e_st.site = &qe_emlrtRSI;
+      e_st.site = &pe_emlrtRSI;
       i = (uint8_T)lastc;
       for (ia = 0; ia < i; ia++) {
         c = work[ia];
         if (c != 0.0) {
           c *= -tau;
           colbottom = lastv + jA;
-          e_st.site = &re_emlrtRSI;
+          e_st.site = &qe_emlrtRSI;
           if ((jA <= colbottom) && (colbottom > 2147483646)) {
             f_st.site = &tb_emlrtRSI;
             check_forloop_overflow_error(&f_st);

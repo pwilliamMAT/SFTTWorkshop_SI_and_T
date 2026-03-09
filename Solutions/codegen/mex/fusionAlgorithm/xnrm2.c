@@ -14,21 +14,19 @@
 
 /* Variable Definitions */
 static emlrtRSInfo qd_emlrtRSI = {
-    23,                                                      /* lineNo */
-    "xnrm2",                                                 /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+blas/xnrm2.m" /* pathName */
+    23,      /* lineNo */
+    "xnrm2", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+blas\\xnrm2."
+    "m" /* pathName */
 };
 
 static emlrtRSInfo rd_emlrtRSI = {
-    38,                                                         /* lineNo */
-    "xnrm2",                                                    /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+refblas/xnrm2.m" /* pathName */
-};
-
-static emlrtRSInfo sd_emlrtRSI = {
-    64,                                                         /* lineNo */
-    "xnrm2",                                                    /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+refblas/xnrm2.m" /* pathName */
+    38,      /* lineNo */
+    "xnrm2", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "refblas\\xnrm2.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -62,24 +60,6 @@ real_T b_xnrm2(int32_T n, const real_T x[3])
         y += t * t;
       }
       y = scale * muDoubleScalarSqrt(y);
-      if (muDoubleScalarIsNaN(y)) {
-        int32_T k;
-        k = 2;
-        int32_T exitg1;
-        do {
-          exitg1 = 0;
-          if (k < 4) {
-            if (muDoubleScalarIsNaN(x[k - 1])) {
-              exitg1 = 1;
-            } else {
-              k++;
-            }
-          } else {
-            y = rtInf;
-            exitg1 = 1;
-          }
-        } while (exitg1 == 0);
-      }
     }
   }
   return y;
@@ -128,25 +108,6 @@ real_T xnrm2(const emlrtStack *sp, int32_T n, const real_T x[36], int32_T ix0)
         }
       }
       y = scale * muDoubleScalarSqrt(y);
-      if (muDoubleScalarIsNaN(y)) {
-        int32_T b_k;
-        b_st.site = &sd_emlrtRSI;
-        b_k = ix0;
-        int32_T exitg1;
-        do {
-          exitg1 = 0;
-          if (b_k <= kend) {
-            if (muDoubleScalarIsNaN(x[b_k - 1])) {
-              exitg1 = 1;
-            } else {
-              b_k++;
-            }
-          } else {
-            y = rtInf;
-            exitg1 = 1;
-          }
-        } while (exitg1 == 0);
-      }
     }
   }
   return y;

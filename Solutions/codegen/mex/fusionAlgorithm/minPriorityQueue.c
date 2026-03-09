@@ -13,18 +13,20 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo co_emlrtRSI = {
+static emlrtRSInfo bo_emlrtRSI = {
     86,                        /* lineNo */
     "minPriorityQueue/percUp", /* fcnName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
-static emlrtRSInfo do_emlrtRSI = {
+static emlrtRSInfo co_emlrtRSI = {
     88,                        /* lineNo */
     "minPriorityQueue/percUp", /* fcnName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
 static emlrtBCInfo wi_emlrtBCI = {
@@ -34,9 +36,10 @@ static emlrtBCInfo wi_emlrtBCI = {
     50,                        /* colNo */
     "",                        /* aName */
     "minPriorityQueue/percUp", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo xi_emlrtBCI = {
@@ -46,9 +49,10 @@ static emlrtBCInfo xi_emlrtBCI = {
     26,                        /* colNo */
     "",                        /* aName */
     "minPriorityQueue/percUp", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo yi_emlrtBCI = {
@@ -58,9 +62,10 @@ static emlrtBCInfo yi_emlrtBCI = {
     83,                        /* colNo */
     "",                        /* aName */
     "minPriorityQueue/percUp", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo aj_emlrtBCI = {
@@ -70,9 +75,10 @@ static emlrtBCInfo aj_emlrtBCI = {
     42,                        /* colNo */
     "",                        /* aName */
     "minPriorityQueue/percUp", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo bj_emlrtBCI = {
@@ -82,9 +88,10 @@ static emlrtBCInfo bj_emlrtBCI = {
     17,                        /* colNo */
     "",                        /* aName */
     "minPriorityQueue/percUp", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo cj_emlrtBCI = {
@@ -94,9 +101,10 @@ static emlrtBCInfo cj_emlrtBCI = {
     74,                        /* colNo */
     "",                        /* aName */
     "minPriorityQueue/percUp", /* fName */
-    "/MATLAB/toolbox/matlab/graphfun/codegen/+matlab/+internal/+coder/"
-    "minPriorityQueue.m", /* pName */
-    0                     /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\matlab\\graphfun\\codegen\\+matlab\\+"
+    "internal\\+coder\\minPriorityQueue.m", /* pName */
+    0                                       /* checkKind */
 };
 
 /* Function Definitions */
@@ -120,7 +128,7 @@ void minPriorityQueue_percUp(const emlrtStack *sp,
     int32_T c_obj;
     int32_T obj_idx_1;
     boolean_T tf;
-    st.site = &co_emlrtRSI;
+    st.site = &bo_emlrtRSI;
     b_obj = obj->heap->size[0];
     if ((i < 1) || (i > b_obj)) {
       emlrtDynamicBoundsCheckR2012b(i, 1, b_obj, &kc_emlrtBCI, &st);
@@ -177,7 +185,7 @@ void minPriorityQueue_percUp(const emlrtStack *sp,
       obj_idx_1 = obj->heap->data[i - 1];
       obj->heap->data[i - 1] = obj->heap->data[iparent - 1];
       obj->heap->data[iparent - 1] = obj_idx_1;
-      st.site = &do_emlrtRSI;
+      st.site = &co_emlrtRSI;
       b_indexShapeCheck(&st, obj->heap->size[0]);
       if (iparent > b_obj) {
         emlrtDynamicBoundsCheckR2012b(iparent, 1, b_obj, &yi_emlrtBCI,

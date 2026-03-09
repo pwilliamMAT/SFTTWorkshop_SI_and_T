@@ -19,44 +19,52 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo xd_emlrtRSI =
-    {
-        10,                         /* lineNo */
-        "eigSkewHermitianStandard", /* fcnName */
-        "/MATLAB/toolbox/eml/lib/matlab/matfun/private/"
-        "eigSkewHermitianStandard.m" /* pathName */
+static emlrtRSInfo wd_emlrtRSI = {
+    10,                         /* lineNo */
+    "eigSkewHermitianStandard", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\private\\eigSkew"
+    "HermitianStandard.m" /* pathName */
 };
 
-static emlrtRSInfo yd_emlrtRSI = {
+static emlrtRSInfo xd_emlrtRSI = {
     19,                             /* lineNo */
     "eigRealSkewSymmetricStandard", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/matfun/private/"
-    "eigRealSkewSymmetricStandard.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\private\\eigReal"
+    "SkewSymmetricStandard.m" /* pathName */
+};
+
+static emlrtRSInfo ae_emlrtRSI = {
+    52,      /* lineNo */
+    "schur", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\schur.m" /* pathName
+                                                                         */
 };
 
 static emlrtRSInfo be_emlrtRSI = {
-    52,                                             /* lineNo */
-    "schur",                                        /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/matfun/schur.m" /* pathName */
+    54,      /* lineNo */
+    "schur", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\matfun\\schur.m" /* pathName
+                                                                         */
 };
 
-static emlrtRSInfo ce_emlrtRSI = {
-    54,                                             /* lineNo */
-    "schur",                                        /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/matfun/schur.m" /* pathName */
+static emlrtRSInfo we_emlrtRSI = {
+    32,       /* lineNo */
+    "xhseqr", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "lapack\\xhseqr.m" /* pathName */
 };
 
 static emlrtRSInfo xe_emlrtRSI = {
-    32,                                                         /* lineNo */
-    "xhseqr",                                                   /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xhseqr.m" /* pathName */
-};
-
-static emlrtRSInfo ye_emlrtRSI = {
     22,        /* lineNo */
     "xdhseqr", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdhseqr.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xdhseqr.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -96,9 +104,9 @@ void eigSkewHermitianStandard(const emlrtStack *sp, const real_T A[36],
   e_st.tls = d_st.tls;
   f_st.prev = &e_st;
   f_st.tls = e_st.tls;
-  st.site = &xd_emlrtRSI;
-  b_st.site = &yd_emlrtRSI;
-  c_st.site = &ae_emlrtRSI;
+  st.site = &wd_emlrtRSI;
+  b_st.site = &xd_emlrtRSI;
+  c_st.site = &yd_emlrtRSI;
   d_st.site = &dd_emlrtRSI;
   e_st.site = &ed_emlrtRSI;
   converged = true;
@@ -129,13 +137,13 @@ void eigSkewHermitianStandard(const emlrtStack *sp, const real_T A[36],
     int32_T info;
     int32_T kdefl;
     boolean_T exitg1;
-    c_st.site = &be_emlrtRSI;
+    c_st.site = &ae_emlrtRSI;
     memcpy(&T[0], &A[0], 36U * sizeof(real_T));
-    d_st.site = &ee_emlrtRSI;
+    d_st.site = &de_emlrtRSI;
     xzgehrd(&d_st, T, unusedExpr);
-    c_st.site = &ce_emlrtRSI;
-    d_st.site = &xe_emlrtRSI;
-    e_st.site = &ye_emlrtRSI;
+    c_st.site = &be_emlrtRSI;
+    d_st.site = &we_emlrtRSI;
+    e_st.site = &xe_emlrtRSI;
     info = -1;
     T[2] = 0.0;
     T[3] = 0.0;
@@ -319,7 +327,7 @@ void eigSkewHermitianStandard(const emlrtStack *sp, const real_T A[36],
               }
             }
             lambda = v[0];
-            f_st.site = &df_emlrtRSI;
+            f_st.site = &cf_emlrtRSI;
             rt1r = xzlarfg(&f_st, nr, &lambda, v);
             if (b_i > m) {
               istart = b_i + 6 * (b_i - 2);
@@ -455,10 +463,10 @@ void eigSkewHermitianStandard(const emlrtStack *sp, const real_T A[36],
           T[istart] = h21;
           if (i + 1 < 6) {
             istart = (i + 1) * 6 + i;
-            f_st.site = &hf_emlrtRSI;
+            f_st.site = &gf_emlrtRSI;
             xrot(&f_st, 5 - i, T, istart, istart + 1, h22, rt1i);
           }
-          f_st.site = &if_emlrtRSI;
+          f_st.site = &hf_emlrtRSI;
           b_xrot(&f_st, i - 1, T, nr + 1, i * 6 + 1, h22, rt1i);
         }
         kdefl = 0;
@@ -471,7 +479,7 @@ void eigSkewHermitianStandard(const emlrtStack *sp, const real_T A[36],
       }
     }
     if ((info + 1 != 0) && (!emlrtSetWarningFlag(&b_st))) {
-      c_st.site = &de_emlrtRSI;
+      c_st.site = &ce_emlrtRSI;
       b_warning(&c_st);
     }
   }

@@ -17,26 +17,27 @@ static const mxArray *c_emlrtMexFcnResolvedFunctionsI(void);
 static const mxArray *c_emlrtMexFcnResolvedFunctionsI(void)
 {
   const mxArray *nameCaptureInfo;
-  const char_T *data[5] = {
-      "789ce555c14edb4010dd2040485521a79e39708595aa16f5d81008092521ad5d821aa174"
-      "6d2ff1925d4fb4bb81e42be0137ae413fa03fd8ffe494b126f12af64"
-      "9942e5aa622ee3d19b9d37f36ccfa242ad5e4008ada3a9ddbe98fa97715c8cfd124a9a8d"
-      "17acbc42321dada0e5c43983dfc4de8748d3a19e06111174763200c1",
-      "22126977d4a7485205fc8a0613e48271ea32419dc5a0318e4465019a056368fc5c0ea9df"
-      "730602c950cd3be48bc14c8faf29f32e67e8619bad879d67f8fa8fe4"
-      "33f53732f80c7e31500ca212ef82643a144f9ed7f0ada6f24f11a5e5c0d7f379bf3f91ef"
-      "632a5f126f1f9ce37ac93d2eed6dee4b7645f127da07c5f4fdf85461",
-      "a7e2ba2d903d1542bfe3d43a240a3aeef62e76800ff4bd4e0a5b7aed88b86e966e46efac"
-      "396c3fcf5f9bf85fad3b96279fb1e7c2374ca9f7d0eff0550a5fd1c2"
-      "afdf914673f4daf952fa70b94bea672d6fbfaaaaf33e9a193c597da09438affadf52ce3f"
-      "54c7f729f58b16deae95cfb704d19c7812406f610dc03d1862151249",
-      "03ac25f17b2ceac63f2e671e06ef92fada1d033be26feddb752bb6fb35f8a49f63e8327f"
-      "728ffdb3fbe5ee917ca67e3983cfe0ed5ae34fdf4f52a278c3e6b50f"
-      "7e347e76f2e433f65cf8f2daaf017c3e79e309def4df9e067b47dc1f9d9d1e56fefffdfa"
-      "1b14abaae8",
+  const char_T *data[6] = {
+      "789cdd55416fd3301476d0404888d113e71d7665420826c18991d251605b45b382544fc5"
+      "71bcc6ab1d47b6b37513072e9c11ff8023127f80bfc01f800b077e01"
+      "670e1c5892ba6d2c45191bcaa4bd435ebe7ccfef7b7e499e81d3de7000008b20b72fd772"
+      "7f7d821b137f0914cde61d2bce298683cb60a1b0cef0ef271e8b4893",
+      "b1ce41843899ae0c04a7118ab47718132089126c9f0419b34b19f12827dd79b09922de9a"
+      "a3a620a5d27b372478d44d3890a19a55c8e6c1b41faf4bf6bb50d10f"
+      "dbec7ed871462f3ea59ec97fa342cff0bb89a2225a634321a90ef999f76bf4ae94eae78c"
+      "d232c17ab6df9f67d47b53aa57e4fb8f77dc07705b11a9607c4019a3",
+      "88c3ad883425dd274bb79636900e5f0a3952b02970c249a415ecb63c2fbb644428e20e92"
+      "fa4ee1c9a0db1ea028181cc70996e8e3962a68b57685a7fa55fd35ef"
+      "a56abfb69fc55fcdfcafcf3f9c3af5c61ffe7cad53cfd879e98d4bf29df47bbd59a2d7b0"
+      "f8d5a3e68b839e7f74fb59a25675fce4fe70cd5d6fcdeae854e854d5",
+      "014a705df93f96ac3f691f1f96e46f587cbfedee2c73a419f2a5107a196a21982fc65085"
+      "4892006a89f08846c3c95fcba80f85bf47b0f6526285ffafb9bc6861"
+      "bb5ec367f53c17438ab3f3eedccea14fa7d433f9dd0a3dc3f7db9bfffa7e8a2dcac76b6d"
+      "f360effbb75ae7ebdbcebbdf75ea19bbe8f33510db5b777dce3af85e",
+      "2f78f494e1c357bd8b305fff02be6dc3f9",
       ""};
   nameCaptureInfo = NULL;
-  emlrtNameCaptureMxArrayR2016a(&data[0], 2984U, &nameCaptureInfo);
+  emlrtNameCaptureMxArrayR2016a(&data[0], 3024U, &nameCaptureInfo);
   return nameCaptureInfo;
 }
 
@@ -82,20 +83,21 @@ mxArray *emlrtMexFcnProperties(void)
   emlrtSetField(xEntryPoints, 0, "ConstantInputs", xInputs);
   emlrtSetField(
       xEntryPoints, 0, "ResolvedFilePath",
-      emlrtMxCreateString("/MATLAB "
-                          "Drive/Repositories/SFTTWorkshop_SI_and_T-6/"
-                          "Solutions/fusionAlgorithm.m"));
+      emlrtMxCreateString("C:\\Users\\pwilliam\\OneDrive - "
+                          "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTW"
+                          "orkshop_SI_and_T\\Solutions\\fusionAlgorithm"
+                          ".m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(740045.66961805557));
+                emlrtMxCreateDoubleScalar(740045.45253472216));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));
   xResult =
       emlrtCreateStructMatrix(1, 1, 7, (const char_T **)&propFieldName[0]);
   emlrtSetField(xResult, 0, "Version",
-                emlrtMxCreateString("25.2.0.3150157 (R2025b) Update 4"));
+                emlrtMxCreateString("25.2.0.2998904 (R2025b)"));
   emlrtSetField(xResult, 0, "ResolvedFunctions",
                 (mxArray *)c_emlrtMexFcnResolvedFunctionsI());
   emlrtSetField(xResult, 0, "Checksum",
-                emlrtMxCreateString("31FsWkJd8dYZmDVc41Rb0B"));
+                emlrtMxCreateString("ybbBS7UvMIZk3BWuAwE0oG"));
   emlrtSetField(xResult, 0, "EntryPoints", xEntryPoints);
   emlrtSetField(xResult, 0, "AuxData",
                 emlrtMxCreateRowVectorUINT8((const uint8_T *)&v, 216U));

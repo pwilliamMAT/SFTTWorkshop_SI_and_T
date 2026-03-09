@@ -19,120 +19,136 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo mk_emlrtRSI = {
+static emlrtRSInfo lk_emlrtRSI = {
     19,                      /* lineNo */
     "gaussEKFilter/predict", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/gaussEKFilter.m" /* pathName
-                                                                            */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\gaussEKFilter.m" /* pathName */
 };
 
-static emlrtECInfo i_emlrtECI = {
-    -1,                                                    /* nDims */
-    166,                                                   /* lineNo */
-    5,                                                     /* colNo */
-    "constvel",                                            /* fName */
-    "/MATLAB/toolbox/shared/tracking/fusionlib/constvel.m" /* pName */
+static emlrtECInfo i_emlrtECI =
+    {
+        -1,         /* nDims */
+        166,        /* lineNo */
+        5,          /* colNo */
+        "constvel", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\constvel."
+        "m" /* pName */
 };
 
-static emlrtECInfo j_emlrtECI = {
-    2,                                                     /* nDims */
-    166,                                                   /* lineNo */
-    23,                                                    /* colNo */
-    "constvel",                                            /* fName */
-    "/MATLAB/toolbox/shared/tracking/fusionlib/constvel.m" /* pName */
+static emlrtECInfo j_emlrtECI =
+    {
+        2,          /* nDims */
+        166,        /* lineNo */
+        23,         /* colNo */
+        "constvel", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\constvel."
+        "m" /* pName */
 };
 
-static emlrtECInfo k_emlrtECI = {
-    -1,                                                    /* nDims */
-    165,                                                   /* lineNo */
-    5,                                                     /* colNo */
-    "constvel",                                            /* fName */
-    "/MATLAB/toolbox/shared/tracking/fusionlib/constvel.m" /* pName */
+static emlrtECInfo k_emlrtECI =
+    {
+        -1,         /* nDims */
+        165,        /* lineNo */
+        5,          /* colNo */
+        "constvel", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\constvel."
+        "m" /* pName */
 };
 
-static emlrtECInfo l_emlrtECI = {
-    2,                                                     /* nDims */
-    165,                                                   /* lineNo */
-    25,                                                    /* colNo */
-    "constvel",                                            /* fName */
-    "/MATLAB/toolbox/shared/tracking/fusionlib/constvel.m" /* pName */
+static emlrtECInfo l_emlrtECI =
+    {
+        2,          /* nDims */
+        165,        /* lineNo */
+        25,         /* colNo */
+        "constvel", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\constvel."
+        "m" /* pName */
 };
 
-static emlrtRTEInfo kc_emlrtRTEI = {
-    150,                                                   /* lineNo */
-    27,                                                    /* colNo */
-    "constvel",                                            /* fName */
-    "/MATLAB/toolbox/shared/tracking/fusionlib/constvel.m" /* pName */
+static emlrtRTEInfo kc_emlrtRTEI =
+    {
+        150,        /* lineNo */
+        27,         /* colNo */
+        "constvel", /* fName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\constvel."
+        "m" /* pName */
 };
 
-static emlrtBCInfo
-    si_emlrtBCI =
-        {
-            -1,                      /* iFirst */
-            -1,                      /* iLast */
-            31,                      /* lineNo */
-            84,                      /* colNo */
-            "",                      /* aName */
-            "gaussEKFilter/predict", /* fName */
-            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
-            "gaussEKFilter.m", /* pName */
-            0                  /* checkKind */
+static emlrtBCInfo si_emlrtBCI = {
+    -1,                      /* iFirst */
+    -1,                      /* iLast */
+    31,                      /* lineNo */
+    84,                      /* colNo */
+    "",                      /* aName */
+    "gaussEKFilter/predict", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\gaussEKFilter.m", /* pName */
+    0                            /* checkKind */
 };
 
-static emlrtBCInfo
-    ti_emlrtBCI =
-        {
-            -1,                      /* iFirst */
-            -1,                      /* iLast */
-            30,                      /* lineNo */
-            84,                      /* colNo */
-            "",                      /* aName */
-            "gaussEKFilter/predict", /* fName */
-            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
-            "gaussEKFilter.m", /* pName */
-            0                  /* checkKind */
+static emlrtBCInfo ti_emlrtBCI = {
+    -1,                      /* iFirst */
+    -1,                      /* iLast */
+    30,                      /* lineNo */
+    84,                      /* colNo */
+    "",                      /* aName */
+    "gaussEKFilter/predict", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\gaussEKFilter.m", /* pName */
+    0                            /* checkKind */
 };
 
-static emlrtBCInfo
-    ui_emlrtBCI =
-        {
-            -1,                      /* iFirst */
-            -1,                      /* iLast */
-            20,                      /* lineNo */
-            28,                      /* colNo */
-            "",                      /* aName */
-            "gaussEKFilter/predict", /* fName */
-            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
-            "gaussEKFilter.m", /* pName */
-            0                  /* checkKind */
+static emlrtBCInfo ui_emlrtBCI = {
+    -1,                      /* iFirst */
+    -1,                      /* iLast */
+    20,                      /* lineNo */
+    28,                      /* colNo */
+    "",                      /* aName */
+    "gaussEKFilter/predict", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\gaussEKFilter.m", /* pName */
+    0                            /* checkKind */
 };
 
-static emlrtBCInfo
-    vi_emlrtBCI =
-        {
-            -1,                      /* iFirst */
-            -1,                      /* iLast */
-            37,                      /* lineNo */
-            23,                      /* colNo */
-            "",                      /* aName */
-            "gaussEKFilter/predict", /* fName */
-            "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/"
-            "gaussEKFilter.m", /* pName */
-            0                  /* checkKind */
+static emlrtBCInfo vi_emlrtBCI = {
+    -1,                      /* iFirst */
+    -1,                      /* iLast */
+    37,                      /* lineNo */
+    23,                      /* colNo */
+    "",                      /* aName */
+    "gaussEKFilter/predict", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\gaussEKFilter.m", /* pName */
+    0                            /* checkKind */
 };
 
 static emlrtRTEInfo ph_emlrtRTEI = {
     17,              /* lineNo */
     17,              /* colNo */
     "gaussEKFilter", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/gaussEKFilter.m" /* pName
-                                                                            */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\gaussEKFilter.m" /* pName */
 };
 
-static emlrtRSInfo jw_emlrtRSI = {
-    166,                                                   /* lineNo */
-    "constvel",                                            /* fcnName */
-    "/MATLAB/toolbox/shared/tracking/fusionlib/constvel.m" /* pathName */
+static emlrtRSInfo iw_emlrtRSI =
+    {
+        166,        /* lineNo */
+        "constvel", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\constvel."
+        "m" /* pathName */
 };
 
 /* Function Definitions */
@@ -165,38 +181,38 @@ void b_gaussEKFilter_predict(const emlrtStack *sp, const real_T x[6],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ii_emlrtRSI;
+  st.site = &hi_emlrtRSI;
   for (i = 0; i < 6; i++) {
     xk[i] = x[i];
   }
-  b_st.site = &li_emlrtRSI;
+  b_st.site = &ki_emlrtRSI;
   d_validateattributes(&b_st, x);
-  b_st.site = &pi_emlrtRSI;
+  b_st.site = &oi_emlrtRSI;
   c_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(varargin_1) || muDoubleScalarIsNaN(varargin_1)) {
     emlrtErrorWithMessageIdR2018a(
         &c_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:constvel:expectedFinite", 3, 4, 19, "input number 3, dt,");
   }
-  b_st.site = &qi_emlrtRSI;
+  b_st.site = &pi_emlrtRSI;
   xk_tmp = 0.5 * (varargin_1 * varargin_1) * 0.0;
   xk[0] = (xk[0] + xk[1] * varargin_1) + xk_tmp;
   epsilon = 0.0 * varargin_1;
   xk[1] += epsilon;
-  b_st.site = &qi_emlrtRSI;
+  b_st.site = &pi_emlrtRSI;
   xk[2] = (xk[2] + xk[3] * varargin_1) + xk_tmp;
   xk[3] += epsilon;
-  b_st.site = &qi_emlrtRSI;
+  b_st.site = &pi_emlrtRSI;
   xk[4] = (xk[4] + xk[5] * varargin_1) + xk_tmp;
   xk[5] += epsilon;
   specvec_f2[0] = 0.0;
   specvec_f2[1] = 0.0;
   specvec_f2[2] = 0.0;
-  st.site = &ji_emlrtRSI;
+  st.site = &ii_emlrtRSI;
   for (i = 0; i < 6; i++) {
     z[i] = x[i];
   }
-  b_st.site = &mi_emlrtRSI;
+  b_st.site = &li_emlrtRSI;
   constvel(&b_st, z, specvec_f2, varargin_1);
   for (i = 0; i < 6; i++) {
     for (b_i = 0; b_i < 6; b_i++) {
@@ -207,7 +223,7 @@ void b_gaussEKFilter_predict(const emlrtStack *sp, const real_T x[6],
         muDoubleScalarMax(1.4901161193847656E-8,
                           1.4901161193847656E-8 * muDoubleScalarAbs(xk_tmp));
     imvec[i] = xk_tmp + epsilon;
-    b_st.site = &ni_emlrtRSI;
+    b_st.site = &mi_emlrtRSI;
     constvel(&b_st, imvec, specvec_f2, varargin_1);
     r = _mm_loadu_pd(&imvec[0]);
     r1 = _mm_loadu_pd(&z[0]);
@@ -220,11 +236,11 @@ void b_gaussEKFilter_predict(const emlrtStack *sp, const real_T x[6],
     r1 = _mm_loadu_pd(&z[4]);
     _mm_storeu_pd(&F[6 * i + 4], _mm_div_pd(_mm_sub_pd(r, r1), r2));
   }
-  st.site = &ki_emlrtRSI;
+  st.site = &ji_emlrtRSI;
   for (i = 0; i < 6; i++) {
     z[i] = x[i];
   }
-  b_st.site = &mi_emlrtRSI;
+  b_st.site = &li_emlrtRSI;
   constvel(&b_st, z, specvec_f2, varargin_1);
   r = _mm_set1_pd(1.4901161193847656E-8);
   for (i = 0; i < 3; i++) {
@@ -235,7 +251,7 @@ void b_gaussEKFilter_predict(const emlrtStack *sp, const real_T x[6],
     for (b_i = 0; b_i < 6; b_i++) {
       imvec[b_i] = x[b_i];
     }
-    b_st.site = &ni_emlrtRSI;
+    b_st.site = &mi_emlrtRSI;
     constvel(&b_st, imvec, specvec_f2, varargin_1);
     r1 = _mm_loadu_pd(&imvec[0]);
     r2 = _mm_loadu_pd(&z[0]);
@@ -341,6 +357,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
   real_T b_U[18];
   real_T imvec[6];
   real_T z[6];
+  real_T specvec_f2[3];
   const real_T *x_data;
   real_T a;
   real_T *P_data;
@@ -368,7 +385,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
   x_data = x->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   n = x->size[1];
-  st.site = &ii_emlrtRSI;
+  st.site = &hi_emlrtRSI;
   acoef = xk->size[0] * xk->size[1];
   xk->size[0] = 6;
   xk->size[1] = x->size[1];
@@ -378,7 +395,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
   for (k = 0; k < loop_ub; k++) {
     xk_data[k] = x_data[k];
   }
-  b_st.site = &li_emlrtRSI;
+  b_st.site = &ki_emlrtRSI;
   c_st.site = &gb_emlrtRSI;
   p = true;
   acoef = 0;
@@ -397,7 +414,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
         &c_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:constvel:expectedFinite", 3, 4, 22, "input number 1, state,");
   }
-  b_st.site = &oi_emlrtRSI;
+  b_st.site = &ni_emlrtRSI;
   b_varargin_1[0] = 3U;
   b_varargin_1[1] = (uint32_T)x->size[1];
   varargin_2[0] = 3;
@@ -419,7 +436,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
                                   "shared_tracking:motion:incorrectNoiseDim", 7,
                                   4, 1, "w", 12, 3, 12, x->size[1]);
   }
-  b_st.site = &pi_emlrtRSI;
+  b_st.site = &oi_emlrtRSI;
   c_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(varargin_1) || muDoubleScalarIsNaN(varargin_1)) {
     emlrtErrorWithMessageIdR2018a(
@@ -454,10 +471,10 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
         r2[k] += xk_data[(b_i + 6 * k) - 1];
       }
     } else {
-      b_st.site = &qi_emlrtRSI;
+      b_st.site = &pi_emlrtRSI;
       binary_expand_op_1(&b_st, r, xk, b_i);
     }
-    b_st.site = &qi_emlrtRSI;
+    b_st.site = &pi_emlrtRSI;
     acoef = r1->size[0] * r1->size[1];
     r1->size[0] = 1;
     r1->size[1] = n;
@@ -488,7 +505,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
         r2[i1] += r3[i1];
       }
     } else {
-      b_st.site = &qi_emlrtRSI;
+      b_st.site = &pi_emlrtRSI;
       plus(&b_st, r, r1);
       r2 = r->data;
     }
@@ -523,7 +540,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
         r2[k] += xk_data[b_i + 6 * k];
       }
     } else {
-      b_st.site = &jw_emlrtRSI;
+      b_st.site = &iw_emlrtRSI;
       binary_expand_op(&b_st, r, xk, b_i);
       r2 = r->data;
     }
@@ -538,14 +555,13 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
   }
   emxFree_real_T(&st, &r1);
   emxFree_real_T(&st, &r);
-  st.site = &mk_emlrtRSI;
+  st.site = &lk_emlrtRSI;
   if (x->size[1] > 2147483646) {
     b_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&b_st);
   }
   for (i = 0; i < n; i++) {
     __m128d r6;
-    real_T specvec_f2[3];
     b_loop_ub = P->size[2];
     if (i + 1 > b_loop_ub) {
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, b_loop_ub, &ui_emlrtBCI,
@@ -555,14 +571,14 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, n, &ti_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
-    st.site = &ji_emlrtRSI;
+    st.site = &ii_emlrtRSI;
     for (k = 0; k < 6; k++) {
       z[k] = x_data[k + 6 * i];
     }
     specvec_f2[0] = 0.0;
     specvec_f2[1] = 0.0;
     specvec_f2[2] = 0.0;
-    b_st.site = &mi_emlrtRSI;
+    b_st.site = &li_emlrtRSI;
     constvel(&b_st, z, specvec_f2, varargin_1);
     specvec_f2[0] = 0.0;
     specvec_f2[1] = 0.0;
@@ -576,7 +592,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       epsilon = muDoubleScalarMax(1.4901161193847656E-8,
                                   1.4901161193847656E-8 * muDoubleScalarAbs(a));
       imvec[k] = a + epsilon;
-      b_st.site = &ni_emlrtRSI;
+      b_st.site = &mi_emlrtRSI;
       constvel(&b_st, imvec, specvec_f2, varargin_1);
       r4 = _mm_loadu_pd(&imvec[0]);
       r5 = _mm_loadu_pd(&z[0]);
@@ -593,14 +609,14 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, n, &si_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
-    st.site = &ki_emlrtRSI;
+    st.site = &ji_emlrtRSI;
     for (k = 0; k < 6; k++) {
       z[k] = x_data[k + 6 * i];
     }
     specvec_f2[0] = 0.0;
     specvec_f2[1] = 0.0;
     specvec_f2[2] = 0.0;
-    b_st.site = &mi_emlrtRSI;
+    b_st.site = &li_emlrtRSI;
     constvel(&b_st, z, specvec_f2, varargin_1);
     r4 = _mm_set1_pd(1.4901161193847656E-8);
     for (k = 0; k < 3; k++) {
@@ -611,7 +627,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       for (i1 = 0; i1 < 6; i1++) {
         imvec[i1] = x_data[i1 + 6 * i];
       }
-      b_st.site = &ni_emlrtRSI;
+      b_st.site = &mi_emlrtRSI;
       constvel(&b_st, imvec, specvec_f2, varargin_1);
       r5 = _mm_loadu_pd(&imvec[0]);
       r6 = _mm_loadu_pd(&z[0]);
