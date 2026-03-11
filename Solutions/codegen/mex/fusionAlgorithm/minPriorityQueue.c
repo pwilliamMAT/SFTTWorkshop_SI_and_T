@@ -13,7 +13,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo bo_emlrtRSI = {
+static emlrtRSInfo qm_emlrtRSI = {
     86,                        /* lineNo */
     "minPriorityQueue/percUp", /* fcnName */
     "C:\\Program "
@@ -21,7 +21,7 @@ static emlrtRSInfo bo_emlrtRSI = {
     "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
-static emlrtRSInfo co_emlrtRSI = {
+static emlrtRSInfo rm_emlrtRSI = {
     88,                        /* lineNo */
     "minPriorityQueue/percUp", /* fcnName */
     "C:\\Program "
@@ -128,7 +128,7 @@ void minPriorityQueue_percUp(const emlrtStack *sp,
     int32_T c_obj;
     int32_T obj_idx_1;
     boolean_T tf;
-    st.site = &bo_emlrtRSI;
+    st.site = &qm_emlrtRSI;
     b_obj = obj->heap->size[0];
     if ((i < 1) || (i > b_obj)) {
       emlrtDynamicBoundsCheckR2012b(i, 1, b_obj, &kc_emlrtBCI, &st);
@@ -185,7 +185,7 @@ void minPriorityQueue_percUp(const emlrtStack *sp,
       obj_idx_1 = obj->heap->data[i - 1];
       obj->heap->data[i - 1] = obj->heap->data[iparent - 1];
       obj->heap->data[iparent - 1] = obj_idx_1;
-      st.site = &co_emlrtRSI;
+      st.site = &rm_emlrtRSI;
       b_indexShapeCheck(&st, obj->heap->size[0]);
       if (iparent > b_obj) {
         emlrtDynamicBoundsCheckR2012b(iparent, 1, b_obj, &yi_emlrtBCI,

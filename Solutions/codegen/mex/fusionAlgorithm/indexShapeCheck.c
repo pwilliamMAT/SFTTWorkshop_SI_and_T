@@ -10,7 +10,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo dm_emlrtRSI = {
+static emlrtRSInfo sk_emlrtRSI = {
     42,                /* lineNo */
     "indexShapeCheck", /* fcnName */
     "C:\\Program "
@@ -18,7 +18,7 @@ static emlrtRSInfo dm_emlrtRSI = {
     "internal\\indexShapeCheck.m" /* pathName */
 };
 
-static emlrtRTEInfo eb_emlrtRTEI = {
+static emlrtRTEInfo hb_emlrtRTEI = {
     122,           /* lineNo */
     5,             /* colNo */
     "errOrWarnIf", /* fName */
@@ -33,9 +33,9 @@ void b_indexShapeCheck(const emlrtStack *sp, int32_T matrixSize)
   emlrtStack st;
   st.prev = sp;
   st.tls = sp->tls;
-  st.site = &dm_emlrtRSI;
+  st.site = &sk_emlrtRSI;
   if (matrixSize == 1) {
-    emlrtErrorWithMessageIdR2018a(&st, &eb_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &hb_emlrtRTEI,
                                   "Coder:FE:PotentialVectorVector",
                                   "Coder:FE:PotentialVectorVector", 0);
   }
@@ -53,9 +53,9 @@ void indexShapeCheck(const emlrtStack *sp, int32_T matrixSize,
   } else {
     c = false;
   }
-  st.site = &dm_emlrtRSI;
+  st.site = &sk_emlrtRSI;
   if (c) {
-    emlrtErrorWithMessageIdR2018a(&st, &eb_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &hb_emlrtRTEI,
                                   "Coder:FE:PotentialVectorVector",
                                   "Coder:FE:PotentialVectorVector", 0);
   }

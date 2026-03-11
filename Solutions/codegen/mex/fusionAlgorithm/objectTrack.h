@@ -8,6 +8,7 @@
 #pragma once
 
 /* Include files */
+#include "fusionAlgorithm_internal_types.h"
 #include "fusionAlgorithm_types.h"
 #include "rtwtypes.h"
 #include "emlrt.h"
@@ -18,35 +19,18 @@
 #include <string.h>
 
 /* Function Declarations */
-uint32_T b_objectTrack_objectTrack(
-    uint32_T *track_BranchID, uint32_T *track_SourceIndex, uint32_T *track_Age,
-    real_T *track_ObjectClassID, real_T c_track_ObjectClassProbabilitie[],
-    int32_T d_track_ObjectClassProbabilitie[2], boolean_T *track_IsConfirmed,
-    boolean_T *track_IsCoasted, boolean_T *track_IsSelfReported,
-    real_T track_pState[6], real_T track_pStateCovariance[36],
-    real_T *track_pUpdateTime);
-
-void c_objectTrack_set_ObjectClassPr(const emlrtStack *sp, b_objectTrack *obj,
-                                     const real_T value_data[],
-                                     const int32_T value_size[2]);
-
-void d_objectTrack_set_ObjectClassPr(const emlrtStack *sp, objectTrack *obj,
-                                     real_T b_value);
-
-uint32_T objectTrack_objectTrack(
-    uint32_T *track_BranchID, uint32_T *track_SourceIndex, uint32_T *track_Age,
-    real_T *track_ObjectClassID, real_T *track_ObjectClassProbabilities,
-    boolean_T *track_IsConfirmed, boolean_T *track_IsCoasted,
-    boolean_T *track_IsSelfReported, real_T track_pState[6],
-    real_T track_pStateCovariance[36], real_T *track_pUpdateTime);
-
-uint32_T objectTrack_set_TrackID(
-    const emlrtStack *sp, real_T b_value, uint32_T *obj_BranchID,
-    uint32_T *obj_SourceIndex, uint32_T *obj_Age, real_T *obj_ObjectClassID,
-    real_T c_obj_ObjectClassProbabilities_[],
-    int32_T d_obj_ObjectClassProbabilities_[2], boolean_T *obj_IsConfirmed,
-    boolean_T *obj_IsCoasted, boolean_T *obj_IsSelfReported,
-    real_T obj_pState[6], real_T obj_pStateCovariance[36],
-    real_T *obj_pUpdateTime);
+void objectTrack_objectTrack(
+    const emlrtStack *sp, uint32_T varargin_1_SourceIndex,
+    real_T varargin_1_UpdateTime, const real_T varargin_1_State[6],
+    const real_T varargin_1_StateCovariance[36],
+    real_T varargin_1_ObjectClassID,
+    const real_T c_varargin_1_ObjectClassProbabi[],
+    const int32_T d_varargin_1_ObjectClassProbabi[2],
+    const char_T varargin_1_TrackLogic[10],
+    const real_T varargin_1_TrackLogicState_data[],
+    const int32_T varargin_1_TrackLogicState_size[2],
+    boolean_T varargin_1_IsConfirmed, boolean_T varargin_1_IsCoasted,
+    boolean_T varargin_1_IsSelfReported,
+    const struct1_T varargin_1_ObjectAttributes, b_objectTrack *track);
 
 /* End of code generation (objectTrack.h) */

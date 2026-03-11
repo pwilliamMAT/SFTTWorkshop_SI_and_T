@@ -19,7 +19,7 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo lk_emlrtRSI = {
+static emlrtRSInfo ej_emlrtRSI = {
     19,                      /* lineNo */
     "gaussEKFilter/predict", /* fcnName */
     "C:\\Program "
@@ -71,7 +71,7 @@ static emlrtECInfo l_emlrtECI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo kc_emlrtRTEI =
+static emlrtRTEInfo jc_emlrtRTEI =
     {
         150,        /* lineNo */
         27,         /* colNo */
@@ -133,7 +133,7 @@ static emlrtBCInfo vi_emlrtBCI = {
     0                            /* checkKind */
 };
 
-static emlrtRTEInfo ph_emlrtRTEI = {
+static emlrtRTEInfo oj_emlrtRTEI = {
     17,              /* lineNo */
     17,              /* colNo */
     "gaussEKFilter", /* fName */
@@ -142,7 +142,7 @@ static emlrtRTEInfo ph_emlrtRTEI = {
     "internal\\gaussEKFilter.m" /* pName */
 };
 
-static emlrtRSInfo iw_emlrtRSI =
+static emlrtRSInfo yu_emlrtRSI =
     {
         166,        /* lineNo */
         "constvel", /* fcnName */
@@ -181,38 +181,38 @@ void b_gaussEKFilter_predict(const emlrtStack *sp, const real_T x[6],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &hi_emlrtRSI;
+  st.site = &xg_emlrtRSI;
   for (i = 0; i < 6; i++) {
     xk[i] = x[i];
   }
-  b_st.site = &ki_emlrtRSI;
+  b_st.site = &bh_emlrtRSI;
   d_validateattributes(&b_st, x);
-  b_st.site = &oi_emlrtRSI;
+  b_st.site = &fh_emlrtRSI;
   c_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(varargin_1) || muDoubleScalarIsNaN(varargin_1)) {
     emlrtErrorWithMessageIdR2018a(
         &c_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:constvel:expectedFinite", 3, 4, 19, "input number 3, dt,");
   }
-  b_st.site = &pi_emlrtRSI;
+  b_st.site = &gh_emlrtRSI;
   xk_tmp = 0.5 * (varargin_1 * varargin_1) * 0.0;
   xk[0] = (xk[0] + xk[1] * varargin_1) + xk_tmp;
   epsilon = 0.0 * varargin_1;
   xk[1] += epsilon;
-  b_st.site = &pi_emlrtRSI;
+  b_st.site = &gh_emlrtRSI;
   xk[2] = (xk[2] + xk[3] * varargin_1) + xk_tmp;
   xk[3] += epsilon;
-  b_st.site = &pi_emlrtRSI;
+  b_st.site = &gh_emlrtRSI;
   xk[4] = (xk[4] + xk[5] * varargin_1) + xk_tmp;
   xk[5] += epsilon;
   specvec_f2[0] = 0.0;
   specvec_f2[1] = 0.0;
   specvec_f2[2] = 0.0;
-  st.site = &ii_emlrtRSI;
+  st.site = &yg_emlrtRSI;
   for (i = 0; i < 6; i++) {
     z[i] = x[i];
   }
-  b_st.site = &li_emlrtRSI;
+  b_st.site = &ch_emlrtRSI;
   constvel(&b_st, z, specvec_f2, varargin_1);
   for (i = 0; i < 6; i++) {
     for (b_i = 0; b_i < 6; b_i++) {
@@ -223,7 +223,7 @@ void b_gaussEKFilter_predict(const emlrtStack *sp, const real_T x[6],
         muDoubleScalarMax(1.4901161193847656E-8,
                           1.4901161193847656E-8 * muDoubleScalarAbs(xk_tmp));
     imvec[i] = xk_tmp + epsilon;
-    b_st.site = &mi_emlrtRSI;
+    b_st.site = &dh_emlrtRSI;
     constvel(&b_st, imvec, specvec_f2, varargin_1);
     r = _mm_loadu_pd(&imvec[0]);
     r1 = _mm_loadu_pd(&z[0]);
@@ -236,11 +236,11 @@ void b_gaussEKFilter_predict(const emlrtStack *sp, const real_T x[6],
     r1 = _mm_loadu_pd(&z[4]);
     _mm_storeu_pd(&F[6 * i + 4], _mm_div_pd(_mm_sub_pd(r, r1), r2));
   }
-  st.site = &ji_emlrtRSI;
+  st.site = &ah_emlrtRSI;
   for (i = 0; i < 6; i++) {
     z[i] = x[i];
   }
-  b_st.site = &li_emlrtRSI;
+  b_st.site = &ch_emlrtRSI;
   constvel(&b_st, z, specvec_f2, varargin_1);
   r = _mm_set1_pd(1.4901161193847656E-8);
   for (i = 0; i < 3; i++) {
@@ -251,7 +251,7 @@ void b_gaussEKFilter_predict(const emlrtStack *sp, const real_T x[6],
     for (b_i = 0; b_i < 6; b_i++) {
       imvec[b_i] = x[b_i];
     }
-    b_st.site = &mi_emlrtRSI;
+    b_st.site = &dh_emlrtRSI;
     constvel(&b_st, imvec, specvec_f2, varargin_1);
     r1 = _mm_loadu_pd(&imvec[0]);
     r2 = _mm_loadu_pd(&z[0]);
@@ -385,17 +385,17 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
   x_data = x->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   n = x->size[1];
-  st.site = &hi_emlrtRSI;
+  st.site = &xg_emlrtRSI;
   acoef = xk->size[0] * xk->size[1];
   xk->size[0] = 6;
   xk->size[1] = x->size[1];
-  emxEnsureCapacity_real_T(&st, xk, acoef, &ph_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, xk, acoef, &oj_emlrtRTEI);
   xk_data = xk->data;
   loop_ub = 6 * x->size[1];
   for (k = 0; k < loop_ub; k++) {
     xk_data[k] = x_data[k];
   }
-  b_st.site = &ki_emlrtRSI;
+  b_st.site = &bh_emlrtRSI;
   c_st.site = &gb_emlrtRSI;
   p = true;
   acoef = 0;
@@ -414,7 +414,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
         &c_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:constvel:expectedFinite", 3, 4, 22, "input number 1, state,");
   }
-  b_st.site = &ni_emlrtRSI;
+  b_st.site = &eh_emlrtRSI;
   b_varargin_1[0] = 3U;
   b_varargin_1[1] = (uint32_T)x->size[1];
   varargin_2[0] = 3;
@@ -431,12 +431,12 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
     }
   }
   if (!p) {
-    emlrtErrorWithMessageIdR2018a(&st, &kc_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &jc_emlrtRTEI,
                                   "shared_tracking:motion:incorrectNoiseDim",
                                   "shared_tracking:motion:incorrectNoiseDim", 7,
                                   4, 1, "w", 12, 3, 12, x->size[1]);
   }
-  b_st.site = &oi_emlrtRSI;
+  b_st.site = &fh_emlrtRSI;
   c_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(varargin_1) || muDoubleScalarIsNaN(varargin_1)) {
     emlrtErrorWithMessageIdR2018a(
@@ -444,8 +444,8 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
         "MATLAB:constvel:expectedFinite", 3, 4, 19, "input number 3, dt,");
   }
   a = 0.5 * (varargin_1 * varargin_1);
-  emxInit_real_T(&st, &r, 2, &qh_emlrtRTEI);
-  emxInit_real_T(&st, &r1, 2, &qh_emlrtRTEI);
+  emxInit_real_T(&st, &r, 2, &pj_emlrtRTEI);
+  emxInit_real_T(&st, &r1, 2, &pj_emlrtRTEI);
   for (i = 0; i < 3; i++) {
     int32_T b_i;
     b_i = ((i + 1) << 1) - 1;
@@ -453,7 +453,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
     r->size[0] = 1;
     loop_ub = xk->size[1];
     r->size[1] = xk->size[1];
-    emxEnsureCapacity_real_T(&st, r, acoef, &fh_emlrtRTEI);
+    emxEnsureCapacity_real_T(&st, r, acoef, &ej_emlrtRTEI);
     r2 = r->data;
     if (xk->size[1] != 0) {
       acoef = (xk->size[1] != 1);
@@ -465,20 +465,20 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       acoef = r->size[0] * r->size[1];
       r->size[0] = 1;
       r->size[1] = xk->size[1];
-      emxEnsureCapacity_real_T(&st, r, acoef, &qh_emlrtRTEI);
+      emxEnsureCapacity_real_T(&st, r, acoef, &pj_emlrtRTEI);
       r2 = r->data;
       for (k = 0; k < loop_ub; k++) {
         r2[k] += xk_data[(b_i + 6 * k) - 1];
       }
     } else {
-      b_st.site = &pi_emlrtRSI;
+      b_st.site = &gh_emlrtRSI;
       binary_expand_op_1(&b_st, r, xk, b_i);
     }
-    b_st.site = &pi_emlrtRSI;
+    b_st.site = &gh_emlrtRSI;
     acoef = r1->size[0] * r1->size[1];
     r1->size[0] = 1;
     r1->size[1] = n;
-    emxEnsureCapacity_real_T(&st, r1, acoef, &fh_emlrtRTEI);
+    emxEnsureCapacity_real_T(&st, r1, acoef, &ej_emlrtRTEI);
     r3 = r1->data;
     if (n != 0) {
       for (k = 0; k < n; k++) {
@@ -492,7 +492,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       b_loop_ub = r->size[1] - 1;
       acoef = r->size[0] * r->size[1];
       r->size[0] = 1;
-      emxEnsureCapacity_real_T(&st, r, acoef, &qh_emlrtRTEI);
+      emxEnsureCapacity_real_T(&st, r, acoef, &pj_emlrtRTEI);
       r2 = r->data;
       loop_ub = (r->size[1] / 2) << 1;
       acoef = loop_ub - 2;
@@ -505,7 +505,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
         r2[i1] += r3[i1];
       }
     } else {
-      b_st.site = &pi_emlrtRSI;
+      b_st.site = &gh_emlrtRSI;
       plus(&b_st, r, r1);
       r2 = r->data;
     }
@@ -520,7 +520,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
     acoef = r->size[0] * r->size[1];
     r->size[0] = 1;
     r->size[1] = n;
-    emxEnsureCapacity_real_T(&st, r, acoef, &fh_emlrtRTEI);
+    emxEnsureCapacity_real_T(&st, r, acoef, &ej_emlrtRTEI);
     r2 = r->data;
     if (n != 0) {
       for (k = 0; k < n; k++) {
@@ -534,13 +534,13 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       acoef = r->size[0] * r->size[1];
       r->size[0] = 1;
       r->size[1] = xk->size[1];
-      emxEnsureCapacity_real_T(&st, r, acoef, &rh_emlrtRTEI);
+      emxEnsureCapacity_real_T(&st, r, acoef, &qj_emlrtRTEI);
       r2 = r->data;
       for (k = 0; k < loop_ub; k++) {
         r2[k] += xk_data[b_i + 6 * k];
       }
     } else {
-      b_st.site = &iw_emlrtRSI;
+      b_st.site = &yu_emlrtRSI;
       binary_expand_op(&b_st, r, xk, b_i);
       r2 = r->data;
     }
@@ -555,7 +555,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
   }
   emxFree_real_T(&st, &r1);
   emxFree_real_T(&st, &r);
-  st.site = &lk_emlrtRSI;
+  st.site = &ej_emlrtRSI;
   if (x->size[1] > 2147483646) {
     b_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&b_st);
@@ -571,14 +571,14 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, n, &ti_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
-    st.site = &ii_emlrtRSI;
+    st.site = &yg_emlrtRSI;
     for (k = 0; k < 6; k++) {
       z[k] = x_data[k + 6 * i];
     }
     specvec_f2[0] = 0.0;
     specvec_f2[1] = 0.0;
     specvec_f2[2] = 0.0;
-    b_st.site = &li_emlrtRSI;
+    b_st.site = &ch_emlrtRSI;
     constvel(&b_st, z, specvec_f2, varargin_1);
     specvec_f2[0] = 0.0;
     specvec_f2[1] = 0.0;
@@ -592,7 +592,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       epsilon = muDoubleScalarMax(1.4901161193847656E-8,
                                   1.4901161193847656E-8 * muDoubleScalarAbs(a));
       imvec[k] = a + epsilon;
-      b_st.site = &mi_emlrtRSI;
+      b_st.site = &dh_emlrtRSI;
       constvel(&b_st, imvec, specvec_f2, varargin_1);
       r4 = _mm_loadu_pd(&imvec[0]);
       r5 = _mm_loadu_pd(&z[0]);
@@ -609,14 +609,14 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, n, &si_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
-    st.site = &ji_emlrtRSI;
+    st.site = &ah_emlrtRSI;
     for (k = 0; k < 6; k++) {
       z[k] = x_data[k + 6 * i];
     }
     specvec_f2[0] = 0.0;
     specvec_f2[1] = 0.0;
     specvec_f2[2] = 0.0;
-    b_st.site = &li_emlrtRSI;
+    b_st.site = &ch_emlrtRSI;
     constvel(&b_st, z, specvec_f2, varargin_1);
     r4 = _mm_set1_pd(1.4901161193847656E-8);
     for (k = 0; k < 3; k++) {
@@ -627,7 +627,7 @@ void gaussEKFilter_predict(const emlrtStack *sp, const emxArray_real_T *x,
       for (i1 = 0; i1 < 6; i1++) {
         imvec[i1] = x_data[i1 + 6 * i];
       }
-      b_st.site = &mi_emlrtRSI;
+      b_st.site = &dh_emlrtRSI;
       constvel(&b_st, imvec, specvec_f2, varargin_1);
       r5 = _mm_loadu_pd(&imvec[0]);
       r6 = _mm_loadu_pd(&z[0]);

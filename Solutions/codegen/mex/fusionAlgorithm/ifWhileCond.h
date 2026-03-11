@@ -1,7 +1,7 @@
 /*
- * cosd.h
+ * ifWhileCond.h
  *
- * Code generation for function 'cosd'
+ * Code generation for function 'ifWhileCond'
  *
  */
 
@@ -17,6 +17,6 @@
 #include <string.h>
 
 /* Function Declarations */
-void b_cosd(real_T *x);
+boolean_T ifWhileCond(const boolean_T x_data[], const int32_T x_size[2]);
 
-/* End of code generation (cosd.h) */
+/* End of code generation (ifWhileCond.h) */

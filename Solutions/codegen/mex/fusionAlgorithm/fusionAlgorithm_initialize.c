@@ -43,8 +43,6 @@ void fusionAlgorithm_initialize(void)
   emlrtEnterRtStackR2012b(&st);
   emlrtLicenseCheckR2022a(&st, "EMLRT:runTime:MexFunctionNeedsLicense",
                           "sensor_fusion_and_tracking", 2);
-  emlrtLicenseCheckR2022a(&st, "EMLRT:runTime:MexFunctionNeedsLicense",
-                          "map_toolbox", 2);
   if (emlrtFirstTimeR2012b(emlrtRootTLSGlobal)) {
     fusionAlgorithm_once(&st);
   }

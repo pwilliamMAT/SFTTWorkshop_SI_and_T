@@ -17,7 +17,7 @@
 #include <math.h>
 
 /* Variable Definitions */
-static emlrtRSInfo vs_emlrtRSI = {
+static emlrtRSInfo mr_emlrtRSI = {
     15,                  /* lineNo */
     "validateCovFusion", /* fcnName */
     "C:\\Program "
@@ -25,7 +25,7 @@ static emlrtRSInfo vs_emlrtRSI = {
     "internal\\validateCovFusion.m" /* pathName */
 };
 
-static emlrtRSInfo ws_emlrtRSI = {
+static emlrtRSInfo nr_emlrtRSI = {
     16,                  /* lineNo */
     "validateCovFusion", /* fcnName */
     "C:\\Program "
@@ -33,7 +33,7 @@ static emlrtRSInfo ws_emlrtRSI = {
     "internal\\validateCovFusion.m" /* pathName */
 };
 
-static emlrtRSInfo xs_emlrtRSI = {
+static emlrtRSInfo or_emlrtRSI = {
     24,                  /* lineNo */
     "validateCovFusion", /* fcnName */
     "C:\\Program "
@@ -41,7 +41,7 @@ static emlrtRSInfo xs_emlrtRSI = {
     "internal\\validateCovFusion.m" /* pathName */
 };
 
-static emlrtBCInfo og_emlrtBCI = {
+static emlrtBCInfo pg_emlrtBCI = {
     -1,                  /* iFirst */
     -1,                  /* iLast */
     24,                  /* lineNo */
@@ -54,7 +54,7 @@ static emlrtBCInfo og_emlrtBCI = {
     0                                /* checkKind */
 };
 
-static emlrtRTEInfo xb_emlrtRTEI = {
+static emlrtRTEInfo bc_emlrtRTEI = {
     21,                  /* lineNo */
     41,                  /* colNo */
     "validateCovFusion", /* fName */
@@ -88,7 +88,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
   b_st.tls = st.tls;
   p_data = p->data;
   x_data = x->data;
-  st.site = &vs_emlrtRSI;
+  st.site = &mr_emlrtRSI;
   b_st.site = &gb_emlrtRSI;
   b_p = true;
   notSymmetric_tmp_tmp = 6 * x->size[1];
@@ -109,7 +109,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
         "MATLAB:fusecovint:expectedFinite", 3, 4, 27,
         "input number 1, trackState,");
   }
-  st.site = &ws_emlrtRSI;
+  st.site = &nr_emlrtRSI;
   b_st.site = &gb_emlrtRSI;
   b_p = true;
   notSymmetric_tmp_tmp = 36 * p->size[2];
@@ -131,7 +131,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
         "input number 2, trackCov,");
   }
   if (x->size[1] != p->size[2]) {
-    emlrtErrorWithMessageIdR2018a(sp, &xb_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(sp, &bc_emlrtRTEI,
                                   "fusion:covFusion:dataInconsistent",
                                   "fusion:covFusion:dataInconsistent", 6, 4, 10,
                                   "trackState", 4, 8, "trackCov");
@@ -148,9 +148,9 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
     boolean_T b_y[36];
     boolean_T c_x[6];
     boolean_T notPositiveSemidefinite;
-    st.site = &xs_emlrtRSI;
+    st.site = &or_emlrtRSI;
     if (b_i + 1 > i) {
-      emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, i, &og_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, i, &pg_emlrtBCI, &st);
     }
     for (k = 0; k < 6; k++) {
       varargin_1[k] = muDoubleScalarAbs(p_data[(k + 6 * k) + 36 * b_i]);
@@ -207,7 +207,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
     for (k = 0; k < 36; k++) {
       b_y[k] = (y[k] < absx);
     }
-    b_st.site = &uc_emlrtRSI;
+    b_st.site = &vc_emlrtRSI;
     all(&b_st, b_y, c_x);
     b_p = true;
     notSymmetric_tmp_tmp = 0;
@@ -243,7 +243,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
               _mm_add_pd(_mm_loadu_pd(&p_data[notSymmetric_tmp_tmp + 4]), r1),
               r));
     }
-    b_st.site = &vc_emlrtRSI;
+    b_st.site = &wc_emlrtRSI;
     eig(&b_st, notSymmetric_tmp, d);
     for (k = 0; k < 6; k++) {
       c_x[k] = (d[k].re < -tol);
@@ -261,7 +261,7 @@ void validateCovFusion(const emlrtStack *sp, const emxArray_real_T *x,
     }
     if (notPositiveSemidefinite || (!b_p)) {
       emlrtErrorWithMessageIdR2018a(
-          &st, &o_emlrtRTEI,
+          &st, &r_emlrtRTEI,
           "shared_tracking:KalmanFilter:invalidCovarianceValues",
           "shared_tracking:KalmanFilter:invalidCovarianceValues", 3, 4, 8,
           "trackCov");

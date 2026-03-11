@@ -14,12 +14,32 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRTEInfo ug_emlrtRTEI = {
+static emlrtRTEInfo pi_emlrtRTEI = {
     1,                            /* lineNo */
     1,                            /* colNo */
     "_coder_fusionAlgorithm_api", /* fName */
     ""                            /* pName */
 };
+
+static const char_T *sv[16] = {"No_Category_Information",
+                               "Light",
+                               "Small",
+                               "Large",
+                               "High_Vortex_Large",
+                               "Heavy",
+                               "High_Performance",
+                               "Rotorcraft",
+                               "Glider_Sailplane",
+                               "Lighter_than_air",
+                               "Parachutist_Skydiver",
+                               "Ultralight",
+                               "Unmanned_Aerial_Vehicle",
+                               "Space_Vehicle",
+                               "Surface_Vehicle",
+                               "Obstacle"};
+
+static const int32_T iv1[16] = {0, 1, 2,  3,  4,  5,  6,  7,
+                                8, 9, 10, 11, 12, 13, 14, 15};
 
 /* Function Declarations */
 static void c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
@@ -251,26 +271,27 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
                                         const struct2_T u_data[],
                                         const int32_T u_size)
 {
-  static const int32_T b_iv[2] = {6, 6};
-  static const int32_T b_iv1[2] = {1, 7};
-  static const int32_T iv2[2] = {1, 3};
+  static const int32_T b_iv1[2] = {6, 6};
+  static const int32_T iv2[2] = {1, 7};
+  static const int32_T iv3[2] = {1, 8};
   static const int32_T b_i = 6;
-  static const char_T *sv[16] = {"TrackID",
-                                 "BranchID",
-                                 "SourceIndex",
-                                 "UpdateTime",
-                                 "Age",
-                                 "State",
-                                 "StateCovariance",
-                                 "StateParameters",
-                                 "ObjectClassID",
-                                 "ObjectClassProbabilities",
-                                 "TrackLogic",
-                                 "TrackLogicState",
-                                 "IsConfirmed",
-                                 "IsCoasted",
-                                 "IsSelfReported",
-                                 "ObjectAttributes"};
+  static const char_T *b_sv[16] = {"TrackID",
+                                   "BranchID",
+                                   "SourceIndex",
+                                   "UpdateTime",
+                                   "Age",
+                                   "State",
+                                   "StateCovariance",
+                                   "StateParameters",
+                                   "ObjectClassID",
+                                   "ObjectClassProbabilities",
+                                   "TrackLogic",
+                                   "TrackLogicState",
+                                   "IsConfirmed",
+                                   "IsCoasted",
+                                   "IsSelfReported",
+                                   "ObjectAttributes"};
+  static const char_T *sv1[2] = {"Callsign", "Category"};
   const mxArray *b_y;
   const mxArray *c_y;
   const mxArray *d_y;
@@ -283,20 +304,25 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
   const mxArray *k_y;
   const mxArray *l_y;
   const mxArray *m;
+  const mxArray *m1;
   const mxArray *m_y;
   const mxArray *n_y;
   const mxArray *o_y;
   const mxArray *p_y;
   const mxArray *q_y;
+  const mxArray *r_y;
+  const mxArray *s_y;
+  const mxArray *t_y;
   const mxArray *y;
   real_T *pData;
+  int32_T b_iv[2];
   int32_T b_j0;
   int32_T c_i;
   int32_T d_i;
   int32_T i;
   y = NULL;
-  emlrtAssign(&y,
-              emlrtCreateStructArray(1, &u_size, 16, (const char_T **)&sv[0]));
+  emlrtAssign(
+      &y, emlrtCreateStructArray(1, &u_size, 16, (const char_T **)&b_sv[0]));
   emlrtCreateField(y, "TrackID");
   emlrtCreateField(y, "BranchID");
   emlrtCreateField(y, "SourceIndex");
@@ -314,6 +340,9 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
   emlrtCreateField(y, "IsSelfReported");
   emlrtCreateField(y, "ObjectAttributes");
   i = 0;
+  if (u_size > 0) {
+    b_iv[0] = 1;
+  }
   for (b_j0 = 0; b_j0 < u_size; b_j0++) {
     int32_T i1;
     b_y = NULL;
@@ -349,7 +378,7 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
     emlrtAssign(&g_y, m);
     emlrtSetFieldR2017b(y, i, "State", g_y, 5);
     h_y = NULL;
-    m = emlrtCreateNumericArray(2, (const void *)&b_iv[0], mxDOUBLE_CLASS,
+    m = emlrtCreateNumericArray(2, (const void *)&b_iv1[0], mxDOUBLE_CLASS,
                                 mxREAL);
     pData = emlrtMxGetPr(m);
     i1 = 0;
@@ -373,14 +402,16 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
     emlrtAssign(&k_y, m);
     emlrtSetFieldR2017b(y, i, "ObjectClassProbabilities", k_y, 9);
     l_y = NULL;
-    m = emlrtCreateCharArray(2, &b_iv1[0]);
+    m = emlrtCreateCharArray(2, &iv2[0]);
     emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 7, m,
                              &u_data[b_j0].TrackLogic[0]);
     emlrtAssign(&l_y, m);
     emlrtSetFieldR2017b(y, i, "TrackLogic", l_y, 10);
     m_y = NULL;
-    m = emlrtCreateLogicalArray(2, &iv2[0]);
-    emlrtInitLogicalArray(3, m, &u_data[b_j0].TrackLogicState[0]);
+    i1 = u_data[b_j0].TrackLogicState->size[1];
+    b_iv[1] = i1;
+    m = emlrtCreateLogicalArray(2, &b_iv[0]);
+    emlrtInitLogicalArray(i1, m, &u_data[b_j0].TrackLogicState->data[0]);
     emlrtAssign(&m_y, m);
     emlrtSetFieldR2017b(y, i, "TrackLogicState", m_y, 11);
     n_y = NULL;
@@ -396,7 +427,27 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
     emlrtAssign(&p_y, m);
     emlrtSetFieldR2017b(y, i, "IsSelfReported", p_y, 14);
     q_y = NULL;
-    emlrtAssign(&q_y, emlrtCreateStructMatrix(1, 1, 0, NULL));
+    emlrtAssign(&q_y,
+                emlrtCreateStructMatrix(1, 1, 2, (const char_T **)&sv1[0]));
+    r_y = NULL;
+    m = emlrtCreateCharArray(2, &iv3[0]);
+    emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 8, m,
+                             &u_data[b_j0].ObjectAttributes.Callsign[0]);
+    emlrtAssign(&r_y, m);
+    emlrtSetFieldR2017b(q_y, 0, "Callsign", r_y, 0);
+    s_y = NULL;
+    m1 = NULL;
+    emlrtCheckEnumR2012b((emlrtConstCTX)sp, "adsbCategory", 16,
+                         (const char_T **)&sv[0], &iv1[0]);
+    t_y = NULL;
+    m = emlrtCreateNumericMatrix(1, 1, mxUINT8_CLASS, mxREAL);
+    *(uint8_T *)emlrtMxGetData(m) = u_data[b_j0].ObjectAttributes.Category;
+    emlrtAssign(&t_y, m);
+    emlrtAssign(&m1, t_y);
+    emlrtAssign(&s_y,
+                emlrtCreateEnumR2012b((emlrtConstCTX)sp, "adsbCategory", m1));
+    emlrtDestroyArray(&m1);
+    emlrtSetFieldR2017b(q_y, 0, "Category", s_y, 1);
     emlrtSetFieldR2017b(y, i, "ObjectAttributes", q_y, 15);
     i++;
   }
@@ -495,28 +546,10 @@ static void n_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
 static adsbCategory o_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                        const emlrtMsgIdentifier *parentId)
 {
-  static const int32_T enumValues[16] = {0, 1, 2,  3,  4,  5,  6,  7,
-                                         8, 9, 10, 11, 12, 13, 14, 15};
   static const int32_T dims = 0;
-  static const char_T *enumNames[16] = {"No_Category_Information",
-                                        "Light",
-                                        "Small",
-                                        "Large",
-                                        "High_Vortex_Large",
-                                        "Heavy",
-                                        "High_Performance",
-                                        "Rotorcraft",
-                                        "Glider_Sailplane",
-                                        "Lighter_than_air",
-                                        "Parachutist_Skydiver",
-                                        "Ultralight",
-                                        "Unmanned_Aerial_Vehicle",
-                                        "Space_Vehicle",
-                                        "Surface_Vehicle",
-                                        "Obstacle"};
   adsbCategory y;
   emlrtCheckEnumR2012b((emlrtConstCTX)sp, "adsbCategory", 16,
-                       (const char_T **)&enumNames[0], &enumValues[0]);
+                       (const char_T **)&sv[0], &iv1[0]);
   emlrtCheckBuiltInR2012b((emlrtConstCTX)sp, parentId, u, "adsbCategory", false,
                           0U, (const void *)&dims);
   y = (adsbCategory)emlrtGetEnumElementR2009a(u, 0);
@@ -643,20 +676,21 @@ void fusionAlgorithm_api(const mxArray *const prhs[2], const mxArray **plhs)
       NULL  /* prev */
   };
   emxArray_struct0_T *tracks;
-  struct2_T fusedTracks_data[100];
+  emxArray_struct2_T_100 fusedTracks;
   real_T b_time;
-  int32_T fusedTracks_size;
   st.tls = emlrtRootTLSGlobal;
   emlrtHeapReferenceStackEnterFcnR2012b(&st);
   /* Marshall function inputs */
-  emxInit_struct0_T(&st, &tracks, &ug_emlrtRTEI);
+  emxInit_struct0_T(&st, &tracks, &pi_emlrtRTEI);
   c_emlrt_marshallIn(&st, emlrtAliasP(prhs[0]), "tracks", tracks);
   b_time = p_emlrt_marshallIn(&st, emlrtAliasP(prhs[1]), "time");
   /* Invoke the target function */
-  fusionAlgorithm(&st, tracks, b_time, fusedTracks_data, &fusedTracks_size);
+  emxInit_struct2_T_100(&fusedTracks);
+  fusionAlgorithm(&st, tracks, b_time, fusedTracks.data, fusedTracks.size);
   emxFree_struct0_T(&st, &tracks);
   /* Marshall function outputs */
-  *plhs = emlrt_marshallOut(&st, fusedTracks_data, fusedTracks_size);
+  *plhs = emlrt_marshallOut(&st, fusedTracks.data, fusedTracks.size[0]);
+  emxFree_struct2_T_100(&st, &fusedTracks);
   emlrtHeapReferenceStackLeaveFcnR2012b(&st);
 }
 

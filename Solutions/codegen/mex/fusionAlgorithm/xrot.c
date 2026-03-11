@@ -12,7 +12,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo pf_emlrtRSI =
+static emlrtRSInfo qf_emlrtRSI =
     {
         32,     /* lineNo */
         "xrot", /* fcnName */
@@ -21,7 +21,7 @@ static emlrtRSInfo pf_emlrtRSI =
         "blas\\xrot.m" /* pathName */
 };
 
-static emlrtRSInfo qf_emlrtRSI = {
+static emlrtRSInfo rf_emlrtRSI = {
     24,     /* lineNo */
     "xrot", /* fcnName */
     "C:\\Program "
@@ -43,10 +43,10 @@ void b_xrot(const emlrtStack *sp, int32_T n, real_T x[36], int32_T ix0,
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &pf_emlrtRSI;
+  st.site = &qf_emlrtRSI;
   if (n >= 1) {
     int32_T i;
-    b_st.site = &qf_emlrtRSI;
+    b_st.site = &rf_emlrtRSI;
     if (n > 2147483646) {
       c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -81,8 +81,8 @@ void xrot(const emlrtStack *sp, int32_T n, real_T x[36], int32_T ix0,
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &pf_emlrtRSI;
-  b_st.site = &qf_emlrtRSI;
+  st.site = &qf_emlrtRSI;
+  b_st.site = &rf_emlrtRSI;
   if (n > 2147483646) {
     c_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&c_st);

@@ -100,7 +100,7 @@ static emlrtRSInfo sb_emlrtRSI =
         "internal\\mergesort.m" /* pathName */
 };
 
-static emlrtRSInfo tp_emlrtRSI = {
+static emlrtRSInfo jo_emlrtRSI = {
     243,             /* lineNo */
     "unique_vector", /* fcnName */
     "C:\\Program "
@@ -117,7 +117,7 @@ static emlrtRTEInfo e_emlrtRTEI = {
                                                                        */
 };
 
-static emlrtRTEInfo nc_emlrtRTEI = {
+static emlrtRTEInfo mc_emlrtRTEI = {
     161,      /* lineNo */
     1,        /* colNo */
     "unique", /* fName */
@@ -126,7 +126,7 @@ static emlrtRTEInfo nc_emlrtRTEI = {
                                                                        */
 };
 
-static emlrtRTEInfo oc_emlrtRTEI =
+static emlrtRTEInfo nc_emlrtRTEI =
     {
         52,          /* lineNo */
         9,           /* colNo */
@@ -136,7 +136,7 @@ static emlrtRTEInfo oc_emlrtRTEI =
         "internal\\mergesort.m" /* pName */
 };
 
-static emlrtRTEInfo pc_emlrtRTEI = {
+static emlrtRTEInfo oc_emlrtRTEI = {
     162,      /* lineNo */
     20,       /* colNo */
     "unique", /* fName */
@@ -145,7 +145,7 @@ static emlrtRTEInfo pc_emlrtRTEI = {
                                                                        */
 };
 
-static emlrtRTEInfo qc_emlrtRTEI = {
+static emlrtRTEInfo pc_emlrtRTEI = {
     243,      /* lineNo */
     1,        /* colNo */
     "unique", /* fName */
@@ -154,7 +154,7 @@ static emlrtRTEInfo qc_emlrtRTEI = {
                                                                        */
 };
 
-static emlrtRTEInfo rc_emlrtRTEI =
+static emlrtRTEInfo qc_emlrtRTEI =
     {
         52,          /* lineNo */
         1,           /* colNo */
@@ -199,10 +199,10 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   na = a->size[0];
   st.site = &jb_emlrtRSI;
   n = a->size[0] + 1;
-  emxInit_int32_T(&st, &idx, 1, &nc_emlrtRTEI);
+  emxInit_int32_T(&st, &idx, 1, &mc_emlrtRTEI);
   pEnd = idx->size[0];
   idx->size[0] = a->size[0];
-  emxEnsureCapacity_int32_T(&st, idx, pEnd, &nc_emlrtRTEI);
+  emxEnsureCapacity_int32_T(&st, idx, pEnd, &mc_emlrtRTEI);
   idx_data = idx->data;
   for (k = 0; k < na; k++) {
     idx_data[k] = 0;
@@ -210,10 +210,10 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   if (a->size[0] != 0) {
     int32_T i;
     b_st.site = &qb_emlrtRSI;
-    emxInit_int32_T(&b_st, &iwork, 1, &rc_emlrtRTEI);
+    emxInit_int32_T(&b_st, &iwork, 1, &qc_emlrtRTEI);
     pEnd = iwork->size[0];
     iwork->size[0] = a->size[0];
-    emxEnsureCapacity_int32_T(&b_st, iwork, pEnd, &oc_emlrtRTEI);
+    emxEnsureCapacity_int32_T(&b_st, iwork, pEnd, &nc_emlrtRTEI);
     iwork_data = iwork->data;
     pEnd = a->size[0] - 1;
     c_st.site = &rb_emlrtRSI;
@@ -290,7 +290,7 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   }
   pEnd = b->size[0];
   b->size[0] = a->size[0];
-  emxEnsureCapacity_uint32_T(sp, b, pEnd, &pc_emlrtRTEI);
+  emxEnsureCapacity_uint32_T(sp, b, pEnd, &oc_emlrtRTEI);
   b_data = b->data;
   st.site = &kb_emlrtRSI;
   if (a->size[0] > 2147483646) {
@@ -329,11 +329,11 @@ void b_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   }
   b_iv[0] = 1;
   b_iv[1] = q;
-  st.site = &tp_emlrtRSI;
+  st.site = &jo_emlrtRSI;
   indexShapeCheck(&st, b->size[0], b_iv);
   pEnd = b->size[0];
   b->size[0] = q;
-  emxEnsureCapacity_uint32_T(sp, b, pEnd, &qc_emlrtRTEI);
+  emxEnsureCapacity_uint32_T(sp, b, pEnd, &pc_emlrtRTEI);
   st.site = &pb_emlrtRSI;
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }
@@ -371,11 +371,11 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   na = a->size[1];
   st.site = &jb_emlrtRSI;
   n = a->size[1] + 1;
-  emxInit_int32_T(&st, &idx, 2, &nc_emlrtRTEI);
+  emxInit_int32_T(&st, &idx, 2, &mc_emlrtRTEI);
   pEnd = idx->size[0] * idx->size[1];
   idx->size[0] = 1;
   idx->size[1] = a->size[1];
-  emxEnsureCapacity_int32_T(&st, idx, pEnd, &nc_emlrtRTEI);
+  emxEnsureCapacity_int32_T(&st, idx, pEnd, &mc_emlrtRTEI);
   idx_data = idx->data;
   for (k = 0; k < na; k++) {
     idx_data[k] = 0;
@@ -383,10 +383,10 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   if (a->size[1] != 0) {
     int32_T i;
     b_st.site = &qb_emlrtRSI;
-    emxInit_int32_T(&b_st, &iwork, 1, &rc_emlrtRTEI);
+    emxInit_int32_T(&b_st, &iwork, 1, &qc_emlrtRTEI);
     pEnd = iwork->size[0];
     iwork->size[0] = a->size[1];
-    emxEnsureCapacity_int32_T(&b_st, iwork, pEnd, &oc_emlrtRTEI);
+    emxEnsureCapacity_int32_T(&b_st, iwork, pEnd, &nc_emlrtRTEI);
     iwork_data = iwork->data;
     pEnd = a->size[1] - 1;
     c_st.site = &rb_emlrtRSI;
@@ -464,7 +464,7 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   pEnd = b->size[0] * b->size[1];
   b->size[0] = 1;
   b->size[1] = a->size[1];
-  emxEnsureCapacity_uint32_T(sp, b, pEnd, &pc_emlrtRTEI);
+  emxEnsureCapacity_uint32_T(sp, b, pEnd, &oc_emlrtRTEI);
   b_data = b->data;
   st.site = &kb_emlrtRSI;
   if (a->size[1] > 2147483646) {
@@ -504,7 +504,7 @@ void c_unique_vector(const emlrtStack *sp, const emxArray_uint32_T *a,
   } else {
     b->size[1] = q;
   }
-  emxEnsureCapacity_uint32_T(sp, b, pEnd, &qc_emlrtRTEI);
+  emxEnsureCapacity_uint32_T(sp, b, pEnd, &pc_emlrtRTEI);
   st.site = &pb_emlrtRSI;
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }
@@ -547,21 +547,21 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
   na = a->size[1];
   st.site = &jb_emlrtRSI;
   n = a->size[1] + 1;
-  emxInit_int32_T(&st, &idx, 2, &nc_emlrtRTEI);
+  emxInit_int32_T(&st, &idx, 2, &mc_emlrtRTEI);
   pEnd = idx->size[0] * idx->size[1];
   idx->size[0] = 1;
   idx->size[1] = a->size[1];
-  emxEnsureCapacity_int32_T(&st, idx, pEnd, &nc_emlrtRTEI);
+  emxEnsureCapacity_int32_T(&st, idx, pEnd, &mc_emlrtRTEI);
   idx_data = idx->data;
   for (k = 0; k < na; k++) {
     idx_data[k] = 0;
   }
   if (a->size[1] != 0) {
     b_st.site = &qb_emlrtRSI;
-    emxInit_int32_T(&b_st, &iwork, 1, &rc_emlrtRTEI);
+    emxInit_int32_T(&b_st, &iwork, 1, &qc_emlrtRTEI);
     pEnd = iwork->size[0];
     iwork->size[0] = a->size[1];
-    emxEnsureCapacity_int32_T(&b_st, iwork, pEnd, &oc_emlrtRTEI);
+    emxEnsureCapacity_int32_T(&b_st, iwork, pEnd, &nc_emlrtRTEI);
     iwork_data = iwork->data;
     pEnd = a->size[1] - 1;
     c_st.site = &rb_emlrtRSI;
@@ -637,7 +637,7 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
   pEnd = b->size[0] * b->size[1];
   b->size[0] = 1;
   b->size[1] = a->size[1];
-  emxEnsureCapacity_real_T(sp, b, pEnd, &pc_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, b, pEnd, &oc_emlrtRTEI);
   b_data = b->data;
   st.site = &kb_emlrtRSI;
   if (a->size[1] > 2147483646) {
@@ -719,7 +719,7 @@ void unique_vector(const emlrtStack *sp, const emxArray_real_T *a,
   } else {
     b->size[1] = i;
   }
-  emxEnsureCapacity_real_T(sp, b, pEnd, &qc_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, b, pEnd, &pc_emlrtRTEI);
   st.site = &pb_emlrtRSI;
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }

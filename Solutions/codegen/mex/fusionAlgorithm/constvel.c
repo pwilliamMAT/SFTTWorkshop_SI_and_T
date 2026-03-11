@@ -33,7 +33,7 @@ void binary_expand_op(const emlrtStack *sp, emxArray_real_T *in1,
   in2_data = in2->data;
   in1_data = in1->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  emxInit_real_T(sp, &b_in2, 2, &rh_emlrtRTEI);
+  emxInit_real_T(sp, &b_in2, 2, &qj_emlrtRTEI);
   stride_0_1 = b_in2->size[0] * b_in2->size[1];
   b_in2->size[0] = 1;
   if (in1->size[1] == 1) {
@@ -42,7 +42,7 @@ void binary_expand_op(const emlrtStack *sp, emxArray_real_T *in1,
     loop_ub = in1->size[1];
   }
   b_in2->size[1] = loop_ub;
-  emxEnsureCapacity_real_T(sp, b_in2, stride_0_1, &rh_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, b_in2, stride_0_1, &qj_emlrtRTEI);
   b_in2_data = b_in2->data;
   stride_0_1 = (in2->size[1] != 1);
   stride_1_1 = (in1->size[1] != 1);
@@ -68,7 +68,7 @@ void binary_expand_op(const emlrtStack *sp, emxArray_real_T *in1,
   stride_0_1 = in1->size[0] * in1->size[1];
   in1->size[0] = 1;
   in1->size[1] = loop_ub;
-  emxEnsureCapacity_real_T(sp, in1, stride_0_1, &rh_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, in1, stride_0_1, &qj_emlrtRTEI);
   in1_data = in1->data;
   for (i1 = 0; i1 < loop_ub; i1++) {
     in1_data[i1] = b_in2_data[i1];
@@ -94,7 +94,7 @@ void binary_expand_op_1(const emlrtStack *sp, emxArray_real_T *in1,
   in2_data = in2->data;
   in1_data = in1->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  emxInit_real_T(sp, &b_in2, 2, &qh_emlrtRTEI);
+  emxInit_real_T(sp, &b_in2, 2, &pj_emlrtRTEI);
   stride_0_1 = b_in2->size[0] * b_in2->size[1];
   b_in2->size[0] = 1;
   if (in1->size[1] == 1) {
@@ -103,7 +103,7 @@ void binary_expand_op_1(const emlrtStack *sp, emxArray_real_T *in1,
     loop_ub = in1->size[1];
   }
   b_in2->size[1] = loop_ub;
-  emxEnsureCapacity_real_T(sp, b_in2, stride_0_1, &qh_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, b_in2, stride_0_1, &pj_emlrtRTEI);
   b_in2_data = b_in2->data;
   stride_0_1 = (in2->size[1] != 1);
   stride_1_1 = (in1->size[1] != 1);
@@ -129,7 +129,7 @@ void binary_expand_op_1(const emlrtStack *sp, emxArray_real_T *in1,
   stride_0_1 = in1->size[0] * in1->size[1];
   in1->size[0] = 1;
   in1->size[1] = loop_ub;
-  emxEnsureCapacity_real_T(sp, in1, stride_0_1, &qh_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, in1, stride_0_1, &pj_emlrtRTEI);
   in1_data = in1->data;
   for (i1 = 0; i1 < loop_ub; i1++) {
     in1_data[i1] = b_in2_data[i1];
@@ -149,29 +149,29 @@ void constvel(const emlrtStack *sp, real_T state[6], const real_T varargin_1[3],
   st.tls = sp->tls;
   b_st.prev = &st;
   b_st.tls = st.tls;
-  st.site = &ki_emlrtRSI;
+  st.site = &bh_emlrtRSI;
   d_validateattributes(&st, state);
-  st.site = &ni_emlrtRSI;
+  st.site = &eh_emlrtRSI;
   e_validateattributes(&st, varargin_1);
-  st.site = &oi_emlrtRSI;
+  st.site = &fh_emlrtRSI;
   b_st.site = &gb_emlrtRSI;
   if (muDoubleScalarIsInf(varargin_2) || muDoubleScalarIsNaN(varargin_2)) {
     emlrtErrorWithMessageIdR2018a(
         &b_st, &m_emlrtRTEI, "Coder:toolbox:ValidateattributesexpectedFinite",
         "MATLAB:constvel:expectedFinite", 3, 4, 19, "input number 3, dt,");
   }
-  st.site = &pi_emlrtRSI;
+  st.site = &gh_emlrtRSI;
   d = state[1];
   d1 = 0.5 * (varargin_2 * varargin_2);
   state[0] = (state[0] + d * varargin_2) + d1 * varargin_1[0];
   d += varargin_1[0] * varargin_2;
   state[1] = d;
-  st.site = &pi_emlrtRSI;
+  st.site = &gh_emlrtRSI;
   d = state[3];
   state[2] = (state[2] + d * varargin_2) + d1 * varargin_1[1];
   d += varargin_1[1] * varargin_2;
   state[3] = d;
-  st.site = &pi_emlrtRSI;
+  st.site = &gh_emlrtRSI;
   d = state[5];
   state[4] = (state[4] + d * varargin_2) + d1 * varargin_1[2];
   d += varargin_1[2] * varargin_2;
@@ -195,7 +195,7 @@ void plus(const emlrtStack *sp, emxArray_real_T *in1,
   in2_data = in2->data;
   in1_data = in1->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  emxInit_real_T(sp, &b_in1, 2, &qh_emlrtRTEI);
+  emxInit_real_T(sp, &b_in1, 2, &pj_emlrtRTEI);
   stride_0_1 = b_in1->size[0] * b_in1->size[1];
   b_in1->size[0] = 1;
   if (in2->size[1] == 1) {
@@ -204,7 +204,7 @@ void plus(const emlrtStack *sp, emxArray_real_T *in1,
     loop_ub = in2->size[1];
   }
   b_in1->size[1] = loop_ub;
-  emxEnsureCapacity_real_T(sp, b_in1, stride_0_1, &qh_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, b_in1, stride_0_1, &pj_emlrtRTEI);
   b_in1_data = b_in1->data;
   stride_0_1 = (in1->size[1] != 1);
   stride_1_1 = (in2->size[1] != 1);
@@ -228,7 +228,7 @@ void plus(const emlrtStack *sp, emxArray_real_T *in1,
   stride_0_1 = in1->size[0] * in1->size[1];
   in1->size[0] = 1;
   in1->size[1] = loop_ub;
-  emxEnsureCapacity_real_T(sp, in1, stride_0_1, &qh_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, in1, stride_0_1, &pj_emlrtRTEI);
   in1_data = in1->data;
   for (i1 = 0; i1 < loop_ub; i1++) {
     in1_data[i1] = b_in1_data[i1];

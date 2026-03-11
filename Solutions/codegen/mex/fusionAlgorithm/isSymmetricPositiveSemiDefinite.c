@@ -25,8 +25,8 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
   real_T notSymmetric_tmp[36];
   real_T y[36];
   real_T varargin_1[6];
-  real_T b_dv[2];
-  real_T b_dv1[2];
+  real_T dv[2];
+  real_T dv1[2];
   real_T absx;
   real_T x;
   int32_T exponent;
@@ -87,17 +87,17 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
   }
   for (k = 0; k <= 34; k += 2) {
     r = _mm_loadu_pd(&notSymmetric_tmp[k]);
-    _mm_storeu_pd(&b_dv[0], _mm_sub_pd(_mm_loadu_pd(&b_value[k]), r));
-    b_dv1[0] = muDoubleScalarAbs(b_dv[0]);
-    b_dv1[1] = muDoubleScalarAbs(b_dv[1]);
-    r = _mm_loadu_pd(&b_dv1[0]);
+    _mm_storeu_pd(&dv[0], _mm_sub_pd(_mm_loadu_pd(&b_value[k]), r));
+    dv1[0] = muDoubleScalarAbs(dv[0]);
+    dv1[1] = muDoubleScalarAbs(dv[1]);
+    r = _mm_loadu_pd(&dv1[0]);
     _mm_storeu_pd(&y[k], r);
   }
   x = muDoubleScalarSqrt(absx);
   for (k = 0; k < 36; k++) {
     b_y[k] = (y[k] < x);
   }
-  st.site = &uc_emlrtRSI;
+  st.site = &vc_emlrtRSI;
   all(&st, b_y, b_x);
   c_y = true;
   idx = 0;
@@ -116,7 +116,7 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
         &notSymmetric_tmp[k],
         _mm_div_pd(_mm_add_pd(_mm_loadu_pd(&b_value[k]), r), _mm_set1_pd(2.0)));
   }
-  st.site = &vc_emlrtRSI;
+  st.site = &wc_emlrtRSI;
   eig(&st, notSymmetric_tmp, d);
   for (k = 0; k < 6; k++) {
     b_x[k] = (d[k].re < -absx);
@@ -134,7 +134,7 @@ void isSymmetricPositiveSemiDefinite(const emlrtStack *sp,
   }
   if (notPositiveSemidefinite || (!c_y)) {
     emlrtErrorWithMessageIdR2018a(
-        sp, &o_emlrtRTEI,
+        sp, &r_emlrtRTEI,
         "shared_tracking:KalmanFilter:invalidCovarianceValues",
         "shared_tracking:KalmanFilter:invalidCovarianceValues", 3, 4, 15,
         "StateCovariance");

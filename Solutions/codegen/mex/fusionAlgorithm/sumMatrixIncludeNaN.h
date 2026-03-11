@@ -17,8 +17,6 @@
 #include <string.h>
 
 /* Function Declarations */
-real_T b_sumColumnB(real_T x);
-
 real_T sumColumnB(const emlrtStack *sp, const real_T x_data[], int32_T vlen);
 
 /* End of code generation (sumMatrixIncludeNaN.h) */

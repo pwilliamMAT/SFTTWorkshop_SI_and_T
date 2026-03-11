@@ -18,7 +18,7 @@
 #include <string.h>
 
 /* Function Declarations */
-void repmat(const emlrtStack *sp, const c_objectTrack *a,
+void repmat(const emlrtStack *sp, const objectTrack *a,
             const real_T varargin_1[2], emxArray_objectTrack *b);
 
 /* End of code generation (repmat.h) */

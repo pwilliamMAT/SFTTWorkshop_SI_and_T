@@ -19,7 +19,7 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ns_emlrtRSI = {
+static emlrtRSInfo er_emlrtRSI = {
     82,           /* lineNo */
     "fusecovint", /* fcnName */
     "C:\\Program "
@@ -27,7 +27,7 @@ static emlrtRSInfo ns_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo os_emlrtRSI = {
+static emlrtRSInfo fr_emlrtRSI = {
     106,          /* lineNo */
     "fusecovint", /* fcnName */
     "C:\\Program "
@@ -35,7 +35,7 @@ static emlrtRSInfo os_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo ps_emlrtRSI = {
+static emlrtRSInfo gr_emlrtRSI = {
     124,          /* lineNo */
     "fusecovint", /* fcnName */
     "C:\\Program "
@@ -43,7 +43,7 @@ static emlrtRSInfo ps_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo qs_emlrtRSI = {
+static emlrtRSInfo hr_emlrtRSI = {
     136,          /* lineNo */
     "fusecovint", /* fcnName */
     "C:\\Program "
@@ -51,7 +51,7 @@ static emlrtRSInfo qs_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo rs_emlrtRSI = {
+static emlrtRSInfo ir_emlrtRSI = {
     142,          /* lineNo */
     "fusecovint", /* fcnName */
     "C:\\Program "
@@ -59,7 +59,7 @@ static emlrtRSInfo rs_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo ss_emlrtRSI = {
+static emlrtRSInfo jr_emlrtRSI = {
     150,          /* lineNo */
     "fusecovint", /* fcnName */
     "C:\\Program "
@@ -67,7 +67,7 @@ static emlrtRSInfo ss_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo ts_emlrtRSI = {
+static emlrtRSInfo kr_emlrtRSI = {
     154,          /* lineNo */
     "fusecovint", /* fcnName */
     "C:\\Program "
@@ -75,7 +75,7 @@ static emlrtRSInfo ts_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo us_emlrtRSI = {
+static emlrtRSInfo lr_emlrtRSI = {
     160,          /* lineNo */
     "fusecovint", /* fcnName */
     "C:\\Program "
@@ -83,7 +83,7 @@ static emlrtRSInfo us_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRSInfo ys_emlrtRSI =
+static emlrtRSInfo pr_emlrtRSI =
     {
         74,               /* lineNo */
         "validatestring", /* fcnName */
@@ -92,7 +92,7 @@ static emlrtRSInfo ys_emlrtRSI =
         ".m" /* pathName */
 };
 
-static emlrtRSInfo at_emlrtRSI =
+static emlrtRSInfo qr_emlrtRSI =
     {
         111,                  /* lineNo */
         "fullValidatestring", /* fcnName */
@@ -101,7 +101,7 @@ static emlrtRSInfo at_emlrtRSI =
         ".m" /* pathName */
 };
 
-static emlrtRSInfo bt_emlrtRSI =
+static emlrtRSInfo rr_emlrtRSI =
     {
         164,         /* lineNo */
         "get_match", /* fcnName */
@@ -110,7 +110,7 @@ static emlrtRSInfo bt_emlrtRSI =
         ".m" /* pathName */
 };
 
-static emlrtRSInfo ct_emlrtRSI = {
+static emlrtRSInfo sr_emlrtRSI = {
     41,    /* lineNo */
     "cat", /* fcnName */
     "C:\\Program "
@@ -118,7 +118,7 @@ static emlrtRSInfo ct_emlrtRSI = {
                                                                           */
 };
 
-static emlrtRTEInfo wb_emlrtRTEI =
+static emlrtRTEInfo ac_emlrtRTEI =
     {
         131,                  /* lineNo */
         9,                    /* colNo */
@@ -128,7 +128,7 @@ static emlrtRTEInfo wb_emlrtRTEI =
         ".m" /* pName */
 };
 
-static emlrtBCInfo yf_emlrtBCI = {
+static emlrtBCInfo ag_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     160,          /* lineNo */
@@ -141,7 +141,7 @@ static emlrtBCInfo yf_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo ag_emlrtBCI = {
+static emlrtBCInfo bg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     160,          /* lineNo */
@@ -154,7 +154,7 @@ static emlrtBCInfo ag_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo bg_emlrtBCI = {
+static emlrtBCInfo cg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     160,          /* lineNo */
@@ -167,7 +167,7 @@ static emlrtBCInfo bg_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo cg_emlrtBCI = {
+static emlrtBCInfo dg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     150,          /* lineNo */
@@ -180,7 +180,7 @@ static emlrtBCInfo cg_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo dg_emlrtBCI = {
+static emlrtBCInfo eg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     150,          /* lineNo */
@@ -193,7 +193,7 @@ static emlrtBCInfo dg_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo eg_emlrtBCI = {
+static emlrtBCInfo fg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     124,          /* lineNo */
@@ -206,7 +206,7 @@ static emlrtBCInfo eg_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo fg_emlrtBCI = {
+static emlrtBCInfo gg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     119,          /* lineNo */
@@ -219,23 +219,10 @@ static emlrtBCInfo fg_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtBCInfo gg_emlrtBCI = {
-    -1,           /* iFirst */
-    -1,           /* iLast */
-    119,          /* lineNo */
-    23,           /* colNo */
-    "",           /* aName */
-    "fusecovint", /* fName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
-                                                                           */
-    0 /* checkKind */
-};
-
 static emlrtBCInfo hg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
-    132,          /* lineNo */
+    119,          /* lineNo */
     23,           /* colNo */
     "",           /* aName */
     "fusecovint", /* fName */
@@ -249,7 +236,7 @@ static emlrtBCInfo ig_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     132,          /* lineNo */
-    7,            /* colNo */
+    23,           /* colNo */
     "",           /* aName */
     "fusecovint", /* fName */
     "C:\\Program "
@@ -262,7 +249,7 @@ static emlrtBCInfo jg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     132,          /* lineNo */
-    9,            /* colNo */
+    7,            /* colNo */
     "",           /* aName */
     "fusecovint", /* fName */
     "C:\\Program "
@@ -274,8 +261,8 @@ static emlrtBCInfo jg_emlrtBCI = {
 static emlrtBCInfo kg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
-    133,          /* lineNo */
-    28,           /* colNo */
+    132,          /* lineNo */
+    9,            /* colNo */
     "",           /* aName */
     "fusecovint", /* fName */
     "C:\\Program "
@@ -288,7 +275,7 @@ static emlrtBCInfo lg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     133,          /* lineNo */
-    7,            /* colNo */
+    28,           /* colNo */
     "",           /* aName */
     "fusecovint", /* fName */
     "C:\\Program "
@@ -301,7 +288,7 @@ static emlrtBCInfo mg_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     133,          /* lineNo */
-    9,            /* colNo */
+    7,            /* colNo */
     "",           /* aName */
     "fusecovint", /* fName */
     "C:\\Program "
@@ -311,6 +298,19 @@ static emlrtBCInfo mg_emlrtBCI = {
 };
 
 static emlrtBCInfo ng_emlrtBCI = {
+    -1,           /* iFirst */
+    -1,           /* iLast */
+    133,          /* lineNo */
+    9,            /* colNo */
+    "",           /* aName */
+    "fusecovint", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fusecovint.m", /* pName
+                                                                           */
+    0 /* checkKind */
+};
+
+static emlrtBCInfo og_emlrtBCI = {
     -1,           /* iFirst */
     -1,           /* iLast */
     124,          /* lineNo */
@@ -323,7 +323,7 @@ static emlrtBCInfo ng_emlrtBCI = {
     0 /* checkKind */
 };
 
-static emlrtRTEInfo xf_emlrtRTEI = {
+static emlrtRTEInfo nh_emlrtRTEI = {
     112,          /* lineNo */
     1,            /* colNo */
     "fusecovint", /* fName */
@@ -332,7 +332,7 @@ static emlrtRTEInfo xf_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo yf_emlrtRTEI = {
+static emlrtRTEInfo oh_emlrtRTEI = {
     112,          /* lineNo */
     13,           /* colNo */
     "fusecovint", /* fName */
@@ -341,7 +341,7 @@ static emlrtRTEInfo yf_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo ag_emlrtRTEI = {
+static emlrtRTEInfo ph_emlrtRTEI = {
     129,          /* lineNo */
     1,            /* colNo */
     "fusecovint", /* fName */
@@ -350,7 +350,7 @@ static emlrtRTEInfo ag_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo bg_emlrtRTEI = {
+static emlrtRTEInfo qh_emlrtRTEI = {
     245,   /* lineNo */
     14,    /* colNo */
     "cat", /* fName */
@@ -359,7 +359,7 @@ static emlrtRTEInfo bg_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo cg_emlrtRTEI = {
+static emlrtRTEInfo rh_emlrtRTEI = {
     139,          /* lineNo */
     3,            /* colNo */
     "fusecovint", /* fName */
@@ -368,7 +368,7 @@ static emlrtRTEInfo cg_emlrtRTEI = {
                                                                           */
 };
 
-static emlrtRTEInfo dg_emlrtRTEI = {
+static emlrtRTEInfo sh_emlrtRTEI = {
     142,          /* lineNo */
     1,            /* colNo */
     "fusecovint", /* fName */
@@ -451,7 +451,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
   trackCov_data = trackCov->data;
   trackState_data = trackState->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &ns_emlrtRSI;
+  st.site = &er_emlrtRSI;
   validateCovFusion(&st, trackState, trackCov);
   if (trackCov->size[2] == 1) {
     for (i = 0; i < 6; i++) {
@@ -462,23 +462,23 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       }
     }
   } else {
-    st.site = &os_emlrtRSI;
-    b_st.site = &ys_emlrtRSI;
-    c_st.site = &at_emlrtRSI;
+    st.site = &fr_emlrtRSI;
+    b_st.site = &pr_emlrtRSI;
+    c_st.site = &qr_emlrtRSI;
     partial_match_size_idx_1 = 3;
     partial_match_data[0] = ' ';
     partial_match_data[1] = ' ';
     partial_match_data[2] = ' ';
     nmatched = 0;
-    d_st.site = &bt_emlrtRSI;
-    e_st.site = &jg_emlrtRSI;
-    f_st.site = &kg_emlrtRSI;
+    d_st.site = &rr_emlrtRSI;
+    e_st.site = &kg_emlrtRSI;
+    f_st.site = &lg_emlrtRSI;
     isodd = false;
     fusedCov_tmp = 0;
     do {
       exitg1 = 0;
       if (fusedCov_tmp < 5) {
-        g_st.site = &lg_emlrtRSI;
+        g_st.site = &mg_emlrtRSI;
         u = (uint8_T)minProp[fusedCov_tmp];
         if (u > 127) {
           emlrtErrorWithMessageIdR2018a(
@@ -502,15 +502,15 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       }
       nmatched = 1;
     }
-    d_st.site = &bt_emlrtRSI;
-    e_st.site = &jg_emlrtRSI;
-    f_st.site = &kg_emlrtRSI;
+    d_st.site = &rr_emlrtRSI;
+    e_st.site = &kg_emlrtRSI;
+    f_st.site = &lg_emlrtRSI;
     isodd = false;
     fusedCov_tmp = 0;
     do {
       exitg1 = 0;
       if (fusedCov_tmp < 5) {
-        g_st.site = &lg_emlrtRSI;
+        g_st.site = &mg_emlrtRSI;
         u = (uint8_T)minProp[fusedCov_tmp];
         if (u > 127) {
           emlrtErrorWithMessageIdR2018a(
@@ -549,7 +549,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       b_cv1[8] = '\'';
       b_cv1[9] = ',';
       emlrtErrorWithMessageIdR2018a(
-          &b_st, &wb_emlrtRTEI,
+          &b_st, &ac_emlrtRTEI,
           "Coder:toolbox:ValidatestringUnrecognizedStringChoice",
           "MATLAB:fusecovint:unrecognizedStringChoice", 9, 4, 24,
           "input number 3, minProp,", 4, 29,
@@ -582,12 +582,12 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       minProp_data[1] = 'e';
       minProp_data[2] = 't';
     }
-    emxInit_real_T(sp, &CovMatrix, 2, &xf_emlrtRTEI);
+    emxInit_real_T(sp, &CovMatrix, 2, &nh_emlrtRTEI);
     fusedCov_tmp = CovMatrix->size[0] * CovMatrix->size[1];
     CovMatrix->size[0] = 1;
     partial_match_size_idx_1 = trackCov->size[2];
     CovMatrix->size[1] = trackCov->size[2];
-    emxEnsureCapacity_real_T(sp, CovMatrix, fusedCov_tmp, &xf_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, CovMatrix, fusedCov_tmp, &nh_emlrtRTEI);
     CovMatrix_data = CovMatrix->data;
     for (i = 0; i < partial_match_size_idx_1; i++) {
       CovMatrix_data[i] = 0.0;
@@ -641,13 +641,13 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       fusedCov_tmp = CovMatrix->size[0] * CovMatrix->size[1];
       CovMatrix->size[0] = 1;
       CovMatrix->size[1] = trackCov->size[2];
-      emxEnsureCapacity_real_T(sp, CovMatrix, fusedCov_tmp, &yf_emlrtRTEI);
+      emxEnsureCapacity_real_T(sp, CovMatrix, fusedCov_tmp, &oh_emlrtRTEI);
       CovMatrix_data = CovMatrix->data;
       if (trackCov->size[2] * 6 < 800) {
         for (c_i = 0; c_i < partial_match_size_idx_1; c_i++) {
           if (c_i + 1 > partial_match_size_idx_1) {
             emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, partial_match_size_idx_1,
-                                          &fg_emlrtBCI, (emlrtConstCTX)sp);
+                                          &gg_emlrtBCI, (emlrtConstCTX)sp);
           }
           t = 0.0;
           for (k = 0; k < 6; k++) {
@@ -655,7 +655,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
           }
           if (c_i + 1 > CovMatrix->size[1]) {
             emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, CovMatrix->size[1],
-                                          &gg_emlrtBCI, (emlrtConstCTX)sp);
+                                          &hg_emlrtBCI, (emlrtConstCTX)sp);
           }
           CovMatrix_data[c_i] = t;
         }
@@ -684,7 +684,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
             if (setjmp(emlrtJBEnviron) == 0) {
               if (c_i + 1 > trackCov->size[2]) {
                 emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, trackCov->size[2],
-                                              &fg_emlrtBCI, &h_st);
+                                              &gg_emlrtBCI, &h_st);
               }
               t = 0.0;
               for (k = 0; k < 6; k++) {
@@ -692,7 +692,7 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
               }
               if (c_i + 1 > CovMatrix->size[1]) {
                 emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, CovMatrix->size[1],
-                                              &gg_emlrtBCI, &h_st);
+                                              &hg_emlrtBCI, &h_st);
               }
               CovMatrix_data[c_i] = t;
             } else {
@@ -708,19 +708,19 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       fusedCov_tmp = CovMatrix->size[0] * CovMatrix->size[1];
       CovMatrix->size[0] = 1;
       CovMatrix->size[1] = trackCov->size[2];
-      emxEnsureCapacity_real_T(sp, CovMatrix, fusedCov_tmp, &yf_emlrtRTEI);
+      emxEnsureCapacity_real_T(sp, CovMatrix, fusedCov_tmp, &oh_emlrtRTEI);
       CovMatrix_data = CovMatrix->data;
       for (b_i = 0; b_i < partial_match_size_idx_1; b_i++) {
-        st.site = &ps_emlrtRSI;
+        st.site = &gr_emlrtRSI;
         if (b_i + 1 > partial_match_size_idx_1) {
           emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, partial_match_size_idx_1,
-                                        &eg_emlrtBCI, &st);
+                                        &fg_emlrtBCI, &st);
         }
-        b_st.site = &kl_emlrtRSI;
+        b_st.site = &ak_emlrtRSI;
         for (i = 0; i < 36; i++) {
           initialFusedCov[i] = trackCov_data[i + b_i * 36];
         }
-        c_st.site = &cl_emlrtRSI;
+        c_st.site = &rj_emlrtRSI;
         xzgetrf(&c_st, initialFusedCov, ipiv);
         y = initialFusedCov[0];
         isodd = false;
@@ -735,17 +735,17 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
         }
         if (b_i + 1 > CovMatrix->size[1]) {
           emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, CovMatrix->size[1],
-                                        &ng_emlrtBCI, (emlrtConstCTX)sp);
+                                        &og_emlrtBCI, (emlrtConstCTX)sp);
         }
         CovMatrix_data[b_i] = y;
       }
       break;
     }
-    emxInit_real_T(sp, &A, 2, &ag_emlrtRTEI);
+    emxInit_real_T(sp, &A, 2, &ph_emlrtRTEI);
     fusedCov_tmp = A->size[0] * A->size[1];
     A->size[0] = trackCov->size[2] - 1;
     A->size[1] = partial_match_size_idx_1;
-    emxEnsureCapacity_real_T(sp, A, fusedCov_tmp, &ag_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, A, fusedCov_tmp, &ph_emlrtRTEI);
     A_data = A->data;
     fusedCov_tmp = (trackCov->size[2] - 1) * trackCov->size[2];
     for (i = 0; i < fusedCov_tmp; i++) {
@@ -754,46 +754,46 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
     for (i = 0; i <= partial_match_size_idx_1 - 2; i++) {
       if (i + 1 > CovMatrix->size[1]) {
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, CovMatrix->size[1],
-                                      &hg_emlrtBCI, (emlrtConstCTX)sp);
+                                      &ig_emlrtBCI, (emlrtConstCTX)sp);
       }
       if (i + 1 > A->size[0]) {
-        emlrtDynamicBoundsCheckR2012b(i + 1, 1, A->size[0], &ig_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(i + 1, 1, A->size[0], &jg_emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       if (i + 1 > A->size[1]) {
-        emlrtDynamicBoundsCheckR2012b(i + 1, 1, A->size[1], &jg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(i + 1, 1, A->size[1], &kg_emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       A_data[i + A->size[0] * i] = CovMatrix_data[i];
       if (i + 2 > CovMatrix->size[1]) {
         emlrtDynamicBoundsCheckR2012b(i + 2, 1, CovMatrix->size[1],
-                                      &kg_emlrtBCI, (emlrtConstCTX)sp);
+                                      &lg_emlrtBCI, (emlrtConstCTX)sp);
       }
       if (i + 1 > A->size[0]) {
-        emlrtDynamicBoundsCheckR2012b(i + 1, 1, A->size[0], &lg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(i + 1, 1, A->size[0], &mg_emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       if (i + 2 > A->size[1]) {
-        emlrtDynamicBoundsCheckR2012b(i + 2, 1, A->size[1], &mg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(i + 2, 1, A->size[1], &ng_emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       A_data[i + A->size[0] * (i + 1)] = -CovMatrix_data[i + 1];
     }
     emxFree_real_T(sp, &CovMatrix);
-    st.site = &qs_emlrtRSI;
-    b_st.site = &ct_emlrtRSI;
-    c_st.site = &br_emlrtRSI;
+    st.site = &hr_emlrtRSI;
+    b_st.site = &sr_emlrtRSI;
+    c_st.site = &rp_emlrtRSI;
     if (A->size[1] != trackCov->size[2]) {
       emlrtErrorWithMessageIdR2018a(
-          &c_st, &ob_emlrtRTEI, "MATLAB:catenate:matrixDimensionMismatch",
+          &c_st, &rb_emlrtRTEI, "MATLAB:catenate:matrixDimensionMismatch",
           "MATLAB:catenate:matrixDimensionMismatch", 0);
     }
-    emxInit_real_T(sp, &b_A, 2, &bg_emlrtRTEI);
+    emxInit_real_T(sp, &b_A, 2, &qh_emlrtRTEI);
     fusedCov_tmp = b_A->size[0] * b_A->size[1];
     b_A->size[0] = A->size[0] + 1;
     nmatched = A->size[1];
     b_A->size[1] = A->size[1];
-    emxEnsureCapacity_real_T(sp, b_A, fusedCov_tmp, &bg_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, b_A, fusedCov_tmp, &qh_emlrtRTEI);
     CovMatrix_data = b_A->data;
     for (i = 0; i < nmatched; i++) {
       fusedCov_tmp = A->size[0];
@@ -803,17 +803,17 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
       CovMatrix_data[fusedCov_tmp + b_A->size[0] * i] = 1.0;
     }
     emxFree_real_T(sp, &A);
-    emxInit_real_T(sp, &r, 1, &cg_emlrtRTEI);
+    emxInit_real_T(sp, &r, 1, &rh_emlrtRTEI);
     fusedCov_tmp = r->size[0];
     r->size[0] = partial_match_size_idx_1;
-    emxEnsureCapacity_real_T(sp, r, fusedCov_tmp, &cg_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, r, fusedCov_tmp, &rh_emlrtRTEI);
     CovMatrix_data = r->data;
     for (i = 0; i <= partial_match_size_idx_1 - 2; i++) {
       CovMatrix_data[i] = 0.0;
     }
     CovMatrix_data[trackCov->size[2] - 1] = 1.0;
-    emxInit_real_T(sp, &Weight, 1, &dg_emlrtRTEI);
-    st.site = &rs_emlrtRSI;
+    emxInit_real_T(sp, &Weight, 1, &sh_emlrtRTEI);
+    st.site = &ir_emlrtRSI;
     mldivide(&st, b_A, r, Weight);
     CovMatrix_data = Weight->data;
     emxFree_real_T(sp, &r);
@@ -821,14 +821,14 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
     memset(&initialFusedCov[0], 0, 36U * sizeof(real_T));
     for (i = 0; i < partial_match_size_idx_1; i++) {
       if (i + 1 > Weight->size[0]) {
-        emlrtDynamicBoundsCheckR2012b(i + 1, 1, Weight->size[0], &dg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(i + 1, 1, Weight->size[0], &eg_emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       if (i + 1 > partial_match_size_idx_1) {
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, partial_match_size_idx_1,
-                                      &cg_emlrtBCI, (emlrtConstCTX)sp);
+                                      &dg_emlrtBCI, (emlrtConstCTX)sp);
       }
-      st.site = &ss_emlrtRSI;
+      st.site = &jr_emlrtRSI;
       b_mldivide(&st, &trackCov_data[36 * i], b);
       for (b_i = 0; b_i <= 34; b_i += 2) {
         r1 = _mm_loadu_pd(&b[b_i]);
@@ -838,25 +838,25 @@ void fusecovint(const emlrtStack *sp, const emxArray_real_T *trackState,
             _mm_add_pd(r2, _mm_mul_pd(_mm_set1_pd(CovMatrix_data[i]), r1)));
       }
     }
-    st.site = &ts_emlrtRSI;
+    st.site = &kr_emlrtRSI;
     b_mldivide(&st, initialFusedCov, fusedCov);
     for (i = 0; i < 6; i++) {
       initialFusedState[i] = 0.0;
     }
     for (i = 0; i < partial_match_size_idx_1; i++) {
       if (i + 1 > Weight->size[0]) {
-        emlrtDynamicBoundsCheckR2012b(i + 1, 1, Weight->size[0], &bg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(i + 1, 1, Weight->size[0], &cg_emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       if (i + 1 > partial_match_size_idx_1) {
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, partial_match_size_idx_1,
-                                      &ag_emlrtBCI, (emlrtConstCTX)sp);
+                                      &bg_emlrtBCI, (emlrtConstCTX)sp);
       }
-      st.site = &us_emlrtRSI;
+      st.site = &lr_emlrtRSI;
       b_mldivide(&st, &trackCov_data[36 * i], b);
       if (i + 1 > trackState->size[1]) {
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, trackState->size[1],
-                                      &yf_emlrtBCI, (emlrtConstCTX)sp);
+                                      &ag_emlrtBCI, (emlrtConstCTX)sp);
       }
       for (b_i = 0; b_i < 6; b_i++) {
         y = 0.0;

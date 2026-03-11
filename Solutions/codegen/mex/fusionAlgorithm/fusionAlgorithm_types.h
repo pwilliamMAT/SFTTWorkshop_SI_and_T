@@ -46,24 +46,6 @@ typedef struct {
 } c_matlabshared_tracking_interna;
 #endif /* c_typedef_c_matlabshared_tracki */
 
-#ifndef typedef_objectTrack
-#define typedef_objectTrack
-typedef struct {
-  uint32_T TrackID;
-  uint32_T BranchID;
-  uint32_T SourceIndex;
-  uint32_T Age;
-  real_T ObjectClassID;
-  real_T ObjectClassProbabilities;
-  boolean_T IsConfirmed;
-  boolean_T IsCoasted;
-  boolean_T IsSelfReported;
-  real_T pState[6];
-  real_T pStateCovariance[36];
-  real_T pUpdateTime;
-} objectTrack;
-#endif /* typedef_objectTrack */
-
 #ifndef struct_emxArray_boolean_T
 #define struct_emxArray_boolean_T
 struct emxArray_boolean_T {
@@ -120,24 +102,6 @@ struct emxArray_int32_T {
 #define typedef_emxArray_int32_T
 typedef struct emxArray_int32_T emxArray_int32_T;
 #endif /* typedef_emxArray_int32_T */
-
-#ifndef typedef_b_objectTrack
-#define typedef_b_objectTrack
-typedef struct {
-  uint32_T TrackID;
-  uint32_T BranchID;
-  uint32_T SourceIndex;
-  uint32_T Age;
-  real_T ObjectClassID;
-  emxArray_real_T_1x10 ObjectClassProbabilities;
-  boolean_T IsConfirmed;
-  boolean_T IsCoasted;
-  boolean_T IsSelfReported;
-  real_T pState[6];
-  real_T pStateCovariance[36];
-  real_T pUpdateTime;
-} b_objectTrack;
-#endif /* typedef_b_objectTrack */
 
 #ifndef struct_emxArray_uint32_T
 #define struct_emxArray_uint32_T
@@ -204,95 +168,6 @@ typedef struct {
 } fuserSourceConfiguration;
 #endif /* c_typedef_fuserSourceConfigurat */
 
-#ifndef typedef_c_objectTrack
-#define typedef_c_objectTrack
-typedef struct {
-  uint32_T TrackID;
-  uint32_T BranchID;
-  uint32_T SourceIndex;
-  uint32_T Age;
-  real_T ObjectClassID;
-  real_T ObjectClassProbabilities;
-  boolean_T IsConfirmed;
-  boolean_T IsCoasted;
-  boolean_T IsSelfReported;
-  real_T pState[6];
-  real_T pStateCovariance[36];
-  real_T pUpdateTime;
-  boolean_T pTrackLogicState[3];
-} c_objectTrack;
-#endif /* typedef_c_objectTrack */
-
-#ifndef typedef_trackFuser
-#define typedef_trackFuser
-typedef struct {
-  boolean_T matlabCodegenIsDeleted;
-  int32_T isInitialized;
-  boolean_T isSetupComplete;
-  boolean_T TunablePropsChanged;
-  cell_wrap_3 inputVarSize[2];
-  real_T ProcessNoise[9];
-  c_objectTrack pTracksList[100];
-  trackHistoryLogic *pTrackLogics[100];
-  real_T pNumLiveTracks;
-  uint32_T pTrackIDs[100];
-  boolean_T pConfirmedTracks[100];
-  real_T pSourceConfigIDs[2];
-  emxArray_boolean_T *pUsedConfigIDs;
-  fuserSourceConfiguration *pSourceConfigurations[2];
-  real_T pNumUsedConfigs;
-  boolean_T pIsValidSource[2];
-  real_T pLastTimeStamp;
-  fusion_internal_Fuserxcov cFuser;
-  c_matlabshared_tracking_interna cAssigner;
-  uint32_T pLastTrackID;
-  trackHistoryLogic coder_buffer_pobj0[100];
-  fuserSourceConfiguration coder_buffer_pobj1[2];
-} trackFuser;
-#endif /* typedef_trackFuser */
-
-#ifndef typedef_struct2_T
-#define typedef_struct2_T
-typedef struct {
-  uint32_T TrackID;
-  uint32_T BranchID;
-  uint32_T SourceIndex;
-  real_T UpdateTime;
-  uint32_T Age;
-  real_T State[6];
-  real_T StateCovariance[36];
-  real_T ObjectClassID;
-  real_T ObjectClassProbabilities;
-  char_T TrackLogic[7];
-  boolean_T TrackLogicState[3];
-  boolean_T IsConfirmed;
-  boolean_T IsCoasted;
-  boolean_T IsSelfReported;
-} struct2_T;
-#endif /* typedef_struct2_T */
-
-#ifndef typedef_emxArray_struct2_T
-#define typedef_emxArray_struct2_T
-typedef struct {
-  struct2_T *data;
-  int32_T *size;
-  int32_T allocatedSize;
-  int32_T numDimensions;
-  boolean_T canFreeData;
-} emxArray_struct2_T;
-#endif /* typedef_emxArray_struct2_T */
-
-#ifndef typedef_emxArray_objectTrack
-#define typedef_emxArray_objectTrack
-typedef struct {
-  c_objectTrack *data;
-  int32_T *size;
-  int32_T allocatedSize;
-  int32_T numDimensions;
-  boolean_T canFreeData;
-} emxArray_objectTrack;
-#endif /* typedef_emxArray_objectTrack */
-
 #ifndef typedef_adsbCategory
 #define typedef_adsbCategory
 typedef uint8_T adsbCategory;
@@ -329,6 +204,54 @@ typedef struct {
 } struct1_T;
 #endif /* typedef_struct1_T */
 
+#ifndef typedef_objectTrack
+#define typedef_objectTrack
+typedef struct {
+  uint32_T TrackID;
+  uint32_T BranchID;
+  uint32_T SourceIndex;
+  uint32_T Age;
+  real_T ObjectClassID;
+  real_T ObjectClassProbabilities;
+  boolean_T IsConfirmed;
+  boolean_T IsCoasted;
+  boolean_T IsSelfReported;
+  struct1_T ObjectAttributes;
+  real_T pState[6];
+  real_T pStateCovariance[36];
+  real_T pUpdateTime;
+  emxArray_boolean_T *pTrackLogicState;
+} objectTrack;
+#endif /* typedef_objectTrack */
+
+#ifndef typedef_trackFuser
+#define typedef_trackFuser
+typedef struct {
+  boolean_T matlabCodegenIsDeleted;
+  int32_T isInitialized;
+  boolean_T isSetupComplete;
+  boolean_T TunablePropsChanged;
+  cell_wrap_3 inputVarSize[2];
+  real_T ProcessNoise[9];
+  objectTrack pTracksList[100];
+  trackHistoryLogic *pTrackLogics[100];
+  real_T pNumLiveTracks;
+  uint32_T pTrackIDs[100];
+  boolean_T pConfirmedTracks[100];
+  real_T pSourceConfigIDs[2];
+  emxArray_boolean_T *pUsedConfigIDs;
+  fuserSourceConfiguration *pSourceConfigurations[2];
+  real_T pNumUsedConfigs;
+  boolean_T pIsValidSource[2];
+  real_T pLastTimeStamp;
+  fusion_internal_Fuserxcov cFuser;
+  c_matlabshared_tracking_interna cAssigner;
+  uint32_T pLastTrackID;
+  trackHistoryLogic coder_buffer_pobj0[100];
+  fuserSourceConfiguration coder_buffer_pobj1[2];
+} trackFuser;
+#endif /* typedef_trackFuser */
+
 #ifndef typedef_struct0_T
 #define typedef_struct0_T
 typedef struct {
@@ -361,6 +284,81 @@ typedef struct {
 } emxArray_struct0_T;
 #endif /* typedef_emxArray_struct0_T */
 
+#ifndef typedef_struct2_T
+#define typedef_struct2_T
+typedef struct {
+  uint32_T TrackID;
+  uint32_T BranchID;
+  uint32_T SourceIndex;
+  real_T UpdateTime;
+  uint32_T Age;
+  real_T State[6];
+  real_T StateCovariance[36];
+  real_T ObjectClassID;
+  real_T ObjectClassProbabilities;
+  char_T TrackLogic[7];
+  emxArray_boolean_T *TrackLogicState;
+  boolean_T IsConfirmed;
+  boolean_T IsCoasted;
+  boolean_T IsSelfReported;
+  struct1_T ObjectAttributes;
+} struct2_T;
+#endif /* typedef_struct2_T */
+
+#ifndef typedef_emxArray_struct2_T
+#define typedef_emxArray_struct2_T
+typedef struct {
+  struct2_T *data;
+  int32_T *size;
+  int32_T allocatedSize;
+  int32_T numDimensions;
+  boolean_T canFreeData;
+} emxArray_struct2_T;
+#endif /* typedef_emxArray_struct2_T */
+
+#ifndef typedef_struct_T
+#define typedef_struct_T
+typedef struct {
+  uint32_T TrackID;
+  uint32_T BranchID;
+  uint32_T SourceIndex;
+  real_T UpdateTime;
+  uint32_T Age;
+  real_T State[6];
+  real_T StateCovariance[36];
+  real_T ObjectClassID;
+  real_T ObjectClassProbabilities;
+  char_T TrackLogic[7];
+  boolean_T TrackLogicState[3];
+  boolean_T IsConfirmed;
+  boolean_T IsCoasted;
+  boolean_T IsSelfReported;
+  struct1_T ObjectAttributes;
+} struct_T;
+#endif /* typedef_struct_T */
+
+#ifndef typedef_emxArray_struct_T
+#define typedef_emxArray_struct_T
+typedef struct {
+  struct_T *data;
+  int32_T *size;
+  int32_T allocatedSize;
+  int32_T numDimensions;
+  boolean_T canFreeData;
+} emxArray_struct_T;
+#endif /* typedef_emxArray_struct_T */
+
+#ifndef typedef_emxArray_objectTrack
+#define typedef_emxArray_objectTrack
+typedef struct {
+  objectTrack *data;
+  int32_T *size;
+  int32_T allocatedSize;
+  int32_T numDimensions;
+  boolean_T canFreeData;
+} emxArray_objectTrack;
+#endif /* typedef_emxArray_objectTrack */
+
 #ifndef typedef_emxArray_struct1_T
 #define typedef_emxArray_struct1_T
 typedef struct {
@@ -371,5 +369,13 @@ typedef struct {
   boolean_T canFreeData;
 } emxArray_struct1_T;
 #endif /* typedef_emxArray_struct1_T */
+
+#ifndef typedef_emxArray_struct2_T_100
+#define typedef_emxArray_struct2_T_100
+typedef struct {
+  struct2_T data[100];
+  int32_T size[1];
+} emxArray_struct2_T_100;
+#endif /* typedef_emxArray_struct2_T_100 */
 
 /* End of code generation (fusionAlgorithm_types.h) */

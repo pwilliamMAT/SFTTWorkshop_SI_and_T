@@ -15,7 +15,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo cm_emlrtRSI = {
+static emlrtRSInfo rk_emlrtRSI = {
     396,                  /* lineNo */
     "find_first_indices", /* fcnName */
     "C:\\Program "
@@ -23,7 +23,7 @@ static emlrtRSInfo cm_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRTEInfo vd_emlrtRTEI = {
+static emlrtRTEInfo ke_emlrtRTEI = {
     363,    /* lineNo */
     24,     /* colNo */
     "find", /* fName */
@@ -32,7 +32,7 @@ static emlrtRTEInfo vd_emlrtRTEI = {
                                                                        */
 };
 
-static emlrtRTEInfo wd_emlrtRTEI = {
+static emlrtRTEInfo le_emlrtRTEI = {
     138,    /* lineNo */
     9,      /* colNo */
     "find", /* fName */
@@ -62,13 +62,13 @@ void eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
   c_st.tls = b_st.tls;
   x_data = x->data;
   nx = x->size[0];
-  st.site = &am_emlrtRSI;
+  st.site = &pk_emlrtRSI;
   idx = 0;
   ii = i->size[0];
   i->size[0] = x->size[0];
-  emxEnsureCapacity_int32_T(&st, i, ii, &vd_emlrtRTEI);
+  emxEnsureCapacity_int32_T(&st, i, ii, &ke_emlrtRTEI);
   i_data = i->data;
-  b_st.site = &bm_emlrtRSI;
+  b_st.site = &qk_emlrtRSI;
   if (x->size[0] > 2147483646) {
     c_st.site = &tb_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -89,7 +89,7 @@ void eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
     }
   }
   if (idx > x->size[0]) {
-    emlrtErrorWithMessageIdR2018a(&st, &db_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &gb_emlrtRTEI,
                                   "Coder:builtins:AssertionFailed",
                                   "Coder:builtins:AssertionFailed", 0);
   }
@@ -104,11 +104,11 @@ void eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
     }
     b_iv[0] = 1;
     b_iv[1] = idx;
-    b_st.site = &cm_emlrtRSI;
+    b_st.site = &rk_emlrtRSI;
     indexShapeCheck(&b_st, i->size[0], b_iv);
     ii = i->size[0];
     i->size[0] = idx;
-    emxEnsureCapacity_int32_T(&st, i, ii, &wd_emlrtRTEI);
+    emxEnsureCapacity_int32_T(&st, i, ii, &le_emlrtRTEI);
   }
 }
 

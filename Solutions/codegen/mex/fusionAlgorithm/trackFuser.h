@@ -20,8 +20,8 @@
 /* Function Declarations */
 void trackFuser_resetImpl(const emlrtStack *sp, trackFuser *obj);
 
-int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj,
-                            const emxArray_struct0_T *localTracks,
-                            real_T tFusion, struct2_T confTracks_data[]);
+void trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj,
+                         const emxArray_struct0_T *localTracks, real_T tFusion,
+                         struct2_T confTracks_data[], int32_T *confTracks_size);
 
 /* End of code generation (trackFuser.h) */

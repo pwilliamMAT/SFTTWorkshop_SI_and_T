@@ -17,7 +17,7 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ee_emlrtRSI = {
+static emlrtRSInfo fe_emlrtRSI = {
     46,        /* lineNo */
     "xzgehrd", /* fcnName */
     "C:\\Program "
@@ -25,7 +25,7 @@ static emlrtRSInfo ee_emlrtRSI = {
     "reflapack\\xzgehrd.m" /* pathName */
 };
 
-static emlrtRSInfo fe_emlrtRSI = {
+static emlrtRSInfo ge_emlrtRSI = {
     50,        /* lineNo */
     "xzgehrd", /* fcnName */
     "C:\\Program "
@@ -33,7 +33,7 @@ static emlrtRSInfo fe_emlrtRSI = {
     "reflapack\\xzgehrd.m" /* pathName */
 };
 
-static emlrtRSInfo ge_emlrtRSI = {
+static emlrtRSInfo he_emlrtRSI = {
     58,        /* lineNo */
     "xzgehrd", /* fcnName */
     "C:\\Program "
@@ -41,7 +41,7 @@ static emlrtRSInfo ge_emlrtRSI = {
     "reflapack\\xzgehrd.m" /* pathName */
 };
 
-static emlrtRSInfo he_emlrtRSI = {
+static emlrtRSInfo ie_emlrtRSI = {
     84,       /* lineNo */
     "xzlarf", /* fcnName */
     "C:\\Program "
@@ -49,7 +49,7 @@ static emlrtRSInfo he_emlrtRSI = {
     "reflapack\\xzlarf.m" /* pathName */
 };
 
-static emlrtRSInfo ie_emlrtRSI = {
+static emlrtRSInfo je_emlrtRSI = {
     91,       /* lineNo */
     "xzlarf", /* fcnName */
     "C:\\Program "
@@ -57,7 +57,7 @@ static emlrtRSInfo ie_emlrtRSI = {
     "reflapack\\xzlarf.m" /* pathName */
 };
 
-static emlrtRSInfo ke_emlrtRSI = {
+static emlrtRSInfo le_emlrtRSI = {
     58,      /* lineNo */
     "xgemv", /* fcnName */
     "C:\\Program "
@@ -114,9 +114,9 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
     alpha1 = a[alpha1_tmp];
     c_i = b_i + 3;
     lastc = muIntScalarMin_sint32(c_i, 6) + b_i * 6;
-    st.site = &ee_emlrtRSI;
+    st.site = &fe_emlrtRSI;
     tau[b_i] = 0.0;
-    b_st.site = &kd_emlrtRSI;
+    b_st.site = &ld_emlrtRSI;
     xnorm = xnrm2(&b_st, 4 - b_i, a, lastc);
     if (xnorm != 0.0) {
       real_T beta1;
@@ -129,9 +129,9 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
         work_tmp = (lastc - b_i) + 3;
         do {
           knt++;
-          b_st.site = &ld_emlrtRSI;
-          c_st.site = &sd_emlrtRSI;
-          d_st.site = &td_emlrtRSI;
+          b_st.site = &md_emlrtRSI;
+          c_st.site = &td_emlrtRSI;
+          d_st.site = &ud_emlrtRSI;
           c_i = ((work_tmp - lastc) + 1) / 2 * 2 + lastc;
           vectorUB = c_i - 2;
           for (i = lastc; i <= vectorUB; i += 2) {
@@ -146,7 +146,7 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
           alpha1 *= 9.9792015476736E+291;
         } while ((muDoubleScalarAbs(beta1) < 1.0020841800044864E-292) &&
                  (knt < 20));
-        b_st.site = &md_emlrtRSI;
+        b_st.site = &nd_emlrtRSI;
         xnorm = xnrm2(&b_st, 4 - b_i, a, lastc);
         beta1 = muDoubleScalarHypot(alpha1, xnorm);
         if (alpha1 >= 0.0) {
@@ -154,9 +154,9 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
         }
         tau[b_i] = (beta1 - alpha1) / beta1;
         xnorm = 1.0 / (alpha1 - beta1);
-        b_st.site = &nd_emlrtRSI;
-        c_st.site = &sd_emlrtRSI;
-        d_st.site = &td_emlrtRSI;
+        b_st.site = &od_emlrtRSI;
+        c_st.site = &td_emlrtRSI;
+        d_st.site = &ud_emlrtRSI;
         c_i = ((work_tmp - lastc) + 1) / 2 * 2 + lastc;
         b_vectorUB = c_i - 2;
         for (i = lastc; i <= b_vectorUB; i += 2) {
@@ -167,7 +167,7 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
         for (i = c_i; i <= work_tmp; i++) {
           a[i - 1] *= xnorm;
         }
-        b_st.site = &od_emlrtRSI;
+        b_st.site = &pd_emlrtRSI;
         for (i = 0; i < knt; i++) {
           beta1 *= 1.0020841800044864E-292;
         }
@@ -175,10 +175,10 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
       } else {
         tau[b_i] = (beta1 - alpha1) / beta1;
         xnorm = 1.0 / (alpha1 - beta1);
-        b_st.site = &pd_emlrtRSI;
-        c_st.site = &sd_emlrtRSI;
+        b_st.site = &qd_emlrtRSI;
+        c_st.site = &td_emlrtRSI;
         c_i = (lastc - b_i) + 3;
-        d_st.site = &td_emlrtRSI;
+        d_st.site = &ud_emlrtRSI;
         vectorUB = ((c_i - lastc) + 1) / 2 * 2 + lastc;
         b_vectorUB = vectorUB - 2;
         for (i = lastc; i <= b_vectorUB; i += 2) {
@@ -194,7 +194,7 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
     }
     a[alpha1_tmp] = 1.0;
     knt = in + 1;
-    st.site = &fe_emlrtRSI;
+    st.site = &ge_emlrtRSI;
     if (tau[b_i] != 0.0) {
       boolean_T exitg2;
       lastv = 4 - b_i;
@@ -231,16 +231,16 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
       lastc = 0;
     }
     if (lastv + 1 > 0) {
-      b_st.site = &he_emlrtRSI;
-      c_st.site = &je_emlrtRSI;
+      b_st.site = &ie_emlrtRSI;
+      c_st.site = &ke_emlrtRSI;
       if (lastc != 0) {
-        d_st.site = &le_emlrtRSI;
+        d_st.site = &me_emlrtRSI;
         memset(&work[0], 0, (uint32_T)lastc * sizeof(real_T));
         c_i = alpha1_tmp;
         vectorUB = (in + 6 * lastv) + 1;
         for (i = knt; i <= vectorUB; i += 6) {
           b_vectorUB = i + lastc;
-          d_st.site = &ke_emlrtRSI;
+          d_st.site = &le_emlrtRSI;
           for (ia = i; ia < b_vectorUB; ia++) {
             work_tmp = ia - i;
             work[work_tmp] += a[ia - 1] * a[c_i];
@@ -248,20 +248,20 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
           c_i++;
         }
       }
-      b_st.site = &ie_emlrtRSI;
-      c_st.site = &me_emlrtRSI;
-      d_st.site = &ne_emlrtRSI;
-      e_st.site = &oe_emlrtRSI;
+      b_st.site = &je_emlrtRSI;
+      c_st.site = &ne_emlrtRSI;
+      d_st.site = &oe_emlrtRSI;
+      e_st.site = &pe_emlrtRSI;
       if (!(-tau[b_i] == 0.0)) {
         c_i = in;
-        f_st.site = &pe_emlrtRSI;
+        f_st.site = &qe_emlrtRSI;
         for (i = 0; i <= lastv; i++) {
           xnorm = a[alpha1_tmp + i];
           if (xnorm != 0.0) {
             xnorm *= -tau[b_i];
             vectorUB = c_i + 1;
             b_vectorUB = lastc + c_i;
-            f_st.site = &qe_emlrtRSI;
+            f_st.site = &re_emlrtRSI;
             if ((c_i + 1 <= b_vectorUB) && (b_vectorUB > 2147483646)) {
               g_st.site = &tb_emlrtRSI;
               check_forloop_overflow_error(&g_st);
@@ -284,7 +284,7 @@ void xzgehrd(const emlrtStack *sp, real_T a[36], real_T tau[5])
         }
       }
     }
-    st.site = &ge_emlrtRSI;
+    st.site = &he_emlrtRSI;
     xzlarf(&st, 5 - b_i, 5 - b_i, alpha1_tmp + 1, tau[b_i], a, (b_i + in) + 2,
            work);
     a[alpha1_tmp] = alpha1;

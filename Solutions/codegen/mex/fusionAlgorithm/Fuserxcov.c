@@ -24,7 +24,7 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo tr_emlrtRSI = {
+static emlrtRSInfo kq_emlrtRSI = {
     25,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -32,7 +32,7 @@ static emlrtRSInfo tr_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo ur_emlrtRSI = {
+static emlrtRSInfo lq_emlrtRSI = {
     26,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -40,7 +40,7 @@ static emlrtRSInfo ur_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo vr_emlrtRSI = {
+static emlrtRSInfo mq_emlrtRSI = {
     33,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -48,7 +48,7 @@ static emlrtRSInfo vr_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo wr_emlrtRSI = {
+static emlrtRSInfo nq_emlrtRSI = {
     36,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -56,7 +56,7 @@ static emlrtRSInfo wr_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo xr_emlrtRSI = {
+static emlrtRSInfo oq_emlrtRSI = {
     37,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -64,7 +64,7 @@ static emlrtRSInfo xr_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo yr_emlrtRSI = {
+static emlrtRSInfo pq_emlrtRSI = {
     39,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -72,7 +72,7 @@ static emlrtRSInfo yr_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo as_emlrtRSI = {
+static emlrtRSInfo qq_emlrtRSI = {
     40,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -80,7 +80,7 @@ static emlrtRSInfo as_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo bs_emlrtRSI = {
+static emlrtRSInfo rq_emlrtRSI = {
     48,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -88,7 +88,7 @@ static emlrtRSInfo bs_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo cs_emlrtRSI = {
+static emlrtRSInfo sq_emlrtRSI = {
     55,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -96,7 +96,7 @@ static emlrtRSInfo cs_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo ds_emlrtRSI = {
+static emlrtRSInfo tq_emlrtRSI = {
     56,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -104,7 +104,7 @@ static emlrtRSInfo ds_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo es_emlrtRSI = {
+static emlrtRSInfo uq_emlrtRSI = {
     57,               /* lineNo */
     "Fuserxcov/fuse", /* fcnName */
     "C:\\Program "
@@ -112,7 +112,7 @@ static emlrtRSInfo es_emlrtRSI = {
     "internal\\Fuserxcov.m" /* pathName */
 };
 
-static emlrtRSInfo fs_emlrtRSI = {
+static emlrtRSInfo vq_emlrtRSI = {
     39,                                         /* lineNo */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fcnName */
     "C:\\Program "
@@ -120,7 +120,7 @@ static emlrtRSInfo fs_emlrtRSI = {
     "internal\\AbstractFusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo gs_emlrtRSI = {
+static emlrtRSInfo wq_emlrtRSI = {
     44,                                         /* lineNo */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fcnName */
     "C:\\Program "
@@ -128,7 +128,7 @@ static emlrtRSInfo gs_emlrtRSI = {
     "internal\\AbstractFusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo hs_emlrtRSI = {
+static emlrtRSInfo xq_emlrtRSI = {
     45,                                         /* lineNo */
     "AbstractFusionAlgorithm/sortTracksByTime", /* fcnName */
     "C:\\Program "
@@ -136,7 +136,7 @@ static emlrtRSInfo hs_emlrtRSI = {
     "internal\\AbstractFusionAlgorithm.m" /* pathName */
 };
 
-static emlrtRSInfo is_emlrtRSI = {
+static emlrtRSInfo yq_emlrtRSI = {
     37,     /* lineNo */
     "sort", /* fcnName */
     "C:\\Program "
@@ -326,7 +326,7 @@ static emlrtBCInfo qj_emlrtBCI = {
     0                        /* checkKind */
 };
 
-static emlrtRTEInfo sg_emlrtRTEI = {
+static emlrtRTEInfo ji_emlrtRTEI = {
     39,     /* lineNo */
     5,      /* colNo */
     "find", /* fName */
@@ -335,7 +335,7 @@ static emlrtRTEInfo sg_emlrtRTEI = {
                                                                        */
 };
 
-static emlrtRTEInfo ai_emlrtRTEI = {
+static emlrtRTEInfo yj_emlrtRTEI = {
     39,                        /* lineNo */
     17,                        /* colNo */
     "AbstractFusionAlgorithm", /* fName */
@@ -344,7 +344,7 @@ static emlrtRTEInfo ai_emlrtRTEI = {
     "internal\\AbstractFusionAlgorithm.m" /* pName */
 };
 
-static emlrtRTEInfo bi_emlrtRTEI = {
+static emlrtRTEInfo ak_emlrtRTEI = {
     38,     /* lineNo */
     5,      /* colNo */
     "sort", /* fName */
@@ -353,7 +353,7 @@ static emlrtRTEInfo bi_emlrtRTEI = {
                                                                          */
 };
 
-static emlrtRTEInfo ci_emlrtRTEI = {
+static emlrtRTEInfo bk_emlrtRTEI = {
     36,          /* lineNo */
     41,          /* colNo */
     "Fuserxcov", /* fName */
@@ -362,7 +362,7 @@ static emlrtRTEInfo ci_emlrtRTEI = {
     "internal\\Fuserxcov.m" /* pName */
 };
 
-static emlrtRTEInfo di_emlrtRTEI = {
+static emlrtRTEInfo ck_emlrtRTEI = {
     358,    /* lineNo */
     24,     /* colNo */
     "find", /* fName */
@@ -371,7 +371,7 @@ static emlrtRTEInfo di_emlrtRTEI = {
                                                                        */
 };
 
-static emlrtRTEInfo ei_emlrtRTEI = {
+static emlrtRTEInfo dk_emlrtRTEI = {
     36,          /* lineNo */
     17,          /* colNo */
     "Fuserxcov", /* fName */
@@ -380,7 +380,7 @@ static emlrtRTEInfo ei_emlrtRTEI = {
     "internal\\Fuserxcov.m" /* pName */
 };
 
-static emlrtRTEInfo fi_emlrtRTEI = {
+static emlrtRTEInfo ek_emlrtRTEI = {
     26,          /* lineNo */
     13,          /* colNo */
     "Fuserxcov", /* fName */
@@ -389,7 +389,7 @@ static emlrtRTEInfo fi_emlrtRTEI = {
     "internal\\Fuserxcov.m" /* pName */
 };
 
-static emlrtRTEInfo gi_emlrtRTEI = {
+static emlrtRTEInfo fk_emlrtRTEI = {
     39,          /* lineNo */
     17,          /* colNo */
     "Fuserxcov", /* fName */
@@ -398,7 +398,7 @@ static emlrtRTEInfo gi_emlrtRTEI = {
     "internal\\Fuserxcov.m" /* pName */
 };
 
-static emlrtRTEInfo hi_emlrtRTEI = {
+static emlrtRTEInfo gk_emlrtRTEI = {
     40,          /* lineNo */
     17,          /* colNo */
     "Fuserxcov", /* fName */
@@ -407,7 +407,7 @@ static emlrtRTEInfo hi_emlrtRTEI = {
     "internal\\Fuserxcov.m" /* pName */
 };
 
-static emlrtRTEInfo ii_emlrtRTEI = {
+static emlrtRTEInfo hk_emlrtRTEI = {
     36,                        /* lineNo */
     17,                        /* colNo */
     "AbstractFusionAlgorithm", /* fName */
@@ -416,7 +416,7 @@ static emlrtRTEInfo ii_emlrtRTEI = {
     "internal\\AbstractFusionAlgorithm.m" /* pName */
 };
 
-static emlrtRTEInfo ji_emlrtRTEI = {
+static emlrtRTEInfo ik_emlrtRTEI = {
     20,          /* lineNo */
     31,          /* colNo */
     "Fuserxcov", /* fName */
@@ -427,11 +427,10 @@ static emlrtRTEInfo ji_emlrtRTEI = {
 
 /* Function Definitions */
 void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
-                    c_objectTrack *centralTrack,
+                    objectTrack *centralTrack,
                     const emxArray_objectTrack *sourceTracks,
                     const emxArray_real_T *inAssigned)
 {
-  const c_objectTrack *sourceTracks_data;
   emlrtStack b_st;
   emlrtStack c_st;
   emlrtStack d_st;
@@ -445,6 +444,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
   emxArray_real_T *allTimes;
   emxArray_real_T *uniqueTimes;
   emxArray_uint32_T *tracksAtThisTime;
+  const objectTrack *sourceTracks_data;
   real_T varargin_1[2];
   const real_T *inAssigned_data;
   real_T trackTime;
@@ -481,7 +481,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
   inAssigned_data = inAssigned->data;
   sourceTracks_data = sourceTracks->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &tr_emlrtRSI;
+  st.site = &kq_emlrtRSI;
   loop_ub = inAssigned->size[0];
   if (inAssigned->size[0] < 1) {
     emlrtDynamicBoundsCheckR2012b(1, 1, inAssigned->size[0], &fj_emlrtBCI, &st);
@@ -493,13 +493,13 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     emlrtDynamicBoundsCheckR2012b((int32_T)inAssigned_data[0] - 1, 0,
                                   sourceTracks->size[1] - 1, &ej_emlrtBCI, &st);
   }
-  b_st.site = &fs_emlrtRSI;
-  c_st.site = &jk_emlrtRSI;
-  emxInit_real_T(&b_st, &allTimes, 2, &ii_emlrtRTEI);
+  b_st.site = &vq_emlrtRSI;
+  c_st.site = &cj_emlrtRSI;
+  emxInit_real_T(&b_st, &allTimes, 2, &hk_emlrtRTEI);
   ibtile = allTimes->size[0] * allTimes->size[1];
   allTimes->size[0] = 1;
   allTimes->size[1] = inAssigned->size[0];
-  emxEnsureCapacity_real_T(&b_st, allTimes, ibtile, &ai_emlrtRTEI);
+  emxEnsureCapacity_real_T(&b_st, allTimes, ibtile, &yj_emlrtRTEI);
   allTimes_data = allTimes->data;
   for (b_i = 0; b_i < loop_ub; b_i++) {
     allTimes_data[b_i] = sourceTracks_data[idx].pUpdateTime;
@@ -519,23 +519,23 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     allTimes_data[b_i + 1] =
         sourceTracks_data[(int32_T)inAssigned_data[b_i + 1] - 1].pUpdateTime;
   }
-  b_st.site = &gs_emlrtRSI;
-  emxInit_int32_T(&b_st, &ii, 2, &sd_emlrtRTEI);
-  c_st.site = &is_emlrtRSI;
+  b_st.site = &wq_emlrtRSI;
+  emxInit_int32_T(&b_st, &ii, 2, &he_emlrtRTEI);
+  c_st.site = &yq_emlrtRSI;
   b_sort(&c_st, allTimes, ii);
   ii_data = ii->data;
   allTimes_data = allTimes->data;
-  emxInit_int32_T(&b_st, &b_I, 2, &ji_emlrtRTEI);
+  emxInit_int32_T(&b_st, &b_I, 2, &ik_emlrtRTEI);
   ibtile = b_I->size[0] * b_I->size[1];
   b_I->size[0] = 1;
   idx = ii->size[1];
   b_I->size[1] = ii->size[1];
-  emxEnsureCapacity_int32_T(&b_st, b_I, ibtile, &bi_emlrtRTEI);
+  emxEnsureCapacity_int32_T(&b_st, b_I, ibtile, &ak_emlrtRTEI);
   I_data = b_I->data;
   for (b_i = 0; b_i < idx; b_i++) {
     I_data[b_i] = ii_data[b_i];
   }
-  b_st.site = &hs_emlrtRSI;
+  b_st.site = &xq_emlrtRSI;
   indexShapeCheck(&b_st, inAssigned->size[0], b_I->size);
   for (b_i = 0; b_i < idx; b_i++) {
     ibtile = I_data[b_i];
@@ -543,8 +543,8 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
       emlrtDynamicBoundsCheckR2012b(ibtile, 1, loop_ub, &nj_emlrtBCI, &st);
     }
   }
-  st.site = &ur_emlrtRSI;
-  emxInit_real_T(&st, &uniqueTimes, 2, &fi_emlrtRTEI);
+  st.site = &lq_emlrtRSI;
+  emxInit_real_T(&st, &uniqueTimes, 2, &ek_emlrtRTEI);
   b_st.site = &ib_emlrtRSI;
   unique_vector(&b_st, allTimes, uniqueTimes);
   uniqueTimes_data = uniqueTimes->data;
@@ -557,10 +557,10 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     b_varargin_1[0] = 1U;
     b_varargin_1[1] = 1U;
   }
-  emxInit_uint32_T(sp, &tracksAtThisTime, 2, &ei_emlrtRTEI);
-  emxInit_real_T(sp, &allStates, 2, &gi_emlrtRTEI);
-  emxInit_real_T(sp, &allCovars, 3, &hi_emlrtRTEI);
-  emxInit_boolean_T(sp, &x, 2, &ci_emlrtRTEI, true);
+  emxInit_uint32_T(sp, &tracksAtThisTime, 2, &dk_emlrtRTEI);
+  emxInit_real_T(sp, &allStates, 2, &fk_emlrtRTEI);
+  emxInit_real_T(sp, &allCovars, 3, &gk_emlrtRTEI);
+  emxInit_boolean_T(sp, &x, 2, &bk_emlrtRTEI, true);
   for (j = 0; j < i1; j++) {
     real_T b_x[6];
     int32_T c_loop_ub;
@@ -570,30 +570,30 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
       emlrtDynamicBoundsCheckR2012b(j + 1, 1, i1, &ij_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
-    st.site = &vr_emlrtRSI;
+    st.site = &mq_emlrtRSI;
     b_gaussEKFilter_predict(&st, centralTrack->pState,
                             centralTrack->pStateCovariance, obj->ProcessNoise,
                             uniqueTimes_data[j] - trackTime, b_x);
-    st.site = &wr_emlrtRSI;
+    st.site = &nq_emlrtRSI;
     ibtile = x->size[0] * x->size[1];
     x->size[0] = 1;
     loop_ub = allTimes->size[1];
     x->size[1] = allTimes->size[1];
-    emxEnsureCapacity_boolean_T(&st, x, ibtile, &ci_emlrtRTEI);
+    emxEnsureCapacity_boolean_T(&st, x, ibtile, &bk_emlrtRTEI);
     x_data = x->data;
     trackTime = uniqueTimes_data[j];
     for (b_i = 0; b_i < b_loop_ub; b_i++) {
       x_data[b_i] = (trackTime == allTimes_data[b_i]);
     }
-    b_st.site = &yl_emlrtRSI;
-    c_st.site = &am_emlrtRSI;
+    b_st.site = &ok_emlrtRSI;
+    c_st.site = &pk_emlrtRSI;
     idx = 0;
     ibtile = ii->size[0] * ii->size[1];
     ii->size[0] = 1;
     ii->size[1] = allTimes->size[1];
-    emxEnsureCapacity_int32_T(&c_st, ii, ibtile, &di_emlrtRTEI);
+    emxEnsureCapacity_int32_T(&c_st, ii, ibtile, &ck_emlrtRTEI);
     ii_data = ii->data;
-    d_st.site = &bm_emlrtRSI;
+    d_st.site = &qk_emlrtRSI;
     if (x->size[1] > 2147483646) {
       e_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -614,7 +614,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
       }
     }
     if (idx > x->size[1]) {
-      emlrtErrorWithMessageIdR2018a(&c_st, &db_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&c_st, &gb_emlrtRTEI,
                                     "Coder:builtins:AssertionFailed",
                                     "Coder:builtins:AssertionFailed", 0);
     }
@@ -630,19 +630,19 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
       } else {
         ii->size[1] = idx;
       }
-      emxEnsureCapacity_int32_T(&c_st, ii, ibtile, &sg_emlrtRTEI);
+      emxEnsureCapacity_int32_T(&c_st, ii, ibtile, &ji_emlrtRTEI);
       ii_data = ii->data;
     }
     ibtile = tracksAtThisTime->size[0] * tracksAtThisTime->size[1];
     tracksAtThisTime->size[0] = 1;
     c_loop_ub = ii->size[1];
     tracksAtThisTime->size[1] = ii->size[1];
-    emxEnsureCapacity_uint32_T(&st, tracksAtThisTime, ibtile, &ei_emlrtRTEI);
+    emxEnsureCapacity_uint32_T(&st, tracksAtThisTime, ibtile, &dk_emlrtRTEI);
     tracksAtThisTime_data = tracksAtThisTime->data;
     for (b_i = 0; b_i < c_loop_ub; b_i++) {
       tracksAtThisTime_data[b_i] = (uint32_T)ii_data[b_i];
     }
-    st.site = &xr_emlrtRSI;
+    st.site = &oq_emlrtRSI;
     indexShapeCheck(&st, b_I->size[1], tracksAtThisTime->size);
     for (b_i = 0; b_i < c_loop_ub; b_i++) {
       idx = (int32_T)tracksAtThisTime_data[b_i];
@@ -651,17 +651,17 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
                                       (emlrtConstCTX)sp);
       }
     }
-    st.site = &yr_emlrtRSI;
+    st.site = &pq_emlrtRSI;
     varargin_1[1] = (real_T)tracksAtThisTime->size[1] + 1.0;
-    b_st.site = &jk_emlrtRSI;
+    b_st.site = &cj_emlrtRSI;
     assertValidSizeArg(&b_st, varargin_1);
     idx = allStates->size[0] * allStates->size[1];
     allStates->size[0] = 6;
     i2 = tracksAtThisTime->size[1] + 1;
     allStates->size[1] = tracksAtThisTime->size[1] + 1;
-    emxEnsureCapacity_real_T(&st, allStates, idx, &bh_emlrtRTEI);
+    emxEnsureCapacity_real_T(&st, allStates, idx, &aj_emlrtRTEI);
     allStates_data = allStates->data;
-    b_st.site = &mk_emlrtRSI;
+    b_st.site = &fj_emlrtRSI;
     if (tracksAtThisTime->size[1] + 1 > 2147483646) {
       c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -672,15 +672,15 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
         allStates_data[ibtile + k] = b_x[k];
       }
     }
-    st.site = &as_emlrtRSI;
+    st.site = &qq_emlrtRSI;
     b_varargin_1[2] = (uint32_T)tracksAtThisTime->size[1] + 1U;
-    b_st.site = &jk_emlrtRSI;
+    b_st.site = &cj_emlrtRSI;
     idx = 0;
     exitg1 = false;
     while ((!exitg1) && (idx < 3)) {
       if (b_varargin_1[idx] > 2147483647U) {
         emlrtErrorWithMessageIdR2018a(
-            &b_st, &y_emlrtRTEI,
+            &b_st, &cb_emlrtRTEI,
             "Coder:toolbox:eml_assert_valid_size_arg_invalidSizeVector",
             "Coder:toolbox:eml_assert_valid_size_arg_invalidSizeVector", 4, 12,
             MIN_int32_T, 12, MAX_int32_T);
@@ -689,7 +689,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
       }
     }
     if ((uint32_T)tracksAtThisTime->size[1] + 1U > 2147483647U) {
-      emlrtErrorWithMessageIdR2018a(&b_st, &ab_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&b_st, &db_emlrtRTEI,
                                     "Coder:MATLAB:pmaxsize",
                                     "Coder:MATLAB:pmaxsize", 0);
     }
@@ -698,9 +698,9 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
     allCovars->size[1] = 6;
     loop_ub = (int32_T)((uint32_T)tracksAtThisTime->size[1] + 1U);
     allCovars->size[2] = (int32_T)((uint32_T)tracksAtThisTime->size[1] + 1U);
-    emxEnsureCapacity_real_T(&st, allCovars, ibtile, &bh_emlrtRTEI);
+    emxEnsureCapacity_real_T(&st, allCovars, ibtile, &aj_emlrtRTEI);
     allCovars_data = allCovars->data;
-    b_st.site = &mk_emlrtRSI;
+    b_st.site = &fj_emlrtRSI;
     if ((int32_T)((uint32_T)tracksAtThisTime->size[1] + 1U) > 2147483646) {
       c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -762,7 +762,7 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
         }
       }
     }
-    st.site = &bs_emlrtRSI;
+    st.site = &rq_emlrtRSI;
     fusecovint(&st, allStates, allCovars, obj->StateFusionParameters,
                centralTrack->pState, centralTrack->pStateCovariance);
     trackTime = uniqueTimes_data[j];
@@ -775,18 +775,18 @@ void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
   emxFree_real_T(sp, &allStates);
   emxFree_uint32_T(sp, &tracksAtThisTime);
   emxFree_real_T(sp, &uniqueTimes);
-  st.site = &cs_emlrtRSI;
-  b_st.site = &rc_emlrtRSI;
-  validateattributes(&b_st, centralTrack->pState);
-  st.site = &ds_emlrtRSI;
-  b_st.site = &ds_emlrtRSI;
-  ensurePosDefMatrix(&b_st, centralTrack->pStateCovariance);
+  st.site = &sq_emlrtRSI;
   b_st.site = &sc_emlrtRSI;
-  b_validateattributes(&b_st, centralTrack->pStateCovariance);
+  validateattributes(&b_st, centralTrack->pState);
+  st.site = &tq_emlrtRSI;
+  b_st.site = &tq_emlrtRSI;
+  ensurePosDefMatrix(&b_st, centralTrack->pStateCovariance);
   b_st.site = &tc_emlrtRSI;
+  b_validateattributes(&b_st, centralTrack->pStateCovariance);
+  b_st.site = &uc_emlrtRSI;
   isSymmetricPositiveSemiDefinite(&b_st, centralTrack->pStateCovariance);
-  st.site = &es_emlrtRSI;
-  b_st.site = &qc_emlrtRSI;
+  st.site = &uq_emlrtRSI;
+  b_st.site = &rc_emlrtRSI;
   c_st.site = &gb_emlrtRSI;
   if (trackTime < 0.0) {
     emlrtErrorWithMessageIdR2018a(

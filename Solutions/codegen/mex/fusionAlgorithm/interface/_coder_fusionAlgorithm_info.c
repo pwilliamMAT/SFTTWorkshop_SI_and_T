@@ -18,23 +18,23 @@ static const mxArray *c_emlrtMexFcnResolvedFunctionsI(void)
 {
   const mxArray *nameCaptureInfo;
   const char_T *data[6] = {
-      "789cdd55416fd3301476d0404888d113e71d7665420826c18991d251605b45b382544fc5"
-      "71bcc6ab1d47b6b37513072e9c11ff8023127f80bfc01f800b077e01"
-      "670e1c5892ba6d2c45191bcaa4bd435ebe7ccfef7b7e499e81d3de7000008b20b72fd772"
-      "7f7d821b137f0914cde61d2bce298683cb60a1b0cef0ef271e8b4893",
-      "b1ce41843899ae0c04a7118ab47718132089126c9f0419b34b19f12827dd79b09922de9a"
-      "a3a620a5d27b372478d44d3890a19a55c8e6c1b41faf4bf6bb50d10f"
-      "dbec7ed871462f3ea59ec97fa342cff0bb89a2225a634321a90ef999f76bf4ae94eae78c"
-      "d232c17ab6df9f67d47b53aa57e4fb8f77dc07705b11a9607c4019a3",
-      "88c3ad883425dd274bb79636900e5f0a3952b02970c249a415ecb63c2fbb644428e20e92"
-      "fa4ee1c9a0db1ea028181cc70996e8e3962a68b57685a7fa55fd35ef"
-      "a56abfb69fc55fcdfcafcf3f9c3af5c61ffe7cad53cfd879e98d4bf29df47bbd59a2d7b0"
-      "f8d5a3e68b839e7f74fb59a25675fce4fe70cd5d6fcdeae854e854d5",
-      "014a705df93f96ac3f691f1f96e46f587cbfedee2c73a419f2a5107a196a21982fc65085"
-      "4892006a89f08846c3c95fcba80f85bf47b0f6526285ffafb9bc6861"
-      "bb5ec367f53c17438ab3f3eedccea14fa7d433f9dd0a3dc3f7db9bfffa7e8a2dcac76b6d"
-      "f360effbb75ae7ebdbcebbdf75ea19bbe8f33510db5b777dce3af85e",
-      "2f78f494e1c357bd8b305fff02be6dc3f9",
+      "789cdd55cf6fd3301476d0404813a327ce3becba49a021214e40b74e9dd856a9e936a99e"
+      "8ae3b88d57ffa86c6774d30e5c38f32f70e4c695bf048404127f0407"
+      "8e2c49dd3696a28c0d65d2de212f5fbee7f73dbf24cfc06bee7800802590d997c5cc3f98"
+      "e0dac4df01797379cf89f3f2e1e02e58c8adb3fc8789c75218323619",
+      "108893e9ca50722a9030fee9880045b46427244c993e65c4a79cb4e7c16e8278638e9a82"
+      "844aeeeb11c1c376cc818af4ac42360fa6fd7853b0df85927eb8e6f6"
+      "c38db37aa32bead9fc0f4bf42cdf8f3595e2251b48454dc4afbd5fab77af503f63b45131"
+      "36b3fdfebaa6de79a15e9eef6e1ed59fc38e264ac3d15bca18451cee",
+      "09b2a1e809595e5dde41263a906aa8e186c43127c268d86ef87e7a4989488e5a489927b9"
+      "27bd76b38744d8bb88932c36172dd5d069ed1a4ff4cbfa6bdf4bd97e"
+      "5d3f8bbf9ffa9f9f7f7855ea7df77f6f55a967eda6f4c605f92efbbd3e2ad0ab393cc307"
+      "6af3acb34ecec8e36df22c3eecf3816accea6895e894d5010a7055f9",
+      "3f16acbf6c1f5f14e4af397cb7593f5ae1c830142829cd0a3452b2408ea18e902221340a"
+      "e1211583c95fcb680065704cb0f113628dffafb9bce460b75ecba7f5"
+      "bc96038ad3f3eec6cea14f57d4b3f9eb257a96ef3677fff5fde45b948dd7cae6c1f1b7af"
+      "95ced777adf77faad4b376dbe76b283b7beb01672dfc743f7cb5cdf0",
+      "e9e1fed62d98af7f01f0f1c41c",
       ""};
   nameCaptureInfo = NULL;
   emlrtNameCaptureMxArrayR2016a(&data[0], 3024U, &nameCaptureInfo);
@@ -88,7 +88,7 @@ mxArray *emlrtMexFcnProperties(void)
                           "orkshop_SI_and_T\\Solutions\\fusionAlgorithm"
                           ".m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(740045.45253472216));
+                emlrtMxCreateDoubleScalar(740050.4975));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));
   xResult =
       emlrtCreateStructMatrix(1, 1, 7, (const char_T **)&propFieldName[0]);
@@ -97,7 +97,7 @@ mxArray *emlrtMexFcnProperties(void)
   emlrtSetField(xResult, 0, "ResolvedFunctions",
                 (mxArray *)c_emlrtMexFcnResolvedFunctionsI());
   emlrtSetField(xResult, 0, "Checksum",
-                emlrtMxCreateString("ybbBS7UvMIZk3BWuAwE0oG"));
+                emlrtMxCreateString("v6lIvUuhEUhhPulJTgT1ZG"));
   emlrtSetField(xResult, 0, "EntryPoints", xEntryPoints);
   emlrtSetField(xResult, 0, "AuxData",
                 emlrtMxCreateRowVectorUINT8((const uint8_T *)&v, 216U));

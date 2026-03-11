@@ -10,15 +10,15 @@ if isempty(fuser)
     % MUST match main script configuration: Radar updates, ADSB initializes
     radarCfg = fuserSourceConfiguration( ...
         'SourceIndex',1, ...
-        'IsInitializingCentralTracks',false, ...
-        'CentralToLocalTransformFcn', @central2local, ...
-        'LocalToCentralTransformFcn', @local2central);
+        'IsInitializingCentralTracks',false);%, ...
+        %'CentralToLocalTransformFcn', @(x) x, ... 
+        %'LocalToCentralTransformFcn', @(x) x); 
 
     adsbCfg  = fuserSourceConfiguration( ...
         'SourceIndex',2, ...
-        'IsInitializingCentralTracks',true, ...
-        'CentralToLocalTransformFcn', @central2local, ...
-        'LocalToCentralTransformFcn', @local2central);
+        'IsInitializingCentralTracks',true);%, ...
+        %'CentralToLocalTransformFcn', @(x) x, ... 
+        %'LocalToCentralTransformFcn', @(x) x); 
 
 
     % Name-value pairs are literals (compile-time constants) when written like this
@@ -50,10 +50,11 @@ centralTrack = objectTrack('State',state,'StateCovariance',stateCov,'TrackLogic'
 
 srcIdx = localTrack.SourceIndex;
 if srcIdx == 1 % Radar
-    centralTrack = Ned2ecefTrack(localTrack);
-elseif srcIdx == 2 % ADSB
-    %centralTrack = Ecef2nedTrack(localTrack); % DEBUG: This should be no transform
+    %centralTrack = Ned2ecefTrack(localTrack); % DEBUG: This should be no
+    %transform (radar stays in NED)
     centralTrack = localTrack;
+elseif srcIdx == 2 % ADSB
+    centralTrack = Ecef2nedTrack(localTrack); 
 end
 end
 
@@ -65,10 +66,11 @@ localTrack = objectTrack('State',state,'StateCovariance',stateCov,'TrackLogic','
 
 srcIdx = centralTrack.SourceIndex;
 if srcIdx == 1 % Radar
-    localTrack = Ecef2nedTrack(centralTrack);
+    %localTrack = Ecef2nedTrack(centralTrack); % DEBUG: This should be no
+    %transform (radar stays in NED)
+    localTracks = centralTrack;
 elseif srcIdx == 2 % ADSB
-    %localTrack = Ned2ecefTrack(centralTrack); % This should be no transform
-    localTrack = centralTrack;
+    localTrack = Ned2ecefTrack(centralTrack);
 end
 end
 

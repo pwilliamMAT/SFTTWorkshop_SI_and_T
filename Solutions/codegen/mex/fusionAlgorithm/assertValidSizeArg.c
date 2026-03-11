@@ -24,7 +24,7 @@ void assertValidSizeArg(const emlrtStack *sp, const real_T varargin_1[2])
       if ((varargin_1[k] != varargin_1[k]) ||
           muDoubleScalarIsInf(varargin_1[k])) {
         emlrtErrorWithMessageIdR2018a(
-            sp, &y_emlrtRTEI,
+            sp, &cb_emlrtRTEI,
             "Coder:toolbox:eml_assert_valid_size_arg_invalidSizeVector",
             "Coder:toolbox:eml_assert_valid_size_arg_invalidSizeVector", 4, 12,
             MIN_int32_T, 12, MAX_int32_T);
@@ -42,7 +42,7 @@ void assertValidSizeArg(const emlrtStack *sp, const real_T varargin_1[2])
     while ((!exitg1) && (k < 2)) {
       if (varargin_1[k] > 2.147483647E+9) {
         emlrtErrorWithMessageIdR2018a(
-            sp, &y_emlrtRTEI,
+            sp, &cb_emlrtRTEI,
             "Coder:toolbox:eml_assert_valid_size_arg_invalidSizeVector",
             "Coder:toolbox:eml_assert_valid_size_arg_invalidSizeVector", 4, 12,
             MIN_int32_T, 12, MAX_int32_T);
@@ -62,7 +62,7 @@ void assertValidSizeArg(const emlrtStack *sp, const real_T varargin_1[2])
     d *= varargin_1[1];
   }
   if (!(d <= 2.147483647E+9)) {
-    emlrtErrorWithMessageIdR2018a(sp, &ab_emlrtRTEI, "Coder:MATLAB:pmaxsize",
+    emlrtErrorWithMessageIdR2018a(sp, &db_emlrtRTEI, "Coder:MATLAB:pmaxsize",
                                   "Coder:MATLAB:pmaxsize", 0);
   }
 }

@@ -20,7 +20,7 @@ emlrtContext emlrtContextGlobal = {
     "fusionAlgorithm",                                    /* fFunctionName */
     NULL,                                                 /* fRTCallStack */
     false,                                                /* bDebugMode */
-    {3264196028U, 2617517587U, 3094936123U, 1834023453U}, /* fSigWrd */
+    {4273687613U, 2092124783U, 1785127431U, 4270424318U}, /* fSigWrd */
     NULL                                                  /* fSigMem */
 };
 
@@ -88,7 +88,52 @@ emlrtRSInfo vb_emlrtRSI = {
     "coder\\SystemCore.p" /* pathName */
 };
 
-emlrtRSInfo qc_emlrtRSI =
+emlrtRSInfo ic_emlrtRSI =
+    {
+        255,                       /* lineNo */
+        "objectTrack/objectTrack", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
+        "ck.m" /* pathName */
+};
+
+emlrtRSInfo jc_emlrtRSI =
+    {
+        485,                         /* lineNo */
+        "objectTrack/setProperties", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
+        "ck.m" /* pathName */
+};
+
+emlrtRSInfo kc_emlrtRSI =
+    {
+        487,                         /* lineNo */
+        "objectTrack/setProperties", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
+        "ck.m" /* pathName */
+};
+
+emlrtRSInfo lc_emlrtRSI =
+    {
+        488,                         /* lineNo */
+        "objectTrack/setProperties", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
+        "ck.m" /* pathName */
+};
+
+emlrtRSInfo nc_emlrtRSI =
+    {
+        493,                         /* lineNo */
+        "objectTrack/setProperties", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
+        "ck.m" /* pathName */
+};
+
+emlrtRSInfo rc_emlrtRSI =
     {
         277,                          /* lineNo */
         "objectTrack/set.UpdateTime", /* fcnName */
@@ -97,7 +142,7 @@ emlrtRSInfo qc_emlrtRSI =
         "ck.m" /* pathName */
 };
 
-emlrtRSInfo rc_emlrtRSI =
+emlrtRSInfo sc_emlrtRSI =
     {
         287,                     /* lineNo */
         "objectTrack/set.State", /* fcnName */
@@ -106,7 +151,7 @@ emlrtRSInfo rc_emlrtRSI =
         "ck.m" /* pathName */
 };
 
-emlrtRSInfo sc_emlrtRSI =
+emlrtRSInfo tc_emlrtRSI =
     {
         293,                               /* lineNo */
         "objectTrack/set.StateCovariance", /* fcnName */
@@ -115,7 +160,7 @@ emlrtRSInfo sc_emlrtRSI =
         "ck.m" /* pathName */
 };
 
-emlrtRSInfo tc_emlrtRSI =
+emlrtRSInfo uc_emlrtRSI =
     {
         295,                               /* lineNo */
         "objectTrack/set.StateCovariance", /* fcnName */
@@ -124,7 +169,7 @@ emlrtRSInfo tc_emlrtRSI =
         "ck.m" /* pathName */
 };
 
-emlrtRSInfo uc_emlrtRSI = {
+emlrtRSInfo vc_emlrtRSI = {
     18,                                /* lineNo */
     "isSymmetricPositiveSemiDefinite", /* fcnName */
     "C:\\Program "
@@ -133,7 +178,7 @@ emlrtRSInfo uc_emlrtRSI = {
     "iveSemiDefinite.m" /* pathName */
 };
 
-emlrtRSInfo vc_emlrtRSI = {
+emlrtRSInfo wc_emlrtRSI = {
     20,                                /* lineNo */
     "isSymmetricPositiveSemiDefinite", /* fcnName */
     "C:\\Program "
@@ -142,7 +187,7 @@ emlrtRSInfo vc_emlrtRSI = {
     "iveSemiDefinite.m" /* pathName */
 };
 
-emlrtRSInfo xc_emlrtRSI =
+emlrtRSInfo yc_emlrtRSI =
     {
         143,        /* lineNo */
         "allOrAny", /* fcnName */
@@ -151,7 +196,7 @@ emlrtRSInfo xc_emlrtRSI =
         "m" /* pathName */
 };
 
-emlrtRSInfo yc_emlrtRSI = {
+emlrtRSInfo ad_emlrtRSI = {
     81,    /* lineNo */
     "eig", /* fcnName */
     "C:\\Program "
@@ -159,7 +204,7 @@ emlrtRSInfo yc_emlrtRSI = {
                                                                        */
 };
 
-emlrtRSInfo dd_emlrtRSI = {
+emlrtRSInfo ed_emlrtRSI = {
     29,             /* lineNo */
     "anyNonFinite", /* fcnName */
     "C:\\Program "
@@ -167,7 +212,7 @@ emlrtRSInfo dd_emlrtRSI = {
     "m" /* pathName */
 };
 
-emlrtRSInfo ed_emlrtRSI =
+emlrtRSInfo fd_emlrtRSI =
     {
         45,          /* lineNo */
         "vAllOrAny", /* fcnName */
@@ -176,7 +221,7 @@ emlrtRSInfo ed_emlrtRSI =
         "internal\\vAllOrAny.m" /* pathName */
 };
 
-emlrtRSInfo fd_emlrtRSI =
+emlrtRSInfo gd_emlrtRSI =
     {
         121,                  /* lineNo */
         "flatVectorAllOrAny", /* fcnName */
@@ -185,7 +230,7 @@ emlrtRSInfo fd_emlrtRSI =
         "internal\\vAllOrAny.m" /* pathName */
 };
 
-emlrtRSInfo hd_emlrtRSI = {
+emlrtRSInfo id_emlrtRSI = {
     40,                     /* lineNo */
     "eigHermitianStandard", /* fcnName */
     "C:\\Program "
@@ -193,7 +238,7 @@ emlrtRSInfo hd_emlrtRSI = {
     "itianStandard.m" /* pathName */
 };
 
-emlrtRSInfo jd_emlrtRSI = {
+emlrtRSInfo kd_emlrtRSI = {
     62,              /* lineNo */
     "ceval_xsyheev", /* fcnName */
     "C:\\Program "
@@ -201,7 +246,7 @@ emlrtRSInfo jd_emlrtRSI = {
     "lapack\\xsyheev.m" /* pathName */
 };
 
-emlrtRSInfo kd_emlrtRSI = {
+emlrtRSInfo ld_emlrtRSI = {
     20,        /* lineNo */
     "xzlarfg", /* fcnName */
     "C:\\Program "
@@ -209,7 +254,7 @@ emlrtRSInfo kd_emlrtRSI = {
     "reflapack\\xzlarfg.m" /* pathName */
 };
 
-emlrtRSInfo ld_emlrtRSI = {
+emlrtRSInfo md_emlrtRSI = {
     41,        /* lineNo */
     "xzlarfg", /* fcnName */
     "C:\\Program "
@@ -217,7 +262,7 @@ emlrtRSInfo ld_emlrtRSI = {
     "reflapack\\xzlarfg.m" /* pathName */
 };
 
-emlrtRSInfo md_emlrtRSI = {
+emlrtRSInfo nd_emlrtRSI = {
     53,        /* lineNo */
     "xzlarfg", /* fcnName */
     "C:\\Program "
@@ -225,7 +270,7 @@ emlrtRSInfo md_emlrtRSI = {
     "reflapack\\xzlarfg.m" /* pathName */
 };
 
-emlrtRSInfo nd_emlrtRSI = {
+emlrtRSInfo od_emlrtRSI = {
     68,        /* lineNo */
     "xzlarfg", /* fcnName */
     "C:\\Program "
@@ -233,7 +278,7 @@ emlrtRSInfo nd_emlrtRSI = {
     "reflapack\\xzlarfg.m" /* pathName */
 };
 
-emlrtRSInfo od_emlrtRSI = {
+emlrtRSInfo pd_emlrtRSI = {
     71,        /* lineNo */
     "xzlarfg", /* fcnName */
     "C:\\Program "
@@ -241,7 +286,7 @@ emlrtRSInfo od_emlrtRSI = {
     "reflapack\\xzlarfg.m" /* pathName */
 };
 
-emlrtRSInfo pd_emlrtRSI = {
+emlrtRSInfo qd_emlrtRSI = {
     81,        /* lineNo */
     "xzlarfg", /* fcnName */
     "C:\\Program "
@@ -249,7 +294,7 @@ emlrtRSInfo pd_emlrtRSI = {
     "reflapack\\xzlarfg.m" /* pathName */
 };
 
-emlrtRSInfo sd_emlrtRSI = {
+emlrtRSInfo td_emlrtRSI = {
     31,      /* lineNo */
     "xscal", /* fcnName */
     "C:\\Program "
@@ -257,7 +302,7 @@ emlrtRSInfo sd_emlrtRSI = {
     "m" /* pathName */
 };
 
-emlrtRSInfo td_emlrtRSI = {
+emlrtRSInfo ud_emlrtRSI = {
     18,      /* lineNo */
     "xscal", /* fcnName */
     "C:\\Program "
@@ -265,7 +310,7 @@ emlrtRSInfo td_emlrtRSI = {
     "refblas\\xscal.m" /* pathName */
 };
 
-emlrtRSInfo yd_emlrtRSI = {
+emlrtRSInfo ae_emlrtRSI = {
     35,      /* lineNo */
     "schur", /* fcnName */
     "C:\\Program "
@@ -273,7 +318,7 @@ emlrtRSInfo yd_emlrtRSI = {
                                                                          */
 };
 
-emlrtRSInfo ce_emlrtRSI = {
+emlrtRSInfo de_emlrtRSI = {
     83,      /* lineNo */
     "schur", /* fcnName */
     "C:\\Program "
@@ -281,7 +326,7 @@ emlrtRSInfo ce_emlrtRSI = {
                                                                          */
 };
 
-emlrtRSInfo de_emlrtRSI = {
+emlrtRSInfo ee_emlrtRSI = {
     18,       /* lineNo */
     "xgehrd", /* fcnName */
     "C:\\Program "
@@ -289,7 +334,7 @@ emlrtRSInfo de_emlrtRSI = {
     "lapack\\xgehrd.m" /* pathName */
 };
 
-emlrtRSInfo je_emlrtRSI = {
+emlrtRSInfo ke_emlrtRSI = {
     86,      /* lineNo */
     "xgemv", /* fcnName */
     "C:\\Program "
@@ -297,7 +342,7 @@ emlrtRSInfo je_emlrtRSI = {
     "m" /* pathName */
 };
 
-emlrtRSInfo le_emlrtRSI = {
+emlrtRSInfo me_emlrtRSI = {
     37,      /* lineNo */
     "xgemv", /* fcnName */
     "C:\\Program "
@@ -305,7 +350,7 @@ emlrtRSInfo le_emlrtRSI = {
     "refblas\\xgemv.m" /* pathName */
 };
 
-emlrtRSInfo me_emlrtRSI = {
+emlrtRSInfo ne_emlrtRSI = {
     45,      /* lineNo */
     "xgerc", /* fcnName */
     "C:\\Program "
@@ -313,7 +358,7 @@ emlrtRSInfo me_emlrtRSI = {
     "m" /* pathName */
 };
 
-emlrtRSInfo ne_emlrtRSI =
+emlrtRSInfo oe_emlrtRSI =
     {
         45,     /* lineNo */
         "xger", /* fcnName */
@@ -322,7 +367,7 @@ emlrtRSInfo ne_emlrtRSI =
         "blas\\xger.m" /* pathName */
 };
 
-emlrtRSInfo oe_emlrtRSI = {
+emlrtRSInfo pe_emlrtRSI = {
     15,     /* lineNo */
     "xger", /* fcnName */
     "C:\\Program "
@@ -330,7 +375,7 @@ emlrtRSInfo oe_emlrtRSI = {
     "refblas\\xger.m" /* pathName */
 };
 
-emlrtRSInfo pe_emlrtRSI = {
+emlrtRSInfo qe_emlrtRSI = {
     41,      /* lineNo */
     "xgerx", /* fcnName */
     "C:\\Program "
@@ -338,7 +383,7 @@ emlrtRSInfo pe_emlrtRSI = {
     "refblas\\xgerx.m" /* pathName */
 };
 
-emlrtRSInfo qe_emlrtRSI = {
+emlrtRSInfo re_emlrtRSI = {
     54,      /* lineNo */
     "xgerx", /* fcnName */
     "C:\\Program "
@@ -346,7 +391,7 @@ emlrtRSInfo qe_emlrtRSI = {
     "refblas\\xgerx.m" /* pathName */
 };
 
-emlrtRSInfo cf_emlrtRSI = {
+emlrtRSInfo df_emlrtRSI = {
     243,       /* lineNo */
     "xdlahqr", /* fcnName */
     "C:\\Program "
@@ -354,7 +399,7 @@ emlrtRSInfo cf_emlrtRSI = {
     "reflapack\\xdlahqr.m" /* pathName */
 };
 
-emlrtRSInfo gf_emlrtRSI = {
+emlrtRSInfo hf_emlrtRSI = {
     342,       /* lineNo */
     "xdlahqr", /* fcnName */
     "C:\\Program "
@@ -362,7 +407,7 @@ emlrtRSInfo gf_emlrtRSI = {
     "reflapack\\xdlahqr.m" /* pathName */
 };
 
-emlrtRSInfo hf_emlrtRSI = {
+emlrtRSInfo if_emlrtRSI = {
     345,       /* lineNo */
     "xdlahqr", /* fcnName */
     "C:\\Program "
@@ -370,7 +415,7 @@ emlrtRSInfo hf_emlrtRSI = {
     "reflapack\\xdlahqr.m" /* pathName */
 };
 
-emlrtRSInfo sf_emlrtRSI = {
+emlrtRSInfo tf_emlrtRSI = {
     45,            /* lineNo */
     "eigStandard", /* fcnName */
     "C:\\Program "
@@ -378,7 +423,7 @@ emlrtRSInfo sf_emlrtRSI = {
     "dard.m" /* pathName */
 };
 
-emlrtRSInfo tf_emlrtRSI = {
+emlrtRSInfo uf_emlrtRSI = {
     159,           /* lineNo */
     "ceval_xgeev", /* fcnName */
     "C:\\Program "
@@ -386,7 +431,7 @@ emlrtRSInfo tf_emlrtRSI = {
     "lapack\\xgeev.m" /* pathName */
 };
 
-emlrtRSInfo bg_emlrtRSI = {
+emlrtRSInfo cg_emlrtRSI = {
     99,        /* lineNo */
     "sumprod", /* fcnName */
     "C:\\Program "
@@ -394,7 +439,7 @@ emlrtRSInfo bg_emlrtRSI = {
     "d.m" /* pathName */
 };
 
-emlrtRSInfo ig_emlrtRSI =
+emlrtRSInfo jg_emlrtRSI =
     {
         350,                             /* lineNo */
         "objectTrack/set.ObjectClassID", /* fcnName */
@@ -404,7 +449,7 @@ emlrtRSInfo ig_emlrtRSI =
 };
 
 emlrtRSInfo
-    jg_emlrtRSI =
+    kg_emlrtRSI =
         {
             91,       /* lineNo */
             "strcmp", /* fcnName */
@@ -414,7 +459,7 @@ emlrtRSInfo
 };
 
 emlrtRSInfo
-    kg_emlrtRSI =
+    lg_emlrtRSI =
         {
             167,          /* lineNo */
             "loc_strcmp", /* fcnName */
@@ -424,7 +469,7 @@ emlrtRSInfo
 };
 
 emlrtRSInfo
-    lg_emlrtRSI =
+    mg_emlrtRSI =
         {
             240,       /* lineNo */
             "charcmp", /* fcnName */
@@ -433,25 +478,7 @@ emlrtRSInfo
             "internal\\strcmp.m" /* pathName */
 };
 
-emlrtRSInfo qg_emlrtRSI =
-    {
-        18,            /* lineNo */
-        "ifWhileCond", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\ifWhileCond.m" /* pathName */
-};
-
-emlrtRSInfo rg_emlrtRSI =
-    {
-        31,            /* lineNo */
-        "checkNoNaNs", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
-        "internal\\ifWhileCond.m" /* pathName */
-};
-
-emlrtRSInfo ug_emlrtRSI = {
+emlrtRSInfo vg_emlrtRSI = {
     538,                             /* lineNo */
     "FuserManager/getConfigByTrack", /* fcnName */
     "C:\\Program "
@@ -459,7 +486,7 @@ emlrtRSInfo ug_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-emlrtRSInfo vg_emlrtRSI = {
+emlrtRSInfo wg_emlrtRSI = {
     124,                                           /* lineNo */
     "fuserSourceConfiguration/transformToCentral", /* fcnName */
     "C:\\Program "
@@ -467,76 +494,7 @@ emlrtRSInfo vg_emlrtRSI = {
     "tion.m" /* pathName */
 };
 
-emlrtRSInfo wg_emlrtRSI = {
-    126,                                           /* lineNo */
-    "fuserSourceConfiguration/transformToCentral", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
-};
-
 emlrtRSInfo xg_emlrtRSI = {
-    267,                                                   /* lineNo */
-    "fuserSourceConfiguration/validateTransformToCentral", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
-};
-
-emlrtRSInfo yg_emlrtRSI = {
-    275,                                                   /* lineNo */
-    "fuserSourceConfiguration/validateTransformToCentral", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
-};
-
-emlrtRSInfo ah_emlrtRSI = {
-    53,              /* lineNo */
-    "local2central", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-emlrtRSInfo bh_emlrtRSI = {
-    55,              /* lineNo */
-    "local2central", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-emlrtRSInfo ph_emlrtRSI =
-    {
-        262,                       /* lineNo */
-        "objectTrack/set.TrackID", /* fcnName */
-        "C:\\Program "
-        "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\objectTra"
-        "ck.m" /* pathName */
-};
-
-emlrtRSInfo fi_emlrtRSI = {
-    67,              /* lineNo */
-    "central2local", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-emlrtRSInfo gi_emlrtRSI = {
-    69,              /* lineNo */
-    "central2local", /* fcnName */
-    "C:\\Users\\pwilliam\\OneDrive - "
-    "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTWorkshop_SI_and_"
-    "T\\Solutions\\fusionAlgorithm"
-    ".m" /* pathName */
-};
-
-emlrtRSInfo hi_emlrtRSI = {
     17,                      /* lineNo */
     "gaussEKFilter/predict", /* fcnName */
     "C:\\Program "
@@ -544,7 +502,7 @@ emlrtRSInfo hi_emlrtRSI = {
     "internal\\gaussEKFilter.m" /* pathName */
 };
 
-emlrtRSInfo ii_emlrtRSI = {
+emlrtRSInfo yg_emlrtRSI = {
     30,                      /* lineNo */
     "gaussEKFilter/predict", /* fcnName */
     "C:\\Program "
@@ -552,7 +510,7 @@ emlrtRSInfo ii_emlrtRSI = {
     "internal\\gaussEKFilter.m" /* pathName */
 };
 
-emlrtRSInfo ji_emlrtRSI = {
+emlrtRSInfo ah_emlrtRSI = {
     31,                      /* lineNo */
     "gaussEKFilter/predict", /* fcnName */
     "C:\\Program "
@@ -560,7 +518,7 @@ emlrtRSInfo ji_emlrtRSI = {
     "internal\\gaussEKFilter.m" /* pathName */
 };
 
-emlrtRSInfo ki_emlrtRSI =
+emlrtRSInfo bh_emlrtRSI =
     {
         98,         /* lineNo */
         "constvel", /* fcnName */
@@ -569,7 +527,7 @@ emlrtRSInfo ki_emlrtRSI =
         "m" /* pathName */
 };
 
-emlrtRSInfo li_emlrtRSI = {
+emlrtRSInfo ch_emlrtRSI = {
     69,                /* lineNo */
     "numericJacobian", /* fcnName */
     "C:\\Program "
@@ -578,7 +536,7 @@ emlrtRSInfo li_emlrtRSI = {
     "m" /* pathName */
 };
 
-emlrtRSInfo mi_emlrtRSI = {
+emlrtRSInfo dh_emlrtRSI = {
     79,                /* lineNo */
     "numericJacobian", /* fcnName */
     "C:\\Program "
@@ -587,7 +545,7 @@ emlrtRSInfo mi_emlrtRSI = {
     "m" /* pathName */
 };
 
-emlrtRSInfo ni_emlrtRSI =
+emlrtRSInfo eh_emlrtRSI =
     {
         142,        /* lineNo */
         "constvel", /* fcnName */
@@ -596,7 +554,7 @@ emlrtRSInfo ni_emlrtRSI =
         "m" /* pathName */
 };
 
-emlrtRSInfo oi_emlrtRSI =
+emlrtRSInfo fh_emlrtRSI =
     {
         159,        /* lineNo */
         "constvel", /* fcnName */
@@ -605,7 +563,7 @@ emlrtRSInfo oi_emlrtRSI =
         "m" /* pathName */
 };
 
-emlrtRSInfo pi_emlrtRSI =
+emlrtRSInfo gh_emlrtRSI =
     {
         165,        /* lineNo */
         "constvel", /* fcnName */
@@ -614,7 +572,7 @@ emlrtRSInfo pi_emlrtRSI =
         "m" /* pathName */
 };
 
-emlrtRSInfo qi_emlrtRSI = {
+emlrtRSInfo hh_emlrtRSI = {
     622,                                 /* lineNo */
     "FuserManager/validateSourceConfig", /* fcnName */
     "C:\\Program "
@@ -622,7 +580,7 @@ emlrtRSInfo qi_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-emlrtRSInfo ri_emlrtRSI = {
+emlrtRSInfo ih_emlrtRSI = {
     623,                                 /* lineNo */
     "FuserManager/validateSourceConfig", /* fcnName */
     "C:\\Program "
@@ -630,7 +588,7 @@ emlrtRSInfo ri_emlrtRSI = {
     "internal\\FuserManager.m" /* pathName */
 };
 
-emlrtRSInfo jk_emlrtRSI = {
+emlrtRSInfo cj_emlrtRSI = {
     34,       /* lineNo */
     "repmat", /* fcnName */
     "C:\\Program "
@@ -638,7 +596,7 @@ emlrtRSInfo jk_emlrtRSI = {
                                                                          */
 };
 
-emlrtRSInfo mk_emlrtRSI = {
+emlrtRSInfo fj_emlrtRSI = {
     78,       /* lineNo */
     "repmat", /* fcnName */
     "C:\\Program "
@@ -646,7 +604,7 @@ emlrtRSInfo mk_emlrtRSI = {
                                                                          */
 };
 
-emlrtRSInfo nk_emlrtRSI = {
+emlrtRSInfo gj_emlrtRSI = {
     136,                                         /* lineNo */
     "fuserSourceConfiguration/transformToLocal", /* fcnName */
     "C:\\Program "
@@ -654,31 +612,7 @@ emlrtRSInfo nk_emlrtRSI = {
     "tion.m" /* pathName */
 };
 
-emlrtRSInfo ok_emlrtRSI = {
-    138,                                         /* lineNo */
-    "fuserSourceConfiguration/transformToLocal", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
-};
-
-emlrtRSInfo pk_emlrtRSI = {
-    293,                                                 /* lineNo */
-    "fuserSourceConfiguration/validateTransformToLocal", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
-};
-
-emlrtRSInfo qk_emlrtRSI = {
-    301,                                                 /* lineNo */
-    "fuserSourceConfiguration/validateTransformToLocal", /* fcnName */
-    "C:\\Program "
-    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\fuserSourceConfigura"
-    "tion.m" /* pathName */
-};
-
-emlrtRSInfo sk_emlrtRSI = {
+emlrtRSInfo ij_emlrtRSI = {
     33,              /* lineNo */
     "gaussNormDiff", /* fcnName */
     "C:\\Program "
@@ -686,7 +620,7 @@ emlrtRSInfo sk_emlrtRSI = {
     "internal\\gaussNormDiff.m" /* pathName */
 };
 
-emlrtRSInfo tk_emlrtRSI = {
+emlrtRSInfo jj_emlrtRSI = {
     44,           /* lineNo */
     "calcOneRow", /* fcnName */
     "C:\\Program "
@@ -694,7 +628,7 @@ emlrtRSInfo tk_emlrtRSI = {
     "internal\\gaussNormDiff.m" /* pathName */
 };
 
-emlrtRSInfo uk_emlrtRSI = {
+emlrtRSInfo kj_emlrtRSI = {
     20,                /* lineNo */
     "mrdivide_helper", /* fcnName */
     "C:\\Program "
@@ -703,7 +637,7 @@ emlrtRSInfo uk_emlrtRSI = {
 };
 
 emlrtRSInfo
-    wk_emlrtRSI =
+    mj_emlrtRSI =
         {
             67,        /* lineNo */
             "lusolve", /* fcnName */
@@ -713,7 +647,7 @@ emlrtRSInfo
 };
 
 emlrtRSInfo
-    yk_emlrtRSI =
+    oj_emlrtRSI =
         {
             112,          /* lineNo */
             "lusolveNxN", /* fcnName */
@@ -722,7 +656,7 @@ emlrtRSInfo
             "internal\\lusolve.m" /* pathName */
 };
 
-emlrtRSInfo cl_emlrtRSI = {
+emlrtRSInfo rj_emlrtRSI = {
     30,       /* lineNo */
     "xgetrf", /* fcnName */
     "C:\\Program "
@@ -731,7 +665,7 @@ emlrtRSInfo cl_emlrtRSI = {
 };
 
 emlrtRSInfo
-    jl_emlrtRSI =
+    yj_emlrtRSI =
         {
             90,              /* lineNo */
             "warn_singular", /* fcnName */
@@ -740,7 +674,7 @@ emlrtRSInfo
             "internal\\lusolve.m" /* pathName */
 };
 
-emlrtRSInfo kl_emlrtRSI = {
+emlrtRSInfo ak_emlrtRSI = {
     21,    /* lineNo */
     "det", /* fcnName */
     "C:\\Program "
@@ -748,7 +682,7 @@ emlrtRSInfo kl_emlrtRSI = {
                                                                        */
 };
 
-emlrtRSInfo yl_emlrtRSI = {
+emlrtRSInfo ok_emlrtRSI = {
     39,     /* lineNo */
     "find", /* fcnName */
     "C:\\Program "
@@ -756,7 +690,7 @@ emlrtRSInfo yl_emlrtRSI = {
                                                                        */
 };
 
-emlrtRSInfo am_emlrtRSI = {
+emlrtRSInfo pk_emlrtRSI = {
     138,        /* lineNo */
     "eml_find", /* fcnName */
     "C:\\Program "
@@ -764,7 +698,7 @@ emlrtRSInfo am_emlrtRSI = {
                                                                        */
 };
 
-emlrtRSInfo bm_emlrtRSI = {
+emlrtRSInfo qk_emlrtRSI = {
     376,                  /* lineNo */
     "find_first_indices", /* fcnName */
     "C:\\Program "
@@ -772,7 +706,7 @@ emlrtRSInfo bm_emlrtRSI = {
                                                                        */
 };
 
-emlrtRSInfo br_emlrtRSI = {
+emlrtRSInfo rp_emlrtRSI = {
     65,         /* lineNo */
     "cat_impl", /* fcnName */
     "C:\\Program "
@@ -829,7 +763,7 @@ emlrtRTEInfo m_emlrtRTEI = {
     "valattr\\validatefinite.m" /* pName */
 };
 
-emlrtRTEInfo o_emlrtRTEI = {
+emlrtRTEInfo r_emlrtRTEI = {
     24,                                /* lineNo */
     5,                                 /* colNo */
     "isSymmetricPositiveSemiDefinite", /* fName */
@@ -839,7 +773,7 @@ emlrtRTEInfo o_emlrtRTEI = {
     "iveSemiDefinite.m" /* pName */
 };
 
-emlrtRTEInfo p_emlrtRTEI = {
+emlrtRTEInfo s_emlrtRTEI = {
     45,          /* lineNo */
     13,          /* colNo */
     "infocheck", /* fName */
@@ -848,7 +782,7 @@ emlrtRTEInfo p_emlrtRTEI = {
     "lapack\\infocheck.m" /* pName */
 };
 
-emlrtRTEInfo q_emlrtRTEI = {
+emlrtRTEInfo t_emlrtRTEI = {
     48,          /* lineNo */
     13,          /* colNo */
     "infocheck", /* fName */
@@ -857,7 +791,7 @@ emlrtRTEInfo q_emlrtRTEI = {
     "lapack\\infocheck.m" /* pName */
 };
 
-emlrtRTEInfo y_emlrtRTEI = {
+emlrtRTEInfo cb_emlrtRTEI = {
     49,                   /* lineNo */
     19,                   /* colNo */
     "assertValidSizeArg", /* fName */
@@ -866,7 +800,7 @@ emlrtRTEInfo y_emlrtRTEI = {
     "internal\\assertValidSizeArg.m" /* pName */
 };
 
-emlrtRTEInfo ab_emlrtRTEI = {
+emlrtRTEInfo db_emlrtRTEI = {
     64,                   /* lineNo */
     15,                   /* colNo */
     "assertValidSizeArg", /* fName */
@@ -875,7 +809,7 @@ emlrtRTEInfo ab_emlrtRTEI = {
     "internal\\assertValidSizeArg.m" /* pName */
 };
 
-emlrtRTEInfo db_emlrtRTEI = {
+emlrtRTEInfo gb_emlrtRTEI = {
     386,                  /* lineNo */
     1,                    /* colNo */
     "find_first_indices", /* fName */
@@ -962,7 +896,7 @@ emlrtBCInfo tc_emlrtBCI = {
     0                                       /* checkKind */
 };
 
-emlrtRTEInfo ob_emlrtRTEI = {
+emlrtRTEInfo rb_emlrtRTEI = {
     225,                   /* lineNo */
     27,                    /* colNo */
     "check_non_axis_size", /* fName */
@@ -971,7 +905,7 @@ emlrtRTEInfo ob_emlrtRTEI = {
                                                                           */
 };
 
-emlrtRTEInfo sb_emlrtRTEI =
+emlrtRTEInfo vb_emlrtRTEI =
     {
         14,    /* lineNo */
         9,     /* colNo */
@@ -981,7 +915,16 @@ emlrtRTEInfo sb_emlrtRTEI =
                                                                           */
 };
 
-emlrtRTEInfo sd_emlrtRTEI = {
+emlrtRTEInfo sc_emlrtRTEI = {
+    161,      /* lineNo */
+    25,       /* colNo */
+    "repmat", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\repmat.m" /* pName
+                                                                         */
+};
+
+emlrtRTEInfo he_emlrtRTEI = {
     31,     /* lineNo */
     6,      /* colNo */
     "find", /* fName */
@@ -990,7 +933,7 @@ emlrtRTEInfo sd_emlrtRTEI = {
                                                                        */
 };
 
-emlrtRTEInfo bh_emlrtRTEI = {
+emlrtRTEInfo aj_emlrtRTEI = {
     73,       /* lineNo */
     28,       /* colNo */
     "repmat", /* fName */
@@ -999,7 +942,7 @@ emlrtRTEInfo bh_emlrtRTEI = {
                                                                          */
 };
 
-emlrtRTEInfo fh_emlrtRTEI = {
+emlrtRTEInfo ej_emlrtRTEI = {
     60,       /* lineNo */
     20,       /* colNo */
     "bsxfun", /* fName */
@@ -1008,7 +951,7 @@ emlrtRTEInfo fh_emlrtRTEI = {
                                                                          */
 };
 
-emlrtRTEInfo qh_emlrtRTEI =
+emlrtRTEInfo pj_emlrtRTEI =
     {
         165,        /* lineNo */
         25,         /* colNo */
@@ -1018,7 +961,7 @@ emlrtRTEInfo qh_emlrtRTEI =
         "m" /* pName */
 };
 
-emlrtRTEInfo rh_emlrtRTEI =
+emlrtRTEInfo qj_emlrtRTEI =
     {
         166,        /* lineNo */
         23,         /* colNo */
@@ -1045,15 +988,12 @@ const char_T cv[128] = {
     'u',    'v',    'w',    'x',    'y',    'z',    '{',    '|',    '}',
     '~',    '\x7f'};
 
-const int8_T iv[36] = {1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
-                       0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1};
-
 const char_T cv1[13] = {'L', 'A', 'P', 'A', 'C', 'K', 'E',
                         '_', 'd', 's', 'y', 'e', 'v'};
 
 const char_T cv2[14] = {'L', 'A', 'P', 'A', 'C', 'K', 'E',
                         '_', 'd', 'g', 'e', 'e', 'v', 'x'};
 
-const int32_T iv1[4] = {0, 1, 2, 3};
+const int32_T iv[4] = {0, 1, 2, 3};
 
 /* End of code generation (fusionAlgorithm_data.c) */

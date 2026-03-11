@@ -17,7 +17,7 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo hn_emlrtRSI =
+static emlrtRSInfo wl_emlrtRSI =
     {
         179,                     /* lineNo */
         "matlabPerfectMatching", /* fcnName */
@@ -26,7 +26,7 @@ static emlrtRSInfo hn_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo in_emlrtRSI =
+static emlrtRSInfo xl_emlrtRSI =
     {
         181,                     /* lineNo */
         "matlabPerfectMatching", /* fcnName */
@@ -35,7 +35,7 @@ static emlrtRSInfo in_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo jn_emlrtRSI =
+static emlrtRSInfo yl_emlrtRSI =
     {
         230,                     /* lineNo */
         "matlabPerfectMatching", /* fcnName */
@@ -44,7 +44,7 @@ static emlrtRSInfo jn_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo kn_emlrtRSI = {
+static emlrtRSInfo am_emlrtRSI = {
     17,    /* lineNo */
     "min", /* fcnName */
     "C:\\Program "
@@ -52,7 +52,7 @@ static emlrtRSInfo kn_emlrtRSI = {
                                                                         */
 };
 
-static emlrtRSInfo ln_emlrtRSI =
+static emlrtRSInfo bm_emlrtRSI =
     {
         69,         /* lineNo */
         "minOrMax", /* fcnName */
@@ -61,7 +61,7 @@ static emlrtRSInfo ln_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo mn_emlrtRSI =
+static emlrtRSInfo cm_emlrtRSI =
     {
         119,       /* lineNo */
         "minimum", /* fcnName */
@@ -70,7 +70,7 @@ static emlrtRSInfo mn_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo nn_emlrtRSI = {
+static emlrtRSInfo dm_emlrtRSI = {
     288,             /* lineNo */
     "unaryMinOrMax", /* fcnName */
     "C:\\Program "
@@ -78,7 +78,7 @@ static emlrtRSInfo nn_emlrtRSI = {
     "internal\\unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo on_emlrtRSI = {
+static emlrtRSInfo em_emlrtRSI = {
     381,                     /* lineNo */
     "unaryMinOrMaxDispatch", /* fcnName */
     "C:\\Program "
@@ -86,7 +86,7 @@ static emlrtRSInfo on_emlrtRSI = {
     "internal\\unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo pn_emlrtRSI = {
+static emlrtRSInfo fm_emlrtRSI = {
     455,          /* lineNo */
     "minOrMax2D", /* fcnName */
     "C:\\Program "
@@ -94,7 +94,7 @@ static emlrtRSInfo pn_emlrtRSI = {
     "internal\\unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo qn_emlrtRSI = {
+static emlrtRSInfo gm_emlrtRSI = {
     562,                         /* lineNo */
     "minOrMax2DColumnMajorDim2", /* fcnName */
     "C:\\Program "
@@ -102,7 +102,7 @@ static emlrtRSInfo qn_emlrtRSI = {
     "internal\\unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo rn_emlrtRSI = {
+static emlrtRSInfo hm_emlrtRSI = {
     561,                         /* lineNo */
     "minOrMax2DColumnMajorDim2", /* fcnName */
     "C:\\Program "
@@ -110,7 +110,7 @@ static emlrtRSInfo rn_emlrtRSI = {
     "internal\\unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo sn_emlrtRSI = {
+static emlrtRSInfo im_emlrtRSI = {
     558,                         /* lineNo */
     "minOrMax2DColumnMajorDim2", /* fcnName */
     "C:\\Program "
@@ -118,7 +118,7 @@ static emlrtRSInfo sn_emlrtRSI = {
     "internal\\unaryMinOrMax.m" /* pathName */
 };
 
-static emlrtRSInfo tn_emlrtRSI =
+static emlrtRSInfo jm_emlrtRSI =
     {
         288,                     /* lineNo */
         "augmentedShortestPath", /* fcnName */
@@ -127,7 +127,7 @@ static emlrtRSInfo tn_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo un_emlrtRSI =
+static emlrtRSInfo km_emlrtRSI =
     {
         305,                     /* lineNo */
         "augmentedShortestPath", /* fcnName */
@@ -136,7 +136,7 @@ static emlrtRSInfo un_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo vn_emlrtRSI =
+static emlrtRSInfo lm_emlrtRSI =
     {
         308,                     /* lineNo */
         "augmentedShortestPath", /* fcnName */
@@ -145,7 +145,7 @@ static emlrtRSInfo vn_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo wn_emlrtRSI =
+static emlrtRSInfo mm_emlrtRSI =
     {
         323,                     /* lineNo */
         "augmentedShortestPath", /* fcnName */
@@ -154,7 +154,7 @@ static emlrtRSInfo wn_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo xn_emlrtRSI =
+static emlrtRSInfo nm_emlrtRSI =
     {
         373,                     /* lineNo */
         "augmentedShortestPath", /* fcnName */
@@ -163,7 +163,7 @@ static emlrtRSInfo xn_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo yn_emlrtRSI =
+static emlrtRSInfo om_emlrtRSI =
     {
         379,                     /* lineNo */
         "augmentedShortestPath", /* fcnName */
@@ -172,7 +172,7 @@ static emlrtRSInfo yn_emlrtRSI =
         "m" /* pathName */
 };
 
-static emlrtRSInfo ao_emlrtRSI = {
+static emlrtRSInfo pm_emlrtRSI = {
     46,                      /* lineNo */
     "minPriorityQueue/push", /* fcnName */
     "C:\\Program "
@@ -180,7 +180,7 @@ static emlrtRSInfo ao_emlrtRSI = {
     "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
-static emlrtRSInfo do_emlrtRSI = {
+static emlrtRSInfo sm_emlrtRSI = {
     69,                        /* lineNo */
     "minPriorityQueue/update", /* fcnName */
     "C:\\Program "
@@ -188,7 +188,7 @@ static emlrtRSInfo do_emlrtRSI = {
     "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
-static emlrtRSInfo eo_emlrtRSI = {
+static emlrtRSInfo tm_emlrtRSI = {
     56,                     /* lineNo */
     "minPriorityQueue/pop", /* fcnName */
     "C:\\Program "
@@ -196,7 +196,7 @@ static emlrtRSInfo eo_emlrtRSI = {
     "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
-static emlrtRSInfo fo_emlrtRSI = {
+static emlrtRSInfo um_emlrtRSI = {
     99,                          /* lineNo */
     "minPriorityQueue/percDown", /* fcnName */
     "C:\\Program "
@@ -204,7 +204,7 @@ static emlrtRSInfo fo_emlrtRSI = {
     "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
-static emlrtRSInfo go_emlrtRSI = {
+static emlrtRSInfo vm_emlrtRSI = {
     105,                         /* lineNo */
     "minPriorityQueue/percDown", /* fcnName */
     "C:\\Program "
@@ -212,7 +212,7 @@ static emlrtRSInfo go_emlrtRSI = {
     "internal\\+coder\\minPriorityQueue.m" /* pathName */
 };
 
-static emlrtRSInfo ho_emlrtRSI = {
+static emlrtRSInfo wm_emlrtRSI = {
     107,                         /* lineNo */
     "minPriorityQueue/percDown", /* fcnName */
     "C:\\Program "
@@ -233,7 +233,7 @@ static emlrtBCInfo lc_emlrtBCI = {
     0                                       /* checkKind */
 };
 
-static emlrtRTEInfo ib_emlrtRTEI = {
+static emlrtRTEInfo lb_emlrtRTEI = {
     198,             /* lineNo */
     27,              /* colNo */
     "unaryMinOrMax", /* fName */
@@ -372,7 +372,7 @@ static emlrtBCInfo ad_emlrtBCI = {
     0                                       /* checkKind */
 };
 
-static emlrtRTEInfo ke_emlrtRTEI =
+static emlrtRTEInfo ye_emlrtRTEI =
     {
         167,          /* lineNo */
         1,            /* colNo */
@@ -382,7 +382,7 @@ static emlrtRTEInfo ke_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo le_emlrtRTEI =
+static emlrtRTEInfo af_emlrtRTEI =
     {
         168,          /* lineNo */
         1,            /* colNo */
@@ -392,7 +392,7 @@ static emlrtRTEInfo le_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo me_emlrtRTEI =
+static emlrtRTEInfo bf_emlrtRTEI =
     {
         169,          /* lineNo */
         1,            /* colNo */
@@ -402,7 +402,7 @@ static emlrtRTEInfo me_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo ne_emlrtRTEI = {
+static emlrtRTEInfo cf_emlrtRTEI = {
     550,             /* lineNo */
     21,              /* colNo */
     "unaryMinOrMax", /* fName */
@@ -411,7 +411,7 @@ static emlrtRTEInfo ne_emlrtRTEI = {
     "internal\\unaryMinOrMax.m" /* pName */
 };
 
-static emlrtRTEInfo oe_emlrtRTEI = {
+static emlrtRTEInfo df_emlrtRTEI = {
     552,             /* lineNo */
     5,               /* colNo */
     "unaryMinOrMax", /* fName */
@@ -420,7 +420,7 @@ static emlrtRTEInfo oe_emlrtRTEI = {
     "internal\\unaryMinOrMax.m" /* pName */
 };
 
-static emlrtRTEInfo pe_emlrtRTEI = {
+static emlrtRTEInfo ef_emlrtRTEI = {
     18,    /* lineNo */
     5,     /* colNo */
     "min", /* fName */
@@ -429,7 +429,7 @@ static emlrtRTEInfo pe_emlrtRTEI = {
                                                                         */
 };
 
-static emlrtRTEInfo qe_emlrtRTEI =
+static emlrtRTEInfo ff_emlrtRTEI =
     {
         188,          /* lineNo */
         1,            /* colNo */
@@ -439,7 +439,7 @@ static emlrtRTEInfo qe_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo re_emlrtRTEI = {
+static emlrtRTEInfo gf_emlrtRTEI = {
     26,                 /* lineNo */
     39,                 /* colNo */
     "minPriorityQueue", /* fName */
@@ -448,7 +448,7 @@ static emlrtRTEInfo re_emlrtRTEI = {
     "internal\\+coder\\minPriorityQueue.m" /* pName */
 };
 
-static emlrtRTEInfo se_emlrtRTEI = {
+static emlrtRTEInfo hf_emlrtRTEI = {
     27,                 /* lineNo */
     46,                 /* colNo */
     "minPriorityQueue", /* fName */
@@ -457,7 +457,7 @@ static emlrtRTEInfo se_emlrtRTEI = {
     "internal\\+coder\\minPriorityQueue.m" /* pName */
 };
 
-static emlrtRTEInfo te_emlrtRTEI =
+static emlrtRTEInfo if_emlrtRTEI =
     {
         233,          /* lineNo */
         61,           /* colNo */
@@ -467,7 +467,7 @@ static emlrtRTEInfo te_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo ue_emlrtRTEI =
+static emlrtRTEInfo jf_emlrtRTEI =
     {
         254,          /* lineNo */
         1,            /* colNo */
@@ -477,7 +477,7 @@ static emlrtRTEInfo ue_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo ve_emlrtRTEI =
+static emlrtRTEInfo kf_emlrtRTEI =
     {
         258,          /* lineNo */
         1,            /* colNo */
@@ -487,7 +487,7 @@ static emlrtRTEInfo ve_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo we_emlrtRTEI =
+static emlrtRTEInfo lf_emlrtRTEI =
     {
         263,          /* lineNo */
         1,            /* colNo */
@@ -497,7 +497,7 @@ static emlrtRTEInfo we_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo xe_emlrtRTEI =
+static emlrtRTEInfo mf_emlrtRTEI =
     {
         267,          /* lineNo */
         1,            /* colNo */
@@ -507,7 +507,7 @@ static emlrtRTEInfo xe_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo ye_emlrtRTEI =
+static emlrtRTEInfo nf_emlrtRTEI =
     {
         218,          /* lineNo */
         1,            /* colNo */
@@ -517,7 +517,7 @@ static emlrtRTEInfo ye_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo af_emlrtRTEI =
+static emlrtRTEInfo of_emlrtRTEI =
     {
         233,          /* lineNo */
         9,            /* colNo */
@@ -527,7 +527,7 @@ static emlrtRTEInfo af_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo bf_emlrtRTEI =
+static emlrtRTEInfo pf_emlrtRTEI =
     {
         233,          /* lineNo */
         25,           /* colNo */
@@ -537,7 +537,7 @@ static emlrtRTEInfo bf_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo cf_emlrtRTEI =
+static emlrtRTEInfo qf_emlrtRTEI =
     {
         233,          /* lineNo */
         40,           /* colNo */
@@ -547,7 +547,7 @@ static emlrtRTEInfo cf_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo df_emlrtRTEI =
+static emlrtRTEInfo rf_emlrtRTEI =
     {
         233,          /* lineNo */
         52,           /* colNo */
@@ -557,7 +557,7 @@ static emlrtRTEInfo df_emlrtRTEI =
         "m" /* pName */
 };
 
-static emlrtRTEInfo ef_emlrtRTEI =
+static emlrtRTEInfo sf_emlrtRTEI =
     {
         162,          /* lineNo */
         66,           /* colNo */
@@ -627,61 +627,61 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
   n = matrixRep->size[0];
   c = matchCtoR->size[0];
   matchCtoR->size[0] = matrixRep->size[0];
-  emxEnsureCapacity_int32_T(sp, matchCtoR, c, &ke_emlrtRTEI);
+  emxEnsureCapacity_int32_T(sp, matchCtoR, c, &ye_emlrtRTEI);
   matchCtoR_data = matchCtoR->data;
   c = matchRtoC->size[0];
   matchRtoC->size[0] = matrixRep->size[0];
-  emxEnsureCapacity_int32_T(sp, matchRtoC, c, &le_emlrtRTEI);
+  emxEnsureCapacity_int32_T(sp, matchRtoC, c, &af_emlrtRTEI);
   matchRtoC_data = matchRtoC->data;
   c = colWeight->size[0];
   colWeight->size[0] = matrixRep->size[0];
-  emxEnsureCapacity_real_T(sp, colWeight, c, &me_emlrtRTEI);
+  emxEnsureCapacity_real_T(sp, colWeight, c, &bf_emlrtRTEI);
   colWeight_data = colWeight->data;
   for (i = 0; i < n; i++) {
     matchCtoR_data[i] = 0;
     matchRtoC_data[i] = 0;
     colWeight_data[i] = rtInf;
   }
-  emxInit_real_T(sp, &colWeight, 1, &qe_emlrtRTEI);
-  emxInit_int32_T(sp, &matchCtoR, 1, &ye_emlrtRTEI);
-  emxInit_int32_T(sp, &matchRtoC, 1, &ye_emlrtRTEI);
-  emxInit_real_T(sp, &minIndices, 1, &af_emlrtRTEI);
-  emxInit_int32_T(sp, &idx, 1, &bf_emlrtRTEI);
-  emxInit_real_T(sp, &distancesR, 1, &cf_emlrtRTEI);
-  emxInit_uint8_T(sp, &colorsR, 1, &df_emlrtRTEI);
-  c_emxInitStruct_matlab_internal(sp, &queue, &ef_emlrtRTEI);
+  emxInit_real_T(sp, &colWeight, 1, &ff_emlrtRTEI);
+  emxInit_int32_T(sp, &matchCtoR, 1, &nf_emlrtRTEI);
+  emxInit_int32_T(sp, &matchRtoC, 1, &nf_emlrtRTEI);
+  emxInit_real_T(sp, &minIndices, 1, &of_emlrtRTEI);
+  emxInit_int32_T(sp, &idx, 1, &pf_emlrtRTEI);
+  emxInit_real_T(sp, &distancesR, 1, &qf_emlrtRTEI);
+  emxInit_uint8_T(sp, &colorsR, 1, &rf_emlrtRTEI);
+  c_emxInitStruct_matlab_internal(sp, &queue, &sf_emlrtRTEI);
   if (n == 0) {
     rowWeight->size[0] = 0;
     success = true;
   } else {
     real_T edge_weight_shifted;
     int32_T b_n;
-    st.site = &hn_emlrtRSI;
-    b_st.site = &kn_emlrtRSI;
-    c_st.site = &ln_emlrtRSI;
-    d_st.site = &mn_emlrtRSI;
+    st.site = &wl_emlrtRSI;
+    b_st.site = &am_emlrtRSI;
+    c_st.site = &bm_emlrtRSI;
+    d_st.site = &cm_emlrtRSI;
     if (matrixRep->size[1] < 1) {
       emlrtErrorWithMessageIdR2018a(
-          &d_st, &ib_emlrtRTEI, "Coder:toolbox:eml_min_or_max_varDimZero",
+          &d_st, &lb_emlrtRTEI, "Coder:toolbox:eml_min_or_max_varDimZero",
           "Coder:toolbox:eml_min_or_max_varDimZero", 0);
     }
-    e_st.site = &nn_emlrtRSI;
-    f_st.site = &on_emlrtRSI;
-    g_st.site = &pn_emlrtRSI;
+    e_st.site = &dm_emlrtRSI;
+    f_st.site = &em_emlrtRSI;
+    g_st.site = &fm_emlrtRSI;
     b_n = matrixRep->size[1];
     c = rowWeight->size[0];
     rowWeight->size[0] = n;
-    emxEnsureCapacity_real_T(&g_st, rowWeight, c, &ne_emlrtRTEI);
+    emxEnsureCapacity_real_T(&g_st, rowWeight, c, &cf_emlrtRTEI);
     rowWeight_data = rowWeight->data;
     c = idx->size[0];
     idx->size[0] = n;
-    emxEnsureCapacity_int32_T(&g_st, idx, c, &oe_emlrtRTEI);
+    emxEnsureCapacity_int32_T(&g_st, idx, c, &df_emlrtRTEI);
     idx_data = idx->data;
     for (i = 0; i < n; i++) {
       idx_data[i] = 1;
     }
     if (matrixRep->size[0] >= 1) {
-      h_st.site = &sn_emlrtRSI;
+      h_st.site = &im_emlrtRSI;
       if (matrixRep->size[0] > 2147483646) {
         i_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&i_st);
@@ -689,13 +689,13 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
       for (i = 0; i < n; i++) {
         rowWeight_data[i] = matrixRep_data[i];
       }
-      h_st.site = &rn_emlrtRSI;
+      h_st.site = &hm_emlrtRSI;
       if (matrixRep->size[1] > 2147483646) {
         i_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&i_st);
       }
       for (i = 2; i <= b_n; i++) {
-        h_st.site = &qn_emlrtRSI;
+        h_st.site = &gm_emlrtRSI;
         if (n > 2147483646) {
           i_st.site = &tb_emlrtRSI;
           check_forloop_overflow_error(&i_st);
@@ -719,15 +719,15 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
     }
     c = minIndices->size[0];
     minIndices->size[0] = n;
-    emxEnsureCapacity_real_T(&st, minIndices, c, &pe_emlrtRTEI);
+    emxEnsureCapacity_real_T(&st, minIndices, c, &ef_emlrtRTEI);
     minIndices_data = minIndices->data;
     for (i = 0; i < n; i++) {
       minIndices_data[i] = idx_data[i];
     }
-    st.site = &in_emlrtRSI;
-    b_st.site = &ed_emlrtRSI;
+    st.site = &xl_emlrtRSI;
+    b_st.site = &fd_emlrtRSI;
     success = true;
-    c_st.site = &fd_emlrtRSI;
+    c_st.site = &gd_emlrtRSI;
     if (rowWeight->size[0] > 2147483646) {
       d_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&d_st);
@@ -744,7 +744,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
       int32_T colStart;
       c = colWeight->size[0];
       colWeight->size[0] = n;
-      emxEnsureCapacity_real_T(sp, colWeight, c, &qe_emlrtRTEI);
+      emxEnsureCapacity_real_T(sp, colWeight, c, &ff_emlrtRTEI);
       pairWeightR_data = colWeight->data;
       for (b_i = 0; b_i < n; b_i++) {
         pairWeightR_data[b_i] = 0.0;
@@ -764,11 +764,11 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
       }
       c = matchCtoR->size[0];
       matchCtoR->size[0] = n;
-      emxEnsureCapacity_int32_T(sp, matchCtoR, c, &re_emlrtRTEI);
+      emxEnsureCapacity_int32_T(sp, matchCtoR, c, &gf_emlrtRTEI);
       queue_heap_data = matchCtoR->data;
       c = matchRtoC->size[0];
       matchRtoC->size[0] = n;
-      emxEnsureCapacity_int32_T(sp, matchRtoC, c, &se_emlrtRTEI);
+      emxEnsureCapacity_int32_T(sp, matchRtoC, c, &hf_emlrtRTEI);
       queue_indexToHeap_data = matchRtoC->data;
       colStart = 0;
       int32_T exitg1;
@@ -785,13 +785,13 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
             int32_T exitg2;
             int32_T rlast;
             boolean_T guard1;
-            st.site = &jn_emlrtRSI;
+            st.site = &yl_emlrtRSI;
             c = queue.heap->size[0];
             queue.heap->size[0] = n;
-            emxEnsureCapacity_int32_T(&st, queue.heap, c, &te_emlrtRTEI);
+            emxEnsureCapacity_int32_T(&st, queue.heap, c, &if_emlrtRTEI);
             c = queue.indexToHeap->size[0];
             queue.indexToHeap->size[0] = n;
-            emxEnsureCapacity_int32_T(&st, queue.indexToHeap, c, &te_emlrtRTEI);
+            emxEnsureCapacity_int32_T(&st, queue.indexToHeap, c, &if_emlrtRTEI);
             for (i = 0; i < n; i++) {
               queue.heap->data[i] = queue_heap_data[i];
               queue.indexToHeap->data[i] = queue_indexToHeap_data[i];
@@ -799,11 +799,11 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
             c_n = matrixRep->size[0] - 1;
             c = minIndices->size[0];
             minIndices->size[0] = n;
-            emxEnsureCapacity_real_T(&st, minIndices, c, &ue_emlrtRTEI);
+            emxEnsureCapacity_real_T(&st, minIndices, c, &jf_emlrtRTEI);
             minIndices_data = minIndices->data;
             c = idx->size[0];
             idx->size[0] = n;
-            emxEnsureCapacity_int32_T(&st, idx, c, &ve_emlrtRTEI);
+            emxEnsureCapacity_int32_T(&st, idx, c, &kf_emlrtRTEI);
             idx_data = idx->data;
             for (i = 0; i < n; i++) {
               minIndices_data[i] = 0.0;
@@ -812,11 +812,11 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
             idx_data[colStart] = 0;
             c = distancesR->size[0];
             distancesR->size[0] = n;
-            emxEnsureCapacity_real_T(&st, distancesR, c, &we_emlrtRTEI);
+            emxEnsureCapacity_real_T(&st, distancesR, c, &lf_emlrtRTEI);
             distancesR_data = distancesR->data;
             c = colorsR->size[0];
             colorsR->size[0] = n;
-            emxEnsureCapacity_uint8_T(&st, colorsR, c, &xe_emlrtRTEI);
+            emxEnsureCapacity_uint8_T(&st, colorsR, c, &mf_emlrtRTEI);
             colorsR_data = colorsR->data;
             for (i = 0; i < n; i++) {
               distancesR_data[i] = rtInf;
@@ -834,7 +834,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
             do {
               real_T edge_weight;
               exitg3 = 0;
-              b_st.site = &tn_emlrtRSI;
+              b_st.site = &jm_emlrtRSI;
               b_n = 0;
               do {
                 exitg2 = 0;
@@ -858,7 +858,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                         idx_data[matchRtoC_data[b_n] - 1] = c + 1;
                         minIndices_data[b_n] = edge_weight;
                         if (colorsR_data[b_n] == 0) {
-                          b_st.site = &un_emlrtRSI;
+                          b_st.site = &km_emlrtRSI;
                           queue.len++;
                           if ((queue.len < 1) ||
                               (queue.len > queue.heap->size[0])) {
@@ -873,18 +873,18 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                                 &pc_emlrtBCI, &b_st);
                           }
                           queue.indexToHeap->data[b_n] = queue.len;
-                          c_st.site = &ao_emlrtRSI;
+                          c_st.site = &pm_emlrtRSI;
                           minPriorityQueue_percUp(&c_st, &queue, queue.len,
                                                   distancesR);
                           colorsR_data[b_n] = 1U;
                         } else {
-                          b_st.site = &vn_emlrtRSI;
+                          b_st.site = &lm_emlrtRSI;
                           if (b_n + 1 > queue.indexToHeap->size[0]) {
                             emlrtDynamicBoundsCheckR2012b(
                                 b_n + 1, 1, queue.indexToHeap->size[0],
                                 &lc_emlrtBCI, &b_st);
                           }
-                          c_st.site = &do_emlrtRSI;
+                          c_st.site = &sm_emlrtRSI;
                           minPriorityQueue_percUp(&c_st, &queue,
                                                   queue.indexToHeap->data[b_n],
                                                   distancesR);
@@ -913,7 +913,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                   int32_T c_i;
                   int32_T d_i;
                   int32_T rCandidate;
-                  b_st.site = &wn_emlrtRSI;
+                  b_st.site = &mm_emlrtRSI;
                   rCandidate = queue.heap->data[0] - 1;
                   if ((queue.len < 1) || (queue.len > queue.heap->size[0])) {
                     emlrtDynamicBoundsCheckR2012b(
@@ -929,7 +929,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                   }
                   queue.indexToHeap->data[queue.heap->data[0] - 1] = 1;
                   queue.len--;
-                  c_st.site = &eo_emlrtRSI;
+                  c_st.site = &tm_emlrtRSI;
                   d_i = 1;
                   int32_T exitg4;
                   int32_T ichild;
@@ -938,7 +938,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                     ichild = d_i << 1;
                     if (ichild <= c_i) {
                       if (ichild + 1 <= c_i) {
-                        d_st.site = &fo_emlrtRSI;
+                        d_st.site = &um_emlrtRSI;
                         if ((ichild < 1) || (ichild > queue.heap->size[0])) {
                           emlrtDynamicBoundsCheckR2012b(ichild, 1,
                                                         queue.heap->size[0],
@@ -987,7 +987,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                           ichild++;
                         }
                       }
-                      d_st.site = &go_emlrtRSI;
+                      d_st.site = &vm_emlrtRSI;
                       if (d_i > queue.heap->size[0]) {
                         emlrtDynamicBoundsCheckR2012b(
                             d_i, 1, queue.heap->size[0], &kc_emlrtBCI, &d_st);
@@ -1046,7 +1046,7 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                         queue.heap->data[d_i - 1] =
                             queue.heap->data[ichild - 1];
                         queue.heap->data[ichild - 1] = c;
-                        d_st.site = &ho_emlrtRSI;
+                        d_st.site = &wm_emlrtRSI;
                         b_indexShapeCheck(&d_st, queue.heap->size[0]);
                         if (ichild > queue.heap->size[0]) {
                           emlrtDynamicBoundsCheckR2012b(ichild, 1,
@@ -1137,14 +1137,14 @@ matlabPerfectMatching(const emlrtStack *sp, const emxArray_real_T *matrixRep,
                     last_weight_sap = minIndices_data[b_n - 1];
                   }
                 } while (exitg2 == 0);
-                b_st.site = &xn_emlrtRSI;
+                b_st.site = &nm_emlrtRSI;
                 for (i = 0; i <= c_n; i++) {
                   if (colorsR_data[i] == 2) {
                     rowWeight_data[i] =
                         (rowWeight_data[i] - lsap) + distancesR_data[i];
                   }
                 }
-                b_st.site = &yn_emlrtRSI;
+                b_st.site = &om_emlrtRSI;
                 for (i = 0; i <= c_n; i++) {
                   if (matchCtoR_data[i] != 0) {
                     colWeight_data[i] =

@@ -13,7 +13,7 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo qd_emlrtRSI = {
+static emlrtRSInfo rd_emlrtRSI = {
     23,      /* lineNo */
     "xnrm2", /* fcnName */
     "C:\\Program "
@@ -21,7 +21,7 @@ static emlrtRSInfo qd_emlrtRSI = {
     "m" /* pathName */
 };
 
-static emlrtRSInfo rd_emlrtRSI = {
+static emlrtRSInfo sd_emlrtRSI = {
     38,      /* lineNo */
     "xnrm2", /* fcnName */
     "C:\\Program "
@@ -78,7 +78,7 @@ real_T xnrm2(const emlrtStack *sp, int32_T n, const real_T x[36], int32_T ix0)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &qd_emlrtRSI;
+  st.site = &rd_emlrtRSI;
   y = 0.0;
   if (n >= 1) {
     if (n == 1) {
@@ -88,7 +88,7 @@ real_T xnrm2(const emlrtStack *sp, int32_T n, const real_T x[36], int32_T ix0)
       int32_T kend;
       scale = 3.3121686421112381E-170;
       kend = (ix0 + n) - 1;
-      b_st.site = &rd_emlrtRSI;
+      b_st.site = &sd_emlrtRSI;
       if ((ix0 <= kend) && (kend > 2147483646)) {
         c_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&c_st);

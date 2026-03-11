@@ -17,7 +17,7 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ad_emlrtRSI = {
+static emlrtRSInfo bd_emlrtRSI = {
     127,   /* lineNo */
     "eig", /* fcnName */
     "C:\\Program "
@@ -25,7 +25,7 @@ static emlrtRSInfo ad_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo bd_emlrtRSI = {
+static emlrtRSInfo cd_emlrtRSI = {
     135,   /* lineNo */
     "eig", /* fcnName */
     "C:\\Program "
@@ -33,7 +33,7 @@ static emlrtRSInfo bd_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo cd_emlrtRSI = {
+static emlrtRSInfo dd_emlrtRSI = {
     143,   /* lineNo */
     "eig", /* fcnName */
     "C:\\Program "
@@ -41,7 +41,7 @@ static emlrtRSInfo cd_emlrtRSI = {
                                                                        */
 };
 
-static emlrtRSInfo gd_emlrtRSI = {
+static emlrtRSInfo hd_emlrtRSI = {
     13,                     /* lineNo */
     "eigHermitianStandard", /* fcnName */
     "C:\\Program "
@@ -49,7 +49,7 @@ static emlrtRSInfo gd_emlrtRSI = {
     "itianStandard.m" /* pathName */
 };
 
-static emlrtRSInfo id_emlrtRSI = {
+static emlrtRSInfo jd_emlrtRSI = {
     8,         /* lineNo */
     "xsyheev", /* fcnName */
     "C:\\Program "
@@ -57,7 +57,7 @@ static emlrtRSInfo id_emlrtRSI = {
     "lapack\\xsyheev.m" /* pathName */
 };
 
-static emlrtRSInfo rf_emlrtRSI = {
+static emlrtRSInfo sf_emlrtRSI = {
     34,            /* lineNo */
     "eigStandard", /* fcnName */
     "C:\\Program "
@@ -65,7 +65,7 @@ static emlrtRSInfo rf_emlrtRSI = {
     "dard.m" /* pathName */
 };
 
-static emlrtRSInfo uf_emlrtRSI = {
+static emlrtRSInfo vf_emlrtRSI = {
     42,      /* lineNo */
     "xgeev", /* fcnName */
     "C:\\Program "
@@ -101,9 +101,9 @@ void eig(const emlrtStack *sp, const real_T A[36], creal_T V[6])
   c_st.tls = b_st.tls;
   d_st.prev = &c_st;
   d_st.tls = c_st.tls;
-  st.site = &yc_emlrtRSI;
-  b_st.site = &dd_emlrtRSI;
-  c_st.site = &ed_emlrtRSI;
+  st.site = &ad_emlrtRSI;
+  b_st.site = &ed_emlrtRSI;
+  c_st.site = &fd_emlrtRSI;
   p = true;
   for (i = 0; i < 36; i++) {
     if (p) {
@@ -149,19 +149,19 @@ void eig(const emlrtStack *sp, const real_T A[36], creal_T V[6])
       }
     }
     if (p) {
-      st.site = &ad_emlrtRSI;
-      b_st.site = &gd_emlrtRSI;
-      c_st.site = &id_emlrtRSI;
+      st.site = &bd_emlrtRSI;
+      b_st.site = &hd_emlrtRSI;
+      c_st.site = &jd_emlrtRSI;
       memcpy(&b_A[0], &A[0], 36U * sizeof(real_T));
       n_t = (ptrdiff_t)6;
       n_t = LAPACKE_dsyev(102, 'N', 'L', n_t, &b_A[0], n_t, &scale[0]);
-      d_st.site = &jd_emlrtRSI;
+      d_st.site = &kd_emlrtRSI;
       if ((int32_T)n_t < 0) {
         if ((int32_T)n_t == -1010) {
-          emlrtErrorWithMessageIdR2018a(&d_st, &p_emlrtRTEI, "MATLAB:nomem",
+          emlrtErrorWithMessageIdR2018a(&d_st, &s_emlrtRTEI, "MATLAB:nomem",
                                         "MATLAB:nomem", 0);
         } else {
-          emlrtErrorWithMessageIdR2018a(&d_st, &q_emlrtRTEI,
+          emlrtErrorWithMessageIdR2018a(&d_st, &t_emlrtRTEI,
                                         "Coder:toolbox:LAPACKCallErrorInfo",
                                         "Coder:toolbox:LAPACKCallErrorInfo", 5,
                                         4, 13, &cv1[0], 12, (int32_T)n_t);
@@ -172,7 +172,7 @@ void eig(const emlrtStack *sp, const real_T A[36], creal_T V[6])
         V[i].im = 0.0;
       }
       if (((int32_T)n_t != 0) && (!emlrtSetWarningFlag(&st))) {
-        b_st.site = &hd_emlrtRSI;
+        b_st.site = &id_emlrtRSI;
         warning(&b_st);
       }
     } else {
@@ -200,24 +200,24 @@ void eig(const emlrtStack *sp, const real_T A[36], creal_T V[6])
         }
       }
       if (p) {
-        st.site = &bd_emlrtRSI;
+        st.site = &cd_emlrtRSI;
         eigSkewHermitianStandard(&st, A, V);
       } else {
-        st.site = &cd_emlrtRSI;
-        b_st.site = &rf_emlrtRSI;
-        c_st.site = &uf_emlrtRSI;
+        st.site = &dd_emlrtRSI;
+        b_st.site = &sf_emlrtRSI;
+        c_st.site = &vf_emlrtRSI;
         memcpy(&b_A[0], &A[0], 36U * sizeof(real_T));
         n_t = LAPACKE_dgeevx(102, 'B', 'N', 'N', 'N', (ptrdiff_t)6, &b_A[0],
                              (ptrdiff_t)6, &wreal[0], &wimag[0], &vleft,
                              (ptrdiff_t)1, &vright, (ptrdiff_t)1, &n_t, &ihi_t,
                              &scale[0], &abnrm, &rconde, &rcondv);
-        d_st.site = &tf_emlrtRSI;
+        d_st.site = &uf_emlrtRSI;
         if ((int32_T)n_t < 0) {
           if ((int32_T)n_t == -1010) {
-            emlrtErrorWithMessageIdR2018a(&d_st, &p_emlrtRTEI, "MATLAB:nomem",
+            emlrtErrorWithMessageIdR2018a(&d_st, &s_emlrtRTEI, "MATLAB:nomem",
                                           "MATLAB:nomem", 0);
           } else {
-            emlrtErrorWithMessageIdR2018a(&d_st, &q_emlrtRTEI,
+            emlrtErrorWithMessageIdR2018a(&d_st, &t_emlrtRTEI,
                                           "Coder:toolbox:LAPACKCallErrorInfo",
                                           "Coder:toolbox:LAPACKCallErrorInfo",
                                           5, 4, 14, &cv2[0], 12, (int32_T)n_t);
@@ -228,7 +228,7 @@ void eig(const emlrtStack *sp, const real_T A[36], creal_T V[6])
           V[i].im = wimag[i];
         }
         if (((int32_T)n_t != 0) && (!emlrtSetWarningFlag(&st))) {
-          b_st.site = &sf_emlrtRSI;
+          b_st.site = &tf_emlrtRSI;
           warning(&b_st);
         }
       }

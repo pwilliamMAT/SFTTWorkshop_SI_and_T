@@ -18,13 +18,15 @@
 #include "eml_int_forloop_overflow_check.h"
 #include "eml_setop.h"
 #include "find.h"
-#include "fusionAlgorithm.h"
 #include "fusionAlgorithm_data.h"
 #include "fusionAlgorithm_emxutil.h"
+#include "fusionAlgorithm_internal_types.h"
 #include "fusionAlgorithm_types.h"
 #include "gaussEKFilter.h"
+#include "ifWhileCond.h"
 #include "isSymmetricPositiveSemiDefinite.h"
 #include "mrdivide_helper.h"
+#include "objectTrack.h"
 #include "repmat.h"
 #include "rt_nonfinite.h"
 #include "sort.h"
@@ -43,497 +45,497 @@ static emlrtRSInfo r_emlrtRSI = { 1,   /* lineNo */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemProp.p"/* pathName */
 };
 
-static emlrtRSInfo cj_emlrtRSI = { 1019,/* lineNo */
+static emlrtRSInfo uh_emlrtRSI = { 1019,/* lineNo */
   "trackFuser/resetImpl",              /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo ej_emlrtRSI = { 476,/* lineNo */
+static emlrtRSInfo wh_emlrtRSI = { 476,/* lineNo */
   "trackFuser/stepImpl",               /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo fj_emlrtRSI = { 478,/* lineNo */
+static emlrtRSInfo xh_emlrtRSI = { 478,/* lineNo */
   "trackFuser/stepImpl",               /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo gj_emlrtRSI = { 490,/* lineNo */
+static emlrtRSInfo yh_emlrtRSI = { 490,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo hj_emlrtRSI = { 491,/* lineNo */
+static emlrtRSInfo ai_emlrtRSI = { 491,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo ij_emlrtRSI = { 492,/* lineNo */
+static emlrtRSInfo bi_emlrtRSI = { 492,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo jj_emlrtRSI = { 501,/* lineNo */
+static emlrtRSInfo ci_emlrtRSI = { 501,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo kj_emlrtRSI = { 504,/* lineNo */
+static emlrtRSInfo di_emlrtRSI = { 504,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo lj_emlrtRSI = { 507,/* lineNo */
+static emlrtRSInfo ei_emlrtRSI = { 507,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo mj_emlrtRSI = { 508,/* lineNo */
+static emlrtRSInfo fi_emlrtRSI = { 508,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo nj_emlrtRSI = { 509,/* lineNo */
+static emlrtRSInfo gi_emlrtRSI = { 509,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo oj_emlrtRSI = { 513,/* lineNo */
+static emlrtRSInfo hi_emlrtRSI = { 513,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo pj_emlrtRSI = { 516,/* lineNo */
+static emlrtRSInfo ii_emlrtRSI = { 516,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo qj_emlrtRSI = { 521,/* lineNo */
+static emlrtRSInfo ji_emlrtRSI = { 521,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo rj_emlrtRSI = { 524,/* lineNo */
+static emlrtRSInfo ki_emlrtRSI = { 524,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo sj_emlrtRSI = { 527,/* lineNo */
+static emlrtRSInfo li_emlrtRSI = { 527,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo tj_emlrtRSI = { 543,/* lineNo */
+static emlrtRSInfo mi_emlrtRSI = { 543,/* lineNo */
   "trackFuser/coreAlgorithm",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo uj_emlrtRSI = { 613,/* lineNo */
+static emlrtRSInfo ni_emlrtRSI = { 613,/* lineNo */
   "FuserManager/collectSourceIDs",     /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pathName */
 };
 
-static emlrtRSInfo vj_emlrtRSI = { 614,/* lineNo */
+static emlrtRSInfo oi_emlrtRSI = { 614,/* lineNo */
   "FuserManager/collectSourceIDs",     /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pathName */
 };
 
-static emlrtRSInfo ll_emlrtRSI = { 626,/* lineNo */
+static emlrtRSInfo bk_emlrtRSI = { 626,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo ml_emlrtRSI = { 620,/* lineNo */
+static emlrtRSInfo ck_emlrtRSI = { 620,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo nl_emlrtRSI = { 619,/* lineNo */
+static emlrtRSInfo dk_emlrtRSI = { 619,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo ol_emlrtRSI = { 613,/* lineNo */
+static emlrtRSInfo ek_emlrtRSI = { 613,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo pl_emlrtRSI = { 606,/* lineNo */
+static emlrtRSInfo fk_emlrtRSI = { 606,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo ql_emlrtRSI = { 602,/* lineNo */
+static emlrtRSInfo gk_emlrtRSI = { 602,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo rl_emlrtRSI = { 595,/* lineNo */
+static emlrtRSInfo hk_emlrtRSI = { 595,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo sl_emlrtRSI = { 584,/* lineNo */
+static emlrtRSInfo ik_emlrtRSI = { 584,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo tl_emlrtRSI = { 577,/* lineNo */
+static emlrtRSInfo jk_emlrtRSI = { 577,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo ul_emlrtRSI = { 576,/* lineNo */
+static emlrtRSInfo kk_emlrtRSI = { 576,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo vl_emlrtRSI = { 574,/* lineNo */
+static emlrtRSInfo lk_emlrtRSI = { 574,/* lineNo */
   "trackFuser/assign",                 /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo wl_emlrtRSI = { 83, /* lineNo */
+static emlrtRSInfo mk_emlrtRSI = { 83, /* lineNo */
   "repmat",                            /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\repmat.m"/* pathName */
 };
 
-static emlrtRSInfo xl_emlrtRSI = { 16, /* lineNo */
+static emlrtRSInfo nk_emlrtRSI = { 16, /* lineNo */
   "any",                               /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\any.m"/* pathName */
 };
 
-static emlrtRSInfo em_emlrtRSI = { 1,  /* lineNo */
+static emlrtRSInfo tk_emlrtRSI = { 1,  /* lineNo */
   "SystemCore/setupAndReset",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pathName */
 };
 
-static emlrtRSInfo lo_emlrtRSI = { 42, /* lineNo */
+static emlrtRSInfo bn_emlrtRSI = { 42, /* lineNo */
   "sort",                              /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sort.m"/* pathName */
 };
 
-static emlrtRSInfo mp_emlrtRSI = { 23, /* lineNo */
+static emlrtRSInfo co_emlrtRSI = { 23, /* lineNo */
   "intersect",                         /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\intersect.m"/* pathName */
 };
 
-static emlrtRSInfo np_emlrtRSI = { 97, /* lineNo */
+static emlrtRSInfo do_emlrtRSI = { 97, /* lineNo */
   "eml_setop",                         /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pathName */
 };
 
-static emlrtRSInfo up_emlrtRSI = { 634,/* lineNo */
+static emlrtRSInfo ko_emlrtRSI = { 634,/* lineNo */
   "trackFuser/getInitializing",        /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo vp_emlrtRSI = { 650,/* lineNo */
+static emlrtRSInfo lo_emlrtRSI = { 650,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo wp_emlrtRSI = { 659,/* lineNo */
+static emlrtRSInfo mo_emlrtRSI = { 659,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo xp_emlrtRSI = { 666,/* lineNo */
+static emlrtRSInfo no_emlrtRSI = { 666,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo yp_emlrtRSI = { 668,/* lineNo */
+static emlrtRSInfo oo_emlrtRSI = { 668,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo aq_emlrtRSI = { 669,/* lineNo */
+static emlrtRSInfo po_emlrtRSI = { 669,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo bq_emlrtRSI = { 671,/* lineNo */
+static emlrtRSInfo qo_emlrtRSI = { 671,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo cq_emlrtRSI = { 673,/* lineNo */
+static emlrtRSInfo ro_emlrtRSI = { 673,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo dq_emlrtRSI = { 675,/* lineNo */
+static emlrtRSInfo so_emlrtRSI = { 675,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo eq_emlrtRSI = { 679,/* lineNo */
+static emlrtRSInfo to_emlrtRSI = { 679,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo fq_emlrtRSI = { 680,/* lineNo */
+static emlrtRSInfo uo_emlrtRSI = { 680,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo gq_emlrtRSI = { 697,/* lineNo */
+static emlrtRSInfo vo_emlrtRSI = { 697,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo hq_emlrtRSI = { 703,/* lineNo */
+static emlrtRSInfo wo_emlrtRSI = { 703,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo iq_emlrtRSI = { 704,/* lineNo */
+static emlrtRSInfo xo_emlrtRSI = { 704,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo jq_emlrtRSI = { 705,/* lineNo */
+static emlrtRSInfo yo_emlrtRSI = { 705,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo kq_emlrtRSI = { 706,/* lineNo */
+static emlrtRSInfo ap_emlrtRSI = { 706,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo lq_emlrtRSI = { 715,/* lineNo */
+static emlrtRSInfo bp_emlrtRSI = { 715,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo mq_emlrtRSI = { 714,/* lineNo */
+static emlrtRSInfo cp_emlrtRSI = { 714,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo nq_emlrtRSI = { 723,/* lineNo */
+static emlrtRSInfo dp_emlrtRSI = { 723,/* lineNo */
   "trackFuser/initializeCentralTracks",/* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo oq_emlrtRSI = { 848,/* lineNo */
+static emlrtRSInfo ep_emlrtRSI = { 734,/* lineNo */
+  "trackFuser/ensureTrack",            /* fcnName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
+};
+
+static emlrtRSInfo fp_emlrtRSI = { 848,/* lineNo */
   "trackFuser/getSelfReporting",       /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo pq_emlrtRSI = { 758,/* lineNo */
+static emlrtRSInfo gp_emlrtRSI = { 758,/* lineNo */
   "trackFuser/distanceToCentralTrack", /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo qq_emlrtRSI = { 762,/* lineNo */
+static emlrtRSInfo hp_emlrtRSI = { 762,/* lineNo */
   "trackFuser/distanceToCentralTrack", /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo rq_emlrtRSI = { 763,/* lineNo */
+static emlrtRSInfo ip_emlrtRSI = { 763,/* lineNo */
   "trackFuser/distanceToCentralTrack", /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo sq_emlrtRSI = { 766,/* lineNo */
+static emlrtRSInfo jp_emlrtRSI = { 766,/* lineNo */
   "trackFuser/distanceToCentralTrack", /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo tq_emlrtRSI = { 767,/* lineNo */
+static emlrtRSInfo kp_emlrtRSI = { 767,/* lineNo */
   "trackFuser/distanceToCentralTrack", /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo uq_emlrtRSI = { 770,/* lineNo */
+static emlrtRSInfo lp_emlrtRSI = { 770,/* lineNo */
   "trackFuser/distanceToCentralTrack", /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo wq_emlrtRSI = { 15, /* lineNo */
+static emlrtRSInfo np_emlrtRSI = { 15, /* lineNo */
   "sum",                               /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sum.m"/* pathName */
 };
 
-static emlrtRSInfo ar_emlrtRSI = { 39, /* lineNo */
+static emlrtRSInfo qp_emlrtRSI = { 39, /* lineNo */
   "cat",                               /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\cat.m"/* pathName */
 };
 
-static emlrtRSInfo cr_emlrtRSI = { 781,/* lineNo */
+static emlrtRSInfo sp_emlrtRSI = { 781,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo dr_emlrtRSI = { 786,/* lineNo */
+static emlrtRSInfo tp_emlrtRSI = { 786,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo er_emlrtRSI = { 787,/* lineNo */
+static emlrtRSInfo up_emlrtRSI = { 787,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo fr_emlrtRSI = { 789,/* lineNo */
+static emlrtRSInfo vp_emlrtRSI = { 789,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo gr_emlrtRSI = { 794,/* lineNo */
+static emlrtRSInfo wp_emlrtRSI = { 794,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo hr_emlrtRSI = { 800,/* lineNo */
+static emlrtRSInfo xp_emlrtRSI = { 800,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo ir_emlrtRSI = { 801,/* lineNo */
+static emlrtRSInfo yp_emlrtRSI = { 801,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo jr_emlrtRSI = { 802,/* lineNo */
+static emlrtRSInfo aq_emlrtRSI = { 802,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo kr_emlrtRSI = { 803,/* lineNo */
+static emlrtRSInfo bq_emlrtRSI = { 803,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo lr_emlrtRSI = { 804,/* lineNo */
+static emlrtRSInfo cq_emlrtRSI = { 804,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo mr_emlrtRSI = { 806,/* lineNo */
+static emlrtRSInfo dq_emlrtRSI = { 806,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo nr_emlrtRSI = { 809,/* lineNo */
+static emlrtRSInfo eq_emlrtRSI = { 809,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo or_emlrtRSI = { 810,/* lineNo */
+static emlrtRSInfo fq_emlrtRSI = { 810,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo pr_emlrtRSI = { 814,/* lineNo */
+static emlrtRSInfo gq_emlrtRSI = { 814,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo qr_emlrtRSI = { 818,/* lineNo */
+static emlrtRSInfo hq_emlrtRSI = { 818,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo rr_emlrtRSI = { 819,/* lineNo */
+static emlrtRSInfo iq_emlrtRSI = { 819,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo sr_emlrtRSI = { 821,/* lineNo */
+static emlrtRSInfo jq_emlrtRSI = { 821,/* lineNo */
   "trackFuser/fuseAssigned",           /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo fv_emlrtRSI = { 13, /* lineNo */
+static emlrtRSInfo vt_emlrtRSI = { 13, /* lineNo */
   "nullAssignment",                    /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\nullAssignment.m"/* pathName */
 };
 
-static emlrtRSInfo gv_emlrtRSI = { 17, /* lineNo */
+static emlrtRSInfo wt_emlrtRSI = { 17, /* lineNo */
   "nullAssignment",                    /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\nullAssignment.m"/* pathName */
 };
 
-static emlrtRSInfo hv_emlrtRSI = { 152,/* lineNo */
-  "onearg_null_assignment",            /* fcnName */
-  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\nullAssignment.m"/* pathName */
-};
-
-static emlrtRSInfo iv_emlrtRSI = { 904,/* lineNo */
+static emlrtRSInfo yt_emlrtRSI = { 904,/* lineNo */
   "trackFuser/coastUnassigned",        /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo jv_emlrtRSI = { 910,/* lineNo */
+static emlrtRSInfo au_emlrtRSI = { 910,/* lineNo */
   "trackFuser/coastUnassigned",        /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo kv_emlrtRSI = { 911,/* lineNo */
+static emlrtRSInfo bu_emlrtRSI = { 911,/* lineNo */
   "trackFuser/coastUnassigned",        /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo lv_emlrtRSI = { 915,/* lineNo */
+static emlrtRSInfo cu_emlrtRSI = { 915,/* lineNo */
   "trackFuser/coastUnassigned",        /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo mv_emlrtRSI = { 918,/* lineNo */
+static emlrtRSInfo du_emlrtRSI = { 918,/* lineNo */
   "trackFuser/coastUnassigned",        /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo ov_emlrtRSI = { 928,/* lineNo */
+static emlrtRSInfo fu_emlrtRSI = { 928,/* lineNo */
   "trackFuser/predictTracks",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo pv_emlrtRSI = { 933,/* lineNo */
+static emlrtRSInfo gu_emlrtRSI = { 933,/* lineNo */
   "trackFuser/predictTracks",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo qv_emlrtRSI = { 934,/* lineNo */
+static emlrtRSInfo hu_emlrtRSI = { 934,/* lineNo */
   "trackFuser/predictTracks",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo rv_emlrtRSI = { 935,/* lineNo */
+static emlrtRSInfo iu_emlrtRSI = { 935,/* lineNo */
   "trackFuser/predictTracks",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pathName */
 };
 
-static emlrtRSInfo sv_emlrtRSI = { 762,/* lineNo */
+static emlrtRSInfo ju_emlrtRSI = { 762,/* lineNo */
   "FuserManager/formatOutput",         /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pathName */
 };
 
-static emlrtRSInfo tv_emlrtRSI = { 763,/* lineNo */
+static emlrtRSInfo ku_emlrtRSI = { 763,/* lineNo */
   "FuserManager/formatOutput",         /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pathName */
 };
 
-static emlrtRSInfo uv_emlrtRSI = { 764,/* lineNo */
+static emlrtRSInfo lu_emlrtRSI = { 764,/* lineNo */
   "FuserManager/formatOutput",         /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pathName */
 };
 
-static emlrtRSInfo vv_emlrtRSI = { 808,/* lineNo */
+static emlrtRSInfo mu_emlrtRSI = { 808,/* lineNo */
   "FuserManager/modTrackLogicState",   /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pathName */
 };
 
-static emlrtRSInfo wv_emlrtRSI = { 235,/* lineNo */
+static emlrtRSInfo nu_emlrtRSI = { 235,/* lineNo */
   "trackHistoryLogic/output",          /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackHistoryLogic.m"/* pathName */
 };
 
-static emlrtRSInfo xv_emlrtRSI = { 795,/* lineNo */
+static emlrtRSInfo ou_emlrtRSI = { 795,/* lineNo */
   "FuserManager/formatTrackWithLogic", /* fcnName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pathName */
 };
@@ -770,13 +772,6 @@ static emlrtBCInfo u_emlrtBCI = { 0,   /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtDCInfo h_emlrtDCI = { 808, /* lineNo */
-  65,                                  /* colNo */
-  "FuserManager/modTrackLogicState",   /* fName */
-  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m",/* pName */
-  1                                    /* checkKind */
-};
-
 static emlrtBCInfo v_emlrtBCI = { -1,  /* iFirst */
   -1,                                  /* iLast */
   479,                                 /* lineNo */
@@ -785,6 +780,13 @@ static emlrtBCInfo v_emlrtBCI = { -1,  /* iFirst */
   "trackFuser/stepImpl",               /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
   0                                    /* checkKind */
+};
+
+static emlrtDCInfo h_emlrtDCI = { 808, /* lineNo */
+  65,                                  /* colNo */
+  "FuserManager/modTrackLogicState",   /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m",/* pName */
+  1                                    /* checkKind */
 };
 
 static emlrtDCInfo i_emlrtDCI = { 762, /* lineNo */
@@ -941,13 +943,13 @@ static emlrtBCInfo kb_emlrtBCI = { 1,  /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtRTEInfo t_emlrtRTEI = { 486,/* lineNo */
+static emlrtRTEInfo w_emlrtRTEI = { 486,/* lineNo */
   17,                                  /* colNo */
   "trackFuser/coreAlgorithm",          /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo u_emlrtRTEI = { 493,/* lineNo */
+static emlrtRTEInfo x_emlrtRTEI = { 493,/* lineNo */
   62,                                  /* colNo */
   "trackFuser/coreAlgorithm",          /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
@@ -1038,7 +1040,7 @@ static emlrtBCInfo pb_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtRTEInfo v_emlrtRTEI = { 609,/* lineNo */
+static emlrtRTEInfo y_emlrtRTEI = { 609,/* lineNo */
   89,                                  /* colNo */
   "FuserManager/collectSourceIDs",     /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
@@ -1074,7 +1076,7 @@ static emlrtBCInfo sb_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtRTEInfo w_emlrtRTEI = { 924,/* lineNo */
+static emlrtRTEInfo ab_emlrtRTEI = { 924,/* lineNo */
   21,                                  /* colNo */
   "trackFuser/predictTracks",          /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
@@ -1110,7 +1112,7 @@ static emlrtBCInfo vb_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtRTEInfo cb_emlrtRTEI = { 1,/* lineNo */
+static emlrtRTEInfo fb_emlrtRTEI = { 1,/* lineNo */
   1,                                   /* colNo */
   "SystemCore/setup",                  /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\shared\\system\\coder\\+matlab\\+system\\+coder\\SystemCore.p"/* pName */
@@ -1830,19 +1832,19 @@ static emlrtBCInfo me_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtRTEInfo pb_emlrtRTEI = { 199,/* lineNo */
+static emlrtRTEInfo sb_emlrtRTEI = { 199,/* lineNo */
   35,                                  /* colNo */
   "trackHistoryLogic/init",            /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackHistoryLogic.m"/* pName */
 };
 
-static emlrtRTEInfo qb_emlrtRTEI = { 85,/* lineNo */
+static emlrtRTEInfo tb_emlrtRTEI = { 85,/* lineNo */
   27,                                  /* colNo */
   "validate_inputs",                   /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\nullAssignment.m"/* pName */
 };
 
-static emlrtRTEInfo rb_emlrtRTEI = { 158,/* lineNo */
+static emlrtRTEInfo ub_emlrtRTEI = { 158,/* lineNo */
   9,                                   /* colNo */
   "onearg_null_assignment",            /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\nullAssignment.m"/* pName */
@@ -1909,7 +1911,7 @@ static emlrtDCInfo ub_emlrtDCI = { 806,/* lineNo */
   1                                    /* checkKind */
 };
 
-static emlrtRTEInfo tb_emlrtRTEI = { 809,/* lineNo */
+static emlrtRTEInfo wb_emlrtRTEI = { 809,/* lineNo */
   29,                                  /* colNo */
   "trackFuser/fuseAssigned",           /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
@@ -1932,7 +1934,7 @@ static emlrtBCInfo re_emlrtBCI = { 0,  /* iFirst */
   3                                    /* checkKind */
 };
 
-static emlrtRTEInfo vb_emlrtRTEI = { 207,/* lineNo */
+static emlrtRTEInfo yb_emlrtRTEI = { 207,/* lineNo */
   56,                                  /* colNo */
   "trackHistoryLogic/hit",             /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackHistoryLogic.m"/* pName */
@@ -1950,36 +1952,6 @@ static emlrtBCInfo se_emlrtBCI = { -1, /* iFirst */
 
 static emlrtBCInfo te_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
-  892,                                 /* lineNo */
-  36,                                  /* colNo */
-  "",                                  /* aName */
-  "trackFuser/fuseAttributes",         /* fName */
-  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
-  0                                    /* checkKind */
-};
-
-static emlrtBCInfo ue_emlrtBCI = { -1, /* iFirst */
-  -1,                                  /* iLast */
-  893,                                 /* lineNo */
-  47,                                  /* colNo */
-  "",                                  /* aName */
-  "trackFuser/fuseAttributes",         /* fName */
-  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
-  0                                    /* checkKind */
-};
-
-static emlrtBCInfo ve_emlrtBCI = { -1, /* iFirst */
-  -1,                                  /* iLast */
-  894,                                 /* lineNo */
-  45,                                  /* colNo */
-  "",                                  /* aName */
-  "trackFuser/fuseAttributes",         /* fName */
-  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
-  0                                    /* checkKind */
-};
-
-static emlrtBCInfo we_emlrtBCI = { -1, /* iFirst */
-  -1,                                  /* iLast */
   789,                                 /* lineNo */
   39,                                  /* colNo */
   "",                                  /* aName */
@@ -1988,7 +1960,7 @@ static emlrtBCInfo we_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtBCInfo xe_emlrtBCI = { -1, /* iFirst */
+static emlrtBCInfo ue_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
   874,                                 /* lineNo */
   42,                                  /* colNo */
@@ -1998,12 +1970,42 @@ static emlrtBCInfo xe_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtBCInfo ye_emlrtBCI = { -1, /* iFirst */
+static emlrtBCInfo ve_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
   875,                                 /* lineNo */
   43,                                  /* colNo */
   "",                                  /* aName */
   "trackFuser/getToFuse",              /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
+  0                                    /* checkKind */
+};
+
+static emlrtBCInfo we_emlrtBCI = { -1, /* iFirst */
+  -1,                                  /* iLast */
+  892,                                 /* lineNo */
+  36,                                  /* colNo */
+  "",                                  /* aName */
+  "trackFuser/fuseAttributes",         /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
+  0                                    /* checkKind */
+};
+
+static emlrtBCInfo xe_emlrtBCI = { -1, /* iFirst */
+  -1,                                  /* iLast */
+  893,                                 /* lineNo */
+  47,                                  /* colNo */
+  "",                                  /* aName */
+  "trackFuser/fuseAttributes",         /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
+  0                                    /* checkKind */
+};
+
+static emlrtBCInfo ye_emlrtBCI = { -1, /* iFirst */
+  -1,                                  /* iLast */
+  894,                                 /* lineNo */
+  45,                                  /* colNo */
+  "",                                  /* aName */
+  "trackFuser/fuseAttributes",         /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
   0                                    /* checkKind */
 };
@@ -2222,6 +2224,16 @@ static emlrtBCInfo qf_emlrtBCI = { -1, /* iFirst */
 
 static emlrtBCInfo rf_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
+  821,                                 /* lineNo */
+  130,                                 /* colNo */
+  "",                                  /* aName */
+  "trackFuser/fuseAssigned",           /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
+  0                                    /* checkKind */
+};
+
+static emlrtBCInfo sf_emlrtBCI = { -1, /* iFirst */
+  -1,                                  /* iLast */
   892,                                 /* lineNo */
   56,                                  /* colNo */
   "",                                  /* aName */
@@ -2230,20 +2242,10 @@ static emlrtBCInfo rf_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtBCInfo sf_emlrtBCI = { -1, /* iFirst */
+static emlrtBCInfo tf_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
   893,                                 /* lineNo */
   67,                                  /* colNo */
-  "",                                  /* aName */
-  "trackFuser/fuseAttributes",         /* fName */
-  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
-  0                                    /* checkKind */
-};
-
-static emlrtBCInfo tf_emlrtBCI = { -1, /* iFirst */
-  -1,                                  /* iLast */
-  894,                                 /* lineNo */
-  65,                                  /* colNo */
   "",                                  /* aName */
   "trackFuser/fuseAttributes",         /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
@@ -2262,8 +2264,8 @@ static emlrtBCInfo uf_emlrtBCI = { -1, /* iFirst */
 
 static emlrtBCInfo vf_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
-  895,                                 /* lineNo */
-  54,                                  /* colNo */
+  894,                                 /* lineNo */
+  65,                                  /* colNo */
   "",                                  /* aName */
   "trackFuser/fuseAttributes",         /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
@@ -2273,7 +2275,7 @@ static emlrtBCInfo vf_emlrtBCI = { -1, /* iFirst */
 static emlrtBCInfo wf_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
   895,                                 /* lineNo */
-  74,                                  /* colNo */
+  54,                                  /* colNo */
   "",                                  /* aName */
   "trackFuser/fuseAttributes",         /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
@@ -2283,6 +2285,16 @@ static emlrtBCInfo wf_emlrtBCI = { -1, /* iFirst */
 static emlrtBCInfo xf_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
   895,                                 /* lineNo */
+  74,                                  /* colNo */
+  "",                                  /* aName */
+  "trackFuser/fuseAttributes",         /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
+  0                                    /* checkKind */
+};
+
+static emlrtBCInfo yf_emlrtBCI = { -1, /* iFirst */
+  -1,                                  /* iLast */
+  895,                                 /* lineNo */
   37,                                  /* colNo */
   "",                                  /* aName */
   "trackFuser/fuseAttributes",         /* fName */
@@ -2290,7 +2302,7 @@ static emlrtBCInfo xf_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtBCInfo pg_emlrtBCI = { -1, /* iFirst */
+static emlrtBCInfo qg_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
   847,                                 /* lineNo */
   67,                                  /* colNo */
@@ -2300,7 +2312,7 @@ static emlrtBCInfo pg_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtBCInfo qg_emlrtBCI = { -1, /* iFirst */
+static emlrtBCInfo rg_emlrtBCI = { -1, /* iFirst */
   -1,                                  /* iLast */
   818,                                 /* lineNo */
   105,                                 /* colNo */
@@ -2310,29 +2322,19 @@ static emlrtBCInfo qg_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtBCInfo rg_emlrtBCI = { -1, /* iFirst */
-  -1,                                  /* iLast */
-  821,                                 /* lineNo */
-  130,                                 /* colNo */
-  "",                                  /* aName */
-  "trackFuser/fuseAssigned",           /* fName */
-  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m",/* pName */
-  0                                    /* checkKind */
-};
-
-static emlrtRTEInfo ac_emlrtRTEI = { 214,/* lineNo */
+static emlrtRTEInfo dc_emlrtRTEI = { 214,/* lineNo */
   56,                                  /* colNo */
   "trackHistoryLogic/miss",            /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\trackHistoryLogic.m"/* pName */
 };
 
-static emlrtRTEInfo bc_emlrtRTEI = { 739,/* lineNo */
+static emlrtRTEInfo ec_emlrtRTEI = { 739,/* lineNo */
   25,                                  /* colNo */
   "FuserManager/recycleTracks",        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
 };
 
-static emlrtRTEInfo cc_emlrtRTEI = { 743,/* lineNo */
+static emlrtRTEInfo fc_emlrtRTEI = { 743,/* lineNo */
   29,                                  /* colNo */
   "FuserManager/recycleTracks",        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
@@ -2740,241 +2742,493 @@ static emlrtBCInfo vh_emlrtBCI = { -1, /* iFirst */
   0                                    /* checkKind */
 };
 
-static emlrtRTEInfo vc_emlrtRTEI = { 497,/* lineNo */
+static emlrtRTEInfo yc_emlrtRTEI = { 497,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo wc_emlrtRTEI = { 604,/* lineNo */
+static emlrtRTEInfo ad_emlrtRTEI = { 604,/* lineNo */
   13,                                  /* colNo */
   "FuserManager",                      /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
 };
 
-static emlrtRTEInfo xc_emlrtRTEI = { 524,/* lineNo */
+static emlrtRTEInfo bd_emlrtRTEI = { 524,/* lineNo */
   70,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo yc_emlrtRTEI = { 524,/* lineNo */
+static emlrtRTEInfo cd_emlrtRTEI = { 524,/* lineNo */
   61,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo ad_emlrtRTEI = { 28,/* lineNo */
+static emlrtRTEInfo dd_emlrtRTEI = { 925,/* lineNo */
+  31,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo ed_emlrtRTEI = { 929,/* lineNo */
+  25,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo fd_emlrtRTEI = { 929,/* lineNo */
+  50,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo gd_emlrtRTEI = { 932,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo hd_emlrtRTEI = { 936,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo id_emlrtRTEI = { 28,/* lineNo */
   9,                                   /* colNo */
   "colon",                             /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\colon.m"/* pName */
 };
 
-static emlrtRTEInfo bd_emlrtRTEI = { 763,/* lineNo */
+static emlrtRTEInfo jd_emlrtRTEI = { 762,/* lineNo */
+  65,                                  /* colNo */
+  "FuserManager",                      /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
+};
+
+static emlrtRTEInfo kd_emlrtRTEI = { 479,/* lineNo */
+  13,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo ld_emlrtRTEI = { 763,/* lineNo */
   21,                                  /* colNo */
   "FuserManager",                      /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
 };
 
-static emlrtRTEInfo cd_emlrtRTEI = { 504,/* lineNo */
+static emlrtRTEInfo md_emlrtRTEI = { 764,/* lineNo */
+  21,                                  /* colNo */
+  "FuserManager",                      /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
+};
+
+static emlrtRTEInfo nd_emlrtRTEI = { 792,/* lineNo */
+  53,                                  /* colNo */
+  "FuserManager",                      /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
+};
+
+static emlrtRTEInfo od_emlrtRTEI = { 793,/* lineNo */
+  53,                                  /* colNo */
+  "FuserManager",                      /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
+};
+
+static emlrtRTEInfo pd_emlrtRTEI = { 475,/* lineNo */
+  41,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo qd_emlrtRTEI = { 504,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo dd_emlrtRTEI = { 521,/* lineNo */
+static emlrtRTEInfo rd_emlrtRTEI = { 521,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo ed_emlrtRTEI = { 475,/* lineNo */
+static emlrtRTEInfo sd_emlrtRTEI = { 475,/* lineNo */
   59,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo gd_emlrtRTEI = { 575,/* lineNo */
+static emlrtRTEInfo ud_emlrtRTEI = { 575,/* lineNo */
   17,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo hd_emlrtRTEI = { 587,/* lineNo */
+static emlrtRTEInfo vd_emlrtRTEI = { 587,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo id_emlrtRTEI = { 589,/* lineNo */
+static emlrtRTEInfo wd_emlrtRTEI = { 589,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo jd_emlrtRTEI = { 595,/* lineNo */
+static emlrtRTEInfo xd_emlrtRTEI = { 595,/* lineNo */
   36,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo kd_emlrtRTEI = { 600,/* lineNo */
+static emlrtRTEInfo yd_emlrtRTEI = { 600,/* lineNo */
   37,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo ld_emlrtRTEI = { 627,/* lineNo */
+static emlrtRTEInfo ae_emlrtRTEI = { 627,/* lineNo */
   53,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo md_emlrtRTEI = { 627,/* lineNo */
+static emlrtRTEInfo be_emlrtRTEI = { 627,/* lineNo */
   34,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo nd_emlrtRTEI = { 614,/* lineNo */
+static emlrtRTEInfo ce_emlrtRTEI = { 614,/* lineNo */
   21,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo od_emlrtRTEI = { 627,/* lineNo */
+static emlrtRTEInfo de_emlrtRTEI = { 627,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo pd_emlrtRTEI = { 608,/* lineNo */
+static emlrtRTEInfo ee_emlrtRTEI = { 608,/* lineNo */
   21,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo qd_emlrtRTEI = { 97,/* lineNo */
+static emlrtRTEInfo fe_emlrtRTEI = { 97,/* lineNo */
   35,                                  /* colNo */
   "eml_setop",                         /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\ops\\private\\eml_setop.m"/* pName */
 };
 
-static emlrtRTEInfo rd_emlrtRTEI = { 589,/* lineNo */
+static emlrtRTEInfo ge_emlrtRTEI = { 589,/* lineNo */
   52,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo td_emlrtRTEI = { 569,/* lineNo */
+static emlrtRTEInfo ie_emlrtRTEI = { 569,/* lineNo */
   49,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo ud_emlrtRTEI = { 620,/* lineNo */
+static emlrtRTEInfo je_emlrtRTEI = { 620,/* lineNo */
   96,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo lf_emlrtRTEI = { 781,/* lineNo */
+static emlrtRTEInfo ag_emlrtRTEI = { 663,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo bg_emlrtRTEI = { 664,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo cg_emlrtRTEI = { 665,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo dg_emlrtRTEI = { 666,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo eg_emlrtRTEI = { 667,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo fg_emlrtRTEI = { 668,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo gg_emlrtRTEI = { 669,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo hg_emlrtRTEI = { 670,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo ig_emlrtRTEI = { 671,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo jg_emlrtRTEI = { 672,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo kg_emlrtRTEI = { 673,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo lg_emlrtRTEI = { 675,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo mg_emlrtRTEI = { 676,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo ng_emlrtRTEI = { 680,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo og_emlrtRTEI = { 697,/* lineNo */
+  47,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo pg_emlrtRTEI = { 709,/* lineNo */
+  25,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo qg_emlrtRTEI = { 781,/* lineNo */
+  41,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo rg_emlrtRTEI = { 781,/* lineNo */
+  40,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo sg_emlrtRTEI = { 781,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo mf_emlrtRTEI = { 794,/* lineNo */
+static emlrtRTEInfo tg_emlrtRTEI = { 794,/* lineNo */
   37,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo nf_emlrtRTEI = { 796,/* lineNo */
+static emlrtRTEInfo ug_emlrtRTEI = { 796,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo of_emlrtRTEI = { 799,/* lineNo */
+static emlrtRTEInfo vg_emlrtRTEI = { 799,/* lineNo */
   17,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo pf_emlrtRTEI = { 801,/* lineNo */
+static emlrtRTEInfo wg_emlrtRTEI = { 801,/* lineNo */
   26,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo qf_emlrtRTEI = { 804,/* lineNo */
+static emlrtRTEInfo xg_emlrtRTEI = { 803,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo yg_emlrtRTEI = { 804,/* lineNo */
   123,                                 /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo rf_emlrtRTEI = { 806,/* lineNo */
+static emlrtRTEInfo ah_emlrtRTEI = { 804,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo bh_emlrtRTEI = { 775,/* lineNo */
+  28,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo ch_emlrtRTEI = { 806,/* lineNo */
   140,                                 /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo sf_emlrtRTEI = { 819,/* lineNo */
+static emlrtRTEInfo dh_emlrtRTEI = { 812,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo eh_emlrtRTEI = { 818,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo fh_emlrtRTEI = { 819,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo gh_emlrtRTEI = { 819,/* lineNo */
   103,                                 /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo tf_emlrtRTEI = { 821,/* lineNo */
+static emlrtRTEInfo hh_emlrtRTEI = { 820,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo ih_emlrtRTEI = { 821,/* lineNo */
+  21,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo jh_emlrtRTEI = { 821,/* lineNo */
   72,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo uf_emlrtRTEI = { 794,/* lineNo */
+static emlrtRTEInfo kh_emlrtRTEI = { 794,/* lineNo */
   30,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo vf_emlrtRTEI = { 890,/* lineNo */
+static emlrtRTEInfo lh_emlrtRTEI = { 890,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo wf_emlrtRTEI = { 781,/* lineNo */
+static emlrtRTEInfo mh_emlrtRTEI = { 781,/* lineNo */
   33,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo og_emlrtRTEI = { 806,/* lineNo */
+static emlrtRTEInfo ei_emlrtRTEI = { 806,/* lineNo */
   55,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo pg_emlrtRTEI = { 794,/* lineNo */
+static emlrtRTEInfo fi_emlrtRTEI = { 794,/* lineNo */
   13,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo qg_emlrtRTEI = { 801,/* lineNo */
+static emlrtRTEInfo gi_emlrtRTEI = { 801,/* lineNo */
   17,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo rg_emlrtRTEI = { 904,/* lineNo */
+static emlrtRTEInfo hi_emlrtRTEI = { 904,/* lineNo */
   39,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
 };
 
-static emlrtRTEInfo tg_emlrtRTEI = { 902,/* lineNo */
+static emlrtRTEInfo ii_emlrtRTEI = { 908,/* lineNo */
+  17,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo ki_emlrtRTEI = { 741,/* lineNo */
+  21,                                  /* colNo */
+  "FuserManager",                      /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
+};
+
+static emlrtRTEInfo li_emlrtRTEI = { 909,/* lineNo */
+  17,                                  /* colNo */
+  "trackFuser",                        /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
+};
+
+static emlrtRTEInfo mi_emlrtRTEI = { 747,/* lineNo */
+  21,                                  /* colNo */
+  "FuserManager",                      /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
+};
+
+static emlrtRTEInfo ni_emlrtRTEI = { 744,/* lineNo */
+  25,                                  /* colNo */
+  "FuserManager",                      /* fName */
+  "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+internal\\FuserManager.m"/* pName */
+};
+
+static emlrtRTEInfo oi_emlrtRTEI = { 902,/* lineNo */
   49,                                  /* colNo */
   "trackFuser",                        /* fName */
   "C:\\Program Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\trackFuser.m"/* pName */
@@ -2985,12 +3239,7 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
   const emxArray_struct0_T *localTracks, const emxArray_uint32_T *assignments,
   emxArray_boolean_T *updated);
 static void c_trackFuser_distanceToCentralT(const emlrtStack *sp, trackFuser
-  *obj, const emxArray_struct0_T *localTracks, uint32_T
-  initializedCentralTrack_TrackID, uint32_T c_initializedCentralTrack_Branc,
-  uint32_T initializedCentralTrack_Age, real_T c_initializedCentralTrack_Objec,
-  real_T d_initializedCentralTrack_Objec, boolean_T
-  c_initializedCentralTrack_IsCon, boolean_T c_initializedCentralTrack_IsCoa,
-  boolean_T c_initializedCentralTrack_IsSel, const real_T
+  *obj, const emxArray_struct0_T *localTracks, const real_T
   initializedCentralTrack_pState[6], const real_T
   c_initializedCentralTrack_pStat[36], real_T c_initializedCentralTrack_pUpda,
   const uint32_T localInds_data[], int32_T localInds_size, real_T cost_data[],
@@ -3018,13 +3267,8 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
   emxArray_boolean_T *updated)
 {
   b_objectTrack b_expl_temp;
-  b_objectTrack jw_emlrtRSI;
-  b_objectTrack kw_emlrtRSI;
-  c_objectTrack b_obj;
-  c_objectTrack *transformedTracks_data;
   emlrtStack b_st;
   emlrtStack c_st;
-  emlrtStack d_st;
   emlrtStack st;
   emxArray_boolean_T *inAssigned;
   emxArray_boolean_T *toFuse;
@@ -3037,10 +3281,13 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
   emxArray_uint32_T *b_assignments;
   emxArray_uint32_T *uniqueAssigned;
   fuserSourceConfiguration *thisConfig;
+  objectTrack b_obj;
+  objectTrack c_obj;
+  objectTrack *transformedTracks_data;
   const struct0_T *localTracks_data;
   struct1_T *otherAttributes_data;
-  trackHistoryLogic *c_obj;
-  real_T b_dv[2];
+  trackHistoryLogic *d_obj;
+  real_T dv[2];
   real_T *b_ii_data;
   int32_T b_i;
   int32_T b_loop_ub;
@@ -3063,18 +3310,20 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  d_st.prev = &c_st;
-  d_st.tls = c_st.tls;
   assignments_data = assignments->data;
   localTracks_data = localTracks->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  b_obj = obj->pTracksList[99];
-  b_dv[0] = 1.0;
-  b_dv[1] = assignments->size[0];
-  emxInit_objectTrack(sp, &transformedTracks, &lf_emlrtRTEI);
-  st.site = &cr_emlrtRSI;
-  repmat(&st, &b_obj, b_dv, transformedTracks);
+  emxInitStruct_objectTrack(sp, &b_obj, &xg_emlrtRTEI, true);
+  emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[99], &qg_emlrtRTEI);
+  emxInitMatrix_objectTrack1(sp, &c_obj, &rg_emlrtRTEI);
+  emxCopyStruct_objectTrack(sp, &c_obj, &b_obj, &rg_emlrtRTEI);
+  dv[0] = 1.0;
+  dv[1] = assignments->size[0];
+  emxInit_objectTrack(sp, &transformedTracks, &sg_emlrtRTEI);
+  st.site = &sp_emlrtRSI;
+  repmat(&st, &c_obj, dv, transformedTracks);
   transformedTracks_data = transformedTracks->data;
+  emxFreeMatrix_objectTrack1(sp, &c_obj);
   loop_ub = assignments->size[0];
   for (i = 0; i < loop_ub; i++) {
     struct0_T expl_temp;
@@ -3090,67 +3339,32 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
     }
 
     expl_temp = localTracks_data[nz - 1];
-    st.site = &dr_emlrtRSI;
-    b_st.site = &ug_emlrtRSI;
+    st.site = &tp_emlrtRSI;
+    b_st.site = &vg_emlrtRSI;
     thisConfig = FuserManager_getConfigByID(&b_st, obj, expl_temp.SourceIndex);
-    st.site = &er_emlrtRSI;
+    st.site = &up_emlrtRSI;
     if (!thisConfig->pIsTransformToCentralValid) {
-      b_st.site = &vg_emlrtRSI;
-      c_st.site = &xg_emlrtRSI;
-      local2central(&c_st, expl_temp.TrackID, expl_temp.BranchID,
-                    expl_temp.SourceIndex, expl_temp.UpdateTime, expl_temp.Age,
-                    expl_temp.State, expl_temp.StateCovariance,
-                    expl_temp.ObjectClassID,
-                    expl_temp.ObjectClassProbabilities.data,
-                    expl_temp.ObjectClassProbabilities.size,
-                    expl_temp.IsConfirmed, expl_temp.IsCoasted,
-                    expl_temp.IsSelfReported, &b_expl_temp);
-      c_st.site = &yg_emlrtRSI;
-
-      /*  Pre-define output with longest TrackLogic to force codegen consistency */
-      if (b_expl_temp.SourceIndex == 1U) {
-        /*  Radar */
-        d_st.site = &fi_emlrtRSI;
-        Ecef2nedTrack(&d_st, b_expl_temp.TrackID, b_expl_temp.BranchID, 1U,
-                      b_expl_temp.Age, b_expl_temp.ObjectClassID,
-                      b_expl_temp.ObjectClassProbabilities.data,
-                      b_expl_temp.ObjectClassProbabilities.size,
-                      b_expl_temp.IsConfirmed, b_expl_temp.IsCoasted,
-                      b_expl_temp.IsSelfReported, b_expl_temp.pState,
-                      b_expl_temp.pStateCovariance, b_expl_temp.pUpdateTime,
-                      &jw_emlrtRSI);
-      } else if (b_expl_temp.SourceIndex == 2U) {
-        /*  ADSB */
-        d_st.site = &gi_emlrtRSI;
-        Ned2ecefTrack(&d_st, b_expl_temp.TrackID, b_expl_temp.BranchID, 2U,
-                      b_expl_temp.Age, b_expl_temp.ObjectClassID,
-                      b_expl_temp.ObjectClassProbabilities.data,
-                      b_expl_temp.ObjectClassProbabilities.size,
-                      b_expl_temp.IsConfirmed, b_expl_temp.IsCoasted,
-                      b_expl_temp.IsSelfReported, b_expl_temp.pState,
-                      b_expl_temp.pStateCovariance, b_expl_temp.pUpdateTime,
-                      &kw_emlrtRSI);
-      }
-
+      b_st.site = &wg_emlrtRSI;
       thisConfig->pIsTransformToCentralValid = true;
     }
 
-    b_st.site = &wg_emlrtRSI;
-    local2central(&b_st, expl_temp.TrackID, expl_temp.BranchID,
-                  expl_temp.SourceIndex, expl_temp.UpdateTime, expl_temp.Age,
-                  expl_temp.State, expl_temp.StateCovariance,
-                  expl_temp.ObjectClassID,
-                  expl_temp.ObjectClassProbabilities.data,
-                  expl_temp.ObjectClassProbabilities.size, expl_temp.IsConfirmed,
-                  expl_temp.IsCoasted, expl_temp.IsSelfReported, &b_expl_temp);
-    st.site = &fr_emlrtRSI;
+    st.site = &up_emlrtRSI;
+    b_st.site = &ep_emlrtRSI;
+    objectTrack_objectTrack(&b_st, expl_temp.SourceIndex, expl_temp.UpdateTime,
+      expl_temp.State, expl_temp.StateCovariance, expl_temp.ObjectClassID,
+      expl_temp.ObjectClassProbabilities.data,
+      expl_temp.ObjectClassProbabilities.size, expl_temp.TrackLogic,
+      expl_temp.TrackLogicState.data, expl_temp.TrackLogicState.size,
+      expl_temp.IsConfirmed, expl_temp.IsCoasted, expl_temp.IsSelfReported,
+      expl_temp.ObjectAttributes, &b_expl_temp);
+    st.site = &vp_emlrtRSI;
     nz = transformedTracks->size[1] - 1;
     if (i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
-    b_st.site = &qc_emlrtRSI;
+    b_st.site = &rc_emlrtRSI;
     c_st.site = &gb_emlrtRSI;
     if (b_expl_temp.pUpdateTime < 0.0) {
       emlrtErrorWithMessageIdR2018a(&c_st, &l_emlrtRTEI,
@@ -3168,17 +3382,17 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
 
     if (i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
     transformedTracks_data[i].pUpdateTime = b_expl_temp.pUpdateTime;
-    st.site = &fr_emlrtRSI;
+    st.site = &vp_emlrtRSI;
     if (i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
-    b_st.site = &rc_emlrtRSI;
+    b_st.site = &sc_emlrtRSI;
     validateattributes(&b_st, b_expl_temp.pState);
     for (b_i = 0; b_i < 6; b_i++) {
       if (i > nz) {
@@ -3188,19 +3402,19 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
       transformedTracks_data[i].pState[b_i] = b_expl_temp.pState[b_i];
     }
 
-    st.site = &fr_emlrtRSI;
+    st.site = &vp_emlrtRSI;
     if (i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
-    b_st.site = &sc_emlrtRSI;
-    b_validateattributes(&b_st, b_expl_temp.pStateCovariance);
     b_st.site = &tc_emlrtRSI;
+    b_validateattributes(&b_st, b_expl_temp.pStateCovariance);
+    b_st.site = &uc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&b_st, b_expl_temp.pStateCovariance);
     if (i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
     for (b_i = 0; b_i < 36; b_i++) {
@@ -3210,35 +3424,35 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
 
     if (i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, (emlrtConstCTX)sp);
+        &te_emlrtBCI, (emlrtConstCTX)sp);
     }
 
     transformedTracks_data[i].IsConfirmed = b_expl_temp.IsConfirmed;
     if (i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, (emlrtConstCTX)sp);
+        &te_emlrtBCI, (emlrtConstCTX)sp);
     }
 
     transformedTracks_data[i].IsCoasted = b_expl_temp.IsCoasted;
     if (i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, (emlrtConstCTX)sp);
+        &te_emlrtBCI, (emlrtConstCTX)sp);
     }
 
     transformedTracks_data[i].IsSelfReported = b_expl_temp.IsSelfReported;
   }
 
-  st.site = &gr_emlrtRSI;
-  emxInit_uint32_T(&st, &b_assignments, 1, &mf_emlrtRTEI);
+  st.site = &wp_emlrtRSI;
+  emxInit_uint32_T(&st, &b_assignments, 1, &tg_emlrtRTEI);
   nz = b_assignments->size[0];
   b_assignments->size[0] = assignments->size[0];
-  emxEnsureCapacity_uint32_T(&st, b_assignments, nz, &mf_emlrtRTEI);
+  emxEnsureCapacity_uint32_T(&st, b_assignments, nz, &tg_emlrtRTEI);
   b_assignments_data = b_assignments->data;
   for (b_i = 0; b_i < loop_ub; b_i++) {
     b_assignments_data[b_i] = assignments_data[b_i];
   }
 
-  emxInit_uint32_T(&st, &uniqueAssigned, 1, &pg_emlrtRTEI);
+  emxInit_uint32_T(&st, &uniqueAssigned, 1, &fi_emlrtRTEI);
   b_st.site = &ib_emlrtRSI;
   b_unique_vector(&b_st, b_assignments, uniqueAssigned);
   uniqueAssigned_data = uniqueAssigned->data;
@@ -3246,19 +3460,19 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
   updated->size[0] = 1;
   b_loop_ub = uniqueAssigned->size[0];
   updated->size[1] = uniqueAssigned->size[0];
-  emxEnsureCapacity_boolean_T(sp, updated, nz, &nf_emlrtRTEI);
+  emxEnsureCapacity_boolean_T(sp, updated, nz, &ug_emlrtRTEI);
   updated_data = updated->data;
   for (b_i = 0; b_i < b_loop_ub; b_i++) {
     updated_data[b_i] = false;
   }
 
-  emxInit_boolean_T(sp, &inAssigned, 1, &of_emlrtRTEI, true);
-  emxInit_boolean_T(sp, &toFuse, 1, &qg_emlrtRTEI, true);
-  emxInit_int32_T(sp, &r, 1, &qf_emlrtRTEI);
-  emxInit_int32_T(sp, &ii, 1, &sd_emlrtRTEI);
-  emxInit_struct1_T(sp, &otherAttributes, &vf_emlrtRTEI);
-  emxInit_int32_T(sp, &r1, 1, &rf_emlrtRTEI);
-  emxInit_real_T(sp, &b_ii, 1, &og_emlrtRTEI);
+  emxInit_boolean_T(sp, &inAssigned, 1, &vg_emlrtRTEI, true);
+  emxInit_boolean_T(sp, &toFuse, 1, &gi_emlrtRTEI, true);
+  emxInit_int32_T(sp, &r, 1, &yg_emlrtRTEI);
+  emxInit_int32_T(sp, &ii, 1, &he_emlrtRTEI);
+  emxInit_struct1_T(sp, &otherAttributes, &lh_emlrtRTEI);
+  emxInit_int32_T(sp, &r1, 1, &ch_emlrtRTEI);
+  emxInit_real_T(sp, &b_ii, 1, &ei_emlrtRTEI);
   for (c_i = 0; c_i < b_loop_ub; c_i++) {
     int32_T trueCount;
     if (c_i + 1 > b_loop_ub) {
@@ -3268,31 +3482,31 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
 
     nz = inAssigned->size[0];
     inAssigned->size[0] = loop_ub;
-    emxEnsureCapacity_boolean_T(sp, inAssigned, nz, &of_emlrtRTEI);
+    emxEnsureCapacity_boolean_T(sp, inAssigned, nz, &vg_emlrtRTEI);
     inAssigned_data = inAssigned->data;
     for (b_i = 0; b_i < loop_ub; b_i++) {
       inAssigned_data[b_i] = (uniqueAssigned_data[c_i] == assignments_data[b_i]);
     }
 
-    st.site = &hr_emlrtRSI;
-    b_st.site = &yl_emlrtRSI;
+    st.site = &xp_emlrtRSI;
+    b_st.site = &ok_emlrtRSI;
     eml_find(&b_st, inAssigned, ii);
     ii_data = ii->data;
-    st.site = &ir_emlrtRSI;
+    st.site = &yp_emlrtRSI;
     trueCount = ii->size[0];
     nz = toFuse->size[0];
     toFuse->size[0] = ii->size[0];
-    emxEnsureCapacity_boolean_T(&st, toFuse, nz, &pf_emlrtRTEI);
+    emxEnsureCapacity_boolean_T(&st, toFuse, nz, &wg_emlrtRTEI);
     toFuse_data = toFuse->data;
     for (b_i = 0; b_i < trueCount; b_i++) {
       if (b_i + 1 > trueCount) {
-        emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, trueCount, &xe_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, trueCount, &ue_emlrtBCI, &st);
       }
 
       nz = ii_data[b_i] - 1;
       if ((nz < 0) || (nz > transformedTracks->size[1] - 1)) {
         emlrtDynamicBoundsCheckR2012b(nz, 0, transformedTracks->size[1] - 1,
-          &ye_emlrtBCI, &st);
+          &ve_emlrtBCI, &st);
       }
 
       if ((transformedTracks_data[ii_data[b_i] - 1].IsConfirmed &&
@@ -3314,7 +3528,7 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
       }
     }
 
-    st.site = &jr_emlrtRSI;
+    st.site = &aq_emlrtRSI;
     if (b_any(&st, toFuse)) {
       real_T id;
       int32_T c_loop_ub;
@@ -3322,12 +3536,13 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
       int32_T obj_tmp;
       uint32_T u;
       boolean_T b_value;
-      st.site = &kr_emlrtRSI;
-      b_st.site = &wq_emlrtRSI;
-      c_st.site = &bg_emlrtRSI;
+      st.site = &bq_emlrtRSI;
+      b_st.site = &np_emlrtRSI;
+      c_st.site = &cg_emlrtRSI;
       nz = b_combineVectorElements(&c_st, toFuse);
       obj_tmp = (int32_T)uniqueAssigned_data[c_i] - 1;
-      b_obj = obj->pTracksList[obj_tmp];
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &xg_emlrtRTEI);
       b_value = ((obj_tmp < 0) || (obj_tmp > 99));
       if (b_value) {
         emlrtDynamicBoundsCheckR2012b(obj_tmp, 0, 99, &ef_emlrtBCI,
@@ -3346,7 +3561,8 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
       }
 
       b_obj.Age = u;
-      obj->pTracksList[obj_tmp] = b_obj;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &xg_emlrtRTEI);
       trueCount = 0;
       for (i = 0; i < loop_ub; i++) {
         if (inAssigned_data[i]) {
@@ -3356,7 +3572,7 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
 
       nz = r->size[0];
       r->size[0] = trueCount;
-      emxEnsureCapacity_int32_T(sp, r, nz, &qf_emlrtRTEI);
+      emxEnsureCapacity_int32_T(sp, r, nz, &yg_emlrtRTEI);
       r2 = r->data;
       nz = 0;
       for (i = 0; i < loop_ub; i++) {
@@ -3366,7 +3582,7 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
         }
       }
 
-      st.site = &lr_emlrtRSI;
+      st.site = &cq_emlrtRSI;
       c_loop_ub = r->size[0];
       for (i = 0; i < c_loop_ub; i++) {
         if (r2[i] > assignments->size[0] - 1) {
@@ -3401,18 +3617,21 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
         id = localTracks_data[trueCount - 1].ObjectClassID;
       }
 
-      st.site = &lr_emlrtRSI;
-      b_obj = obj->pTracksList[obj_tmp];
-      b_st.site = &ig_emlrtRSI;
+      st.site = &cq_emlrtRSI;
+      emxCopyStruct_objectTrack(&st, &b_obj, &obj->pTracksList[obj_tmp],
+        &ah_emlrtRTEI);
+      b_st.site = &jg_emlrtRSI;
       c_validateattributes(&b_st, id);
       b_obj.ObjectClassID = id;
-      obj->pTracksList[obj_tmp] = b_obj;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &ah_emlrtRTEI);
       if (b_value) {
         emlrtDynamicBoundsCheckR2012b(obj_tmp, 0, 99, &if_emlrtBCI,
           (emlrtConstCTX)sp);
       }
 
-      b_obj = obj->pTracksList[obj_tmp];
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &bh_emlrtRTEI);
       end = toFuse->size[0];
       trueCount = 0;
       for (i = 0; i < end; i++) {
@@ -3423,7 +3642,7 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
 
       nz = r1->size[0];
       r1->size[0] = trueCount;
-      emxEnsureCapacity_int32_T(sp, r1, nz, &rf_emlrtRTEI);
+      emxEnsureCapacity_int32_T(sp, r1, nz, &ch_emlrtRTEI);
       r3 = r1->data;
       nz = 0;
       for (i = 0; i < end; i++) {
@@ -3436,7 +3655,7 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
       trueCount = r1->size[0];
       nz = b_ii->size[0];
       b_ii->size[0] = r1->size[0];
-      emxEnsureCapacity_real_T(sp, b_ii, nz, &og_emlrtRTEI);
+      emxEnsureCapacity_real_T(sp, b_ii, nz, &ei_emlrtRTEI);
       b_ii_data = b_ii->data;
       for (i = 0; i < trueCount; i++) {
         if (r3[i] > ii->size[0] - 1) {
@@ -3447,50 +3666,51 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
         b_ii_data[i] = ii_data[r3[i]];
       }
 
-      st.site = &mr_emlrtRSI;
+      st.site = &dq_emlrtRSI;
       Fuserxcov_fuse(&st, &obj->cFuser, &b_obj, transformedTracks, b_ii);
-      obj->pTracksList[obj_tmp] = b_obj;
-      st.site = &nr_emlrtRSI;
-      b_st.site = &wq_emlrtRSI;
-      c_st.site = &bg_emlrtRSI;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &bh_emlrtRTEI);
+      st.site = &eq_emlrtRSI;
+      b_st.site = &np_emlrtRSI;
+      c_st.site = &cg_emlrtRSI;
       nz = b_combineVectorElements(&c_st, toFuse);
       emlrtForLoopVectorCheckR2021a(1.0, 1.0, nz, mxDOUBLE_CLASS, nz,
-        &tb_emlrtRTEI, (emlrtConstCTX)sp);
+        &wb_emlrtRTEI, (emlrtConstCTX)sp);
       for (b_i = 0; b_i < nz; b_i++) {
         boolean_T bv[50];
-        st.site = &or_emlrtRSI;
-        c_obj = obj->pTrackLogics[obj_tmp];
-        if (c_obj->pIsFirstUpdate) {
-          emlrtErrorWithMessageIdR2018a(&st, &vb_emlrtRTEI,
+        st.site = &fq_emlrtRSI;
+        d_obj = obj->pTrackLogics[obj_tmp];
+        if (d_obj->pIsFirstUpdate) {
+          emlrtErrorWithMessageIdR2018a(&st, &yb_emlrtRTEI,
             "shared_tracking:trackHistoryLogic:notInitialized",
             "shared_tracking:trackHistoryLogic:notInitialized", 3, 4, 3, "hit");
         }
 
         bv[0] = true;
         for (i = 0; i < 49; i++) {
-          bv[i + 1] = c_obj->pRecentHistory[i];
+          bv[i + 1] = d_obj->pRecentHistory[i];
         }
 
         for (i = 0; i < 50; i++) {
-          c_obj->pRecentHistory[i] = bv[i];
+          d_obj->pRecentHistory[i] = bv[i];
         }
 
-        c_obj->pIsFirstUpdate = false;
+        d_obj->pIsFirstUpdate = false;
       }
 
       if (obj->pTracksList[obj_tmp].IsConfirmed) {
         b_value = true;
       } else {
-        st.site = &pr_emlrtRSI;
-        c_obj = obj->pTrackLogics[obj_tmp];
-        if (c_obj->pIsFirstUpdate) {
+        st.site = &gq_emlrtRSI;
+        d_obj = obj->pTrackLogics[obj_tmp];
+        if (d_obj->pIsFirstUpdate) {
           b_value = false;
         } else {
           boolean_T x_idx_1;
           boolean_T x_idx_2;
-          b_value = c_obj->pRecentHistory[0];
-          x_idx_1 = c_obj->pRecentHistory[1];
-          x_idx_2 = c_obj->pRecentHistory[2];
+          b_value = d_obj->pRecentHistory[0];
+          x_idx_1 = d_obj->pRecentHistory[1];
+          x_idx_2 = d_obj->pRecentHistory[2];
           b_value = ((b_value + x_idx_1) + x_idx_2 >= 2);
         }
 
@@ -3501,9 +3721,11 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
         }
       }
 
-      b_obj = obj->pTracksList[obj_tmp];
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &dh_emlrtRTEI);
       b_obj.IsConfirmed = b_value;
-      obj->pTracksList[obj_tmp] = b_obj;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &dh_emlrtRTEI);
       if (((int32_T)uniqueAssigned_data[c_i] < 1) || ((int32_T)
            uniqueAssigned_data[c_i] > 100)) {
         emlrtDynamicBoundsCheckR2012b((int32_T)uniqueAssigned_data[c_i], 1, 100,
@@ -3511,11 +3733,11 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
       }
 
       obj->pConfirmedTracks[obj_tmp] = obj->pTracksList[obj_tmp].IsConfirmed;
-      st.site = &qr_emlrtRSI;
+      st.site = &hq_emlrtRSI;
       for (i = 0; i < c_loop_ub; i++) {
         if (r2[i] > assignments->size[0] - 1) {
           emlrtDynamicBoundsCheckR2012b(r2[i], 0, assignments->size[0] - 1,
-            &qg_emlrtBCI, &st);
+            &rg_emlrtBCI, &st);
         }
       }
 
@@ -3536,13 +3758,16 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
         b_value = localTracks_data[trueCount - 1].IsCoasted;
       }
 
-      b_obj = obj->pTracksList[obj_tmp];
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &eh_emlrtRTEI);
       b_obj.IsCoasted = b_value;
-      obj->pTracksList[obj_tmp] = b_obj;
-      b_obj = obj->pTracksList[obj_tmp];
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &eh_emlrtRTEI);
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &fh_emlrtRTEI);
       nz = b_assignments->size[0];
       b_assignments->size[0] = r->size[0];
-      emxEnsureCapacity_uint32_T(sp, b_assignments, nz, &sf_emlrtRTEI);
+      emxEnsureCapacity_uint32_T(sp, b_assignments, nz, &gh_emlrtRTEI);
       b_assignments_data = b_assignments->data;
       for (i = 0; i < c_loop_ub; i++) {
         if (r2[i] > assignments->size[0] - 1) {
@@ -3553,43 +3778,40 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
         b_assignments_data[i] = assignments_data[r2[i] + assignments->size[0]];
       }
 
-      st.site = &rr_emlrtRSI;
+      st.site = &iq_emlrtRSI;
       b_obj.IsSelfReported = trackFuser_getSelfReporting(&st, obj, localTracks,
         b_assignments);
-      obj->pTracksList[obj_tmp] = b_obj;
-      b_obj = obj->pTracksList[obj_tmp];
-      obj->pTracksList[obj_tmp] = b_obj;
-      st.site = &sr_emlrtRSI;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &fh_emlrtRTEI);
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &hh_emlrtRTEI);
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &hh_emlrtRTEI);
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &ih_emlrtRTEI);
+      st.site = &jq_emlrtRSI;
       for (i = 0; i < c_loop_ub; i++) {
         if (r2[i] > assignments->size[0] - 1) {
           emlrtDynamicBoundsCheckR2012b(r2[i], 0, assignments->size[0] - 1,
-            &rg_emlrtBCI, &st);
+            &rf_emlrtBCI, &st);
         }
       }
 
+      b_obj.ObjectAttributes = obj->pTracksList[obj_tmp].ObjectAttributes;
       nz = otherAttributes->size[0] * otherAttributes->size[1];
       otherAttributes->size[0] = 1;
       otherAttributes->size[1] = r->size[0];
-      emxEnsureCapacity_struct1_T(&st, otherAttributes, nz, &tf_emlrtRTEI);
+      emxEnsureCapacity_struct1_T(&st, otherAttributes, nz, &jh_emlrtRTEI);
       otherAttributes_data = otherAttributes->data;
       for (i = 0; i < c_loop_ub; i++) {
         if (i + 1 > c_loop_ub) {
-          emlrtDynamicBoundsCheckR2012b(i + 1, 1, c_loop_ub, &rf_emlrtBCI, &st);
+          emlrtDynamicBoundsCheckR2012b(i + 1, 1, c_loop_ub, &sf_emlrtBCI, &st);
         }
 
         nz = (int32_T)assignments_data[r2[i] + assignments->size[0]];
         if ((nz < 1) || (nz > localTracks->size[0])) {
           emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
-            &te_emlrtBCI, &st);
-        }
-
-        if (i + 1 > c_loop_ub) {
-          emlrtDynamicBoundsCheckR2012b(i + 1, 1, c_loop_ub, &sf_emlrtBCI, &st);
-        }
-
-        if (nz > localTracks->size[0]) {
-          emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
-            &ue_emlrtBCI, &st);
+            &we_emlrtBCI, &st);
         }
 
         if (i + 1 > c_loop_ub) {
@@ -3598,28 +3820,37 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
 
         if (nz > localTracks->size[0]) {
           emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
-            &ve_emlrtBCI, &st);
+            &xe_emlrtBCI, &st);
         }
 
         if (i + 1 > c_loop_ub) {
-          emlrtDynamicBoundsCheckR2012b(i + 1, 1, c_loop_ub, &wf_emlrtBCI, &st);
+          emlrtDynamicBoundsCheckR2012b(i + 1, 1, c_loop_ub, &vf_emlrtBCI, &st);
         }
 
         if (nz > localTracks->size[0]) {
           emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
-            &vf_emlrtBCI, &st);
+            &ye_emlrtBCI, &st);
+        }
+
+        if (i + 1 > c_loop_ub) {
+          emlrtDynamicBoundsCheckR2012b(i + 1, 1, c_loop_ub, &xf_emlrtBCI, &st);
+        }
+
+        if (nz > localTracks->size[0]) {
+          emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
+            &wf_emlrtBCI, &st);
         }
 
         if (i > otherAttributes->size[1] - 1) {
           emlrtDynamicBoundsCheckR2012b(i, 0, otherAttributes->size[1] - 1,
-            &xf_emlrtBCI, &st);
+            &yf_emlrtBCI, &st);
         }
 
         otherAttributes_data[i] = localTracks_data[nz - 1].ObjectAttributes;
       }
 
-      b_obj = obj->pTracksList[obj_tmp];
-      obj->pTracksList[obj_tmp] = b_obj;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &ih_emlrtRTEI);
       if (c_i + 1 > updated->size[1]) {
         emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, updated->size[1], &uf_emlrtBCI,
           (emlrtConstCTX)sp);
@@ -3633,6 +3864,7 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
   emxFree_uint32_T(sp, &b_assignments);
   emxFree_int32_T(sp, &r1);
   emxFree_struct1_T(sp, &otherAttributes);
+  emxFreeStruct_objectTrack(sp, &b_obj);
   emxFree_int32_T(sp, &ii);
   emxFree_int32_T(sp, &r);
   emxFree_boolean_T(sp, &toFuse);
@@ -3643,12 +3875,7 @@ static void b_trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj,
 }
 
 static void c_trackFuser_distanceToCentralT(const emlrtStack *sp, trackFuser
-  *obj, const emxArray_struct0_T *localTracks, uint32_T
-  initializedCentralTrack_TrackID, uint32_T c_initializedCentralTrack_Branc,
-  uint32_T initializedCentralTrack_Age, real_T c_initializedCentralTrack_Objec,
-  real_T d_initializedCentralTrack_Objec, boolean_T
-  c_initializedCentralTrack_IsCon, boolean_T c_initializedCentralTrack_IsCoa,
-  boolean_T c_initializedCentralTrack_IsSel, const real_T
+  *obj, const emxArray_struct0_T *localTracks, const real_T
   initializedCentralTrack_pState[6], const real_T
   c_initializedCentralTrack_pStat[36], real_T c_initializedCentralTrack_pUpda,
   const uint32_T localInds_data[], int32_T localInds_size, real_T cost_data[],
@@ -3660,8 +3887,6 @@ static void c_trackFuser_distanceToCentralT(const emlrtStack *sp, trackFuser
   emlrtStack e_st;
   emlrtStack st;
   fuserSourceConfiguration *thisSource;
-  objectTrack b_expl_temp;
-  objectTrack unusedExpr;
   const struct0_T *localTracks_data;
   real_T S[72];
   real_T allCovars[72];
@@ -3693,83 +3918,54 @@ static void c_trackFuser_distanceToCentralT(const emlrtStack *sp, trackFuser
       real_T e[12];
       real_T x[6];
       real_T allCosts[2];
-      uint32_T thisSource_tmp;
+      uint32_T u;
       if (i + 1 > localInds_size) {
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, localInds_size, &oe_emlrtBCI,
           (emlrtConstCTX)sp);
       }
 
-      thisSource_tmp = localInds_data[i];
-      if (((int32_T)thisSource_tmp < 1) || ((int32_T)thisSource_tmp >
-           localTracks->size[0])) {
-        emlrtDynamicBoundsCheckR2012b((int32_T)thisSource_tmp, 1,
-          localTracks->size[0], &ne_emlrtBCI, (emlrtConstCTX)sp);
+      u = localInds_data[i];
+      if (((int32_T)u < 1) || ((int32_T)u > localTracks->size[0])) {
+        emlrtDynamicBoundsCheckR2012b((int32_T)u, 1, localTracks->size[0],
+          &ne_emlrtBCI, (emlrtConstCTX)sp);
       }
 
-      expl_temp = localTracks_data[(int32_T)thisSource_tmp - 1];
+      expl_temp = localTracks_data[(int32_T)u - 1];
       memcpy(&P[0], &c_initializedCentralTrack_pStat[0], 36U * sizeof(real_T));
-      st.site = &pq_emlrtRSI;
+      st.site = &gp_emlrtRSI;
       b_gaussEKFilter_predict(&st, initializedCentralTrack_pState, P,
-        obj->ProcessNoise, localTracks_data[(int32_T)thisSource_tmp - 1].
-        UpdateTime - c_initializedCentralTrack_pUpda, x);
-      st.site = &qq_emlrtRSI;
-      b_st.site = &rc_emlrtRSI;
-      validateattributes(&b_st, x);
-      st.site = &rq_emlrtRSI;
+        obj->ProcessNoise, localTracks_data[(int32_T)u - 1].UpdateTime -
+        c_initializedCentralTrack_pUpda, x);
+      st.site = &hp_emlrtRSI;
       b_st.site = &sc_emlrtRSI;
-      b_validateattributes(&b_st, P);
+      validateattributes(&b_st, x);
+      st.site = &ip_emlrtRSI;
       b_st.site = &tc_emlrtRSI;
+      b_validateattributes(&b_st, P);
+      b_st.site = &uc_emlrtRSI;
       isSymmetricPositiveSemiDefinite(&b_st, P);
-      st.site = &sq_emlrtRSI;
-      thisSource_tmp = localTracks_data[(int32_T)thisSource_tmp - 1].SourceIndex;
-      b_st.site = &ug_emlrtRSI;
-      thisSource = FuserManager_getConfigByID(&b_st, obj, thisSource_tmp);
-      st.site = &tq_emlrtRSI;
+      st.site = &jp_emlrtRSI;
+      b_st.site = &vg_emlrtRSI;
+      thisSource = FuserManager_getConfigByID(&b_st, obj, localTracks_data
+        [(int32_T)u - 1].SourceIndex);
+      st.site = &kp_emlrtRSI;
       if (!thisSource->pIsTransformToLocalValid) {
-        b_st.site = &nk_emlrtRSI;
-        c_st.site = &pk_emlrtRSI;
-        central2local(&c_st, initializedCentralTrack_TrackID,
-                      c_initializedCentralTrack_Branc, thisSource_tmp,
-                      initializedCentralTrack_Age,
-                      c_initializedCentralTrack_Objec,
-                      d_initializedCentralTrack_Objec,
-                      c_initializedCentralTrack_IsCon,
-                      c_initializedCentralTrack_IsCoa,
-                      c_initializedCentralTrack_IsSel, x, P,
-                      c_initializedCentralTrack_pUpda, &b_expl_temp);
-        c_st.site = &qk_emlrtRSI;
-        b_local2central(&c_st, b_expl_temp.TrackID, b_expl_temp.BranchID,
-                        b_expl_temp.SourceIndex, b_expl_temp.Age,
-                        b_expl_temp.ObjectClassID,
-                        b_expl_temp.ObjectClassProbabilities,
-                        b_expl_temp.IsConfirmed, b_expl_temp.IsCoasted,
-                        b_expl_temp.IsSelfReported, b_expl_temp.pState,
-                        b_expl_temp.pStateCovariance, b_expl_temp.pUpdateTime,
-                        &unusedExpr);
+        b_st.site = &gj_emlrtRSI;
         thisSource->pIsTransformToLocalValid = true;
       }
 
-      b_st.site = &ok_emlrtRSI;
-      central2local(&b_st, initializedCentralTrack_TrackID,
-                    c_initializedCentralTrack_Branc, thisSource_tmp,
-                    initializedCentralTrack_Age, c_initializedCentralTrack_Objec,
-                    d_initializedCentralTrack_Objec,
-                    c_initializedCentralTrack_IsCon,
-                    c_initializedCentralTrack_IsCoa,
-                    c_initializedCentralTrack_IsSel, x, P,
-                    c_initializedCentralTrack_pUpda, &b_expl_temp);
       for (j = 0; j < 6; j++) {
-        allStates[j] = b_expl_temp.pState[j];
+        allStates[j] = x[j];
         allStates[j + 6] = expl_temp.State[j];
       }
 
       for (j = 0; j < 36; j++) {
-        allCovars[j] = b_expl_temp.pStateCovariance[j];
+        allCovars[j] = P[j];
         allCovars[j + 36] = expl_temp.StateCovariance[j];
       }
 
-      st.site = &uq_emlrtRSI;
-      b_st.site = &sk_emlrtRSI;
+      st.site = &lp_emlrtRSI;
+      b_st.site = &ij_emlrtRSI;
       for (j = 0; j < 2; j++) {
         for (k = 0; k < 6; k++) {
           __m128d r;
@@ -3795,17 +3991,17 @@ static void c_trackFuser_distanceToCentralT(const emlrtStack *sp, trackFuser
         real_T y;
         int32_T ipiv[6];
         boolean_T isodd;
-        c_st.site = &tk_emlrtRSI;
+        c_st.site = &jj_emlrtRSI;
         for (j = 0; j < 6; j++) {
           x[j] = e[j + 6 * k];
         }
 
-        d_st.site = &uk_emlrtRSI;
+        d_st.site = &kj_emlrtRSI;
         mrdiv(&d_st, x, &S[36 * k]);
-        c_st.site = &tk_emlrtRSI;
-        d_st.site = &kl_emlrtRSI;
+        c_st.site = &jj_emlrtRSI;
+        d_st.site = &ak_emlrtRSI;
         memcpy(&P[0], &S[k * 36], 36U * sizeof(real_T));
-        e_st.site = &cl_emlrtRSI;
+        e_st.site = &rj_emlrtRSI;
         xzgetrf(&e_st, P, ipiv);
         y = P[0];
         isodd = false;
@@ -3820,9 +4016,9 @@ static void c_trackFuser_distanceToCentralT(const emlrtStack *sp, trackFuser
           y = -y;
         }
 
-        c_st.site = &tk_emlrtRSI;
+        c_st.site = &jj_emlrtRSI;
         if (y < 0.0) {
-          emlrtErrorWithMessageIdR2018a(&c_st, &sb_emlrtRTEI,
+          emlrtErrorWithMessageIdR2018a(&c_st, &vb_emlrtRTEI,
             "Coder:toolbox:ElFunDomainError", "Coder:toolbox:ElFunDomainError",
             3, 4, 3, "log");
         }
@@ -3850,13 +4046,11 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
   unassignedlocalTracks_data[], int32_T unassignedlocalTracks_size)
 {
   b_objectTrack expl_temp;
-  b_objectTrack jw_emlrtRSI;
-  b_objectTrack kw_emlrtRSI;
   emlrtStack b_st;
   emlrtStack c_st;
-  emlrtStack d_st;
   emlrtStack st;
   fuserSourceConfiguration *thisConfig;
+  objectTrack b_obj;
   const struct0_T *localTracks_data;
   trackHistoryLogic *c_obj;
   real_T b_tmp_data[200];
@@ -3876,9 +4070,8 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  d_st.prev = &c_st;
-  d_st.tls = c_st.tls;
   localTracks_data = localTracks->data;
+  emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   allSourceInds_size = unassignedlocalTracks_size;
   if (unassignedlocalTracks_size - 1 >= 0) {
     memset(&allSourceInds_data[0], 0, (uint32_T)unassignedlocalTracks_size *
@@ -3905,6 +4098,7 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
     allSourceInds_data[i] = localTracks_data[nz - 1].SourceIndex;
   }
 
+  emxInitStruct_objectTrack(sp, &b_obj, &ag_emlrtRTEI, true);
   exitg1 = false;
   while ((!exitg1) && (unassignedlocalTracks_size > 0)) {
     if (obj->pNumLiveTracks < 100.0) {
@@ -3918,16 +4112,15 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
           localTracks->size[0], &ud_emlrtBCI, (emlrtConstCTX)sp);
       }
 
-      st.site = &vp_emlrtRSI;
+      st.site = &lo_emlrtRSI;
       thisConfig_tmp = (int32_T)unassignedlocalTracks_data[0] - 1;
       b_thisConfig_tmp = localTracks_data[thisConfig_tmp].SourceIndex;
-      b_st.site = &ug_emlrtRSI;
+      b_st.site = &vg_emlrtRSI;
       thisConfig = FuserManager_getConfigByID(&b_st, obj, b_thisConfig_tmp);
       if ((!thisConfig->IsInternalSource) && localTracks_data[thisConfig_tmp].
           IsCoasted) {
         exitg1 = true;
       } else {
-        c_objectTrack b_obj;
         real_T b_i;
         int32_T tmp_size[2];
         int32_T j;
@@ -3938,71 +4131,28 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         boolean_T assignedToNewTrack_data[200];
         boolean_T bv[50];
         boolean_T isr;
-        st.site = &wp_emlrtRSI;
+        st.site = &mo_emlrtRSI;
         if (!thisConfig->pIsTransformToCentralValid) {
-          b_st.site = &vg_emlrtRSI;
-          c_st.site = &xg_emlrtRSI;
-          local2central(&c_st, localTracks_data[thisConfig_tmp].TrackID,
-                        localTracks_data[thisConfig_tmp].BranchID,
-                        b_thisConfig_tmp, localTracks_data[thisConfig_tmp].
-                        UpdateTime, localTracks_data[thisConfig_tmp].Age,
-                        localTracks_data[thisConfig_tmp].State,
-                        localTracks_data[thisConfig_tmp].StateCovariance,
-                        localTracks_data[thisConfig_tmp].ObjectClassID,
-                        localTracks_data[thisConfig_tmp].
-                        ObjectClassProbabilities.data,
-                        localTracks_data[thisConfig_tmp].
-                        ObjectClassProbabilities.size,
-                        localTracks_data[thisConfig_tmp].IsConfirmed,
-                        localTracks_data[thisConfig_tmp].IsCoasted,
-                        localTracks_data[thisConfig_tmp].IsSelfReported,
-                        &expl_temp);
-          c_st.site = &yg_emlrtRSI;
-
-          /*  Pre-define output with longest TrackLogic to force codegen consistency */
-          if (expl_temp.SourceIndex == 1U) {
-            /*  Radar */
-            d_st.site = &fi_emlrtRSI;
-            Ecef2nedTrack(&d_st, expl_temp.TrackID, expl_temp.BranchID, 1U,
-                          expl_temp.Age, expl_temp.ObjectClassID,
-                          expl_temp.ObjectClassProbabilities.data,
-                          expl_temp.ObjectClassProbabilities.size,
-                          expl_temp.IsConfirmed, expl_temp.IsCoasted,
-                          expl_temp.IsSelfReported, expl_temp.pState,
-                          expl_temp.pStateCovariance, expl_temp.pUpdateTime,
-                          &jw_emlrtRSI);
-          } else if (expl_temp.SourceIndex == 2U) {
-            /*  ADSB */
-            d_st.site = &gi_emlrtRSI;
-            Ned2ecefTrack(&d_st, expl_temp.TrackID, expl_temp.BranchID, 2U,
-                          expl_temp.Age, expl_temp.ObjectClassID,
-                          expl_temp.ObjectClassProbabilities.data,
-                          expl_temp.ObjectClassProbabilities.size,
-                          expl_temp.IsConfirmed, expl_temp.IsCoasted,
-                          expl_temp.IsSelfReported, expl_temp.pState,
-                          expl_temp.pStateCovariance, expl_temp.pUpdateTime,
-                          &kw_emlrtRSI);
-          }
-
+          b_st.site = &wg_emlrtRSI;
           thisConfig->pIsTransformToCentralValid = true;
         }
 
-        b_st.site = &wg_emlrtRSI;
-        local2central(&b_st, localTracks_data[thisConfig_tmp].TrackID,
-                      localTracks_data[thisConfig_tmp].BranchID,
-                      b_thisConfig_tmp, localTracks_data[thisConfig_tmp].
-                      UpdateTime, localTracks_data[thisConfig_tmp].Age,
-                      localTracks_data[thisConfig_tmp].State,
-                      localTracks_data[thisConfig_tmp].StateCovariance,
-                      localTracks_data[thisConfig_tmp].ObjectClassID,
-                      localTracks_data[thisConfig_tmp].
-                      ObjectClassProbabilities.data,
-                      localTracks_data[thisConfig_tmp].
-                      ObjectClassProbabilities.size,
-                      localTracks_data[thisConfig_tmp].IsConfirmed,
-                      localTracks_data[thisConfig_tmp].IsCoasted,
-                      localTracks_data[thisConfig_tmp].IsSelfReported,
-                      &expl_temp);
+        st.site = &mo_emlrtRSI;
+        b_st.site = &ep_emlrtRSI;
+        objectTrack_objectTrack(&b_st, b_thisConfig_tmp,
+          localTracks_data[thisConfig_tmp].UpdateTime,
+          localTracks_data[thisConfig_tmp].State,
+          localTracks_data[thisConfig_tmp].StateCovariance,
+          localTracks_data[thisConfig_tmp].ObjectClassID,
+          localTracks_data[thisConfig_tmp].ObjectClassProbabilities.data,
+          localTracks_data[thisConfig_tmp].ObjectClassProbabilities.size,
+          localTracks_data[thisConfig_tmp].TrackLogic,
+          localTracks_data[thisConfig_tmp].TrackLogicState.data,
+          localTracks_data[thisConfig_tmp].TrackLogicState.size,
+          localTracks_data[thisConfig_tmp].IsConfirmed,
+          localTracks_data[thisConfig_tmp].IsCoasted,
+          localTracks_data[thisConfig_tmp].IsSelfReported,
+          localTracks_data[thisConfig_tmp].ObjectAttributes, &expl_temp);
         obj->pNumLiveTracks++;
         q0 = obj->pLastTrackID;
         qY = q0 + 1U;
@@ -4018,14 +4168,16 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &ag_emlrtRTEI);
         b_obj.TrackID = obj->pLastTrackID;
         if ((nz < 0) || (nz > 99)) {
           emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &vd_emlrtBCI, (emlrtConstCTX)
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &ag_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &eb_emlrtDCI,
@@ -4033,14 +4185,16 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &bg_emlrtRTEI);
         b_obj.BranchID = 0U;
         if ((nz < 0) || (nz > 99)) {
           emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &wd_emlrtBCI, (emlrtConstCTX)
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &bg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &fb_emlrtDCI,
@@ -4048,14 +4202,16 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &cg_emlrtRTEI);
         b_obj.SourceIndex = 3U;
         if ((nz < 0) || (nz > 99)) {
           emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &xd_emlrtBCI, (emlrtConstCTX)
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &cg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &gb_emlrtDCI,
@@ -4063,9 +4219,10 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        st.site = &xp_emlrtRSI;
-        b_obj = obj->pTracksList[nz];
-        b_st.site = &qc_emlrtRSI;
+        st.site = &no_emlrtRSI;
+        emxCopyStruct_objectTrack(&st, &b_obj, &obj->pTracksList[nz],
+          &dg_emlrtRTEI);
+        b_st.site = &rc_emlrtRSI;
         c_st.site = &gb_emlrtRSI;
         if (expl_temp.pUpdateTime < 0.0) {
           emlrtErrorWithMessageIdR2018a(&c_st, &l_emlrtRTEI,
@@ -4087,7 +4244,8 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &dg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &hb_emlrtDCI,
@@ -4095,14 +4253,16 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &eg_emlrtRTEI);
         b_obj.Age = 1U;
         if ((nz < 0) || (nz > 99)) {
           emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &ae_emlrtBCI, (emlrtConstCTX)
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &eg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &ib_emlrtDCI,
@@ -4115,15 +4275,17 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
             sp);
         }
 
-        st.site = &yp_emlrtRSI;
-        b_obj = obj->pTracksList[nz];
-        b_st.site = &rc_emlrtRSI;
+        st.site = &oo_emlrtRSI;
+        emxCopyStruct_objectTrack(&st, &b_obj, &obj->pTracksList[nz],
+          &fg_emlrtRTEI);
+        b_st.site = &sc_emlrtRSI;
         validateattributes(&b_st, expl_temp.pState);
         for (i = 0; i < 6; i++) {
           b_obj.pState[i] = expl_temp.pState[i];
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &fg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &jb_emlrtDCI,
@@ -4136,15 +4298,17 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
             sp);
         }
 
-        st.site = &aq_emlrtRSI;
-        b_obj = obj->pTracksList[nz];
-        b_st.site = &sc_emlrtRSI;
-        b_validateattributes(&b_st, expl_temp.pStateCovariance);
+        st.site = &po_emlrtRSI;
+        emxCopyStruct_objectTrack(&st, &b_obj, &obj->pTracksList[nz],
+          &gg_emlrtRTEI);
         b_st.site = &tc_emlrtRSI;
+        b_validateattributes(&b_st, expl_temp.pStateCovariance);
+        b_st.site = &uc_emlrtRSI;
         isSymmetricPositiveSemiDefinite(&b_st, expl_temp.pStateCovariance);
         memcpy(&b_obj.pStateCovariance[0], &expl_temp.pStateCovariance[0], 36U *
                sizeof(real_T));
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &gg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &kb_emlrtDCI,
@@ -4152,13 +4316,15 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &hg_emlrtRTEI);
         if ((nz < 0) || (nz > 99)) {
           emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &de_emlrtBCI, (emlrtConstCTX)
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &hg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &lb_emlrtDCI,
@@ -4166,9 +4332,10 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        st.site = &bq_emlrtRSI;
-        b_obj = obj->pTracksList[nz];
-        b_st.site = &ig_emlrtRSI;
+        st.site = &qo_emlrtRSI;
+        emxCopyStruct_objectTrack(&st, &b_obj, &obj->pTracksList[nz],
+          &ig_emlrtRTEI);
+        b_st.site = &jg_emlrtRSI;
         c_validateattributes(&b_st, expl_temp.ObjectClassID);
         b_obj.ObjectClassID = expl_temp.ObjectClassID;
         if ((nz < 0) || (nz > 99)) {
@@ -4176,7 +4343,8 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &ig_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &mb_emlrtDCI,
@@ -4184,14 +4352,16 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &jg_emlrtRTEI);
         b_obj.IsCoasted = expl_temp.IsCoasted;
         if ((nz < 0) || (nz > 99)) {
           emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &fe_emlrtBCI, (emlrtConstCTX)
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &jg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &nb_emlrtDCI,
@@ -4199,24 +4369,26 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        st.site = &cq_emlrtRSI;
+        st.site = &ro_emlrtRSI;
         tf = false;
-        b_st.site = &oq_emlrtRSI;
-        c_st.site = &ug_emlrtRSI;
+        b_st.site = &fp_emlrtRSI;
+        c_st.site = &vg_emlrtRSI;
         thisConfig = FuserManager_getConfigByID(&c_st, obj, b_thisConfig_tmp);
         if (thisConfig->IsInternalSource && localTracks_data[thisConfig_tmp].
             IsSelfReported) {
           tf = true;
         }
 
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &kg_emlrtRTEI);
         b_obj.IsSelfReported = tf;
         if ((nz < 0) || (nz > 99)) {
           emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &ge_emlrtBCI, (emlrtConstCTX)
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &kg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &bb_emlrtDCI,
@@ -4237,7 +4409,7 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        st.site = &dq_emlrtRSI;
+        st.site = &so_emlrtRSI;
         b_i = obj->pNumLiveTracks;
         if (b_i != (int32_T)muDoubleScalarFloor(b_i)) {
           emlrtIntegerCheckR2012b(b_i, &ab_emlrtDCI, &st);
@@ -4255,9 +4427,10 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
           b_i = localTracks_data[thisConfig_tmp].ObjectClassID;
         }
 
-        st.site = &dq_emlrtRSI;
-        b_obj = obj->pTracksList[nz];
-        b_st.site = &ig_emlrtRSI;
+        st.site = &so_emlrtRSI;
+        emxCopyStruct_objectTrack(&st, &b_obj, &obj->pTracksList[nz],
+          &lg_emlrtRTEI);
+        b_st.site = &jg_emlrtRSI;
         c_validateattributes(&b_st, b_i);
         b_obj.ObjectClassID = b_i;
         if ((nz < 0) || (nz > 99)) {
@@ -4265,7 +4438,8 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &lg_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &pb_emlrtDCI,
@@ -4273,14 +4447,17 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &mg_emlrtRTEI);
+        b_obj.ObjectAttributes = expl_temp.ObjectAttributes;
         if ((nz < 0) || (nz > 99)) {
           emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &ie_emlrtBCI, (emlrtConstCTX)
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
-        st.site = &eq_emlrtRSI;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &mg_emlrtRTEI);
+        st.site = &to_emlrtRSI;
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &y_emlrtDCI, &st);
@@ -4293,7 +4470,7 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
 
         c_obj = obj->pTrackLogics[nz];
         if (!c_obj->pIsFirstUpdate) {
-          emlrtErrorWithMessageIdR2018a(&st, &pb_emlrtRTEI,
+          emlrtErrorWithMessageIdR2018a(&st, &sb_emlrtRTEI,
             "shared_tracking:trackHistoryLogic:alreadyInitialized",
             "shared_tracking:trackHistoryLogic:alreadyInitialized", 0);
         }
@@ -4308,7 +4485,7 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         c_obj->pIsFirstUpdate = false;
-        st.site = &fq_emlrtRSI;
+        st.site = &uo_emlrtRSI;
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &x_emlrtDCI, &st);
@@ -4360,14 +4537,16 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
 
         nz = (int32_T)obj->pNumLiveTracks - 1;
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &ng_emlrtRTEI);
         b_obj.IsConfirmed = tf;
         if ((nz < 0) || (nz > 99)) {
           emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &je_emlrtBCI, (emlrtConstCTX)
             sp);
         }
 
-        obj->pTracksList[nz] = b_obj;
+        emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+          &ng_emlrtRTEI);
         if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor
             (obj->pNumLiveTracks)) {
           emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &v_emlrtDCI,
@@ -4450,7 +4629,8 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
             sp);
         }
 
-        b_obj = obj->pTracksList[nz];
+        emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+          &og_emlrtRTEI);
         for (i = 0; i < trueCount; i++) {
           u = tmp_data[i];
           if (u > unassignedlocalTracks_size - 1) {
@@ -4461,13 +4641,10 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
           checkedUnassigned_data[i] = unassignedlocalTracks_data[u];
         }
 
-        st.site = &gq_emlrtRSI;
-        c_trackFuser_distanceToCentralT(&st, obj, localTracks, b_obj.TrackID,
-          b_obj.BranchID, b_obj.Age, b_obj.ObjectClassID,
-          b_obj.ObjectClassProbabilities, b_obj.IsConfirmed, b_obj.IsCoasted,
-          b_obj.IsSelfReported, b_obj.pState, b_obj.pStateCovariance,
-          b_obj.pUpdateTime, checkedUnassigned_data, trueCount, b_tmp_data,
-          tmp_size);
+        st.site = &vo_emlrtRSI;
+        c_trackFuser_distanceToCentralT(&st, obj, localTracks, b_obj.pState,
+          b_obj.pStateCovariance, b_obj.pUpdateTime, checkedUnassigned_data,
+          trueCount, b_tmp_data, tmp_size);
         if (trueCount != tmp_size[1]) {
           emlrtSubAssignSizeCheck1dR2017a(trueCount, tmp_size[1], &d_emlrtECI,
             (emlrtConstCTX)sp);
@@ -4491,16 +4668,15 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
           assignedToNewTrack_data[i] = (costMatrix_data[i] < 100.0);
         }
 
-        st.site = &hq_emlrtRSI;
+        st.site = &wo_emlrtRSI;
         if (any(assignedToNewTrack_data, tmp_size)) {
           uint32_T a_data[400];
-          st.site = &iq_emlrtRSI;
-          b_st.site = &wq_emlrtRSI;
-          c_st.site = &bg_emlrtRSI;
+          st.site = &xo_emlrtRSI;
+          b_st.site = &np_emlrtRSI;
           nz = combineVectorElements(assignedToNewTrack_data, tmp_size);
-          st.site = &jq_emlrtRSI;
+          st.site = &yo_emlrtRSI;
           b_i = obj->pNumLiveTracks;
-          b_st.site = &jk_emlrtRSI;
+          b_st.site = &cj_emlrtRSI;
           if (nz < 0) {
             emlrtNonNegativeCheckR2012b(nz, &cb_emlrtDCI, &st);
           }
@@ -4515,7 +4691,7 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
             }
           }
 
-          st.site = &kq_emlrtRSI;
+          st.site = &ap_emlrtRSI;
           for (i = 0; i < trueCount; i++) {
             u = c_tmp_data[i];
             if (u > unassignedlocalTracks_size - 1) {
@@ -4526,10 +4702,10 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
             checkedUnassigned_data[i] = unassignedlocalTracks_data[u];
           }
 
-          b_st.site = &ar_emlrtRSI;
-          c_st.site = &br_emlrtRSI;
+          b_st.site = &qp_emlrtRSI;
+          c_st.site = &rp_emlrtRSI;
           if (nz != trueCount) {
-            emlrtErrorWithMessageIdR2018a(&c_st, &ob_emlrtRTEI,
+            emlrtErrorWithMessageIdR2018a(&c_st, &rb_emlrtRTEI,
               "MATLAB:catenate:matrixDimensionMismatch",
               "MATLAB:catenate:matrixDimensionMismatch", 0);
           }
@@ -4559,7 +4735,7 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
             a_data[i + nz] = checkedUnassigned_data[i];
           }
 
-          st.site = &kq_emlrtRSI;
+          st.site = &ap_emlrtRSI;
           trackFuser_fuseAssigned(&st, obj, localTracks, a_data, tmp_size);
           trueCount = 0;
           for (i = 0; i < unassignedlocalTracks_size; i++) {
@@ -4631,51 +4807,51 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
           }
 
           nz = (int32_T)obj->pNumLiveTracks - 1;
-          b_obj = obj->pTracksList[nz];
+          emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[nz],
+            &pg_emlrtRTEI);
           b_obj.IsSelfReported = tf;
           if ((nz < 0) || (nz > 99)) {
             emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &ke_emlrtBCI,
               (emlrtConstCTX)sp);
           }
 
-          obj->pTracksList[nz] = b_obj;
+          emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &b_obj,
+            &pg_emlrtRTEI);
         }
 
-        st.site = &mq_emlrtRSI;
-        b_st.site = &fv_emlrtRSI;
+        st.site = &cp_emlrtRSI;
+        b_st.site = &vt_emlrtRSI;
         if (trueCount < 1) {
-          emlrtErrorWithMessageIdR2018a(&b_st, &qb_emlrtRTEI,
+          emlrtErrorWithMessageIdR2018a(&b_st, &tb_emlrtRTEI,
             "MATLAB:subsdeldimmismatch", "MATLAB:subsdeldimmismatch", 0);
         }
 
-        b_st.site = &gv_emlrtRSI;
-        c_st.site = &hv_emlrtRSI;
+        b_st.site = &wt_emlrtRSI;
         for (i = 0; i <= trueCount - 2; i++) {
           checkedUnassigned_data[i] = checkedUnassigned_data[i + 1];
         }
 
         if (trueCount - 1 > trueCount) {
-          emlrtErrorWithMessageIdR2018a(&b_st, &rb_emlrtRTEI,
+          emlrtErrorWithMessageIdR2018a(&b_st, &ub_emlrtRTEI,
             "Coder:builtins:AssertionFailed", "Coder:builtins:AssertionFailed",
             0);
         }
 
         j = trueCount - 1;
-        st.site = &lq_emlrtRSI;
-        b_st.site = &fv_emlrtRSI;
+        st.site = &bp_emlrtRSI;
+        b_st.site = &vt_emlrtRSI;
         if (allSourceInds_size < 1) {
-          emlrtErrorWithMessageIdR2018a(&b_st, &qb_emlrtRTEI,
+          emlrtErrorWithMessageIdR2018a(&b_st, &tb_emlrtRTEI,
             "MATLAB:subsdeldimmismatch", "MATLAB:subsdeldimmismatch", 0);
         }
 
-        b_st.site = &gv_emlrtRSI;
-        c_st.site = &hv_emlrtRSI;
+        b_st.site = &wt_emlrtRSI;
         for (i = 0; i <= allSourceInds_size - 2; i++) {
           allSourceInds_data[i] = allSourceInds_data[i + 1];
         }
 
         if (allSourceInds_size - 1 > allSourceInds_size) {
-          emlrtErrorWithMessageIdR2018a(&b_st, &rb_emlrtRTEI,
+          emlrtErrorWithMessageIdR2018a(&b_st, &ub_emlrtRTEI,
             "Coder:builtins:AssertionFailed", "Coder:builtins:AssertionFailed",
             0);
         }
@@ -4693,11 +4869,14 @@ static void c_trackFuser_initializeCentralT(const emlrtStack *sp, trackFuser
         }
       }
     } else {
-      st.site = &nq_emlrtRSI;
+      st.site = &dp_emlrtRSI;
       e_warning(&st);
       exitg1 = true;
     }
   }
+
+  emxFreeStruct_objectTrack(sp, &b_obj);
+  emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }
 
 static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
@@ -4722,7 +4901,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
   emxArray_uint32_T *varargout_3;
   emxArray_uint8_T *r1;
   emxArray_uint8_T *r2;
-  real_T b_dv[2];
+  real_T dv[2];
   const real_T *costMatrix_data;
   real_T numCentralTrks;
   real_T *y_data;
@@ -4753,24 +4932,24 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
   costMatrix_data = costMatrix->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   numCentralTrks = obj->pNumLiveTracks;
-  emxInit_real_T(sp, &y, 2, &rd_emlrtRTEI);
+  emxInit_real_T(sp, &y, 2, &ge_emlrtRTEI);
   y_data = y->data;
   if (costMatrix->size[1] == 0) {
     int32_T loop_ub;
-    st.site = &vl_emlrtRSI;
-    b_dv[0] = 0.0;
-    b_dv[1] = 1.0;
-    b_st.site = &jk_emlrtRSI;
-    assertValidSizeArg(&b_st, b_dv);
+    st.site = &lk_emlrtRSI;
+    dv[0] = 0.0;
+    dv[1] = 1.0;
+    b_st.site = &cj_emlrtRSI;
+    assertValidSizeArg(&b_st, dv);
     overallAssignments->size[0] = 0;
     overallAssignments->size[1] = 2;
-    b_st.site = &wl_emlrtRSI;
-    b_st.site = &wl_emlrtRSI;
+    b_st.site = &mk_emlrtRSI;
+    b_st.site = &mk_emlrtRSI;
     if (muDoubleScalarIsNaN(numCentralTrks)) {
       loop_ub = y->size[0] * y->size[1];
       y->size[0] = 1;
       y->size[1] = 1;
-      emxEnsureCapacity_real_T(sp, y, loop_ub, &ad_emlrtRTEI);
+      emxEnsureCapacity_real_T(sp, y, loop_ub, &id_emlrtRTEI);
       y_data = y->data;
       y_data[0] = rtNaN;
     } else if (numCentralTrks < 1.0) {
@@ -4781,16 +4960,16 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       loop_ub = y->size[0] * y->size[1];
       y->size[0] = 1;
       y->size[1] = (int32_T)(numCentralTrks - 1.0) + 1;
-      emxEnsureCapacity_real_T(sp, y, loop_ub, &ad_emlrtRTEI);
+      emxEnsureCapacity_real_T(sp, y, loop_ub, &id_emlrtRTEI);
       y_data = y->data;
       loop_ub = (int32_T)(numCentralTrks - 1.0);
       i2 = (((int32_T)(numCentralTrks - 1.0) + 1) / 2) << 1;
       vectorUB = i2 - 2;
       for (i = 0; i <= vectorUB; i += 2) {
         __m128d r;
-        b_dv[0] = i;
-        b_dv[1] = i + 1;
-        r = _mm_loadu_pd(&b_dv[0]);
+        dv[0] = i;
+        dv[1] = i + 1;
+        r = _mm_loadu_pd(&dv[0]);
         _mm_storeu_pd(&y_data[i], _mm_add_pd(_mm_set1_pd(1.0), r));
       }
 
@@ -4803,7 +4982,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
     loop_ub = overallUnassignedCentralTracks->size[0];
     overallUnassignedCentralTracks->size[0] = y->size[1];
     emxEnsureCapacity_uint32_T(sp, overallUnassignedCentralTracks, loop_ub,
-      &gd_emlrtRTEI);
+      &ud_emlrtRTEI);
     c_overallUnassignedCentralTrack = overallUnassignedCentralTracks->data;
     for (i = 0; i < i2; i++) {
       uint32_T lastAssigned;
@@ -4823,13 +5002,13 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       c_overallUnassignedCentralTrack[i] = lastAssigned;
     }
 
-    st.site = &ul_emlrtRSI;
-    b_dv[0] = 0.0;
-    b_dv[1] = 1.0;
-    b_st.site = &jk_emlrtRSI;
-    assertValidSizeArg(&b_st, b_dv);
+    st.site = &kk_emlrtRSI;
+    dv[0] = 0.0;
+    dv[1] = 1.0;
+    b_st.site = &cj_emlrtRSI;
+    assertValidSizeArg(&b_st, dv);
     *d_overallUnassignedLocalTracks_ = 0;
-    st.site = &tl_emlrtRSI;
+    st.site = &jk_emlrtRSI;
     b_st.site = &r_emlrtRSI;
   } else {
     real_T d;
@@ -4845,8 +5024,8 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
     uint32_T lastAssigned;
     uint32_T lastUnassigned;
     boolean_T usedSources[2];
-    st.site = &sl_emlrtRSI;
-    b_st.site = &xl_emlrtRSI;
+    st.site = &ik_emlrtRSI;
+    b_st.site = &nk_emlrtRSI;
     usedSources[0] = false;
     usedSources[1] = false;
     i2 = 0;
@@ -4856,7 +5035,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       vectorUB = i2 + loop_ub;
       i1 = i2 + 1;
       i2 = vectorUB;
-      c_st.site = &xc_emlrtRSI;
+      c_st.site = &yc_emlrtRSI;
       if ((i1 <= vectorUB) && (vectorUB > 2147483646)) {
         d_st.site = &tb_emlrtRSI;
         check_forloop_overflow_error(&d_st);
@@ -4907,7 +5086,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
     loop_ub = overallAssignments->size[0] * overallAssignments->size[1];
     overallAssignments->size[0] = (int32_T)d;
     overallAssignments->size[1] = 2;
-    emxEnsureCapacity_uint32_T(sp, overallAssignments, loop_ub, &hd_emlrtRTEI);
+    emxEnsureCapacity_uint32_T(sp, overallAssignments, loop_ub, &vd_emlrtRTEI);
     overallAssignments_data = overallAssignments->data;
     loop_ub = (int32_T)d << 1;
     for (b_i = 0; b_i < loop_ub; b_i++) {
@@ -4924,7 +5103,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       loop_ub = y->size[0] * y->size[1];
       y->size[0] = 1;
       y->size[1] = 1;
-      emxEnsureCapacity_real_T(sp, y, loop_ub, &ad_emlrtRTEI);
+      emxEnsureCapacity_real_T(sp, y, loop_ub, &id_emlrtRTEI);
       y_data = y->data;
       y_data[0] = rtNaN;
     } else if (numCentralTrks < 1.0) {
@@ -4934,16 +5113,16 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       loop_ub = y->size[0] * y->size[1];
       y->size[0] = 1;
       y->size[1] = (int32_T)(numCentralTrks - 1.0) + 1;
-      emxEnsureCapacity_real_T(sp, y, loop_ub, &ad_emlrtRTEI);
+      emxEnsureCapacity_real_T(sp, y, loop_ub, &id_emlrtRTEI);
       y_data = y->data;
       loop_ub = (int32_T)(numCentralTrks - 1.0);
       vectorUB = (((int32_T)(numCentralTrks - 1.0) + 1) / 2) << 1;
       i2 = vectorUB - 2;
       for (i = 0; i <= i2; i += 2) {
         __m128d r;
-        b_dv[0] = i;
-        b_dv[1] = i + 1;
-        r = _mm_loadu_pd(&b_dv[0]);
+        dv[0] = i;
+        dv[1] = i + 1;
+        r = _mm_loadu_pd(&dv[0]);
         _mm_storeu_pd(&y_data[i], _mm_add_pd(_mm_set1_pd(1.0), r));
       }
 
@@ -4956,7 +5135,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
     loop_ub = overallUnassignedCentralTracks->size[0];
     overallUnassignedCentralTracks->size[0] = y->size[1];
     emxEnsureCapacity_uint32_T(sp, overallUnassignedCentralTracks, loop_ub,
-      &id_emlrtRTEI);
+      &wd_emlrtRTEI);
     c_overallUnassignedCentralTrack = overallUnassignedCentralTracks->data;
     for (i = 0; i < vectorUB; i++) {
       numCentralTrks = muDoubleScalarRound(y_data[i]);
@@ -4977,18 +5156,18 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
 
     lastAssigned = 0U;
     lastUnassigned = 0U;
-    emxInit_uint8_T(sp, &r1, 2, &nd_emlrtRTEI);
-    emxInit_uint8_T(sp, &r2, 1, &pd_emlrtRTEI);
-    emxInit_int32_T(sp, &ii, 1, &sd_emlrtRTEI);
-    emxInit_int32_T(sp, &ib, 1, &td_emlrtRTEI);
-    emxInit_uint32_T(sp, &varargout_3, 1, &qd_emlrtRTEI);
-    emxInit_uint32_T(sp, &varargout_2, 1, &ud_emlrtRTEI);
-    emxInit_uint32_T(sp, &varargout_1, 2, &md_emlrtRTEI);
-    emxInit_boolean_T(sp, &b_obj, 1, &jd_emlrtRTEI, true);
-    emxInit_real_T(sp, &b_costMatrix, 2, &kd_emlrtRTEI);
+    emxInit_uint8_T(sp, &r1, 2, &ce_emlrtRTEI);
+    emxInit_uint8_T(sp, &r2, 1, &ee_emlrtRTEI);
+    emxInit_int32_T(sp, &ii, 1, &he_emlrtRTEI);
+    emxInit_int32_T(sp, &ib, 1, &ie_emlrtRTEI);
+    emxInit_uint32_T(sp, &varargout_3, 1, &fe_emlrtRTEI);
+    emxInit_uint32_T(sp, &varargout_2, 1, &je_emlrtRTEI);
+    emxInit_uint32_T(sp, &varargout_1, 2, &be_emlrtRTEI);
+    emxInit_boolean_T(sp, &b_obj, 1, &xd_emlrtRTEI, true);
+    emxInit_real_T(sp, &b_costMatrix, 2, &yd_emlrtRTEI);
     for (s = 0; s < nz; s++) {
       int32_T d_loop_ub;
-      st.site = &rl_emlrtRSI;
+      st.site = &hk_emlrtRSI;
       if (s + 1 > trueCount) {
         emlrtDynamicBoundsCheckR2012b(s + 1, 1, trueCount, &wb_emlrtBCI, &st);
       }
@@ -4997,14 +5176,14 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       i2 = obj->pUsedConfigIDs->size[0];
       loop_ub = b_obj->size[0];
       b_obj->size[0] = i2;
-      emxEnsureCapacity_boolean_T(&st, b_obj, loop_ub, &jd_emlrtRTEI);
+      emxEnsureCapacity_boolean_T(&st, b_obj, loop_ub, &xd_emlrtRTEI);
       obj_data = b_obj->data;
       for (i = 0; i < i2; i++) {
         obj_data[i] = obj->pUsedConfigIDs->data[i + obj->pUsedConfigIDs->size[0]
           * vectorUB];
       }
 
-      b_st.site = &yl_emlrtRSI;
+      b_st.site = &ok_emlrtRSI;
       eml_find(&b_st, b_obj, ii);
       ii_data = ii->data;
       d_loop_ub = ii->size[0];
@@ -5016,7 +5195,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
         }
       }
 
-      st.site = &ql_emlrtRSI;
+      st.site = &gk_emlrtRSI;
       if (obj->cAssigner.isInitialized == 2) {
         emlrtErrorWithMessageIdR2018a(&st, &g_emlrtRTEI,
           "MATLAB:system:methodCalledWhenReleasedCodegen",
@@ -5025,9 +5204,9 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
 
       if (obj->cAssigner.isInitialized != 1) {
         b_st.site = &vb_emlrtRSI;
-        c_st.site = &em_emlrtRSI;
+        c_st.site = &tk_emlrtRSI;
         if (obj->cAssigner.isInitialized != 0) {
-          emlrtErrorWithMessageIdR2018a(&c_st, &cb_emlrtRTEI,
+          emlrtErrorWithMessageIdR2018a(&c_st, &fb_emlrtRTEI,
             "MATLAB:system:methodCalledWhenLockedReleasedCodegen",
             "MATLAB:system:methodCalledWhenLockedReleasedCodegen", 3, 4, 5,
             "setup");
@@ -5035,7 +5214,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
 
         obj->cAssigner.isInitialized = 1;
         obj->cAssigner.isSetupComplete = true;
-        c_st.site = &em_emlrtRSI;
+        c_st.site = &tk_emlrtRSI;
         obj->cAssigner.pCostOfNonAssignment = obj->
           cAssigner.AssignmentThreshold[0] / 2.0;
       }
@@ -5044,7 +5223,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       loop_ub = b_costMatrix->size[0] * b_costMatrix->size[1];
       b_costMatrix->size[0] = costMatrix->size[0];
       b_costMatrix->size[1] = ii->size[0];
-      emxEnsureCapacity_real_T(&st, b_costMatrix, loop_ub, &kd_emlrtRTEI);
+      emxEnsureCapacity_real_T(&st, b_costMatrix, loop_ub, &yd_emlrtRTEI);
       y_data = b_costMatrix->data;
       for (i = 0; i < d_loop_ub; i++) {
         for (b_i = 0; b_i < vectorUB; b_i++) {
@@ -5059,7 +5238,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       varargout_3_data = varargout_3->data;
       varargout_2_data = varargout_2->data;
       varargout_1_data = varargout_1->data;
-      st.site = &pl_emlrtRSI;
+      st.site = &fk_emlrtRSI;
       if (varargout_1->size[0] != 0) {
         int32_T varargout_1_tmp;
         numCentralTrks = (real_T)lastAssigned + (real_T)varargout_1->size[0];
@@ -5114,7 +5293,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
 
         loop_ub = r2->size[0];
         r2->size[0] = varargout_1->size[0];
-        emxEnsureCapacity_uint8_T(sp, r2, loop_ub, &pd_emlrtRTEI);
+        emxEnsureCapacity_uint8_T(sp, r2, loop_ub, &ee_emlrtRTEI);
         r4 = r2->data;
         for (i = 0; i < varargout_1_tmp; i++) {
           if (((int32_T)varargout_1_data[i + varargout_1->size[0]] < 1) ||
@@ -5141,7 +5320,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
         lastAssigned += (uint32_T)varargout_1->size[0];
       }
 
-      st.site = &ol_emlrtRSI;
+      st.site = &ek_emlrtRSI;
       vectorUB = varargout_3->size[0];
       if (varargout_3->size[0] != 0) {
         numCentralTrks = (real_T)lastUnassigned + (real_T)varargout_3->size[0];
@@ -5168,7 +5347,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
         loop_ub = r1->size[0] * r1->size[1];
         r1->size[0] = 1;
         r1->size[1] = varargout_3->size[0];
-        emxEnsureCapacity_uint8_T(sp, r1, loop_ub, &nd_emlrtRTEI);
+        emxEnsureCapacity_uint8_T(sp, r1, loop_ub, &ce_emlrtRTEI);
         r4 = r1->data;
         for (i = 0; i < vectorUB; i++) {
           if (((int32_T)varargout_3_data[i] < 1) || ((int32_T)varargout_3_data[i]
@@ -5194,24 +5373,24 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
         lastUnassigned += (uint32_T)varargout_3->size[0];
       }
 
-      st.site = &nl_emlrtRSI;
+      st.site = &dk_emlrtRSI;
       loop_ub = varargout_2->size[0];
       if (varargout_2->size[0] != 0) {
-        st.site = &ml_emlrtRSI;
-        b_st.site = &lo_emlrtRSI;
+        st.site = &ck_emlrtRSI;
+        b_st.site = &bn_emlrtRSI;
         sort(&b_st, varargout_2);
-        st.site = &ml_emlrtRSI;
-        b_st.site = &mp_emlrtRSI;
+        st.site = &ck_emlrtRSI;
+        b_st.site = &co_emlrtRSI;
         loop_ub = varargout_3->size[0];
         varargout_3->size[0] = overallUnassignedCentralTracks->size[0];
-        emxEnsureCapacity_uint32_T(&b_st, varargout_3, loop_ub, &qd_emlrtRTEI);
+        emxEnsureCapacity_uint32_T(&b_st, varargout_3, loop_ub, &fe_emlrtRTEI);
         varargout_3_data = varargout_3->data;
         loop_ub = overallUnassignedCentralTracks->size[0] - 1;
         for (i = 0; i <= loop_ub; i++) {
           varargout_3_data[i] = c_overallUnassignedCentralTrack[i];
         }
 
-        c_st.site = &np_emlrtRSI;
+        c_st.site = &do_emlrtRSI;
         do_vectors(&c_st, varargout_3, varargout_2,
                    overallUnassignedCentralTracks, ii, ib);
         c_overallUnassignedCentralTrack = overallUnassignedCentralTracks->data;
@@ -5258,7 +5437,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       c_overallUnassignedLocalTracks_[i] = e_overallUnassignedLocalTracks_[i];
     }
 
-    st.site = &ll_emlrtRSI;
+    st.site = &bk_emlrtRSI;
     f_overallUnassignedLocalTracks_.data = &c_overallUnassignedLocalTracks_[0];
     f_overallUnassignedLocalTracks_.size = d_overallUnassignedLocalTracks_;
     f_overallUnassignedLocalTracks_.allocatedSize = -1;
@@ -5276,7 +5455,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
     emxFree_uint32_T(sp, &varargout_2);
     loop_ub = b_obj->size[0];
     b_obj->size[0] = (int32_T)d;
-    emxEnsureCapacity_boolean_T(sp, b_obj, loop_ub, &ld_emlrtRTEI);
+    emxEnsureCapacity_boolean_T(sp, b_obj, loop_ub, &ae_emlrtRTEI);
     obj_data = b_obj->data;
     i2 = (int32_T)d;
     if (overallAssignments->size[0] < 800) {
@@ -5307,10 +5486,10 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
       }
     }
 
-    emxInit_int32_T(sp, &r3, 1, &ld_emlrtRTEI);
+    emxInit_int32_T(sp, &r3, 1, &ae_emlrtRTEI);
     loop_ub = r3->size[0];
     r3->size[0] = i2;
-    emxEnsureCapacity_int32_T(sp, r3, loop_ub, &ld_emlrtRTEI);
+    emxEnsureCapacity_int32_T(sp, r3, loop_ub, &ae_emlrtRTEI);
     d_overallUnassignedLocalTracks_ = r3->data;
     loop_ub = 0;
     for (i = 0; i < b_loop_ub; i++) {
@@ -5325,7 +5504,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
     loop_ub = varargout_1->size[0] * varargout_1->size[1];
     varargout_1->size[0] = r3->size[0];
     varargout_1->size[1] = 2;
-    emxEnsureCapacity_uint32_T(sp, varargout_1, loop_ub, &md_emlrtRTEI);
+    emxEnsureCapacity_uint32_T(sp, varargout_1, loop_ub, &be_emlrtRTEI);
     varargout_1_data = varargout_1->data;
     for (i = 0; i < 2; i++) {
       for (b_i = 0; b_i < i2; b_i++) {
@@ -5345,7 +5524,7 @@ static void trackFuser_assign(const emlrtStack *sp, trackFuser *obj, const
     loop_ub = overallAssignments->size[0] * overallAssignments->size[1];
     overallAssignments->size[0] = varargout_1->size[0];
     overallAssignments->size[1] = 2;
-    emxEnsureCapacity_uint32_T(sp, overallAssignments, loop_ub, &od_emlrtRTEI);
+    emxEnsureCapacity_uint32_T(sp, overallAssignments, loop_ub, &de_emlrtRTEI);
     overallAssignments_data = overallAssignments->data;
     loop_ub = varargout_1->size[0] << 1;
     for (i = 0; i < loop_ub; i++) {
@@ -5363,11 +5542,11 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
   const emxArray_uint32_T *unassignedTracks, const emxArray_real_T *notUpdated,
   boolean_T toDelete[100])
 {
-  c_objectTrack temp;
   emlrtStack b_st;
   emlrtStack st;
   emxArray_uint32_T *b_unassignedTracks;
   emxArray_uint32_T *c_unassignedTracks;
+  objectTrack temp;
   trackHistoryLogic *tempLogic;
   const real_T *notUpdated_data;
   real_T d;
@@ -5392,12 +5571,12 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
   notUpdated_data = notUpdated->data;
   unassignedTracks_data = unassignedTracks->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &iv_emlrtRSI;
-  emxInit_uint32_T(&st, &b_unassignedTracks, 2, &rg_emlrtRTEI);
+  st.site = &yt_emlrtRSI;
+  emxInit_uint32_T(&st, &b_unassignedTracks, 2, &hi_emlrtRTEI);
   nz = b_unassignedTracks->size[0] * b_unassignedTracks->size[1];
   b_unassignedTracks->size[0] = 1;
   b_unassignedTracks->size[1] = unassignedTracks->size[0] + notUpdated->size[1];
-  emxEnsureCapacity_uint32_T(&st, b_unassignedTracks, nz, &rg_emlrtRTEI);
+  emxEnsureCapacity_uint32_T(&st, b_unassignedTracks, nz, &hi_emlrtRTEI);
   b_unassignedTracks_data = b_unassignedTracks->data;
   nz = unassignedTracks->size[0];
   for (k = 0; k < nz; k++) {
@@ -5422,13 +5601,14 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
     b_unassignedTracks_data[k + unassignedTracks->size[0]] = q0;
   }
 
-  emxInit_uint32_T(&st, &c_unassignedTracks, 2, &tg_emlrtRTEI);
+  emxInit_uint32_T(&st, &c_unassignedTracks, 2, &oi_emlrtRTEI);
   b_st.site = &ib_emlrtRSI;
   c_unique_vector(&b_st, b_unassignedTracks, c_unassignedTracks);
   b_unassignedTracks_data = c_unassignedTracks->data;
   emxFree_uint32_T(&st, &b_unassignedTracks);
   memset(&toDelete[0], 0, 100U * sizeof(boolean_T));
   loop_ub = c_unassignedTracks->size[1];
+  emxInitStruct_objectTrack(sp, &temp, &ki_emlrtRTEI, true);
   for (i = 0; i < loop_ub; i++) {
     uint32_T qY;
     uint32_T u;
@@ -5445,7 +5625,7 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
     }
 
     nz = (int32_T)b_unassignedTracks_data[i] - 1;
-    temp = obj->pTracksList[nz];
+    emxCopyStruct_objectTrack(sp, &temp, &obj->pTracksList[nz], &ii_emlrtRTEI);
     if (i + 1 > loop_ub) {
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, loop_ub, &yg_emlrtBCI,
         (emlrtConstCTX)sp);
@@ -5472,7 +5652,7 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
       emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &ah_emlrtBCI, (emlrtConstCTX)sp);
     }
 
-    obj->pTracksList[nz] = temp;
+    emxCopyStruct_objectTrack(sp, &obj->pTracksList[nz], &temp, &ii_emlrtRTEI);
     if (i + 1 > loop_ub) {
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, loop_ub, &bh_emlrtBCI,
         (emlrtConstCTX)sp);
@@ -5483,15 +5663,17 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
     }
 
     q0 = b_unassignedTracks_data[i];
-    temp = obj->pTracksList[(int32_T)q0 - 1];
+    emxCopyStruct_objectTrack(sp, &temp, &obj->pTracksList[(int32_T)q0 - 1],
+      &li_emlrtRTEI);
     temp.IsCoasted = true;
     if (((int32_T)q0 - 1 < 0) || ((int32_T)q0 - 1 > 99)) {
       emlrtDynamicBoundsCheckR2012b((int32_T)q0 - 1, 0, 99, &ch_emlrtBCI,
         (emlrtConstCTX)sp);
     }
 
-    obj->pTracksList[(int32_T)q0 - 1] = temp;
-    st.site = &jv_emlrtRSI;
+    emxCopyStruct_objectTrack(sp, &obj->pTracksList[(int32_T)q0 - 1], &temp,
+      &li_emlrtRTEI);
+    st.site = &au_emlrtRSI;
     if (i + 1 > loop_ub) {
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, loop_ub, &eh_emlrtBCI, &st);
     }
@@ -5506,7 +5688,7 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
 
     tempLogic = obj->pTrackLogics[(int32_T)u - 1];
     if (tempLogic->pIsFirstUpdate) {
-      emlrtErrorWithMessageIdR2018a(&st, &ac_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&st, &dc_emlrtRTEI,
         "shared_tracking:trackHistoryLogic:notInitialized",
         "shared_tracking:trackHistoryLogic:notInitialized", 3, 4, 4, "miss");
     }
@@ -5521,7 +5703,7 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
     }
 
     tempLogic->pIsFirstUpdate = false;
-    st.site = &kv_emlrtRSI;
+    st.site = &bu_emlrtRSI;
     if (i + 1 > loop_ub) {
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, loop_ub, &hh_emlrtBCI, &st);
     }
@@ -5653,7 +5835,7 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
     }
 
     if (toDelete[(int32_T)u - 1]) {
-      st.site = &lv_emlrtRSI;
+      st.site = &cu_emlrtRSI;
       if (i + 1 > loop_ub) {
         emlrtDynamicBoundsCheckR2012b(i + 1, 1, loop_ub, &vh_emlrtBCI, &st);
       }
@@ -5676,7 +5858,7 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
   }
 
   emxFree_uint32_T(sp, &c_unassignedTracks);
-  st.site = &mv_emlrtRSI;
+  st.site = &du_emlrtRSI;
   b_nz = toDelete[0];
   for (k = 0; k < 99; k++) {
     b_nz += toDelete[k + 1];
@@ -5704,7 +5886,7 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
   }
 
   emlrtForLoopVectorCheckR2021a(b_nz, -1.0, 1.0, mxDOUBLE_CLASS, b_nz,
-    &bc_emlrtRTEI, &st);
+    &ec_emlrtRTEI, &st);
   for (i = 0; i < b_nz; i++) {
     uint32_T b_tmp_data[101];
     int8_T b_i;
@@ -5715,12 +5897,13 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
     }
 
     b_i = ii_data[nz - 1];
-    temp = obj->pTracksList[b_i - 1];
+    emxCopyStruct_objectTrack(&st, &temp, &obj->pTracksList[b_i - 1],
+      &ki_emlrtRTEI);
     tempLogic = obj->pTrackLogics[b_i - 1];
     d = obj->pNumLiveTracks;
     nz = (int32_T)(d + (1.0 - ((real_T)b_i + 1.0)));
     emlrtForLoopVectorCheckR2021a((real_T)b_i + 1.0, 1.0, d, mxDOUBLE_CLASS, nz,
-      &cc_emlrtRTEI, &st);
+      &fc_emlrtRTEI, &st);
     for (k = 0; k < nz; k++) {
       q0 = ((uint32_T)b_i + (uint32_T)k) + 1U;
       if ((real_T)q0 != (int32_T)q0) {
@@ -5743,8 +5926,8 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
           &rh_emlrtBCI, &st);
       }
 
-      obj->pTracksList[(int32_T)((real_T)q0 - 1.0) - 1] = obj->pTracksList
-        [(int32_T)q0 - 1];
+      emxCopyStruct_objectTrack(&st, &obj->pTracksList[(int32_T)((real_T)q0 -
+        1.0) - 1], &obj->pTracksList[(int32_T)q0 - 1], &ni_emlrtRTEI);
       if ((real_T)q0 != (int32_T)q0) {
         emlrtIntegerCheckR2012b(q0, &oc_emlrtDCI, &st);
       }
@@ -5776,7 +5959,7 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
       emlrtDynamicBoundsCheckR2012b(nz, 0, 99, &ug_emlrtBCI, &st);
     }
 
-    obj->pTracksList[nz] = temp;
+    emxCopyStruct_objectTrack(&st, &obj->pTracksList[nz], &temp, &mi_emlrtRTEI);
     if (obj->pNumLiveTracks != (int32_T)muDoubleScalarFloor(obj->pNumLiveTracks))
     {
       emlrtIntegerCheckR2012b(obj->pNumLiveTracks, &ec_emlrtDCI, &st);
@@ -5844,6 +6027,7 @@ static void trackFuser_coastUnassigned(const emlrtStack *sp, trackFuser *obj,
     }
   }
 
+  emxFreeStruct_objectTrack(&st, &temp);
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
 }
 
@@ -5852,14 +6036,8 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
   int32_T assignments_size[2])
 {
   b_objectTrack b_expl_temp;
-  b_objectTrack jw_emlrtRSI;
-  b_objectTrack kw_emlrtRSI;
-  c_objectTrack b_obj;
-  c_objectTrack *r1;
-  c_objectTrack *transformedTracks_data;
   emlrtStack b_st;
   emlrtStack c_st;
-  emlrtStack d_st;
   emlrtStack st;
   emxArray_boolean_T b_inAssigned_data;
   emxArray_boolean_T *toFuse;
@@ -5872,11 +6050,15 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
   emxArray_uint32_T d_assignments_data;
   emxArray_uint32_T *b;
   fuserSourceConfiguration *thisConfig;
+  objectTrack b_obj;
+  objectTrack c_obj;
+  objectTrack *r1;
+  objectTrack *transformedTracks_data;
   const struct0_T *localTracks_data;
   struct1_T *otherAttributes_data;
-  trackHistoryLogic *c_obj;
+  trackHistoryLogic *d_obj;
   real_T b_ii_data[200];
-  real_T b_dv[2];
+  real_T dv[2];
   int32_T b_assignments_size;
   int32_T b_i;
   int32_T b_loop_ub;
@@ -5901,26 +6083,29 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  d_st.prev = &c_st;
-  d_st.tls = c_st.tls;
   localTracks_data = localTracks->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  b_obj = obj->pTracksList[99];
-  b_dv[0] = 1.0;
-  b_dv[1] = assignments_size[0];
-  emxInit_objectTrack(sp, &r, &wf_emlrtRTEI);
-  st.site = &cr_emlrtRSI;
-  repmat(&st, &b_obj, b_dv, r);
+  emxInitStruct_objectTrack(sp, &b_obj, &xg_emlrtRTEI, true);
+  emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[99], &qg_emlrtRTEI);
+  emxInitMatrix_objectTrack1(sp, &c_obj, &rg_emlrtRTEI);
+  emxCopyStruct_objectTrack(sp, &c_obj, &b_obj, &rg_emlrtRTEI);
+  dv[0] = 1.0;
+  dv[1] = assignments_size[0];
+  emxInit_objectTrack(sp, &r, &mh_emlrtRTEI);
+  st.site = &sp_emlrtRSI;
+  repmat(&st, &c_obj, dv, r);
   r1 = r->data;
-  emxInit_objectTrack(sp, &transformedTracks, &lf_emlrtRTEI);
+  emxFreeMatrix_objectTrack1(sp, &c_obj);
+  emxInit_objectTrack(sp, &transformedTracks, &sg_emlrtRTEI);
   nz = transformedTracks->size[0] * transformedTracks->size[1];
   transformedTracks->size[0] = 1;
   j = r->size[1];
   transformedTracks->size[1] = r->size[1];
-  emxEnsureCapacity_objectTrack(sp, transformedTracks, nz, &lf_emlrtRTEI);
+  emxEnsureCapacity_objectTrack(sp, transformedTracks, nz, &sg_emlrtRTEI);
   transformedTracks_data = transformedTracks->data;
   for (i = 0; i < j; i++) {
-    transformedTracks_data[i] = r1[i];
+    emxCopyStruct_objectTrack(sp, &transformedTracks_data[i], &r1[i],
+      &sg_emlrtRTEI);
   }
 
   emxFree_objectTrack(sp, &r);
@@ -5939,67 +6124,32 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
     }
 
     expl_temp = localTracks_data[nz - 1];
-    st.site = &dr_emlrtRSI;
-    b_st.site = &ug_emlrtRSI;
+    st.site = &tp_emlrtRSI;
+    b_st.site = &vg_emlrtRSI;
     thisConfig = FuserManager_getConfigByID(&b_st, obj, expl_temp.SourceIndex);
-    st.site = &er_emlrtRSI;
+    st.site = &up_emlrtRSI;
     if (!thisConfig->pIsTransformToCentralValid) {
-      b_st.site = &vg_emlrtRSI;
-      c_st.site = &xg_emlrtRSI;
-      local2central(&c_st, expl_temp.TrackID, expl_temp.BranchID,
-                    expl_temp.SourceIndex, expl_temp.UpdateTime, expl_temp.Age,
-                    expl_temp.State, expl_temp.StateCovariance,
-                    expl_temp.ObjectClassID,
-                    expl_temp.ObjectClassProbabilities.data,
-                    expl_temp.ObjectClassProbabilities.size,
-                    expl_temp.IsConfirmed, expl_temp.IsCoasted,
-                    expl_temp.IsSelfReported, &b_expl_temp);
-      c_st.site = &yg_emlrtRSI;
-
-      /*  Pre-define output with longest TrackLogic to force codegen consistency */
-      if (b_expl_temp.SourceIndex == 1U) {
-        /*  Radar */
-        d_st.site = &fi_emlrtRSI;
-        Ecef2nedTrack(&d_st, b_expl_temp.TrackID, b_expl_temp.BranchID, 1U,
-                      b_expl_temp.Age, b_expl_temp.ObjectClassID,
-                      b_expl_temp.ObjectClassProbabilities.data,
-                      b_expl_temp.ObjectClassProbabilities.size,
-                      b_expl_temp.IsConfirmed, b_expl_temp.IsCoasted,
-                      b_expl_temp.IsSelfReported, b_expl_temp.pState,
-                      b_expl_temp.pStateCovariance, b_expl_temp.pUpdateTime,
-                      &jw_emlrtRSI);
-      } else if (b_expl_temp.SourceIndex == 2U) {
-        /*  ADSB */
-        d_st.site = &gi_emlrtRSI;
-        Ned2ecefTrack(&d_st, b_expl_temp.TrackID, b_expl_temp.BranchID, 2U,
-                      b_expl_temp.Age, b_expl_temp.ObjectClassID,
-                      b_expl_temp.ObjectClassProbabilities.data,
-                      b_expl_temp.ObjectClassProbabilities.size,
-                      b_expl_temp.IsConfirmed, b_expl_temp.IsCoasted,
-                      b_expl_temp.IsSelfReported, b_expl_temp.pState,
-                      b_expl_temp.pStateCovariance, b_expl_temp.pUpdateTime,
-                      &kw_emlrtRSI);
-      }
-
+      b_st.site = &wg_emlrtRSI;
       thisConfig->pIsTransformToCentralValid = true;
     }
 
-    b_st.site = &wg_emlrtRSI;
-    local2central(&b_st, expl_temp.TrackID, expl_temp.BranchID,
-                  expl_temp.SourceIndex, expl_temp.UpdateTime, expl_temp.Age,
-                  expl_temp.State, expl_temp.StateCovariance,
-                  expl_temp.ObjectClassID,
-                  expl_temp.ObjectClassProbabilities.data,
-                  expl_temp.ObjectClassProbabilities.size, expl_temp.IsConfirmed,
-                  expl_temp.IsCoasted, expl_temp.IsSelfReported, &b_expl_temp);
-    st.site = &fr_emlrtRSI;
+    st.site = &up_emlrtRSI;
+    b_st.site = &ep_emlrtRSI;
+    objectTrack_objectTrack(&b_st, expl_temp.SourceIndex, expl_temp.UpdateTime,
+      expl_temp.State, expl_temp.StateCovariance, expl_temp.ObjectClassID,
+      expl_temp.ObjectClassProbabilities.data,
+      expl_temp.ObjectClassProbabilities.size, expl_temp.TrackLogic,
+      expl_temp.TrackLogicState.data, expl_temp.TrackLogicState.size,
+      expl_temp.IsConfirmed, expl_temp.IsCoasted, expl_temp.IsSelfReported,
+      expl_temp.ObjectAttributes, &b_expl_temp);
+    st.site = &vp_emlrtRSI;
     nz = transformedTracks->size[1] - 1;
     if (b_i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(b_i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
-    b_st.site = &qc_emlrtRSI;
+    b_st.site = &rc_emlrtRSI;
     c_st.site = &gb_emlrtRSI;
     if (b_expl_temp.pUpdateTime < 0.0) {
       emlrtErrorWithMessageIdR2018a(&c_st, &l_emlrtRTEI,
@@ -6017,17 +6167,17 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
 
     if (b_i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(b_i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
     transformedTracks_data[b_i].pUpdateTime = b_expl_temp.pUpdateTime;
-    st.site = &fr_emlrtRSI;
+    st.site = &vp_emlrtRSI;
     if (b_i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(b_i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
-    b_st.site = &rc_emlrtRSI;
+    b_st.site = &sc_emlrtRSI;
     validateattributes(&b_st, b_expl_temp.pState);
     for (i = 0; i < 6; i++) {
       if (b_i > nz) {
@@ -6037,19 +6187,19 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
       transformedTracks_data[b_i].pState[i] = b_expl_temp.pState[i];
     }
 
-    st.site = &fr_emlrtRSI;
+    st.site = &vp_emlrtRSI;
     if (b_i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(b_i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
-    b_st.site = &sc_emlrtRSI;
-    b_validateattributes(&b_st, b_expl_temp.pStateCovariance);
     b_st.site = &tc_emlrtRSI;
+    b_validateattributes(&b_st, b_expl_temp.pStateCovariance);
+    b_st.site = &uc_emlrtRSI;
     isSymmetricPositiveSemiDefinite(&b_st, b_expl_temp.pStateCovariance);
     if (b_i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(b_i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, &st);
+        &te_emlrtBCI, &st);
     }
 
     for (i = 0; i < 36; i++) {
@@ -6059,26 +6209,26 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
 
     if (b_i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(b_i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, (emlrtConstCTX)sp);
+        &te_emlrtBCI, (emlrtConstCTX)sp);
     }
 
     transformedTracks_data[b_i].IsConfirmed = b_expl_temp.IsConfirmed;
     if (b_i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(b_i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, (emlrtConstCTX)sp);
+        &te_emlrtBCI, (emlrtConstCTX)sp);
     }
 
     transformedTracks_data[b_i].IsCoasted = b_expl_temp.IsCoasted;
     if (b_i > transformedTracks->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(b_i, 0, transformedTracks->size[1] - 1,
-        &we_emlrtBCI, (emlrtConstCTX)sp);
+        &te_emlrtBCI, (emlrtConstCTX)sp);
     }
 
     transformedTracks_data[b_i].IsSelfReported = b_expl_temp.IsSelfReported;
   }
 
-  emxInit_uint32_T(sp, &b, 1, &uf_emlrtRTEI);
-  st.site = &gr_emlrtRSI;
+  emxInit_uint32_T(sp, &b, 1, &kh_emlrtRTEI);
+  st.site = &wp_emlrtRSI;
   b_assignments_size = assignments_size[0];
   if (loop_ub - 1 >= 0) {
     memcpy(&b_assignments_data[0], &assignments_data[0], (uint32_T)loop_ub *
@@ -6095,9 +6245,9 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
   b_data = b->data;
   b_loop_ub = b->size[0];
   updated_size_idx_1 = b->size[0];
-  emxInit_int32_T(sp, &ii, 1, &sd_emlrtRTEI);
-  emxInit_struct1_T(sp, &otherAttributes, &vf_emlrtRTEI);
-  emxInit_boolean_T(sp, &toFuse, 1, &pf_emlrtRTEI, true);
+  emxInit_int32_T(sp, &ii, 1, &he_emlrtRTEI);
+  emxInit_boolean_T(sp, &toFuse, 1, &wg_emlrtRTEI, true);
+  emxInit_struct1_T(sp, &otherAttributes, &lh_emlrtRTEI);
   for (c_i = 0; c_i < b_loop_ub; c_i++) {
     int32_T end;
     if (c_i + 1 > b_loop_ub) {
@@ -6110,30 +6260,30 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
       inAssigned_data[i] = (b_data[c_i] == assignments_data[i]);
     }
 
-    st.site = &hr_emlrtRSI;
+    st.site = &xp_emlrtRSI;
     b_inAssigned_data.data = &inAssigned_data[0];
     b_inAssigned_data.size = &inAssigned_size;
     b_inAssigned_data.allocatedSize = 200;
     b_inAssigned_data.numDimensions = 1;
     b_inAssigned_data.canFreeData = false;
-    b_st.site = &yl_emlrtRSI;
+    b_st.site = &ok_emlrtRSI;
     eml_find(&b_st, &b_inAssigned_data, ii);
     ii_data = ii->data;
-    st.site = &ir_emlrtRSI;
+    st.site = &yp_emlrtRSI;
     end = ii->size[0];
     nz = toFuse->size[0];
     toFuse->size[0] = ii->size[0];
-    emxEnsureCapacity_boolean_T(&st, toFuse, nz, &pf_emlrtRTEI);
+    emxEnsureCapacity_boolean_T(&st, toFuse, nz, &wg_emlrtRTEI);
     toFuse_data = toFuse->data;
     for (i = 0; i < end; i++) {
       if (i + 1 > end) {
-        emlrtDynamicBoundsCheckR2012b(i + 1, 1, end, &xe_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(i + 1, 1, end, &ue_emlrtBCI, &st);
       }
 
       j = ii_data[i] - 1;
       if ((j < 0) || (j > transformedTracks->size[1] - 1)) {
         emlrtDynamicBoundsCheckR2012b(j, 0, transformedTracks->size[1] - 1,
-          &ye_emlrtBCI, &st);
+          &ve_emlrtBCI, &st);
       }
 
       if ((transformedTracks_data[ii_data[i] - 1].IsConfirmed &&
@@ -6155,7 +6305,7 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
       }
     }
 
-    st.site = &jr_emlrtRSI;
+    st.site = &aq_emlrtRSI;
     if (b_any(&st, toFuse)) {
       real_T id;
       int32_T obj_tmp;
@@ -6170,12 +6320,13 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
         emlrtIntegerCheckR2012b(u, &sb_emlrtDCI, (emlrtConstCTX)sp);
       }
 
-      st.site = &kr_emlrtRSI;
-      b_st.site = &wq_emlrtRSI;
-      c_st.site = &bg_emlrtRSI;
+      st.site = &bq_emlrtRSI;
+      b_st.site = &np_emlrtRSI;
+      c_st.site = &cg_emlrtRSI;
       nz = b_combineVectorElements(&c_st, toFuse);
       obj_tmp = (int32_T)b_data[c_i] - 1;
-      b_obj = obj->pTracksList[obj_tmp];
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &xg_emlrtRTEI);
       if ((real_T)u != (int32_T)u) {
         emlrtIntegerCheckR2012b(u, &wb_emlrtDCI, (emlrtConstCTX)sp);
       }
@@ -6203,7 +6354,8 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
           (emlrtConstCTX)sp);
       }
 
-      obj->pTracksList[obj_tmp] = b_obj;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &xg_emlrtRTEI);
       if ((real_T)u != (int32_T)u) {
         emlrtIntegerCheckR2012b(u, &tb_emlrtDCI, (emlrtConstCTX)sp);
       }
@@ -6221,7 +6373,7 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
         }
       }
 
-      st.site = &lr_emlrtRSI;
+      st.site = &cq_emlrtRSI;
       for (b_i = 0; b_i < trueCount; b_i++) {
         u2 = tmp_data[b_i];
         if (u2 > assignments_size[0] - 1) {
@@ -6255,12 +6407,14 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
         id = localTracks_data[nz - 1].ObjectClassID;
       }
 
-      st.site = &lr_emlrtRSI;
-      b_obj = obj->pTracksList[obj_tmp];
-      b_st.site = &ig_emlrtRSI;
+      st.site = &cq_emlrtRSI;
+      emxCopyStruct_objectTrack(&st, &b_obj, &obj->pTracksList[obj_tmp],
+        &ah_emlrtRTEI);
+      b_st.site = &jg_emlrtRSI;
       c_validateattributes(&b_st, id);
       b_obj.ObjectClassID = id;
-      obj->pTracksList[obj_tmp] = b_obj;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &ah_emlrtRTEI);
       if ((real_T)u != (int32_T)u) {
         emlrtIntegerCheckR2012b(u, &ub_emlrtDCI, (emlrtConstCTX)sp);
       }
@@ -6279,7 +6433,8 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
           (emlrtConstCTX)sp);
       }
 
-      b_obj = obj->pTracksList[(int32_T)u - 1];
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[(int32_T)u - 1],
+        &bh_emlrtRTEI);
       end = toFuse->size[0];
       j = 0;
       for (b_i = 0; b_i < end; b_i++) {
@@ -6312,18 +6467,19 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
       c_ii_data.allocatedSize = 200;
       c_ii_data.numDimensions = 1;
       c_ii_data.canFreeData = false;
-      st.site = &mr_emlrtRSI;
+      st.site = &dq_emlrtRSI;
       Fuserxcov_fuse(&st, &obj->cFuser, &b_obj, transformedTracks, &c_ii_data);
-      obj->pTracksList[obj_tmp] = b_obj;
-      st.site = &nr_emlrtRSI;
-      b_st.site = &wq_emlrtRSI;
-      c_st.site = &bg_emlrtRSI;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &bh_emlrtRTEI);
+      st.site = &eq_emlrtRSI;
+      b_st.site = &np_emlrtRSI;
+      c_st.site = &cg_emlrtRSI;
       nz = b_combineVectorElements(&c_st, toFuse);
       emlrtForLoopVectorCheckR2021a(1.0, 1.0, nz, mxDOUBLE_CLASS, nz,
-        &tb_emlrtRTEI, (emlrtConstCTX)sp);
+        &wb_emlrtRTEI, (emlrtConstCTX)sp);
       for (i = 0; i < nz; i++) {
         boolean_T bv[50];
-        st.site = &or_emlrtRSI;
+        st.site = &fq_emlrtRSI;
         if ((real_T)u != (int32_T)u) {
           emlrtIntegerCheckR2012b(u, &ac_emlrtDCI, &st);
         }
@@ -6332,23 +6488,23 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
           emlrtDynamicBoundsCheckR2012b((int32_T)u - 1, 0, 99, &lf_emlrtBCI, &st);
         }
 
-        c_obj = obj->pTrackLogics[(int32_T)u - 1];
-        if (c_obj->pIsFirstUpdate) {
-          emlrtErrorWithMessageIdR2018a(&st, &vb_emlrtRTEI,
+        d_obj = obj->pTrackLogics[(int32_T)u - 1];
+        if (d_obj->pIsFirstUpdate) {
+          emlrtErrorWithMessageIdR2018a(&st, &yb_emlrtRTEI,
             "shared_tracking:trackHistoryLogic:notInitialized",
             "shared_tracking:trackHistoryLogic:notInitialized", 3, 4, 3, "hit");
         }
 
         bv[0] = true;
         for (b_i = 0; b_i < 49; b_i++) {
-          bv[b_i + 1] = c_obj->pRecentHistory[b_i];
+          bv[b_i + 1] = d_obj->pRecentHistory[b_i];
         }
 
         for (b_i = 0; b_i < 50; b_i++) {
-          c_obj->pRecentHistory[b_i] = bv[b_i];
+          d_obj->pRecentHistory[b_i] = bv[b_i];
         }
 
-        c_obj->pIsFirstUpdate = false;
+        d_obj->pIsFirstUpdate = false;
       }
 
       if ((real_T)u != (int32_T)u) {
@@ -6363,7 +6519,7 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
       if (obj->pTracksList[(int32_T)u - 1].IsConfirmed) {
         b_value = true;
       } else {
-        st.site = &pr_emlrtRSI;
+        st.site = &gq_emlrtRSI;
         if ((real_T)u != (int32_T)u) {
           emlrtIntegerCheckR2012b(u, &bc_emlrtDCI, &st);
         }
@@ -6372,15 +6528,15 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
           emlrtDynamicBoundsCheckR2012b((int32_T)u - 1, 0, 99, &mf_emlrtBCI, &st);
         }
 
-        c_obj = obj->pTrackLogics[(int32_T)u - 1];
-        if (c_obj->pIsFirstUpdate) {
+        d_obj = obj->pTrackLogics[(int32_T)u - 1];
+        if (d_obj->pIsFirstUpdate) {
           b_value = false;
         } else {
           boolean_T x_idx_1;
           boolean_T x_idx_2;
-          b_value = c_obj->pRecentHistory[0];
-          x_idx_1 = c_obj->pRecentHistory[1];
-          x_idx_2 = c_obj->pRecentHistory[2];
+          b_value = d_obj->pRecentHistory[0];
+          x_idx_1 = d_obj->pRecentHistory[1];
+          x_idx_2 = d_obj->pRecentHistory[2];
           b_value = ((b_value + x_idx_1) + x_idx_2 >= 2);
         }
 
@@ -6408,16 +6564,18 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
         emlrtIntegerCheckR2012b(u, &vb_emlrtDCI, (emlrtConstCTX)sp);
       }
 
-      b_obj = obj->pTracksList[obj_tmp];
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &dh_emlrtRTEI);
       b_obj.IsConfirmed = b_value;
-      obj->pTracksList[obj_tmp] = b_obj;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &dh_emlrtRTEI);
       if (((int32_T)b_data[c_i] < 1) || ((int32_T)b_data[c_i] > 100)) {
         emlrtDynamicBoundsCheckR2012b((int32_T)b_data[c_i], 1, 100, &of_emlrtBCI,
           (emlrtConstCTX)sp);
       }
 
       obj->pConfirmedTracks[obj_tmp] = obj->pTracksList[obj_tmp].IsConfirmed;
-      st.site = &qr_emlrtRSI;
+      st.site = &hq_emlrtRSI;
       b_value = false;
       nz = 0;
       while ((!b_value) && (nz < trueCount)) {
@@ -6435,10 +6593,13 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
         b_value = localTracks_data[end - 1].IsCoasted;
       }
 
-      b_obj = obj->pTracksList[obj_tmp];
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &eh_emlrtRTEI);
       b_obj.IsCoasted = b_value;
-      obj->pTracksList[obj_tmp] = b_obj;
-      b_obj = obj->pTracksList[obj_tmp];
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &eh_emlrtRTEI);
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &fh_emlrtRTEI);
       b_assignments_size = trueCount;
       for (b_i = 0; b_i < trueCount; b_i++) {
         u2 = tmp_data[b_i];
@@ -6455,36 +6616,41 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
       d_assignments_data.allocatedSize = 200;
       d_assignments_data.numDimensions = 1;
       d_assignments_data.canFreeData = false;
-      st.site = &rr_emlrtRSI;
+      st.site = &iq_emlrtRSI;
       b_obj.IsSelfReported = trackFuser_getSelfReporting(&st, obj, localTracks,
         &d_assignments_data);
-      obj->pTracksList[obj_tmp] = b_obj;
-      b_obj = obj->pTracksList[obj_tmp];
-      obj->pTracksList[obj_tmp] = b_obj;
-      st.site = &sr_emlrtRSI;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &fh_emlrtRTEI);
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &hh_emlrtRTEI);
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &hh_emlrtRTEI);
+      emxCopyStruct_objectTrack(sp, &b_obj, &obj->pTracksList[obj_tmp],
+        &ih_emlrtRTEI);
+      st.site = &jq_emlrtRSI;
+      for (b_i = 0; b_i < trueCount; b_i++) {
+        u2 = tmp_data[b_i];
+        if (u2 > assignments_size[0] - 1) {
+          emlrtDynamicBoundsCheckR2012b(u2, 0, assignments_size[0] - 1,
+            &rf_emlrtBCI, &st);
+        }
+      }
+
+      b_obj.ObjectAttributes = obj->pTracksList[obj_tmp].ObjectAttributes;
       j = otherAttributes->size[0] * otherAttributes->size[1];
       otherAttributes->size[0] = 1;
       otherAttributes->size[1] = trueCount;
-      emxEnsureCapacity_struct1_T(&st, otherAttributes, j, &tf_emlrtRTEI);
+      emxEnsureCapacity_struct1_T(&st, otherAttributes, j, &jh_emlrtRTEI);
       otherAttributes_data = otherAttributes->data;
       for (b_i = 0; b_i < trueCount; b_i++) {
         if (b_i + 1 > trueCount) {
-          emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, trueCount, &rf_emlrtBCI, &st);
+          emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, trueCount, &sf_emlrtBCI, &st);
         }
 
         nz = (int32_T)assignments_data[tmp_data[b_i] + assignments_size[0]];
         if ((nz < 1) || (nz > localTracks->size[0])) {
           emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
-            &te_emlrtBCI, &st);
-        }
-
-        if (b_i + 1 > trueCount) {
-          emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, trueCount, &sf_emlrtBCI, &st);
-        }
-
-        if (nz > localTracks->size[0]) {
-          emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
-            &ue_emlrtBCI, &st);
+            &we_emlrtBCI, &st);
         }
 
         if (b_i + 1 > trueCount) {
@@ -6493,28 +6659,37 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
 
         if (nz > localTracks->size[0]) {
           emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
-            &ve_emlrtBCI, &st);
+            &xe_emlrtBCI, &st);
         }
 
         if (b_i + 1 > trueCount) {
-          emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, trueCount, &wf_emlrtBCI, &st);
+          emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, trueCount, &vf_emlrtBCI, &st);
         }
 
         if (nz > localTracks->size[0]) {
           emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
-            &vf_emlrtBCI, &st);
+            &ye_emlrtBCI, &st);
+        }
+
+        if (b_i + 1 > trueCount) {
+          emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, trueCount, &xf_emlrtBCI, &st);
+        }
+
+        if (nz > localTracks->size[0]) {
+          emlrtDynamicBoundsCheckR2012b(nz, 1, localTracks->size[0],
+            &wf_emlrtBCI, &st);
         }
 
         if (b_i > otherAttributes->size[1] - 1) {
           emlrtDynamicBoundsCheckR2012b(b_i, 0, otherAttributes->size[1] - 1,
-            &xf_emlrtBCI, &st);
+            &yf_emlrtBCI, &st);
         }
 
         otherAttributes_data[b_i] = localTracks_data[nz - 1].ObjectAttributes;
       }
 
-      b_obj = obj->pTracksList[obj_tmp];
-      obj->pTracksList[obj_tmp] = b_obj;
+      emxCopyStruct_objectTrack(sp, &obj->pTracksList[obj_tmp], &b_obj,
+        &ih_emlrtRTEI);
       if (c_i + 1 > updated_size_idx_1) {
         emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, updated_size_idx_1,
           &uf_emlrtBCI, (emlrtConstCTX)sp);
@@ -6522,8 +6697,9 @@ static void trackFuser_fuseAssigned(const emlrtStack *sp, trackFuser *obj, const
     }
   }
 
-  emxFree_boolean_T(sp, &toFuse);
   emxFree_struct1_T(sp, &otherAttributes);
+  emxFree_boolean_T(sp, &toFuse);
+  emxFreeStruct_objectTrack(sp, &b_obj);
   emxFree_int32_T(sp, &ii);
   emxFree_uint32_T(sp, &b);
   emxFree_objectTrack(sp, &transformedTracks);
@@ -6556,7 +6732,7 @@ static boolean_T trackFuser_getSelfReporting(const emlrtStack *sp, trackFuser
     i++;
     if (i > assignedlocalTracks->size[0]) {
       emlrtDynamicBoundsCheckR2012b(i, 1, assignedlocalTracks->size[0],
-        &pg_emlrtBCI, (emlrtConstCTX)sp);
+        &qg_emlrtBCI, (emlrtConstCTX)sp);
     }
 
     b_i = (int32_T)assignedlocalTracks_data[i - 1];
@@ -6565,8 +6741,8 @@ static boolean_T trackFuser_getSelfReporting(const emlrtStack *sp, trackFuser
         (emlrtConstCTX)sp);
     }
 
-    st.site = &oq_emlrtRSI;
-    b_st.site = &ug_emlrtRSI;
+    st.site = &fp_emlrtRSI;
+    b_st.site = &vg_emlrtRSI;
     thisSource = FuserManager_getConfigByID(&b_st, obj, localTracks_data[b_i - 1]
       .SourceIndex);
     if (thisSource->IsInternalSource && localTracks_data[b_i - 1].IsSelfReported)
@@ -6598,7 +6774,7 @@ void trackFuser_resetImpl(const emlrtStack *sp, trackFuser *obj)
 
   obj->pIsValidSource[0] = false;
   obj->pIsValidSource[1] = false;
-  st.site = &cj_emlrtRSI;
+  st.site = &uh_emlrtRSI;
   SystemCore_reset(&st, &obj->cAssigner);
   b_obj = obj->pTrackLogics[0];
   for (i = 0; i < 50; i++) {
@@ -7203,39 +7379,37 @@ void trackFuser_resetImpl(const emlrtStack *sp, trackFuser *obj)
   obj->pLastTrackID = 0U;
 }
 
-int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
-  emxArray_struct0_T *localTracks, real_T tFusion, struct2_T confTracks_data[])
+void trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
+  emxArray_struct0_T *localTracks, real_T tFusion, struct2_T confTracks_data[],
+  int32_T *confTracks_size)
 {
   static const char_T logicType[7] = { 'H', 'i', 's', 't', 'o', 'r', 'y' };
 
   __m128d r;
-  b_objectTrack expl_temp;
-  b_objectTrack jw_emlrtRSI;
-  b_objectTrack kw_emlrtRSI;
-  b_objectTrack lw_emlrtRSI;
-  c_objectTrack track;
   emlrtStack b_st;
   emlrtStack c_st;
   emlrtStack d_st;
   emlrtStack e_st;
-  emlrtStack f_st;
-  emlrtStack g_st;
   emlrtStack st;
   emxArray_boolean_T *updated;
   emxArray_int32_T *r1;
   emxArray_real_T *b_prevInds;
   emxArray_real_T *costMatrix;
   emxArray_real_T *prevInds;
-  emxArray_struct2_T *allStructs;
+  emxArray_struct2_T *allTracks;
+  emxArray_struct_T *allStructs;
   emxArray_uint32_T *assigned;
   emxArray_uint32_T *unassignedCentral;
   fuserSourceConfiguration *source;
+  objectTrack expl_temp;
+  objectTrack track;
   const struct0_T *localTracks_data;
-  struct2_T oneStruct;
-  struct2_T *allStructs_data;
+  struct2_T *allTracks_data;
+  struct_T oneStruct;
+  struct_T *allStructs_data;
   trackHistoryLogic *b_obj;
   real_T times_data[200];
-  real_T b_dv[2];
+  real_T dv[2];
   real_T dt;
   real_T prevNumLive;
   real_T *b_prevInds_data;
@@ -7243,11 +7417,11 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
   int32_T times_size[2];
   int32_T b_i;
   int32_T c_i;
-  int32_T confTracks_size;
   int32_T i;
   int32_T i1;
   int32_T loop_ub;
   int32_T times_size_idx_1;
+  int32_T trueCount;
   int32_T unassignedSource_size;
   int32_T *r2;
   uint32_T b_unassignedSource_data[200];
@@ -7273,20 +7447,16 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  f_st.prev = &e_st;
-  f_st.tls = e_st.tls;
-  g_st.prev = &f_st;
-  g_st.tls = f_st.tls;
   localTracks_data = localTracks->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  st.site = &ej_emlrtRSI;
+  st.site = &wh_emlrtRSI;
   if (!(tFusion > obj->pLastTimeStamp)) {
-    emlrtErrorWithMessageIdR2018a(&st, &t_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &w_emlrtRTEI,
       "fusion:trackFuser:TimeMustIncrease", "fusion:trackFuser:TimeMustIncrease",
       3, 4, 10, "trackFuser");
   }
 
-  b_st.site = &gj_emlrtRSI;
+  b_st.site = &yh_emlrtRSI;
   if (localTracks->size[0] == 0) {
     times_size_idx_1 = 0;
   } else {
@@ -7312,35 +7482,35 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     b_times_data[i] = (times_data[i] <= tFusion + 1.0E-5);
   }
 
-  b_st.site = &hj_emlrtRSI;
+  b_st.site = &ai_emlrtRSI;
   if (b_all(b_times_data, times_size)) {
     times_size[0] = 1;
     for (i = 0; i < times_size_idx_1; i++) {
       b_times_data[i] = (times_data[i] >= obj->pLastTimeStamp);
     }
 
-    b_st.site = &ij_emlrtRSI;
+    b_st.site = &bi_emlrtRSI;
     if (!b_all(b_times_data, times_size)) {
-      emlrtErrorWithMessageIdR2018a(&st, &u_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&st, &x_emlrtRTEI,
         "fusion:trackFuser:TrackFusionTimeMismatch",
         "fusion:trackFuser:TrackFusionTimeMismatch", 6, 4, 10, "UpdateTime", 4,
         7, "tFusion");
     }
   } else {
-    emlrtErrorWithMessageIdR2018a(&st, &u_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &x_emlrtRTEI,
       "fusion:trackFuser:TrackFusionTimeMismatch",
       "fusion:trackFuser:TrackFusionTimeMismatch", 6, 4, 10, "UpdateTime", 4, 7,
       "tFusion");
   }
 
   prevNumLive = obj->pNumLiveTracks;
-  emxInit_real_T(&st, &prevInds, 2, &vc_emlrtRTEI);
+  emxInit_real_T(&st, &prevInds, 2, &yc_emlrtRTEI);
   prevInds_data = prevInds->data;
   if (muDoubleScalarIsNaN(prevNumLive)) {
     loop_ub = prevInds->size[0] * prevInds->size[1];
     prevInds->size[0] = 1;
     prevInds->size[1] = 1;
-    emxEnsureCapacity_real_T(&st, prevInds, loop_ub, &vc_emlrtRTEI);
+    emxEnsureCapacity_real_T(&st, prevInds, loop_ub, &yc_emlrtRTEI);
     prevInds_data = prevInds->data;
     prevInds_data[0] = rtNaN;
   } else if (prevNumLive < 1.0) {
@@ -7350,15 +7520,15 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     loop_ub = prevInds->size[0] * prevInds->size[1];
     prevInds->size[0] = 1;
     prevInds->size[1] = (int32_T)(prevNumLive - 1.0) + 1;
-    emxEnsureCapacity_real_T(&st, prevInds, loop_ub, &vc_emlrtRTEI);
+    emxEnsureCapacity_real_T(&st, prevInds, loop_ub, &yc_emlrtRTEI);
     prevInds_data = prevInds->data;
     loop_ub = (int32_T)(prevNumLive - 1.0);
     times_size_idx_1 = (((int32_T)(prevNumLive - 1.0) + 1) / 2) << 1;
-    confTracks_size = times_size_idx_1 - 2;
-    for (i = 0; i <= confTracks_size; i += 2) {
-      b_dv[0] = i;
-      b_dv[1] = i + 1;
-      r = _mm_loadu_pd(&b_dv[0]);
+    trueCount = times_size_idx_1 - 2;
+    for (i = 0; i <= trueCount; i += 2) {
+      dv[0] = i;
+      dv[1] = i + 1;
+      r = _mm_loadu_pd(&dv[0]);
       _mm_storeu_pd(&prevInds_data[i], _mm_add_pd(_mm_set1_pd(1.0), r));
     }
 
@@ -7382,19 +7552,22 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     b_i = (int32_T)prevNumLive;
   }
 
-  b_st.site = &jj_emlrtRSI;
+  b_st.site = &ci_emlrtRSI;
   i1 = localTracks->size[0];
   loop_ub = obj->pUsedConfigIDs->size[0] * obj->pUsedConfigIDs->size[1];
   obj->pUsedConfigIDs->size[0] = localTracks->size[0];
   obj->pUsedConfigIDs->size[1] = 2;
-  emxEnsureCapacity_boolean_T(&b_st, obj->pUsedConfigIDs, loop_ub, &wc_emlrtRTEI);
+  emxEnsureCapacity_boolean_T(&b_st, obj->pUsedConfigIDs, loop_ub, &ad_emlrtRTEI);
   loop_ub = localTracks->size[0] << 1;
   for (i = 0; i < loop_ub; i++) {
     obj->pUsedConfigIDs->data[i] = false;
   }
 
+  if (i1 - 1 >= 0) {
+    times_size[0] = 1;
+  }
+
   for (c_i = 0; c_i < i1; c_i++) {
-    boolean_T x_data[10];
     boolean_T inKnownIDs[2];
     boolean_T exitg1;
     if (c_i + 1 > i1) {
@@ -7417,18 +7590,18 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     }
 
     if (!y) {
-      emlrtErrorWithMessageIdR2018a(&b_st, &v_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&b_st, &y_emlrtRTEI,
         "fusion:trackFuser:UnknownConfig", "fusion:trackFuser:UnknownConfig", 6,
         4, 11, "SourceIndex", 4, 20, "SourceConfigurations");
     }
 
-    times_size_idx_1 = 0;
+    trueCount = 0;
     if (inKnownIDs[0]) {
-      times_size_idx_1 = 1;
+      trueCount = 1;
     }
 
     if (inKnownIDs[1]) {
-      times_size_idx_1++;
+      trueCount++;
     }
 
     loop_ub = 0;
@@ -7446,121 +7619,57 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
       emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, loop_ub, &qb_emlrtBCI, &b_st);
     }
 
-    for (i = 0; i < times_size_idx_1; i++) {
+    for (i = 0; i < trueCount; i++) {
       obj->pUsedConfigIDs->data[c_i + obj->pUsedConfigIDs->size[0] * tmp_data[i]]
         = true;
     }
 
-    c_st.site = &uj_emlrtRSI;
-    for (i = 0; i < times_size_idx_1; i++) {
-      x_data[i] = !obj->pIsValidSource[tmp_data[i]];
+    times_size[1] = trueCount;
+    for (i = 0; i < trueCount; i++) {
+      inKnownIDs[i] = !obj->pIsValidSource[tmp_data[i]];
     }
 
-    y = (times_size_idx_1 != 0);
-    if (y) {
-      d_st.site = &qg_emlrtRSI;
-      e_st.site = &rg_emlrtRSI;
-      loop_ub = 0;
-      exitg1 = false;
-      while ((!exitg1) && (loop_ub <= times_size_idx_1 - 1)) {
-        if (!x_data[loop_ub]) {
-          y = false;
-          exitg1 = true;
-        } else {
-          loop_ub++;
-        }
-      }
-    }
-
-    if (y) {
-      c_st.site = &vj_emlrtRSI;
+    c_st.site = &ni_emlrtRSI;
+    if (ifWhileCond(inKnownIDs, times_size)) {
+      c_st.site = &oi_emlrtRSI;
       if (c_i + 1 > i1) {
         emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, i1, &rb_emlrtBCI, &c_st);
       }
 
-      d_st.site = &qi_emlrtRSI;
+      d_st.site = &hh_emlrtRSI;
       source = FuserManager_getConfigByID(&d_st, obj, inKnownIDs_tmp_tmp);
-      d_st.site = &ri_emlrtRSI;
+      d_st.site = &ih_emlrtRSI;
       if (!source->pIsTransformToCentralValid) {
-        e_st.site = &vg_emlrtRSI;
-        f_st.site = &xg_emlrtRSI;
-        local2central(&f_st, localTracks_data[c_i].TrackID, localTracks_data[c_i]
-                      .BranchID, inKnownIDs_tmp_tmp, localTracks_data[c_i].
-                      UpdateTime, localTracks_data[c_i].Age,
-                      localTracks_data[c_i].State, localTracks_data[c_i].
-                      StateCovariance, localTracks_data[c_i].ObjectClassID,
-                      localTracks_data[c_i].ObjectClassProbabilities.data,
-                      localTracks_data[c_i].ObjectClassProbabilities.size,
-                      localTracks_data[c_i].IsConfirmed, localTracks_data[c_i].
-                      IsCoasted, localTracks_data[c_i].IsSelfReported,
-                      &expl_temp);
-        f_st.site = &yg_emlrtRSI;
-
-        /*  Pre-define output with longest TrackLogic to force codegen consistency */
-        if (expl_temp.SourceIndex == 1U) {
-          /*  Radar */
-          g_st.site = &fi_emlrtRSI;
-          Ecef2nedTrack(&g_st, expl_temp.TrackID, expl_temp.BranchID, 1U,
-                        expl_temp.Age, expl_temp.ObjectClassID,
-                        expl_temp.ObjectClassProbabilities.data,
-                        expl_temp.ObjectClassProbabilities.size,
-                        expl_temp.IsConfirmed, expl_temp.IsCoasted,
-                        expl_temp.IsSelfReported, expl_temp.pState,
-                        expl_temp.pStateCovariance, expl_temp.pUpdateTime,
-                        &kw_emlrtRSI);
-        } else if (expl_temp.SourceIndex == 2U) {
-          /*  ADSB */
-          g_st.site = &gi_emlrtRSI;
-          Ned2ecefTrack(&g_st, expl_temp.TrackID, expl_temp.BranchID, 2U,
-                        expl_temp.Age, expl_temp.ObjectClassID,
-                        expl_temp.ObjectClassProbabilities.data,
-                        expl_temp.ObjectClassProbabilities.size,
-                        expl_temp.IsConfirmed, expl_temp.IsCoasted,
-                        expl_temp.IsSelfReported, expl_temp.pState,
-                        expl_temp.pStateCovariance, expl_temp.pUpdateTime,
-                        &lw_emlrtRSI);
-        }
-
         source->pIsTransformToCentralValid = true;
       }
 
-      e_st.site = &wg_emlrtRSI;
-      local2central(&e_st, localTracks_data[c_i].TrackID, localTracks_data[c_i].
-                    BranchID, inKnownIDs_tmp_tmp, localTracks_data[c_i].
-                    UpdateTime, localTracks_data[c_i].Age, localTracks_data[c_i]
-                    .State, localTracks_data[c_i].StateCovariance,
-                    localTracks_data[c_i].ObjectClassID, localTracks_data[c_i].
-                    ObjectClassProbabilities.data, localTracks_data[c_i].
-                    ObjectClassProbabilities.size, localTracks_data[c_i].
-                    IsConfirmed, localTracks_data[c_i].IsCoasted,
-                    localTracks_data[c_i].IsSelfReported, &jw_emlrtRSI);
-      for (i = 0; i < times_size_idx_1; i++) {
+      for (i = 0; i < trueCount; i++) {
         obj->pIsValidSource[tmp_data[i]] = true;
       }
     }
   }
 
-  emxInit_real_T(&st, &costMatrix, 2, &cd_emlrtRTEI);
-  b_st.site = &kj_emlrtRSI;
+  emxInit_real_T(&st, &costMatrix, 2, &qd_emlrtRTEI);
+  b_st.site = &di_emlrtRSI;
   FuserManager_distance(&b_st, obj, localTracks, costMatrix);
-  emxInit_uint32_T(&st, &assigned, 2, &ed_emlrtRTEI);
-  emxInit_uint32_T(&st, &unassignedCentral, 1, &ed_emlrtRTEI);
-  b_st.site = &lj_emlrtRSI;
+  emxInit_uint32_T(&st, &assigned, 2, &sd_emlrtRTEI);
+  emxInit_uint32_T(&st, &unassignedCentral, 1, &sd_emlrtRTEI);
+  b_st.site = &ei_emlrtRSI;
   trackFuser_assign(&b_st, obj, costMatrix, assigned, unassignedCentral,
                     unassignedSource_data, &unassignedSource_size);
   unassignedCentral_data = unassignedCentral->data;
   assigned_data = assigned->data;
   emxFree_real_T(&st, &costMatrix);
-  b_st.site = &mj_emlrtRSI;
-  confTracks_size = assigned->size[0];
-  for (i = 0; i < confTracks_size; i++) {
+  b_st.site = &fi_emlrtRSI;
+  trueCount = assigned->size[0];
+  for (i = 0; i < trueCount; i++) {
     if (((int32_T)assigned_data[i] < 1) || ((int32_T)assigned_data[i] > 100)) {
       emlrtDynamicBoundsCheckR2012b((int32_T)assigned_data[i], 1, 100,
         &db_emlrtBCI, &b_st);
     }
   }
 
-  b_st.site = &nj_emlrtRSI;
+  b_st.site = &gi_emlrtRSI;
   loop_ub = unassignedCentral->size[0];
   for (i = 0; i < loop_ub; i++) {
     if (((int32_T)unassignedCentral_data[i] < 1) || ((int32_T)
@@ -7570,9 +7679,9 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     }
   }
 
-  b_st.site = &oj_emlrtRSI;
+  b_st.site = &hi_emlrtRSI;
   for (i = 0; i < unassignedSource_size; i++) {
-    c_st.site = &up_emlrtRSI;
+    c_st.site = &ko_emlrtRSI;
     if (i + 1 > unassignedSource_size) {
       emlrtDynamicBoundsCheckR2012b(i + 1, 1, unassignedSource_size,
         &cb_emlrtBCI, &c_st);
@@ -7585,7 +7694,7 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
         &sb_emlrtBCI, &c_st);
     }
 
-    d_st.site = &ug_emlrtRSI;
+    d_st.site = &vg_emlrtRSI;
     source = FuserManager_getConfigByID(&d_st, obj, localTracks_data[(int32_T)
       inKnownIDs_tmp_tmp - 1].SourceIndex);
     if (i + 1 > unassignedSource_size) {
@@ -7596,17 +7705,17 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     isInitializing_data[i] = source->IsInitializingCentralTracks;
   }
 
-  confTracks_size = 0;
+  trueCount = 0;
   loop_ub = 0;
   for (i = 0; i < unassignedSource_size; i++) {
     if (isInitializing_data[i]) {
-      confTracks_size++;
+      trueCount++;
       b_tmp_data[loop_ub] = (uint8_T)i;
       loop_ub++;
     }
   }
 
-  for (i = 0; i < confTracks_size; i++) {
+  for (i = 0; i < trueCount; i++) {
     uint8_T u;
     u = b_tmp_data[i];
     if (u > unassignedSource_size - 1) {
@@ -7617,9 +7726,9 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     b_unassignedSource_data[i] = unassignedSource_data[u];
   }
 
-  b_st.site = &pj_emlrtRSI;
+  b_st.site = &ii_emlrtRSI;
   c_trackFuser_initializeCentralT(&b_st, obj, localTracks,
-    b_unassignedSource_data, confTracks_size);
+    b_unassignedSource_data, trueCount);
   dt = obj->pNumLiveTracks;
   if (!(prevNumLive + 1.0 > dt)) {
     if (prevNumLive + 1.0 != (int32_T)muDoubleScalarFloor(prevNumLive + 1.0)) {
@@ -7641,24 +7750,24 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     }
   }
 
-  emxInit_boolean_T(&st, &updated, 2, &dd_emlrtRTEI, true);
-  b_st.site = &qj_emlrtRSI;
+  emxInit_boolean_T(&st, &updated, 2, &rd_emlrtRTEI, true);
+  b_st.site = &ji_emlrtRSI;
   b_trackFuser_fuseAssigned(&b_st, obj, localTracks, assigned, updated);
   updated_data = updated->data;
   emxFree_uint32_T(&st, &assigned);
   times_size_idx_1 = updated->size[1];
-  confTracks_size = 0;
+  trueCount = 0;
   for (i = 0; i < times_size_idx_1; i++) {
     if (!updated_data[i]) {
-      confTracks_size++;
+      trueCount++;
     }
   }
 
-  emxInit_int32_T(&st, &r1, 2, &xc_emlrtRTEI);
+  emxInit_int32_T(&st, &r1, 2, &bd_emlrtRTEI);
   loop_ub = r1->size[0] * r1->size[1];
   r1->size[0] = 1;
-  r1->size[1] = confTracks_size;
-  emxEnsureCapacity_int32_T(&st, r1, loop_ub, &xc_emlrtRTEI);
+  r1->size[1] = trueCount;
+  emxEnsureCapacity_int32_T(&st, r1, loop_ub, &bd_emlrtRTEI);
   r2 = r1->data;
   loop_ub = 0;
   for (i = 0; i < times_size_idx_1; i++) {
@@ -7668,14 +7777,14 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     }
   }
 
-  emxInit_real_T(&st, &b_prevInds, 2, &yc_emlrtRTEI);
+  emxInit_real_T(&st, &b_prevInds, 2, &cd_emlrtRTEI);
   loop_ub = b_prevInds->size[0] * b_prevInds->size[1];
   b_prevInds->size[0] = 1;
-  confTracks_size = r1->size[1];
+  trueCount = r1->size[1];
   b_prevInds->size[1] = r1->size[1];
-  emxEnsureCapacity_real_T(&st, b_prevInds, loop_ub, &yc_emlrtRTEI);
+  emxEnsureCapacity_real_T(&st, b_prevInds, loop_ub, &cd_emlrtRTEI);
   b_prevInds_data = b_prevInds->data;
-  for (i = 0; i < confTracks_size; i++) {
+  for (i = 0; i < trueCount; i++) {
     if (r2[i] > prevInds->size[1] - 1) {
       emlrtDynamicBoundsCheckR2012b(r2[i], 0, prevInds->size[1] - 1, &y_emlrtBCI,
         &st);
@@ -7685,47 +7794,51 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
   }
 
   emxFree_int32_T(&st, &r1);
-  b_st.site = &rj_emlrtRSI;
+  b_st.site = &ki_emlrtRSI;
   trackFuser_coastUnassigned(&b_st, obj, unassignedCentral, b_prevInds, deleted);
   emxFree_real_T(&st, &b_prevInds);
   emxFree_uint32_T(&st, &unassignedCentral);
-  b_st.site = &sj_emlrtRSI;
+  b_st.site = &li_emlrtRSI;
   dt = obj->pNumLiveTracks;
   loop_ub = (int32_T)dt;
   emlrtForLoopVectorCheckR2021a(1.0, 1.0, dt, mxDOUBLE_CLASS, (int32_T)dt,
-    &w_emlrtRTEI, &b_st);
+    &ab_emlrtRTEI, &b_st);
+  emxInitStruct_objectTrack(&b_st, &track, &gd_emlrtRTEI, true);
+  emxInitStruct_objectTrack(&b_st, &expl_temp, &fd_emlrtRTEI, true);
   for (i = 0; i < loop_ub; i++) {
     if (i > 99) {
       emlrtDynamicBoundsCheckR2012b(i, 0, 99, &x_emlrtBCI, &b_st);
     }
 
-    track = obj->pTracksList[i];
+    emxCopyStruct_objectTrack(&b_st, &track, &obj->pTracksList[i], &dd_emlrtRTEI);
     dt = tFusion - track.pUpdateTime;
     if (dt > 0.0) {
-      c_objectTrack b_expl_temp;
       real_T x[6];
-      track = obj->pTracksList[i];
-      b_expl_temp = obj->pTracksList[i];
-      c_st.site = &ov_emlrtRSI;
-      b_gaussEKFilter_predict(&c_st, track.pState, b_expl_temp.pStateCovariance,
+      emxCopyStruct_objectTrack(&b_st, &track, &obj->pTracksList[i],
+        &ed_emlrtRTEI);
+      emxCopyStruct_objectTrack(&b_st, &expl_temp, &obj->pTracksList[i],
+        &fd_emlrtRTEI);
+      c_st.site = &fu_emlrtRSI;
+      b_gaussEKFilter_predict(&c_st, track.pState, expl_temp.pStateCovariance,
         obj->ProcessNoise, dt, x);
-      track = obj->pTracksList[i];
-      c_st.site = &pv_emlrtRSI;
-      d_st.site = &rc_emlrtRSI;
+      emxCopyStruct_objectTrack(&b_st, &track, &obj->pTracksList[i],
+        &gd_emlrtRTEI);
+      c_st.site = &gu_emlrtRSI;
+      d_st.site = &sc_emlrtRSI;
       validateattributes(&d_st, x);
       for (c_i = 0; c_i < 6; c_i++) {
         track.pState[c_i] = x[c_i];
       }
 
-      c_st.site = &qv_emlrtRSI;
-      d_st.site = &sc_emlrtRSI;
-      b_validateattributes(&d_st, b_expl_temp.pStateCovariance);
+      c_st.site = &hu_emlrtRSI;
       d_st.site = &tc_emlrtRSI;
-      isSymmetricPositiveSemiDefinite(&d_st, b_expl_temp.pStateCovariance);
-      memcpy(&track.pStateCovariance[0], &b_expl_temp.pStateCovariance[0], 36U *
+      b_validateattributes(&d_st, expl_temp.pStateCovariance);
+      d_st.site = &uc_emlrtRSI;
+      isSymmetricPositiveSemiDefinite(&d_st, expl_temp.pStateCovariance);
+      memcpy(&track.pStateCovariance[0], &expl_temp.pStateCovariance[0], 36U *
              sizeof(real_T));
-      c_st.site = &rv_emlrtRSI;
-      d_st.site = &qc_emlrtRSI;
+      c_st.site = &iu_emlrtRSI;
+      d_st.site = &rc_emlrtRSI;
       e_st.site = &gb_emlrtRSI;
       if (tFusion < 0.0) {
         emlrtErrorWithMessageIdR2018a(&e_st, &l_emlrtRTEI,
@@ -7741,10 +7854,12 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
       }
 
       track.pUpdateTime = tFusion;
-      obj->pTracksList[i] = track;
+      emxCopyStruct_objectTrack(&b_st, &obj->pTracksList[i], &track,
+        &hd_emlrtRTEI);
     }
   }
 
+  emxFreeStruct_objectTrack(&b_st, &expl_temp);
   obj->pLastTimeStamp = tFusion;
   dt = obj->pNumLiveTracks;
   if (!(dt < 1.0)) {
@@ -7776,9 +7891,9 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     loop_ub = (int32_T)prevNumLive;
   }
 
-  b_st.site = &tj_emlrtRSI;
-  c_st.site = &ar_emlrtRSI;
-  d_st.site = &br_emlrtRSI;
+  b_st.site = &mi_emlrtRSI;
+  c_st.site = &qp_emlrtRSI;
+  d_st.site = &rp_emlrtRSI;
   for (i = 0; i < times_size_idx_1; i++) {
     if (updated_data[i] && (i > (int8_T)b_i - 1)) {
       emlrtDynamicBoundsCheckR2012b(i, 0, (int8_T)b_i - 1, &ib_emlrtBCI, &st);
@@ -7798,7 +7913,7 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     loop_ub = prevInds->size[0] * prevInds->size[1];
     prevInds->size[0] = 1;
     prevInds->size[1] = 1;
-    emxEnsureCapacity_real_T(sp, prevInds, loop_ub, &ad_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, prevInds, loop_ub, &id_emlrtRTEI);
     prevInds_data = prevInds->data;
     prevInds_data[0] = rtNaN;
   } else if (dt < 1.0) {
@@ -7808,15 +7923,15 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     loop_ub = prevInds->size[0] * prevInds->size[1];
     prevInds->size[0] = 1;
     prevInds->size[1] = (int32_T)(dt - 1.0) + 1;
-    emxEnsureCapacity_real_T(sp, prevInds, loop_ub, &ad_emlrtRTEI);
+    emxEnsureCapacity_real_T(sp, prevInds, loop_ub, &id_emlrtRTEI);
     prevInds_data = prevInds->data;
     loop_ub = (int32_T)(dt - 1.0);
     times_size_idx_1 = (((int32_T)(dt - 1.0) + 1) / 2) << 1;
-    confTracks_size = times_size_idx_1 - 2;
-    for (i = 0; i <= confTracks_size; i += 2) {
-      b_dv[0] = i;
-      b_dv[1] = i + 1;
-      r = _mm_loadu_pd(&b_dv[0]);
+    trueCount = times_size_idx_1 - 2;
+    for (i = 0; i <= trueCount; i += 2) {
+      dv[0] = i;
+      dv[1] = i + 1;
+      r = _mm_loadu_pd(&dv[0]);
       _mm_storeu_pd(&prevInds_data[i], _mm_add_pd(_mm_set1_pd(1.0), r));
     }
 
@@ -7825,9 +7940,9 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     }
   }
 
-  st.site = &fj_emlrtRSI;
-  emxInit_struct2_T(&st, &allStructs, &bd_emlrtRTEI);
-  allStructs_data = allStructs->data;
+  st.site = &xh_emlrtRSI;
+  emxInit_struct2_T(&st, &allTracks, &pd_emlrtRTEI);
+  allTracks_data = allTracks->data;
   if (prevInds->size[1] > 0) {
     loop_ub = (int32_T)muDoubleScalarFloor(prevInds_data[0]);
     if (prevInds_data[0] != loop_ub) {
@@ -7839,8 +7954,9 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
       emlrtDynamicBoundsCheckR2012b(times_size_idx_1, 0, 99, &w_emlrtBCI, &st);
     }
 
-    track = obj->pTracksList[times_size_idx_1];
-    b_st.site = &sv_emlrtRSI;
+    emxCopyStruct_objectTrack(&st, &track, &obj->pTracksList[times_size_idx_1],
+      &jd_emlrtRTEI);
+    b_st.site = &ju_emlrtRSI;
     oneStruct.TrackID = track.TrackID;
     oneStruct.BranchID = track.BranchID;
     oneStruct.SourceIndex = track.SourceIndex;
@@ -7858,31 +7974,33 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
       oneStruct.TrackLogic[i] = logicType[i];
     }
 
-    c_st.site = &vv_emlrtRSI;
+    c_st.site = &mu_emlrtRSI;
     if (prevInds_data[0] != loop_ub) {
       emlrtIntegerCheckR2012b(prevInds_data[0], &h_emlrtDCI, &c_st);
     }
 
     b_obj = obj->pTrackLogics[times_size_idx_1];
-    d_st.site = &wv_emlrtRSI;
+    d_st.site = &nu_emlrtRSI;
     oneStruct.TrackLogicState[0] = b_obj->pRecentHistory[0];
     oneStruct.TrackLogicState[1] = b_obj->pRecentHistory[1];
     oneStruct.TrackLogicState[2] = b_obj->pRecentHistory[2];
     oneStruct.IsConfirmed = track.IsConfirmed;
     oneStruct.IsCoasted = track.IsCoasted;
     oneStruct.IsSelfReported = track.IsSelfReported;
-    b_st.site = &tv_emlrtRSI;
-    c_st.site = &jk_emlrtRSI;
+    oneStruct.ObjectAttributes = track.ObjectAttributes;
+    b_st.site = &ku_emlrtRSI;
+    c_st.site = &cj_emlrtRSI;
+    emxInit_struct_T(&b_st, &allStructs, &ld_emlrtRTEI);
     times_size_idx_1 = prevInds->size[1];
     loop_ub = allStructs->size[0];
     allStructs->size[0] = prevInds->size[1];
-    emxEnsureCapacity_struct2_T(&b_st, allStructs, loop_ub, &bd_emlrtRTEI);
+    emxEnsureCapacity_struct_T(&b_st, allStructs, loop_ub, &ld_emlrtRTEI);
     allStructs_data = allStructs->data;
     for (i = 0; i < times_size_idx_1; i++) {
       allStructs_data[i] = oneStruct;
     }
 
-    b_st.site = &uv_emlrtRSI;
+    b_st.site = &lu_emlrtRSI;
     for (c_i = 0; c_i <= times_size_idx_1 - 2; c_i++) {
       if (c_i + 2 > times_size_idx_1) {
         emlrtDynamicBoundsCheckR2012b(c_i + 2, 1, times_size_idx_1, &tb_emlrtBCI,
@@ -7935,14 +8053,14 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
         emlrtIntegerCheckR2012b(dt, &d_emlrtDCI, &b_st);
       }
 
-      confTracks_size = (int32_T)dt;
-      y = ((confTracks_size - 1 < 0) || (confTracks_size - 1 > 99));
+      trueCount = (int32_T)dt;
+      y = ((trueCount - 1 < 0) || (trueCount - 1 > 99));
       if (y) {
-        emlrtDynamicBoundsCheckR2012b(confTracks_size - 1, 0, 99, &p_emlrtBCI,
-          &b_st);
+        emlrtDynamicBoundsCheckR2012b(trueCount - 1, 0, 99, &p_emlrtBCI, &b_st);
       }
 
-      track = obj->pTracksList[confTracks_size - 1];
+      emxCopyStruct_objectTrack(&b_st, &track, &obj->pTracksList[trueCount - 1],
+        &nd_emlrtRTEI);
       for (i = 0; i < 6; i++) {
         if (c_i + 2 > times_size_idx_1) {
           emlrtDynamicBoundsCheckR2012b(c_i + 2, 1, times_size_idx_1,
@@ -7952,16 +8070,16 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
         allStructs_data[c_i + 1].State[i] = track.pState[i];
       }
 
-      if (confTracks_size != loop_ub) {
+      if (trueCount != loop_ub) {
         emlrtIntegerCheckR2012b(dt, &c_emlrtDCI, &b_st);
       }
 
       if (y) {
-        emlrtDynamicBoundsCheckR2012b(confTracks_size - 1, 0, 99, &n_emlrtBCI,
-          &b_st);
+        emlrtDynamicBoundsCheckR2012b(trueCount - 1, 0, 99, &n_emlrtBCI, &b_st);
       }
 
-      track = obj->pTracksList[confTracks_size - 1];
+      emxCopyStruct_objectTrack(&b_st, &track, &obj->pTracksList[trueCount - 1],
+        &od_emlrtRTEI);
       if (c_i + 2 > times_size_idx_1) {
         emlrtDynamicBoundsCheckR2012b(c_i + 2, 1, times_size_idx_1, &ub_emlrtBCI,
           &b_st);
@@ -7977,24 +8095,22 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
       }
 
       if (y) {
-        emlrtDynamicBoundsCheckR2012b(confTracks_size - 1, 0, 99, &m_emlrtBCI,
-          &b_st);
+        emlrtDynamicBoundsCheckR2012b(trueCount - 1, 0, 99, &m_emlrtBCI, &b_st);
       }
 
-      allStructs_data[c_i + 1].ObjectClassID = obj->pTracksList[confTracks_size
-        - 1].ObjectClassID;
-      c_st.site = &xv_emlrtRSI;
-      if (confTracks_size != loop_ub) {
+      allStructs_data[c_i + 1].ObjectClassID = obj->pTracksList[trueCount - 1].
+        ObjectClassID;
+      c_st.site = &ou_emlrtRSI;
+      if (trueCount != loop_ub) {
         emlrtIntegerCheckR2012b(dt, &b_emlrtDCI, &c_st);
       }
 
       if (y) {
-        emlrtDynamicBoundsCheckR2012b(confTracks_size - 1, 0, 99, &k_emlrtBCI,
-          &c_st);
+        emlrtDynamicBoundsCheckR2012b(trueCount - 1, 0, 99, &k_emlrtBCI, &c_st);
       }
 
-      b_obj = obj->pTrackLogics[confTracks_size - 1];
-      d_st.site = &wv_emlrtRSI;
+      b_obj = obj->pTrackLogics[trueCount - 1];
+      d_st.site = &nu_emlrtRSI;
       if (c_i + 2 > times_size_idx_1) {
         emlrtDynamicBoundsCheckR2012b(c_i + 2, 1, times_size_idx_1, &vb_emlrtBCI,
           &d_st);
@@ -8009,55 +8125,102 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
       }
 
       if (y) {
-        emlrtDynamicBoundsCheckR2012b(confTracks_size - 1, 0, 99, &j_emlrtBCI,
-          &b_st);
+        emlrtDynamicBoundsCheckR2012b(trueCount - 1, 0, 99, &j_emlrtBCI, &b_st);
       }
 
-      allStructs_data[c_i + 1].IsConfirmed = obj->pTracksList[confTracks_size -
-        1].IsConfirmed;
+      allStructs_data[c_i + 1].IsConfirmed = obj->pTracksList[trueCount - 1].
+        IsConfirmed;
       if (c_i + 2 > times_size_idx_1) {
         emlrtDynamicBoundsCheckR2012b(c_i + 2, 1, times_size_idx_1, &g_emlrtBCI,
           &b_st);
       }
 
       if (y) {
-        emlrtDynamicBoundsCheckR2012b(confTracks_size - 1, 0, 99, &h_emlrtBCI,
-          &b_st);
+        emlrtDynamicBoundsCheckR2012b(trueCount - 1, 0, 99, &h_emlrtBCI, &b_st);
       }
 
-      allStructs_data[c_i + 1].IsCoasted = obj->pTracksList[confTracks_size - 1]
-        .IsCoasted;
+      allStructs_data[c_i + 1].IsCoasted = obj->pTracksList[trueCount - 1].
+        IsCoasted;
       if (c_i + 2 > times_size_idx_1) {
         emlrtDynamicBoundsCheckR2012b(c_i + 2, 1, times_size_idx_1, &e_emlrtBCI,
           &b_st);
       }
 
       if (y) {
-        emlrtDynamicBoundsCheckR2012b(confTracks_size - 1, 0, 99, &f_emlrtBCI,
-          &b_st);
+        emlrtDynamicBoundsCheckR2012b(trueCount - 1, 0, 99, &f_emlrtBCI, &b_st);
       }
 
-      allStructs_data[c_i + 1].IsSelfReported = obj->pTracksList[confTracks_size
-        - 1].IsSelfReported;
+      allStructs_data[c_i + 1].IsSelfReported = obj->pTracksList[trueCount - 1].
+        IsSelfReported;
       if (c_i + 2 > times_size_idx_1) {
         emlrtDynamicBoundsCheckR2012b(c_i + 2, 1, times_size_idx_1, &c_emlrtBCI,
           &b_st);
       }
 
       if (y) {
-        emlrtDynamicBoundsCheckR2012b(confTracks_size - 1, 0, 99, &d_emlrtBCI,
-          &b_st);
+        emlrtDynamicBoundsCheckR2012b(trueCount - 1, 0, 99, &d_emlrtBCI, &b_st);
       }
+
+      allStructs_data[c_i + 1].ObjectAttributes = obj->pTracksList[trueCount - 1]
+        .ObjectAttributes;
     }
+
+    loop_ub = allTracks->size[0];
+    allTracks->size[0] = prevInds->size[1];
+    emxEnsureCapacity_struct2_T1(&st, allTracks, loop_ub, &md_emlrtRTEI);
+    allTracks_data = allTracks->data;
+    for (c_i = 0; c_i < times_size_idx_1; c_i++) {
+      allTracks_data[c_i].TrackID = allStructs_data[c_i].TrackID;
+      allTracks_data[c_i].BranchID = allStructs_data[c_i].BranchID;
+      allTracks_data[c_i].SourceIndex = allStructs_data[c_i].SourceIndex;
+      allTracks_data[c_i].UpdateTime = allStructs_data[c_i].UpdateTime;
+      allTracks_data[c_i].Age = allStructs_data[c_i].Age;
+      for (i = 0; i < 6; i++) {
+        allTracks_data[c_i].State[i] = allStructs_data[c_i].State[i];
+      }
+
+      for (i = 0; i < 36; i++) {
+        allTracks_data[c_i].StateCovariance[i] = allStructs_data[c_i].
+          StateCovariance[i];
+      }
+
+      allTracks_data[c_i].ObjectClassID = allStructs_data[c_i].ObjectClassID;
+      allTracks_data[c_i].ObjectClassProbabilities = allStructs_data[c_i].
+        ObjectClassProbabilities;
+      for (i = 0; i < 7; i++) {
+        allTracks_data[c_i].TrackLogic[i] = allStructs_data[c_i].TrackLogic[i];
+      }
+
+      loop_ub = allTracks_data[c_i].TrackLogicState->size[0] *
+        allTracks_data[c_i].TrackLogicState->size[1];
+      allTracks_data[c_i].TrackLogicState->size[0] = 1;
+      allTracks_data[c_i].TrackLogicState->size[1] = 3;
+      emxEnsureCapacity_boolean_T(&st, allTracks_data[c_i].TrackLogicState,
+        loop_ub, &md_emlrtRTEI);
+      allTracks_data[c_i].TrackLogicState->data[0] = allStructs_data[c_i].
+        TrackLogicState[0];
+      allTracks_data[c_i].TrackLogicState->data[1] = allStructs_data[c_i].
+        TrackLogicState[1];
+      allTracks_data[c_i].TrackLogicState->data[2] = allStructs_data[c_i].
+        TrackLogicState[2];
+      allTracks_data[c_i].IsConfirmed = allStructs_data[c_i].IsConfirmed;
+      allTracks_data[c_i].IsCoasted = allStructs_data[c_i].IsCoasted;
+      allTracks_data[c_i].IsSelfReported = allStructs_data[c_i].IsSelfReported;
+      allTracks_data[c_i].ObjectAttributes = allStructs_data[c_i].
+        ObjectAttributes;
+    }
+
+    emxFree_struct_T(&st, &allStructs);
   } else {
-    allStructs->size[0] = 0;
+    allTracks->size[0] = 0;
   }
 
+  emxFreeStruct_objectTrack(&st, &track);
   emxFree_real_T(&st, &prevInds);
-  confTracks_size = 0;
+  trueCount = 0;
   for (i = 0; i < 100; i++) {
     if (obj->pConfirmedTracks[i]) {
-      confTracks_size++;
+      trueCount++;
     }
   }
 
@@ -8069,20 +8232,25 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
     }
   }
 
-  for (i = 0; i < confTracks_size; i++) {
+  loop_ub = *confTracks_size;
+  *confTracks_size = trueCount;
+  emxEnsureCapacity_struct2_T(sp, confTracks_data, *confTracks_size, loop_ub,
+    &kd_emlrtRTEI);
+  for (i = 0; i < trueCount; i++) {
     int8_T i2;
     i2 = c_tmp_data[i];
-    if (i2 > allStructs->size[0] - 1) {
-      emlrtDynamicBoundsCheckR2012b(i2, 0, allStructs->size[0] - 1, &v_emlrtBCI,
+    if (i2 > allTracks->size[0] - 1) {
+      emlrtDynamicBoundsCheckR2012b(i2, 0, allTracks->size[0] - 1, &v_emlrtBCI,
         (emlrtConstCTX)sp);
     }
 
-    confTracks_data[i] = allStructs_data[i2];
+    emxCopyStruct_struct2_T(sp, &confTracks_data[i], &allTracks_data[i2],
+      &kd_emlrtRTEI);
   }
 
   dt = obj->pNumLiveTracks;
   if (dt < 1.0) {
-    times_size_idx_1 = 0;
+    loop_ub = 0;
   } else {
     if (dt != (int32_T)muDoubleScalarFloor(dt)) {
       emlrtIntegerCheckR2012b(dt, &j_emlrtDCI, (emlrtConstCTX)sp);
@@ -8093,19 +8261,18 @@ int32_T trackFuser_stepImpl(const emlrtStack *sp, trackFuser *obj, const
         (emlrtConstCTX)sp);
     }
 
-    times_size_idx_1 = (int32_T)dt;
+    loop_ub = (int32_T)dt;
   }
 
-  for (i = 0; i < times_size_idx_1; i++) {
-    if ((!obj->pConfirmedTracks[i]) && (i > allStructs->size[0] - 1)) {
-      emlrtDynamicBoundsCheckR2012b(i, 0, allStructs->size[0] - 1, &gb_emlrtBCI,
+  for (i = 0; i < loop_ub; i++) {
+    if ((!obj->pConfirmedTracks[i]) && (i > allTracks->size[0] - 1)) {
+      emlrtDynamicBoundsCheckR2012b(i, 0, allTracks->size[0] - 1, &gb_emlrtBCI,
         (emlrtConstCTX)sp);
     }
   }
 
-  emxFree_struct2_T(sp, &allStructs);
+  emxFree_struct2_T(sp, &allTracks);
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)sp);
-  return confTracks_size;
 }
 
 /* End of code generation (trackFuser.c) */

@@ -12,7 +12,7 @@
 #include "rt_nonfinite.h"
 
 /* Variable Definitions */
-static emlrtRSInfo wc_emlrtRSI =
+static emlrtRSInfo xc_emlrtRSI =
     {
         13,    /* lineNo */
         "all", /* fcnName */
@@ -35,7 +35,7 @@ void all(const emlrtStack *sp, const boolean_T x[36], boolean_T y[6])
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &wc_emlrtRSI;
+  st.site = &xc_emlrtRSI;
   for (i = 0; i < 6; i++) {
     y[i] = true;
   }
@@ -47,7 +47,7 @@ void all(const emlrtStack *sp, const boolean_T x[36], boolean_T y[6])
     a = i2;
     i1 = i2 - 5;
     i2 += 6;
-    b_st.site = &xc_emlrtRSI;
+    b_st.site = &yc_emlrtRSI;
     if ((i1 <= a) && (a > 2147483646)) {
       c_st.site = &tb_emlrtRSI;
       check_forloop_overflow_error(&c_st);

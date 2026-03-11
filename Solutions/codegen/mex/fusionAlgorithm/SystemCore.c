@@ -581,9 +581,9 @@ void SystemCore_reset(const emlrtStack *sp,
   }
 }
 
-int32_T SystemCore_step(const emlrtStack *sp, trackFuser *obj,
-                        const emxArray_struct0_T *varargin_1, real_T varargin_2,
-                        struct2_T varargout_1_data[])
+void SystemCore_step(const emlrtStack *sp, trackFuser *obj,
+                     const emxArray_struct0_T *varargin_1, real_T varargin_2,
+                     struct2_T varargout_1_data[], int32_T *varargout_1_size)
 {
   static const char_T params[5] = {'t', 'r', 'a', 'c', 'e'};
   emlrtStack b_st;
@@ -591,7 +591,7 @@ int32_T SystemCore_step(const emlrtStack *sp, trackFuser *obj,
   emlrtStack d_st;
   emlrtStack st;
   int32_T i;
-  int32_T varargout_1_size;
+  int32_T k;
   uint8_T inSize[8];
   boolean_T exitg1;
   st.prev = sp;
@@ -1067,21 +1067,21 @@ int32_T SystemCore_step(const emlrtStack *sp, trackFuser *obj,
   for (i = 0; i < 6; i++) {
     inSize[i + 2] = 1U;
   }
-  varargout_1_size = 0;
+  k = 0;
   exitg1 = false;
-  while ((!exitg1) && (varargout_1_size < 8)) {
-    if (obj->inputVarSize[0].f1[varargout_1_size] != inSize[varargout_1_size]) {
+  while ((!exitg1) && (k < 8)) {
+    if (obj->inputVarSize[0].f1[k] != inSize[k]) {
       for (i = 0; i < 8; i++) {
         obj->inputVarSize[0].f1[i] = inSize[i];
       }
       exitg1 = true;
     } else {
-      varargout_1_size++;
+      k++;
     }
   }
   st.site = &ub_emlrtRSI;
-  return trackFuser_stepImpl(&st, obj, varargin_1, varargin_2,
-                             varargout_1_data);
+  trackFuser_stepImpl(&st, obj, varargin_1, varargin_2, varargout_1_data,
+                      varargout_1_size);
 }
 
 /* End of code generation (SystemCore.c) */

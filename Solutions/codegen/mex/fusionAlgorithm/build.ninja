@@ -49,6 +49,7 @@ build $builddir/fuserSourceConfiguration.o : cc $root/fuserSourceConfiguration.c
 build $builddir/unique.o : cc $root/unique.c
 build $builddir/SystemCore.o : cc $root/SystemCore.c
 build $builddir/FuserManager.o : cc $root/FuserManager.c
+build $builddir/objectTrack.o : cc $root/objectTrack.c
 build $builddir/validateattributes.o : cc $root/validateattributes.c
 build $builddir/isSymmetricPositiveSemiDefinite.o : cc $root/isSymmetricPositiveSemiDefinite.c
 build $builddir/all.o : cc $root/all.c
@@ -57,7 +58,7 @@ build $builddir/xnrm2.o : cc $root/xnrm2.c
 build $builddir/warning.o : cc $root/warning.c
 build $builddir/eigSkewHermitianStandard.o : cc $root/eigSkewHermitianStandard.c
 build $builddir/sumMatrixIncludeNaN.o : cc $root/sumMatrixIncludeNaN.c
-build $builddir/objectTrack.o : cc $root/objectTrack.c
+build $builddir/ifWhileCond.o : cc $root/ifWhileCond.c
 build $builddir/trackFuser.o : cc $root/trackFuser.c
 build $builddir/repmat.o : cc $root/repmat.c
 build $builddir/assertValidSizeArg.o : cc $root/assertValidSizeArg.c
@@ -75,14 +76,11 @@ build $builddir/mldivide.o : cc $root/mldivide.c
 build $builddir/_coder_fusionAlgorithm_api.o : cc $root/interface/_coder_fusionAlgorithm_api.c
 build $builddir/_coder_fusionAlgorithm_mex.o : cc $root/interface/_coder_fusionAlgorithm_mex.c
 build $builddir/eml_int_forloop_overflow_check.o : cc $root/eml_int_forloop_overflow_check.c
-build $builddir/geodetic2ecefFormula.o : cc $root/geodetic2ecefFormula.c
 build $builddir/xzgehrd.o : cc $root/xzgehrd.c
 build $builddir/xzlarf.o : cc $root/xzlarf.c
 build $builddir/xzlarfg.o : cc $root/xzlarfg.c
 build $builddir/xdlanv2.o : cc $root/xdlanv2.c
 build $builddir/xrot.o : cc $root/xrot.c
-build $builddir/cosd.o : cc $root/cosd.c
-build $builddir/sind.o : cc $root/sind.c
 build $builddir/constvel.o : cc $root/constvel.c
 build $builddir/gaussEKFilter.o : cc $root/gaussEKFilter.c
 build $builddir/mrdivide_helper.o : cc $root/mrdivide_helper.c
@@ -98,4 +96,4 @@ build $builddir/_coder_fusionAlgorithm_info.o : cc $root/interface/_coder_fusion
 build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
 
 # Link
-build $root\fusionAlgorithm_mex.mexw64 : link $builddir/fusionAlgorithm_data.o $builddir/rt_nonfinite.o $builddir/fusionAlgorithm_initialize.o $builddir/fusionAlgorithm_terminate.o $builddir/fusionAlgorithm.o $builddir/fuserSourceConfiguration.o $builddir/unique.o $builddir/SystemCore.o $builddir/FuserManager.o $builddir/validateattributes.o $builddir/isSymmetricPositiveSemiDefinite.o $builddir/all.o $builddir/eig.o $builddir/xnrm2.o $builddir/warning.o $builddir/eigSkewHermitianStandard.o $builddir/sumMatrixIncludeNaN.o $builddir/objectTrack.o $builddir/trackFuser.o $builddir/repmat.o $builddir/assertValidSizeArg.o $builddir/find.o $builddir/indexShapeCheck.o $builddir/AssignerGNN.o $builddir/matchpairs.o $builddir/eml_setop.o $builddir/issorted.o $builddir/any.o $builddir/combineVectorElements.o $builddir/fusecovint.o $builddir/validateCovFusion.o $builddir/mldivide.o $builddir/_coder_fusionAlgorithm_api.o $builddir/_coder_fusionAlgorithm_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/geodetic2ecefFormula.o $builddir/xzgehrd.o $builddir/xzlarf.o $builddir/xzlarfg.o $builddir/xdlanv2.o $builddir/xrot.o $builddir/cosd.o $builddir/sind.o $builddir/constvel.o $builddir/gaussEKFilter.o $builddir/mrdivide_helper.o $builddir/xzgetrf.o $builddir/minPriorityQueue.o $builddir/sort.o $builddir/sortIdx.o $builddir/Fuserxcov.o $builddir/ensurePosDefMatrix.o $builddir/xhseqr.o $builddir/fusionAlgorithm_emxutil.o $builddir/_coder_fusionAlgorithm_info.o $builddir/c_mexapi_version.o 
+build $root\fusionAlgorithm_mex.mexw64 : link $builddir/fusionAlgorithm_data.o $builddir/rt_nonfinite.o $builddir/fusionAlgorithm_initialize.o $builddir/fusionAlgorithm_terminate.o $builddir/fusionAlgorithm.o $builddir/fuserSourceConfiguration.o $builddir/unique.o $builddir/SystemCore.o $builddir/FuserManager.o $builddir/objectTrack.o $builddir/validateattributes.o $builddir/isSymmetricPositiveSemiDefinite.o $builddir/all.o $builddir/eig.o $builddir/xnrm2.o $builddir/warning.o $builddir/eigSkewHermitianStandard.o $builddir/sumMatrixIncludeNaN.o $builddir/ifWhileCond.o $builddir/trackFuser.o $builddir/repmat.o $builddir/assertValidSizeArg.o $builddir/find.o $builddir/indexShapeCheck.o $builddir/AssignerGNN.o $builddir/matchpairs.o $builddir/eml_setop.o $builddir/issorted.o $builddir/any.o $builddir/combineVectorElements.o $builddir/fusecovint.o $builddir/validateCovFusion.o $builddir/mldivide.o $builddir/_coder_fusionAlgorithm_api.o $builddir/_coder_fusionAlgorithm_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/xzgehrd.o $builddir/xzlarf.o $builddir/xzlarfg.o $builddir/xdlanv2.o $builddir/xrot.o $builddir/constvel.o $builddir/gaussEKFilter.o $builddir/mrdivide_helper.o $builddir/xzgetrf.o $builddir/minPriorityQueue.o $builddir/sort.o $builddir/sortIdx.o $builddir/Fuserxcov.o $builddir/ensurePosDefMatrix.o $builddir/xhseqr.o $builddir/fusionAlgorithm_emxutil.o $builddir/_coder_fusionAlgorithm_info.o $builddir/c_mexapi_version.o 

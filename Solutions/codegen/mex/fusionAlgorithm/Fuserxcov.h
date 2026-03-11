@@ -19,7 +19,7 @@
 
 /* Function Declarations */
 void Fuserxcov_fuse(const emlrtStack *sp, const fusion_internal_Fuserxcov *obj,
-                    c_objectTrack *centralTrack,
+                    objectTrack *centralTrack,
                     const emxArray_objectTrack *sourceTracks,
                     const emxArray_real_T *inAssigned);
 
