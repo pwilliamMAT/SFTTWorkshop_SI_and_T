@@ -54,7 +54,7 @@ hold on
 plot((0:(N_ospa-1))/60, radarospa, "Color",radarclr);
 plot((0:(N_adsb-1))/60, adsbospa, "Color",adsbclr);
 plot((0:(N_fused-1))/60, fusedospa, "Color",fusedclr);
-l=legend('Primary (Radar)','Secondary (ADS-B)','Fused');
+l=legend('Primary (Radar)','Secondary (ADS-B)','C2 Level Track');
 l.Color = [0.1 0.1 0.1];
 l.TextColor = [1 1 1];
 xlabel('Time (min)')

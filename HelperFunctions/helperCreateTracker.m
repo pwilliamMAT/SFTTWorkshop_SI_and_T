@@ -1,10 +1,11 @@
 
 function [tracker,activeRadarSpec,targetSpec] = helperCreateTracker(scenario)
 passengerSpec = trackerTargetSpec("aerospace","aircraft","passenger");
-generalAviationSpec = trackerTargetSpec("aerospace","aircraft","general-aviation");
-helicopterSpec = trackerTargetSpec("aerospace","aircraft","helicopter");
+generalAviationSpec = trackerTargetSpec("aerospace","aircraft","general-aviation"); 
+helicopterSpec = trackerTargetSpec("aerospace","aircraft","helicopter"); 
 activeRadarSpec = trackerSensorSpec("aerospace","radar","monostatic");
 targetSpec = {passengerSpec,generalAviationSpec,helicopterSpec};
+
 
 activeRadarSpec.MaxNumLooksPerUpdate = ceil(75*2/1.4); % Defines the number of looks in two seconds
 activeRadarSpec.MaxNumMeasurementsPerUpdate = 20;

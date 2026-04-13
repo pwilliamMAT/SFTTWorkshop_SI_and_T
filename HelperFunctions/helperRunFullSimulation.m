@@ -45,6 +45,20 @@ numTargets = numel(scenario.Platforms) - 2;
 
 transponderStruct = helperCreateTX(numTargets, gps);
 adsbRx = adsbReceiver('ReceiverIndex',2);
+adsbRange = 100e3; % range in meters (50e3 results in some missed targets)
+
+% Configure a Gilbert–Elliott dropout model tuned for 1 Hz
+dropper = helperMakeAdsbDropper('model','gilbert', ...
+                          'pDropG', 0.01, ...   % Good: 1% per message dropped
+                          'pDropB', 0.60, ...   % Bad : 60% per message dropped
+                          'pGB',    0.004, ...  % Good->Bad per message (1Hz)
+                          'pBG',    0.33);      % Bad->Good per message (1Hz)
+
+% Optional: for reproducibility during runs
+% rng(42,'twister');
+
+% 1 Hz sample time
+analytics = helperMakeAdsbDropoutAnalytics(1);  % Ts = 1 second
 
 %% ---- Tracker ----
 [tracker, activeRadarSpec, targetSpec] = helperCreateTracker(scenario); %#ok<ASGLU>
@@ -96,7 +110,7 @@ plotPlatform(mapViewer,[scenario.Platforms{3:end}],TrajectoryMode="Full"); % Omi
 % Labels & colors
 adsblabel = "       ADS-B";
 radarlabel = "  Radar";
-fusedlabel = string(sprintf('%s\n',"","Fused"));
+fusedlabel = string(sprintf('%s\n',"","C2 Level Track"));
 adsbclr  = [183 70 255]/255;
 radarclr = [255 255 17]/255;
 fusedclr = [255 105 41]/255;
@@ -127,7 +141,7 @@ for ind = 1:numStepsToRun
     % Coverage
     covcon = coverageConfig(scenario);
     if ind == 1 %plotThisStep
-        plotCoverage(mapViewer, covcon, "ECEF", Color=[0 1 0])
+        plotCoverage(mapViewer, covcon, "ECEF"); %, Color=[0 1 0]
     end
 
     % Truth positions (LLA + NED)
@@ -165,7 +179,22 @@ for ind = 1:numStepsToRun
             adsbMessages(i-2,1) = transponderStruct(i-2).adsbTx(position,velocity);
         end
     end
-    adsbTracks = adsbRx(adsbMessages, time);
+    
+        
+    % Messages can be received within range of the surveillance station
+    adsbRangeFlag = helperIsWithinRange(mapOrigin, truePoseGPS, adsbRange);
+    receivedADSB_pre = adsbMessages(adsbRangeFlag);
+
+    % Apply dropout model (bursty, per-ICAO)
+    [receivedADSB_post, dropper] = helperStepAdsbDropper(dropper, receivedADSB_pre, time);
+
+
+    % Update analytics (pass both pre- and post-drop lists)
+    analytics = helperStepAdsbDropoutAnalytics(analytics, receivedADSB_pre, receivedADSB_post, time);
+
+    adsbTracks = adsbRx(receivedADSB_post, time);
+    %adsbTracks = adsbRx(adsbMessages, time); % Works without isWithinRange
+    %function above
     adsbTracks = adsbTracks';
     clear adsbMessages
     adsbTracks = helperEnsureTimeAndParams(adsbTracks, time, helperEcefParams());
@@ -180,10 +209,11 @@ for ind = 1:numStepsToRun
     radarTracks = helperEnsureTimeAndParams(radarTracks, time, helperNedParams());
 
     % --- Fusion (MEX) ---
-    if ~isempty([adsbTracks;radarTracks])
-        trackObj    = [adsbTracks;radarTracks];
+    if ~isempty([adsbTracksPlot';radarTracks])
+        trackObj    = [adsbTracksPlot';radarTracks];
         trackStruct = helperToStructForMEX(trackObj);
-        fusedStructs = fusionAlgorithm_mex(trackStruct, time);
+        %fusedStructs = fusionAlgorithm_mex(trackStruct, time);
+        fusedStructs = fusionAlgorithm(trackStruct, time); % DEBUG: Omit once fixed
         if ~isempty(fusedStructs)
             fusedTracks = helperConvertToObjectTrack(fusedStructs);
         end
@@ -217,6 +247,14 @@ end
 
 wallClockTime = toc(a);
 fprintf('  Sim loop done (%.1f s wall-clock).\n', wallClockTime);
+
+summary = helperSummarizeAdsbDropout(analytics, 'IncludeOpenOutages', true);
+
+% Quick look:
+disp(summary.global);
+
+% Per-target as a table:
+disp(summary.perTargetTable);  % a MATLAB table with per-target metrics
 
 %% ---- Package results ----
 results.mapViewer     = mapViewer;
