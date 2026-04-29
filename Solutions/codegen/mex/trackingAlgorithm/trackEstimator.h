@@ -18,12 +18,11 @@
 #include <string.h>
 
 /* Function Declarations */
-void trackEstimator(trackingAlgorithmStackData *SD, const emlrtStack *sp,
-                    const c_fusion_tracker_targetspecs_Pa *tgtSpecs_f1,
-                    const c_fusion_tracker_targetspecs_Ge *tgtSpecs_f2,
-                    const c_fusion_tracker_targetspecs_He *tgtSpecs_f3,
-                    const c_fusion_tracker_sensorspecs_Ae *sensorSpecs,
-                    trackingEKF *iobj_0,
-                    i_fusion_tracker_internal_estim *trkEstimator);
+trackingEKF *trackEstimator(
+    const emlrtStack *sp, const c_fusion_tracker_targetspecs_Pa *tgtSpecs,
+    const c_fusion_tracker_sensorspecs_Ae *sensorSpecs, trackingEKF *iobj_0,
+    c_fusion_tracker_targetspecs_Pa *c_trkEstimator_StateEstimator_S,
+    c_fusion_tracker_sensorspecs_Ae *d_trkEstimator_StateEstimator_S,
+    c_fusion_tracker_sensorspecs_Ae *c_trkEstimator_StateEstimator_E);
 
 /* End of code generation (trackEstimator.h) */

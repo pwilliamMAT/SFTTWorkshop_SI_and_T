@@ -17,40 +17,62 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo uw_emlrtRSI = {
-    57,                 /* lineNo */
-    "sumMatrixColumns", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
-                                                                            */
-};
-
-static emlrtRSInfo deb_emlrtRSI = {
+static emlrtRSInfo ocb_emlrtRSI = {
     107,                /* lineNo */
     "blockedSummation", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo eeb_emlrtRSI = {
+static emlrtRSInfo pcb_emlrtRSI = {
+    22,                    /* lineNo */
+    "sumMatrixIncludeNaN", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
+    "rixIncludeNaN.m" /* pathName */
+};
+
+static emlrtRSInfo qcb_emlrtRSI = {
+    42,                 /* lineNo */
+    "sumMatrixColumns", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
+    "rixIncludeNaN.m" /* pathName */
+};
+
+static emlrtRSInfo rcb_emlrtRSI = {
     41,                 /* lineNo */
     "sumMatrixColumns", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
-                                                                            */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
+    "rixIncludeNaN.m" /* pathName */
+};
+
+static emlrtRSInfo ygb_emlrtRSI = {
+    57,                 /* lineNo */
+    "sumMatrixColumns", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
+    "rixIncludeNaN.m" /* pathName */
 };
 
 static emlrtRTEInfo bg_emlrtRTEI = {
-    20,                                            /* lineNo */
-    1,                                             /* colNo */
-    "sum",                                         /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/sum.m" /* pName */
+    20,    /* lineNo */
+    1,     /* colNo */
+    "sum", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\sum.m" /* pName
+                                                                        */
 };
 
 static emlrtRTEInfo cg_emlrtRTEI = {
     35,                    /* lineNo */
     20,                    /* colNo */
     "sumMatrixIncludeNaN", /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pName
-                                                                            */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
+    "rixIncludeNaN.m" /* pName */
 };
 
 /* Function Definitions */
@@ -176,17 +198,17 @@ real_T c_sum(const emlrtStack *sp, const emxArray_real_T *x)
   e_st.tls = d_st.tls;
   f_st.prev = &e_st;
   f_st.tls = e_st.tls;
-  st.site = &nw_emlrtRSI;
-  b_st.site = &ow_emlrtRSI;
-  c_st.site = &pw_emlrtRSI;
+  st.site = &mcb_emlrtRSI;
+  b_st.site = &pbb_emlrtRSI;
+  c_st.site = &ncb_emlrtRSI;
   if (x->size[0] == 0) {
     y = 0.0;
   } else {
-    d_st.site = &deb_emlrtRSI;
-    e_st.site = &rw_emlrtRSI;
+    d_st.site = &ocb_emlrtRSI;
+    e_st.site = &pcb_emlrtRSI;
     if (x->size[0] < 4096) {
-      f_st.site = &sw_emlrtRSI;
-      y = sumColumnB(&f_st, x, x->size[0]);
+      f_st.site = &qcb_emlrtRSI;
+      y = b_sumColumnB(&f_st, x, x->size[0]);
     } else {
       int32_T inb;
       int32_T nfb;
@@ -199,8 +221,8 @@ real_T c_sum(const emlrtStack *sp, const emxArray_real_T *x)
         y += sumColumnB4(x, ((ib - 1) << 12) + 1);
       }
       if (nleft > 0) {
-        f_st.site = &uw_emlrtRSI;
-        y += b_sumColumnB(&f_st, x, nleft, inb + 1);
+        f_st.site = &ygb_emlrtRSI;
+        y += c_sumColumnB(&f_st, x, nleft, inb + 1);
       }
     }
   }
@@ -232,9 +254,9 @@ void sum(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
   f_st.tls = e_st.tls;
   g_st.prev = &f_st;
   g_st.tls = f_st.tls;
-  st.site = &nw_emlrtRSI;
-  b_st.site = &ow_emlrtRSI;
-  c_st.site = &pw_emlrtRSI;
+  st.site = &mcb_emlrtRSI;
+  b_st.site = &pbb_emlrtRSI;
+  c_st.site = &ncb_emlrtRSI;
   if ((x->size[0] == 0) || (x->size[1] == 0)) {
     int32_T loop_ub;
     loop_ub = y->size[0] * y->size[1];
@@ -249,22 +271,22 @@ void sum(const emlrtStack *sp, const emxArray_real_T *x, emxArray_real_T *y)
   } else {
     int32_T i;
     int32_T loop_ub;
-    d_st.site = &deb_emlrtRSI;
-    e_st.site = &rw_emlrtRSI;
+    d_st.site = &ocb_emlrtRSI;
+    e_st.site = &pcb_emlrtRSI;
     loop_ub = y->size[0] * y->size[1];
     y->size[0] = 1;
     i = x->size[1];
     y->size[1] = x->size[1];
     emxEnsureCapacity_real_T(&e_st, y, loop_ub, &cg_emlrtRTEI);
     y_data = y->data;
-    f_st.site = &eeb_emlrtRSI;
+    f_st.site = &rcb_emlrtRSI;
     if (x->size[1] > 2147483646) {
       g_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&g_st);
     }
     for (col = 0; col < i; col++) {
-      f_st.site = &sw_emlrtRSI;
-      y_data[col] = c_sumColumnB(&f_st, x, col + 1, x->size[0]);
+      f_st.site = &qcb_emlrtRSI;
+      y_data[col] = sumColumnB(&f_st, x, col + 1, x->size[0]);
     }
   }
 }

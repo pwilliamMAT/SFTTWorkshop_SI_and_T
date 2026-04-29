@@ -16,81 +16,92 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ch_emlrtRSI = {
+static emlrtRSInfo rg_emlrtRSI = {
     39,        /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo dh_emlrtRSI = {
+static emlrtRSInfo sg_emlrtRSI = {
     55,        /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo eh_emlrtRSI = {
+static emlrtRSInfo tg_emlrtRSI = {
     74,        /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo fh_emlrtRSI = {
+static emlrtRSInfo ug_emlrtRSI = {
     76,        /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo gh_emlrtRSI = {
+static emlrtRSInfo vg_emlrtRSI = {
     92,        /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo hh_emlrtRSI = {
+static emlrtRSInfo wg_emlrtRSI = {
     95,        /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo ih_emlrtRSI = {
+static emlrtRSInfo xg_emlrtRSI = {
     119,       /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo jh_emlrtRSI = {
+static emlrtRSInfo yg_emlrtRSI = {
     120,       /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo kh_emlrtRSI = {
+static emlrtRSInfo ah_emlrtRSI = {
     122,       /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo lh_emlrtRSI = {
+static emlrtRSInfo bh_emlrtRSI = {
     124,       /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
-static emlrtRSInfo mh_emlrtRSI = {
+static emlrtRSInfo ch_emlrtRSI = {
     170,       /* lineNo */
     "xzgebal", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xzgebal.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xzgebal.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -103,14 +114,14 @@ int32_T xzgebal(const emlrtStack *sp, real_T A[9], int32_T *ihi,
   emlrtStack st;
   real_T temp;
   int32_T exitg5;
+  int32_T ica;
   int32_T ilo;
   int32_T ix;
-  int32_T ix0_tmp;
   int32_T iy;
   int32_T k;
-  int32_T kend;
   int32_T l;
   int32_T temp_tmp;
+  int32_T vectorUB;
   boolean_T notdone;
   boolean_T skipThisRow;
   st.prev = sp;
@@ -132,38 +143,38 @@ int32_T xzgebal(const emlrtStack *sp, real_T A[9], int32_T *ihi,
     if (notdone) {
       int32_T exitg4;
       notdone = false;
-      iy = l;
+      ica = l;
       do {
         exitg4 = 0;
-        if (iy > 0) {
+        if (ica > 0) {
           boolean_T exitg6;
           skipThisRow = false;
-          st.site = &ch_emlrtRSI;
-          kend = 0;
+          st.site = &rg_emlrtRSI;
+          iy = 0;
           exitg6 = false;
-          while ((!exitg6) && (kend <= l - 1)) {
-            if ((kend + 1 == iy) || (!(A[(iy + 3 * kend) - 1] != 0.0))) {
-              kend++;
+          while ((!exitg6) && (iy <= l - 1)) {
+            if ((iy + 1 == ica) || (!(A[(ica + 3 * iy) - 1] != 0.0))) {
+              iy++;
             } else {
               skipThisRow = true;
               exitg6 = true;
             }
           }
           if (skipThisRow) {
-            iy--;
+            ica--;
           } else {
-            scale[l - 1] = iy;
-            if (iy != l) {
-              st.site = &dh_emlrtRSI;
-              xswap(&st, l, A, (iy - 1) * 3 + 1, (l - 1) * 3 + 1);
-              temp = A[iy - 1];
-              A[iy - 1] = A[l - 1];
+            scale[l - 1] = ica;
+            if (ica != l) {
+              st.site = &sg_emlrtRSI;
+              xswap(&st, l, A, (ica - 1) * 3 + 1, (l - 1) * 3 + 1);
+              temp = A[ica - 1];
+              A[ica - 1] = A[l - 1];
               A[l - 1] = temp;
-              temp = A[iy + 2];
-              A[iy + 2] = A[l + 2];
+              temp = A[ica + 2];
+              A[ica + 2] = A[l + 2];
               A[l + 2] = temp;
-              temp = A[iy + 5];
-              A[iy + 5] = A[l + 5];
+              temp = A[ica + 5];
+              A[ica + 5] = A[l + 5];
               A[l + 5] = temp;
             }
             exitg4 = 1;
@@ -187,47 +198,47 @@ int32_T xzgebal(const emlrtStack *sp, real_T A[9], int32_T *ihi,
       while (notdone) {
         boolean_T exitg6;
         notdone = false;
-        st.site = &eh_emlrtRSI;
-        kend = ilo;
+        st.site = &tg_emlrtRSI;
+        iy = ilo;
         exitg6 = false;
-        while ((!exitg6) && (kend <= l)) {
+        while ((!exitg6) && (iy <= l)) {
           boolean_T exitg7;
           skipThisRow = false;
-          st.site = &fh_emlrtRSI;
-          iy = ilo;
+          st.site = &ug_emlrtRSI;
+          ica = ilo;
           exitg7 = false;
-          while ((!exitg7) && (iy <= l)) {
-            if ((iy == kend) || (!(A[(iy + 3 * (kend - 1)) - 1] != 0.0))) {
-              iy++;
+          while ((!exitg7) && (ica <= l)) {
+            if ((ica == iy) || (!(A[(ica + 3 * (iy - 1)) - 1] != 0.0))) {
+              ica++;
             } else {
               skipThisRow = true;
               exitg7 = true;
             }
           }
           if (skipThisRow) {
-            kend++;
+            iy++;
           } else {
-            scale[ilo - 1] = kend;
-            if (kend != ilo) {
-              iy = (ilo - 1) * 3;
-              st.site = &gh_emlrtRSI;
-              xswap(&st, l, A, (kend - 1) * 3 + 1, iy + 1);
-              ix = (iy + kend) - 1;
-              iy = (iy + ilo) - 1;
-              st.site = &hh_emlrtRSI;
-              b_st.site = &nh_emlrtRSI;
-              c_st.site = &oh_emlrtRSI;
+            scale[ilo - 1] = iy;
+            if (iy != ilo) {
+              ica = (ilo - 1) * 3;
+              st.site = &vg_emlrtRSI;
+              xswap(&st, l, A, (iy - 1) * 3 + 1, ica + 1);
+              ix = (ica + iy) - 1;
+              iy = (ica + ilo) - 1;
+              st.site = &wg_emlrtRSI;
+              b_st.site = &dh_emlrtRSI;
+              c_st.site = &eh_emlrtRSI;
               if (4 - ilo > 2147483646) {
                 d_st.site = &k_emlrtRSI;
                 check_forloop_overflow_error(&d_st);
               }
-              kend = (uint8_T)(4 - ilo);
-              for (k = 0; k < kend; k++) {
+              ica = (uint8_T)(4 - ilo);
+              for (k = 0; k < ica; k++) {
                 temp_tmp = ix + k * 3;
                 temp = A[temp_tmp];
-                ix0_tmp = iy + k * 3;
-                A[temp_tmp] = A[ix0_tmp];
-                A[ix0_tmp] = temp;
+                vectorUB = iy + k * 3;
+                A[temp_tmp] = A[vectorUB];
+                A[vectorUB] = temp;
               }
             }
             ilo++;
@@ -247,7 +258,7 @@ int32_T xzgebal(const emlrtStack *sp, real_T A[9], int32_T *ihi,
     while ((!exitg3) && (!skipThisRow)) {
       int32_T exitg2;
       skipThisRow = true;
-      st.site = &ih_emlrtRSI;
+      st.site = &xg_emlrtRSI;
       ix = ilo - 1;
       do {
         exitg2 = 0;
@@ -257,19 +268,18 @@ int32_T xzgebal(const emlrtStack *sp, real_T A[9], int32_T *ihi,
           real_T ca;
           real_T r;
           real_T s;
-          iy = (l - ilo) + 1;
-          st.site = &jh_emlrtRSI;
-          c = b_xnrm2(&st, iy, A, ix * 3 + ilo);
+          ica = (l - ilo) + 1;
+          st.site = &yg_emlrtRSI;
+          c = b_xnrm2(&st, ica, A, ix * 3 + ilo);
           temp_tmp = (ilo - 1) * 3 + ix;
-          ix0_tmp = temp_tmp + 1;
           r = 0.0;
-          if (iy >= 1) {
-            if (iy == 1) {
+          if (ica >= 1) {
+            if (ica == 1) {
               r = muDoubleScalarAbs(A[temp_tmp]);
             } else {
               temp = 3.3121686421112381E-170;
-              kend = (temp_tmp + (iy - 1) * 3) + 1;
-              for (k = ix0_tmp; k <= kend; k += 3) {
+              ica = (temp_tmp + (ica - 1) * 3) + 1;
+              for (k = temp_tmp + 1; k <= ica; k += 3) {
                 s = muDoubleScalarAbs(A[k - 1]);
                 if (s > temp) {
                   b_s = temp / s;
@@ -281,65 +291,48 @@ int32_T xzgebal(const emlrtStack *sp, real_T A[9], int32_T *ihi,
                 }
               }
               r = temp * muDoubleScalarSqrt(r);
-              if (muDoubleScalarIsNaN(r)) {
-                iy = temp_tmp + 1;
-                int32_T exitg8;
-                do {
-                  exitg8 = 0;
-                  if (iy <= kend) {
-                    if (muDoubleScalarIsNaN(A[iy - 1])) {
-                      exitg8 = 1;
-                    } else {
-                      iy += 3;
-                    }
-                  } else {
-                    r = rtInf;
-                    exitg8 = 1;
-                  }
-                } while (exitg8 == 0);
-              }
             }
           }
-          st.site = &kh_emlrtRSI;
-          kend = ix * 3;
-          b_st.site = &ph_emlrtRSI;
-          iy = 1;
+          st.site = &ah_emlrtRSI;
+          iy = ix * 3;
+          b_st.site = &fh_emlrtRSI;
+          ica = 1;
           if (l > 1) {
-            temp = muDoubleScalarAbs(A[kend]);
-            c_st.site = &qh_emlrtRSI;
+            temp = muDoubleScalarAbs(A[iy]);
+            c_st.site = &gh_emlrtRSI;
             for (k = 2; k <= l; k++) {
-              s = muDoubleScalarAbs(A[(kend + k) - 1]);
+              s = muDoubleScalarAbs(A[(iy + k) - 1]);
               if (s > temp) {
-                iy = k;
+                ica = k;
                 temp = s;
               }
             }
           }
-          ca = muDoubleScalarAbs(A[(iy + 3 * ix) - 1]);
-          st.site = &lh_emlrtRSI;
-          kend = 4 - ilo;
-          b_st.site = &ph_emlrtRSI;
+          ca = muDoubleScalarAbs(A[(ica + 3 * ix) - 1]);
+          st.site = &bh_emlrtRSI;
+          iy = 4 - ilo;
+          b_st.site = &fh_emlrtRSI;
           if (4 - ilo < 1) {
-            iy = 0;
+            ica = 0;
           } else {
-            iy = 1;
+            ica = 1;
             if (4 - ilo > 1) {
               temp = muDoubleScalarAbs(A[temp_tmp]);
-              c_st.site = &qh_emlrtRSI;
+              c_st.site = &gh_emlrtRSI;
               if (4 - ilo > 2147483646) {
                 d_st.site = &k_emlrtRSI;
                 check_forloop_overflow_error(&d_st);
               }
-              for (k = 2; k <= kend; k++) {
+              for (k = 2; k <= iy; k++) {
                 s = muDoubleScalarAbs(A[temp_tmp + (k - 1) * 3]);
                 if (s > temp) {
-                  iy = k;
+                  ica = k;
                   temp = s;
                 }
               }
             }
           }
-          temp = muDoubleScalarAbs(A[ix + 3 * ((iy + ilo) - 2)]);
+          temp = muDoubleScalarAbs(A[ix + 3 * ((ica + ilo) - 2)]);
           if ((c == 0.0) || (r == 0.0)) {
             ix++;
           } else {
@@ -386,22 +379,23 @@ int32_T xzgebal(const emlrtStack *sp, real_T A[9], int32_T *ihi,
                      (!(scale[ix] >= 9.9792015476736E+291 / f)))) {
                   temp = 1.0 / f;
                   scale[ix] *= f;
-                  iy = (temp_tmp + 3 * (3 - ilo)) + 1;
-                  for (k = ix0_tmp; k <= iy; k += 3) {
+                  iy = temp_tmp + 1;
+                  ica = (temp_tmp + 3 * (3 - ilo)) + 1;
+                  for (k = iy; k <= ica; k += 3) {
                     A[k - 1] *= temp;
                   }
-                  st.site = &mh_emlrtRSI;
-                  kend = ix * 3 + 1;
-                  b_st.site = &ld_emlrtRSI;
-                  iy = (kend + l) - 1;
-                  c_st.site = &md_emlrtRSI;
-                  if ((kend <= iy) && (iy > 2147483646)) {
+                  st.site = &ch_emlrtRSI;
+                  ica = ix * 3 + 1;
+                  b_st.site = &bd_emlrtRSI;
+                  iy = (ica + l) - 1;
+                  c_st.site = &cd_emlrtRSI;
+                  if ((ica <= iy) && (iy > 2147483646)) {
                     d_st.site = &k_emlrtRSI;
                     check_forloop_overflow_error(&d_st);
                   }
-                  temp_tmp = ((iy - kend) + 1) / 2 * 2 + kend;
-                  ix0_tmp = temp_tmp - 2;
-                  for (k = kend; k <= ix0_tmp; k += 2) {
+                  temp_tmp = ((iy - ica) + 1) / 2 * 2 + ica;
+                  vectorUB = temp_tmp - 2;
+                  for (k = ica; k <= vectorUB; k += 2) {
                     __m128d b_r;
                     b_r = _mm_loadu_pd(&A[k - 1]);
                     b_r = _mm_mul_pd(_mm_set1_pd(f), b_r);

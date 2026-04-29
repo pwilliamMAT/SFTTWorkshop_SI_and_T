@@ -1,4 +1,5 @@
-function transponderStruct = helperCreateTX(numPlats, gps)
+function transponderStruct = helperCreateTX(scenario, gps)
+    numPlats = numel(scenario.Platforms)-2; % Two platforms in scene are the sensor towers
     transponderStruct(numPlats) = struct();
     for i = 1:numPlats
         tailNumber = sprintf('MW%d', 2019 + i);

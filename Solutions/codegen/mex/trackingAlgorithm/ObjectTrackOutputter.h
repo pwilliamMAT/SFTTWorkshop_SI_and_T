@@ -18,8 +18,7 @@
 #include <string.h>
 
 /* Function Declarations */
-void ObjectTrackOutputter_setup(trackingAlgorithmStackData *SD,
-                                const emlrtStack *sp,
+void ObjectTrackOutputter_setup(const emlrtStack *sp,
                                 i_fusion_tracker_internal_compo *outputter,
                                 trackingEKF *iobj_0);
 

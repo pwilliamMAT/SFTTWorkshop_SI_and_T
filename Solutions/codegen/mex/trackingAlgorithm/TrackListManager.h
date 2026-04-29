@@ -18,8 +18,7 @@
 #include <string.h>
 
 /* Function Declarations */
-void TrackListManager_setup(trackingAlgorithmStackData *SD,
-                            const emlrtStack *sp,
+void TrackListManager_setup(const emlrtStack *sp,
                             g_fusion_tracker_internal_compo *obj);
 
 /* End of code generation (TrackListManager.h) */

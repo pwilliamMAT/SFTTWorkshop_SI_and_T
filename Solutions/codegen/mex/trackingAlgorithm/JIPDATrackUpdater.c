@@ -20,142 +20,177 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo ykb_emlrtRSI = {
+static emlrtRSInfo vjb_emlrtRSI = {
     45,                         /* lineNo */
     "JIPDATrackUpdater/update", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m" /* pathName */
 };
 
-static emlrtRSInfo alb_emlrtRSI = {
+static emlrtRSInfo wjb_emlrtRSI = {
     46,                         /* lineNo */
     "JIPDATrackUpdater/update", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m" /* pathName */
 };
 
-static emlrtRSInfo blb_emlrtRSI = {
+static emlrtRSInfo xjb_emlrtRSI = {
     53,                         /* lineNo */
     "JIPDATrackUpdater/update", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m" /* pathName */
 };
 
-static emlrtRSInfo clb_emlrtRSI = {
+static emlrtRSInfo yjb_emlrtRSI = {
     55,                         /* lineNo */
     "JIPDATrackUpdater/update", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m" /* pathName */
 };
 
-static emlrtRSInfo dlb_emlrtRSI = {
+static emlrtRSInfo akb_emlrtRSI = {
     69,                         /* lineNo */
     "JIPDATrackUpdater/update", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m" /* pathName */
 };
 
-static emlrtRSInfo elb_emlrtRSI = {
+static emlrtRSInfo bkb_emlrtRSI = {
     86,            /* lineNo */
     "updateTrack", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m" /* pathName */
 };
 
-static emlrtRSInfo flb_emlrtRSI = {
+static emlrtRSInfo ckb_emlrtRSI = {
     100,                          /* lineNo */
     "TrackEstimator/correctJPDA", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
-    "TrackEstimator.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+estimators\\TrackEstimator.m" /* pathName */
 };
 
-static emlrtRSInfo glb_emlrtRSI = {
+static emlrtRSInfo dkb_emlrtRSI = {
     99,                           /* lineNo */
     "TrackEstimator/correctJPDA", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
-    "TrackEstimator.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+estimators\\TrackEstimator.m" /* pathName */
 };
 
-static emlrtRSInfo ilb_emlrtRSI = {
+static emlrtRSInfo ekb_emlrtRSI = {
+    98,                           /* lineNo */
+    "TrackEstimator/correctJPDA", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+estimators\\TrackEstimator.m" /* pathName */
+};
+
+static emlrtRSInfo fkb_emlrtRSI = {
     97,                           /* lineNo */
     "TrackEstimator/correctJPDA", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
-    "TrackEstimator.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+estimators\\TrackEstimator.m" /* pathName */
 };
 
-static emlrtBCInfo tj_emlrtBCI = {
-    -1,                         /* iFirst */
-    -1,                         /* iLast */
-    69,                         /* lineNo */
-    27,                         /* colNo */
-    "",                         /* aName */
-    "JIPDATrackUpdater/update", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m", /* pName */
-    0                      /* checkKind */
+static emlrtRTEInfo yb_emlrtRTEI = {
+    90,              /* lineNo */
+    27,              /* colNo */
+    "unaryMinOrMax", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\unaryMinOrMax.m" /* pName */
 };
 
-static emlrtBCInfo uj_emlrtBCI = {
-    -1,                         /* iFirst */
-    -1,                         /* iLast */
-    58,                         /* lineNo */
-    26,                         /* colNo */
-    "",                         /* aName */
-    "JIPDATrackUpdater/update", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m", /* pName */
-    0                      /* checkKind */
-};
-
-static emlrtBCInfo vj_emlrtBCI = {
-    -1,                         /* iFirst */
-    -1,                         /* iLast */
-    69,                         /* lineNo */
-    65,                         /* colNo */
-    "",                         /* aName */
-    "JIPDATrackUpdater/update", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m", /* pName */
-    0                      /* checkKind */
-};
-
-static emlrtBCInfo wj_emlrtBCI = {
-    -1,                         /* iFirst */
-    -1,                         /* iLast */
-    69,                         /* lineNo */
-    102,                        /* colNo */
-    "",                         /* aName */
-    "JIPDATrackUpdater/update", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m", /* pName */
-    0                      /* checkKind */
-};
-
-static emlrtBCInfo xj_emlrtBCI = {
+static emlrtBCInfo sj_emlrtBCI = {
     -1,                           /* iFirst */
     -1,                           /* iLast */
     100,                          /* lineNo */
     82,                           /* colNo */
     "",                           /* aName */
     "TrackEstimator/correctJPDA", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+estimators/"
-    "TrackEstimator.m", /* pName */
-    0                   /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+estimators\\TrackEstimator.m", /* pName */
+    0                                          /* checkKind */
 };
 
-static emlrtRTEInfo kl_emlrtRTEI = {
+static emlrtBCInfo tj_emlrtBCI = {
+    -1,                         /* iFirst */
+    -1,                         /* iLast */
+    69,                         /* lineNo */
+    102,                        /* colNo */
+    "",                         /* aName */
+    "JIPDATrackUpdater/update", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m", /* pName */
+    0                                             /* checkKind */
+};
+
+static emlrtBCInfo uj_emlrtBCI = {
+    -1,                         /* iFirst */
+    -1,                         /* iLast */
+    69,                         /* lineNo */
+    65,                         /* colNo */
+    "",                         /* aName */
+    "JIPDATrackUpdater/update", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m", /* pName */
+    0                                             /* checkKind */
+};
+
+static emlrtBCInfo vj_emlrtBCI = {
+    -1,                         /* iFirst */
+    -1,                         /* iLast */
+    58,                         /* lineNo */
+    26,                         /* colNo */
+    "",                         /* aName */
+    "JIPDATrackUpdater/update", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m", /* pName */
+    0                                             /* checkKind */
+};
+
+static emlrtBCInfo wj_emlrtBCI = {
+    -1,                         /* iFirst */
+    -1,                         /* iLast */
+    69,                         /* lineNo */
+    27,                         /* colNo */
+    "",                         /* aName */
+    "JIPDATrackUpdater/update", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m", /* pName */
+    0                                             /* checkKind */
+};
+
+static emlrtRTEInfo ll_emlrtRTEI = {
     43,                  /* lineNo */
     30,                  /* colNo */
     "JIPDATrackUpdater", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+components/"
-    "JIPDATrackUpdater.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+components\\JIPDATrackUpdater.m" /* pName */
 };
 
 /* Function Definitions */
 void JIPDATrackUpdater_update(
     trackingAlgorithmStackData *SD, const emlrtStack *sp,
     real_T updater_AssignmentThreshold,
-    h_fusion_tracker_internal_estim *c_updater_Estimator_StateEstima,
+    const c_fusion_tracker_targetspecs_Pa *c_updater_Estimator_StateEstima,
+    const c_fusion_tracker_sensorspecs_Ae *d_updater_Estimator_StateEstima,
+    trackingEKF *e_updater_Estimator_StateEstima,
+    const c_fusion_tracker_sensorspecs_Ae *f_updater_Estimator_StateEstima,
     emxArray_struct_T *trackList, const real_T sensorData_LookTime_data[],
     const int32_T sensorData_LookTime_size[2],
     const real_T sensorData_LookAzimuth_data[],
@@ -183,12 +218,16 @@ void JIPDATrackUpdater_update(
     const emxArray_real_T *assignment)
 {
   b_emxArray_struct_T *modelData;
-  b_struct_T track;
-  b_struct_T *trackList_data;
+  c_fusion_tracker_sensorspecs_Ae g_updater_Estimator_StateEstima;
   emlrtStack b_st;
   emlrtStack c_st;
+  emlrtStack d_st;
+  emlrtStack e_st;
+  emlrtStack f_st;
   emlrtStack st;
   emxArray_real_T d_assignment_data;
+  struct_T track;
+  struct_T *trackList_data;
   real_T z_data[200];
   real_T t_data[100];
   real_T b_t_data[50];
@@ -200,23 +239,34 @@ void JIPDATrackUpdater_update(
   int32_T z_size[2];
   int32_T assignment_size;
   int32_T b_k;
+  int32_T b_loop_ub = 0;
   int32_T i;
+  int32_T i2 = 0;
+  int32_T i3 = 0;
   int32_T idx;
   int32_T k;
   int32_T last;
+  int32_T loop_ub;
   int32_T scalarLB;
   int32_T vectorUB;
+  boolean_T b = false;
   st.prev = sp;
   st.tls = sp->tls;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
+  d_st.prev = &c_st;
+  d_st.tls = c_st.tls;
+  e_st.prev = &d_st;
+  e_st.tls = d_st.tls;
+  f_st.prev = &e_st;
+  f_st.tls = e_st.tls;
   assignment_data = assignment->data;
   trackList_data = trackList->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
-  emxInit_struct_T1(sp, &modelData, &kl_emlrtRTEI);
-  st.site = &ykb_emlrtRSI;
+  emxInit_struct_T1(sp, &modelData, &ll_emlrtRTEI);
+  st.site = &vjb_emlrtRSI;
   c_AerospaceMonostaticRadar_pars(
       &st, sensorData_LookTime_data, sensorData_LookTime_size,
       sensorData_LookAzimuth_data, sensorData_LookAzimuth_size,
@@ -230,15 +280,15 @@ void JIPDATrackUpdater_update(
       d_sensorData_ElevationAccuracy_, sensorData_RangeAccuracy_data,
       sensorData_RangeAccuracy_size, c_sensorData_RangeRateAccuracy_,
       d_sensorData_RangeRateAccuracy_, z_data, z_size, modelData);
-  st.site = &alb_emlrtRSI;
+  st.site = &wjb_emlrtRSI;
   c_AerospaceMonostaticRadar_time(
       sensorData_LookTime_data, sensorData_LookTime_size,
       sensorData_DetectionTime_data, sensorData_DetectionTime_size, t_data,
       t_size);
   if (z_size[1] > 0) {
     if (t_size[1] == 1) {
-      st.site = &blb_emlrtRSI;
-      b_st.site = &hq_emlrtRSI;
+      st.site = &xjb_emlrtRSI;
+      b_st.site = &sp_emlrtRSI;
       t = t_data[0];
       idx = z_size[1];
       t_size[1] = z_size[1];
@@ -246,27 +296,28 @@ void JIPDATrackUpdater_update(
         t_data[b_k] = t;
       }
     } else {
-      st.site = &clb_emlrtRSI;
-      b_st.site = &ys_emlrtRSI;
+      st.site = &yjb_emlrtRSI;
+      b_st.site = &js_emlrtRSI;
+      c_st.site = &ks_emlrtRSI;
       idx = 1;
       if (t_size[1] > 1) {
         idx = t_size[1];
       }
       if (z_size[1] > muIntScalarMax_sint32(t_size[1], idx)) {
         emlrtErrorWithMessageIdR2018a(
-            &st, &p_emlrtRTEI, "Coder:toolbox:reshape_emptyReshapeLimit",
+            &st, &o_emlrtRTEI, "Coder:toolbox:reshape_emptyReshapeLimit",
             "Coder:toolbox:reshape_emptyReshapeLimit", 0);
       }
       if (z_size[1] != t_size[1]) {
         emlrtErrorWithMessageIdR2018a(
-            &st, &q_emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
+            &st, &p_emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
             "Coder:MATLAB:getReshapeDims_notSameNumel", 0);
       }
       t_size[1] = z_size[1];
     }
   } else {
     if (t_size[1] < 1) {
-      emlrtDynamicBoundsCheckR2012b(1, 1, t_size[1], &uj_emlrtBCI,
+      emlrtDynamicBoundsCheckR2012b(1, 1, t_size[1], &vj_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
     t = t_data[0];
@@ -275,29 +326,43 @@ void JIPDATrackUpdater_update(
   }
   i = trackList->size[0];
   if (i - 1 >= 0) {
+    b = true;
     last = t_size[1];
-    b_t_size[0] = 1;
-    b_t_size[1] = t_size[1];
+    loop_ub = assignment->size[0];
+    i2 = t_size[1];
+    i3 = t_size[1];
     scalarLB = (t_size[1] / 2) << 1;
     vectorUB = scalarLB - 2;
+    b_loop_ub = assignment->size[0];
+    b_t_size[0] = 1;
+    b_t_size[1] = t_size[1];
   }
   for (k = 0; k < i; k++) {
     real_T b_assignment_data[51];
     real_T d;
+    int32_T c_k;
     int32_T i1;
-    int32_T loop_ub;
     boolean_T exitg1;
-    st.site = &dlb_emlrtRSI;
+    st.site = &akb_emlrtRSI;
     i1 = trackList->size[0];
     if (k + 1 > i1) {
-      emlrtDynamicBoundsCheckR2012b(k + 1, 1, i1, &vj_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckR2012b(k + 1, 1, i1, &uj_emlrtBCI, &st);
     }
     if (k + 1 > assignment->size[1]) {
-      emlrtDynamicBoundsCheckR2012b(k + 1, 1, assignment->size[1], &wj_emlrtBCI,
+      emlrtDynamicBoundsCheckR2012b(k + 1, 1, assignment->size[1], &tj_emlrtBCI,
                                     &st);
     }
-    b_st.site = &elb_emlrtRSI;
-    if (t_size[1] <= 2) {
+    b_st.site = &bkb_emlrtRSI;
+    c_st.site = &fkb_emlrtRSI;
+    d_st.site = &jgb_emlrtRSI;
+    e_st.site = &kgb_emlrtRSI;
+    f_st.site = &lgb_emlrtRSI;
+    if (!b) {
+      emlrtErrorWithMessageIdR2018a(&f_st, &yb_emlrtRTEI,
+                                    "Coder:toolbox:autoDimIncompatibility",
+                                    "Coder:toolbox:autoDimIncompatibility", 0);
+    }
+    if (i2 <= 2) {
       if (t_size[1] == 1) {
         t = t_data[0];
       } else if ((t_data[0] > t_data[1]) ||
@@ -312,14 +377,14 @@ void JIPDATrackUpdater_update(
         idx = 1;
       } else {
         idx = 0;
-        loop_ub = 2;
+        c_k = 2;
         exitg1 = false;
-        while ((!exitg1) && (loop_ub <= last)) {
-          if (!muDoubleScalarIsNaN(t_data[loop_ub - 1])) {
-            idx = loop_ub;
+        while ((!exitg1) && (c_k <= last)) {
+          if (!muDoubleScalarIsNaN(t_data[c_k - 1])) {
+            idx = c_k;
             exitg1 = true;
           } else {
-            loop_ub++;
+            c_k++;
           }
         }
       }
@@ -337,22 +402,13 @@ void JIPDATrackUpdater_update(
       }
     }
     track = trackList_data[k];
-    c_st.site = &ilb_emlrtRSI;
-    TrackEstimator_predict(&c_st,
-                           &c_updater_Estimator_StateEstima->StateEstimator
-                                .Estimators.f1.TargetSpecifications[0],
-                           c_updater_Estimator_StateEstima->StateEstimator
-                               .Estimators.f1.TrackingFilter,
-                           &c_updater_Estimator_StateEstima->StateEstimator
-                                .Estimators.f2.TargetSpecifications[0],
-                           c_updater_Estimator_StateEstima->StateEstimator
-                               .Estimators.f2.TrackingFilter,
-                           &c_updater_Estimator_StateEstima->StateEstimator
-                                .Estimators.f3.TargetSpecifications[0],
-                           c_updater_Estimator_StateEstima->StateEstimator
-                               .Estimators.f3.TrackingFilter,
-                           &track, t);
-    if (t_size[1] <= 2) {
+    c_st.site = &fkb_emlrtRSI;
+    TrackEstimator_predict(&c_st, c_updater_Estimator_StateEstima,
+                           e_updater_Estimator_StateEstima, &track, t);
+    c_st.site = &ekb_emlrtRSI;
+    d_st.site = &jgb_emlrtRSI;
+    e_st.site = &kgb_emlrtRSI;
+    if (i3 <= 2) {
       if (t_size[1] == 1) {
         t = t_data[0];
       } else if ((t_data[0] > t_data[1]) ||
@@ -367,14 +423,14 @@ void JIPDATrackUpdater_update(
         idx = 1;
       } else {
         idx = 0;
-        loop_ub = 2;
+        c_k = 2;
         exitg1 = false;
-        while ((!exitg1) && (loop_ub <= last)) {
-          if (!muDoubleScalarIsNaN(t_data[loop_ub - 1])) {
-            idx = loop_ub;
+        while ((!exitg1) && (c_k <= last)) {
+          if (!muDoubleScalarIsNaN(t_data[c_k - 1])) {
+            idx = c_k;
             exitg1 = true;
           } else {
-            loop_ub++;
+            c_k++;
           }
         }
       }
@@ -399,33 +455,34 @@ void JIPDATrackUpdater_update(
     for (b_k = scalarLB; b_k < last; b_k++) {
       b_t_data[b_k] = t_data[b_k] - t;
     }
-    loop_ub = assignment->size[0];
     idx = assignment->size[0];
     for (b_k = 0; b_k < loop_ub; b_k++) {
       b_assignment_data[b_k] = assignment_data[b_k + assignment->size[0] * k];
     }
-    SD->u3.f9.updater_Estimator_StateEstimato =
-        *c_updater_Estimator_StateEstima;
-    c_st.site = &glb_emlrtRSI;
+    SD->u1.f0.updater_Estimator_StateEstimato =
+        *d_updater_Estimator_StateEstima;
+    g_updater_Estimator_StateEstima = *f_updater_Estimator_StateEstima;
+    c_st.site = &dkb_emlrtRSI;
     IPDAEstimator_correctJPDA(
-        SD, &c_st, &SD->u3.f9.updater_Estimator_StateEstimato, &track, z_data,
-        z_size, b_t_data, b_t_size, modelData, b_assignment_data, idx,
-        updater_AssignmentThreshold);
-    if (assignment->size[0] == 1) {
+        &c_st, c_updater_Estimator_StateEstima,
+        &SD->u1.f0.updater_Estimator_StateEstimato,
+        e_updater_Estimator_StateEstima, &g_updater_Estimator_StateEstima,
+        &track, z_data, z_size, b_t_data, b_t_size, modelData,
+        b_assignment_data, idx, updater_AssignmentThreshold);
+    if (b_loop_ub == 1) {
       track.IsCoasted = true;
     } else {
       int32_T b_iv[2];
-      if ((assignment->size[0] - 1 < 1) ||
-          (assignment->size[0] - 1 > assignment->size[0])) {
-        emlrtDynamicBoundsCheckR2012b(assignment->size[0] - 1, 1,
-                                      assignment->size[0], &xj_emlrtBCI, &b_st);
+      if ((b_loop_ub - 1 < 1) || (b_loop_ub - 1 > b_loop_ub)) {
+        emlrtDynamicBoundsCheckR2012b(b_loop_ub - 1, 1, b_loop_ub, &sj_emlrtBCI,
+                                      &b_st);
       }
       b_iv[0] = 1;
-      b_iv[1] = assignment->size[0] - 1;
-      c_st.site = &flb_emlrtRSI;
-      b_indexShapeCheck(&c_st, assignment->size[0], b_iv);
-      assignment_size = assignment->size[0] - 1;
-      for (b_k = 0; b_k <= loop_ub - 2; b_k++) {
+      b_iv[1] = b_loop_ub - 1;
+      c_st.site = &ckb_emlrtRSI;
+      b_indexShapeCheck(&c_st, b_loop_ub, b_iv);
+      assignment_size = b_loop_ub - 1;
+      for (b_k = 0; b_k <= b_loop_ub - 2; b_k++) {
         c_assignment_data[b_k] = assignment_data[b_k + assignment->size[0] * k];
       }
       d_assignment_data.data = &c_assignment_data[0];
@@ -433,7 +490,7 @@ void JIPDATrackUpdater_update(
       d_assignment_data.allocatedSize = 50;
       d_assignment_data.numDimensions = 1;
       d_assignment_data.canFreeData = false;
-      c_st.site = &flb_emlrtRSI;
+      c_st.site = &ckb_emlrtRSI;
       if (!(c_sum(&c_st, &d_assignment_data) > 0.0)) {
         track.IsCoasted = true;
       } else {
@@ -447,7 +504,7 @@ void JIPDATrackUpdater_update(
       }
     }
     if (k + 1 > i1) {
-      emlrtDynamicBoundsCheckR2012b(k + 1, 1, i1, &tj_emlrtBCI,
+      emlrtDynamicBoundsCheckR2012b(k + 1, 1, i1, &wj_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
     trackList_data[k] = track;

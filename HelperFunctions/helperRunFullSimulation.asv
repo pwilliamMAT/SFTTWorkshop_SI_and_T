@@ -23,7 +23,7 @@ a = tic;
 recordDataFlag = 0; % Set to 0 to load data, 1 to record scenario
 
 %% ---- Scenario ----
-truncatedStopTime = 100; % Limit Simulation time (s)
+truncatedStopTime = 60; % Limit Simulation time (s)
 scenario = helperCreateScenario(tuningData, mapOrigin,truncatedStopTime);
 
 %% ---- Globe Viewer ----
@@ -42,6 +42,8 @@ gps = gpsSensor('PositionInputFormat','Geodetic',...
     'VerticalPositionAccuracy',vertAccuracy,...
     'VelocityAccuracy',velAccuracy);
 numTargets = numel(scenario.Platforms) - 2;
+PDrop = 0.3;
+adsbRange = 2e5;
 
 transponderStruct = helperCreateTX(numTargets, gps);
 adsbRx = adsbReceiver('ReceiverIndex',2);
@@ -52,7 +54,6 @@ adsbRx = adsbReceiver('ReceiverIndex',2);
 if recordDataFlag == 1
     % Record Scenario Sensor Data
     sensorData = helperRecordSensorData(scenario);
-    %save('SensorData.mat','sensorData')
 else
     %Load sensor data ----
     load('SensorData.mat','sensorData');
@@ -74,7 +75,6 @@ numStepsToRun = numel(activeRadarData);
 truePoseGPSAll = cell(1, numStepsToRun);
 truePoseNEDAll = cell(1, numStepsToRun);
 fusedTrackLog  = cell(1, numStepsToRun);
-fusedTrackLogNoMex = cell(1, numStepsToRun);
 radarTrackLog  = cell(1, numStepsToRun);
 adsbTrackLog   = cell(1, numStepsToRun);
 adsbTrackLogNED = cell(1, numStepsToRun);
@@ -111,9 +111,9 @@ assignmentMetrics = trackAssignmentMetrics(...
     'DivergenceThreshold',50,...
     'AssignmentThreshold',50);
 
+
 %% ---- Clear MEX to reset persistent fuser state ----
 clear fusionAlgorithm_mex fusionAlgorithm
-
 wgs84 = wgs84Ellipsoid('meter');
 
 % Plot every Nth step to reduce globe-viewer overhead
@@ -130,7 +130,7 @@ for ind = 1:numStepsToRun
     % Coverage
     covcon = coverageConfig(scenario);
     if ind == 1 %plotThisStep
-        plotCoverage(mapViewer, covcon, "ECEF", Color=[0 1 0])
+        plotCoverage(mapViewer, covcon, "ECEF") %, Color=[0 1 0] - Green, if desired
     end
 
     % Truth positions (LLA + NED)
@@ -139,40 +139,9 @@ for ind = 1:numStepsToRun
         poseStruct.PlatformID = scenario.Platforms{i}.PlatformID;
         truePoseGPS(i) = poseStruct;
 
-        % % Get Truth Position in NED - The rest of pose is already in NED
-        % truePoseNED(i) = truePoseGPS(i);
-        % pos = truePoseGPS.Position;
-        % truePoseNED(i).Position = lla2ned(pos,mapOrigin,'ellipsoid');
-
-        % tmp = pose(scenario.Platforms{i},'CoordinateSystem','Cartesian');
-        % tmp.PlatformID = scenario.Platforms{i}.PlatformID;
-        % 
-        % pECEF = tmp.Position;
-        % vECEF = tmp.Velocity;
-        % [xN, yE, zD] = ecef2ned(pECEF(1),pECEF(2),pECEF(3), mapOrigin(1),mapOrigin(2),mapOrigin(3), wgs84);
-        % truePoseNED(i).Position = [xN, yE, zD];
-        % [uN, vE, wD] = ecef2nedv(vECEF(1),vECEF(2),vECEF(3), mapOrigin(1),mapOrigin(2));
-        % truePoseNED(i).Velocity  = [uN vE wD];
-        % truePoseNED(i).PlatformID = tmp.PlatformID;
-        % truePoseNED(i).Orientation = tmp.Orientation;
-        % truePoseNED(i).AngularVelocity = tmp.AngularVelocity;
-
-        
     end
 
-    truePoseNED = targetPoses(NEDPlat);
-
-    % Wrap it in a struct matching targetPoses format:
-    refStruct = struct( ...
-        'Position', NEDPlat.Position, ...
-        'Velocity', [0 0 0], ...
-        'PlatformID', NEDPlat(1).PlatformID, ...
-        'Orientation', quaternion(1,0,0,0), ...
-        'AngularVelocity', [0 0 0] );
-
-    % Prepend
-    truePoseNED = [refStruct; truePoseNED];
-
+    truePoseNED = targetPoses(NEDPlat); % Note Indexing is shifted by one, omits the reference platform
 
     truePoseGPSAll{ind} = truePoseGPS;
     truePoseNEDAll{ind} = truePoseNED;
@@ -183,7 +152,7 @@ for ind = 1:numStepsToRun
         helperPlotActiveRadarData(mapViewer, activeRadarSpec, activeRadarData(ind));
     end
 
-    time = scenario.SimulationTime; %(ind - 1) * trackerUpdateInterval;
+    time = scenario.SimulationTime;
 
     % Init track arrays
     adsbTracks     = objectTrack.empty;
@@ -192,15 +161,41 @@ for ind = 1:numStepsToRun
     fusedTracks    = objectTrack.empty;
 
     % --- ADS-B ---
-    for i = 3:numel(truePoseGPS) % Omit Towers
+    % Generate ADSB Messages
+    adsbMessages = generateTemplateADSBMessage;
+    adsbMessages(1)=[]; % Clear Values
+    %k = 0;
+    for i = 3:numel(truePoseGPS)
         position = truePoseGPS(i).Position;
         velocity = truePoseGPS(i).Velocity;
-        if ~isnan(position)
-            adsbMessages(i-2,1) = transponderStruct(i-2).adsbTx(position,velocity);
+        
+        isValid = all(~isnan(position));
+        
+        % Augment PDrop according to range
+        PDropClose = 0.05;   % 5% dropout at close range
+        PDropFar = 0.7;     % 95% dropout at max range
+        cartDistance = ADSBTargetRange(mapOrigin, position);
+        range_m = norm(cartDistance);
+        rangeFactor = min(1, PDrop + (1-PDrop) * (range_m / adsbRange));
+        PDrop  = PDropClose + (PDropFar - PDropClose) * rangeFactor;
+        keepMsg = rand >= PDrop;
+
+        if isValid && keepMsg
+            msg = transponderStruct(i-2).adsbTx(position,velocity);
+            msg.Time = time;
+            adsbMessages = [adsbMessages; msg];
         end
     end
-    adsbTracks = adsbRx(adsbMessages, time);
-    adsbTracks = adsbTracks';
+    %adsbTracks = adsbRx(adsbMessages, time);
+
+    % Only call adsbRx if there are messages
+    if ~isempty(adsbMessages)
+        adsbTracks = adsbRx(adsbMessages, time);
+        adsbTracks = adsbTracks';
+    else
+        adsbTracks = objectTrack.empty;
+    end
+    %adsbTracks = adsbTracks';
     clear adsbMessages
     adsbTracks = helperEnsureTimeAndParams(adsbTracks, time, helperEcefParams());
 
@@ -213,11 +208,6 @@ for ind = 1:numStepsToRun
     radarTracks = helperConvertToObjectTrack(radarTracksStruct);
     radarTracks = helperEnsureTimeAndParams(radarTracks, time, helperNedParams());
 
-    % % DEBUG
-    if ~isempty([adsbTracks;radarTracks])
-        fusedTracksNoMEX = fusionAlgorithm([adsbTracks;radarTracks], time);
-    end
-
     % --- Fusion (MEX) ---
     if ~isempty([adsbTracks;radarTracks])
         trackObj    = [adsbTracks;radarTracks];
@@ -228,12 +218,6 @@ for ind = 1:numStepsToRun
         end
     end
 
-    % % --- Log (convert fused ECEF → NED) ---
-    % fusedTracksNED = objectTrack.empty;
-    % for i = 1:length(fusedTracks)
-    %     fusedTracksNED(i) = helperEcef2nedTrack(fusedTracks(i));
-    % end
-
     % --- Plot ---
     if plotThisStep
         mapViewer = helperPlotTracks(3,mapViewer,adsbTracksPlot,radarTracks,fusedTracks,...
@@ -241,7 +225,6 @@ for ind = 1:numStepsToRun
     end
 
     fusedTrackLog{ind}  = fusedTracks;
-    fusedTrackLogNoMex{ind}= fusedTracksNoMEX;
     radarTrackLog{ind}  = radarTracks;
     adsbTrackLog{ind}   = adsbTracks;
     adsbTrackLogNED{ind} = adsbTracksPlot;
@@ -254,16 +237,15 @@ for ind = 1:numStepsToRun
         truthsForMetrics = truthsForMetrics([]);
     end
 
+    % Fused
     [trackAssignmentSummary(ind), truthAssignmentSummary(ind)] = assignmentMetrics(fusedTracks, truthsForMetrics);
     [assignedTrackIDs, assignedTruthIDs] = currentAssignment(assignmentMetrics);
     [posRMSE(ind), velRMSE(ind), posANEES(ind), velANEES(ind)] = errorMetrics(fusedTracks, assignedTrackIDs, truthsForMetrics, assignedTruthIDs);
     trackError{ind} = cumulativeTrackMetrics(errorMetrics);
     truthError{ind} = cumulativeTruthMetrics(errorMetrics);
-end
+    assignedTruthIDsPerTime(ind) = assignedTruthIDs;
 
-% DEBUG
-%plotTrackLog(mapViewer,radarTrackLogDebug); % Plot all radar Tracks
-%helperPlotActiveRadarData(mapViewer, activeRadarSpec, sensorData{1}); % Plot all Radar Detections
+end
 
 wallClockTime = toc(a);
 fprintf('  Sim loop done (%.1f s wall-clock).\n', wallClockTime);
@@ -276,7 +258,6 @@ results.truePoseGPSAll = truePoseGPSAll;
 results.truePoseNEDAll = truePoseNEDAll;
 
 results.fusedTrackLog  = fusedTrackLog;
-results.fusedTrackLogNoMex = fusedTrackLogNoMex;
 results.radarTrackLog  = radarTrackLog;
 results.adsbTrackLog   = adsbTrackLog;
 results.adsbTrackLogNED = adsbTrackLogNED;
@@ -291,54 +272,28 @@ results.truthError = truthError;
 results.trackAssignmentSummary = trackAssignmentSummary;
 results.truthAssignmentSummary = truthAssignmentSummary;
 
+results.assignedTruthIDs = assignedTruthIDsPerTime;
+
 end % runFullSimulation
 
+function templateADSBMessage = generateTemplateADSBMessage
+templateADSBMessage = struct('ICAO', 'MW2020',...
+                         'Time', '',...
+                     'Category','',...
+                     'Callsign','',...
+                     'Latitude',NaN,...
+                    'Longitude',NaN,...
+                     'Altitude',NaN,...
+                       'Veast',NaN,...
+                       'Vnorth',NaN,...
+                   'ClimbRate',NaN,...
+                      'Heading',NaN,...
+                  'NACPosition', NaN,...
+    'GeometricVerticalAccuracy',NaN,...
+                  'NACVelocity',NaN);
+end
 
-%% ========================================================================
-%                          LOCAL HELPER FUNCTIONS
-%  ========================================================================
-% Self-contained copies — runFullSimulation does not rely on the main script.
-
-% function params = ecefParams()
-% params = struct('Frame','ECEF','IsCartesian',true,'AxesOrder','interleaved');
-% end
-% 
-% function params = nedParams()
-% params = struct('Frame','NED','IsCartesian',true,'AxesOrder','interleaved');
-% end
-% 
-% function tracksOut = ensureTimeAndParams(tracksIn, time, params)
-% tracksOut = tracksIn;
-% for k = 1:numel(tracksOut)
-%     tracksOut(k).UpdateTime      = double(time);
-%     tracksOut(k).StateParameters = params;
-% end
-% end
-% 
-% function s = toStructForMEX(tracks)
-% s = toStruct(tracks);
-% for k = 1:numel(s)
-%     s(k).TrackID     = uint32(s(k).TrackID);
-%     s(k).BranchID    = uint32(s(k).BranchID);
-%     s(k).SourceIndex = uint32(s(k).SourceIndex);
-%     s(k).Age         = uint32(s(k).Age);
-%     s(k).UpdateTime  = double(s(k).UpdateTime);
-%     s(k).State       = double(s(k).State);
-%     s(k).StateCovariance = double(s(k).StateCovariance);
-%     s(k).ObjectClassID   = double(s(k).ObjectClassID);
-%     s(k).ObjectClassProbabilities = double(s(k).ObjectClassProbabilities);
-%     s(k).TrackLogicState = double(s(k).TrackLogicState);
-%     s(k).IsConfirmed    = logical(s(k).IsConfirmed);
-%     s(k).IsCoasted      = logical(s(k).IsCoasted);
-%     s(k).IsSelfReported = logical(s(k).IsSelfReported);
-%     s(k).TrackLogic = 'Integrated';
-%     s(k).StateParameters = struct();
-%     attrs = s(k).ObjectAttributes;
-%     if isempty(attrs) || ~isfield(attrs, 'Callsign') || ~isfield(attrs, 'Category')
-%         s(k).ObjectAttributes = struct( ...
-%             'Callsign', repmat(' ', 1, 8), ...
-%             'Category', adsbCategory.No_Category_Information);
-%     end
-% end
-% end
-
+function cartDistance = ADSBTargetRange(stationsLLA, pos) %cartDistance
+cartDistance = fusion.internal.frames.lla2ecef(stationsLLA) - fusion.internal.frames.lla2ecef(pos);
+%flag = any(vecnorm(cartDistance,2,2) < range);
+end

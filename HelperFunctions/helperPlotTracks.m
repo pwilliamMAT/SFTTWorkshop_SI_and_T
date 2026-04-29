@@ -1,6 +1,19 @@
-function mapViewer = helperPlotTracks(sensorMode,mapViewer,adsbTracksPlot,radarTracks,fusedTracks,adsblabel,adsbclr,radarlabel,radarclr,fusedlabel,fusedclr)
+function mapViewer = helperPlotTracks(sensorMode,ind,mapViewer,scenario, adsbTracksPlot,radarTracks,fusedTracks)
 %UNTITLED7 Summary of this function goes here
 %   Detailed explanation goes here
+
+% Labels and colors
+adsblabel = "       ADS-B";
+radarlabel = "  Radar";
+fusedlabel = string(sprintf('%s\n',"","Fused"));
+adsbclr = [183 70 255]/255;
+radarclr = [255 255 17]/255;
+fusedclr = [255 105 41]/255;
+
+if ind == 1
+    plotPlatform(mapViewer,[scenario.Platforms{3:end}],TrajectoryMode="Full");
+end
+
 switch sensorMode
     case 1  % Radar only
         if ~isempty(radarTracks)

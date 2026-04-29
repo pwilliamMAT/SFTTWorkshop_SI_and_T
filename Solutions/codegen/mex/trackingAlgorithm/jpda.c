@@ -19,104 +19,108 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo at_emlrtRSI = {
-    114,                                                           /* lineNo */
-    "computeDimsData",                                             /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/reshapeSizeChecks.m" /* pathName
-                                                                    */
+static emlrtRSInfo acb_emlrtRSI = {
+    13,     /* lineNo */
+    "jpda", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jpda.m" /* pathName */
 };
 
-static emlrtRSInfo qdb_emlrtRSI =
-    {
-        13,     /* lineNo */
-        "jpda", /* fcnName */
-        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-        "jpda.m" /* pathName */
+static emlrtRSInfo bcb_emlrtRSI = {
+    16,     /* lineNo */
+    "jpda", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jpda.m" /* pathName */
 };
 
-static emlrtRSInfo rdb_emlrtRSI =
-    {
-        16,     /* lineNo */
-        "jpda", /* fcnName */
-        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-        "jpda.m" /* pathName */
-};
-
-static emlrtRSInfo oeb_emlrtRSI = {
+static emlrtRSInfo gdb_emlrtRSI = {
     112,                /* lineNo */
     "blockedSummation", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo peb_emlrtRSI = {
+static emlrtRSInfo hdb_emlrtRSI = {
     173,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo qeb_emlrtRSI = {
+static emlrtRSInfo idb_emlrtRSI = {
     190,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo reb_emlrtRSI = {
+static emlrtRSInfo jdb_emlrtRSI = {
     192,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo seb_emlrtRSI = {
+static emlrtRSInfo kdb_emlrtRSI = {
     204,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo teb_emlrtRSI = {
+static emlrtRSInfo ldb_emlrtRSI = {
     207,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo ueb_emlrtRSI = {
+static emlrtRSInfo mdb_emlrtRSI = {
     225,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo veb_emlrtRSI = {
+static emlrtRSInfo ndb_emlrtRSI = {
     227,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo web_emlrtRSI = {
+static emlrtRSInfo odb_emlrtRSI = {
     238,                /* lineNo */
     "colMajorFlatIter", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pathName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pathName */
 };
 
-static emlrtRSInfo wkb_emlrtRSI = {
+static emlrtRSInfo tjb_emlrtRSI = {
     34,                       /* lineNo */
     "jointEventsToPosterior", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pathName */
 };
 
-static emlrtRSInfo xkb_emlrtRSI = {
+static emlrtRSInfo ujb_emlrtRSI = {
     23,                       /* lineNo */
     "jointEventsToPosterior", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pathName */
 };
 
 static emlrtECInfo n_emlrtECI = {
@@ -124,20 +128,22 @@ static emlrtECInfo n_emlrtECI = {
     34,                       /* lineNo */
     1,                        /* colNo */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pName */
 };
 
-static emlrtBCInfo rd_emlrtBCI = {
+static emlrtBCInfo qd_emlrtBCI = {
     -1,                       /* iFirst */
     -1,                       /* iLast */
     34,                       /* lineNo */
     46,                       /* colNo */
     "",                       /* aName */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m", /* pName */
-    0                           /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtECInfo o_emlrtECI = {
@@ -145,119 +151,131 @@ static emlrtECInfo o_emlrtECI = {
     23,                       /* lineNo */
     5,                        /* colNo */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pName */
 };
 
-static emlrtBCInfo sd_emlrtBCI = {
+static emlrtBCInfo rd_emlrtBCI = {
     -1,                       /* iFirst */
     -1,                       /* iLast */
     23,                       /* lineNo */
     17,                       /* colNo */
     "",                       /* aName */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m", /* pName */
-    0                           /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m", /* pName */
+    0                                                  /* checkKind */
 };
 
 static emlrtDCInfo d_emlrtDCI = {
     13,                       /* lineNo */
     34,                       /* colNo */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m", /* pName */
-    4                           /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m", /* pName */
+    4                                                  /* checkKind */
 };
 
-static emlrtRTEInfo ue_emlrtRTEI =
-    {
-        16,     /* lineNo */
-        1,      /* colNo */
-        "jpda", /* fName */
-        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-        "jpda.m" /* pName */
+static emlrtRTEInfo ue_emlrtRTEI = {
+    16,     /* lineNo */
+    1,      /* colNo */
+    "jpda", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jpda.m" /* pName */
 };
 
 static emlrtRTEInfo ve_emlrtRTEI = {
     23,                       /* lineNo */
     32,                       /* colNo */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pName */
 };
 
 static emlrtRTEInfo we_emlrtRTEI = {
     23,                       /* lineNo */
     28,                       /* colNo */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pName */
 };
 
 static emlrtRTEInfo xe_emlrtRTEI = {
     146,                /* lineNo */
     24,                 /* colNo */
     "blockedSummation", /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pName */
 };
 
 static emlrtRTEInfo ye_emlrtRTEI = {
     153,                /* lineNo */
     23,                 /* colNo */
     "blockedSummation", /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pName */
 };
 
 static emlrtRTEInfo af_emlrtRTEI = {
     34,                       /* lineNo */
     34,                       /* colNo */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pName */
 };
 
 static emlrtRTEInfo bf_emlrtRTEI = {
     34,                       /* lineNo */
     26,                       /* colNo */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pName */
 };
 
 static emlrtRTEInfo cf_emlrtRTEI = {
     34,                       /* lineNo */
     20,                       /* colNo */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pName */
 };
 
-static emlrtRTEInfo df_emlrtRTEI =
-    {
-        1,      /* lineNo */
-        22,     /* colNo */
-        "jpda", /* fName */
-        "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-        "jpda.m" /* pName */
+static emlrtRTEInfo df_emlrtRTEI = {
+    1,      /* lineNo */
+    22,     /* colNo */
+    "jpda", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jpda.m" /* pName */
 };
 
 static emlrtRTEInfo ef_emlrtRTEI = {
     23,                       /* lineNo */
     5,                        /* colNo */
     "jointEventsToPosterior", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "jointEventsToPosterior.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\jointEventsToPosterior.m" /* pName */
 };
 
 static emlrtRTEInfo ff_emlrtRTEI = {
     153,                /* lineNo */
     1,                  /* colNo */
     "blockedSummation", /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/blockedSummation.m" /* pName
-                                                                         */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\blocke"
+    "dSummation.m" /* pName */
 };
 
 /* Function Definitions */
@@ -320,11 +338,11 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   emxInit_boolean_T(sp, &FJE, 3, &df_emlrtRTEI, true);
   emxInit_real_T(sp, &bsum, 1, &ff_emlrtRTEI, true);
-  st.site = &qdb_emlrtRSI;
+  st.site = &acb_emlrtRSI;
   jpdaEvents(&st, likelihoodMatrix, maxNumEvents, FJE, bsum);
   bsum_data = bsum->data;
   FJE_data = FJE->data;
-  st.site = &rdb_emlrtRSI;
+  st.site = &bcb_emlrtRSI;
   if (FJE->size[1] - 1 < 0) {
     emlrtNonNegativeCheckR2012b(-1.0, &d_emlrtDCI, &st);
   }
@@ -346,31 +364,31 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
     xblockoffset = 1;
     firstBlockLength = FJE->size[1];
   }
-  b_st.site = &xkb_emlrtRSI;
+  b_st.site = &ujb_emlrtRSI;
   nx = bsum->size[0];
-  c_st.site = &ys_emlrtRSI;
-  d_st.site = &at_emlrtRSI;
+  c_st.site = &js_emlrtRSI;
+  d_st.site = &ks_emlrtRSI;
   n = bsum->size[0];
   if (bsum->size[0] < 1) {
     n = 1;
   }
   if (FJE->size[2] > muIntScalarMax_sint32(nx, n)) {
-    emlrtErrorWithMessageIdR2018a(&b_st, &p_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&b_st, &o_emlrtRTEI,
                                   "Coder:toolbox:reshape_emptyReshapeLimit",
                                   "Coder:toolbox:reshape_emptyReshapeLimit", 0);
   }
   if (bsum->size[0] != FJE->size[2]) {
     emlrtErrorWithMessageIdR2018a(
-        &b_st, &q_emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
+        &b_st, &p_emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
         "Coder:MATLAB:getReshapeDims_notSameNumel", 0);
   }
   c_loop_ub = FJE->size[2];
   d_loop_ub = FJE->size[0];
   if ((FJE->size[0] < 1) || (FJE->size[0] > FJE->size[0] + 1)) {
     emlrtDynamicBoundsCheckR2012b(FJE->size[0], 1, FJE->size[0] + 1,
-                                  &sd_emlrtBCI, &st);
+                                  &rd_emlrtBCI, &st);
   }
-  b_st.site = &xkb_emlrtRSI;
+  b_st.site = &ujb_emlrtRSI;
   emxInit_real_T(&b_st, &x, 3, &ve_emlrtRTEI, true);
   nx = x->size[0] * x->size[1] * x->size[2];
   x->size[0] = FJE->size[0];
@@ -389,9 +407,9 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
       }
     }
   }
-  c_st.site = &nw_emlrtRSI;
-  d_st.site = &ow_emlrtRSI;
-  e_st.site = &pw_emlrtRSI;
+  c_st.site = &mcb_emlrtRSI;
+  d_st.site = &pbb_emlrtRSI;
+  e_st.site = &ncb_emlrtRSI;
   emxInit_real_T(&e_st, &r, 2, &ef_emlrtRTEI, true);
   if ((x->size[0] == 0) || (x->size[1] == 0) || (x->size[2] == 0)) {
     nx = r->size[0] * r->size[1];
@@ -410,7 +428,7 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
     int32_T nblocks;
     int32_T vstride;
     int32_T xoffset;
-    f_st.site = &oeb_emlrtRSI;
+    f_st.site = &gdb_emlrtRSI;
     vstride = x->size[0] * x->size[1];
     bvstride = vstride << 10;
     nx = r->size[0] * r->size[1];
@@ -436,7 +454,7 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
         lastBlockLength = 1024;
       }
     }
-    g_st.site = &peb_emlrtRSI;
+    g_st.site = &hdb_emlrtRSI;
     if (vstride > 2147483646) {
       h_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&h_st);
@@ -445,10 +463,10 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
       r1[xj] = x_data[xj];
       bsum_data[xj] = 0.0;
     }
-    g_st.site = &qeb_emlrtRSI;
+    g_st.site = &idb_emlrtRSI;
     for (xj = 2; xj <= firstBlockLength; xj++) {
       xoffset = (xj - 1) * vstride;
-      g_st.site = &reb_emlrtRSI;
+      g_st.site = &jdb_emlrtRSI;
       nx = (vstride / 2) << 1;
       n = nx - 2;
       for (b_xj = 0; b_xj <= n; b_xj += 2) {
@@ -460,10 +478,10 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
         r1[b_xj] += x_data[xoffset + b_xj];
       }
     }
-    g_st.site = &seb_emlrtRSI;
+    g_st.site = &kdb_emlrtRSI;
     for (ib = 2; ib <= nblocks; ib++) {
       xblockoffset = (ib - 1) * bvstride;
-      g_st.site = &teb_emlrtRSI;
+      g_st.site = &ldb_emlrtRSI;
       for (b_xj = 0; b_xj < vstride; b_xj++) {
         bsum_data[b_xj] = x_data[xblockoffset + b_xj];
       }
@@ -472,10 +490,10 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
       } else {
         nx = 1024;
       }
-      g_st.site = &ueb_emlrtRSI;
+      g_st.site = &mdb_emlrtRSI;
       for (xj = 2; xj <= nx; xj++) {
         xoffset = xblockoffset + (xj - 1) * vstride;
-        g_st.site = &veb_emlrtRSI;
+        g_st.site = &ndb_emlrtRSI;
         n = (vstride / 2) << 1;
         c_loop_ub = n - 2;
         for (c_xj = 0; c_xj <= c_loop_ub; c_xj += 2) {
@@ -487,7 +505,7 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
           bsum_data[c_xj] += x_data[xoffset + c_xj];
         }
       }
-      g_st.site = &web_emlrtRSI;
+      g_st.site = &odb_emlrtRSI;
       nx = (vstride / 2) << 1;
       n = nx - 2;
       for (c_xj = 0; c_xj <= n; c_xj += 2) {
@@ -516,7 +534,7 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
   if ((posterior->size[0] - 1 < 1) ||
       (posterior->size[0] - 1 > FJE->size[0] + 1)) {
     emlrtDynamicBoundsCheckR2012b(posterior->size[0] - 1, 1, FJE->size[0] + 1,
-                                  &rd_emlrtBCI, &st);
+                                  &qd_emlrtBCI, &st);
   }
   emxInit_real_T(&st, &b_posterior, 2, &af_emlrtRTEI, true);
   nx = b_posterior->size[0] * b_posterior->size[1];
@@ -532,7 +550,7 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
     }
   }
   emxInit_real_T(&st, &varargin_2, 2, &bf_emlrtRTEI, true);
-  b_st.site = &wkb_emlrtRSI;
+  b_st.site = &tjb_emlrtRSI;
   sum(&b_st, b_posterior, varargin_2);
   emxFree_real_T(&st, &b_posterior);
   nx = varargin_2->size[0] * varargin_2->size[1];
@@ -555,7 +573,7 @@ void jpda(const emlrtStack *sp, const emxArray_real_T *likelihoodMatrix,
   bsum_data = varargin_2->data;
   nx = varargin_2->size[1] - 1;
   n = varargin_2->size[1] - 1;
-  if (varargin_2->size[1] < 1600) {
+  if (varargin_2->size[1] < 800) {
     for (i = 0; i <= nx; i++) {
       real_T b_varargin_2;
       b_varargin_2 = bsum_data[i];

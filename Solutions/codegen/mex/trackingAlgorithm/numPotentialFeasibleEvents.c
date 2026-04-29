@@ -15,54 +15,66 @@
 #include "mwmathutil.h"
 
 /* Variable Definitions */
-static emlrtRSInfo feb_emlrtRSI = {
+static emlrtRSInfo wcb_emlrtRSI = {
     15,                           /* lineNo */
     "numPotentialFeasibleEvents", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "numPotentialFeasibleEvents.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\numPotentialFeasibleEvents.m" /* pathName */
 };
 
-static emlrtRSInfo geb_emlrtRSI = {
+static emlrtRSInfo xcb_emlrtRSI = {
     18,                           /* lineNo */
     "numPotentialFeasibleEvents", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "numPotentialFeasibleEvents.m" /* pathName */
-};
-
-static emlrtRSInfo meb_emlrtRSI = {
-    10,                                                  /* lineNo */
-    "factorial",                                         /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/factorial.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\numPotentialFeasibleEvents.m" /* pathName */
 };
 
 static emlrtRSInfo
-    neb_emlrtRSI =
+    edb_emlrtRSI =
         {
-            17,                           /* lineNo */
-            "applyScalarFunctionInPlace", /* fcnName */
-            "/MATLAB/toolbox/eml/eml/+coder/+internal/"
-            "applyScalarFunctionInPlace.m" /* pathName */
+            10,          /* lineNo */
+            "factorial", /* fcnName */
+            "C:\\Program "
+            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\factori"
+            "al.m" /* pathName */
 };
 
-static emlrtRSInfo xeb_emlrtRSI = {
-    11,                                             /* lineNo */
-    "prod",                                         /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/prod.m" /* pathName */
+static emlrtRSInfo fdb_emlrtRSI = {
+    17,                           /* lineNo */
+    "applyScalarFunctionInPlace", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\applyScalarFunctionInPlace.m" /* pathName */
 };
 
-static emlrtRTEInfo rb_emlrtRTEI = {
-    21,                                                  /* lineNo */
-    5,                                                   /* colNo */
-    "scalar_factorial",                                  /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/specfun/factorial.m" /* pName */
+static emlrtRSInfo pdb_emlrtRSI = {
+    11,     /* lineNo */
+    "prod", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\prod.m" /* pathName
+                                                                         */
+};
+
+static emlrtRTEInfo
+    ob_emlrtRTEI =
+        {
+            21,                 /* lineNo */
+            5,                  /* colNo */
+            "scalar_factorial", /* fName */
+            "C:\\Program "
+            "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\specfun\\factori"
+            "al.m" /* pName */
 };
 
 static emlrtRTEInfo dg_emlrtRTEI = {
     18,                           /* lineNo */
     15,                           /* colNo */
     "numPotentialFeasibleEvents", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "numPotentialFeasibleEvents.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\numPotentialFeasibleEvents.m" /* pName */
 };
 
 /* Function Definitions */
@@ -271,12 +283,12 @@ int32_T numPotentialFeasibleEvents(const emlrtStack *sp,
     maxval = numTracks;
   }
   for (k = 0; k < nPotentials; k++) {
-    st.site = &feb_emlrtRSI;
+    st.site = &wcb_emlrtRSI;
     n2 = (real_T)nPotentials - (real_T)k;
-    b_st.site = &meb_emlrtRSI;
-    c_st.site = &neb_emlrtRSI;
+    b_st.site = &edb_emlrtRSI;
+    c_st.site = &fdb_emlrtRSI;
     if (n2 < 0.0) {
-      emlrtErrorWithMessageIdR2018a(&c_st, &rb_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(&c_st, &ob_emlrtRTEI,
                                     "MATLAB:factorial:NNegativeInt",
                                     "MATLAB:factorial:NNegativeInt", 0);
     } else if (n2 < 1.0) {
@@ -284,10 +296,10 @@ int32_T numPotentialFeasibleEvents(const emlrtStack *sp,
     } else {
       n = dv[(int32_T)n2 - 1];
     }
-    st.site = &feb_emlrtRSI;
+    st.site = &wcb_emlrtRSI;
     n1 += nchoosek(&st, nPotentials, k) * nchoosek(&st, maxval, n2) * n;
   }
-  st.site = &geb_emlrtRSI;
+  st.site = &xcb_emlrtRSI;
   emxInit_real_T(&st, &b_validationMatrix, 2, &dg_emlrtRTEI, true);
   nPotentials = b_validationMatrix->size[0] * b_validationMatrix->size[1];
   b_validationMatrix->size[0] = validationMatrix->size[0];
@@ -298,10 +310,10 @@ int32_T numPotentialFeasibleEvents(const emlrtStack *sp,
   for (k = 0; k < nPotentials; k++) {
     b_validationMatrix_data[k] = validationMatrix_data[k];
   }
-  b_st.site = &geb_emlrtRSI;
+  b_st.site = &xcb_emlrtRSI;
   nPotentials = b_sum(b_validationMatrix, x_data);
   emxFree_real_T(&st, &b_validationMatrix);
-  b_st.site = &xeb_emlrtRSI;
+  b_st.site = &pdb_emlrtRSI;
   n2 = x_data[0];
   for (k = 2; k <= nPotentials; k++) {
     n2 *= x_data[k - 1];

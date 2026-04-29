@@ -1,27 +1,27 @@
-function helperPlotRMS(results)
+function helperPlotRMS(posRMSE,velRMSE,posANEES,velANEES)
 
 figure;
-timeVec = 1:length(results.posRMSE);
+timeVec = 1:length(posRMSE);
 subplot(2,2,1)
-scatter(timeVec,results.posRMSE,'filled');
+scatter(timeVec,posRMSE,'filled');
 xlabel('Time step');
 ylabel('RMS Error in Position (m)');
 grid('on');
 
 subplot(2,2,2)
-scatter(timeVec,results.velRMSE,'filled');
+scatter(timeVec,velRMSE,'filled');
 xlabel('Time step');
 ylabel('RMS Error in Velocity (m/s)');
 grid('on');
 
 subplot(2,2,3)
-scatter(timeVec,results.posANEES,'filled');
+scatter(timeVec,posANEES,'filled');
 xlabel('Time step');
 ylabel('Average Normalized Error in Position');
 grid('on');
 
 subplot(2,2,4)
-scatter(timeVec,results.velANEES,'filled');
+scatter(timeVec,velANEES,'filled');
 xlabel('Time step');
 ylabel('Average Normalized Error in Velocity');
 grid('on');

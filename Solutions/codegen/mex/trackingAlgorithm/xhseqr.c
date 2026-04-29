@@ -15,17 +15,20 @@
 #include <emmintrin.h>
 
 /* Variable Definitions */
-static emlrtRSInfo vf_emlrtRSI = {
-    32,                                                         /* lineNo */
-    "xhseqr",                                                   /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+lapack/xhseqr.m" /* pathName */
+static emlrtRSInfo lf_emlrtRSI = {
+    32,       /* lineNo */
+    "xhseqr", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "lapack\\xhseqr.m" /* pathName */
 };
 
-static emlrtRSInfo wf_emlrtRSI = {
+static emlrtRSInfo mf_emlrtRSI = {
     22,        /* lineNo */
     "xdhseqr", /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/+reflapack/xdhseqr.m" /* pathName
-                                                                     */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+internal\\+"
+    "reflapack\\xdhseqr.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -55,8 +58,8 @@ int32_T b_xhseqr(const emlrtStack *sp, real_T h[36])
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &vf_emlrtRSI;
-  b_st.site = &wf_emlrtRSI;
+  st.site = &lf_emlrtRSI;
+  b_st.site = &mf_emlrtRSI;
   info = 0;
   h[2] = 0.0;
   h[3] = 0.0;
@@ -238,7 +241,7 @@ int32_T b_xhseqr(const emlrtStack *sp, real_T h[36])
             }
           }
           h11 = v[0];
-          c_st.site = &dg_emlrtRSI;
+          c_st.site = &sf_emlrtRSI;
           s = b_xzlarfg(&c_st, nr, &h11, v);
           if (b_i > m) {
             ix_tmp = b_i + 6 * (b_i - 2);
@@ -429,8 +432,8 @@ int32_T c_xhseqr(const emlrtStack *sp, real_T h[16])
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &vf_emlrtRSI;
-  b_st.site = &wf_emlrtRSI;
+  st.site = &lf_emlrtRSI;
+  b_st.site = &mf_emlrtRSI;
   info = 0;
   h[2] = 0.0;
   h[3] = 0.0;
@@ -604,7 +607,7 @@ int32_T c_xhseqr(const emlrtStack *sp, real_T h[16])
             }
           }
           h11 = v[0];
-          c_st.site = &dg_emlrtRSI;
+          c_st.site = &sf_emlrtRSI;
           s = b_xzlarfg(&c_st, nr, &h11, v);
           if (b_i > m) {
             temp_tmp_tmp = b_i + ((b_i - 2) << 2);
@@ -792,8 +795,8 @@ int32_T xhseqr(const emlrtStack *sp, real_T h[9])
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &vf_emlrtRSI;
-  b_st.site = &wf_emlrtRSI;
+  st.site = &lf_emlrtRSI;
+  b_st.site = &mf_emlrtRSI;
   info = 0;
   h[2] = 0.0;
   kdefl = 0;
@@ -946,7 +949,7 @@ int32_T xhseqr(const emlrtStack *sp, real_T h[9])
             }
           }
           temp = v[0];
-          c_st.site = &dg_emlrtRSI;
+          c_st.site = &sf_emlrtRSI;
           h22 = b_xzlarfg(&c_st, iy, &temp, v);
           if (c_k > i - 1) {
             h[c_k - 1] = temp;

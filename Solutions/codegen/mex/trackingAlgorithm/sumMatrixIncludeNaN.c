@@ -13,137 +13,41 @@
 #include "trackingAlgorithm_types.h"
 
 /* Variable Definitions */
-static emlrtRSInfo vw_emlrtRSI = {
+static emlrtRSInfo scb_emlrtRSI = {
     178,          /* lineNo */
     "sumColumnB", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
-                                                                            */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
+    "rixIncludeNaN.m" /* pathName */
 };
 
-static emlrtRSInfo ww_emlrtRSI = {
-    183,          /* lineNo */
-    "sumColumnB", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
-                                                                            */
-};
-
-static emlrtRSInfo xw_emlrtRSI = {
-    189,          /* lineNo */
-    "sumColumnB", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
-                                                                            */
-};
-
-static emlrtRSInfo yw_emlrtRSI = {
+static emlrtRSInfo tcb_emlrtRSI = {
     210,         /* lineNo */
     "sumColumn", /* fcnName */
-    "/MATLAB/toolbox/eml/lib/matlab/datafun/private/sumMatrixIncludeNaN.m" /* pathName
-                                                                            */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
+    "rixIncludeNaN.m" /* pathName */
+};
+
+static emlrtRSInfo ucb_emlrtRSI = {
+    183,          /* lineNo */
+    "sumColumnB", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
+    "rixIncludeNaN.m" /* pathName */
+};
+
+static emlrtRSInfo vcb_emlrtRSI = {
+    189,          /* lineNo */
+    "sumColumnB", /* fcnName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\datafun\\private\\sumMat"
+    "rixIncludeNaN.m" /* pathName */
 };
 
 /* Function Definitions */
 real_T b_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x,
-                    int32_T vlen, int32_T vstart)
-{
-  emlrtStack b_st;
-  emlrtStack c_st;
-  emlrtStack st;
-  const real_T *x_data;
-  real_T y;
-  int32_T b_k;
-  int32_T k;
-  st.prev = sp;
-  st.tls = sp->tls;
-  b_st.prev = &st;
-  b_st.tls = st.tls;
-  c_st.prev = &b_st;
-  c_st.tls = b_st.tls;
-  x_data = x->data;
-  if (vlen <= 1024) {
-    st.site = &vw_emlrtRSI;
-    y = x_data[vstart - 1];
-    b_st.site = &yw_emlrtRSI;
-    if (vlen - 1 > 2147483646) {
-      c_st.site = &k_emlrtRSI;
-      check_forloop_overflow_error(&c_st);
-    }
-    for (k = 0; k <= vlen - 2; k++) {
-      y += x_data[vstart + k];
-    }
-  } else {
-    real_T b_y;
-    int32_T b_vstart;
-    int32_T inb;
-    int32_T nfb;
-    nfb = (int32_T)((uint32_T)vlen >> 10);
-    inb = nfb << 10;
-    y = x_data[vstart - 1];
-    for (k = 0; k < 1023; k++) {
-      y += x_data[vstart + k];
-    }
-    st.site = &ww_emlrtRSI;
-    for (k = 2; k <= nfb; k++) {
-      b_vstart = vstart + ((k - 1) << 10);
-      b_y = x_data[b_vstart - 1];
-      for (b_k = 0; b_k < 1023; b_k++) {
-        b_y += x_data[b_vstart + b_k];
-      }
-      y += b_y;
-    }
-    if (vlen > inb) {
-      nfb = vstart + inb;
-      st.site = &xw_emlrtRSI;
-      b_y = x_data[nfb - 1];
-      b_vstart = vlen - inb;
-      b_st.site = &yw_emlrtRSI;
-      for (k = 0; k <= b_vstart - 2; k++) {
-        b_y += x_data[nfb + k];
-      }
-      y += b_y;
-    }
-  }
-  return y;
-}
-
-real_T c_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T col,
                     int32_T vlen)
-{
-  emlrtStack b_st;
-  emlrtStack c_st;
-  emlrtStack st;
-  const real_T *x_data;
-  real_T y;
-  int32_T i;
-  int32_T i0;
-  int32_T k;
-  st.prev = sp;
-  st.tls = sp->tls;
-  b_st.prev = &st;
-  b_st.tls = st.tls;
-  c_st.prev = &b_st;
-  c_st.tls = b_st.tls;
-  x_data = x->data;
-  st.site = &vw_emlrtRSI;
-  i0 = (col - 1) * x->size[0];
-  y = x_data[i0];
-  b_st.site = &yw_emlrtRSI;
-  if (vlen - 1 > 2147483646) {
-    c_st.site = &k_emlrtRSI;
-    check_forloop_overflow_error(&c_st);
-  }
-  i = (uint8_T)(vlen - 1);
-  for (k = 0; k < i; k++) {
-    y += x_data[(i0 + k) + 1];
-  }
-  return y;
-}
-
-real_T d_sumColumnB(const real_T x[3])
-{
-  return (x[0] + x[1]) + x[2];
-}
-
-real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T vlen)
 {
   emlrtStack b_st;
   emlrtStack c_st;
@@ -161,9 +65,9 @@ real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T vlen)
   x_data = x->data;
   if (vlen <= 1024) {
     int32_T vstart;
-    st.site = &vw_emlrtRSI;
+    st.site = &scb_emlrtRSI;
     y = x_data[0];
-    b_st.site = &yw_emlrtRSI;
+    b_st.site = &tcb_emlrtRSI;
     if (vlen - 1 > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -183,7 +87,7 @@ real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T vlen)
     for (k = 0; k < 1023; k++) {
       y += x_data[k + 1];
     }
-    st.site = &ww_emlrtRSI;
+    st.site = &ucb_emlrtRSI;
     for (k = 2; k <= nfb; k++) {
       vstart = (k - 1) << 10;
       b_y = x_data[vstart];
@@ -193,15 +97,116 @@ real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T vlen)
       y += b_y;
     }
     if (vlen > inb) {
-      st.site = &xw_emlrtRSI;
+      st.site = &vcb_emlrtRSI;
       b_y = x_data[inb];
       vstart = vlen - inb;
-      b_st.site = &yw_emlrtRSI;
+      b_st.site = &tcb_emlrtRSI;
       for (k = 0; k <= vstart - 2; k++) {
         b_y += x_data[(inb + k) + 1];
       }
       y += b_y;
     }
+  }
+  return y;
+}
+
+real_T c_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x,
+                    int32_T vlen, int32_T vstart)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  const real_T *x_data;
+  real_T y;
+  int32_T b_k;
+  int32_T k;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  x_data = x->data;
+  if (vlen <= 1024) {
+    st.site = &scb_emlrtRSI;
+    y = x_data[vstart - 1];
+    b_st.site = &tcb_emlrtRSI;
+    if (vlen - 1 > 2147483646) {
+      c_st.site = &k_emlrtRSI;
+      check_forloop_overflow_error(&c_st);
+    }
+    for (k = 0; k <= vlen - 2; k++) {
+      y += x_data[vstart + k];
+    }
+  } else {
+    real_T b_y;
+    int32_T b_vstart;
+    int32_T inb;
+    int32_T nfb;
+    nfb = (int32_T)((uint32_T)vlen >> 10);
+    inb = nfb << 10;
+    y = x_data[vstart - 1];
+    for (k = 0; k < 1023; k++) {
+      y += x_data[vstart + k];
+    }
+    st.site = &ucb_emlrtRSI;
+    for (k = 2; k <= nfb; k++) {
+      b_vstart = vstart + ((k - 1) << 10);
+      b_y = x_data[b_vstart - 1];
+      for (b_k = 0; b_k < 1023; b_k++) {
+        b_y += x_data[b_vstart + b_k];
+      }
+      y += b_y;
+    }
+    if (vlen > inb) {
+      nfb = vstart + inb;
+      st.site = &vcb_emlrtRSI;
+      b_y = x_data[nfb - 1];
+      b_vstart = vlen - inb;
+      b_st.site = &tcb_emlrtRSI;
+      for (k = 0; k <= b_vstart - 2; k++) {
+        b_y += x_data[nfb + k];
+      }
+      y += b_y;
+    }
+  }
+  return y;
+}
+
+real_T d_sumColumnB(const real_T x[3])
+{
+  return (x[0] + x[1]) + x[2];
+}
+
+real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T col,
+                  int32_T vlen)
+{
+  emlrtStack b_st;
+  emlrtStack c_st;
+  emlrtStack st;
+  const real_T *x_data;
+  real_T y;
+  int32_T i;
+  int32_T i0;
+  int32_T k;
+  st.prev = sp;
+  st.tls = sp->tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  c_st.prev = &b_st;
+  c_st.tls = b_st.tls;
+  x_data = x->data;
+  st.site = &scb_emlrtRSI;
+  i0 = (col - 1) * x->size[0];
+  y = x_data[i0];
+  b_st.site = &tcb_emlrtRSI;
+  if (vlen - 1 > 2147483646) {
+    c_st.site = &k_emlrtRSI;
+    check_forloop_overflow_error(&c_st);
+  }
+  i = (uint8_T)(vlen - 1);
+  for (k = 0; k < i; k++) {
+    y += x_data[(i0 + k) + 1];
   }
   return y;
 }

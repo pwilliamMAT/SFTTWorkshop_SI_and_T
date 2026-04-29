@@ -18,26 +18,27 @@ static const mxArray *c_emlrtMexFcnResolvedFunctionsI(void)
 {
   const mxArray *nameCaptureInfo;
   const char_T *data[6] = {
-      "789ce555c16ed34010dda02221214ab870e6d02bf6a1c01937252890a4a1765b5054a5eb"
-      "f5365eb2eb31bb9b927e45af1c39f613903873e713f8141a279bc48b"
-      "2c974632429dcb78f466e7bd196b6751add5a9218436d1cc7ede9ff907f3b83ef77750de"
-      "6cbc66e5d5f2e9e82edac89d33f8c5dc1348349de859906041172723",
-      "102cc1890ece538a2455c0cf689421a78cd38009eaaf06dd69249a2bd0229842d3ef464c"
-      "c9c81f0b2463b554c85783c53c4e0afadd2899876df63cec3cc337b9"
-      "219fa9ffa884cfe05a623262c9d0e343904cc7c2d2f1654d1ddb253a0c7e3a560c122793"
-      "43a5a368a240aa9412e57854824a31a11d484069ac19d9c71196399d",
-      "dfd6d4e997e83478ffd5b1dbf182b6b7f36457b233eaeed31414d357c3a3caf59b417004"
-      "72a46248077e6b809368103c7de1fac0c7faaa3fe5fe316f47e4fa38"
-      "29d0f9f09a7dd87e997f2ff3dfd34b56259fb1dbc2b7eebd7d5cc057b7f06dcf0bc2d687"
-      "03fef9132647e3766f42dfbedb5deae895f094e940057155f5bf169c",
-      "bfee1c5f16d4af5b78bfd538de1258731c4a00bde56a001ec2c4553196345adc5777b6a0"
-      "380b5d083f52a28329e008a3375d53efa615db7a0d9ee969c39091ec"
-      "1dfc67efd3e50df94cfd46099fc1fbadeedffe9ffc882adeaf3fbabf0655f219bb2d7c55"
-      "edd7080ef69e8582f7c8f3c368e70d27e7ef0f5f37fffffdfa1bd330",
-      "bf3f",
+      "789cdd55316f13311476509190102548880da943574ea2858589903628a86903b9864ab9"
+      "2a757c4ecf8ded77b29d922c888519464646067e0f2c0cfc8c8e3497"
+      "38c9199dae342895fa86f33d7fcfeffbfceefc8c0ad55a0121b48ac676767b3cde99f8c5"
+      "c97803a5cdc50b4e5c211d8e6ea295d43a8b7f9a8c04a4a103337624",
+      "1674ba3204c12496c61fc61429aa819fd23041ba8c539f09da987776479ea8cc41536704"
+      "8ddecb1125bd465f2015e999423eef4ceb7194b1df959c7ab8e6d6c3"
+      "8db37c834bf2d9fcf772f82c6e14263d268f4bfc1814339170747c5950c7668e0e8b77fb"
+      "9a81f4123954799a4a0d4ac79468af4415e818135a0309da60c3c81b",
+      "1c6295d2f97b419def73745abcb57d587e16ec6baa7410bf639c332c823d49b7143ba56b"
+      "8fd66ad8446f41f574b005a42fa8343a68547c3f79244004711d2bb3"
+      "919a6937aa6d2cc3f6791cf0be392f850efefa349ec8ff1fef5e70bfee388bbf359efffe"
+      "2b8196c5f7f0f3ebfbcbe4b376557c8b9eef07197c45071f0c23b1b9",
+      "bde1970f6a3b5dde7bdc2c6152aacc74d47378f274a00c7f59f9bf66acbf681d9f67e42f"
+      "3a78ab5a3e5c17d870dc5100663d3000bc0383404758d1707a588371"
+      "23e3ac1340e78412e38f004f58bdf1827a571ddfd56bf144cf0e1c3392dc9757768f7dbb"
+      "249fcd5fcee1b378abbafbafdf275d224fa4741f65e8fa5ffde0e4e7",
+      "8fa5f6d70ff58f67cbe4b376ddfb6b08fb7b4f3a82d7c9d366f8e21527c383e6cb6bd05f"
+      "ff003bd6d54f",
       ""};
   nameCaptureInfo = NULL;
-  emlrtNameCaptureMxArrayR2016a(&data[0], 3048U, &nameCaptureInfo);
+  emlrtNameCaptureMxArrayR2016a(&data[0], 3088U, &nameCaptureInfo);
   return nameCaptureInfo;
 }
 
@@ -83,20 +84,21 @@ mxArray *emlrtMexFcnProperties(void)
   emlrtSetField(xEntryPoints, 0, "ConstantInputs", xInputs);
   emlrtSetField(
       xEntryPoints, 0, "ResolvedFilePath",
-      emlrtMxCreateString("/MATLAB "
-                          "Drive/Repositories/SFTTWorkshop_SI_and_T-6/"
-                          "Solutions/trackingAlgorithm.m"));
+      emlrtMxCreateString("C:\\Users\\pwilliam\\OneDrive - "
+                          "MathWorks\\Documents\\SFTT\\SFTTWorkshopPart2\\SFTTW"
+                          "orkshop_SI_and_T\\Solutions\\trackingAlgorit"
+                          "hm.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(740045.74290509254));
+                emlrtMxCreateDoubleScalar(740045.54346064816));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));
   xResult =
       emlrtCreateStructMatrix(1, 1, 7, (const char_T **)&propFieldName[0]);
   emlrtSetField(xResult, 0, "Version",
-                emlrtMxCreateString("25.2.0.3150157 (R2025b) Update 4"));
+                emlrtMxCreateString("25.2.0.2998904 (R2025b)"));
   emlrtSetField(xResult, 0, "ResolvedFunctions",
                 (mxArray *)c_emlrtMexFcnResolvedFunctionsI());
   emlrtSetField(xResult, 0, "Checksum",
-                emlrtMxCreateString("1HYHUrhFUxGgJe1OcjUY8"));
+                emlrtMxCreateString("SJUfm8gfHXwWzRy23juMU"));
   emlrtSetField(xResult, 0, "EntryPoints", xEntryPoints);
   emlrtSetField(xResult, 0, "AuxData",
                 emlrtMxCreateRowVectorUINT8((const uint8_T *)&v, 216U));

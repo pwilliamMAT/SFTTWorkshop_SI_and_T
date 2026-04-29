@@ -1,4 +1,4 @@
-function scenario = helperCreateScenario(tuningData, mapOrigin,scenarioDuration)
+function [scenario, mapViewer,activeRadarData] = helperCreateScenario(tuningData, mapOrigin,sensorData,scenarioDuration)
 scenario = trackingScenario(UpdateRate=1,StopTime=scenarioDuration,IsEarthCentered=true);
 radarTower = platform(scenario, Position=mapOrigin);
 
@@ -53,5 +53,17 @@ for i = 1:numel(tuningData)
     traj = geoTrajectory(truncatedPos,truncatedTime);
     platform(scenario,Trajectory=traj);
 end
+
+% Create mapViewer
+mapViewer = trackingGlobeViewer('ReferenceLocation',mapOrigin,'Basemap','streets-dark');
+
+% Position Camera and Plot Scenario
+campos(mapViewer, mapOrigin + [0 -0.4 1e5]);
+drawnow;
+plotScenario(mapViewer,scenario);
+
+% Split Sensor Data According to trackerUpdateInterval
+trackerUpdateInterval = 1; % seconds
+[activeRadarData] = helperSplitSensorData(sensorData, scenario.StopTime, trackerUpdateInterval);
 
 end

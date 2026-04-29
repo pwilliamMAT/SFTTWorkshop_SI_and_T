@@ -23,124 +23,141 @@
 #include "omp.h"
 
 /* Variable Definitions */
-static emlrtRSInfo ygb_emlrtRSI = {
+static emlrtRSInfo qfb_emlrtRSI = {
     226,           /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo ahb_emlrtRSI = {
+static emlrtRSInfo rfb_emlrtRSI = {
     202,           /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo bhb_emlrtRSI = {
+static emlrtRSInfo sfb_emlrtRSI = {
     195,           /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo chb_emlrtRSI = {
+static emlrtRSInfo tfb_emlrtRSI = {
     193,           /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo dhb_emlrtRSI = {
+static emlrtRSInfo ufb_emlrtRSI = {
     192,           /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo ehb_emlrtRSI = {
+static emlrtRSInfo vfb_emlrtRSI = {
     146,           /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo fhb_emlrtRSI = {
+static emlrtRSInfo wfb_emlrtRSI = {
     137,           /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo ghb_emlrtRSI = {
+static emlrtRSInfo xfb_emlrtRSI = {
     118,           /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo hhb_emlrtRSI = {
+static emlrtRSInfo yfb_emlrtRSI = {
     100,           /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo ihb_emlrtRSI = {
+static emlrtRSInfo agb_emlrtRSI = {
     90,            /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo jhb_emlrtRSI = {
+static emlrtRSInfo bgb_emlrtRSI = {
     86,            /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo khb_emlrtRSI = {
+static emlrtRSInfo cgb_emlrtRSI = {
     79,            /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo lhb_emlrtRSI = {
+static emlrtRSInfo dgb_emlrtRSI = {
     76,            /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo mhb_emlrtRSI = {
+static emlrtRSInfo egb_emlrtRSI = {
     75,            /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo nhb_emlrtRSI = {
+static emlrtRSInfo fgb_emlrtRSI = {
     73,            /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRSInfo ohb_emlrtRSI = {
+static emlrtRSInfo ggb_emlrtRSI = {
     69,            /* lineNo */
     "lapDijkstra", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pathName */
 };
 
-static emlrtRTEInfo hc_emlrtRTEI = {
+static emlrtRTEInfo fc_emlrtRTEI = {
     74,            /* lineNo */
     1,             /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtECInfo hb_emlrtECI = {
@@ -148,20 +165,22 @@ static emlrtECInfo hb_emlrtECI = {
     76,            /* lineNo */
     1,             /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
-static emlrtBCInfo gh_emlrtBCI = {
+static emlrtBCInfo fh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     83,            /* lineNo */
     23,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtECInfo ib_emlrtECI = {
@@ -169,84 +188,92 @@ static emlrtECInfo ib_emlrtECI = {
     83,            /* lineNo */
     12,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
-static emlrtBCInfo hh_emlrtBCI = {
+static emlrtBCInfo gh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     114,           /* lineNo */
     36,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ih_emlrtBCI = {
+static emlrtBCInfo hh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     114,           /* lineNo */
     39,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtRTEInfo ic_emlrtRTEI = {
+static emlrtRTEInfo gc_emlrtRTEI = {
     117,           /* lineNo */
     17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
-static emlrtRTEInfo jc_emlrtRTEI = {
+static emlrtRTEInfo hc_emlrtRTEI = {
     134,           /* lineNo */
     17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
-static emlrtBCInfo jh_emlrtBCI = {
+static emlrtBCInfo ih_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     139,           /* lineNo */
     43,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo kh_emlrtBCI = {
+static emlrtBCInfo jh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     143,           /* lineNo */
     29,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo lh_emlrtBCI = {
+static emlrtBCInfo kh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     143,           /* lineNo */
     32,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtECInfo jb_emlrtECI = {
@@ -254,96 +281,105 @@ static emlrtECInfo jb_emlrtECI = {
     143,           /* lineNo */
     21,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
-static emlrtRTEInfo kc_emlrtRTEI = {
+static emlrtRTEInfo ic_emlrtRTEI = {
     145,           /* lineNo */
     21,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
-static emlrtBCInfo mh_emlrtBCI = {
+static emlrtBCInfo lh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     173,           /* lineNo */
     37,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo nh_emlrtBCI = {
+static emlrtBCInfo mh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     176,           /* lineNo */
     34,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo oh_emlrtBCI = {
+static emlrtBCInfo nh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     176,           /* lineNo */
     37,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ph_emlrtBCI = {
+static emlrtBCInfo oh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     177,           /* lineNo */
     38,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtRTEInfo lc_emlrtRTEI = {
+static emlrtRTEInfo jc_emlrtRTEI = {
     201,           /* lineNo */
     21,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
-static emlrtBCInfo qh_emlrtBCI = {
+static emlrtBCInfo ph_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     205,           /* lineNo */
     29,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo rh_emlrtBCI = {
+static emlrtBCInfo qh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     205,           /* lineNo */
     32,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtECInfo kb_emlrtECI = {
@@ -351,32 +387,35 @@ static emlrtECInfo kb_emlrtECI = {
     205,           /* lineNo */
     21,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
-static emlrtBCInfo sh_emlrtBCI = {
+static emlrtBCInfo rh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     213,           /* lineNo */
     34,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo th_emlrtBCI = {
+static emlrtBCInfo sh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     223,           /* lineNo */
     27,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtECInfo lb_emlrtECI = {
@@ -384,8 +423,9 @@ static emlrtECInfo lb_emlrtECI = {
     223,           /* lineNo */
     17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtECInfo mb_emlrtECI = {
@@ -393,615 +433,678 @@ static emlrtECInfo mb_emlrtECI = {
     224,           /* lineNo */
     17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
-static emlrtBCInfo uh_emlrtBCI = {
+static emlrtBCInfo th_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     138,           /* lineNo */
     21,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo vh_emlrtBCI = {
+static emlrtBCInfo uh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     81,            /* lineNo */
     24,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo wh_emlrtBCI = {
+static emlrtBCInfo vh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     170,           /* lineNo */
     34,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo xh_emlrtBCI = {
+static emlrtBCInfo wh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     214,           /* lineNo */
     43,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo yh_emlrtBCI = {
+static emlrtBCInfo xh_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     174,           /* lineNo */
     38,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
+};
+
+static emlrtBCInfo yh_emlrtBCI = {
+    -1,            /* iFirst */
+    -1,            /* iLast */
+    174,           /* lineNo */
+    46,            /* colNo */
+    "",            /* aName */
+    "lapDijkstra", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo ai_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     174,           /* lineNo */
-    46,            /* colNo */
-    "",            /* aName */
-    "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
-};
-
-static emlrtBCInfo bi_emlrtBCI = {
-    -1,            /* iFirst */
-    -1,            /* iLast */
-    174,           /* lineNo */
     65,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ci_emlrtBCI = {
+static emlrtBCInfo bi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     115,           /* lineNo */
     37,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo di_emlrtBCI = {
+static emlrtBCInfo ci_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     214,           /* lineNo */
     60,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ei_emlrtBCI = {
+static emlrtBCInfo di_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     177,           /* lineNo */
     46,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo fi_emlrtBCI = {
+static emlrtBCInfo ei_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     214,           /* lineNo */
     13,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo gi_emlrtBCI = {
+static emlrtBCInfo fi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     177,           /* lineNo */
     65,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo hi_emlrtBCI = {
+static emlrtBCInfo gi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     184,           /* lineNo */
     42,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ii_emlrtBCI = {
+static emlrtBCInfo hi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     219,           /* lineNo */
     39,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ji_emlrtBCI = {
+static emlrtBCInfo ii_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     222,           /* lineNo */
     17,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
+};
+
+static emlrtBCInfo ji_emlrtBCI = {
+    -1,            /* iFirst */
+    -1,            /* iLast */
+    185,           /* lineNo */
+    29,            /* colNo */
+    "",            /* aName */
+    "lapDijkstra", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo ki_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     185,           /* lineNo */
-    29,            /* colNo */
+    49,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtBCInfo li_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     185,           /* lineNo */
-    49,            /* colNo */
-    "",            /* aName */
-    "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
-};
-
-static emlrtBCInfo mi_emlrtBCI = {
-    -1,            /* iFirst */
-    -1,            /* iLast */
-    185,           /* lineNo */
     17,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ni_emlrtBCI = {
+static emlrtBCInfo mi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     223,           /* lineNo */
     40,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo oi_emlrtBCI = {
+static emlrtBCInfo ni_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     186,           /* lineNo */
     32,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo pi_emlrtBCI = {
+static emlrtBCInfo oi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     186,           /* lineNo */
     17,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo qi_emlrtBCI = {
+static emlrtBCInfo pi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     224,           /* lineNo */
     17,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ri_emlrtBCI = {
+static emlrtBCInfo qi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     127,           /* lineNo */
     30,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo si_emlrtBCI = {
+static emlrtBCInfo ri_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     191,           /* lineNo */
     44,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ti_emlrtBCI = {
+static emlrtBCInfo si_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     128,           /* lineNo */
     40,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo ui_emlrtBCI = {
+static emlrtBCInfo ti_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     193,           /* lineNo */
     40,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo vi_emlrtBCI = {
+static emlrtBCInfo ui_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     129,           /* lineNo */
     43,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo wi_emlrtBCI = {
+static emlrtBCInfo vi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     135,           /* lineNo */
     34,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo xi_emlrtBCI = {
+static emlrtBCInfo wi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     205,           /* lineNo */
     41,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
-static emlrtBCInfo yi_emlrtBCI = {
+static emlrtBCInfo xi_emlrtBCI = {
     -1,            /* iFirst */
     -1,            /* iLast */
     205,           /* lineNo */
     55,            /* colNo */
     "",            /* aName */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m", /* pName */
-    0                /* checkKind */
-};
-
-static emlrtRTEInfo mj_emlrtRTEI = {
-    68,            /* lineNo */
-    1,             /* colNo */
-    "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m", /* pName */
+    0                                       /* checkKind */
 };
 
 static emlrtRTEInfo nj_emlrtRTEI = {
-    83,            /* lineNo */
-    5,             /* colNo */
+    68,            /* lineNo */
+    1,             /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo oj_emlrtRTEI = {
-    16,                                            /* lineNo */
-    13,                                            /* colNo */
-    "isinf",                                       /* fName */
-    "/MATLAB/toolbox/eml/lib/matlab/elmat/isinf.m" /* pName */
+    83,            /* lineNo */
+    5,             /* colNo */
+    "lapDijkstra", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo pj_emlrtRTEI = {
-    90,            /* lineNo */
-    9,             /* colNo */
-    "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    16,      /* lineNo */
+    13,      /* colNo */
+    "isinf", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\lib\\matlab\\elmat\\isinf.m" /* pName
+                                                                        */
 };
 
 static emlrtRTEInfo qj_emlrtRTEI = {
-    102,           /* lineNo */
+    90,            /* lineNo */
     9,             /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo rj_emlrtRTEI = {
-    115,           /* lineNo */
-    17,            /* colNo */
+    102,           /* lineNo */
+    9,             /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo sj_emlrtRTEI = {
-    214,           /* lineNo */
-    34,            /* colNo */
+    115,           /* lineNo */
+    17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo tj_emlrtRTEI = {
-    219,           /* lineNo */
-    17,            /* colNo */
+    214,           /* lineNo */
+    34,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo uj_emlrtRTEI = {
-    183,           /* lineNo */
+    219,           /* lineNo */
     17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo vj_emlrtRTEI = {
-    220,           /* lineNo */
+    183,           /* lineNo */
     17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo wj_emlrtRTEI = {
-    184,           /* lineNo */
+    220,           /* lineNo */
     17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo xj_emlrtRTEI = {
-    223,           /* lineNo */
+    184,           /* lineNo */
     17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo yj_emlrtRTEI = {
-    185,           /* lineNo */
-    29,            /* colNo */
+    223,           /* lineNo */
+    17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo ak_emlrtRTEI = {
-    127,           /* lineNo */
-    17,            /* colNo */
+    185,           /* lineNo */
+    29,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo bk_emlrtRTEI = {
-    226,           /* lineNo */
-    20,            /* colNo */
+    127,           /* lineNo */
+    17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo ck_emlrtRTEI = {
-    128,           /* lineNo */
-    40,            /* colNo */
+    226,           /* lineNo */
+    20,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo dk_emlrtRTEI = {
-    190,           /* lineNo */
-    17,            /* colNo */
+    128,           /* lineNo */
+    40,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo ek_emlrtRTEI = {
-    129,           /* lineNo */
-    43,            /* colNo */
+    190,           /* lineNo */
+    17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo fk_emlrtRTEI = {
-    191,           /* lineNo */
-    17,            /* colNo */
+    129,           /* lineNo */
+    43,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo gk_emlrtRTEI = {
-    193,           /* lineNo */
-    21,            /* colNo */
+    191,           /* lineNo */
+    17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo hk_emlrtRTEI = {
-    136,           /* lineNo */
-    17,            /* colNo */
+    193,           /* lineNo */
+    21,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo ik_emlrtRTEI = {
-    202,           /* lineNo */
-    33,            /* colNo */
+    136,           /* lineNo */
+    17,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo jk_emlrtRTEI = {
-    143,           /* lineNo */
-    40,            /* colNo */
+    202,           /* lineNo */
+    33,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo kk_emlrtRTEI = {
-    139,           /* lineNo */
-    21,            /* colNo */
+    143,           /* lineNo */
+    40,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo lk_emlrtRTEI = {
-    205,           /* lineNo */
-    45,            /* colNo */
+    139,           /* lineNo */
+    21,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo mk_emlrtRTEI = {
-    138,           /* lineNo */
+    205,           /* lineNo */
     45,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo nk_emlrtRTEI = {
-    205,           /* lineNo */
-    59,            /* colNo */
+    138,           /* lineNo */
+    45,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo ok_emlrtRTEI = {
     205,           /* lineNo */
-    40,            /* colNo */
+    59,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo pk_emlrtRTEI = {
-    146,           /* lineNo */
-    33,            /* colNo */
+    205,           /* lineNo */
+    40,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo qk_emlrtRTEI = {
-    100,           /* lineNo */
-    9,             /* colNo */
+    146,           /* lineNo */
+    33,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 static emlrtRTEInfo rk_emlrtRTEI = {
+    100,           /* lineNo */
+    9,             /* colNo */
+    "lapDijkstra", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
+};
+
+static emlrtRTEInfo sk_emlrtRTEI = {
     143,           /* lineNo */
     21,            /* colNo */
     "lapDijkstra", /* fName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+internal/+assignment/"
-    "lapDijkstra.m" /* pName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+"
+    "internal\\+assignment\\lapDijkstra.m" /* pName */
 };
 
 /* Function Definitions */
@@ -1082,13 +1185,13 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
   costMatrix_data = costMatrix->data;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   nCol = costMatrix->size[1];
-  emxInit_boolean_T(sp, &isnanRowSoln, 1, &mj_emlrtRTEI, true);
+  emxInit_boolean_T(sp, &isnanRowSoln, 1, &nj_emlrtRTEI, true);
   nz = rowSoln->size[0];
   colMin = isnanRowSoln->size[0];
   isnanRowSoln->size[0] = nz;
-  emxEnsureCapacity_boolean_T(sp, isnanRowSoln, colMin, &mj_emlrtRTEI);
+  emxEnsureCapacity_boolean_T(sp, isnanRowSoln, colMin, &nj_emlrtRTEI);
   isnanRowSoln_data = isnanRowSoln->data;
-  if (nz < 1600) {
+  if (nz < 800) {
     for (i = 0; i < nz; i++) {
       isnanRowSoln_data[i] = muDoubleScalarIsNaN(rowSoln_data[i]);
     }
@@ -1105,25 +1208,25 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
     emlrtPopJmpBuf((emlrtCTX)sp, &emlrtJBStack);
     emlrtExitParallelRegion((emlrtCTX)sp, omp_in_parallel());
   }
-  st.site = &ohb_emlrtRSI;
+  st.site = &ggb_emlrtRSI;
   if (any(&st, isnanRowSoln)) {
     int32_T b_nz;
     int32_T i1;
-    st.site = &nhb_emlrtRSI;
-    b_st.site = &gdb_emlrtRSI;
-    c_st.site = &ow_emlrtRSI;
+    st.site = &fgb_emlrtRSI;
+    b_st.site = &obb_emlrtRSI;
+    c_st.site = &pbb_emlrtRSI;
     b_nz = c_combineVectorElements(&c_st, isnanRowSoln);
     if (b_nz > costMatrix->size[0]) {
-      emlrtErrorWithMessageIdR2018a(sp, &hc_emlrtRTEI,
+      emlrtErrorWithMessageIdR2018a(sp, &fc_emlrtRTEI,
                                     "Coder:builtins:AssertionFailed",
                                     "Coder:builtins:AssertionFailed", 0);
     }
-    emxInit_int32_T(sp, &ii, 1, &ie_emlrtRTEI);
-    st.site = &mhb_emlrtRSI;
+    emxInit_int32_T(sp, &ii, 1, &ke_emlrtRTEI);
+    st.site = &egb_emlrtRSI;
     c_repmat(&st, b_nz, ii);
     colMin = ii->size[0];
-    st.site = &lhb_emlrtRSI;
-    b_st.site = &ndb_emlrtRSI;
+    st.site = &dgb_emlrtRSI;
+    b_st.site = &wbb_emlrtRSI;
     b_eml_find(&b_st, isnanRowSoln, ii);
     ii_data = ii->data;
     i1 = ii->size[0];
@@ -1131,39 +1234,39 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
       emlrtSubAssignSizeCheck1dR2017a(colMin, ii->size[0], &hb_emlrtECI,
                                       (emlrtConstCTX)sp);
     }
-    st.site = &khb_emlrtRSI;
+    st.site = &cgb_emlrtRSI;
     if (b_nz > 2147483646) {
       b_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&b_st);
     }
-    emxInit_real_T(sp, &dist, 2, &nj_emlrtRTEI, true);
-    emxInit_int32_T(sp, &prevRow, 2, &pj_emlrtRTEI);
-    emxInit_int32_T(sp, &colList, 2, &qk_emlrtRTEI);
-    emxInit_int32_T(sp, &endOfPath, 2, &qj_emlrtRTEI);
-    emxInit_real_T(sp, &distColListK, 2, &rj_emlrtRTEI, true);
-    emxInit_boolean_T(sp, &isMin, 2, &ak_emlrtRTEI, true);
-    emxInit_boolean_T(sp, &isUnassignedCol, 2, &hk_emlrtRTEI, true);
-    emxInit_int32_T(sp, &r, 2, &rk_emlrtRTEI);
-    emxInit_int32_T(sp, &r1, 2, &ck_emlrtRTEI);
-    emxInit_int32_T(sp, &r2, 2, &ek_emlrtRTEI);
-    emxInit_int32_T(sp, &r3, 2, &yj_emlrtRTEI);
-    emxInit_int32_T(sp, &b_ii, 2, &ie_emlrtRTEI);
-    emxInit_int32_T(sp, &r4, 2, &lk_emlrtRTEI);
-    emxInit_int32_T(sp, &r5, 2, &nk_emlrtRTEI);
-    emxInit_int32_T(sp, &r6, 2, &mk_emlrtRTEI);
+    emxInit_real_T(sp, &dist, 2, &oj_emlrtRTEI, true);
+    emxInit_int32_T(sp, &prevRow, 2, &qj_emlrtRTEI);
+    emxInit_int32_T(sp, &colList, 2, &rk_emlrtRTEI);
+    emxInit_int32_T(sp, &endOfPath, 2, &rj_emlrtRTEI);
+    emxInit_real_T(sp, &distColListK, 2, &sj_emlrtRTEI, true);
+    emxInit_boolean_T(sp, &isMin, 2, &bk_emlrtRTEI, true);
+    emxInit_boolean_T(sp, &isUnassignedCol, 2, &ik_emlrtRTEI, true);
+    emxInit_int32_T(sp, &r, 2, &sk_emlrtRTEI);
+    emxInit_int32_T(sp, &r1, 2, &dk_emlrtRTEI);
+    emxInit_int32_T(sp, &r2, 2, &fk_emlrtRTEI);
+    emxInit_int32_T(sp, &r3, 2, &ak_emlrtRTEI);
+    emxInit_int32_T(sp, &b_ii, 2, &ke_emlrtRTEI);
+    emxInit_int32_T(sp, &r4, 2, &mk_emlrtRTEI);
+    emxInit_int32_T(sp, &r5, 2, &ok_emlrtRTEI);
+    emxInit_int32_T(sp, &r6, 2, &nk_emlrtRTEI);
     for (thisRow = 0; thisRow < b_nz; thisRow++) {
       int32_T b_colRedux;
       int32_T i2;
       int32_T rowFree;
       if ((thisRow + 1 < 1) || (thisRow + 1 > i1)) {
-        emlrtDynamicBoundsCheckR2012b(thisRow + 1, 1, i1, &vh_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(thisRow + 1, 1, i1, &uh_emlrtBCI,
                                       (emlrtConstCTX)sp);
       }
       rowFree = ii_data[thisRow];
       i2 = costMatrix->size[0];
       if ((ii_data[thisRow] < 1) || (ii_data[thisRow] > costMatrix->size[0])) {
         emlrtDynamicBoundsCheckR2012b(ii_data[thisRow], 1, costMatrix->size[0],
-                                      &gh_emlrtBCI, (emlrtConstCTX)sp);
+                                      &fh_emlrtBCI, (emlrtConstCTX)sp);
       }
       b_colRedux = colRedux->size[1];
       if ((nCol != b_colRedux) && ((nCol != 1) && (b_colRedux != 1))) {
@@ -1173,7 +1276,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
       nz = dist->size[0] * dist->size[1];
       dist->size[0] = 1;
       dist->size[1] = nCol;
-      emxEnsureCapacity_real_T(sp, dist, nz, &nj_emlrtRTEI);
+      emxEnsureCapacity_real_T(sp, dist, nz, &oj_emlrtRTEI);
       dist_data = dist->data;
       for (b_i = 0; b_i < nCol; b_i++) {
         dist_data[b_i] =
@@ -1183,12 +1286,12 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
       nz = isUnassignedCol->size[0] * isUnassignedCol->size[1];
       isUnassignedCol->size[0] = 1;
       isUnassignedCol->size[1] = nCol;
-      emxEnsureCapacity_boolean_T(sp, isUnassignedCol, nz, &oj_emlrtRTEI);
+      emxEnsureCapacity_boolean_T(sp, isUnassignedCol, nz, &pj_emlrtRTEI);
       isnanRowSoln_data = isUnassignedCol->data;
       for (b_i = 0; b_i < nCol; b_i++) {
         isnanRowSoln_data[b_i] = muDoubleScalarIsInf(dist_data[b_i]);
       }
-      st.site = &jhb_emlrtRSI;
+      st.site = &bgb_emlrtRSI;
       if (!all(&st, isUnassignedCol)) {
         real_T distMin;
         int32_T b_last;
@@ -1198,11 +1301,11 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
         int32_T up;
         boolean_T guard1;
         boolean_T unassignedFound;
-        st.site = &ihb_emlrtRSI;
+        st.site = &agb_emlrtRSI;
         b_repmat(&st, nCol, prevRow);
         nz = prevRow->size[0] * prevRow->size[1];
         prevRow->size[0] = 1;
-        emxEnsureCapacity_int32_T(sp, prevRow, nz, &pj_emlrtRTEI);
+        emxEnsureCapacity_int32_T(sp, prevRow, nz, &qj_emlrtRTEI);
         prevRow_data = prevRow->data;
         nz = prevRow->size[1] - 1;
         for (b_i = 0; b_i <= nz; b_i++) {
@@ -1210,16 +1313,16 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
         }
         low = 1;
         up = 1;
-        st.site = &hhb_emlrtRSI;
-        b_st.site = &jdb_emlrtRSI;
-        c_st.site = &kdb_emlrtRSI;
+        st.site = &yfb_emlrtRSI;
+        b_st.site = &sbb_emlrtRSI;
+        c_st.site = &tbb_emlrtRSI;
         eml_integer_colon_dispatcher(&c_st, nCol, colList);
         colList_data = colList->data;
         last = 0;
         nz = endOfPath->size[0] * endOfPath->size[1];
         endOfPath->size[0] = 1;
         endOfPath->size[1] = 1;
-        emxEnsureCapacity_int32_T(sp, endOfPath, nz, &qj_emlrtRTEI);
+        emxEnsureCapacity_int32_T(sp, endOfPath, nz, &rj_emlrtRTEI);
         endOfPath_data = endOfPath->data;
         endOfPath_data[0] = 0;
         unassignedFound = false;
@@ -1242,12 +1345,12 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
             } else {
               if ((up < 1) || (up > colList->size[1])) {
                 emlrtDynamicBoundsCheckR2012b(up, 1, colList->size[1],
-                                              &hh_emlrtBCI, (emlrtConstCTX)sp);
+                                              &gh_emlrtBCI, (emlrtConstCTX)sp);
               }
               loop_ub = up - 1;
               if ((nCol < 1) || (nCol > colList->size[1])) {
                 emlrtDynamicBoundsCheckR2012b(nCol, 1, colList->size[1],
-                                              &ih_emlrtBCI, (emlrtConstCTX)sp);
+                                              &hh_emlrtBCI, (emlrtConstCTX)sp);
               }
               colMin = nCol;
             }
@@ -1255,19 +1358,19 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
             distColListK->size[0] = 1;
             c_nz = colMin - loop_ub;
             distColListK->size[1] = c_nz;
-            emxEnsureCapacity_real_T(sp, distColListK, nz, &rj_emlrtRTEI);
+            emxEnsureCapacity_real_T(sp, distColListK, nz, &sj_emlrtRTEI);
             distColListK_data = distColListK->data;
             for (b_i = 0; b_i < c_nz; b_i++) {
               nz = colList_data[loop_ub + b_i];
               if ((nz < 1) || (nz > dist->size[1])) {
                 emlrtDynamicBoundsCheckR2012b(nz, 1, dist->size[1],
-                                              &ci_emlrtBCI, (emlrtConstCTX)sp);
+                                              &bi_emlrtBCI, (emlrtConstCTX)sp);
               }
               distColListK_data[b_i] = dist_data[nz - 1];
             }
             if (c_nz > nCol) {
               emlrtErrorWithMessageIdR2018a(
-                  sp, &ic_emlrtRTEI, "Coder:builtins:AssertionFailed",
+                  sp, &gc_emlrtRTEI, "Coder:builtins:AssertionFailed",
                   "Coder:builtins:AssertionFailed", 0);
             }
             if (c_nz < 1) {
@@ -1275,18 +1378,18 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
             } else {
               b_last = c_nz;
             }
-            st.site = &ghb_emlrtRSI;
-            b_st.site = &rhb_emlrtRSI;
-            c_st.site = &shb_emlrtRSI;
-            d_st.site = &thb_emlrtRSI;
+            st.site = &xfb_emlrtRSI;
+            b_st.site = &jgb_emlrtRSI;
+            c_st.site = &kgb_emlrtRSI;
+            d_st.site = &lgb_emlrtRSI;
             if (b_last < 1) {
               emlrtErrorWithMessageIdR2018a(
-                  &d_st, &x_emlrtRTEI,
+                  &d_st, &xb_emlrtRTEI,
                   "Coder:toolbox:eml_min_or_max_varDimZero",
                   "Coder:toolbox:eml_min_or_max_varDimZero", 0);
             }
-            e_st.site = &uhb_emlrtRSI;
-            f_st.site = &vhb_emlrtRSI;
+            e_st.site = &mgb_emlrtRSI;
+            f_st.site = &ngb_emlrtRSI;
             if (b_last <= 2) {
               if (b_last == 1) {
                 distMin = distColListK_data[0];
@@ -1298,13 +1401,13 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 distMin = distColListK_data[0];
               }
             } else {
-              g_st.site = &vn_emlrtRSI;
+              g_st.site = &hn_emlrtRSI;
               if (!muDoubleScalarIsNaN(distColListK_data[0])) {
                 colMin = 1;
               } else {
                 boolean_T exitg2;
                 colMin = 0;
-                h_st.site = &wn_emlrtRSI;
+                h_st.site = &in_emlrtRSI;
                 if (b_last > 2147483646) {
                   i_st.site = &k_emlrtRSI;
                   check_forloop_overflow_error(&i_st);
@@ -1323,10 +1426,10 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               if (colMin == 0) {
                 distMin = distColListK_data[0];
               } else {
-                g_st.site = &un_emlrtRSI;
+                g_st.site = &gn_emlrtRSI;
                 distMin = distColListK_data[colMin - 1];
                 nz = colMin + 1;
-                h_st.site = &xn_emlrtRSI;
+                h_st.site = &jn_emlrtRSI;
                 if ((colMin + 1 <= b_last) && (b_last > 2147483646)) {
                   i_st.site = &k_emlrtRSI;
                   check_forloop_overflow_error(&i_st);
@@ -1345,13 +1448,13 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               colMin = isMin->size[0] * isMin->size[1];
               isMin->size[0] = 1;
               isMin->size[1] = c_nz;
-              emxEnsureCapacity_boolean_T(sp, isMin, colMin, &ak_emlrtRTEI);
+              emxEnsureCapacity_boolean_T(sp, isMin, colMin, &bk_emlrtRTEI);
               isMin_data = isMin->data;
               for (b_i = 0; b_i < c_nz; b_i++) {
                 nz = colList_data[loop_ub + b_i];
                 if ((nz < 1) || (nz > dist->size[1])) {
                   emlrtDynamicBoundsCheckR2012b(
-                      nz, 1, dist->size[1], &ri_emlrtBCI, (emlrtConstCTX)sp);
+                      nz, 1, dist->size[1], &qi_emlrtBCI, (emlrtConstCTX)sp);
                 }
                 isMin_data[b_i] = (dist_data[nz - 1] == distMin);
               }
@@ -1365,7 +1468,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               nz = r1->size[0] * r1->size[1];
               r1->size[0] = 1;
               r1->size[1] = colMin;
-              emxEnsureCapacity_int32_T(sp, r1, nz, &ck_emlrtRTEI);
+              emxEnsureCapacity_int32_T(sp, r1, nz, &dk_emlrtRTEI);
               r8 = r1->data;
               nz = 0;
               for (b_i = 0; b_i < b_last; b_i++) {
@@ -1378,7 +1481,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               for (b_i = 0; b_i < b_loop_ub; b_i++) {
                 if ((r8[b_i] < 0) || (r8[b_i] > c_nz - 1)) {
                   emlrtDynamicBoundsCheckR2012b(
-                      r8[b_i], 0, c_nz - 1, &ti_emlrtBCI, (emlrtConstCTX)sp);
+                      r8[b_i], 0, c_nz - 1, &si_emlrtBCI, (emlrtConstCTX)sp);
                 }
               }
               colMin = 0;
@@ -1390,7 +1493,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               nz = r2->size[0] * r2->size[1];
               r2->size[0] = 1;
               r2->size[1] = colMin;
-              emxEnsureCapacity_int32_T(sp, r2, nz, &ek_emlrtRTEI);
+              emxEnsureCapacity_int32_T(sp, r2, nz, &fk_emlrtRTEI);
               b_ii_data = r2->data;
               nz = 0;
               for (b_i = 0; b_i < b_last; b_i++) {
@@ -1403,20 +1506,20 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               for (b_i = 0; b_i < c_loop_ub; b_i++) {
                 if ((b_ii_data[b_i] < 0) || (b_ii_data[b_i] > c_nz - 1)) {
                   emlrtDynamicBoundsCheckR2012b(b_ii_data[b_i], 0, c_nz - 1,
-                                                &vi_emlrtBCI,
+                                                &ui_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
               }
               if (r1->size[1] > nCol) {
                 emlrtErrorWithMessageIdR2018a(
-                    sp, &jc_emlrtRTEI, "Coder:builtins:AssertionFailed",
+                    sp, &hc_emlrtRTEI, "Coder:builtins:AssertionFailed",
                     "Coder:builtins:AssertionFailed", 0);
               }
               nz = colSoln->size[1];
               for (b_i = 0; b_i < b_loop_ub; b_i++) {
                 colMin = colList_data[loop_ub + r8[b_i]];
                 if ((colMin < 1) || (colMin > nz)) {
-                  emlrtDynamicBoundsCheckR2012b(colMin, 1, nz, &wi_emlrtBCI,
+                  emlrtDynamicBoundsCheckR2012b(colMin, 1, nz, &vi_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
               }
@@ -1429,19 +1532,19 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               isUnassignedCol->size[0] = 1;
               isUnassignedCol->size[1] = colMin;
               emxEnsureCapacity_boolean_T(sp, isUnassignedCol, nz,
-                                          &hk_emlrtRTEI);
+                                          &ik_emlrtRTEI);
               isnanRowSoln_data = isUnassignedCol->data;
               for (b_i = 0; b_i < colMin; b_i++) {
                 isnanRowSoln_data[b_i] = muDoubleScalarIsNaN(
                     colSoln_data[colList_data[loop_ub + r8[b_i]] - 1]);
               }
-              st.site = &fhb_emlrtRSI;
+              st.site = &wfb_emlrtRSI;
               if (b_any(&st, isUnassignedCol)) {
                 b_last = isUnassignedCol->size[1];
                 for (b_i = 0; b_i < b_last; b_i++) {
                   if (isnanRowSoln_data[b_i] && (b_i > r1->size[1] - 1)) {
                     emlrtDynamicBoundsCheckR2012b(b_i, 0, r1->size[1] - 1,
-                                                  &uh_emlrtBCI,
+                                                  &th_emlrtBCI,
                                                   (emlrtConstCTX)sp);
                   }
                 }
@@ -1452,13 +1555,13 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                   }
                 }
                 if (nz < 1) {
-                  emlrtDynamicBoundsCheckR2012b(1, 1, nz, &jh_emlrtBCI,
+                  emlrtDynamicBoundsCheckR2012b(1, 1, nz, &ih_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
                 colMin = endOfPath->size[0] * endOfPath->size[1];
                 endOfPath->size[0] = 1;
                 endOfPath->size[1] = 1;
-                emxEnsureCapacity_int32_T(sp, endOfPath, colMin, &kk_emlrtRTEI);
+                emxEnsureCapacity_int32_T(sp, endOfPath, colMin, &lk_emlrtRTEI);
                 endOfPath_data = endOfPath->data;
                 colMin = 0;
                 for (b_i = 0; b_i < b_last; b_i++) {
@@ -1469,7 +1572,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 nz = r6->size[0] * r6->size[1];
                 r6->size[0] = 1;
                 r6->size[1] = colMin;
-                emxEnsureCapacity_int32_T(sp, r6, nz, &mk_emlrtRTEI);
+                emxEnsureCapacity_int32_T(sp, r6, nz, &nk_emlrtRTEI);
                 b_ii_data = r6->data;
                 nz = 0;
                 for (b_i = 0; b_i < b_last; b_i++) {
@@ -1487,13 +1590,13 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 } else {
                   if (up > colList->size[1]) {
                     emlrtDynamicBoundsCheckR2012b(up, 1, colList->size[1],
-                                                  &kh_emlrtBCI,
+                                                  &jh_emlrtBCI,
                                                   (emlrtConstCTX)sp);
                   }
                   b_last = up - 1;
                   if (nCol > colList->size[1]) {
                     emlrtDynamicBoundsCheckR2012b(nCol, 1, colList->size[1],
-                                                  &lh_emlrtBCI,
+                                                  &kh_emlrtBCI,
                                                   (emlrtConstCTX)sp);
                   }
                   colMin = nCol;
@@ -1502,7 +1605,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 r->size[0] = 1;
                 c_nz = r1->size[1] + r2->size[1];
                 r->size[1] = c_nz;
-                emxEnsureCapacity_int32_T(sp, r, nz, &jk_emlrtRTEI);
+                emxEnsureCapacity_int32_T(sp, r, nz, &kk_emlrtRTEI);
                 r7 = r->data;
                 for (b_i = 0; b_i < b_loop_ub; b_i++) {
                   r7[b_i] = colList_data[loop_ub + r8[b_i]];
@@ -1521,7 +1624,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 }
                 if (isMin->size[1] > nCol) {
                   emlrtErrorWithMessageIdR2018a(
-                      sp, &kc_emlrtRTEI, "Coder:builtins:AssertionFailed",
+                      sp, &ic_emlrtRTEI, "Coder:builtins:AssertionFailed",
                       "Coder:builtins:AssertionFailed", 0);
                 }
                 if (isMin->size[1] < 1) {
@@ -1529,13 +1632,13 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 } else {
                   colMin = isMin->size[1];
                 }
-                st.site = &ehb_emlrtRSI;
-                b_st.site = &gdb_emlrtRSI;
+                st.site = &vfb_emlrtRSI;
+                b_st.site = &obb_emlrtRSI;
                 nz = isMin->size[0] * isMin->size[1];
                 isMin->size[0] = 1;
                 isMin->size[1] = colMin;
-                emxEnsureCapacity_boolean_T(&b_st, isMin, nz, &pk_emlrtRTEI);
-                c_st.site = &ow_emlrtRSI;
+                emxEnsureCapacity_boolean_T(&b_st, isMin, nz, &qk_emlrtRTEI);
+                c_st.site = &pbb_emlrtRSI;
                 nz = combineVectorElements(&c_st, isMin);
                 up += nz;
               }
@@ -1550,27 +1653,27 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               int32_T loop_ub_tmp;
               if ((low < 1) || (low > colList->size[1])) {
                 emlrtDynamicBoundsCheckR2012b(low, 1, colList->size[1],
-                                              &wh_emlrtBCI, (emlrtConstCTX)sp);
+                                              &vh_emlrtBCI, (emlrtConstCTX)sp);
               }
               colMin = colList_data[low - 1];
               low++;
               b_loop_ub = colSoln->size[1];
               if ((colMin < 1) || (colMin > b_loop_ub)) {
                 emlrtDynamicBoundsCheckR2012b(colMin, 1, b_loop_ub,
-                                              &mh_emlrtBCI, (emlrtConstCTX)sp);
+                                              &lh_emlrtBCI, (emlrtConstCTX)sp);
               }
               c_loop_ub = (int32_T)colSoln_data[colMin - 1];
               if ((c_loop_ub < 1) || (c_loop_ub > i2)) {
-                emlrtDynamicBoundsCheckR2012b(c_loop_ub, 1, i2, &yh_emlrtBCI,
+                emlrtDynamicBoundsCheckR2012b(c_loop_ub, 1, i2, &xh_emlrtBCI,
                                               (emlrtConstCTX)sp);
               }
               if (colMin > nCol) {
-                emlrtDynamicBoundsCheckR2012b(colMin, 1, nCol, &ai_emlrtBCI,
+                emlrtDynamicBoundsCheckR2012b(colMin, 1, nCol, &yh_emlrtBCI,
                                               (emlrtConstCTX)sp);
               }
               if (colMin > b_colRedux) {
                 emlrtDynamicBoundsCheckR2012b(colMin, 1, b_colRedux,
-                                              &bi_emlrtBCI, (emlrtConstCTX)sp);
+                                              &ai_emlrtBCI, (emlrtConstCTX)sp);
               }
               costOld = costMatrix_data[(c_loop_ub +
                                          costMatrix->size[0] * (colMin - 1)) -
@@ -1582,32 +1685,32 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               } else {
                 if ((up < 1) || (up > colList->size[1])) {
                   emlrtDynamicBoundsCheckR2012b(
-                      up, 1, colList->size[1], &nh_emlrtBCI, (emlrtConstCTX)sp);
+                      up, 1, colList->size[1], &mh_emlrtBCI, (emlrtConstCTX)sp);
                 }
                 i3 = up - 1;
                 if (nCol > colList->size[1]) {
                   emlrtDynamicBoundsCheckR2012b(nCol, 1, colList->size[1],
-                                                &oh_emlrtBCI,
+                                                &nh_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
                 nz = nCol - 1;
               }
               if (c_loop_ub > i2) {
-                emlrtDynamicBoundsCheckR2012b(c_loop_ub, 1, i2, &ph_emlrtBCI,
+                emlrtDynamicBoundsCheckR2012b(c_loop_ub, 1, i2, &oh_emlrtBCI,
                                               (emlrtConstCTX)sp);
               }
               loop_ub_tmp = nz - i3;
               for (b_i = 0; b_i <= loop_ub_tmp; b_i++) {
                 nz = colList_data[i3 + b_i];
                 if ((nz < 1) || (nz > nCol)) {
-                  emlrtDynamicBoundsCheckR2012b(nz, 1, nCol, &ei_emlrtBCI,
+                  emlrtDynamicBoundsCheckR2012b(nz, 1, nCol, &di_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
               }
               for (b_i = 0; b_i <= loop_ub_tmp; b_i++) {
                 nz = colList_data[i3 + b_i];
                 if ((nz < 1) || (nz > b_colRedux)) {
-                  emlrtDynamicBoundsCheckR2012b(nz, 1, b_colRedux, &gi_emlrtBCI,
+                  emlrtDynamicBoundsCheckR2012b(nz, 1, b_colRedux, &fi_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
               }
@@ -1615,7 +1718,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               nz = distColListK->size[0] * distColListK->size[1];
               distColListK->size[0] = 1;
               distColListK->size[1] = loop_ub_tmp + 1;
-              emxEnsureCapacity_real_T(sp, distColListK, nz, &uj_emlrtRTEI);
+              emxEnsureCapacity_real_T(sp, distColListK, nz, &vj_emlrtRTEI);
               distColListK_data = distColListK->data;
               for (b_i = 0; b_i <= loop_ub_tmp; b_i++) {
                 nz = colList_data[i3 + b_i] - 1;
@@ -1630,13 +1733,13 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 nz = colList_data[i3 + b_i];
                 if ((nz < 1) || (nz > dist->size[1])) {
                   emlrtDynamicBoundsCheckR2012b(
-                      nz, 1, dist->size[1], &hi_emlrtBCI, (emlrtConstCTX)sp);
+                      nz, 1, dist->size[1], &gi_emlrtBCI, (emlrtConstCTX)sp);
                 }
               }
               nz = isMin->size[0] * isMin->size[1];
               isMin->size[0] = 1;
               isMin->size[1] = loop_ub_tmp + 1;
-              emxEnsureCapacity_boolean_T(sp, isMin, nz, &wj_emlrtRTEI);
+              emxEnsureCapacity_boolean_T(sp, isMin, nz, &xj_emlrtRTEI);
               isMin_data = isMin->data;
               for (b_i = 0; b_i < loop_ub; b_i++) {
                 isMin_data[b_i] = (distColListK_data[b_i] <
@@ -1651,7 +1754,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               nz = r3->size[0] * r3->size[1];
               r3->size[0] = 1;
               r3->size[1] = colMin;
-              emxEnsureCapacity_int32_T(sp, r3, nz, &yj_emlrtRTEI);
+              emxEnsureCapacity_int32_T(sp, r3, nz, &ak_emlrtRTEI);
               b_ii_data = r3->data;
               nz = 0;
               for (b_i = 0; b_i < loop_ub; b_i++) {
@@ -1664,7 +1767,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               for (b_i = 0; b_i < b_last; b_i++) {
                 if ((b_ii_data[b_i] < 0) || (b_ii_data[b_i] > loop_ub_tmp)) {
                   emlrtDynamicBoundsCheckR2012b(b_ii_data[b_i], 0, loop_ub_tmp,
-                                                &ki_emlrtBCI,
+                                                &ji_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
               }
@@ -1673,7 +1776,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                     (b_ii_data[b_i] > distColListK->size[1] - 1)) {
                   emlrtDynamicBoundsCheckR2012b(
                       b_ii_data[b_i], 0, distColListK->size[1] - 1,
-                      &li_emlrtBCI, (emlrtConstCTX)sp);
+                      &ki_emlrtBCI, (emlrtConstCTX)sp);
                 }
               }
               for (b_i = 0; b_i < b_last; b_i++) {
@@ -1681,7 +1784,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 colMin = colList_data[i3 + nz];
                 if ((colMin < 1) || (colMin > dist->size[1])) {
                   emlrtDynamicBoundsCheckR2012b(colMin, 1, dist->size[1],
-                                                &mi_emlrtBCI,
+                                                &li_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
                 dist_data[colMin - 1] = distColListK_data[nz];
@@ -1689,7 +1792,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               for (b_i = 0; b_i < b_last; b_i++) {
                 if ((b_ii_data[b_i] < 0) || (b_ii_data[b_i] > loop_ub_tmp)) {
                   emlrtDynamicBoundsCheckR2012b(b_ii_data[b_i], 0, loop_ub_tmp,
-                                                &oi_emlrtBCI,
+                                                &ni_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
               }
@@ -1697,14 +1800,14 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 nz = colList_data[i3 + b_ii_data[b_i]];
                 if ((nz < 1) || (nz > prevRow->size[1])) {
                   emlrtDynamicBoundsCheckR2012b(
-                      nz, 1, prevRow->size[1], &pi_emlrtBCI, (emlrtConstCTX)sp);
+                      nz, 1, prevRow->size[1], &oi_emlrtBCI, (emlrtConstCTX)sp);
                 }
                 prevRow_data[nz - 1] = c_loop_ub;
               }
               nz = isMin->size[0] * isMin->size[1];
               isMin->size[0] = 1;
               isMin->size[1] = loop_ub_tmp + 1;
-              emxEnsureCapacity_boolean_T(sp, isMin, nz, &dk_emlrtRTEI);
+              emxEnsureCapacity_boolean_T(sp, isMin, nz, &ek_emlrtRTEI);
               isMin_data = isMin->data;
               nz = distColListK->size[1] - 1;
               for (b_i = 0; b_i <= nz; b_i++) {
@@ -1714,7 +1817,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               for (b_i = 0; b_i <= loop_ub_tmp; b_i++) {
                 nz = colList_data[i3 + b_i];
                 if ((nz < 1) || (nz > b_loop_ub)) {
-                  emlrtDynamicBoundsCheckR2012b(nz, 1, b_loop_ub, &si_emlrtBCI,
+                  emlrtDynamicBoundsCheckR2012b(nz, 1, b_loop_ub, &ri_emlrtBCI,
                                                 (emlrtConstCTX)sp);
                 }
               }
@@ -1722,7 +1825,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
               isUnassignedCol->size[0] = 1;
               isUnassignedCol->size[1] = loop_ub_tmp + 1;
               emxEnsureCapacity_boolean_T(sp, isUnassignedCol, nz,
-                                          &fk_emlrtRTEI);
+                                          &gk_emlrtRTEI);
               isnanRowSoln_data = isUnassignedCol->data;
               for (b_i = 0; b_i <= loop_ub_tmp; b_i++) {
                 isnanRowSoln_data[b_i] =
@@ -1730,23 +1833,23 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                          colSoln_data[colList_data[i3 + b_i] - 1]) &&
                      isMin_data[b_i]);
               }
-              st.site = &dhb_emlrtRSI;
+              st.site = &ufb_emlrtRSI;
               if (b_any(&st, isUnassignedCol)) {
-                st.site = &chb_emlrtRSI;
-                b_st.site = &ndb_emlrtRSI;
+                st.site = &tfb_emlrtRSI;
+                b_st.site = &wbb_emlrtRSI;
                 c_eml_find(&b_st, isUnassignedCol, b_ii);
                 b_ii_data = b_ii->data;
                 nz = endOfPath->size[0] * endOfPath->size[1];
                 endOfPath->size[0] = 1;
                 colMin = b_ii->size[1];
                 endOfPath->size[1] = b_ii->size[1];
-                emxEnsureCapacity_int32_T(sp, endOfPath, nz, &gk_emlrtRTEI);
+                emxEnsureCapacity_int32_T(sp, endOfPath, nz, &hk_emlrtRTEI);
                 endOfPath_data = endOfPath->data;
                 for (b_i = 0; b_i < colMin; b_i++) {
                   if ((b_ii_data[b_i] < 1) ||
                       (b_ii_data[b_i] > loop_ub_tmp + 1)) {
                     emlrtDynamicBoundsCheckR2012b(b_ii_data[b_i], 1,
-                                                  loop_ub_tmp + 1, &ui_emlrtBCI,
+                                                  loop_ub_tmp + 1, &ti_emlrtBCI,
                                                   (emlrtConstCTX)sp);
                   }
                   endOfPath_data[b_i] = colList_data[(i3 + b_ii_data[b_i]) - 1];
@@ -1754,11 +1857,11 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                 guard1 = true;
                 exitg1 = 1;
               } else {
-                st.site = &bhb_emlrtRSI;
+                st.site = &sfb_emlrtRSI;
                 if (b_any(&st, isMin)) {
                   if (isMin->size[1] > nCol) {
                     emlrtErrorWithMessageIdR2018a(
-                        sp, &lc_emlrtRTEI, "Coder:builtins:AssertionFailed",
+                        sp, &jc_emlrtRTEI, "Coder:builtins:AssertionFailed",
                         "Coder:builtins:AssertionFailed", 0);
                   }
                   if (isMin->size[1] < 1) {
@@ -1766,18 +1869,18 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                   } else {
                     colMin = loop_ub_tmp + 1;
                   }
-                  st.site = &ahb_emlrtRSI;
-                  b_st.site = &gdb_emlrtRSI;
+                  st.site = &rfb_emlrtRSI;
+                  b_st.site = &obb_emlrtRSI;
                   nz = isUnassignedCol->size[0] * isUnassignedCol->size[1];
                   isUnassignedCol->size[0] = 1;
                   isUnassignedCol->size[1] = colMin;
                   emxEnsureCapacity_boolean_T(&b_st, isUnassignedCol, nz,
-                                              &ik_emlrtRTEI);
+                                              &jk_emlrtRTEI);
                   isnanRowSoln_data = isUnassignedCol->data;
                   for (b_i = 0; b_i < colMin; b_i++) {
                     isnanRowSoln_data[b_i] = isMin_data[b_i];
                   }
-                  c_st.site = &ow_emlrtRSI;
+                  c_st.site = &pbb_emlrtRSI;
                   c_nz = combineVectorElements(&c_st, isUnassignedCol);
                   if (up > nCol) {
                     c_loop_ub = 0;
@@ -1785,13 +1888,13 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                   } else {
                     if (up > colList->size[1]) {
                       emlrtDynamicBoundsCheckR2012b(up, 1, colList->size[1],
-                                                    &qh_emlrtBCI,
+                                                    &ph_emlrtBCI,
                                                     (emlrtConstCTX)sp);
                     }
                     c_loop_ub = up - 1;
                     if (nCol > colList->size[1]) {
                       emlrtDynamicBoundsCheckR2012b(nCol, 1, colList->size[1],
-                                                    &rh_emlrtBCI,
+                                                    &qh_emlrtBCI,
                                                     (emlrtConstCTX)sp);
                     }
                     b_last = nCol;
@@ -1805,7 +1908,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                   nz = r4->size[0] * r4->size[1];
                   r4->size[0] = 1;
                   r4->size[1] = colMin;
-                  emxEnsureCapacity_int32_T(sp, r4, nz, &lk_emlrtRTEI);
+                  emxEnsureCapacity_int32_T(sp, r4, nz, &mk_emlrtRTEI);
                   b_ii_data = r4->data;
                   nz = 0;
                   colMin = 0;
@@ -1820,7 +1923,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                   nz = r5->size[0] * r5->size[1];
                   r5->size[0] = 1;
                   r5->size[1] = colMin;
-                  emxEnsureCapacity_int32_T(sp, r5, nz, &nk_emlrtRTEI);
+                  emxEnsureCapacity_int32_T(sp, r5, nz, &ok_emlrtRTEI);
                   r8 = r5->data;
                   nz = 0;
                   for (b_i = 0; b_i < loop_ub; b_i++) {
@@ -1832,14 +1935,14 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                   nz = r->size[0] * r->size[1];
                   r->size[0] = 1;
                   r->size[1] = r4->size[1] + r5->size[1];
-                  emxEnsureCapacity_int32_T(sp, r, nz, &ok_emlrtRTEI);
+                  emxEnsureCapacity_int32_T(sp, r, nz, &pk_emlrtRTEI);
                   r7 = r->data;
                   nz = r4->size[1];
                   for (b_i = 0; b_i < nz; b_i++) {
                     if ((b_ii_data[b_i] < 0) ||
                         (b_ii_data[b_i] > loop_ub_tmp)) {
                       emlrtDynamicBoundsCheckR2012b(b_ii_data[b_i], 0,
-                                                    loop_ub_tmp, &xi_emlrtBCI,
+                                                    loop_ub_tmp, &wi_emlrtBCI,
                                                     (emlrtConstCTX)sp);
                     }
                     r7[b_i] = colList_data[i3 + b_ii_data[b_i]];
@@ -1848,7 +1951,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
                   for (b_i = 0; b_i < nz; b_i++) {
                     if ((r8[b_i] < 0) || (r8[b_i] > loop_ub_tmp)) {
                       emlrtDynamicBoundsCheckR2012b(r8[b_i], 0, loop_ub_tmp,
-                                                    &yi_emlrtBCI,
+                                                    &xi_emlrtBCI,
                                                     (emlrtConstCTX)sp);
                     }
                     r7[b_i + r4->size[1]] = colList_data[i3 + r8[b_i]];
@@ -1877,25 +1980,25 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
             last = 0;
           } else if (last > colList->size[1]) {
             emlrtDynamicBoundsCheckR2012b(last, 1, colList->size[1],
-                                          &sh_emlrtBCI, (emlrtConstCTX)sp);
+                                          &rh_emlrtBCI, (emlrtConstCTX)sp);
           }
           for (b_i = 0; b_i < last; b_i++) {
             if ((colList_data[b_i] < 1) || (colList_data[b_i] > b_colRedux)) {
               emlrtDynamicBoundsCheckR2012b(colList_data[b_i], 1, b_colRedux,
-                                            &xh_emlrtBCI, (emlrtConstCTX)sp);
+                                            &wh_emlrtBCI, (emlrtConstCTX)sp);
             }
           }
           for (b_i = 0; b_i < last; b_i++) {
             if ((colList_data[b_i] < 1) ||
                 (colList_data[b_i] > dist->size[1])) {
               emlrtDynamicBoundsCheckR2012b(colList_data[b_i], 1, dist->size[1],
-                                            &di_emlrtBCI, (emlrtConstCTX)sp);
+                                            &ci_emlrtBCI, (emlrtConstCTX)sp);
             }
           }
           nz = distColListK->size[0] * distColListK->size[1];
           distColListK->size[0] = 1;
           distColListK->size[1] = last;
-          emxEnsureCapacity_real_T(sp, distColListK, nz, &sj_emlrtRTEI);
+          emxEnsureCapacity_real_T(sp, distColListK, nz, &tj_emlrtRTEI);
           distColListK_data = distColListK->data;
           for (b_i = 0; b_i < last; b_i++) {
             nz = colList_data[b_i];
@@ -1906,7 +2009,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
           for (b_i = 0; b_i < nz; b_i++) {
             if ((colList_data[b_i] < 1) || (colList_data[b_i] > b_colRedux)) {
               emlrtDynamicBoundsCheckR2012b(colList_data[b_i], 1, b_colRedux,
-                                            &fi_emlrtBCI, (emlrtConstCTX)sp);
+                                            &ei_emlrtBCI, (emlrtConstCTX)sp);
             }
             colRedux_data[colList_data[b_i] - 1] = distColListK_data[b_i];
           }
@@ -1916,13 +2019,13 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
             b_ii->size[0] = 1;
             b_last = endOfPath->size[1];
             b_ii->size[1] = endOfPath->size[1];
-            emxEnsureCapacity_int32_T(sp, b_ii, nz, &tj_emlrtRTEI);
+            emxEnsureCapacity_int32_T(sp, b_ii, nz, &uj_emlrtRTEI);
             b_ii_data = b_ii->data;
             for (b_i = 0; b_i < c_nz; b_i++) {
               if ((endOfPath_data[b_i] < 1) ||
                   (endOfPath_data[b_i] > prevRow->size[1])) {
                 emlrtDynamicBoundsCheckR2012b(endOfPath_data[b_i], 1,
-                                              prevRow->size[1], &ii_emlrtBCI,
+                                              prevRow->size[1], &hi_emlrtBCI,
                                               (emlrtConstCTX)sp);
               }
               b_ii_data[b_i] = prevRow_data[endOfPath_data[b_i] - 1];
@@ -1930,7 +2033,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
             nz = colList->size[0] * colList->size[1];
             colList->size[0] = 1;
             colList->size[1] = endOfPath->size[1];
-            emxEnsureCapacity_int32_T(sp, colList, nz, &vj_emlrtRTEI);
+            emxEnsureCapacity_int32_T(sp, colList, nz, &wj_emlrtRTEI);
             colList_data = colList->data;
             for (b_i = 0; b_i < c_nz; b_i++) {
               colList_data[b_i] = endOfPath_data[b_i];
@@ -1940,20 +2043,20 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
             for (b_i = 0; b_i < colMin; b_i++) {
               if ((endOfPath_data[b_i] < 1) || (endOfPath_data[b_i] > nz)) {
                 emlrtDynamicBoundsCheckR2012b(endOfPath_data[b_i], 1, nz,
-                                              &ji_emlrtBCI, (emlrtConstCTX)sp);
+                                              &ii_emlrtBCI, (emlrtConstCTX)sp);
               }
               colSoln_data[endOfPath_data[b_i] - 1] = b_ii_data[b_i];
             }
             nz = r->size[0] * r->size[1];
             r->size[0] = 1;
             r->size[1] = b_ii->size[1];
-            emxEnsureCapacity_int32_T(sp, r, nz, &xj_emlrtRTEI);
+            emxEnsureCapacity_int32_T(sp, r, nz, &yj_emlrtRTEI);
             r7 = r->data;
             nz = rowSoln->size[0];
             for (b_i = 0; b_i < colMin; b_i++) {
               if ((b_ii_data[b_i] < 1) || (b_ii_data[b_i] > nz)) {
                 emlrtDynamicBoundsCheckR2012b(b_ii_data[b_i], 1, nz,
-                                              &ni_emlrtBCI, (emlrtConstCTX)sp);
+                                              &mi_emlrtBCI, (emlrtConstCTX)sp);
               }
               r7[b_i] = (int32_T)rowSoln_data[b_ii_data[b_i] - 1];
             }
@@ -1963,7 +2066,7 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
             }
             if (endOfPath->size[1] < 1) {
               emlrtDynamicBoundsCheckR2012b(1, 1, endOfPath->size[1],
-                                            &th_emlrtBCI, (emlrtConstCTX)sp);
+                                            &sh_emlrtBCI, (emlrtConstCTX)sp);
             }
             endOfPath_data[0] = r7[0];
             if (b_ii->size[1] != endOfPath->size[1]) {
@@ -1973,19 +2076,19 @@ void lapDijkstra(const emlrtStack *sp, const emxArray_real_T *costMatrix,
             for (b_i = 0; b_i < b_last; b_i++) {
               if ((b_ii_data[b_i] < 1) || (b_ii_data[b_i] > nz)) {
                 emlrtDynamicBoundsCheckR2012b(b_ii_data[b_i], 1, nz,
-                                              &qi_emlrtBCI, (emlrtConstCTX)sp);
+                                              &pi_emlrtBCI, (emlrtConstCTX)sp);
               }
               rowSoln_data[b_ii_data[b_i] - 1] = colList_data[b_i];
             }
             nz = isUnassignedCol->size[0] * isUnassignedCol->size[1];
             isUnassignedCol->size[0] = 1;
             isUnassignedCol->size[1] = b_ii->size[1];
-            emxEnsureCapacity_boolean_T(sp, isUnassignedCol, nz, &bk_emlrtRTEI);
+            emxEnsureCapacity_boolean_T(sp, isUnassignedCol, nz, &ck_emlrtRTEI);
             isnanRowSoln_data = isUnassignedCol->data;
             for (b_i = 0; b_i < colMin; b_i++) {
               isnanRowSoln_data[b_i] = (b_ii_data[b_i] == rowFree);
             }
-            st.site = &ygb_emlrtRSI;
+            st.site = &qfb_emlrtRSI;
           } while (!ifWhileCond(&st, isUnassignedCol));
         }
       }

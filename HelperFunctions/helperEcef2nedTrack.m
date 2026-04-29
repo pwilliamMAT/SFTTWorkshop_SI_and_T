@@ -1,5 +1,5 @@
-function radarTrack = helperEcef2nedTrack(centralTrack)
-mapOrigin = [42.39423231362 -70.95934958874 0];
+function radarTrack = helperEcef2nedTrack(centralTrack,mapOrigin)
+%mapOrigin = [42.39423231362 -70.95934958874 0];
 radarTrack = objectTrack('State',zeros(6,1),...
     'StateCovariance',eye(6));
 radarTrack = helperSyncTrack(radarTrack,centralTrack);
@@ -20,4 +20,5 @@ radarStateCov = P_rot(unpermute_idx, unpermute_idx);
 
 radarTrack.State = radarState;
 radarTrack.StateCovariance = radarStateCov;
+radarTrack.StateParameters = struct('Frame','NED','OriginPosition',mapOrigin);
 end

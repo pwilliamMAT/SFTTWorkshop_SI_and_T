@@ -18,14 +18,16 @@
 #include <string.h>
 
 /* Function Declarations */
-real_T EKFStateEstimator_likelihood(
+void EKFStateEstimator_predict(
+    const emlrtStack *sp,
+    const c_fusion_tracker_targetspecs_Pa *estimator_TargetSpecifications,
+    trackingEKF *estimator_TrackingFilter, struct_T *pdf, real_T dT);
+
+real_T c_EKFStateEstimator_detectionPr(
     const emlrtStack *sp,
     const c_fusion_tracker_sensorspecs_Ae *estimator_SensorSpecifications,
-    trackingEKF *estimator_TrackingFilter, const real_T pdf_State[6],
-    const real_T pdf_StateCovariance[36], const real_T measurement[4]);
+    const real_T pdf_State[6]);
 
-void EKFStateEstimator_merge(const emlrtStack *sp,
-                             const c_emxArray_struct_T *pdfs,
-                             const emxArray_real_T *weights, struct_T *pdf);
+real_T c_EKFStateEstimator_gateProbabi(const emlrtStack *sp, real_T gateSize);
 
 /* End of code generation (EKFStateEstimator.h) */

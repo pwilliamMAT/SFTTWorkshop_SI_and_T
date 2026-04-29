@@ -33,14 +33,14 @@ void b_xgerc(const emlrtStack *sp, int32_T m, int32_T n, real_T alpha1,
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &lf_emlrtRSI;
-  b_st.site = &mf_emlrtRSI;
-  c_st.site = &nf_emlrtRSI;
+  st.site = &bf_emlrtRSI;
+  b_st.site = &cf_emlrtRSI;
+  c_st.site = &df_emlrtRSI;
   if (!(alpha1 == 0.0)) {
     int32_T i;
     int32_T jA;
     jA = ia0;
-    d_st.site = &of_emlrtRSI;
+    d_st.site = &ef_emlrtRSI;
     if (n > 2147483646) {
       e_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -53,7 +53,7 @@ void b_xgerc(const emlrtStack *sp, int32_T m, int32_T n, real_T alpha1,
         int32_T b;
         temp *= alpha1;
         b = (m + jA) - 1;
-        d_st.site = &pf_emlrtRSI;
+        d_st.site = &ff_emlrtRSI;
         if ((jA <= b) && (b > 2147483646)) {
           e_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&e_st);
@@ -87,14 +87,14 @@ void c_xgerc(const emlrtStack *sp, int32_T m, int32_T n, real_T alpha1,
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &lf_emlrtRSI;
-  b_st.site = &mf_emlrtRSI;
-  c_st.site = &nf_emlrtRSI;
+  st.site = &bf_emlrtRSI;
+  b_st.site = &cf_emlrtRSI;
+  c_st.site = &df_emlrtRSI;
   if (!(alpha1 == 0.0)) {
     int32_T i;
     int32_T jA;
     jA = ia0;
-    d_st.site = &of_emlrtRSI;
+    d_st.site = &ef_emlrtRSI;
     if (n > 2147483646) {
       e_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -107,7 +107,7 @@ void c_xgerc(const emlrtStack *sp, int32_T m, int32_T n, real_T alpha1,
         int32_T b;
         temp *= alpha1;
         b = (m + jA) - 1;
-        d_st.site = &pf_emlrtRSI;
+        d_st.site = &ff_emlrtRSI;
         if ((jA <= b) && (b > 2147483646)) {
           e_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&e_st);
@@ -141,14 +141,14 @@ void d_xgerc(const emlrtStack *sp, int32_T m, int32_T n, real_T alpha1,
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &lf_emlrtRSI;
-  b_st.site = &mf_emlrtRSI;
-  c_st.site = &nf_emlrtRSI;
+  st.site = &bf_emlrtRSI;
+  b_st.site = &cf_emlrtRSI;
+  c_st.site = &df_emlrtRSI;
   if (!(alpha1 == 0.0)) {
     int32_T i;
     int32_T jA;
     jA = ia0;
-    d_st.site = &of_emlrtRSI;
+    d_st.site = &ef_emlrtRSI;
     if (n > 2147483646) {
       e_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -161,7 +161,7 @@ void d_xgerc(const emlrtStack *sp, int32_T m, int32_T n, real_T alpha1,
         int32_T b;
         temp *= alpha1;
         b = (m + jA) - 1;
-        d_st.site = &pf_emlrtRSI;
+        d_st.site = &ff_emlrtRSI;
         if ((jA <= b) && (b > 2147483646)) {
           e_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&e_st);
@@ -195,14 +195,14 @@ void xgerc(const emlrtStack *sp, int32_T m, int32_T n, real_T alpha1,
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  st.site = &lf_emlrtRSI;
-  b_st.site = &mf_emlrtRSI;
-  c_st.site = &nf_emlrtRSI;
+  st.site = &bf_emlrtRSI;
+  b_st.site = &cf_emlrtRSI;
+  c_st.site = &df_emlrtRSI;
   if (!(alpha1 == 0.0)) {
     int32_T i;
     int32_T jA;
     jA = ia0;
-    d_st.site = &of_emlrtRSI;
+    d_st.site = &ef_emlrtRSI;
     if (n > 2147483646) {
       e_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&e_st);
@@ -217,7 +217,7 @@ void xgerc(const emlrtStack *sp, int32_T m, int32_T n, real_T alpha1,
         int32_T vectorUB;
         temp *= alpha1;
         b = (m + jA) - 1;
-        d_st.site = &pf_emlrtRSI;
+        d_st.site = &ff_emlrtRSI;
         if ((jA <= b) && (b > 2147483646)) {
           e_st.site = &k_emlrtRSI;
           check_forloop_overflow_error(&e_st);

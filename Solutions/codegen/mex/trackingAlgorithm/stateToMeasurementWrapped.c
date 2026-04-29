@@ -15,25 +15,30 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo iab_emlrtRSI = {
+static emlrtRSInfo sx_emlrtRSI = {
     11,                          /* lineNo */
     "stateToMeasurementWrapped", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
-    "stateToMeasurementWrapped.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+utils\\stateToMeasurementWrappe"
+    "d.m" /* pathName */
 };
 
-static emlrtRSInfo jab_emlrtRSI = {
+static emlrtRSInfo tx_emlrtRSI = {
     15,                   /* lineNo */
     "stateToMeasurement", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
-    "stateToMeasurement.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+utils\\stateToMeasurement.m" /* pathName */
 };
 
-static emlrtRSInfo mab_emlrtRSI = {
+static emlrtRSInfo wx_emlrtRSI = {
     121,                                                  /* lineNo */
     "AzimuthElevationRangeAndRangeRateModel/measurement", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
-    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "measurement\\AzimuthElevationRangeAndRange"
+    "RateModel.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -60,8 +65,8 @@ void stateToMeasurementWrapped(const emlrtStack *sp, const real_T x[6],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &iab_emlrtRSI;
-  b_st.site = &jab_emlrtRSI;
+  st.site = &sx_emlrtRSI;
+  b_st.site = &tx_emlrtRSI;
   xP[0] = x[0];
   b_xP[0] = x[1];
   xP[1] = x[2];
@@ -134,7 +139,7 @@ void stateToMeasurementWrapped(const emlrtStack *sp, const real_T x[6],
   xP_tmp = xP[2] * xP[2];
   rVec[2] = xP_tmp;
   b_xP_tmp = d_sumColumnB(rVec);
-  c_st.site = &mab_emlrtRSI;
+  c_st.site = &wx_emlrtRSI;
   if (b_xP_tmp < 0.0) {
     emlrtErrorWithMessageIdR2018a(
         &c_st, &d_emlrtRTEI, "Coder:toolbox:ElFunDomainError",

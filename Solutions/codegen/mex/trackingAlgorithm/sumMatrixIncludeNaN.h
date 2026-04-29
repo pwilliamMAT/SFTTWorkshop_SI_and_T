@@ -19,14 +19,15 @@
 
 /* Function Declarations */
 real_T b_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x,
-                    int32_T vlen, int32_T vstart);
-
-real_T c_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T col,
                     int32_T vlen);
+
+real_T c_sumColumnB(const emlrtStack *sp, const emxArray_real_T *x,
+                    int32_T vlen, int32_T vstart);
 
 real_T d_sumColumnB(const real_T x[3]);
 
-real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T vlen);
+real_T sumColumnB(const emlrtStack *sp, const emxArray_real_T *x, int32_T col,
+                  int32_T vlen);
 
 real_T sumColumnB4(const emxArray_real_T *x, int32_T vstart);
 

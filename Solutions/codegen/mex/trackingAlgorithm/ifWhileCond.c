@@ -13,16 +13,22 @@
 #include "trackingAlgorithm_types.h"
 
 /* Variable Definitions */
-static emlrtRSInfo gp_emlrtRSI = {
-    18,                                                      /* lineNo */
-    "ifWhileCond",                                           /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/ifWhileCond.m" /* pathName */
+static emlrtRSInfo ro_emlrtRSI =
+    {
+        18,            /* lineNo */
+        "ifWhileCond", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+        "internal\\ifWhileCond.m" /* pathName */
 };
 
-static emlrtRSInfo hp_emlrtRSI = {
-    31,                                                      /* lineNo */
-    "checkNoNaNs",                                           /* fcnName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/ifWhileCond.m" /* pathName */
+static emlrtRSInfo so_emlrtRSI =
+    {
+        31,            /* lineNo */
+        "checkNoNaNs", /* fcnName */
+        "C:\\Program "
+        "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+        "internal\\ifWhileCond.m" /* pathName */
 };
 
 /* Function Definitions */
@@ -44,8 +50,8 @@ boolean_T ifWhileCond(const emlrtStack *sp, const emxArray_boolean_T *x)
   if (y) {
     int32_T k;
     boolean_T exitg1;
-    st.site = &gp_emlrtRSI;
-    b_st.site = &hp_emlrtRSI;
+    st.site = &ro_emlrtRSI;
+    b_st.site = &so_emlrtRSI;
     if (x->size[1] > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);

@@ -18,11 +18,6 @@
 #include <string.h>
 
 /* Function Declarations */
-real_T b_logsumexp(const emlrtStack *sp, const emxArray_real_T *x);
-
-real_T c_logsumexp(const emlrtStack *sp, const real_T x[3]);
-
-real_T logsumexp(const emlrtStack *sp, const real_T x_data[],
-                 const int32_T x_size[2]);
+real_T logsumexp(const emlrtStack *sp, const emxArray_real_T *x);
 
 /* End of code generation (logsumexp.h) */

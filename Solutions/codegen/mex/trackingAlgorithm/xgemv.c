@@ -28,11 +28,11 @@ void b_xgemv(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[54],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &if_emlrtRSI;
+  st.site = &xe_emlrtRSI;
   if (n != 0) {
     int32_T b;
     int32_T i;
-    b_st.site = &kf_emlrtRSI;
+    b_st.site = &af_emlrtRSI;
     if (n > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -46,7 +46,7 @@ void b_xgemv(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[54],
       real_T c;
       c = 0.0;
       b = (iac + m) - 1;
-      b_st.site = &uf_emlrtRSI;
+      b_st.site = &kf_emlrtRSI;
       if ((iac <= b) && (b > 2147483646)) {
         c_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&c_st);
@@ -74,11 +74,11 @@ void c_xgemv(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[40],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &if_emlrtRSI;
+  st.site = &xe_emlrtRSI;
   if (n != 0) {
     int32_T b;
     int32_T i;
-    b_st.site = &kf_emlrtRSI;
+    b_st.site = &af_emlrtRSI;
     if (n > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -92,7 +92,7 @@ void c_xgemv(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[40],
       real_T c;
       c = 0.0;
       b = (iac + m) - 1;
-      b_st.site = &uf_emlrtRSI;
+      b_st.site = &kf_emlrtRSI;
       if ((iac <= b) && (b > 2147483646)) {
         c_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&c_st);
@@ -120,11 +120,11 @@ void d_xgemv(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[60],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &if_emlrtRSI;
+  st.site = &xe_emlrtRSI;
   if (n != 0) {
     int32_T b;
     int32_T i;
-    b_st.site = &kf_emlrtRSI;
+    b_st.site = &af_emlrtRSI;
     if (n > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -138,7 +138,7 @@ void d_xgemv(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[60],
       real_T c;
       c = 0.0;
       b = (iac + m) - 1;
-      b_st.site = &uf_emlrtRSI;
+      b_st.site = &kf_emlrtRSI;
       if ((iac <= b) && (b > 2147483646)) {
         c_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&c_st);
@@ -166,11 +166,11 @@ void xgemv(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[9],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &if_emlrtRSI;
+  st.site = &xe_emlrtRSI;
   if (m != 0) {
     int32_T i;
     int32_T ix;
-    b_st.site = &kf_emlrtRSI;
+    b_st.site = &af_emlrtRSI;
     if (m > 2147483646) {
       c_st.site = &k_emlrtRSI;
       check_forloop_overflow_error(&c_st);
@@ -184,7 +184,7 @@ void xgemv(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[9],
     for (iac = ia0; iac <= i; iac += 3) {
       int32_T b;
       b = (iac + m) - 1;
-      b_st.site = &jf_emlrtRSI;
+      b_st.site = &ye_emlrtRSI;
       if ((iac <= b) && (b > 2147483646)) {
         c_st.site = &k_emlrtRSI;
         check_forloop_overflow_error(&c_st);

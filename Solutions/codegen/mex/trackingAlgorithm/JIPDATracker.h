@@ -18,10 +18,6 @@
 #include <string.h>
 
 /* Function Declarations */
-void JIPDATracker_setupImpl(trackingAlgorithmStackData *SD,
-                            const emlrtStack *sp,
-                            fusion_tracker_JIPDATracker *b_tracker);
-
 void JIPDATracker_stepImpl(trackingAlgorithmStackData *SD, const emlrtStack *sp,
                            fusion_tracker_JIPDATracker *b_tracker,
                            const real_T varargin_1_LookTime_data[],
@@ -49,9 +45,5 @@ void JIPDATracker_stepImpl(trackingAlgorithmStackData *SD, const emlrtStack *sp,
                            const real_T c_varargin_1_RangeRateAccuracy_[],
                            const int32_T d_varargin_1_RangeRateAccuracy_[2],
                            emxArray_struct1_T *varargout_1);
-
-void c_JIPDATracker_updateSensorSpec(trackingAlgorithmStackData *SD,
-                                     const emlrtStack *sp,
-                                     fusion_tracker_JIPDATracker *obj);
 
 /* End of code generation (JIPDATracker.h) */

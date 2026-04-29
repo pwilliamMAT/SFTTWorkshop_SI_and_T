@@ -29,9 +29,9 @@ void b_xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[9],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = (ix0 + n) - 1;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= b) && (b > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -64,9 +64,9 @@ void c_xscal(const emlrtStack *sp, real_T a, real_T x[9], int32_T ix0)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = ix0 + 2;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= ix0 + 2) && (ix0 + 2 > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -99,9 +99,9 @@ void d_xscal(const emlrtStack *sp, real_T x[9], int32_T ix0)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = ix0 + 2;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= ix0 + 2) && (ix0 + 2 > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -135,9 +135,9 @@ void e_xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[6],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = (ix0 + n) - 1;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= b) && (b > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -169,9 +169,9 @@ void f_xscal(const emlrtStack *sp, real_T a, real_T x[36], int32_T ix0)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = ix0 + 5;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= ix0 + 5) && (ix0 + 5 > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -204,9 +204,9 @@ void g_xscal(const emlrtStack *sp, real_T x[36], int32_T ix0)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = ix0 + 5;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= ix0 + 5) && (ix0 + 5 > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -240,9 +240,9 @@ void h_xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[16],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = (ix0 + n) - 1;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= b) && (b > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -276,9 +276,9 @@ void i_xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[4],
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = (ix0 + n) - 1;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= b) && (b > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -310,9 +310,9 @@ void j_xscal(const emlrtStack *sp, real_T a, real_T x[16], int32_T ix0)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = ix0 + 3;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= ix0 + 3) && (ix0 + 3 > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -345,9 +345,9 @@ void k_xscal(const emlrtStack *sp, real_T x[16], int32_T ix0)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = ix0 + 3;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= ix0 + 3) && (ix0 + 3 > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);
@@ -387,9 +387,9 @@ void xscal(const emlrtStack *sp, int32_T n, real_T a, real_T x[36], int32_T ix0)
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  st.site = &ld_emlrtRSI;
+  st.site = &bd_emlrtRSI;
   b = (ix0 + n) - 1;
-  b_st.site = &md_emlrtRSI;
+  b_st.site = &cd_emlrtRSI;
   if ((ix0 <= b) && (b > 2147483646)) {
     c_st.site = &k_emlrtRSI;
     check_forloop_overflow_error(&c_st);

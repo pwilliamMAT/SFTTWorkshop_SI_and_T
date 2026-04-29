@@ -21,7 +21,10 @@
 void JIPDATrackUpdater_update(
     trackingAlgorithmStackData *SD, const emlrtStack *sp,
     real_T updater_AssignmentThreshold,
-    h_fusion_tracker_internal_estim *c_updater_Estimator_StateEstima,
+    const c_fusion_tracker_targetspecs_Pa *c_updater_Estimator_StateEstima,
+    const c_fusion_tracker_sensorspecs_Ae *d_updater_Estimator_StateEstima,
+    trackingEKF *e_updater_Estimator_StateEstima,
+    const c_fusion_tracker_sensorspecs_Ae *f_updater_Estimator_StateEstima,
     emxArray_struct_T *trackList, const real_T sensorData_LookTime_data[],
     const int32_T sensorData_LookTime_size[2],
     const real_T sensorData_LookAzimuth_data[],

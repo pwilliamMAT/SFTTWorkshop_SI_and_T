@@ -24,23 +24,11 @@ void trackingEKF_correct(const emlrtStack *sp, trackingEKF *filter,
                          const real_T varargin_3_OriginVelocity[9],
                          const real_T varargin_3_Orientation[27]);
 
-real_T trackingEKF_likelihood(const emlrtStack *sp, trackingEKF *EKF,
-                              const real_T z[4],
-                              const real_T varargin_1_f2_OriginPosition[9],
-                              const real_T varargin_1_f2_OriginVelocity[9],
-                              const real_T varargin_1_f2_Orientation[27]);
-
-void trackingEKF_predict(const emlrtStack *sp, trackingEKF *filter,
-                         real_T varargin_1);
-
 void trackingEKF_residual(const emlrtStack *sp, trackingEKF *EKF,
                           const real_T z[4],
                           const real_T c_measurementParams_f2_OriginPo[9],
                           const real_T c_measurementParams_f2_OriginVe[9],
                           const real_T c_measurementParams_f2_Orientat[27],
                           real_T res[4], real_T S[16]);
-
-trackingEKF *trackingEKF_trackingEKF(const emlrtStack *sp, trackingEKF *EKF,
-                                     const real_T varargin_22[9]);
 
 /* End of code generation (trackingEKF.h) */

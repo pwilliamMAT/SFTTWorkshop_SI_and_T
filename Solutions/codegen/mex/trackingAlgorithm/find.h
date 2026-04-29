@@ -24,9 +24,6 @@ void b_eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
 void c_eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
                 emxArray_int32_T *i);
 
-int32_T d_eml_find(const emlrtStack *sp, const real_T x_data[], int32_T x_size,
-                   int32_T i_data[]);
-
 void eml_find(const emlrtStack *sp, const emxArray_boolean_T *x,
               emxArray_int32_T *i);
 

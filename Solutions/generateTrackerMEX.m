@@ -5,13 +5,15 @@ scenario = helperCreateScenario(tuningData,mapOrigin);
 
 %  Configure Target Specifications
 passengerSpec = trackerTargetSpec("aerospace","aircraft","passenger");
-generalAviationSpec = trackerTargetSpec("aerospace","aircraft","general-aviation");
-helicopterSpec = trackerTargetSpec("aerospace","aircraft","helicopter");
-targetSpec = {passengerSpec,generalAviationSpec,helicopterSpec};
+targetSpec = {passengerSpec}; % Switch to single target spec, runs faster with passenger only
+%generalAviationSpec = trackerTargetSpec("aerospace","aircraft","general-aviation");
+%helicopterSpec = trackerTargetSpec("aerospace","aircraft","helicopter");
+%targetSpec = {passengerSpec,generalAviationSpec,helicopterSpec};
 
 
 % Declare fixed-size cell array for targetSpec
-targetSpecType = coder.typeof({passengerSpec, generalAviationSpec, helicopterSpec}, [1 3], [false false]);
+%targetSpecType = coder.typeof({passengerSpec, generalAviationSpec, helicopterSpec}, [1 3], [false false]);
+targetSpecType = coder.typeof({passengerSpec}, [1 1], [false false]);
 
 
 % Configure Sensor Specification

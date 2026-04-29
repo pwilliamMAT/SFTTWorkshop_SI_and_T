@@ -104,25 +104,16 @@ typedef struct {
 #ifndef typedef_struct_T
 #define typedef_struct_T
 typedef struct {
-  real_T State[6];
-  real_T StateCovariance[36];
-} struct_T;
-#endif /* typedef_struct_T */
-
-#ifndef typedef_b_struct_T
-#define typedef_b_struct_T
-typedef struct {
   real_T Time;
   uint32_T TrackID;
   uint32_T Age;
   boolean_T IsConfirmed;
   boolean_T IsCoasted;
-  struct_T Hypothesis[3];
-  real_T LogWeights[3];
-  boolean_T IsValid[3];
+  real_T State[6];
+  real_T StateCovariance[36];
   real_T ExistenceProbability;
-} b_struct_T;
-#endif /* typedef_b_struct_T */
+} struct_T;
+#endif /* typedef_struct_T */
 
 #ifndef struct_emxArray_real_T
 #define struct_emxArray_real_T
@@ -142,7 +133,7 @@ typedef struct emxArray_real_T emxArray_real_T;
 #ifndef typedef_emxArray_struct_T
 #define typedef_emxArray_struct_T
 typedef struct {
-  b_struct_T *data;
+  struct_T *data;
   int32_T *size;
   int32_T allocatedSize;
   int32_T numDimensions;
@@ -228,8 +219,8 @@ struct emxArray_real_T_1x1 {
 typedef struct emxArray_real_T_1x1 emxArray_real_T_1x1;
 #endif /* typedef_emxArray_real_T_1x1 */
 
-#ifndef typedef_c_struct_T
-#define typedef_c_struct_T
+#ifndef typedef_b_struct_T
+#define typedef_b_struct_T
 typedef struct {
   emxArray_real_T_1x100 LookTime;
   emxArray_real_T_1x100 LookAzimuth;
@@ -239,13 +230,13 @@ typedef struct {
   emxArray_real_T_1x1 ElevationNoise;
   emxArray_real_T_1x1 RangeNoise;
   emxArray_real_T_1x1 RangeRateNoise;
-} c_struct_T;
-#endif /* typedef_c_struct_T */
+} b_struct_T;
+#endif /* typedef_b_struct_T */
 
 #ifndef typedef_b_emxArray_struct_T
 #define typedef_b_emxArray_struct_T
 typedef struct {
-  c_struct_T *data;
+  b_struct_T *data;
   int32_T *size;
   int32_T allocatedSize;
   int32_T numDimensions;
@@ -332,23 +323,23 @@ struct emxArray_uint32_T_51x2 {
 typedef struct emxArray_uint32_T_51x2 emxArray_uint32_T_51x2;
 #endif /* typedef_emxArray_uint32_T_51x2 */
 
-#ifndef typedef_cell_wrap_80
-#define typedef_cell_wrap_80
+#ifndef typedef_cell_wrap_74
+#define typedef_cell_wrap_74
 typedef struct {
   emxArray_uint32_T_51x2 f1;
-} cell_wrap_80;
-#endif /* typedef_cell_wrap_80 */
+} cell_wrap_74;
+#endif /* typedef_cell_wrap_74 */
 
-#ifndef typedef_emxArray_cell_wrap_80
-#define typedef_emxArray_cell_wrap_80
+#ifndef typedef_emxArray_cell_wrap_74
+#define typedef_emxArray_cell_wrap_74
 typedef struct {
-  cell_wrap_80 *data;
+  cell_wrap_74 *data;
   int32_T *size;
   int32_T allocatedSize;
   int32_T numDimensions;
   boolean_T canFreeData;
-} emxArray_cell_wrap_80;
-#endif /* typedef_emxArray_cell_wrap_80 */
+} emxArray_cell_wrap_74;
+#endif /* typedef_emxArray_cell_wrap_74 */
 
 #ifndef struct_emxArray_uint32_T
 #define struct_emxArray_uint32_T
@@ -365,34 +356,23 @@ struct emxArray_uint32_T {
 typedef struct emxArray_uint32_T emxArray_uint32_T;
 #endif /* typedef_emxArray_uint32_T */
 
-#ifndef typedef_cell_wrap_81
-#define typedef_cell_wrap_81
+#ifndef typedef_cell_wrap_75
+#define typedef_cell_wrap_75
 typedef struct {
   emxArray_uint32_T *f1;
-} cell_wrap_81;
-#endif /* typedef_cell_wrap_81 */
+} cell_wrap_75;
+#endif /* typedef_cell_wrap_75 */
 
-#ifndef typedef_emxArray_cell_wrap_81
-#define typedef_emxArray_cell_wrap_81
+#ifndef typedef_emxArray_cell_wrap_75
+#define typedef_emxArray_cell_wrap_75
 typedef struct {
-  cell_wrap_81 *data;
+  cell_wrap_75 *data;
   int32_T *size;
   int32_T allocatedSize;
   int32_T numDimensions;
   boolean_T canFreeData;
-} emxArray_cell_wrap_81;
-#endif /* typedef_emxArray_cell_wrap_81 */
-
-#ifndef typedef_c_emxArray_struct_T
-#define typedef_c_emxArray_struct_T
-typedef struct {
-  struct_T *data;
-  int32_T *size;
-  int32_T allocatedSize;
-  int32_T numDimensions;
-  boolean_T canFreeData;
-} c_emxArray_struct_T;
-#endif /* typedef_c_emxArray_struct_T */
+} emxArray_cell_wrap_75;
+#endif /* typedef_emxArray_cell_wrap_75 */
 
 #ifndef typedef_struct1_T
 #define typedef_struct1_T
@@ -404,8 +384,8 @@ typedef struct {
   uint32_T Age;
   real_T State[6];
   real_T StateCovariance[36];
-  int32_T ObjectClassID;
-  real_T ObjectClassProbabilities[3];
+  real_T ObjectClassID;
+  real_T ObjectClassProbabilities;
   char_T TrackLogic[10];
   real_T TrackLogicState;
   boolean_T IsConfirmed;
@@ -433,33 +413,6 @@ typedef struct {
   boolean_T IsLockedDataType[2];
 } c_fusion_tracker_targetspecs_Pa;
 #endif /* c_typedef_c_fusion_tracker_targ */
-
-#ifndef d_typedef_c_fusion_tracker_targ
-#define d_typedef_c_fusion_tracker_targ
-typedef struct {
-  c_fusion_tracker_transition_Con StateTransitionModel;
-  c_fusion_tracker_survival_Unifo SurvivalModel;
-  boolean_T IsLockedDataType[2];
-} c_fusion_tracker_targetspecs_Ge;
-#endif /* d_typedef_c_fusion_tracker_targ */
-
-#ifndef e_typedef_c_fusion_tracker_targ
-#define e_typedef_c_fusion_tracker_targ
-typedef struct {
-  c_fusion_tracker_transition_Con StateTransitionModel;
-  c_fusion_tracker_survival_Unifo SurvivalModel;
-  boolean_T IsLockedDataType[2];
-} c_fusion_tracker_targetspecs_He;
-#endif /* e_typedef_c_fusion_tracker_targ */
-
-#ifndef typedef_cell_4
-#define typedef_cell_4
-typedef struct {
-  c_fusion_tracker_targetspecs_Pa f1;
-  c_fusion_tracker_targetspecs_Ge f2;
-  c_fusion_tracker_targetspecs_He f3;
-} cell_4;
-#endif /* typedef_cell_4 */
 
 #ifndef c_typedef_c_fusion_tracker_sens
 #define c_typedef_c_fusion_tracker_sens
@@ -500,114 +453,77 @@ typedef struct {
 #ifndef c_typedef_d_fusion_tracker_inte
 #define c_typedef_d_fusion_tracker_inte
 typedef struct {
-  c_fusion_tracker_targetspecs_Ge TargetSpecifications[1];
   c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
-  trackingEKF *TrackingFilter;
+  real_T DetectionProbability;
+  real_T SurvivalProbability;
 } d_fusion_tracker_internal_estim;
 #endif /* c_typedef_d_fusion_tracker_inte */
 
 #ifndef c_typedef_e_fusion_tracker_inte
 #define c_typedef_e_fusion_tracker_inte
 typedef struct {
-  c_fusion_tracker_targetspecs_He TargetSpecifications[1];
-  c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
-  trackingEKF *TrackingFilter;
+  c_fusion_tracker_internal_estim StateEstimator;
+  d_fusion_tracker_internal_estim ExistenceEstimator;
 } e_fusion_tracker_internal_estim;
 #endif /* c_typedef_e_fusion_tracker_inte */
-
-#ifndef typedef_cell_5
-#define typedef_cell_5
-typedef struct {
-  c_fusion_tracker_internal_estim f1;
-  d_fusion_tracker_internal_estim f2;
-  e_fusion_tracker_internal_estim f3;
-} cell_5;
-#endif /* typedef_cell_5 */
 
 #ifndef c_typedef_f_fusion_tracker_inte
 #define c_typedef_f_fusion_tracker_inte
 typedef struct {
-  cell_4 TargetSpecifications;
-  c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
-  real_T DeletionThreshold;
-  cell_5 Estimators;
+  e_fusion_tracker_internal_estim StateEstimator;
 } f_fusion_tracker_internal_estim;
 #endif /* c_typedef_f_fusion_tracker_inte */
-
-#ifndef c_typedef_g_fusion_tracker_inte
-#define c_typedef_g_fusion_tracker_inte
-typedef struct {
-  c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
-  real_T DetectionProbability;
-  real_T SurvivalProbability;
-} g_fusion_tracker_internal_estim;
-#endif /* c_typedef_g_fusion_tracker_inte */
-
-#ifndef c_typedef_h_fusion_tracker_inte
-#define c_typedef_h_fusion_tracker_inte
-typedef struct {
-  f_fusion_tracker_internal_estim StateEstimator;
-  g_fusion_tracker_internal_estim ExistenceEstimator;
-} h_fusion_tracker_internal_estim;
-#endif /* c_typedef_h_fusion_tracker_inte */
-
-#ifndef c_typedef_i_fusion_tracker_inte
-#define c_typedef_i_fusion_tracker_inte
-typedef struct {
-  h_fusion_tracker_internal_estim StateEstimator;
-} i_fusion_tracker_internal_estim;
-#endif /* c_typedef_i_fusion_tracker_inte */
 
 #ifndef d_typedef_d_fusion_tracker_inte
 #define d_typedef_d_fusion_tracker_inte
 typedef struct {
-  cell_4 TargetSpecifications;
+  c_fusion_tracker_targetspecs_Pa TargetSpecifications[1];
   c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
-  i_fusion_tracker_internal_estim Estimator;
+  f_fusion_tracker_internal_estim Estimator;
 } d_fusion_tracker_internal_compo;
 #endif /* d_typedef_d_fusion_tracker_inte */
 
 #ifndef d_typedef_e_fusion_tracker_inte
 #define d_typedef_e_fusion_tracker_inte
 typedef struct {
-  cell_4 TargetSpecifications;
+  c_fusion_tracker_targetspecs_Pa TargetSpecifications[1];
   c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
   real_T AssignmentThreshold;
   real_T InitializationThreshold;
   real_T MaxNumEvents;
-  i_fusion_tracker_internal_estim Estimator;
+  f_fusion_tracker_internal_estim Estimator;
 } e_fusion_tracker_internal_compo;
 #endif /* d_typedef_e_fusion_tracker_inte */
 
 #ifndef d_typedef_f_fusion_tracker_inte
 #define d_typedef_f_fusion_tracker_inte
 typedef struct {
-  cell_4 TargetSpecifications;
+  c_fusion_tracker_targetspecs_Pa TargetSpecifications[1];
   c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
   real_T AssignmentThreshold;
-  i_fusion_tracker_internal_estim Estimator;
+  f_fusion_tracker_internal_estim Estimator;
 } f_fusion_tracker_internal_compo;
 #endif /* d_typedef_f_fusion_tracker_inte */
 
-#ifndef d_typedef_g_fusion_tracker_inte
-#define d_typedef_g_fusion_tracker_inte
+#ifndef c_typedef_g_fusion_tracker_inte
+#define c_typedef_g_fusion_tracker_inte
 typedef struct {
-  cell_4 TargetSpecifications;
+  c_fusion_tracker_targetspecs_Pa TargetSpecifications[1];
   c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
   emxArray_struct_T *InternalTrackList;
 } g_fusion_tracker_internal_compo;
-#endif /* d_typedef_g_fusion_tracker_inte */
+#endif /* c_typedef_g_fusion_tracker_inte */
 
-#ifndef d_typedef_h_fusion_tracker_inte
-#define d_typedef_h_fusion_tracker_inte
+#ifndef c_typedef_h_fusion_tracker_inte
+#define c_typedef_h_fusion_tracker_inte
 typedef struct {
-  cell_4 TargetSpecifications;
+  c_fusion_tracker_targetspecs_Pa TargetSpecifications[1];
   c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
   real_T ConfirmationThreshold;
   real_T DeletionThreshold;
-  i_fusion_tracker_internal_estim Estimator;
+  f_fusion_tracker_internal_estim Estimator;
 } h_fusion_tracker_internal_compo;
-#endif /* d_typedef_h_fusion_tracker_inte */
+#endif /* c_typedef_h_fusion_tracker_inte */
 
 #ifndef typedef_objectTrack
 #define typedef_objectTrack
@@ -616,8 +532,8 @@ typedef struct {
   uint32_T BranchID;
   uint32_T SourceIndex;
   uint32_T Age;
-  int32_T ObjectClassID;
-  real_T ObjectClassProbabilities[3];
+  real_T ObjectClassID;
+  real_T ObjectClassProbabilities;
   boolean_T IsConfirmed;
   boolean_T IsCoasted;
   boolean_T IsSelfReported;
@@ -628,155 +544,56 @@ typedef struct {
 } objectTrack;
 #endif /* typedef_objectTrack */
 
-#ifndef d_typedef_i_fusion_tracker_inte
-#define d_typedef_i_fusion_tracker_inte
+#ifndef c_typedef_i_fusion_tracker_inte
+#define c_typedef_i_fusion_tracker_inte
 typedef struct {
-  cell_4 TargetSpecifications;
+  c_fusion_tracker_targetspecs_Pa TargetSpecifications[1];
   c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
-  i_fusion_tracker_internal_estim Estimator;
+  f_fusion_tracker_internal_estim Estimator;
   objectTrack SampleTrack;
 } i_fusion_tracker_internal_compo;
-#endif /* d_typedef_i_fusion_tracker_inte */
-
-#ifndef c_typedef_d_TrackEstimator_upda
-#define c_typedef_d_TrackEstimator_upda
-typedef struct {
-  f_fusion_tracker_internal_estim r;
-  c_fusion_tracker_internal_estim r1;
-  d_fusion_tracker_internal_estim r2;
-  e_fusion_tracker_internal_estim r3;
-  c_fusion_tracker_sensorspecs_Ae val;
-  c_fusion_tracker_sensorspecs_Ae b_val;
-} d_TrackEstimator_updateEstimato;
-#endif /* c_typedef_d_TrackEstimator_upda */
-
-#ifndef c_typedef_d_IPDAEstimator_updat
-#define c_typedef_d_IPDAEstimator_updat
-typedef struct {
-  f_fusion_tracker_internal_estim estimator;
-  c_fusion_tracker_internal_estim b_estimator;
-  d_fusion_tracker_internal_estim c_estimator;
-  e_fusion_tracker_internal_estim d_estimator;
-  g_fusion_tracker_internal_estim e_estimator;
-} d_IPDAEstimator_updateEstimator;
-#endif /* c_typedef_d_IPDAEstimator_updat */
-
-#ifndef c_typedef_d_JIPDATrackAssigner_
-#define c_typedef_d_JIPDATrackAssigner_
-typedef struct {
-  c_fusion_tracker_sensorspecs_Ae val;
-  c_fusion_tracker_sensorspecs_Ae b_val;
-  c_fusion_tracker_sensorspecs_Ae c_val;
-} d_JIPDATrackAssigner_measuremen;
-#endif /* c_typedef_d_JIPDATrackAssigner_ */
-
-#ifndef c_typedef_d_JIPDATracker_update
-#define c_typedef_d_JIPDATracker_update
-typedef struct {
-  i_fusion_tracker_internal_compo obj;
-  e_fusion_tracker_internal_compo b_obj;
-  h_fusion_tracker_internal_compo c_obj;
-  f_fusion_tracker_internal_compo d_obj;
-  d_fusion_tracker_internal_compo e_obj;
-} d_JIPDATracker_updateSensorSpec;
-#endif /* c_typedef_d_JIPDATracker_update */
-
-#ifndef typedef_b_TrackEstimator_setup
-#define typedef_b_TrackEstimator_setup
-typedef struct {
-  f_fusion_tracker_internal_estim r;
-  c_fusion_tracker_sensorspecs_Ae obj_SensorSpecifications_idx_0;
-} b_TrackEstimator_setup;
-#endif /* typedef_b_TrackEstimator_setup */
-
-#ifndef c_typedef_d_TrackEstimator_set_
-#define c_typedef_d_TrackEstimator_set_
-typedef struct {
-  h_fusion_tracker_internal_estim obj;
-  f_fusion_tracker_internal_estim b_obj;
-} d_TrackEstimator_set_TargetSpec;
-#endif /* c_typedef_d_TrackEstimator_set_ */
-
-#ifndef c_typedef_b_IPDAEstimator_corre
-#define c_typedef_b_IPDAEstimator_corre
-typedef struct {
-  h_fusion_tracker_internal_estim r;
-} b_IPDAEstimator_correctJPDA;
-#endif /* c_typedef_b_IPDAEstimator_corre */
-
-#ifndef c_typedef_b_JIPDATrackAssigner_
-#define c_typedef_b_JIPDATrackAssigner_
-typedef struct {
-  c_fusion_tracker_internal_estim assigner_Estimator_StateEstimat;
-  d_fusion_tracker_internal_estim b_assigner_Estimator_StateEstim;
-  e_fusion_tracker_internal_estim c_assigner_Estimator_StateEstim;
-  c_fusion_tracker_sensorspecs_Ae val;
-  c_fusion_tracker_sensorspecs_Ae b_val;
-  c_fusion_tracker_sensorspecs_Ae c_val;
-  c_fusion_tracker_sensorspecs_Ae estimator_SensorSpecifications;
-} b_JIPDATrackAssigner_assign;
-#endif /* c_typedef_b_JIPDATrackAssigner_ */
-
-#ifndef typedef_b_trackEstimator
-#define typedef_b_trackEstimator
-typedef struct {
-  h_fusion_tracker_internal_estim ipdaEstimator;
-  i_fusion_tracker_internal_estim r;
-  f_fusion_tracker_internal_estim stateEstimator;
-  c_fusion_tracker_internal_estim estimator;
-  d_fusion_tracker_internal_estim b_estimator;
-  e_fusion_tracker_internal_estim c_estimator;
-} b_trackEstimator;
-#endif /* typedef_b_trackEstimator */
+#endif /* c_typedef_i_fusion_tracker_inte */
 
 #ifndef c_typedef_b_JIPDATrackUpdater_u
 #define c_typedef_b_JIPDATrackUpdater_u
 typedef struct {
-  h_fusion_tracker_internal_estim updater_Estimator_StateEstimato;
+  c_fusion_tracker_sensorspecs_Ae updater_Estimator_StateEstimato;
 } b_JIPDATrackUpdater_update;
 #endif /* c_typedef_b_JIPDATrackUpdater_u */
 
-#ifndef c_typedef_b_ObjectTrackOutputte
-#define c_typedef_b_ObjectTrackOutputte
+#ifndef c_typedef_b_JIPDATrackAssigner_
+#define c_typedef_b_JIPDATrackAssigner_
 typedef struct {
-  i_fusion_tracker_internal_estim estimator;
-  c_fusion_tracker_sensorspecs_Ae outputter;
-} b_ObjectTrackOutputter_setup;
-#endif /* c_typedef_b_ObjectTrackOutputte */
+  c_fusion_tracker_sensorspecs_Ae val;
+  c_fusion_tracker_sensorspecs_Ae estimator_SensorSpecifications;
+} b_JIPDATrackAssigner_assign;
+#endif /* c_typedef_b_JIPDATrackAssigner_ */
 
-#ifndef c_typedef_b_TrackListManager_se
-#define c_typedef_b_TrackListManager_se
-typedef struct {
-  i_fusion_tracker_internal_estim expl_temp;
-} b_TrackListManager_setup;
-#endif /* c_typedef_b_TrackListManager_se */
-
-#ifndef c_typedef_b_JIPDATracker_setupI
-#define c_typedef_b_JIPDATracker_setupI
-typedef struct {
-  i_fusion_tracker_internal_compo r;
-  e_fusion_tracker_internal_compo assigners;
-  f_fusion_tracker_internal_compo updaters;
-  d_fusion_tracker_internal_compo initiators;
-  i_fusion_tracker_internal_estim obj_Estimator;
-  g_fusion_tracker_internal_compo obj;
-  c_fusion_tracker_internal_estim t103_f1;
-  d_fusion_tracker_internal_estim t103_f2;
-  e_fusion_tracker_internal_estim t103_f3;
-  c_fusion_tracker_sensorspecs_Ae spec;
-} b_JIPDATracker_setupImpl;
-#endif /* c_typedef_b_JIPDATracker_setupI */
-
-#ifndef typedef_b_trackingAlgorithm
-#define typedef_b_trackingAlgorithm
+#ifndef c_typedef_b_SystemCore_checkTun
+#define c_typedef_b_SystemCore_checkTun
 typedef struct {
   i_fusion_tracker_internal_compo obj;
   e_fusion_tracker_internal_compo b_obj;
   h_fusion_tracker_internal_compo c_obj;
   f_fusion_tracker_internal_compo d_obj;
   d_fusion_tracker_internal_compo e_obj;
-} b_trackingAlgorithm;
-#endif /* typedef_b_trackingAlgorithm */
+} b_SystemCore_checkTunableProps;
+#endif /* c_typedef_b_SystemCore_checkTun */
+
+#ifndef typedef_b_JIPDATracker_stepImpl
+#define typedef_b_JIPDATracker_stepImpl
+typedef struct {
+  i_fusion_tracker_internal_compo r1;
+  h_fusion_tracker_internal_compo r;
+  d_fusion_tracker_internal_compo r2;
+  e_fusion_tracker_internal_estim t39_Estimator_StateEstimator;
+  g_fusion_tracker_internal_compo obj;
+  g_fusion_tracker_internal_compo b_obj;
+  c_fusion_tracker_sensorspecs_Ae val;
+  c_fusion_tracker_sensorspecs_Ae estimator_SensorSpecifications;
+  c_fusion_tracker_sensorspecs_Ae b_val;
+} b_JIPDATracker_stepImpl;
+#endif /* typedef_b_JIPDATracker_stepImpl */
 
 #ifndef typedef_b_trackingAlgorithm_api
 #define typedef_b_trackingAlgorithm_api
@@ -791,7 +608,7 @@ typedef struct {
   boolean_T tunablePropertyChanged[7];
   int32_T isInitialized;
   boolean_T TunablePropsChanged;
-  cell_4 TargetSpecifications;
+  c_fusion_tracker_targetspecs_Pa TargetSpecifications[1];
   c_fusion_tracker_sensorspecs_Ae SensorSpecifications[1];
   real_T MaxMahalanobisDistance;
   real_T c_ConfirmationExistenceProbabil;
@@ -805,63 +622,36 @@ typedef struct {
   h_fusion_tracker_internal_compo TrackMaintenance;
   i_fusion_tracker_internal_compo Outputter;
   uint32_T LastTrackID;
-  trackingEKF coder_buffer_pobj0[15];
+  trackingEKF coder_buffer_pobj0[5];
   c_fusion_tracker_internal_compo coder_buffer_pobj1;
 } fusion_tracker_JIPDATracker;
 #endif /* c_typedef_fusion_tracker_JIPDAT */
 
-#ifndef typedef_b_JIPDATracker_stepImpl
-#define typedef_b_JIPDATracker_stepImpl
+#ifndef typedef_b_SystemCore_step
+#define typedef_b_SystemCore_step
 typedef struct {
-  i_fusion_tracker_internal_compo r1;
-  h_fusion_tracker_internal_compo r;
-  d_fusion_tracker_internal_compo r2;
-  h_fusion_tracker_internal_estim tracker;
-  h_fusion_tracker_internal_estim t98_Estimator_StateEstimator;
-  i_fusion_tracker_internal_estim r3;
-  b_struct_T newTracks_data[50];
+  i_fusion_tracker_internal_compo r;
+  e_fusion_tracker_internal_compo assigners;
+  f_fusion_tracker_internal_compo updaters;
+  d_fusion_tracker_internal_compo initiators;
   g_fusion_tracker_internal_compo obj;
-  g_fusion_tracker_internal_compo b_obj;
-  c_fusion_tracker_internal_estim b_tracker;
-  d_fusion_tracker_internal_estim c_tracker;
-  e_fusion_tracker_internal_estim d_tracker;
-  c_fusion_tracker_sensorspecs_Ae c_t44_Estimator_StateEstimator_;
-  c_fusion_tracker_sensorspecs_Ae d_t44_Estimator_StateEstimator_;
-  c_fusion_tracker_sensorspecs_Ae e_t44_Estimator_StateEstimator_;
-  c_fusion_tracker_sensorspecs_Ae val;
-  c_fusion_tracker_sensorspecs_Ae b_val;
-  c_fusion_tracker_sensorspecs_Ae c_val;
-  c_fusion_tracker_sensorspecs_Ae estimator_SensorSpecifications;
-} b_JIPDATracker_stepImpl;
-#endif /* typedef_b_JIPDATracker_stepImpl */
+  c_fusion_tracker_sensorspecs_Ae spec;
+  c_fusion_tracker_sensorspecs_Ae c_obj_Estimator_StateEstimator_;
+  c_fusion_tracker_sensorspecs_Ae d_obj_Estimator_StateEstimator_;
+} b_SystemCore_step;
+#endif /* typedef_b_SystemCore_step */
 
 #ifndef c_typedef_trackingAlgorithmStac
 #define c_typedef_trackingAlgorithmStac
 typedef struct {
   union {
-    d_TrackEstimator_updateEstimato f0;
-    d_IPDAEstimator_updateEstimator f1;
-    d_JIPDATrackAssigner_measuremen f2;
-    d_JIPDATracker_updateSensorSpec f3;
-    b_TrackEstimator_setup f4;
-    d_TrackEstimator_set_TargetSpec f5;
+    b_JIPDATrackUpdater_update f0;
+    b_JIPDATrackAssigner_assign f1;
+    b_SystemCore_checkTunableProps f2;
   } u1;
-  union {
-    b_IPDAEstimator_correctJPDA f6;
-    b_JIPDATrackAssigner_assign f7;
-    b_trackEstimator f8;
-  } u2;
-  union {
-    b_JIPDATrackUpdater_update f9;
-    b_ObjectTrackOutputter_setup f10;
-    b_TrackListManager_setup f11;
-  } u3;
-  union {
-    b_JIPDATracker_stepImpl f12;
-    b_JIPDATracker_setupImpl f13;
-  } u4;
-  b_trackingAlgorithm f14;
-  b_trackingAlgorithm_api f15;
+  b_JIPDATracker_stepImpl f3;
+  b_SystemCore_step f4;
+  b_trackingAlgorithm_api f5;
 } trackingAlgorithmStackData;
 #endif /* c_typedef_trackingAlgorithmStac */
 

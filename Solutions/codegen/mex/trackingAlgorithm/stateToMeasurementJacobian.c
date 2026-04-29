@@ -7,7 +7,6 @@
 
 /* Include files */
 #include "stateToMeasurementJacobian.h"
-#include "norm.h"
 #include "rt_nonfinite.h"
 #include "trackingAlgorithm_data.h"
 #include "mwmathutil.h"
@@ -15,60 +14,76 @@
 #include <string.h>
 
 /* Variable Definitions */
-static emlrtRSInfo sab_emlrtRSI = {
+static emlrtRSInfo dy_emlrtRSI = {
     13,                           /* lineNo */
     "stateToMeasurementJacobian", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+internal/+utils/"
-    "stateToMeasurementJacobian.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "internal\\+utils\\stateToMeasurementJacobi"
+    "an.m" /* pathName */
 };
 
-static emlrtRSInfo tab_emlrtRSI = {
+static emlrtRSInfo ey_emlrtRSI = {
     135,                                                     /* lineNo */
     "AzimuthElevationRangeAndRangeRateModel/measurementjac", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
-    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "measurement\\AzimuthElevationRangeAndRange"
+    "RateModel.m" /* pathName */
 };
 
-static emlrtRSInfo uab_emlrtRSI = {
+static emlrtRSInfo fy_emlrtRSI = {
     136,                                                     /* lineNo */
     "AzimuthElevationRangeAndRangeRateModel/measurementjac", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
-    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "measurement\\AzimuthElevationRangeAndRange"
+    "RateModel.m" /* pathName */
 };
 
-static emlrtRSInfo vab_emlrtRSI = {
+static emlrtRSInfo gy_emlrtRSI = {
     138,                                                     /* lineNo */
     "AzimuthElevationRangeAndRangeRateModel/measurementjac", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
-    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "measurement\\AzimuthElevationRangeAndRange"
+    "RateModel.m" /* pathName */
 };
 
-static emlrtRSInfo wab_emlrtRSI = {
+static emlrtRSInfo hy_emlrtRSI = {
     139,                                                     /* lineNo */
     "AzimuthElevationRangeAndRangeRateModel/measurementjac", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
-    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "measurement\\AzimuthElevationRangeAndRange"
+    "RateModel.m" /* pathName */
 };
 
-static emlrtRSInfo xab_emlrtRSI = {
+static emlrtRSInfo iy_emlrtRSI = {
     140,                                                     /* lineNo */
     "AzimuthElevationRangeAndRangeRateModel/measurementjac", /* fcnName */
-    "/MATLAB/toolbox/fusion/core/fusion/+fusion/+tracker/+measurement/"
-    "AzimuthElevationRangeAndRangeRateModel.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\fusion\\core\\fusion\\+fusion\\+tracker\\+"
+    "measurement\\AzimuthElevationRangeAndRange"
+    "RateModel.m" /* pathName */
 };
 
-static emlrtRSInfo cbb_emlrtRSI = {
+static emlrtRSInfo my_emlrtRSI = {
     79,             /* lineNo */
     "rangeratejac", /* fcnName */
-    "/MATLAB/toolbox/shared/tracking/fusionlib/+matlabshared/+tracking/"
-    "+internal/+fusion/rangeratejac.m" /* pathName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\shared\\tracking\\fusionlib\\+"
+    "matlabshared\\+tracking\\+internal\\+fusion\\rangerate"
+    "jac.m" /* pathName */
 };
 
-static emlrtRTEInfo cb_emlrtRTEI = {
-    13,                                                         /* lineNo */
-    13,                                                         /* colNo */
-    "toLogicalCheck",                                           /* fName */
-    "/MATLAB/toolbox/eml/eml/+coder/+internal/toLogicalCheck.m" /* pName */
+static emlrtRTEInfo y_emlrtRTEI = {
+    13,               /* lineNo */
+    13,               /* colNo */
+    "toLogicalCheck", /* fName */
+    "C:\\Program "
+    "Files\\MATLAB\\R2025b\\toolbox\\eml\\eml\\+coder\\+"
+    "internal\\toLogicalCheck.m" /* pName */
 };
 
 /* Function Definitions */
@@ -102,14 +117,16 @@ void stateToMeasurementJacobian(const emlrtStack *sp, const real_T x[6],
   real_T xE[6];
   real_T b_xP[3];
   real_T c_xP[3];
-  real_T relvel[3];
   real_T xP[3];
+  real_T absxk;
+  real_T b_absxk;
+  real_T b_scale;
   real_T b_x;
-  real_T b_xP_tmp;
   real_T c_x;
   real_T relvelnorm;
   real_T rnorm;
-  real_T xP_tmp;
+  real_T scale;
+  real_T t;
   real_T xysq;
   real_T xyzsq;
   int32_T H1_tmp;
@@ -146,7 +163,7 @@ void stateToMeasurementJacobian(const emlrtStack *sp, const real_T x[6],
     H1[b_H1_tmp + 2] = (int8_T)b_i;
     H1[c_H1_tmp + 5] = (int8_T)b_i;
   }
-  st.site = &sab_emlrtRSI;
+  st.site = &dy_emlrtRSI;
   xP[0] = x[0];
   b_xP[0] = x[1];
   xP[1] = x[2];
@@ -168,8 +185,8 @@ void stateToMeasurementJacobian(const emlrtStack *sp, const real_T x[6],
         _mm_add_pd(
             r, _mm_mul_pd(_mm_loadu_pd(&measurementModel_Orientation[c_H1_tmp]),
                           _mm_set1_pd(c_xP[0]))));
-    relvelnorm = measurementModel_Orientation[c_H1_tmp + 2];
-    xP[2] += relvelnorm * c_xP[0];
+    absxk = measurementModel_Orientation[c_H1_tmp + 2];
+    xP[2] += absxk * c_xP[0];
     c_xP[0] = b_xP[0] - measurementModel_OriginVelocity[H1_tmp];
     r = _mm_loadu_pd(&xP[0]);
     _mm_storeu_pd(
@@ -178,8 +195,8 @@ void stateToMeasurementJacobian(const emlrtStack *sp, const real_T x[6],
             r, _mm_mul_pd(
                    _mm_loadu_pd(&measurementModel_Orientation[c_H1_tmp + 3]),
                    _mm_set1_pd(c_xP[1]))));
-    xP_tmp = measurementModel_Orientation[c_H1_tmp + 5];
-    xP[2] += xP_tmp * c_xP[1];
+    b_absxk = measurementModel_Orientation[c_H1_tmp + 5];
+    xP[2] += b_absxk * c_xP[1];
     c_xP[1] = b_xP[1] - measurementModel_OriginVelocity[H1_tmp + 1];
     r = _mm_loadu_pd(&xP[0]);
     _mm_storeu_pd(
@@ -188,8 +205,8 @@ void stateToMeasurementJacobian(const emlrtStack *sp, const real_T x[6],
             r, _mm_mul_pd(
                    _mm_loadu_pd(&measurementModel_Orientation[c_H1_tmp + 6]),
                    _mm_set1_pd(c_xP[2]))));
-    b_xP_tmp = measurementModel_Orientation[c_H1_tmp + 8];
-    xP[2] += b_xP_tmp * c_xP[2];
+    t = measurementModel_Orientation[c_H1_tmp + 8];
+    xP[2] += t * c_xP[2];
     c_xP[2] = b_xP[2] - measurementModel_OriginVelocity[H1_tmp + 2];
     memset(&b_xP[0], 0, 3U * sizeof(real_T));
     r = _mm_loadu_pd(&b_xP[0]);
@@ -198,7 +215,7 @@ void stateToMeasurementJacobian(const emlrtStack *sp, const real_T x[6],
         _mm_add_pd(
             r, _mm_mul_pd(_mm_loadu_pd(&measurementModel_Orientation[c_H1_tmp]),
                           _mm_set1_pd(c_xP[0]))));
-    b_xP[2] += relvelnorm * c_xP[0];
+    b_xP[2] += absxk * c_xP[0];
     r = _mm_loadu_pd(&b_xP[0]);
     _mm_storeu_pd(
         &b_xP[0],
@@ -206,7 +223,7 @@ void stateToMeasurementJacobian(const emlrtStack *sp, const real_T x[6],
             r, _mm_mul_pd(
                    _mm_loadu_pd(&measurementModel_Orientation[c_H1_tmp + 3]),
                    _mm_set1_pd(c_xP[1]))));
-    b_xP[2] += xP_tmp * c_xP[1];
+    b_xP[2] += b_absxk * c_xP[1];
     r = _mm_loadu_pd(&b_xP[0]);
     _mm_storeu_pd(
         &b_xP[0],
@@ -214,7 +231,7 @@ void stateToMeasurementJacobian(const emlrtStack *sp, const real_T x[6],
             r, _mm_mul_pd(
                    _mm_loadu_pd(&measurementModel_Orientation[c_H1_tmp + 6]),
                    _mm_set1_pd(c_xP[2]))));
-    b_xP[2] += b_xP_tmp * c_xP[2];
+    b_xP[2] += t * c_xP[2];
   }
   for (i = 0; i < 18; i++) {
     posJac3D[i] = b_posJac3D[i];
@@ -224,133 +241,178 @@ void stateToMeasurementJacobian(const emlrtStack *sp, const real_T x[6],
     memset(&b_measurementModel_Orientation[0], 0, 18U * sizeof(real_T));
     H1_tmp = 9 * (2 - c_i);
     for (i = 0; i < 6; i++) {
-      relvelnorm = posJac3D[3 * i];
+      absxk = posJac3D[3 * i];
       r = _mm_loadu_pd(&b_measurementModel_Orientation[3 * i]);
       _mm_storeu_pd(
           &b_measurementModel_Orientation[3 * i],
           _mm_add_pd(
               r, _mm_mul_pd(_mm_loadu_pd(&measurementModel_Orientation[H1_tmp]),
-                            _mm_set1_pd(relvelnorm))));
+                            _mm_set1_pd(absxk))));
       c_H1_tmp = 3 * i + 2;
       b_measurementModel_Orientation[c_H1_tmp] +=
-          measurementModel_Orientation[H1_tmp + 2] * relvelnorm;
-      relvelnorm = posJac3D[3 * i + 1];
+          measurementModel_Orientation[H1_tmp + 2] * absxk;
+      absxk = posJac3D[3 * i + 1];
       r = _mm_loadu_pd(&b_measurementModel_Orientation[3 * i]);
       _mm_storeu_pd(
           &b_measurementModel_Orientation[3 * i],
           _mm_add_pd(
               r, _mm_mul_pd(
                      _mm_loadu_pd(&measurementModel_Orientation[H1_tmp + 3]),
-                     _mm_set1_pd(relvelnorm))));
+                     _mm_set1_pd(absxk))));
       b_measurementModel_Orientation[c_H1_tmp] +=
-          measurementModel_Orientation[H1_tmp + 5] * relvelnorm;
-      relvelnorm = posJac3D[c_H1_tmp];
+          measurementModel_Orientation[H1_tmp + 5] * absxk;
+      absxk = posJac3D[c_H1_tmp];
       r = _mm_loadu_pd(&b_measurementModel_Orientation[3 * i]);
       _mm_storeu_pd(
           &b_measurementModel_Orientation[3 * i],
           _mm_add_pd(
               r, _mm_mul_pd(
                      _mm_loadu_pd(&measurementModel_Orientation[H1_tmp + 6]),
-                     _mm_set1_pd(relvelnorm))));
+                     _mm_set1_pd(absxk))));
       b_measurementModel_Orientation[c_H1_tmp] +=
-          measurementModel_Orientation[H1_tmp + 8] * relvelnorm;
+          measurementModel_Orientation[H1_tmp + 8] * absxk;
     }
     memcpy(&posJac3D[0], &b_measurementModel_Orientation[0],
            18U * sizeof(real_T));
     memset(&b_measurementModel_Orientation[0], 0, 18U * sizeof(real_T));
     H1_tmp = 9 * (2 - c_i);
     for (i = 0; i < 6; i++) {
-      relvelnorm = velJac3D[3 * i];
+      absxk = velJac3D[3 * i];
       r = _mm_loadu_pd(&b_measurementModel_Orientation[3 * i]);
       _mm_storeu_pd(
           &b_measurementModel_Orientation[3 * i],
           _mm_add_pd(
               r, _mm_mul_pd(_mm_loadu_pd(&measurementModel_Orientation[H1_tmp]),
-                            _mm_set1_pd(relvelnorm))));
+                            _mm_set1_pd(absxk))));
       c_H1_tmp = 3 * i + 2;
       b_measurementModel_Orientation[c_H1_tmp] +=
-          measurementModel_Orientation[H1_tmp + 2] * relvelnorm;
-      relvelnorm = velJac3D[3 * i + 1];
+          measurementModel_Orientation[H1_tmp + 2] * absxk;
+      absxk = velJac3D[3 * i + 1];
       r = _mm_loadu_pd(&b_measurementModel_Orientation[3 * i]);
       _mm_storeu_pd(
           &b_measurementModel_Orientation[3 * i],
           _mm_add_pd(
               r, _mm_mul_pd(
                      _mm_loadu_pd(&measurementModel_Orientation[H1_tmp + 3]),
-                     _mm_set1_pd(relvelnorm))));
+                     _mm_set1_pd(absxk))));
       b_measurementModel_Orientation[c_H1_tmp] +=
-          measurementModel_Orientation[H1_tmp + 5] * relvelnorm;
-      relvelnorm = velJac3D[c_H1_tmp];
+          measurementModel_Orientation[H1_tmp + 5] * absxk;
+      absxk = velJac3D[c_H1_tmp];
       r = _mm_loadu_pd(&b_measurementModel_Orientation[3 * i]);
       _mm_storeu_pd(
           &b_measurementModel_Orientation[3 * i],
           _mm_add_pd(
               r, _mm_mul_pd(
                      _mm_loadu_pd(&measurementModel_Orientation[H1_tmp + 6]),
-                     _mm_set1_pd(relvelnorm))));
+                     _mm_set1_pd(absxk))));
       b_measurementModel_Orientation[c_H1_tmp] +=
-          measurementModel_Orientation[H1_tmp + 8] * relvelnorm;
+          measurementModel_Orientation[H1_tmp + 8] * absxk;
     }
     memcpy(&velJac3D[0], &b_measurementModel_Orientation[0],
            18U * sizeof(real_T));
   }
-  b_st.site = &tab_emlrtRSI;
-  b_st.site = &tab_emlrtRSI;
+  b_st.site = &ey_emlrtRSI;
+  b_st.site = &ey_emlrtRSI;
   xysq = xP[0] * xP[0] + xP[1] * xP[1];
-  b_st.site = &uab_emlrtRSI;
-  b_st.site = &uab_emlrtRSI;
-  b_st.site = &uab_emlrtRSI;
+  b_st.site = &fy_emlrtRSI;
+  b_st.site = &fy_emlrtRSI;
+  b_st.site = &fy_emlrtRSI;
   xyzsq = xysq + xP[2] * xP[2];
-  b_st.site = &vab_emlrtRSI;
+  b_st.site = &gy_emlrtRSI;
   b_x = muDoubleScalarSqrt(xysq);
-  b_st.site = &vab_emlrtRSI;
-  b_st.site = &vab_emlrtRSI;
-  b_st.site = &wab_emlrtRSI;
+  b_st.site = &gy_emlrtRSI;
+  b_st.site = &gy_emlrtRSI;
+  b_st.site = &hy_emlrtRSI;
   c_x = muDoubleScalarSqrt(xyzsq);
-  b_st.site = &wab_emlrtRSI;
-  b_st.site = &wab_emlrtRSI;
-  b_st.site = &xab_emlrtRSI;
-  xE[1] = b_xP[0];
-  xE[3] = b_xP[1];
-  xE[5] = b_xP[2];
-  b_xP[0] = xP[0];
-  b_xP[1] = xP[1];
-  b_xP[2] = xP[2];
-  relvel[0] = xE[1];
-  relvel[1] = xE[3];
-  relvel[2] = xE[5];
-  rnorm = b_norm(b_xP);
-  relvelnorm = b_norm(relvel);
+  b_st.site = &hy_emlrtRSI;
+  b_st.site = &hy_emlrtRSI;
+  b_st.site = &iy_emlrtRSI;
+  scale = 3.3121686421112381E-170;
+  b_scale = 3.3121686421112381E-170;
+  absxk = muDoubleScalarAbs(xP[0]);
+  if (absxk > 3.3121686421112381E-170) {
+    rnorm = 1.0;
+    scale = absxk;
+  } else {
+    t = absxk / 3.3121686421112381E-170;
+    rnorm = t * t;
+  }
+  b_absxk = muDoubleScalarAbs(b_xP[0]);
+  if (b_absxk > 3.3121686421112381E-170) {
+    relvelnorm = 1.0;
+    b_scale = b_absxk;
+  } else {
+    absxk = b_absxk / 3.3121686421112381E-170;
+    relvelnorm = absxk * absxk;
+  }
+  absxk = muDoubleScalarAbs(xP[1]);
+  if (absxk > scale) {
+    t = scale / absxk;
+    rnorm = rnorm * t * t + 1.0;
+    scale = absxk;
+  } else {
+    t = absxk / scale;
+    rnorm += t * t;
+  }
+  b_absxk = muDoubleScalarAbs(b_xP[1]);
+  if (b_absxk > b_scale) {
+    absxk = b_scale / b_absxk;
+    relvelnorm = relvelnorm * absxk * absxk + 1.0;
+    b_scale = b_absxk;
+  } else {
+    absxk = b_absxk / b_scale;
+    relvelnorm += absxk * absxk;
+  }
+  absxk = muDoubleScalarAbs(xP[2]);
+  if (absxk > scale) {
+    t = scale / absxk;
+    rnorm = rnorm * t * t + 1.0;
+    scale = absxk;
+  } else {
+    t = absxk / scale;
+    rnorm += t * t;
+  }
+  b_absxk = muDoubleScalarAbs(b_xP[2]);
+  if (b_absxk > b_scale) {
+    absxk = b_scale / b_absxk;
+    relvelnorm = relvelnorm * absxk * absxk + 1.0;
+    b_scale = b_absxk;
+  } else {
+    absxk = b_absxk / b_scale;
+    relvelnorm += absxk * absxk;
+  }
+  rnorm = scale * muDoubleScalarSqrt(rnorm);
+  relvelnorm = b_scale * muDoubleScalarSqrt(relvelnorm);
   if (rnorm > 0.0) {
-    xP_tmp = (xP[0] * xE[1] + xP[1] * xE[3]) + xP[2] * xE[5];
-    b_xP_tmp = rnorm * rnorm;
+    absxk = (xP[0] * b_xP[0] + xP[1] * b_xP[1]) + xP[2] * b_xP[2];
+    b_absxk = rnorm * rnorm;
     jacobianRangeRateRow[0] =
-        (xE[1] * rnorm - xP_tmp * xP[0] / rnorm) / b_xP_tmp;
+        (b_xP[0] * rnorm - absxk * xP[0] / rnorm) / b_absxk;
     jacobianRangeRateRow[1] = xP[0] / rnorm;
     jacobianRangeRateRow[2] = 0.0;
     jacobianRangeRateRow[3] =
-        (xE[3] * rnorm - xP_tmp * xP[1] / rnorm) / b_xP_tmp;
+        (b_xP[1] * rnorm - absxk * xP[1] / rnorm) / b_absxk;
     jacobianRangeRateRow[4] = xP[1] / rnorm;
     jacobianRangeRateRow[5] = 0.0;
     jacobianRangeRateRow[6] =
-        (xE[5] * rnorm - xP_tmp * xP[2] / rnorm) / b_xP_tmp;
+        (b_xP[2] * rnorm - absxk * xP[2] / rnorm) / b_absxk;
     jacobianRangeRateRow[7] = xP[2] / rnorm;
     jacobianRangeRateRow[8] = 0.0;
   } else {
-    c_st.site = &cbb_emlrtRSI;
+    c_st.site = &my_emlrtRSI;
     if (muDoubleScalarIsNaN(relvelnorm)) {
-      emlrtErrorWithMessageIdR2018a(&c_st, &cb_emlrtRTEI, "MATLAB:nologicalnan",
+      emlrtErrorWithMessageIdR2018a(&c_st, &y_emlrtRTEI, "MATLAB:nologicalnan",
                                     "MATLAB:nologicalnan", 0);
     }
     if (relvelnorm != 0.0) {
       jacobianRangeRateRow[0] = 0.0;
-      jacobianRangeRateRow[1] = xE[1] / relvelnorm;
+      jacobianRangeRateRow[1] = b_xP[0] / relvelnorm;
       jacobianRangeRateRow[2] = 0.0;
       jacobianRangeRateRow[3] = 0.0;
-      jacobianRangeRateRow[4] = xE[3] / relvelnorm;
+      jacobianRangeRateRow[4] = b_xP[1] / relvelnorm;
       jacobianRangeRateRow[5] = 0.0;
       jacobianRangeRateRow[6] = 0.0;
-      jacobianRangeRateRow[7] = xE[5] / relvelnorm;
+      jacobianRangeRateRow[7] = b_xP[2] / relvelnorm;
       jacobianRangeRateRow[8] = 0.0;
     } else {
       for (i = 0; i < 9; i++) {

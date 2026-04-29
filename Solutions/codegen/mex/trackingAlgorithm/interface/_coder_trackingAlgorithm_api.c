@@ -14,7 +14,7 @@
 #include "trackingAlgorithm_types.h"
 
 /* Variable Definitions */
-static emlrtRTEInfo li_emlrtRTEI = {
+static emlrtRTEInfo mi_emlrtRTEI = {
     1,                              /* lineNo */
     1,                              /* colNo */
     "_coder_trackingAlgorithm_api", /* fName */
@@ -24,28 +24,25 @@ static emlrtRTEInfo li_emlrtRTEI = {
 /* Function Declarations */
 static void ab_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                 const emlrtMsgIdentifier *parentId,
-                                d_fusion_tracker_detectability_ *y);
-
-static void ac_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId, char_T ret[3]);
+                                c_fusion_tracker_detectability_ *y);
 
 static void bb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                 const emlrtMsgIdentifier *parentId,
-                                c_fusion_tracker_detectability_ y[108]);
-
-static void cb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                const emlrtMsgIdentifier *parentId,
-                                c_fusion_tracker_detectability_ *y);
-
-static void db_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                const emlrtMsgIdentifier *parentId,
                                 real_T y[2]);
+
+static int32_T cb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                                   const emlrtMsgIdentifier *parentId);
+
+static c_fusion_tracker_birth_UniformP
+db_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                    const emlrtMsgIdentifier *parentId);
 
 static void e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
                                const char_T *identifier, struct0_T *y);
 
-static int32_T eb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                   const emlrtMsgIdentifier *parentId);
+static c_fusion_tracker_clutter_Unifor
+eb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                    const emlrtMsgIdentifier *parentId);
 
 static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
                                         const emxArray_struct1_T *u);
@@ -54,24 +51,23 @@ static void f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                struct0_T *y);
 
-static c_fusion_tracker_birth_UniformP
-fb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                    const emlrtMsgIdentifier *parentId);
+static void fb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                                const emlrtMsgIdentifier *parentId);
 
 static void g_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                struct0_T *y);
 
-static c_fusion_tracker_clutter_Unifor
-gb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                    const emlrtMsgIdentifier *parentId);
+static void gb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                                const emlrtMsgIdentifier *parentId,
+                                boolean_T y[5]);
 
 static void h_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                real_T y_data[], int32_T y_size[2]);
 
-static void hb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                const emlrtMsgIdentifier *parentId);
+static char_T hb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                                  const emlrtMsgIdentifier *parentId);
 
 static void i_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
@@ -79,177 +75,114 @@ static void i_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
 
 static void ib_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                 const emlrtMsgIdentifier *parentId,
-                                boolean_T y[5]);
+                                char_T y[3]);
 
 static void j_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
-                               const char_T *identifier, cell_4 *y);
-
-static char_T jb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                  const emlrtMsgIdentifier *parentId);
+                               const char_T *identifier,
+                               c_fusion_tracker_targetspecs_Pa *y);
 
 static void k_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                               const emlrtMsgIdentifier *parentId, cell_4 *y);
-
-static void kb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                const emlrtMsgIdentifier *parentId,
-                                char_T y[3]);
+                               const emlrtMsgIdentifier *parentId,
+                               c_fusion_tracker_targetspecs_Pa *y);
 
 static void l_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                c_fusion_tracker_targetspecs_Pa *y);
 
+static void lb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+                                const emlrtMsgIdentifier *msgId,
+                                real_T ret_data[], int32_T ret_size[2]);
+
 static void m_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                c_fusion_tracker_transition_Con *y);
+
+static void mb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+                                const emlrtMsgIdentifier *msgId,
+                                real_T ret_data[], int32_T ret_size[2]);
 
 static void n_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId, real_T y[3]);
 
 static void nb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId,
-                                real_T ret_data[], int32_T ret_size[2]);
+                                const emlrtMsgIdentifier *msgId, real_T ret[3]);
 
 static void o_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId, real_T y[9]);
 
 static void ob_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId,
-                                real_T ret_data[], int32_T ret_size[2]);
+                                const emlrtMsgIdentifier *msgId, real_T ret[9]);
 
 static c_fusion_tracker_survival_Unifo
 p_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                    const emlrtMsgIdentifier *parentId);
 
-static void pb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId, real_T ret[3]);
+static real_T pb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+                                  const emlrtMsgIdentifier *msgId);
 
 static real_T q_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                  const emlrtMsgIdentifier *parentId);
 
 static void qb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId, real_T ret[9]);
+                                const emlrtMsgIdentifier *msgId,
+                                boolean_T ret[2]);
 
 static void r_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                boolean_T y[2]);
 
-static real_T rb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                  const emlrtMsgIdentifier *msgId);
+static void rb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+                                const emlrtMsgIdentifier *msgId);
 
 static void s_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId);
 
 static void sb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                 const emlrtMsgIdentifier *msgId,
-                                boolean_T ret[2]);
-
-static void t_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                               const emlrtMsgIdentifier *parentId,
-                               c_fusion_tracker_targetspecs_Ge *y);
-
-static void tb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId);
-
-static void u_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                               const emlrtMsgIdentifier *parentId,
-                               c_fusion_tracker_targetspecs_He *y);
-
-static void ub_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId,
                                 real_T ret[27]);
 
-static void v_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
+static void t_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
                                const char_T *identifier,
                                c_fusion_tracker_sensorspecs_Ae *y);
 
-static void vb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static void tb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                 const emlrtMsgIdentifier *msgId, real_T ret[2]);
 
-static void w_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+static void u_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                c_fusion_tracker_sensorspecs_Ae *y);
 
-static int32_T wb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static int32_T ub_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                    const emlrtMsgIdentifier *msgId);
 
-static void x_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+static void v_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                c_fusion_tracker_measurement_Az *y);
 
-static void xb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static void vb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                 const emlrtMsgIdentifier *msgId,
                                 boolean_T ret[5]);
 
-static void y_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+static void w_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                real_T y[27]);
 
-static char_T yb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static char_T wb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                   const emlrtMsgIdentifier *msgId);
+
+static void x_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                               const emlrtMsgIdentifier *parentId,
+                               d_fusion_tracker_detectability_ *y);
+
+static void xb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+                                const emlrtMsgIdentifier *msgId, char_T ret[3]);
+
+static void y_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                               const emlrtMsgIdentifier *parentId,
+                               c_fusion_tracker_detectability_ y[108]);
 
 /* Function Definitions */
 static void ab_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                const emlrtMsgIdentifier *parentId,
-                                d_fusion_tracker_detectability_ *y)
-{
-  emlrtMsgIdentifier thisId;
-  const mxArray *propValues[2];
-  const char_T *propClasses[2] = {
-      "fusion.tracker.detectability.CompositeFieldOfViewModel",
-      "fusion.tracker.detectability.CompositeFieldOfViewModel"};
-  const char_T *propNames[2] = {"FieldsOfView", "NumModels"};
-  propValues[0] = NULL;
-  propValues[1] = NULL;
-  thisId.fParent = parentId;
-  thisId.bParentIsCell = false;
-  emlrtCheckMcosClass2017a(
-      (emlrtCTX)sp, parentId, u,
-      "fusion.tracker.detectability.CompositeFieldOfViewModel");
-  emlrtGetAllProperties((emlrtCTX)sp, u, 0, 2, (const char_T **)&propNames[0],
-                        (const char_T **)&propClasses[0], &propValues[0]);
-  thisId.fIdentifier = "FieldsOfView";
-  bb_emlrt_marshallIn(sp, emlrtAlias(propValues[0]), &thisId, y->FieldsOfView);
-  thisId.fIdentifier = "NumModels";
-  y->NumModels = eb_emlrt_marshallIn(sp, emlrtAlias(propValues[1]), &thisId);
-  emlrtDestroyArrays(2, &propValues[0]);
-  emlrtDestroyArray(&u);
-}
-
-static void ac_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId, char_T ret[3])
-{
-  static const int32_T dims[2] = {1, 3};
-  emlrtCheckBuiltInR2012b((emlrtConstCTX)sp, msgId, src, "char", false, 2U,
-                          (const void *)&dims[0]);
-  emlrtImportCharArrayR2015b((emlrtConstCTX)sp, src, &ret[0], 3);
-  emlrtDestroyArray(&src);
-}
-
-static void bb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                const emlrtMsgIdentifier *parentId,
-                                c_fusion_tracker_detectability_ y[108])
-{
-  emlrtMsgIdentifier thisId;
-  int32_T i;
-  int32_T i1;
-  char_T str[11];
-  boolean_T b;
-  thisId.fParent = parentId;
-  thisId.bParentIsCell = true;
-  b = false;
-  i = 108;
-  emlrtCheckCell((emlrtCTX)sp, parentId, u, 1U, &i, &b);
-  for (i1 = 0; i1 < 108; i1++) {
-    emlrtMexSnprintf(&str[0], (size_t)11U, "%d", i1 + 1);
-    thisId.fIdentifier = &str[0];
-    cb_emlrt_marshallIn(sp,
-                        emlrtAlias(emlrtGetCell((emlrtCTX)sp, parentId, u, i1)),
-                        &thisId, &y[i1]);
-  }
-  emlrtDestroyArray(&u);
-}
-
-static void cb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                 const emlrtMsgIdentifier *parentId,
                                 c_fusion_tracker_detectability_ *y)
 {
@@ -285,16 +218,16 @@ static void cb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   thisId.fIdentifier = "OriginVelocity";
   o_emlrt_marshallIn(sp, emlrtAlias(propValues[1]), &thisId, y->OriginVelocity);
   thisId.fIdentifier = "Orientation";
-  y_emlrt_marshallIn(sp, emlrtAlias(propValues[2]), &thisId, y->Orientation);
+  w_emlrt_marshallIn(sp, emlrtAlias(propValues[2]), &thisId, y->Orientation);
   thisId.fIdentifier = "AzimuthLimits";
-  db_emlrt_marshallIn(sp, emlrtAlias(propValues[3]), &thisId, y->AzimuthLimits);
+  bb_emlrt_marshallIn(sp, emlrtAlias(propValues[3]), &thisId, y->AzimuthLimits);
   thisId.fIdentifier = "ElevationLimits";
-  db_emlrt_marshallIn(sp, emlrtAlias(propValues[4]), &thisId,
+  bb_emlrt_marshallIn(sp, emlrtAlias(propValues[4]), &thisId,
                       y->ElevationLimits);
   thisId.fIdentifier = "RangeLimits";
-  db_emlrt_marshallIn(sp, emlrtAlias(propValues[5]), &thisId, y->RangeLimits);
+  bb_emlrt_marshallIn(sp, emlrtAlias(propValues[5]), &thisId, y->RangeLimits);
   thisId.fIdentifier = "RangeRateLimits";
-  db_emlrt_marshallIn(sp, emlrtAlias(propValues[6]), &thisId,
+  bb_emlrt_marshallIn(sp, emlrtAlias(propValues[6]), &thisId,
                       y->RangeRateLimits);
   thisId.fIdentifier = "DetectionProbability";
   y->DetectionProbability =
@@ -306,11 +239,43 @@ static void cb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   emlrtDestroyArray(&u);
 }
 
-static void db_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+static void bb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                 const emlrtMsgIdentifier *parentId, real_T y[2])
 {
-  vb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
+  tb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
   emlrtDestroyArray(&u);
+}
+
+static int32_T cb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                                   const emlrtMsgIdentifier *parentId)
+{
+  int32_T y;
+  y = ub_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
+  emlrtDestroyArray(&u);
+  return y;
+}
+
+static c_fusion_tracker_birth_UniformP
+db_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                    const emlrtMsgIdentifier *parentId)
+{
+  c_fusion_tracker_birth_UniformP y;
+  emlrtMsgIdentifier thisId;
+  const mxArray *propValues;
+  const char_T *propClasses = "fusion.tracker.birth.UniformPoissonModel";
+  const char_T *propNames = "BirthDensity";
+  propValues = NULL;
+  thisId.fParent = parentId;
+  thisId.bParentIsCell = false;
+  emlrtCheckMcosClass2017a((emlrtCTX)sp, parentId, u,
+                           "fusion.tracker.birth.UniformPoissonModel");
+  emlrtGetAllProperties((emlrtCTX)sp, u, 0, 1, (const char_T **)&propNames,
+                        (const char_T **)&propClasses, &propValues);
+  thisId.fIdentifier = "BirthDensity";
+  y.BirthDensity = q_emlrt_marshallIn(sp, emlrtAlias(propValues), &thisId);
+  emlrtDestroyArrays(1, &propValues);
+  emlrtDestroyArray(&u);
+  return y;
 }
 
 static void e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
@@ -324,11 +289,25 @@ static void e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
   emlrtDestroyArray(&nullptr);
 }
 
-static int32_T eb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                   const emlrtMsgIdentifier *parentId)
+static c_fusion_tracker_clutter_Unifor
+eb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                    const emlrtMsgIdentifier *parentId)
 {
-  int32_T y;
-  y = wb_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
+  c_fusion_tracker_clutter_Unifor y;
+  emlrtMsgIdentifier thisId;
+  const mxArray *propValues;
+  const char_T *propClasses = "fusion.tracker.clutter.UniformPoissonModel";
+  const char_T *propNames = "ClutterDensity";
+  propValues = NULL;
+  thisId.fParent = parentId;
+  thisId.bParentIsCell = false;
+  emlrtCheckMcosClass2017a((emlrtCTX)sp, parentId, u,
+                           "fusion.tracker.clutter.UniformPoissonModel");
+  emlrtGetAllProperties((emlrtCTX)sp, u, 0, 1, (const char_T **)&propNames,
+                        (const char_T **)&propClasses, &propValues);
+  thisId.fIdentifier = "ClutterDensity";
+  y.ClutterDensity = q_emlrt_marshallIn(sp, emlrtAlias(propValues), &thisId);
+  emlrtDestroyArrays(1, &propValues);
   emlrtDestroyArray(&u);
   return y;
 }
@@ -337,8 +316,7 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
                                         const emxArray_struct1_T *u)
 {
   static const int32_T b_iv[2] = {6, 6};
-  static const int32_T b_iv1[2] = {1, 3};
-  static const int32_T iv2[2] = {1, 10};
+  static const int32_T b_iv1[2] = {1, 10};
   static const int32_T b_i = 6;
   static const char_T *sv[16] = {"TrackID",
                                  "BranchID",
@@ -452,21 +430,15 @@ static const mxArray *emlrt_marshallOut(const emlrtStack *sp,
     emlrtAssign(&i_y, emlrtCreateStructMatrix(1, 1, 0, NULL));
     emlrtSetFieldR2017b(y, i, "StateParameters", i_y, 7);
     j_y = NULL;
-    m = emlrtCreateNumericMatrix(1, 1, mxINT32_CLASS, mxREAL);
-    *(int32_T *)emlrtMxGetData(m) = u_data[b_j0].ObjectClassID;
+    m = emlrtCreateDoubleScalar(u_data[b_j0].ObjectClassID);
     emlrtAssign(&j_y, m);
     emlrtSetFieldR2017b(y, i, "ObjectClassID", j_y, 8);
     k_y = NULL;
-    m = emlrtCreateNumericArray(2, (const void *)&b_iv1[0], mxDOUBLE_CLASS,
-                                mxREAL);
-    pData = emlrtMxGetPr(m);
-    pData[0] = u_data[b_j0].ObjectClassProbabilities[0];
-    pData[1] = u_data[b_j0].ObjectClassProbabilities[1];
-    pData[2] = u_data[b_j0].ObjectClassProbabilities[2];
+    m = emlrtCreateDoubleScalar(u_data[b_j0].ObjectClassProbabilities);
     emlrtAssign(&k_y, m);
     emlrtSetFieldR2017b(y, i, "ObjectClassProbabilities", k_y, 9);
     l_y = NULL;
-    m = emlrtCreateCharArray(2, &iv2[0]);
+    m = emlrtCreateCharArray(2, &b_iv1[0]);
     emlrtInitCharArrayR2013a((emlrtConstCTX)sp, 10, m,
                              &u_data[b_j0].TrackLogic[0]);
     emlrtAssign(&l_y, m);
@@ -514,27 +486,13 @@ static void f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   emlrtDestroyArray(&u);
 }
 
-static c_fusion_tracker_birth_UniformP
-fb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                    const emlrtMsgIdentifier *parentId)
+static void fb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                                const emlrtMsgIdentifier *parentId)
 {
-  c_fusion_tracker_birth_UniformP y;
-  emlrtMsgIdentifier thisId;
-  const mxArray *propValues;
-  const char_T *propClasses = "fusion.tracker.birth.UniformPoissonModel";
-  const char_T *propNames = "BirthDensity";
-  propValues = NULL;
-  thisId.fParent = parentId;
-  thisId.bParentIsCell = false;
-  emlrtCheckMcosClass2017a((emlrtCTX)sp, parentId, u,
-                           "fusion.tracker.birth.UniformPoissonModel");
-  emlrtGetAllProperties((emlrtCTX)sp, u, 0, 1, (const char_T **)&propNames,
-                        (const char_T **)&propClasses, &propValues);
-  thisId.fIdentifier = "BirthDensity";
-  y.BirthDensity = q_emlrt_marshallIn(sp, emlrtAlias(propValues), &thisId);
-  emlrtDestroyArrays(1, &propValues);
+  emlrtCheckMcosClass2017a(
+      (emlrtCTX)sp, parentId, u,
+      "fusion.tracker.internal.stateInitiator.GaussianStateInitiator");
   emlrtDestroyArray(&u);
-  return y;
 }
 
 static void g_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
@@ -618,64 +576,49 @@ static void g_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   emlrtDestroyArray(&u);
 }
 
-static c_fusion_tracker_clutter_Unifor
-gb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                    const emlrtMsgIdentifier *parentId)
+static void gb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                                const emlrtMsgIdentifier *parentId,
+                                boolean_T y[5])
 {
-  c_fusion_tracker_clutter_Unifor y;
-  emlrtMsgIdentifier thisId;
-  const mxArray *propValues;
-  const char_T *propClasses = "fusion.tracker.clutter.UniformPoissonModel";
-  const char_T *propNames = "ClutterDensity";
-  propValues = NULL;
-  thisId.fParent = parentId;
-  thisId.bParentIsCell = false;
-  emlrtCheckMcosClass2017a((emlrtCTX)sp, parentId, u,
-                           "fusion.tracker.clutter.UniformPoissonModel");
-  emlrtGetAllProperties((emlrtCTX)sp, u, 0, 1, (const char_T **)&propNames,
-                        (const char_T **)&propClasses, &propValues);
-  thisId.fIdentifier = "ClutterDensity";
-  y.ClutterDensity = q_emlrt_marshallIn(sp, emlrtAlias(propValues), &thisId);
-  emlrtDestroyArrays(1, &propValues);
+  vb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
   emlrtDestroyArray(&u);
-  return y;
 }
 
 static void h_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                real_T y_data[], int32_T y_size[2])
 {
-  nb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y_data, y_size);
+  lb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y_data, y_size);
   emlrtDestroyArray(&u);
 }
 
-static void hb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                const emlrtMsgIdentifier *parentId)
+static char_T hb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                                  const emlrtMsgIdentifier *parentId)
 {
-  emlrtCheckMcosClass2017a(
-      (emlrtCTX)sp, parentId, u,
-      "fusion.tracker.internal.stateInitiator.GaussianStateInitiator");
+  char_T y;
+  y = wb_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
   emlrtDestroyArray(&u);
+  return y;
 }
 
 static void i_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                real_T y_data[], int32_T y_size[2])
 {
-  ob_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y_data, y_size);
+  mb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y_data, y_size);
   emlrtDestroyArray(&u);
 }
 
 static void ib_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                const emlrtMsgIdentifier *parentId,
-                                boolean_T y[5])
+                                const emlrtMsgIdentifier *parentId, char_T y[3])
 {
   xb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
   emlrtDestroyArray(&u);
 }
 
 static void j_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
-                               const char_T *identifier, cell_4 *y)
+                               const char_T *identifier,
+                               c_fusion_tracker_targetspecs_Pa *y)
 {
   emlrtMsgIdentifier thisId;
   thisId.fIdentifier = (const char_T *)identifier;
@@ -685,44 +628,23 @@ static void j_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
   emlrtDestroyArray(&nullptr);
 }
 
-static char_T jb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                  const emlrtMsgIdentifier *parentId)
-{
-  char_T y;
-  y = yb_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
-  emlrtDestroyArray(&u);
-  return y;
-}
-
 static void k_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                               const emlrtMsgIdentifier *parentId, cell_4 *y)
+                               const emlrtMsgIdentifier *parentId,
+                               c_fusion_tracker_targetspecs_Pa *y)
 {
   emlrtMsgIdentifier thisId;
-  int32_T b_iv[2];
-  boolean_T bv[2];
+  int32_T i;
+  char_T str[11];
+  boolean_T b;
   thisId.fParent = parentId;
   thisId.bParentIsCell = true;
-  bv[0] = false;
-  b_iv[0] = 1;
-  bv[1] = false;
-  b_iv[1] = 3;
-  emlrtCheckCell((emlrtCTX)sp, parentId, u, 2U, &b_iv[0], &bv[0]);
-  thisId.fIdentifier = "1";
+  b = false;
+  i = 1;
+  emlrtCheckCell((emlrtCTX)sp, parentId, u, 1U, &i, &b);
+  emlrtMexSnprintf(&str[0], (size_t)11U, "%d", 1);
+  thisId.fIdentifier = &str[0];
   l_emlrt_marshallIn(sp, emlrtAlias(emlrtGetCell((emlrtCTX)sp, parentId, u, 0)),
-                     &thisId, &y->f1);
-  thisId.fIdentifier = "2";
-  t_emlrt_marshallIn(sp, emlrtAlias(emlrtGetCell((emlrtCTX)sp, parentId, u, 1)),
-                     &thisId, &y->f2);
-  thisId.fIdentifier = "3";
-  u_emlrt_marshallIn(sp, emlrtAlias(emlrtGetCell((emlrtCTX)sp, parentId, u, 2)),
-                     &thisId, &y->f3);
-  emlrtDestroyArray(&u);
-}
-
-static void kb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                const emlrtMsgIdentifier *parentId, char_T y[3])
-{
-  ac_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
+                     &thisId, y);
   emlrtDestroyArray(&u);
 }
 
@@ -781,6 +703,18 @@ static void l_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   emlrtDestroyArray(&u);
 }
 
+static void lb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+                                const emlrtMsgIdentifier *msgId,
+                                real_T ret_data[], int32_T ret_size[2])
+{
+  static const int32_T dims[2] = {1, 100};
+  boolean_T bv[2] = {false, true};
+  emlrtCheckVsBuiltInR2012b((emlrtConstCTX)sp, msgId, src, "double", false, 2U,
+                            (const void *)&dims[0], &bv[0], &ret_size[0]);
+  emlrtImportArrayR2015b((emlrtConstCTX)sp, src, &ret_data[0], 8, false);
+  emlrtDestroyArray(&src);
+}
+
 static void m_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                c_fusion_tracker_transition_Con *y)
@@ -815,33 +749,7 @@ static void m_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   emlrtDestroyArray(&u);
 }
 
-static void n_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                               const emlrtMsgIdentifier *parentId, real_T y[3])
-{
-  pb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
-  emlrtDestroyArray(&u);
-}
-
-static void nb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId,
-                                real_T ret_data[], int32_T ret_size[2])
-{
-  static const int32_T dims[2] = {1, 100};
-  boolean_T bv[2] = {false, true};
-  emlrtCheckVsBuiltInR2012b((emlrtConstCTX)sp, msgId, src, "double", false, 2U,
-                            (const void *)&dims[0], &bv[0], &ret_size[0]);
-  emlrtImportArrayR2015b((emlrtConstCTX)sp, src, &ret_data[0], 8, false);
-  emlrtDestroyArray(&src);
-}
-
-static void o_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                               const emlrtMsgIdentifier *parentId, real_T y[9])
-{
-  qb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
-  emlrtDestroyArray(&u);
-}
-
-static void ob_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static void mb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                 const emlrtMsgIdentifier *msgId,
                                 real_T ret_data[], int32_T ret_size[2])
 {
@@ -850,6 +758,49 @@ static void ob_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   emlrtCheckVsBuiltInR2012b((emlrtConstCTX)sp, msgId, src, "double", false, 2U,
                             (const void *)&dims[0], &bv[0], &ret_size[0]);
   emlrtImportArrayR2015b((emlrtConstCTX)sp, src, &ret_data[0], 8, false);
+  emlrtDestroyArray(&src);
+}
+
+static void n_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                               const emlrtMsgIdentifier *parentId, real_T y[3])
+{
+  nb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
+  emlrtDestroyArray(&u);
+}
+
+static void nb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+                                const emlrtMsgIdentifier *msgId, real_T ret[3])
+{
+  static const int32_T dims = 3;
+  real_T(*r)[3];
+  emlrtCheckBuiltInR2012b((emlrtConstCTX)sp, msgId, src, "double", false, 1U,
+                          (const void *)&dims);
+  r = (real_T(*)[3])emlrtMxGetData(src);
+  ret[0] = (*r)[0];
+  ret[1] = (*r)[1];
+  ret[2] = (*r)[2];
+  emlrtDestroyArray(&src);
+}
+
+static void o_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                               const emlrtMsgIdentifier *parentId, real_T y[9])
+{
+  ob_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
+  emlrtDestroyArray(&u);
+}
+
+static void ob_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+                                const emlrtMsgIdentifier *msgId, real_T ret[9])
+{
+  static const int32_T dims[2] = {3, 3};
+  real_T(*r)[9];
+  int32_T i;
+  emlrtCheckBuiltInR2012b((emlrtConstCTX)sp, msgId, src, "double", false, 2U,
+                          (const void *)&dims[0]);
+  r = (real_T(*)[9])emlrtMxGetData(src);
+  for (i = 0; i < 9; i++) {
+    ret[i] = (*r)[i];
+  }
   emlrtDestroyArray(&src);
 }
 
@@ -877,53 +828,7 @@ p_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   return y;
 }
 
-static void pb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId, real_T ret[3])
-{
-  static const int32_T dims = 3;
-  real_T(*r)[3];
-  emlrtCheckBuiltInR2012b((emlrtConstCTX)sp, msgId, src, "double", false, 1U,
-                          (const void *)&dims);
-  r = (real_T(*)[3])emlrtMxGetData(src);
-  ret[0] = (*r)[0];
-  ret[1] = (*r)[1];
-  ret[2] = (*r)[2];
-  emlrtDestroyArray(&src);
-}
-
-static real_T q_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                                 const emlrtMsgIdentifier *parentId)
-{
-  real_T y;
-  y = rb_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
-  emlrtDestroyArray(&u);
-  return y;
-}
-
-static void qb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
-                                const emlrtMsgIdentifier *msgId, real_T ret[9])
-{
-  static const int32_T dims[2] = {3, 3};
-  real_T(*r)[9];
-  int32_T i;
-  emlrtCheckBuiltInR2012b((emlrtConstCTX)sp, msgId, src, "double", false, 2U,
-                          (const void *)&dims[0]);
-  r = (real_T(*)[9])emlrtMxGetData(src);
-  for (i = 0; i < 9; i++) {
-    ret[i] = (*r)[i];
-  }
-  emlrtDestroyArray(&src);
-}
-
-static void r_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                               const emlrtMsgIdentifier *parentId,
-                               boolean_T y[2])
-{
-  sb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
-  emlrtDestroyArray(&u);
-}
-
-static real_T rb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static real_T pb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                   const emlrtMsgIdentifier *msgId)
 {
   static const int32_T dims = 0;
@@ -935,14 +840,16 @@ static real_T rb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   return ret;
 }
 
-static void s_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                               const emlrtMsgIdentifier *parentId)
+static real_T q_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                                 const emlrtMsgIdentifier *parentId)
 {
-  tb_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
+  real_T y;
+  y = pb_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
   emlrtDestroyArray(&u);
+  return y;
 }
 
-static void sb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static void qb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                 const emlrtMsgIdentifier *msgId,
                                 boolean_T ret[2])
 {
@@ -956,62 +863,15 @@ static void sb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   emlrtDestroyArray(&src);
 }
 
-static void t_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+static void r_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
-                               c_fusion_tracker_targetspecs_Ge *y)
+                               boolean_T y[2])
 {
-  emlrtMsgIdentifier thisId;
-  const mxArray *propValues[8];
-  int32_T i;
-  const char_T *propClasses[8] = {
-      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
-      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
-      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification"};
-  const char_T *propNames[8] = {"StateTransitionModel",
-                                "SurvivalModel",
-                                "IsLockedDataType",
-                                "MaxHorizontalSpeedUnits",
-                                "MaxVerticalSpeedUnits",
-                                "MaxHorizontalAccelerationUnits",
-                                "MaxVerticalAccelerationUnits",
-                                "MotionModel"};
-  for (i = 0; i < 8; i++) {
-    propValues[i] = NULL;
-  }
-  thisId.fParent = parentId;
-  thisId.bParentIsCell = false;
-  emlrtCheckMcosClass2017a((emlrtCTX)sp, parentId, u,
-                           "fusion.tracker.targetspecs.GeneralAviation");
-  emlrtGetAllProperties((emlrtCTX)sp, u, 0, 8, (const char_T **)&propNames[0],
-                        (const char_T **)&propClasses[0], &propValues[0]);
-  thisId.fIdentifier = "StateTransitionModel";
-  m_emlrt_marshallIn(sp, emlrtAlias(propValues[0]), &thisId,
-                     &y->StateTransitionModel);
-  thisId.fIdentifier = "SurvivalModel";
-  y->SurvivalModel = p_emlrt_marshallIn(sp, emlrtAlias(propValues[1]), &thisId);
-  thisId.fIdentifier = "IsLockedDataType";
-  r_emlrt_marshallIn(sp, emlrtAlias(propValues[2]), &thisId,
-                     y->IsLockedDataType);
-  thisId.fIdentifier = "MaxHorizontalSpeedUnits";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[3]), &thisId);
-  thisId.fIdentifier = "MaxVerticalSpeedUnits";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[4]), &thisId);
-  thisId.fIdentifier = "MaxHorizontalAccelerationUnits";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[5]), &thisId);
-  thisId.fIdentifier = "MaxVerticalAccelerationUnits";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[6]), &thisId);
-  thisId.fIdentifier = "MotionModel";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[7]), &thisId);
-  emlrtDestroyArrays(8, &propValues[0]);
+  qb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
   emlrtDestroyArray(&u);
 }
 
-static void tb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static void rb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                 const emlrtMsgIdentifier *msgId)
 {
   static const int32_T dims[2] = {0, 0};
@@ -1021,62 +881,14 @@ static void tb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   emlrtDestroyArray(&src);
 }
 
-static void u_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
-                               const emlrtMsgIdentifier *parentId,
-                               c_fusion_tracker_targetspecs_He *y)
+static void s_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                               const emlrtMsgIdentifier *parentId)
 {
-  emlrtMsgIdentifier thisId;
-  const mxArray *propValues[8];
-  int32_T i;
-  const char_T *propClasses[8] = {
-      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
-      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
-      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification",
-      "fusion.tracker.targetspecs.internal.AircraftSpecification"};
-  const char_T *propNames[8] = {"StateTransitionModel",
-                                "SurvivalModel",
-                                "IsLockedDataType",
-                                "MaxHorizontalSpeedUnits",
-                                "MaxVerticalSpeedUnits",
-                                "MaxHorizontalAccelerationUnits",
-                                "MaxVerticalAccelerationUnits",
-                                "MotionModel"};
-  for (i = 0; i < 8; i++) {
-    propValues[i] = NULL;
-  }
-  thisId.fParent = parentId;
-  thisId.bParentIsCell = false;
-  emlrtCheckMcosClass2017a((emlrtCTX)sp, parentId, u,
-                           "fusion.tracker.targetspecs.Helicopter");
-  emlrtGetAllProperties((emlrtCTX)sp, u, 0, 8, (const char_T **)&propNames[0],
-                        (const char_T **)&propClasses[0], &propValues[0]);
-  thisId.fIdentifier = "StateTransitionModel";
-  m_emlrt_marshallIn(sp, emlrtAlias(propValues[0]), &thisId,
-                     &y->StateTransitionModel);
-  thisId.fIdentifier = "SurvivalModel";
-  y->SurvivalModel = p_emlrt_marshallIn(sp, emlrtAlias(propValues[1]), &thisId);
-  thisId.fIdentifier = "IsLockedDataType";
-  r_emlrt_marshallIn(sp, emlrtAlias(propValues[2]), &thisId,
-                     y->IsLockedDataType);
-  thisId.fIdentifier = "MaxHorizontalSpeedUnits";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[3]), &thisId);
-  thisId.fIdentifier = "MaxVerticalSpeedUnits";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[4]), &thisId);
-  thisId.fIdentifier = "MaxHorizontalAccelerationUnits";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[5]), &thisId);
-  thisId.fIdentifier = "MaxVerticalAccelerationUnits";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[6]), &thisId);
-  thisId.fIdentifier = "MotionModel";
-  s_emlrt_marshallIn(sp, emlrtAlias(propValues[7]), &thisId);
-  emlrtDestroyArrays(8, &propValues[0]);
+  rb_emlrt_marshallIn(sp, emlrtAlias(u), parentId);
   emlrtDestroyArray(&u);
 }
 
-static void ub_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static void sb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                 const emlrtMsgIdentifier *msgId, real_T ret[27])
 {
   static const int32_T dims[3] = {3, 3, 3};
@@ -1091,7 +903,7 @@ static void ub_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   emlrtDestroyArray(&src);
 }
 
-static void v_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
+static void t_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
                                const char_T *identifier,
                                c_fusion_tracker_sensorspecs_Ae *y)
 {
@@ -1099,11 +911,11 @@ static void v_emlrt_marshallIn(const emlrtStack *sp, const mxArray *nullptr,
   thisId.fIdentifier = (const char_T *)identifier;
   thisId.fParent = NULL;
   thisId.bParentIsCell = false;
-  w_emlrt_marshallIn(sp, emlrtAlias(nullptr), &thisId, y);
+  u_emlrt_marshallIn(sp, emlrtAlias(nullptr), &thisId, y);
   emlrtDestroyArray(&nullptr);
 }
 
-static void vb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static void tb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                 const emlrtMsgIdentifier *msgId, real_T ret[2])
 {
   static const int32_T dims[2] = {1, 2};
@@ -1116,7 +928,7 @@ static void vb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   emlrtDestroyArray(&src);
 }
 
-static void w_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+static void u_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                c_fusion_tracker_sensorspecs_Ae *y)
 {
@@ -1179,19 +991,19 @@ static void w_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   emlrtGetAllProperties((emlrtCTX)sp, u, 0, 22, (const char_T **)&propNames[0],
                         (const char_T **)&propClasses[0], &propValues[0]);
   thisId.fIdentifier = "MeasurementModel";
-  x_emlrt_marshallIn(sp, emlrtAlias(propValues[0]), &thisId,
+  v_emlrt_marshallIn(sp, emlrtAlias(propValues[0]), &thisId,
                      &y->MeasurementModel);
   thisId.fIdentifier = "DetectabilityModel";
-  ab_emlrt_marshallIn(sp, emlrtAlias(propValues[1]), &thisId,
-                      &y->DetectabilityModel);
+  x_emlrt_marshallIn(sp, emlrtAlias(propValues[1]), &thisId,
+                     &y->DetectabilityModel);
   thisId.fIdentifier = "BirthModel";
-  y->BirthModel = fb_emlrt_marshallIn(sp, emlrtAlias(propValues[2]), &thisId);
+  y->BirthModel = db_emlrt_marshallIn(sp, emlrtAlias(propValues[2]), &thisId);
   thisId.fIdentifier = "ClutterModel";
-  y->ClutterModel = gb_emlrt_marshallIn(sp, emlrtAlias(propValues[3]), &thisId);
+  y->ClutterModel = eb_emlrt_marshallIn(sp, emlrtAlias(propValues[3]), &thisId);
   thisId.fIdentifier = "StateInitiator";
-  hb_emlrt_marshallIn(sp, emlrtAlias(propValues[4]), &thisId);
+  fb_emlrt_marshallIn(sp, emlrtAlias(propValues[4]), &thisId);
   thisId.fIdentifier = "IsLockedDataType";
-  ib_emlrt_marshallIn(sp, emlrtAlias(propValues[5]), &thisId,
+  gb_emlrt_marshallIn(sp, emlrtAlias(propValues[5]), &thisId,
                       y->IsLockedDataType);
   thisId.fIdentifier = "AzimuthResolution";
   y->AzimuthResolution =
@@ -1212,39 +1024,39 @@ static void w_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   y->BirthRate = q_emlrt_marshallIn(sp, emlrtAlias(propValues[11]), &thisId);
   thisId.fIdentifier = "MountingLocationUnits";
   y->MountingLocationUnits =
-      jb_emlrt_marshallIn(sp, emlrtAlias(propValues[12]), &thisId);
+      hb_emlrt_marshallIn(sp, emlrtAlias(propValues[12]), &thisId);
   thisId.fIdentifier = "MountingAnglesUnits";
-  kb_emlrt_marshallIn(sp, emlrtAlias(propValues[13]), &thisId,
+  ib_emlrt_marshallIn(sp, emlrtAlias(propValues[13]), &thisId,
                       y->MountingAnglesUnits);
   thisId.fIdentifier = "PlatformPositionUnits";
   y->PlatformPositionUnits =
-      jb_emlrt_marshallIn(sp, emlrtAlias(propValues[14]), &thisId);
+      hb_emlrt_marshallIn(sp, emlrtAlias(propValues[14]), &thisId);
   thisId.fIdentifier = "FieldOfViewUnits";
-  kb_emlrt_marshallIn(sp, emlrtAlias(propValues[15]), &thisId,
+  ib_emlrt_marshallIn(sp, emlrtAlias(propValues[15]), &thisId,
                       y->FieldOfViewUnits);
   thisId.fIdentifier = "RangeLimitsUnits";
   y->RangeLimitsUnits =
-      jb_emlrt_marshallIn(sp, emlrtAlias(propValues[16]), &thisId);
+      hb_emlrt_marshallIn(sp, emlrtAlias(propValues[16]), &thisId);
   thisId.fIdentifier = "RangeRateLimitsUnits";
-  kb_emlrt_marshallIn(sp, emlrtAlias(propValues[17]), &thisId,
+  ib_emlrt_marshallIn(sp, emlrtAlias(propValues[17]), &thisId,
                       y->RangeRateLimitsUnits);
   thisId.fIdentifier = "AzimuthResolutionUnits";
-  kb_emlrt_marshallIn(sp, emlrtAlias(propValues[18]), &thisId,
+  ib_emlrt_marshallIn(sp, emlrtAlias(propValues[18]), &thisId,
                       y->AzimuthResolutionUnits);
   thisId.fIdentifier = "ElevationResolutionUnits";
-  kb_emlrt_marshallIn(sp, emlrtAlias(propValues[19]), &thisId,
+  ib_emlrt_marshallIn(sp, emlrtAlias(propValues[19]), &thisId,
                       y->ElevationResolutionUnits);
   thisId.fIdentifier = "RangeResolutionUnits";
   y->RangeResolutionUnits =
-      jb_emlrt_marshallIn(sp, emlrtAlias(propValues[20]), &thisId);
+      hb_emlrt_marshallIn(sp, emlrtAlias(propValues[20]), &thisId);
   thisId.fIdentifier = "RangeRateResolutionUnits";
-  kb_emlrt_marshallIn(sp, emlrtAlias(propValues[21]), &thisId,
+  ib_emlrt_marshallIn(sp, emlrtAlias(propValues[21]), &thisId,
                       y->RangeRateResolutionUnits);
   emlrtDestroyArrays(22, &propValues[0]);
   emlrtDestroyArray(&u);
 }
 
-static int32_T wb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static int32_T ub_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                    const emlrtMsgIdentifier *msgId)
 {
   static const int32_T dims = 0;
@@ -1256,7 +1068,7 @@ static int32_T wb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   return ret;
 }
 
-static void x_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+static void v_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId,
                                c_fusion_tracker_measurement_Az *y)
 {
@@ -1290,7 +1102,7 @@ static void x_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   thisId.fIdentifier = "OriginVelocity";
   o_emlrt_marshallIn(sp, emlrtAlias(propValues[1]), &thisId, y->OriginVelocity);
   thisId.fIdentifier = "Orientation";
-  y_emlrt_marshallIn(sp, emlrtAlias(propValues[2]), &thisId, y->Orientation);
+  w_emlrt_marshallIn(sp, emlrtAlias(propValues[2]), &thisId, y->Orientation);
   thisId.fIdentifier = "AzimuthVariance";
   y->AzimuthVariance =
       q_emlrt_marshallIn(sp, emlrtAlias(propValues[3]), &thisId);
@@ -1306,7 +1118,7 @@ static void x_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   emlrtDestroyArray(&u);
 }
 
-static void xb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static void vb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                 const emlrtMsgIdentifier *msgId,
                                 boolean_T ret[5])
 {
@@ -1322,14 +1134,14 @@ static void xb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   emlrtDestroyArray(&src);
 }
 
-static void y_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+static void w_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
                                const emlrtMsgIdentifier *parentId, real_T y[27])
 {
-  ub_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
+  sb_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
   emlrtDestroyArray(&u);
 }
 
-static char_T yb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+static char_T wb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
                                   const emlrtMsgIdentifier *msgId)
 {
   static const int32_T dims = 0;
@@ -1341,60 +1153,80 @@ static char_T yb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   return ret;
 }
 
+static void x_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                               const emlrtMsgIdentifier *parentId,
+                               d_fusion_tracker_detectability_ *y)
+{
+  emlrtMsgIdentifier thisId;
+  const mxArray *propValues[2];
+  const char_T *propClasses[2] = {
+      "fusion.tracker.detectability.CompositeFieldOfViewModel",
+      "fusion.tracker.detectability.CompositeFieldOfViewModel"};
+  const char_T *propNames[2] = {"FieldsOfView", "NumModels"};
+  propValues[0] = NULL;
+  propValues[1] = NULL;
+  thisId.fParent = parentId;
+  thisId.bParentIsCell = false;
+  emlrtCheckMcosClass2017a(
+      (emlrtCTX)sp, parentId, u,
+      "fusion.tracker.detectability.CompositeFieldOfViewModel");
+  emlrtGetAllProperties((emlrtCTX)sp, u, 0, 2, (const char_T **)&propNames[0],
+                        (const char_T **)&propClasses[0], &propValues[0]);
+  thisId.fIdentifier = "FieldsOfView";
+  y_emlrt_marshallIn(sp, emlrtAlias(propValues[0]), &thisId, y->FieldsOfView);
+  thisId.fIdentifier = "NumModels";
+  y->NumModels = cb_emlrt_marshallIn(sp, emlrtAlias(propValues[1]), &thisId);
+  emlrtDestroyArrays(2, &propValues[0]);
+  emlrtDestroyArray(&u);
+}
+
+static void xb_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
+                                const emlrtMsgIdentifier *msgId, char_T ret[3])
+{
+  static const int32_T dims[2] = {1, 3};
+  emlrtCheckBuiltInR2012b((emlrtConstCTX)sp, msgId, src, "char", false, 2U,
+                          (const void *)&dims[0]);
+  emlrtImportCharArrayR2015b((emlrtConstCTX)sp, src, &ret[0], 3);
+  emlrtDestroyArray(&src);
+}
+
+static void y_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+                               const emlrtMsgIdentifier *parentId,
+                               c_fusion_tracker_detectability_ y[108])
+{
+  emlrtMsgIdentifier thisId;
+  int32_T i;
+  int32_T i1;
+  char_T str[11];
+  boolean_T b;
+  thisId.fParent = parentId;
+  thisId.bParentIsCell = true;
+  b = false;
+  i = 108;
+  emlrtCheckCell((emlrtCTX)sp, parentId, u, 1U, &i, &b);
+  for (i1 = 0; i1 < 108; i1++) {
+    emlrtMexSnprintf(&str[0], (size_t)11U, "%d", i1 + 1);
+    thisId.fIdentifier = &str[0];
+    ab_emlrt_marshallIn(sp,
+                        emlrtAlias(emlrtGetCell((emlrtCTX)sp, parentId, u, i1)),
+                        &thisId, &y[i1]);
+  }
+  emlrtDestroyArray(&u);
+}
+
 void trackingAlgorithm_api(trackingAlgorithmStackData *SD,
                            const mxArray *const prhs[3], const mxArray **plhs)
 {
-  static const int32_T b_iv[28] = {0, 0, 3, 3, 4, 3, 4, 5, 5, 0, 1, 3, 3, 4,
-                                   3, 4, 5, 5, 0, 2, 3, 3, 4, 3, 4, 5, 5, 5};
   static const int32_T b_iv1[11] = {3, 4, 3, 4, 3, 4, 3, 4, 3, 4, 5};
-  static const uint32_T uv[24] = {
-      4205784331U, 2264327993U, 829637541U,  2033545091U, 2771799987U,
-      1170139851U, 3519338680U, 321885583U,  4205784331U, 2264327993U,
-      829637541U,  2033545091U, 2771799987U, 1170139851U, 3519338680U,
-      321885583U,  4205784331U, 2264327993U, 829637541U,  2033545091U,
-      2771799987U, 1170139851U, 3519338680U, 321885583U};
+  static const int32_T b_iv[9] = {1, 3, 3, 4, 3, 4, 5, 5, 5};
   static const uint32_T uv1[20] = {
       1605257538U, 1258761973U, 733959435U,  3705873537U, 1379285247U,
       1405699837U, 3074730638U, 1915819171U, 2771799987U, 1170139851U,
       3519338680U, 321885583U,  2771799987U, 1170139851U, 3519338680U,
       321885583U,  2771799987U, 1170139851U, 3519338680U, 321885583U};
-  static const char_T *sv[36] = {
-      "targetSpec{1}",
-      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
-      "StateTransitionModel",
-      "targetSpec{1}.StateTransitionModel",
-      "fusion.tracker.transition.ConstantVelocityModel",
-      "NumMotionDimensions",
-      "targetSpec{1}.StateTransitionModel.NumMotionDimensions",
-      "targetSpec{1}.StateTransitionModel.NumMotionDimensions",
-      "fusion.tracker.transition.ConstantVelocityModel",
-      "IsLocked",
-      "targetSpec{1}.StateTransitionModel.IsLocked",
-      "targetSpec{1}.StateTransitionModel.IsLocked",
-      "targetSpec{2}",
-      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
-      "StateTransitionModel",
-      "targetSpec{2}.StateTransitionModel",
-      "fusion.tracker.transition.ConstantVelocityModel",
-      "NumMotionDimensions",
-      "targetSpec{2}.StateTransitionModel.NumMotionDimensions",
-      "targetSpec{2}.StateTransitionModel.NumMotionDimensions",
-      "fusion.tracker.transition.ConstantVelocityModel",
-      "IsLocked",
-      "targetSpec{2}.StateTransitionModel.IsLocked",
-      "targetSpec{2}.StateTransitionModel.IsLocked",
-      "targetSpec{3}",
-      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
-      "StateTransitionModel",
-      "targetSpec{3}.StateTransitionModel",
-      "fusion.tracker.transition.ConstantVelocityModel",
-      "NumMotionDimensions",
-      "targetSpec{3}.StateTransitionModel.NumMotionDimensions",
-      "targetSpec{3}.StateTransitionModel.NumMotionDimensions",
-      "fusion.tracker.transition.ConstantVelocityModel",
-      "IsLocked",
-      "targetSpec{3}.StateTransitionModel.IsLocked",
-      "targetSpec{3}.StateTransitionModel.IsLocked"};
+  static const uint32_T uv[8] = {4205784331U, 2264327993U, 829637541U,
+                                 2033545091U, 2771799987U, 1170139851U,
+                                 3519338680U, 321885583U};
   static const char_T *sv1[20] = {
       "fusion.tracker.sensorspecs.AerospaceMonostaticRadar",
       "MaxNumLooksPerUpdate",
@@ -1416,7 +1248,19 @@ void trackingAlgorithm_api(trackingAlgorithmStackData *SD,
       "HasRangeRate",
       "sensorSpec.HasRangeRate",
       "sensorSpec.HasRangeRate"};
-  cell_4 targetSpec;
+  static const char_T *sv[11] = {
+      "fusion.tracker.targetspecs.internal.BuiltinTargetSpecification",
+      "StateTransitionModel",
+      "targetSpec{:}.StateTransitionModel",
+      "fusion.tracker.transition.ConstantVelocityModel",
+      "NumMotionDimensions",
+      "targetSpec{:}.StateTransitionModel.NumMotionDimensions",
+      "targetSpec{:}.StateTransitionModel.NumMotionDimensions",
+      "fusion.tracker.transition.ConstantVelocityModel",
+      "IsLocked",
+      "targetSpec{:}.StateTransitionModel.IsLocked",
+      "targetSpec{:}.StateTransitionModel.IsLocked"};
+  c_fusion_tracker_targetspecs_Pa targetSpec;
   emlrtStack st = {
       NULL, /* site */
       NULL, /* tls */
@@ -1434,11 +1278,11 @@ void trackingAlgorithm_api(trackingAlgorithmStackData *SD,
   /* Marshall function inputs */
   e_emlrt_marshallIn(&st, emlrtAliasP(prhs[0]), "dets", &dets);
   j_emlrt_marshallIn(&st, emlrtAliasP(prhs[1]), "targetSpec", &targetSpec);
-  v_emlrt_marshallIn(&st, emlrtAliasP(prhs[2]), "sensorSpec",
-                     &SD->f15.sensorSpec);
+  t_emlrt_marshallIn(&st, emlrtAliasP(prhs[2]), "sensorSpec",
+                     &SD->f5.sensorSpec);
   /* Invoke the target function */
-  emxInit_struct1_T(&st, &tracks, &li_emlrtRTEI);
-  trackingAlgorithm(SD, &st, &dets, &targetSpec, &SD->f15.sensorSpec, tracks);
+  emxInit_struct1_T(&st, &tracks, &mi_emlrtRTEI);
+  trackingAlgorithm(SD, &st, &dets, &targetSpec, &SD->f5.sensorSpec, tracks);
   /* Marshall function outputs */
   *plhs = emlrt_marshallOut(&st, tracks);
   emxFree_struct1_T(&st, &tracks);
