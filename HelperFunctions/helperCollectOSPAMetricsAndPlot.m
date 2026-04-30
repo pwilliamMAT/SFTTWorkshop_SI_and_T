@@ -72,7 +72,7 @@ hold on
 plot((0:(N_ospa-1))/60, fuseLoc, "Color",radarclr);
 plot((0:(N_ospa-1))/60, fuseCard, "Color",adsbclr);
 %plot((0:(N_ospa-1))/60, fuseLabel, "Color",fusedclr);
-l=legend('Localization Error','Cardinality Error','Labeling Error');
+l=legend('Localization Error','Cardinality Error'); % ,'Labeling Error'
 l.Color = [0.1 0.1 0.1];
 l.TextColor = [1 1 1];
 title('OSPA Components Fused Tracks')
