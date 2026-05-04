@@ -1,0 +1,26 @@
+#########################################
+# MATLAB codegen build artifacts
+#########################################
+
+# Ignore everything under codegen by default
+**/codegen/**
+
+# BUT keep the final MATLAB Online MEX binaries
+!**/codegen/**/fusionAlgorithm_mex.mexa64
+!**/codegen/**/trackingAlgorithm_mex.mexa64
+
+#########################################
+# Platform-specific MEX files
+#########################################
+
+*.mexw64
+*.mexmaci64
+
+#########################################
+# Native build intermediates
+#########################################
+
+*.o
+*.obj
+*.ninja
+*.log
