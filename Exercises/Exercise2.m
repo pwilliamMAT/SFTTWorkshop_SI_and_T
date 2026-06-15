@@ -28,7 +28,7 @@ plotScenario(mapViewer,scenario);
 %[text] **Directions:**
 %[text] Below, please create a variable 'passengerSpec' that holds the Passenger Aircraft Target Specification generated using 'trackerTargetSpec'. Use the "aerospace", "aircraft", and "passenger" inputs to specify the target specification.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% type "doc trackerTargetSpec" in the Command Window to find the documentation page for this function
+doc trackerTargetSpec % Opens documentation page for trackerTargetSpec
 % WRITE YOUR CODE BELOW THIS LINE:
 
 % Define passengerSpec
@@ -93,7 +93,7 @@ assignmentMetrics = trackAssignmentMetrics(...
 %[text] Below, please create a variable 'ospa' that holds the track OSPA metrics generated using 'trackOSPAMetrics'
 %[text] Using Name-Value pairs to configure the trackOSPAMetrics, set the 'CutoffDistance' to 500 and the 'Distance' to 'posabserr' for position absolute error
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% type "doc trackOSPAMetric" in the Command Window to find the documentation page for this function
+doc trackOSPAMetric % Open documentation page for trackOSPAMetric
 % WRITE YOUR CODE BELOW THIS LINE:
 
 %%

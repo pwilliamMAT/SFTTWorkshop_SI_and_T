@@ -38,7 +38,7 @@ velAccuracy = 0.6;  % m/s (NACv = 3)
 %[text] - Set 'VerticalPositionAccuracy' to **vertAccuracy**, the variable defined above
 %[text] - Set 'VelocityAccuracy' to **velAccuracy**, the variable defined above \
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% type "doc gpsSensor" in the Command Window to find the documentation page for this function
+doc gpsSensor % Opens documentation page for gpsSensor
 
 %%
 %[text] %[text:anchor:TMP_7f34] Leverage the provided helper function to store GPS transponder in a structure.

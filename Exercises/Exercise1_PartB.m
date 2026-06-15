@@ -9,11 +9,12 @@ Time = seconds(tuningData{4}.Time);
 %[text] **Directions:**
 %[text] Below, please create a variable 'traj' that holds the trajectory generated using 'geoTrajectory'. Use the "Position" and "Time" variables from above as inputs:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% type "doc geoTrajectory" in the Command Window to find the documentation page for this function
+doc geoTrajectory % Opens Documentation page for geoTrajectory
+
 % WRITE YOUR CODE BELOW THIS LINE:
 
 % Generate Trajectory
-
+traj = geoTrajectory;
 %[text] Create a trackingScenario to visualize the trajectory
 scenario = trackingScenario(IsEarthCentered=true);
 %[text] Create Platform that follows above trajectory
