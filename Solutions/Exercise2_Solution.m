@@ -6,7 +6,7 @@
 %[text] - ADSB data (gpsSensor and ADSBReceiver)
 %[text] - TrackFuser for C2 level tracks
 %[text] - OSPA Metric, trackAssignmentMetrics, and errorMetrics for track accuracy analysis \
-%[text:tableOfContents]{"heading":"**Table of Contents**"}
+%[text:tableOfContents]{"heading":"Table of Contents"}
 close all force; clear; addpath('../HelperFunctions/')
 %[text] ## Setup Scenario
 %[text] Import truth location of aircraft and convert to trajectories for simulation
@@ -26,7 +26,7 @@ plotScenario(mapViewer,scenario);
 %[text] The first step in defining the tracker requires specifying the types of objects you want to track. In this example, these objects are passenger aircraft, general aviation aircraft, and helicopters. Use the [`trackerTargetSpec`](docid:fusion_ref#mw_d12c6e07-1099-4b7b-b09f-3be62d29245e) function to create a target specification for a passenger aircraft and observe the properties of the specification.
 %[text] ## **Step 1 - Create a Passenger Aircraft Target Specification using the trackerTargetSpec**
 %[text] **Directions:**
-%[text] Below, please create a variable 'passengerSpec' that holds the Passenger Aircraft Target Specification generated using 'trackerTargetSpec'. Use the "aerospace", "aircraft", and "passenger" inputs to specifiy the target specification.
+%[text] Below, please create a variable 'passengerSpec' that holds the Passenger Aircraft Target Specification generated using 'trackerTargetSpec'. Use the "aerospace", "aircraft", and "passenger" inputs to specify the target specification.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % type "doc trackerTargetSpec" in the Command Window to find the documentation page for this function
 % WRITE YOUR CODE BELOW THIS LINE:

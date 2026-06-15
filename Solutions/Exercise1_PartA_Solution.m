@@ -1,8 +1,8 @@
 %[text] # Exercise 1 Part A- Import Field Data to Create Truth Trajectories
 %[text] Leverage the trackingDataImporter App to import field data to be used as the truth locations of targets in our simulation. 
-%[text:tableOfContents]{"heading":"**Table of Contents**"}
+%[text:tableOfContents]{"heading":"Table of Contents"}
 %[text] ## Field Data Overview
-%[text] The data in the "NatickBasedADSBData.csv" file was recorded from the Apple Hill campus of MathWorks in Natick, MA using an RTL-SDR and an antenna tuned to 1090MHz. The raw ADSB data was then preprocessed to eliminate short trajectories and anomolies.
+%[text] The data in the "NatickBasedADSBData.csv" file was recorded from the Apple Hill campus of MathWorks in Natick, MA using an RTL-SDR and an antenna tuned to 1090MHz. The raw ADSB data was then preprocessed to eliminate short trajectories and anomalies.
 %[text] We will use this processed ADSB field data in place of high-fidelity flight test data, commonly used as truth when evaluating tracking system performance.
 %[text] ### **Step 1 - Open the trackingDataImporter App**
 trackingDataImporter
@@ -31,8 +31,8 @@ trackingDataImporter
 %[text] c) Provide the format that matches the format in the raw data - you will need to type the following:
 %[text] **yyyy/MM/dd HH:mm:ss.SSS**
 %[text] d) Use dropdowns to match data to correct column in imported table:
-%[text] - Platform ID = Var5    
-%[text] - Latititude = Var12
+%[text] - Platform ID = Var5
+%[text] - Latitude = Var12
 %[text] - Longitude = Var13
 %[text] - Altitude = Var11 \
 %[text] e) Change the Altitude's units to ft - altitude is in **feet**
@@ -49,7 +49,13 @@ trackingDataImporter
 %[text] ![](text:image:0710)
 %[text] Output:
 %[text] ![](text:image:7d9e)
-%[text] Tip: You can interact with the visualization to zoom (mouse wheel) and rotate (click in mouse wheel and move mouse)
+%[text] Tip: You can interact with the visualization:
+%[text] <u>Mouse</u>
+%[text]  **zoom** with the mouse wheel
+%[text]  **rotate** by clicking in mouse wheel and move mouse
+%[text] <u>Trackpad</u>
+%[text]  **zoom** by sliding two fingers on trackpad 
+%[text]  **rotate** by holding CTRL, clicking pad, and sliding two fingers on trackpad
 %[text] Below are two views of the same data from different vantage points using the above.
 %[text] ![](text:image:3999)![](text:image:0771)
 %[text] ### **Step 8 - Export the Converted Data for Use in Simulation**
@@ -68,6 +74,7 @@ trackingDataImporter
 %[text] ![](text:image:490f)
 %[text] ### **BONUS 2 - Full ADSB Dataset**
 %[text] You may have noticed that the ADSB dataset we are using here is relatively sparse considering the Logan Airport in Boston. If you'd like to see the full dataset, you can look in "HelperFunctions" for "FullNatickBasedADSBDataset.csv".  Using the same procedure above, you can see the full extent of aircraft.
+%[text] NOTE - Consider using "Import" instead of generating a whole new session.
 %[text] You can also see the subset of these aircraft chosen for the exercises by opening "helperTuningDataParsing.m"
 %[text] 
 
